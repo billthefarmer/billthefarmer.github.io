@@ -23,16 +23,13 @@ div.badge
 
 div.panel
 {background: white;
+ margin: 20px 0 0 0;
  padding: 10px 10px;
  border-radius: 10px}
 
 div.header
 {background: white;
  text-align: center;
- border-radius: 10px}
-
-div.forecast
-{text-align: center;
  border-radius: 10px}
 
 div.slideshow
@@ -45,9 +42,6 @@ div.descpanelfg, div.descpanelbg
 {background: white !important;
  color: darkblue !important;
  padding: 4px 10px !important}
-
-iframe.forecast
-{border-radius: 10px}
 
 div.seal
 {text-align: center}

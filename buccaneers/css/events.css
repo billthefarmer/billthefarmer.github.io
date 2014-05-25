@@ -33,7 +33,7 @@ div.header
 
 div.panel
 {background: white;
- padding: 0 10px;
+ padding: 10px 10px;
  border-radius: 10px}
 
 a:link, a:visited
