@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
 
     // Urls
 
-    var eventsurl = "http://billthefarmer.users.sourceforge.net/events.php";
+    var eventsurl = "http://billthefarmer.github.io/buccaneers/db/events.json";
     var linksurl  = "http://billthefarmer.users.sourceforge.net/links.php";
 
     // Get year

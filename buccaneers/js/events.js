@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
 
     // jQuery.getJSON(url, function(data) {});
 
-    var eventsurl = "http://billthefarmer.users.sourceforge.net/events.php";
+    var eventsurl = "http://billthefarmer.github.io/buccaneers/db/events.json";
 
     var last;
 
