@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
     // Urls
 
     var eventsurl = "http://billthefarmer.github.io/buccaneers/db/events.json";
-    var linksurl  = "http://billthefarmer.users.sourceforge.net/links.php";
+    var linksurl  = "http://billthefarmer.github.io/buccaneers/db/links.php";
 
     // Get year
 
