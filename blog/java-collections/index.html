@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<meta property="og:title" content="Java Collections" />
+<meta property="og:description" content="I find Java Collections frustrating and insane. I have been through this loop on several occasions. I decide I want a list to do whatever. So I look up List in the docs and find it&#8217;s an interface, ie: roll yer own. So I look down the hierarchy and find AbstractList, which is abstract, again: roll yer own. So finally I get to ArrayList which might do the job, but the docs aren&#8217;t too clear, so I try it and it works." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://billthefarmer.github.io/blog/java-collections/" />
+
+
+
+<meta property="article:published_time" content="2014-11-01T12:18:28&#43;00:00"/>
+<meta property="article:modified_time" content="2014-11-01T12:18:28&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Java Collections">
+<meta itemprop="description" content="I find Java Collections frustrating and insane. I have been through this loop on several occasions. I decide I want a list to do whatever. So I look up List in the docs and find it&#8217;s an interface, ie: roll yer own. So I look down the hierarchy and find AbstractList, which is abstract, again: roll yer own. So finally I get to ArrayList which might do the job, but the docs aren&#8217;t too clear, so I try it and it works.">
+
+
+<meta itemprop="dateModified" content="2014-11-01T12:18:28&#43;00:00" />
+<meta itemprop="wordCount" content="171">
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Java Collections"/>
+<meta name="twitter:description" content="I find Java Collections frustrating and insane. I have been through this loop on several occasions. I decide I want a list to do whatever. So I look up List in the docs and find it&#8217;s an interface, ie: roll yer own. So I look down the hierarchy and find AbstractList, which is abstract, again: roll yer own. So finally I get to ArrayList which might do the job, but the docs aren&#8217;t too clear, so I try it and it works."/>
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.26" />
+
+
+    <base href="http://billthefarmer.github.io/blog">
+    <link rel="canonical" href="http://billthefarmer.github.io/blog/java-collections/">
+    <title>Java Collections | Bill Farmer&#39;s Blog</title>
+
+    <!-- CSS -->
+    <link href="http://billthefarmer.github.io/blogcss/app.css" rel="stylesheet">
+
+    
+
+    
+
+    
+    
+
+
+  </head>
+  <body>
+
+    <header class="nav">
+      <div class="top-bar">
+        <div class="row column">
+          <div class="top-bar-left">
+            <ul class="menu">
+              <li><a href="http://billthefarmer.github.io/blog">
+                  Bill Farmer's Blog
+                </a></li>
+            </ul>
+          </div>
+          <div class="top-bar-right">
+            <ul class="menu">
+              <li class=""><a href="http://billthefarmer.github.io/blog">
+                Home
+              </a></li>
+              
+                
+                  <li><a href="http://billthefarmer.github.io/blog/">
+                    Index
+                  </a></li>
+                
+                  <li><a href="http://billthefarmer.github.io/blog/about/">
+                    About
+                  </a></li>
+                
+                  <li><a href="http://billthefarmer.github.io/blog/whatever-o-meter/">
+                    Whatever-o-meter
+                  </a></li>
+                
+                  <li><a href="http://billthefarmer.github.io/blog/">
+                    Bill Farmer&#39;s Blog
+                  </a></li>
+                
+                  <li><a href="http://billthefarmer.github.io/blog/categories/">
+                    Categories
+                  </a></li>
+                
+                  <li><a href="http://billthefarmer.github.io/blog/categories/diy/">
+                    Diy
+                  </a></li>
+                
+                  <li><a href="http://billthefarmer.github.io/blog/categories/hacking/">
+                    Hacking
+                  </a></li>
+                
+                  <li><a href="http://billthefarmer.github.io/blog/categories/recipes/">
+                    Recipes
+                  </a></li>
+                
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <header class="blog-header">
+      <div class="callout large">
+        <div class="row column text-center">
+          <h1>
+            <a href="http://billthefarmer.github.io/blog" rel="home">Bill Farmer's Blog</a>
+          </h1>
+          
+            <p>
+              Random thoughts on random subjects
+            </p>
+          
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="row" id="content">
+        <div class="medium-8 columns">
+          
+  
+
+
+  <div class="blog-post">
+    <h3>
+      <a href="http://billthefarmer.github.io/blog/java-collections/">Java Collections</a>
+    </h3>
+    <div class="callout small">
+      <small>
+        <time datetime="2014-11-01T12:18:28Z">
+          Sat Nov 1, 2014
+        </time> by Bill Farmer.
+        Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+        
+        <br>
+        
+      </small>
+    </div>
+    <p>
+      <p>I find Java Collections frustrating and insane. I have been through this loop on several occasions. I decide I want a list to do whatever. So I look up <a href="http://developer.android.com/reference/java/util/List.html" target="_blank">List </a>in the docs and find it&#8217;s an interface, ie: roll yer own. So I look down the hierarchy and find <a href="http://developer.android.com/reference/java/util/AbstractList.html" target="_blank">AbstractList</a>, which is abstract, again: roll yer own. So finally I get to <a href="http://developer.android.com/reference/java/util/ArrayList.html" target="_blank">ArrayList </a>which might do the job, but the docs aren&#8217;t too clear, so I try it and it works. I just want a list that will do the job. I don&#8217;t care what it stores the data in, that level of detail is supposed to be obscured and possibly subject to change anyway.</p>
+
+<p>So why can&#8217;t a List be a list that you can actually do something useful with? I don&#8217;t get this sort of nonsense with other languages. An AbstractList is fine, it is what it is. It can&#8217;t be that difficult to dream up a suitable name for a list like interface that isn&#8217;t just List.</p>
+
+    </p>
+    
+    <hr>
+  </div>
+
+  
+
+
+        </div>
+          <div class="medium-3 columns" data-sticky-container>
+  <div class="sticky" data-sticky data-anchor="content">
+
+  
+
+  
+
+  <h4>Recent Posts</h4>
+  <ul>
+    
+      <li><a href="/blog/resolving-content-uris-in-android/">
+        Resolving content uris in android
+      </a></li>
+    
+      <li><a href="/blog/vegetables-cooked-in-olive-oil/">
+        Vegetables cooked in olive oil
+      </a></li>
+    
+      <li><a href="/blog/slow-cooked-ox-cheek/">
+        Slow cooked ox cheek
+      </a></li>
+    
+      <li><a href="/blog/handling-run-time-changes-in-android/">
+        Handling run time changes in Android
+      </a></li>
+    
+      <li><a href="/blog/using-emacs-as-an-ide/">
+        Using Emacs as an IDE
+      </a></li>
+    
+  </ul>
+
+  
+    <h4>Links</h4>
+    <ul>
+      
+        <li><a href="http://billthefarmer.github.io">
+          Bill Farmer
+        </a></li>
+      
+        <li><a href="https://github.com/billthefarmer">
+          Github
+        </a></li>
+      
+    </ul>
+  
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="blog-footer">
+      <div class="row column">
+        <p>
+          
+          Copyright &copy; 2017 Bill Farmer
+          
+        </p>
+        <p>
+          <a href="http://billthefarmer.github.io/blog/java-collections/#">Back to top</a>
+        </p>
+      </div>
+    </footer>
+
+  <foot>
+
+    <script src="http://billthefarmer.github.io/blogjs/app.js"></script>
+
+  </foot>
+  </body>
+</html>
