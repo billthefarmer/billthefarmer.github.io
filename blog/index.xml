@@ -67,8 +67,8 @@ Ingredients  Ox cheek 4-6 chopped onions 3-4 large carrots Olive oil Black peppe
       <pubDate>Sun, 18 Sep 2016 20:27:57 +0000</pubDate>
       
       <guid>http://billthefarmer.github.io/blog/upgrading-a-moto-g/</guid>
-      <description>I got myself a refurbished Moto G phone a while ago. It came with Android Kitkat 4.4.4, complete with Moto bloat. I had already put [
-I got myself a refurbished Moto G phone a while ago. It came with Android Kitkat 4.4.4, complete with Moto bloat. I had already put]2 on my tablet, so I installed Cyanogenmod 11, android 4.4.4 on it, in accordance with the instructions on the wiki, no problem.</description>
+      <description>I got myself a refurbished Moto G phone a while ago. It came with Android Kitkat 4.4.4, complete with Moto bloat. I had already put Cyanogenmod on my tablet, so I installed Cyanogenmod 11, android 4.4.4 on it, in accordance with the instructions on the wiki, no problem. That got rid of the bloat and allows fine control of app snooping via Privacy Guard in the settings.
+When I first installed Cyanogenmod, I had to use an unofficial build, as an official build for Kitkat 4.</description>
     </item>
     
     <item>
@@ -78,7 +78,6 @@ I got myself a refurbished Moto G phone a while ago. It came with Android Kitkat
       
       <guid>http://billthefarmer.github.io/blog/replacing-micro-bore-radiators/</guid>
       <description>My heating system uses 1&amp;frasl;4&amp;#8243; copper pipe, which I think was called micro-bore at the time. Both pipes went to a valve at one end of the radiator. There were a variety of valves fitted, but most of them were like this one.
-
 I investigated the best method for replacing the radiators and valves and found that using standard 15mm fittings with 15/8mm reducers was probably the best option. This involves removing the old radiator and valve, carefully removing the olives from the existing pipes with a junior hacksaw to cut a slot, and a screwdriver to pry it off.</description>
     </item>
     
@@ -146,7 +145,7 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
       <pubDate>Tue, 02 Feb 2016 16:59:51 +0000</pubDate>
       
       <guid>http://billthefarmer.github.io/blog/read-ibook-books-on-an-android-tablet/</guid>
-      <description>You will need to install Calibre to make the books usable, and the books must be DRM free.
+      <description>You will need to install Calibre to make the books usable, and the books must be DRM free.
 There are two ways to do this:
  If you have a Mac or Hackintosh you can find your books in ~/Library/Containers/com.apple.BKAgentService/Data/Documents/iBooks/Books, in what appears to be epub files but are really folders with numeric names. Copy the ones you want to somewhere accessible, like ~/Books, and zip the contents of each folder, not the folder itself.</description>
     </item>
@@ -157,8 +156,7 @@ There are two ways to do this:
       <pubDate>Tue, 26 Jan 2016 11:36:38 +0000</pubDate>
       
       <guid>http://billthefarmer.github.io/blog/install-osx-el-capitan-on-a-pc-mbr/</guid>
-      <description>Prerequisites  A real Mac or Hackintosh A spare disk drive &amp;#8211; at least 8Gb, preferably USB An 8Gb or larger USB stick The Install OSX El Capitan.app from the App Store A disk partition to install in  Install on spare disk drive 
-Connect your spare drive to your PC. Use the method described here to build the El Capitan install USB stick and install OSX using the GPT partition scheme on your spare disk drive.</description>
+      <description>Prerequisites  A real Mac or Hackintosh A spare disk drive &amp;#8211; at least 8Gb, preferably USB An 8Gb or larger USB stick The Install OSX El Capitan.app from the App Store A disk partition to install in  Install on spare disk drive Connect your spare drive to your PC. Use the method described here to build the El Capitan install USB stick and install OSX using the GPT partition scheme on your spare disk drive.</description>
     </item>
     
     <item>
@@ -219,7 +217,7 @@ When I got home, I mentioned this to she who did most of the cooking at that tim
       
       <guid>http://billthefarmer.github.io/blog/handlers-in-android/</guid>
       <description>Using a handler to return results from a worker thread This has taken me quite a while to put together. There are throw-away remarks in the Android docs about this, but no useful examples. You want to get the results back from a worker thread to your main activity so you can do stuff with them. There are several parts to this.
- The main activity implements Handler.Callback, and has a</description>
+ The main activity implements Handler.Callback, and has a handleMessage function.</description>
     </item>
     
     <item>
@@ -267,7 +265,8 @@ A few years later I ported it to windows, added a few gizmos for tuning accordio
       <pubDate>Wed, 25 Feb 2015 18:00:34 +0000</pubDate>
       
       <guid>http://billthefarmer.github.io/blog/sausages-with-green-lentils/</guid>
-      <description>This recipe is based on the sausages with lentils in this episode of Italy Unpacked on BBC 2. This is enough for three or four, depending on the number of sausages. You will need a medium sized pan to cook the lentils, and a large deep pan for the sausages, onions, and everything else. Ingredients {.western}  One cup green lentils Two sticks celery, chopped Large garlic clove or two small, chopped</description>
+      <description>This recipe is based on the sausages with lentils in this episode of Italy Unpacked on BBC 2. This is enough for three or four, depending on the number of sausages. You will need a medium sized pan to cook the lentils, and a large deep pan for the sausages, onions, and everything else.
+Ingredients  One cup green lentils Two sticks celery, chopped Large garlic clove or two small, chopped Six or eight good quality sausages Two large onions, chopped 500g carton passata Olive oil  Method  Put lentils, chopped celery and garlic in a pot, cover with water, boil for five minutes, then simmer for about 30 minutes until tender.</description>
     </item>
     
     <item>
