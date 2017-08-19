@@ -36,7 +36,7 @@ I looked for migration tools, and found two:
 
 
 <meta itemprop="dateModified" content="2017-08-19T14:30:00&#43;00:00" />
-<meta itemprop="wordCount" content="703">
+<meta itemprop="wordCount" content="828">
 
 
 
@@ -265,6 +265,7 @@ menu:
 
 params:
   description: Random thoughts on random subjects
+  header_background: images/2013/12/cropped-P1010089.jpg
   sidebar:
     # Optional about block for sidebar (can be Markdown)
     # about: Bill Farmer's Blog
@@ -283,8 +284,36 @@ necessary to add the <code>sidebar</code> entry to stop an error, so the
 the <code>about</code> item. I had to look at the source template to work that
 out.</p>
 
+<p>I wanted a background image for the page header like on my original
+blog. To get that to work was quite complex. There aren&rsquo;t any hooks
+for modifying the blog header, but there is for the page <code>&lt;head&gt;</code>. So
+I copied the <code>head-custom.html</code> from the <code>layouts/partials</code> folder in
+the theme to <code>layouts/partials</code> in the blog source and modified it
+with some extra styles.</p>
+
+<pre><code>&lt;!--
+    Create &lt;project-root&gt;/layouts/partials/head-custom.html to
+    overwrite this empty template and put custom code into the &lt;head&gt;
+    section.
+  --&gt;
+
+&lt;style&gt;
+.callout.large {
+    background-image: url({{ $.Site.Params.header_background }});
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+&lt;/style&gt;
+</code></pre>
+
+<p>Reading the documentation on <a href="http://gohugo.io/variables">variables</a>, I put an entry in the
+config file <code>header_background: images/2013/12/cropped-P1010089.jpg</code>
+and put <code>{{ $.Site.Params.header_background }}</code> instead of the path in
+the styles.</p>
+
 <p>I wanted to get syntax highlighting working, so I installed
-<a href="http://pygments.org/">Pygments</a>. It&rsquo;s on the path, it works, but Hugo can&rsquo;t find it.</p>
+<a href="http://pygments.org">Pygments</a>. It&rsquo;s on the path, it works, but Hugo can&rsquo;t find it.</p>
 
 <pre><code>WARN 2017/08/19 16:42:47 Highlighting requires Pygments to be installed and in the path
 </code></pre>
