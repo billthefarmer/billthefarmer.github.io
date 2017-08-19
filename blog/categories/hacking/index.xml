@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2017 Bill Farmer</copyright>
-    <lastBuildDate>Sun, 23 Jul 2017 10:48:17 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Aug 2017 14:30:00 +0000</lastBuildDate>
     
 	<atom:link href="http://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Migrating this blog from Wordpress</title>
+      <link>http://billthefarmer.github.io/blog/migrating-blog-from-wordpress/</link>
+      <pubDate>Sat, 19 Aug 2017 14:30:00 +0000</pubDate>
+      
+      <guid>http://billthefarmer.github.io/blog/migrating-blog-from-wordpress/</guid>
+      <description>I have got fed up with Wordpress. It requires constant updates, which doesn&amp;rsquo;t work automatically on Sourceforge developer web, and it&amp;rsquo;s slow, especially in admin mode. I came across a reference to Hugo while following up on something unrelated, so I decided to investigate.
+I looked for migration tools, and found two:
+ Exitwp, which reads a Wordpress export xml file and converts to Jeckyll WordPress to Hugo Exporter, which is a Wordpress plugin and exports to Hugo  I found a blog post from Justin Dunham documenting migrating his blog.</description>
+    </item>
     
     <item>
       <title>Resolving content uris in android</title>
