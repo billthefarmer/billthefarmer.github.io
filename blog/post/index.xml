@@ -19,7 +19,7 @@
       
       <guid>http://billthefarmer.github.io/blog/resolving-content-uris-in-android/</guid>
       <description>If you write an android app that handles images or any other sort of file your app may be required to deal with &amp;#8216;content&amp;#8217; uris (content://). There is a very useful utility which resolves these into &amp;#8216;file&amp;#8217; uris (file:///) FileUtils.java. This contains one external reference to LocalStorageProvider, which can be resolved by replacing the reference with a string.
-// import com.ianhanniballake.localstorage.LocalStorageProvider; // ... /** * @param uri The Uri to check.</description>
+ // import com.ianhanniballake.localstorage.LocalStorageProvider; // ... /** * @param uri The Uri to check.</description>
     </item>
     
     <item>
@@ -48,7 +48,7 @@ Ingredients  Ox cheek 4-6 chopped onions 3-4 large carrots Olive oil Black peppe
       <pubDate>Sun, 08 Jan 2017 18:49:31 +0000</pubDate>
       
       <guid>http://billthefarmer.github.io/blog/handling-run-time-changes-in-android/</guid>
-      <description>Two articles, Handling Runtime Changes and Two articles, Handling Runtime Changes and recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:
+      <description>Two articles, Handling Configuration Changes and Handling Configuration Changes with Fragments recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:
  An android fragment is quite a complex heavyweight object to use just for retaining data and possibly a background task, and the fragment management is not simple. Fragments are not retained if the associated activity is discarded by calling finish().</description>
     </item>
     
@@ -395,7 +395,7 @@ Ingredients  375g or thereabouts packet of dried butter beans 4-500g belly pork 
       <guid>http://billthefarmer.github.io/blog/haskell/</guid>
       <description>I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I&amp;#8217;s give it a go and see how I got on.
 You can try it out in your browser: http://tryhaskell.org
- λ let factorial n = product [1..n] in factorial 99 9332621544394415268169923885626670049071596826438162146859 2963895217599993229915608941463976156518286253697920827223 7582511852109168640000000000000000000000 :: (Enum a, Num a) =&amp;gt; a λ  Pretty impressive! So I thought I&amp;#8217;d try a simple web application.</description>
+ λ let factorial n = product [1..n] in factorial 99 9332621544394415268169923885626670049071596826438162146859 2963895217599993229915608941463976156518286253697920827223 7582511852109168640000000000000000000000 :: (Enum a, Num a) = a λ  Pretty impressive! So I thought I&amp;#8217;d try a simple web application.</description>
     </item>
     
     <item>
@@ -432,7 +432,7 @@ Ingredients  Small potato, chopped Small onion, chopped Chili pepper, sliced Cho
       <pubDate>Sat, 21 Dec 2013 18:54:52 +0000</pubDate>
       
       <guid>http://billthefarmer.github.io/blog/python/</guid>
-      <description>I&amp;#8217;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &amp;#8216;Blank space shalt not be significant except to separate tokens where necessary.&amp;#8217;. That&amp;#8217;s why you can minimise a lengthy JavaScript script like [jQuery][1] to one enormously long line and it still works just fine.
+      <description>I&amp;#8217;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &amp;#8216;Blank space shalt not be significant except to separate tokens where necessary.&amp;#8217;. That&amp;#8217;s why you can minimise a lengthy JavaScript script like jQuery to one enormously long line and it still works just fine.
 But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter an advent calender competition which involved checking a web page to see if your name has come up and sending an email if it does.</description>
     </item>
     
@@ -494,6 +494,16 @@ Ingredients  2 eggs medium sized potato, cubed small onion, chopped chorizo, sli
       <guid>http://billthefarmer.github.io/blog/leek-and-potato-soup/</guid>
       <description>A vegetable soup that’s full of flavour. Make it into a meal with plenty of bread and butter. Enough for two, double the recipe for four.
 Ingredients  1 tbsp olive oil 1 onion, chopped 125g/4oz potatoes, cubed 1 medium leek, chopped 1 clove garlic, crushed 1&amp;frasl;2 a fresh chilli, if desired 1 small carrot, grated 350ml/3/4 pint milk and water salt and freshly ground black pepper  Preparation method  Heat the oil in a large pan and add the onions, garlic, carrot, potatoes and leeks.</description>
+    </item>
+    
+    <item>
+      <title>Whatever-o-meter</title>
+      <link>http://billthefarmer.github.io/blog/whatever-o-meter/</link>
+      <pubDate>Wed, 20 Nov 2013 18:55:54 +0000</pubDate>
+      
+      <guid>http://billthefarmer.github.io/blog/whatever-o-meter/</guid>
+      <description>Introduction Whatever-o-meter is a WordPress plugin that shows a tachometer-like dial with a pointer, asks a series of predefined questions which are answered by moving a slider, shows one of several predefined results, and moves the tacho pointer to a position determined by the value of the result. The project is on Github.
+Documentation Whatever-o-meter uses the shortcode [whateverometer] or [whatever-o-meter] to insert the whatever-o-meter display into the page. Other page content above and below the shortcode will appear on the page as normal.</description>
     </item>
     
   </channel>

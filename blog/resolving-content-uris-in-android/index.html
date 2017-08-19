@@ -8,7 +8,7 @@
 
 <meta property="og:title" content="Resolving content uris in android" />
 <meta property="og:description" content="If you write an android app that handles images or any other sort of file your app may be required to deal with &#8216;content&#8217; uris (content://). There is a very useful utility which resolves these into &#8216;file&#8217; uris (file:///) FileUtils.java. This contains one external reference to LocalStorageProvider, which can be resolved by replacing the reference with a string.
-// import com.ianhanniballake.localstorage.LocalStorageProvider; // ... /** * @param uri The Uri to check." />
+ // import com.ianhanniballake.localstorage.LocalStorageProvider; // ... /** * @param uri The Uri to check." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://billthefarmer.github.io/blog/resolving-content-uris-in-android/" />
 
@@ -30,11 +30,11 @@
 
 <meta itemprop="name" content="Resolving content uris in android">
 <meta itemprop="description" content="If you write an android app that handles images or any other sort of file your app may be required to deal with &#8216;content&#8217; uris (content://). There is a very useful utility which resolves these into &#8216;file&#8217; uris (file:///) FileUtils.java. This contains one external reference to LocalStorageProvider, which can be resolved by replacing the reference with a string.
-// import com.ianhanniballake.localstorage.LocalStorageProvider; // ... /** * @param uri The Uri to check.">
+ // import com.ianhanniballake.localstorage.LocalStorageProvider; // ... /** * @param uri The Uri to check.">
 
 
 <meta itemprop="dateModified" content="2017-07-23T10:48:17&#43;00:00" />
-<meta itemprop="wordCount" content="179">
+<meta itemprop="wordCount" content="178">
 
 
 
@@ -42,7 +42,7 @@
 
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Resolving content uris in android"/>
 <meta name="twitter:description" content="If you write an android app that handles images or any other sort of file your app may be required to deal with &#8216;content&#8217; uris (content://). There is a very useful utility which resolves these into &#8216;file&#8217; uris (file:///) FileUtils.java. This contains one external reference to LocalStorageProvider, which can be resolved by replacing the reference with a string.
-// import com.ianhanniballake.localstorage.LocalStorageProvider; // ... /** * @param uri The Uri to check."/>
+ // import com.ianhanniballake.localstorage.LocalStorageProvider; // ... /** * @param uri The Uri to check."/>
 
 
 
@@ -87,16 +87,8 @@
               </a></li>
               
                 
-                  <li><a href="http://billthefarmer.github.io/blog/">
-                    Index
-                  </a></li>
-                
                   <li><a href="http://billthefarmer.github.io/blog/about/">
                     About
-                  </a></li>
-                
-                  <li><a href="http://billthefarmer.github.io/blog/whatever-o-meter/">
-                    Whatever-o-meter
                   </a></li>
                 
                   <li><a href="http://billthefarmer.github.io/blog/">
@@ -172,44 +164,45 @@
       </small>
     </div>
     <p>
-      <p>If you write an android app that handles images or any other sort of file your app may be required to deal with &#8216;content&#8217; uris (<code>content://</code>). There is a very useful utility which resolves these into &#8216;file&#8217; uris (<code>file:///</code>) <a href="https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ipaulpro/afilechooser/utils/FileUtils.java">FileUtils.java</a>. This contains one external reference to <a href="https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ianhanniballake/localstorage/LocalStorageProvider.java"><span class="pl-smi">LocalStorageProvider</span></a>, which can be resolved by replacing the reference with a string.</p>
+      <p>If you write an android app that handles images or any other sort of file your app may be required to deal with &#8216;content&#8217; uris (<code>content://</code>). There is a very useful utility which resolves these into &#8216;file&#8217; uris (<code>file:///</code>) <a href="https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ipaulpro/afilechooser/utils/FileUtils.java">FileUtils.java</a>. This contains one external reference to <a href="https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ianhanniballake/localstorage/LocalStorageProvider.java">LocalStorageProvider</a>, which can be resolved by replacing the reference with a string.</p>
 
-<pre><code>// import com.ianhanniballake.localstorage.LocalStorageProvider;
-// ...
-    /**
-     * @param uri The Uri to check.
-     * @return Whether the Uri authority is {@link LocalStorageProvider}.
-     * @author paulburke
-     */
-    public static boolean isLocalStorageDocument(Uri uri) {
-        // return LocalStorageProvider.AUTHORITY.equals(uri.getAuthority());
-        return &quot;com.ianhanniballake.localstorage.documents&quot;
-            .equals(uri.getAuthority());
-
-    }
-</code></pre>
+<pre>
+    // import com.ianhanniballake.localstorage.LocalStorageProvider;
+    // ...
+        /**
+         * @param uri The Uri to check.
+         * @return Whether the Uri authority is {@link LocalStorageProvider}.
+         * @author paulburke
+         */
+        public static boolean isLocalStorageDocument(Uri uri) {
+            // return LocalStorageProvider.AUTHORITY.equals(uri.getAuthority());
+            return "com.ianhanniballake.localstorage.documents"
+                .equals(uri.getAuthority());
+    
+        }
+</pre>
 
 <p>Alternatively, you could just comment out this function and references to it. Having done that, you can then resolve &#8216;content&#8217; uris</p>
 
-<pre><code>public final static String CONTENT = &quot;content&quot;;
-// ...
-        if (uri.getScheme().equalsIgnoreCase(CONTENT))
-            uri = resolveContent(uri);
-// ...
-    // resolveContent
-    private Uri resolveContent(Uri uri)
-    {
-        String path = FileUtils.getPath(this, uri);
-        if (path != null)
+<pre>
+    public final static String CONTENT = "content";
+    // ...
+            if (uri.getScheme().equalsIgnoreCase(CONTENT))
+                uri = resolveContent(uri);
+    // ...
+        // resolveContent
+        private Uri resolveContent(Uri uri)
         {
-            File file = new File(path);
-            if (file.canRead())
-                uri = Uri.fromFile(file);
+            String path = FileUtils.getPath(this, uri);
+            if (path != null)
+            {
+                File file = new File(path);
+                if (file.canRead())
+                    uri = Uri.fromFile(file);
+            }
+            return uri;
         }
-        return uri;
-    }
-&lt;code&gt;&lt;/code&gt;
-</code></pre>
+</pre>
 
 <p>This may not always work, but I haven&#8217;t been able to defeat it.</p>
 

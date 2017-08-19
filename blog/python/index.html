@@ -7,7 +7,7 @@
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 <meta property="og:title" content="Python" />
-<meta property="og:description" content="I&#8217;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &#8216;Blank space shalt not be significant except to separate tokens where necessary.&#8217;. That&#8217;s why you can minimise a lengthy JavaScript script like [jQuery][1] to one enormously long line and it still works just fine.
+<meta property="og:description" content="I&#8217;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &#8216;Blank space shalt not be significant except to separate tokens where necessary.&#8217;. That&#8217;s why you can minimise a lengthy JavaScript script like jQuery to one enormously long line and it still works just fine.
 But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter an advent calender competition which involved checking a web page to see if your name has come up and sending an email if it does." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://billthefarmer.github.io/blog/python/" />
@@ -29,19 +29,19 @@ But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter 
 
 
 <meta itemprop="name" content="Python">
-<meta itemprop="description" content="I&#8217;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &#8216;Blank space shalt not be significant except to separate tokens where necessary.&#8217;. That&#8217;s why you can minimise a lengthy JavaScript script like [jQuery][1] to one enormously long line and it still works just fine.
+<meta itemprop="description" content="I&#8217;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &#8216;Blank space shalt not be significant except to separate tokens where necessary.&#8217;. That&#8217;s why you can minimise a lengthy JavaScript script like jQuery to one enormously long line and it still works just fine.
 But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter an advent calender competition which involved checking a web page to see if your name has come up and sending an email if it does.">
 
 
 <meta itemprop="dateModified" content="2013-12-21T18:54:52&#43;00:00" />
-<meta itemprop="wordCount" content="348">
+<meta itemprop="wordCount" content="342">
 
 
 
 <meta itemprop="keywords" content="" />
 
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Python"/>
-<meta name="twitter:description" content="I&#8217;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &#8216;Blank space shalt not be significant except to separate tokens where necessary.&#8217;. That&#8217;s why you can minimise a lengthy JavaScript script like [jQuery][1] to one enormously long line and it still works just fine.
+<meta name="twitter:description" content="I&#8217;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &#8216;Blank space shalt not be significant except to separate tokens where necessary.&#8217;. That&#8217;s why you can minimise a lengthy JavaScript script like jQuery to one enormously long line and it still works just fine.
 But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter an advent calender competition which involved checking a web page to see if your name has come up and sending an email if it does."/>
 
 
@@ -87,16 +87,8 @@ But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter 
               </a></li>
               
                 
-                  <li><a href="http://billthefarmer.github.io/blog/">
-                    Index
-                  </a></li>
-                
                   <li><a href="http://billthefarmer.github.io/blog/about/">
                     About
-                  </a></li>
-                
-                  <li><a href="http://billthefarmer.github.io/blog/whatever-o-meter/">
-                    Whatever-o-meter
                   </a></li>
                 
                   <li><a href="http://billthefarmer.github.io/blog/">
@@ -172,13 +164,14 @@ But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter 
       </small>
     </div>
     <p>
-      <p>I&#8217;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &#8216;Blank space shalt not be significant except to separate tokens where necessary.&#8217;. That&#8217;s why you can minimise a lengthy JavaScript script like [jQuery][1] to one enormously long line and it still works just fine.</p>
+      <p>I&#8217;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &#8216;Blank space shalt not be significant except to separate tokens where necessary.&#8217;. That&#8217;s why you can minimise a lengthy JavaScript script like <a href="http://jquery.com">jQuery</a> to one enormously long line and it still works just fine.</p>
 
-<p>But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter an advent calender competition which involved checking a web page to see if your name has come up and sending an email if it does. So I thought that&#8217;s an ideal little job to run on my [Raspberry Pi][2]. So I installed the ssmtp package and attempted to test sending an email. After several days of faffing about with no joy I gave up.</p>
+<p>But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter an advent calender competition which involved checking a web page to see if your name has come up and sending an email if it does. So I thought that&#8217;s an ideal little job to run on my <a href="http://www.raspberrypi.org">Raspberry Pi</a>. So I installed the ssmtp package and attempted to test sending an email. After several days of faffing about with no joy I gave up.</p>
 
-<p>One of the things that comes front and centre with the standard [Raspbian][3] installation is Python. So, after checking the documentation for smtp and http libraries, etc, I decided to give it a go. You can test your code on the command line before sticking it in a file, and you get, unlike ssmtp, helpful messages that tell you what&#8217;s going on. So you end up with a script that looks like this, and it actually appears to work.</p>
+<p>One of the things that comes front and centre with the standard <a href="http://www.raspberrypi.org/downloads">Raspbian</a> installation is Python. So, after checking the documentation for smtp and http libraries, etc, I decided to give it a go. You can test your code on the command line before sticking it in a file, and you get, unlike ssmtp, helpful messages that tell you what&#8217;s going on. So you end up with a script that looks like this, and it actually appears to work.</p>
 
-<pre><code class="language-python">#! /usr/bin/env python
+<pre>
+#! /usr/bin/env python
 
 import urllib2
 import smtplib
@@ -187,14 +180,14 @@ from os import utime
 from datetime import date
 from email.mime.text import MIMEText
 
-if os.path.exists(&quot;sent&quot;)
+if os.path.exists("sent")
   quit()
 
-f = urllib2.urlopen(&quot;url&quot;)
+f = urllib2.urlopen("url")
 
 today = False
 for line in f:
-  if &quot;winners&quot; in line:
+  if "winners" in line:
     today = str(date.today().day) in line
     break
 
@@ -202,33 +195,30 @@ line = f.readline()
 
 f.close()
 
-if today and &quot;name&quot; in line:
-  s = smtplib.SMTP_SSL(&quot;smtp.mail.yahoo.com&quot;)
-  s.login(&quot;user&quot;,&quot;password&quot;)
-  msg = MIMEText(&quot;I would like to claim my prize\r\n\r\nRegards\r\nname&quot;)
-  msg['Subject'] = &quot;Advent Calendar Competition&quot;
-  msg['From'] = &quot;from email&quot;
-  msg['To'] = &quot;to email&quot;
-  msg['Bcc'] = &quot;from email&quot;
-  s.sendmail(&quot;from email&quot;, [&quot;to email&quot;,&quot;from email&quot;], msg.as_string())
+if today and "name" in line:
+  s = smtplib.SMTP_SSL("smtp.mail.yahoo.com")
+  s.login("user","password")
+  msg = MIMEText("I would like to claim my prize\r\n\r\nRegards\r\nname")
+  msg['Subject'] = "Advent Calendar Competition"
+  msg['From'] = "from email"
+  msg['To'] = "to email"
+  msg['Bcc'] = "from email"
+  s.sendmail("from email", ["to email","from email"], msg.as_string())
   s.quit()
   print(msg.as_string())
-  open(&quot;sent&quot;, &quot;w&quot;).close()
+  open("sent", "w").close()
 
-with file(&quot;last&quot;, &quot;a&quot;):
-  utime(&quot;last&quot;, None)
-</code></pre>
+with file("last", "a"):
+  utime("last", None)
+</pre>
 
 <p>So, very careful with the indenting. We shall have to see if anyone wins anything. The script gets fired off periodically with a crontab entry.</p>
 
-<pre><code>CRON_TZ=Europe/London
+<pre>
+CRON_TZ=Europe/London
 MAILTO=bill
-*/1 9-10 1-24 12 * $HOME/advent/advent.py&lt;/pre&gt;
-
- [1]: http://jquery.com
- [2]: http://www.raspberrypi.org
- [3]: http://www.raspberrypi.org/downloads
-</code></pre>
+*/1 9-10 1-24 12 * $HOME/advent/advent.py
+</pre>
 
     </p>
     

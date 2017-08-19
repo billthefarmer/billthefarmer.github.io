@@ -7,7 +7,7 @@
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 <meta property="og:title" content="Handling run time changes in Android" />
-<meta property="og:description" content="Two articles, Handling Runtime Changes and Two articles, Handling Runtime Changes and recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:
+<meta property="og:description" content="Two articles, Handling Configuration Changes and Handling Configuration Changes with Fragments recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:
  An android fragment is quite a complex heavyweight object to use just for retaining data and possibly a background task, and the fragment management is not simple. Fragments are not retained if the associated activity is discarded by calling finish()." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://billthefarmer.github.io/blog/handling-run-time-changes-in-android/" />
@@ -29,19 +29,19 @@
 
 
 <meta itemprop="name" content="Handling run time changes in Android">
-<meta itemprop="description" content="Two articles, Handling Runtime Changes and Two articles, Handling Runtime Changes and recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:
+<meta itemprop="description" content="Two articles, Handling Configuration Changes and Handling Configuration Changes with Fragments recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:
  An android fragment is quite a complex heavyweight object to use just for retaining data and possibly a background task, and the fragment management is not simple. Fragments are not retained if the associated activity is discarded by calling finish().">
 
 
 <meta itemprop="dateModified" content="2017-01-08T18:49:31&#43;00:00" />
-<meta itemprop="wordCount" content="362">
+<meta itemprop="wordCount" content="354">
 
 
 
 <meta itemprop="keywords" content="" />
 
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Handling run time changes in Android"/>
-<meta name="twitter:description" content="Two articles, Handling Runtime Changes and Two articles, Handling Runtime Changes and recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:
+<meta name="twitter:description" content="Two articles, Handling Configuration Changes and Handling Configuration Changes with Fragments recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:
  An android fragment is quite a complex heavyweight object to use just for retaining data and possibly a background task, and the fragment management is not simple. Fragments are not retained if the associated activity is discarded by calling finish()."/>
 
 
@@ -87,16 +87,8 @@
               </a></li>
               
                 
-                  <li><a href="http://billthefarmer.github.io/blog/">
-                    Index
-                  </a></li>
-                
                   <li><a href="http://billthefarmer.github.io/blog/about/">
                     About
-                  </a></li>
-                
-                  <li><a href="http://billthefarmer.github.io/blog/whatever-o-meter/">
-                    Whatever-o-meter
                   </a></li>
                 
                   <li><a href="http://billthefarmer.github.io/blog/">
@@ -172,127 +164,129 @@
       </small>
     </div>
     <p>
-      <p>Two articles, <a href="https://developer.android.com/guide/topics/resources/runtime-changes.html">Handling Runtime Changes</a> and <a href="http://www.androiddesignpatterns.com/2013/04/retaining-objects-across-config-changes.html">Two articles, <a href="https://developer.android.com/guide/topics/resources/runtime-changes.html">Handling Runtime Changes</a> and</a> recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:</p>
+      <p>Two articles, <a href="https://developer.android.com/guide/topics/resources/runtime-changes.html">Handling Configuration Changes</a> and <a href="http://www.androiddesignpatterns.com/2013/04/retaining-objects-across-config-changes.html">Handling Configuration Changes with Fragments</a> recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:</p>
 
 <ul>
 <li>An android fragment is quite a complex heavyweight object to use just for retaining data and possibly a background task, and the fragment management is not simple.</li>
-<li>Fragments are not retained if the associated activity is discarded by calling finish().</li>
+<li>Fragments are not retained if the associated activity is discarded by calling <code>finish()</code>.</li>
 </ul>
 
 <p>A simpler and less complex solution is to use a static singleton, mentioned here in a different context: <a href="https://developer.android.com/training/volley/requestqueue.html">Setting Up a RequestQueue</a>. This is quite simple to implement, like this:</p>
 
-<pre><code>// Activity
-    // On create
-    @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-
-    // Get data instance
-    instance = Data.getInstance(this);
-        // ...
-
-    // On resume
-    @Override
-    protected void onResume()
-    {
-        super.onResume();
-
-    // Connect callbacks
-    instance = Data.getInstance(this);
-
-        // Check data instance
-        if (instance != null)
+<pre>
+    
+    // Activity
+        // On create
+        @Override
+        public void onCreate(Bundle savedInstanceState)
         {
-            // Get the saved select list
-            List list = instance.getList();
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.main);
+    
+        // Get data instance
+        instance = Data.getInstance(this);
             // ...
-
-            // Get the saved value map
-            valueMap = instance.getMap();
-        }
-    // ...
-
-    // On pause
-    @Override
-    protected void onPause()
-    {
-        super.onPause();
-        // ...
-
-        // Save the select list and value map in the data instance
-        if (instance != null)
+    
+        // On resume
+        @Override
+        protected void onResume()
         {
-            instance.setList(selectList);
-            instance.setMap(valueMap);
+            super.onResume();
+    
+        // Connect callbacks
+        instance = Data.getInstance(this);
+     
+            // Check data instance
+            if (instance != null)
+            {
+                // Get the saved select list
+                List list = instance.getList();
+                // ...
+    
+                // Get the saved value map
+                valueMap = instance.getMap();
+            }
+        // ...
+    
+        // On pause
+        @Override
+        protected void onPause()
+        {
+            super.onPause();
+            // ...
+    
+            // Save the select list and value map in the data instance
+            if (instance != null)
+            {
+                instance.setList(selectList);
+                instance.setMap(valueMap);
+            }
+    
+        // Disconnect callbacks
+        instance = Data.getInstance(null);
         }
-
-    // Disconnect callbacks
-    instance = Data.getInstance(null);
-    }
-
-// Data singleton
-
-// Data class
-public class Data
-{
-    private static Data instance;
-
-    private Map&lt;String, Double&gt; map;
-    private List list;
-
-    private TaskCallbacks callbacks;
-
-
-    // Constructor
-    private Data()
+    
+    // Data singleton
+    
+    // Data class
+    public class Data
     {
+        private static Data instance;
+    
+        private Map<String, Double> map;
+        private List list;
+    
+        private TaskCallbacks callbacks;
+    
+    
+        // Constructor
+        private Data()
+        {
+        }
+    
+        // Get instance
+        public static Data getInstance(TaskCallbacks callbacks)
+        {
+            if (instance == null)
+                instance = new Data();
+    
+            instance.callbacks = callbacks;
+            return instance;
+        }
+    
+        // Set list
+        public void setList(List list)
+        {
+            this.list = list;
+        }
+    
+        // Get list
+        public List getList()
+        {
+            return list;
+        }
+    
+        // ...
+        // Start parse task
+        protected void startParseTask(String url)
+        {
+            ParseTask parseTask = new ParseTask();
+            parseTask.execute(url);
+        }
+    
+        // ParseTask class
+        protected class ParseTask
+            extends AsyncTask<String, String, Map<String, Double>>
+        {
+        // ...
+        // TaskCallbacks interface
+        interface TaskCallbacks
+        {
+            void onProgressUpdate(String... date);
+            void onPostExecute(Map<String, Double> map);
+        }
     }
-
-    // Get instance
-    public static Data getInstance(TaskCallbacks callbacks)
-    {
-        if (instance == null)
-            instance = new Data();
-
-        instance.callbacks = callbacks;
-        return instance;
-    }
-
-    // Set list
-    public void setList(List list)
-    {
-        this.list = list;
-    }
-
-    // Get list
-    public List getList()
-    {
-        return list;
-    }
-
-    // ...
-    // Start parse task
-    protected void startParseTask(String url)
-    {
-        ParseTask parseTask = new ParseTask();
-        parseTask.execute(url);
-    }
-
-    // ParseTask class
-    protected class ParseTask
-        extends AsyncTask&lt;String, String, Map&lt;String, Double&gt;&gt;
-    {
-    // ...
-    // TaskCallbacks interface
-    interface TaskCallbacks
-    {
-        void onProgressUpdate(String... date);
-        void onPostExecute(Map&lt;String, Double&gt; map);
-    }
-}
-</code></pre>
+</pre>
 
 <p>The data instance will be retained while the app is running and can be used to avoid expensive operations like downloading data more than once.</p>
 

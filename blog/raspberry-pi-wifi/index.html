@@ -32,7 +32,7 @@
 
 
 <meta itemprop="dateModified" content="2013-12-21T20:16:37&#43;00:00" />
-<meta itemprop="wordCount" content="558">
+<meta itemprop="wordCount" content="288">
 
 
 
@@ -84,16 +84,8 @@
               </a></li>
               
                 
-                  <li><a href="http://billthefarmer.github.io/blog/">
-                    Index
-                  </a></li>
-                
                   <li><a href="http://billthefarmer.github.io/blog/about/">
                     About
-                  </a></li>
-                
-                  <li><a href="http://billthefarmer.github.io/blog/whatever-o-meter/">
-                    Whatever-o-meter
                   </a></li>
                 
                   <li><a href="http://billthefarmer.github.io/blog/">
@@ -177,7 +169,8 @@
 
 <h2 id="raspbian">Raspbian</h2>
 
-<pre><code>    /etc/network/interfaces:
+<pre>
+    /etc/network/interfaces:
     
     auto lo
     iface lo inet loopback
@@ -187,16 +180,18 @@
     auto wlan0
     iface wlan0 inet dhcp
     wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+</pre>
 
-You can use `wpa_passphrase` to generate the `wpa_supplicant.conf` file:
+<p>You can use <code>wpa_passphrase</code> to generate the <code>wpa_supplicant.conf</code> file:</p>
 
+<pre>
     $ wpa_passphrase ssid passphrase
     network={
-            ssid=&quot;ssid&quot;
-            #psk=&quot;passphrase&quot;
+            ssid="ssid"
+            #psk="passphrase"
             psk=41167ee7545cb4d9b1c7d7e113cfc1f0ac367b020141c46c9418965c1926fd80
     }
-</code></pre>
+</pre>
 
 <p>Redirect the output to the <code>wpa_supplicant.conf</code> file. I found this in the Arch Linux wiki. The wpa-conf and wpa-roam stanzas do not appear to be officially documented anywhere I can find.</p>
 
@@ -204,61 +199,21 @@ You can use `wpa_passphrase` to generate the `wpa_supplicant.conf` file:
 
 <p>If your wifi router has a WPS button, press it. Run <code>wpa_cli</code> on the Pi and enter the following commands:</p>
 
-<pre><code>    &gt; wps_pbc
-    &gt; quit
-</code></pre>
+<pre>
+    > wps_pbc
+    > quit
+</pre>
 
 <p>This should automatically pick up the ssid and key, connect, and set up <code>wpa_supplicant.conf</code> so that the Pi will reconnect when rebooted.</p>
 
 <h2 id="arch-linux">Arch Linux</h2>
 
-<p>Use <code>wifi-menu</code> to create a <code>netctl</code> profile. Use <code>netctl list</code> to list profiles and ``When I got my Pi some months ago I bought a wifi adapter for it, as you do. But I couldn&#8217;t get it to work reliably in Raspbian, and I didn&#8217;t even try in Arch Linux. So I tested the adapter on my windoze box, and it worked just fine, and I tried it with Linux and it worked just fine, so I put it in the &#8216;too hard&#8217; box.</p>
+<p>Use <code>wifi-menu</code> to create a <code>netctl</code> profile. Use <code>netctl list</code> to list profiles and <code>netctl</code> to enable and start your profile.</p>
 
-<p>I dug it out again the other day because I wanted to hear just how good the <a href="https://github.com/billthefarmer/mididriver">Sonivox EAS library</a> I ported to the Pi sounded when hooked up to the hifi with some decent speakers. After extensive googling, and putting together various bits and pieces of info from various blog posts, and wikis, I came up with sort-of working configs for Raspbian and Arch Linux.</p>
-
-<h2 id="raspbian-1">Raspbian</h2>
-
-<pre><code>    /etc/network/interfaces:
-    
-    auto lo
-    iface lo inet loopback
-    
-    iface eth0 inet dhcp
-    
-    auto wlan0
-    iface wlan0 inet dhcp
-    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
-</code></pre>
-
-<p>You can use <code>wpa_passphrase</code> to generate the <code>wpa_supplicant.conf</code> file:</p>
-
-<pre><code>    $ wpa_passphrase ssid passphrase
-    network={
-            ssid=&quot;ssid&quot;
-            #psk=&quot;passphrase&quot;
-            psk=41167ee7545cb4d9b1c7d7e113cfc1f0ac367b020141c46c9418965c1926fd80
-    }
-</code></pre>
-
-<p>Redirect the output to the <code>wpa_supplicant.conf</code> file. I found this in the Arch Linux wiki. The wpa-conf and wpa-roam stanzas do not appear to be officially documented anywhere I can find.</p>
-
-<h3 id="raspbian-jessie-1">Raspbian Jessie</h3>
-
-<p>If your wifi router has a WPS button, press it. Run <code>wpa_cli</code> on the Pi and enter the following commands:</p>
-
-<pre><code>    &gt; wps_pbc
-    &gt; quit
-</code></pre>
-
-<p>This should automatically pick up the ssid and key, connect, and set up <code>wpa_supplicant.conf</code> so that the Pi will reconnect when rebooted.</p>
-
-<h2 id="arch-linux-1">Arch Linux</h2>
-
-<p>Use <code>wifi-menu</code> to create a <code>netctl</code> profile. Use <code>netctl list</code> to list profiles and`` to enable and start your profile.</p>
-
-<pre><code>    sudo netctl enable wlan0-yourSSIDhere
+<pre>
+    sudo netctl enable wlan0-yourSSIDhere
     sudo netctl start wlan0-yourSSIDhere
-</code></pre>
+</pre>
 
 <p>This appears to work just fine.</p>
 
