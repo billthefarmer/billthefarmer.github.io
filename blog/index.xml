@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bill Farmer&#39;s Blog</title>
-    <link>http://billthefarmer.github.io/blog/</link>
+    <link>https://billthefarmer.github.io/blog/</link>
     <description>Recent content on Bill Farmer&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2017 Bill Farmer</copyright>
     <lastBuildDate>Sat, 19 Aug 2017 14:30:00 +0000</lastBuildDate>
     
-	<atom:link href="http://billthefarmer.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://billthefarmer.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Migrating this blog from Wordpress</title>
-      <link>http://billthefarmer.github.io/blog/migrating-blog-from-wordpress/</link>
+      <link>https://billthefarmer.github.io/blog/migrating-blog-from-wordpress/</link>
       <pubDate>Sat, 19 Aug 2017 14:30:00 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/migrating-blog-from-wordpress/</guid>
+      <guid>https://billthefarmer.github.io/blog/migrating-blog-from-wordpress/</guid>
       <description>I have got fed up with Wordpress. It required constant updates, which doesn&amp;rsquo;t work automatically on Sourceforge developer web, and it&amp;rsquo;s slow, especially in admin mode. I came across a reference to Hugo while following up on something unrelated, so I decided to investigate.
 I looked for migration tools, and found two:
  Exitwp, which reads a Wordpress export xml file and converts to Jeckyll WordPress to Hugo Exporter, which is a Wordpress plugin and exports to Hugo  I found a blog post from Justin Dunham documenting migrating his blog.</description>
@@ -25,137 +25,137 @@ I looked for migration tools, and found two:
     
     <item>
       <title>Resolving content uris in android</title>
-      <link>http://billthefarmer.github.io/blog/resolving-content-uris-in-android/</link>
+      <link>https://billthefarmer.github.io/blog/resolving-content-uris-in-android/</link>
       <pubDate>Sun, 23 Jul 2017 10:48:17 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/resolving-content-uris-in-android/</guid>
+      <guid>https://billthefarmer.github.io/blog/resolving-content-uris-in-android/</guid>
       <description>If you write an android app that handles images or any other sort of file your app may be required to deal with &amp;#8216;content&amp;#8217; uris (content://). There is a very useful utility which resolves these into &amp;#8216;file&amp;#8217; uris (file:///) FileUtils.java. This contains one external reference to LocalStorageProvider, which can be resolved by replacing the reference with a string.
  // import com.ianhanniballake.localstorage.LocalStorageProvider; // ... /** * @param uri The Uri to check.</description>
     </item>
     
     <item>
       <title>Vegetables cooked in olive oil</title>
-      <link>http://billthefarmer.github.io/blog/vegetables-cooked-in-olive-oil/</link>
+      <link>https://billthefarmer.github.io/blog/vegetables-cooked-in-olive-oil/</link>
       <pubDate>Wed, 26 Apr 2017 10:41:59 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/vegetables-cooked-in-olive-oil/</guid>
+      <guid>https://billthefarmer.github.io/blog/vegetables-cooked-in-olive-oil/</guid>
       <description> This method can be used for cooking any selection of vegetables, the trick is to layer them with the slowest cooking, like green beans, carrots, and other root veg at the bottom of the pan, and the faster cooking, like broccoli, cabbage and spinach on top. A layer of sliced onions in the bottom of the pan melts down and steams the veg above.
 Ingredients  Sliced onions Potatoes Carrots Whatever green veg is to hand Olive oil  Method  Cover the bottom of a medium saucepan with oil Place a layer of sliced onions on the bottom Layer sliced carrots, potatoes, and green veg in the pan Put on a low heat for about 20 minutes with the lid on until the veg is cooked to taste  </description>
     </item>
     
     <item>
       <title>Slow cooked ox cheek</title>
-      <link>http://billthefarmer.github.io/blog/slow-cooked-ox-cheek/</link>
+      <link>https://billthefarmer.github.io/blog/slow-cooked-ox-cheek/</link>
       <pubDate>Wed, 26 Apr 2017 10:09:36 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/slow-cooked-ox-cheek/</guid>
+      <guid>https://billthefarmer.github.io/blog/slow-cooked-ox-cheek/</guid>
       <description> Ox cheek is a tasty cut of beef, but it contains tough connective tissue which melts away when slow cooked.
 Ingredients  Ox cheek 4-6 chopped onions 3-4 large carrots Olive oil Black pepper Bay leaves  Method  Put ox cheek in slow cooker and set to high heat Put a couple of bay leaves in the pot, grind black pepper over the meat and pour some olive oil over it Surround the meat with chopped onions and chopped carrots Put on the lid and allow to cook for a while When bubbling melted down onion and meat juices become visible around the meat, turn the heat down to low Allow to cook for 4-5 hours Enjoy with potatoes and green veg  </description>
     </item>
     
     <item>
       <title>Handling run time changes in Android</title>
-      <link>http://billthefarmer.github.io/blog/handling-run-time-changes-in-android/</link>
+      <link>https://billthefarmer.github.io/blog/handling-run-time-changes-in-android/</link>
       <pubDate>Sun, 08 Jan 2017 18:49:31 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/handling-run-time-changes-in-android/</guid>
+      <guid>https://billthefarmer.github.io/blog/handling-run-time-changes-in-android/</guid>
       <description>Two articles, Handling Configuration Changes and Handling Configuration Changes with Fragments recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:
  An android fragment is quite a complex heavyweight object to use just for retaining data and possibly a background task, and the fragment management is not simple. Fragments are not retained if the associated activity is discarded by calling finish().</description>
     </item>
     
     <item>
       <title>Using Emacs as an IDE</title>
-      <link>http://billthefarmer.github.io/blog/using-emacs-as-an-ide/</link>
+      <link>https://billthefarmer.github.io/blog/using-emacs-as-an-ide/</link>
       <pubDate>Sat, 10 Dec 2016 13:59:22 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/using-emacs-as-an-ide/</guid>
+      <guid>https://billthefarmer.github.io/blog/using-emacs-as-an-ide/</guid>
       <description>I had to learn Emacs on Unix many years ago as it was at that time the only development environment for Smallworld Magik. Having learnt it, I have stuck with it as it provides a consistent platform for editing source code and building applications in as many computer languages and platforms as I have used and many more I haven&amp;#8217;t. It is the only source code editor I have used that always gets the indentation and syntax highlighting right.</description>
     </item>
     
     <item>
       <title>Upgrading a Moto G</title>
-      <link>http://billthefarmer.github.io/blog/upgrading-a-moto-g/</link>
+      <link>https://billthefarmer.github.io/blog/upgrading-a-moto-g/</link>
       <pubDate>Sun, 18 Sep 2016 20:27:57 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/upgrading-a-moto-g/</guid>
+      <guid>https://billthefarmer.github.io/blog/upgrading-a-moto-g/</guid>
       <description>I got myself a refurbished Moto G phone a while ago. It came with Android Kitkat 4.4.4, complete with Moto bloat. I had already put Cyanogenmod on my tablet, so I installed Cyanogenmod 11, android 4.4.4 on it, in accordance with the instructions on the wiki, no problem. That got rid of the bloat and allows fine control of app snooping via Privacy Guard in the settings.
 When I first installed Cyanogenmod, I had to use an unofficial build, as an official build for Kitkat 4.</description>
     </item>
     
     <item>
       <title>Replacing micro-bore radiators</title>
-      <link>http://billthefarmer.github.io/blog/replacing-micro-bore-radiators/</link>
+      <link>https://billthefarmer.github.io/blog/replacing-micro-bore-radiators/</link>
       <pubDate>Sun, 31 Jul 2016 15:46:48 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/replacing-micro-bore-radiators/</guid>
+      <guid>https://billthefarmer.github.io/blog/replacing-micro-bore-radiators/</guid>
       <description>My heating system uses 1&amp;frasl;4&amp;#8243; copper pipe, which I think was called micro-bore at the time. Both pipes went to a valve at one end of the radiator. There were a variety of valves fitted, but most of them were like this one.
 I investigated the best method for replacing the radiators and valves and found that using standard 15mm fittings with 15/8mm reducers was probably the best option. This involves removing the old radiator and valve, carefully removing the olives from the existing pipes with a junior hacksaw to cut a slot, and a screwdriver to pry it off.</description>
     </item>
     
     <item>
       <title>Upgrading to Windows 10</title>
-      <link>http://billthefarmer.github.io/blog/upgrading-to-windows-10/</link>
+      <link>https://billthefarmer.github.io/blog/upgrading-to-windows-10/</link>
       <pubDate>Mon, 25 Jul 2016 19:46:29 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/upgrading-to-windows-10/</guid>
+      <guid>https://billthefarmer.github.io/blog/upgrading-to-windows-10/</guid>
       <description>I didn&amp;#8217;t like the Windows 10 preview, I thought it was a pain in the backside, so I have delayed upgrading from Windows 7 until the last minute when I got the countdown notification. I have been running a slightly dodgy copy of Windows 7 for a long time, so I was somewhat surprised when, out of the goodness of their hearts, Microsoft said I could have an activated copy of Windows 10 for free.</description>
     </item>
     
     <item>
       <title>Whole Broad Beans in Olive Oil</title>
-      <link>http://billthefarmer.github.io/blog/whole-broad-beans-in-olive-oil/</link>
+      <link>https://billthefarmer.github.io/blog/whole-broad-beans-in-olive-oil/</link>
       <pubDate>Wed, 08 Jun 2016 18:53:38 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/whole-broad-beans-in-olive-oil/</guid>
+      <guid>https://billthefarmer.github.io/blog/whole-broad-beans-in-olive-oil/</guid>
       <description>This is from a transport caff near the village of Pissouri, Cyprus many years ago. The pods need to be picked before the beans have fully developed and before the pods have grown a tough membrane around the beans. I have not seen beans this young for sale.
 Ingredients  Young broad bean pods, Olive oil  Method  Wash and trim the bean pods and put in a suitably sized saucepan Add a glug of olive oil, cover and place on a low heat for about 10 minutes or so The pods will become soft and possibly brown a little depending on the heat  The transport caff served a bowl of these as a meal in it&amp;#8217;s own right.</description>
     </item>
     
     <item>
       <title>Venison and Chorizo Casserole</title>
-      <link>http://billthefarmer.github.io/blog/venison-and-chorizo-casserole/</link>
+      <link>https://billthefarmer.github.io/blog/venison-and-chorizo-casserole/</link>
       <pubDate>Thu, 21 Apr 2016 15:09:15 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/venison-and-chorizo-casserole/</guid>
+      <guid>https://billthefarmer.github.io/blog/venison-and-chorizo-casserole/</guid>
       <description> Ingredients  300g diced venison 75g chorizo, chopped 2 large onions, chopped 5 cloves garlic, crushed 2 red peppers, chopped 2 large tomatoes, chopped Flour Bay leaves 2 tsp paprika Olive oil Red wine Stock or stock cube and boiling water  Method  Add some olive oil to a casserole and put on a low heat Toss the venison pieces in flour and brown all over in the casserole Add the chorizo, garlic and onions and allow to cook until the onion is turning transparent Add the red peppers, bay leaves, paprika and tomatoes, put the lid on and allow to cook until the tomatoes look cooked Add the red win and stock, or use a stock cube and top up with boiling water Allow to simmer gently for about one and a half hours  </description>
     </item>
     
     <item>
       <title>Shoreham fish chowder</title>
-      <link>http://billthefarmer.github.io/blog/shoreham-fish-chowder/</link>
+      <link>https://billthefarmer.github.io/blog/shoreham-fish-chowder/</link>
       <pubDate>Sun, 27 Mar 2016 15:17:14 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/shoreham-fish-chowder/</guid>
+      <guid>https://billthefarmer.github.io/blog/shoreham-fish-chowder/</guid>
       <description>Hearty meal for four, use whatever fish is available.
 Ingredients  Olive oil Two or three garlic cloves, chopped Two or three onions, chopped Two or three potatoes, cubed 150g mushrooms sliced 100g spinach, stems removed. Two tomatoes, chopped 300g smoked cod or haddock fillet, skinned and chopped 100g salmon fillet, skinned and chopped 100g prawns 1 tsp paprika 1 tsp turmeric Milk  Method  Cover the bottom of a large pan with olive oil and put on a low heat Add the garlic, onions, potatoes, mushrooms, spinach and tomatoes, tearing up any big spinach leaves Cover and allow to steam until the spinach has wilted and the potato cubes are cooked Add the fish , prawns, paprika and turmeric and give a good stir and shake to distribute the ingredients.</description>
     </item>
     
     <item>
       <title>Resurrecting a netbook as a web server</title>
-      <link>http://billthefarmer.github.io/blog/resurrecting-a-netbook-as-a-web-server/</link>
+      <link>https://billthefarmer.github.io/blog/resurrecting-a-netbook-as-a-web-server/</link>
       <pubDate>Sat, 27 Feb 2016 19:58:47 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/resurrecting-a-netbook-as-a-web-server/</guid>
+      <guid>https://billthefarmer.github.io/blog/resurrecting-a-netbook-as-a-web-server/</guid>
       <description>When I got fed up with Windows XP on my netbook, I tried windows 7 on it, but it was barely usable. So I tried Windows 7 Starter which was better. I upgraded it to Home Premium, which was OK at first, but slowed down as it got clagged up with updates.
 That was it until recently, when I read an article about putting Windows 10 on one. I didn&amp;#8217;t try that, but I did try Linux Mint on it.</description>
     </item>
     
     <item>
       <title>Build Mac OSX apps using command line tools</title>
-      <link>http://billthefarmer.github.io/blog/build-mac-osx-apps-using-command-line-tools/</link>
+      <link>https://billthefarmer.github.io/blog/build-mac-osx-apps-using-command-line-tools/</link>
       <pubDate>Tue, 02 Feb 2016 17:59:09 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/build-mac-osx-apps-using-command-line-tools/</guid>
+      <guid>https://billthefarmer.github.io/blog/build-mac-osx-apps-using-command-line-tools/</guid>
       <description>You will need to install the Xcode command line tools, you don&amp;#8217;t need the Xcode app. The easiest way to do this is to attempt to build an app like emacs by typing ./configure on the command line. A dialog box will pop up asking if you want to download and install the tools.
 Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to find. You can type gcc -help or clang -help on the command line to get some info.</description>
     </item>
     
     <item>
       <title>Read iBook books on an Android tablet</title>
-      <link>http://billthefarmer.github.io/blog/read-ibook-books-on-an-android-tablet/</link>
+      <link>https://billthefarmer.github.io/blog/read-ibook-books-on-an-android-tablet/</link>
       <pubDate>Tue, 02 Feb 2016 16:59:51 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/read-ibook-books-on-an-android-tablet/</guid>
+      <guid>https://billthefarmer.github.io/blog/read-ibook-books-on-an-android-tablet/</guid>
       <description>You will need to install Calibre to make the books usable, and the books must be DRM free.
 There are two ways to do this:
  If you have a Mac or Hackintosh you can find your books in ~/Library/Containers/com.apple.BKAgentService/Data/Documents/iBooks/Books, in what appears to be epub files but are really folders with numeric names. Copy the ones you want to somewhere accessible, like ~/Books, and zip the contents of each folder, not the folder itself.</description>
@@ -163,165 +163,165 @@ There are two ways to do this:
     
     <item>
       <title>Install OSX El Capitan on a PC (MBR)</title>
-      <link>http://billthefarmer.github.io/blog/install-osx-el-capitan-on-a-pc-mbr/</link>
+      <link>https://billthefarmer.github.io/blog/install-osx-el-capitan-on-a-pc-mbr/</link>
       <pubDate>Tue, 26 Jan 2016 11:36:38 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/install-osx-el-capitan-on-a-pc-mbr/</guid>
+      <guid>https://billthefarmer.github.io/blog/install-osx-el-capitan-on-a-pc-mbr/</guid>
       <description>Prerequisites  A real Mac or Hackintosh A spare disk drive &amp;#8211; at least 8Gb, preferably USB An 8Gb or larger USB stick The Install OSX El Capitan.app from the App Store A disk partition to install in  Install on spare disk drive Connect your spare drive to your PC. Use the method described here to build the El Capitan install USB stick and install OSX using the GPT partition scheme on your spare disk drive.</description>
     </item>
     
     <item>
       <title>Catalan slow cooked chicken</title>
-      <link>http://billthefarmer.github.io/blog/catalan-slow-cooked-chicken/</link>
+      <link>https://billthefarmer.github.io/blog/catalan-slow-cooked-chicken/</link>
       <pubDate>Sat, 19 Sep 2015 10:07:59 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/catalan-slow-cooked-chicken/</guid>
+      <guid>https://billthefarmer.github.io/blog/catalan-slow-cooked-chicken/</guid>
       <description>This is based on a recipe in Asda magazine.
 Ingredients  Chicken pieces &amp;#8211; drumsticks, thighs, legs &amp;#8211; whatever 3 onions, chopped 2 cloves of garlic, sliced Red and green pepper, chopped 6 tomatoes, chopped Bay leaves 1tsp paprika 1tsp turmeric 1tsp dried oregano Chicken stock pot Olive oil  Method  Put the chicken pieces in a slow cooker with bay leaves and turn on full to warm up.</description>
     </item>
     
     <item>
       <title>Move Linux Mint Root Partition</title>
-      <link>http://billthefarmer.github.io/blog/move-linux-mint-root-partition/</link>
+      <link>https://billthefarmer.github.io/blog/move-linux-mint-root-partition/</link>
       <pubDate>Mon, 31 Aug 2015 13:33:24 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/move-linux-mint-root-partition/</guid>
+      <guid>https://billthefarmer.github.io/blog/move-linux-mint-root-partition/</guid>
       <description>I recently added a new disk drive to my workstation and, as part of reorganising, wanted to move the Linux Mint root partition from one disk to another. Naturally I googled duckied it and found a certain amount of useful info.
 I used gnuparted to copy the partition from one disk to another. The standard method to reinstall grub on a partition so it will boot appears to be to mount it and use grub-install with the &amp;#8211;boot-directory option like this.</description>
     </item>
     
     <item>
       <title>Index</title>
-      <link>http://billthefarmer.github.io/blog/index/</link>
+      <link>https://billthefarmer.github.io/blog/index/</link>
       <pubDate>Fri, 07 Aug 2015 09:32:42 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/index/</guid>
+      <guid>https://billthefarmer.github.io/blog/index/</guid>
       <description>DiyReplacing micro-bore radiatorsHackingBuild Mac OSX apps using command line toolsC++Concurrency, Threads, Semaphores and MutexesDownload streamed videoFast Fourier TransformHandlers in AndroidHandling run time changes in AndroidHaskellInstall OSX El Capitan on a PC (MBR)Java CollectionsMigrating this blog from WordpressMove Linux Mint Root PartitionPythonRaspberry Pi WifiRead iBook books on an Android tabletResolving content uris in androidResurrecting a netbook as a web serverSearch Engine Optimisation (SEO)SlimStatTransfer contacts from iPhone to AndroidUpgrading WordPressUpgrading a Moto GUpgrading to Windows 10Using Emacs as an IDEWhatever-o-meterRecipesCatalan slow cooked chickenChorizo Egg and Tomato Toasted SandwichClementine CakeCoarse RatatouilleDoug&amp;#8217;s Seafood RisottoFabada AsturianaFaggots and Peas with Onion GravyFried RiceLeek and Potato SoupMexican BreakfastPan fried lamb&amp;#8217;s liver, bacon and chorizoPasta PicanteSausages with Green LentilsShoreham fish chowderSlow cooked lambSlow cooked ox cheekSpanish FrittataSpanish omeletteStuffed PeppersTruly Evil Onion GravyUnobtainiumVegetable Soup PlusVegetables cooked in olive oilVenison and Chorizo CasseroleWhole Broad Beans in Olive Oil</description>
     </item>
     
     <item>
       <title>Fried Rice</title>
-      <link>http://billthefarmer.github.io/blog/fried-rice/</link>
+      <link>https://billthefarmer.github.io/blog/fried-rice/</link>
       <pubDate>Thu, 06 Aug 2015 14:52:37 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/fried-rice/</guid>
+      <guid>https://billthefarmer.github.io/blog/fried-rice/</guid>
       <description>This is our version of Chinese take-away fried rice. Use whatever meat and vegetables are in the larder. Tasty meal for four
 Ingredients  2 onions, chopped 2 cloves of garlic, chopped 2 carrots, grated 1&amp;frasl;4 white cabbage, thinly sliced 1 1&amp;frasl;2 cups of easy cook rice 250g chopped gammon ham 100g cooked prawns 100g petit pois 1 3&amp;frasl;4 cups water or stock Vegetable oil  Method  Put a large dollop of oil into a large skillet or wok.</description>
     </item>
     
     <item>
       <title>Pan fried lamb&amp;#8217;s liver, bacon and chorizo</title>
-      <link>http://billthefarmer.github.io/blog/pan-fried-lambs-liver-bacon-and-chorizo/</link>
+      <link>https://billthefarmer.github.io/blog/pan-fried-lambs-liver-bacon-and-chorizo/</link>
       <pubDate>Mon, 01 Jun 2015 17:21:02 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/pan-fried-lambs-liver-bacon-and-chorizo/</guid>
+      <guid>https://billthefarmer.github.io/blog/pan-fried-lambs-liver-bacon-and-chorizo/</guid>
       <description>Back in the mid 70&amp;#8217;s, I had to do some work at Kingston upon Thames Power Station. When I stopped for lunch, I found a little Greek restaurant opposite in a parade of shops and restaurants. That whole area, including the power station has since been redeveloped, and bears no resemblance. I had their lunch time offer of pan fried kidneys, probably with rice.
 When I got home, I mentioned this to she who did most of the cooking at that time and she came up with something which became her kidney special.</description>
     </item>
     
     <item>
       <title>Handlers in Android</title>
-      <link>http://billthefarmer.github.io/blog/handlers-in-android/</link>
+      <link>https://billthefarmer.github.io/blog/handlers-in-android/</link>
       <pubDate>Sun, 10 May 2015 15:51:40 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/handlers-in-android/</guid>
+      <guid>https://billthefarmer.github.io/blog/handlers-in-android/</guid>
       <description>Using a handler to return results from a worker thread This has taken me quite a while to put together. There are throw-away remarks in the Android docs about this, but no useful examples. You want to get the results back from a worker thread to your main activity so you can do stuff with them. There are several parts to this.
  The main activity implements Handler.Callback, and has a handleMessage function.</description>
     </item>
     
     <item>
       <title>Chorizo Egg and Tomato Toasted Sandwich</title>
-      <link>http://billthefarmer.github.io/blog/chorizo-egg-and-tomato-toasted-sandwich/</link>
+      <link>https://billthefarmer.github.io/blog/chorizo-egg-and-tomato-toasted-sandwich/</link>
       <pubDate>Tue, 28 Apr 2015 11:54:45 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/chorizo-egg-and-tomato-toasted-sandwich/</guid>
+      <guid>https://billthefarmer.github.io/blog/chorizo-egg-and-tomato-toasted-sandwich/</guid>
       <description> This is a nice snack for two.
 Ingredients  Two eggs Sliced chorizo or crispy bacon Four slices of bread Tomato thinly sliced Cheese sliced  Method  Toast two slices of bread and fry two eggs Meanwhile slice the tomato thinly Flip the eggs, otherwise the tomato won&amp;#8217;t stay on top Layer chorizo slices, egg, tomato slices and cheese slices on each piece of toast Put the toast slices on heatproof plates and put under a hot grill to melt the cheese Toast the other two slices of bread When the cheese is melted take the plates out and press down the other slices of toast on top Slice the sandwiches in two diagonally  </description>
     </item>
     
     <item>
       <title>Slow cooked lamb</title>
-      <link>http://billthefarmer.github.io/blog/slow-cooked-lamb/</link>
+      <link>https://billthefarmer.github.io/blog/slow-cooked-lamb/</link>
       <pubDate>Fri, 17 Apr 2015 11:10:42 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/slow-cooked-lamb/</guid>
+      <guid>https://billthefarmer.github.io/blog/slow-cooked-lamb/</guid>
       <description>This recipe is based on the mutton in a pot in this episode of Italy Unpacked. I have converted it to a slow cooker recipe, but it could be done in a casserole in the oven or in a earthenware pot next to a wood fire. Some of the ingredients are a compromise, for example Giorgio bought a kilo of rocket in the market. I couldn&amp;#8217;t have got all that in the pot.</description>
     </item>
     
     <item>
       <title>Search Engine Optimisation (SEO)</title>
-      <link>http://billthefarmer.github.io/blog/search-engine-optimisation-seo/</link>
+      <link>https://billthefarmer.github.io/blog/search-engine-optimisation-seo/</link>
       <pubDate>Wed, 01 Apr 2015 18:17:07 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/search-engine-optimisation-seo/</guid>
+      <guid>https://billthefarmer.github.io/blog/search-engine-optimisation-seo/</guid>
       <description>I haven&amp;#8217;t worried too much about search engines since I set this site up. I registered it with Google initially, and after a few days it appeared in the results, so that was good enough for me. If you search for Old Shoreham Buccaneers, or a subset of that, the Buccaneers site appears high in the results, job done.
 Since I published a recipe based on the BBC TV programme Italy Unpacked about a month ago, I have been getting a lot of hits on the Recipes page.</description>
     </item>
     
     <item>
       <title>Fast Fourier Transform</title>
-      <link>http://billthefarmer.github.io/blog/fast-fourier-transform/</link>
+      <link>https://billthefarmer.github.io/blog/fast-fourier-transform/</link>
       <pubDate>Tue, 03 Mar 2015 12:44:13 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/fast-fourier-transform/</guid>
+      <guid>https://billthefarmer.github.io/blog/fast-fourier-transform/</guid>
       <description>I wrote a java tuner app a few years ago, so I needed a Fast Fourier Transform to do the frequency detection. I found a fairly simple implementation in java on the web somewhere, can&amp;#8217;t remember where, tried it, and it worked fine. The frequency detection algorithm comes from The Dsp Dimension.
 A few years later I ported it to windows, added a few gizmos for tuning accordions and put it on Google Code.</description>
     </item>
     
     <item>
       <title>Sausages with Green Lentils</title>
-      <link>http://billthefarmer.github.io/blog/sausages-with-green-lentils/</link>
+      <link>https://billthefarmer.github.io/blog/sausages-with-green-lentils/</link>
       <pubDate>Wed, 25 Feb 2015 18:00:34 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/sausages-with-green-lentils/</guid>
+      <guid>https://billthefarmer.github.io/blog/sausages-with-green-lentils/</guid>
       <description>This recipe is based on the sausages with lentils in this episode of Italy Unpacked on BBC 2. This is enough for three or four, depending on the number of sausages. You will need a medium sized pan to cook the lentils, and a large deep pan for the sausages, onions, and everything else.
 Ingredients  One cup green lentils Two sticks celery, chopped Large garlic clove or two small, chopped Six or eight good quality sausages Two large onions, chopped 500g carton passata Olive oil  Method  Put lentils, chopped celery and garlic in a pot, cover with water, boil for five minutes, then simmer for about 30 minutes until tender.</description>
     </item>
     
     <item>
       <title>Transfer contacts from iPhone to Android</title>
-      <link>http://billthefarmer.github.io/blog/transfer-contacts-from-iphone-to-android/</link>
+      <link>https://billthefarmer.github.io/blog/transfer-contacts-from-iphone-to-android/</link>
       <pubDate>Wed, 18 Feb 2015 17:45:54 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/transfer-contacts-from-iphone-to-android/</guid>
+      <guid>https://billthefarmer.github.io/blog/transfer-contacts-from-iphone-to-android/</guid>
       <description>I&amp;#8217;ve been using an old iPhone 3G, and I&amp;#8217;ve got myself a new Android phone. First off, I googled DuckDuckGo&amp;#8216;d how to transfer my contacts and found lots of suggestions. First, I tried My Contacts Backup, but it wouldn&amp;#8217;t install on the iPhone.
 So I synced the contacts with my Hackintosh using iTunes, exported the contacts to a vCard file, transferred it to the phone by email and imported the file to the Contacts app on the phone.</description>
     </item>
     
     <item>
       <title>C&#43;&#43;</title>
-      <link>http://billthefarmer.github.io/blog/c/</link>
+      <link>https://billthefarmer.github.io/blog/c/</link>
       <pubDate>Sat, 01 Nov 2014 13:10:54 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/c/</guid>
+      <guid>https://billthefarmer.github.io/blog/c/</guid>
       <description>I made a vow about 20 years ago not to attempt to learn C++, when a colleague went on a C++ course. I did buy a C++ book, but it wasn&amp;#8217;t that useful. I have looked at the source of various C++ programs over the years to attempt to find out how they worked. I have, until recently, invariably found that the code that does something useful is either hidden in include files, or buried so deep in obscure code that just seems to create and do strange things with various objects, that I have been unable to find it.</description>
     </item>
     
     <item>
       <title>Java Collections</title>
-      <link>http://billthefarmer.github.io/blog/java-collections/</link>
+      <link>https://billthefarmer.github.io/blog/java-collections/</link>
       <pubDate>Sat, 01 Nov 2014 12:18:28 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/java-collections/</guid>
+      <guid>https://billthefarmer.github.io/blog/java-collections/</guid>
       <description>I find Java Collections frustrating and insane. I have been through this loop on several occasions. I decide I want a list to do whatever. So I look up List in the docs and find it&amp;#8217;s an interface, ie: roll yer own. So I look down the hierarchy and find AbstractList, which is abstract, again: roll yer own. So finally I get to ArrayList which might do the job, but the docs aren&amp;#8217;t too clear, so I try it and it works.</description>
     </item>
     
     <item>
       <title>Stuffed Peppers</title>
-      <link>http://billthefarmer.github.io/blog/stuffed-peppers/</link>
+      <link>https://billthefarmer.github.io/blog/stuffed-peppers/</link>
       <pubDate>Thu, 04 Sep 2014 12:16:58 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/stuffed-peppers/</guid>
+      <guid>https://billthefarmer.github.io/blog/stuffed-peppers/</guid>
       <description>Lunch for two.
 Ingredients  4 bell peppers 1&amp;frasl;2 cup cous cous 6-8 slices chorizo cut into four pieces 2-3 cloves garlic, sliced small onion, chopped 1&amp;frasl;4 vegetable stock cube 1&amp;frasl;2 tsp paprika 1&amp;frasl;2 tsp oregano boiling water olive oil  Method  Trim the stems of the peppers, cut the tops off, and remove the seeds and pulp from inside. Cover the bottom of a small pan with oil and add the garlic, onion, chorizo, paprika and oregano, place on a gentle heat and cook until the onions are transparent.</description>
     </item>
     
     <item>
       <title>Unobtainium</title>
-      <link>http://billthefarmer.github.io/blog/unobtainium/</link>
+      <link>https://billthefarmer.github.io/blog/unobtainium/</link>
       <pubDate>Wed, 06 Aug 2014 11:02:30 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/unobtainium/</guid>
+      <guid>https://billthefarmer.github.io/blog/unobtainium/</guid>
       <description>unob·ta·ni·um (unob-tayn-ium)
 Ingredient not available on the shelf at your local major supermarket.
 If you attempt to use any celebrity or TV chef recipe, you will find at least one ingredient is unobtainable locally. You will also find a healthy disregard of the cleaning up operation afterwards. Usually most of this nonsense can be safely ignored and locally available ingredients used instead, and the recipe converted from an N-pot recipe to a one-pot recipe.</description>
@@ -329,40 +329,40 @@ If you attempt to use any celebrity or TV chef recipe, you will find at least on
     
     <item>
       <title>Coarse Ratatouille</title>
-      <link>http://billthefarmer.github.io/blog/coarse-ratatouille/</link>
+      <link>https://billthefarmer.github.io/blog/coarse-ratatouille/</link>
       <pubDate>Thu, 26 Jun 2014 18:01:44 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/coarse-ratatouille/</guid>
+      <guid>https://billthefarmer.github.io/blog/coarse-ratatouille/</guid>
       <description>This is slow cooked vegetables using whatever comes to hand.
 Ingredients  Onions, sliced Potatoes, sliced Carrots, sliced Whatever else is going, sliced or chopped Oil Large heavy frying pan or skillet with lid  Method  Warm up your skillet and put a dollop of oil in it Arrange a layer of sliced onions, making sure to spread the oil around Next a layer of sliced potato Next a layer of sliced carrots Add layers of whatever else is to hand to fill up the pan Pour a bit more oil over the top Put the lid on and cook gently until the carrots are cooked.</description>
     </item>
     
     <item>
       <title>Download streamed video</title>
-      <link>http://billthefarmer.github.io/blog/download-streamed-video/</link>
+      <link>https://billthefarmer.github.io/blog/download-streamed-video/</link>
       <pubDate>Fri, 06 Jun 2014 16:03:16 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/download-streamed-video/</guid>
+      <guid>https://billthefarmer.github.io/blog/download-streamed-video/</guid>
       <description>Online video providers tend to stream the video to a javascript player, so making it extremely difficult to capture the video. This blog explains a method using Chrome to spoof the user agent string, pretending to be an iPad. Unfortunately, this doesn&amp;#8217;t seem to work any more in the latest version of Chrome.
 So I tried installing a user agent spoofing plugin in Firefox. It seemed to work, but the video didn&amp;#8217;t play, so I couldn&amp;#8217;t find the url.</description>
     </item>
     
     <item>
       <title>Concurrency, Threads, Semaphores and Mutexes</title>
-      <link>http://billthefarmer.github.io/blog/concurrency-threads-semaphores-and-mutexes/</link>
+      <link>https://billthefarmer.github.io/blog/concurrency-threads-semaphores-and-mutexes/</link>
       <pubDate>Wed, 04 Jun 2014 15:45:20 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/concurrency-threads-semaphores-and-mutexes/</guid>
+      <guid>https://billthefarmer.github.io/blog/concurrency-threads-semaphores-and-mutexes/</guid>
       <description>I have written several applications in both Java and C that involve running an audio thread in the background to read or write audio from or to the audio system while displaying the results and interacting with the user in the foreground. I have used lots of threads, but never a semaphore or mutex apart from the odd boolean variable.
 This issue is reminiscent of back in the day when you actually had or could get a circuit diagram of your computer and could understand it.</description>
     </item>
     
     <item>
       <title>Upgrading WordPress</title>
-      <link>http://billthefarmer.github.io/blog/upgrading-wordpress/</link>
+      <link>https://billthefarmer.github.io/blog/upgrading-wordpress/</link>
       <pubDate>Wed, 28 May 2014 11:05:54 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/upgrading-wordpress/</guid>
+      <guid>https://billthefarmer.github.io/blog/upgrading-wordpress/</guid>
       <description>This site has the firewall set up so that the web server has no external access. This means that I can&amp;#8217;t use the usual WordPress update mechanism to keep it up to date. I use FileZilla for maintaining the server, and I recently discovered you can use drag and drop to move stuff around remotely.
 So my easy WordPress upgrade method is:
  Download the latest zip file and unzip it.</description>
@@ -370,49 +370,49 @@ So my easy WordPress upgrade method is:
     
     <item>
       <title>Faggots and Peas with Onion Gravy</title>
-      <link>http://billthefarmer.github.io/blog/faggots-and-peas-with-onion-gravy/</link>
+      <link>https://billthefarmer.github.io/blog/faggots-and-peas-with-onion-gravy/</link>
       <pubDate>Tue, 27 May 2014 18:53:22 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/faggots-and-peas-with-onion-gravy/</guid>
+      <guid>https://billthefarmer.github.io/blog/faggots-and-peas-with-onion-gravy/</guid>
       <description>When I was a teenager the chippy at Preston, Weymouth, Dorset used to serve faggots and peas with gravy in those aluminium foil containers that take-away Chinese used to come in. Enough for 2.
 Ingredients  3-5 faggots Frozen or fresh peas Truly Evil Onion Gravy  Method  Start the gravy first as it takes a while to render the onions down. Once the onions are well done, put the faggots in a tin and place in a medium hot oven &amp;#8211; 180° C, util they are starting to brown.</description>
     </item>
     
     <item>
       <title>Truly Evil Onion Gravy</title>
-      <link>http://billthefarmer.github.io/blog/truly-evil-onion-gravy/</link>
+      <link>https://billthefarmer.github.io/blog/truly-evil-onion-gravy/</link>
       <pubDate>Tue, 27 May 2014 18:38:50 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/truly-evil-onion-gravy/</guid>
+      <guid>https://billthefarmer.github.io/blog/truly-evil-onion-gravy/</guid>
       <description>Black onion gravy to go with faggots, sausages or whatever takes your fancy.
 Ingredients  3 medium onions, sliced 1 tablespoon plain flour or cornmeal (polenta) 1&amp;frasl;2 vegetable stock cube, crumbled Boiling water or cooking water from vegetables Vegetable oil  Method  Cover the bottom of a small pan with oil and place on medium heat. Put the onions in the pan and cook, stirring with a fork until reduced to brown/black sludge.</description>
     </item>
     
     <item>
       <title>Fabada Asturiana</title>
-      <link>http://billthefarmer.github.io/blog/fabada-asturiana/</link>
+      <link>https://billthefarmer.github.io/blog/fabada-asturiana/</link>
       <pubDate>Fri, 23 May 2014 16:50:32 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/fabada-asturiana/</guid>
+      <guid>https://billthefarmer.github.io/blog/fabada-asturiana/</guid>
       <description>A highly flavoured Asturian version of pork and beans. Enough for four or more.
 Ingredients  375g or thereabouts packet of dried butter beans 4-500g belly pork with or without skin, cut into chunks Smoked gammon hock, or 4-500g cooking bacon. If lucky, it&amp;#8217;s possible to find a packet of cooking bacon that is just one big chunk of unsliced bacon by rooting through the supermarket shelf. 100-125g picante chorizo, cut into chunks Crushed black peppercorns Heaped teaspoon paprika Heaped teaspoon turmeric 2 bay leaves 4-5 garlic cloves, chopped 3-4 onions, chopped Olive oil Water  Method  Soak the beans overnight in plenty of water.</description>
     </item>
     
     <item>
       <title>Vegetable Soup Plus</title>
-      <link>http://billthefarmer.github.io/blog/vegetable-soup-plus/</link>
+      <link>https://billthefarmer.github.io/blog/vegetable-soup-plus/</link>
       <pubDate>Sat, 26 Apr 2014 17:33:36 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/vegetable-soup-plus/</guid>
+      <guid>https://billthefarmer.github.io/blog/vegetable-soup-plus/</guid>
       <description>A vegetable soup with a bit of meat that’s full of flavour. Similar to leek and potato soup recipe. Make it into a meal with plenty of bread and butter. Enough for two, double the recipe for four. Ingredients  1 tbsp olive oil 1 onion, chopped 1 small potatoe, cubed 1 clove garlic, crushed 1&amp;frasl;2 a fresh chilli, if desired Additional vegetables as available: grated carrot, leek, courgette, cabbage, etc a few slices of chorizo or other tasty sausage, chopped Freshly ground black pepper Milk  Method  Heat the oil in a large pan and add the vegetables and sausage.</description>
     </item>
     
     <item>
       <title>Haskell</title>
-      <link>http://billthefarmer.github.io/blog/haskell/</link>
+      <link>https://billthefarmer.github.io/blog/haskell/</link>
       <pubDate>Sat, 29 Mar 2014 15:26:14 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/haskell/</guid>
+      <guid>https://billthefarmer.github.io/blog/haskell/</guid>
       <description>I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I&amp;#8217;s give it a go and see how I got on.
 You can try it out in your browser: http://tryhaskell.org
  λ let factorial n = product [1..n] in factorial 99 9332621544394415268169923885626670049071596826438162146859 2963895217599993229915608941463976156518286253697920827223 7582511852109168640000000000000000000000 :: (Enum a, Num a) = a λ  Pretty impressive! So I thought I&amp;#8217;d try a simple web application.</description>
@@ -420,138 +420,138 @@ You can try it out in your browser: http://tryhaskell.org
     
     <item>
       <title>Mexican Breakfast</title>
-      <link>http://billthefarmer.github.io/blog/mexican-breakfast/</link>
+      <link>https://billthefarmer.github.io/blog/mexican-breakfast/</link>
       <pubDate>Sat, 29 Mar 2014 09:59:46 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/mexican-breakfast/</guid>
+      <guid>https://billthefarmer.github.io/blog/mexican-breakfast/</guid>
       <description>This is an adaptation of a recipe I saw recently in the Metro. Not Huevos Rancheros, but something else. The original recipe was most insistent that the black pepper be added to the pan, not the eggs, and the eggs should be stirred, not beaten.
 Ingredients  Small potato, chopped Small onion, chopped Chili pepper, sliced Chorizo, chopped Tomato, chopped Fresh ground black pepper 2 eggs Oil  Method  Put some oil in a medium sized skillet or frying pan and warm up.</description>
     </item>
     
     <item>
       <title>SlimStat</title>
-      <link>http://billthefarmer.github.io/blog/slimstat/</link>
+      <link>https://billthefarmer.github.io/blog/slimstat/</link>
       <pubDate>Thu, 26 Dec 2013 16:03:46 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/slimstat/</guid>
+      <guid>https://billthefarmer.github.io/blog/slimstat/</guid>
       <description>When I first set up this web site, I looked for a simple web analytics program so that I could see if anyone actually looked at it. After faffing about with a couple of well known open source packages, I decided that they were way over the top by several orders of magnitude. Then I found SlimStat. However it appears to be no longer actively maintained, which it why the previous link is via the Way Back Machine.</description>
     </item>
     
     <item>
       <title>Raspberry Pi Wifi</title>
-      <link>http://billthefarmer.github.io/blog/raspberry-pi-wifi/</link>
+      <link>https://billthefarmer.github.io/blog/raspberry-pi-wifi/</link>
       <pubDate>Sat, 21 Dec 2013 20:16:37 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/raspberry-pi-wifi/</guid>
+      <guid>https://billthefarmer.github.io/blog/raspberry-pi-wifi/</guid>
       <description>When I got my Pi some months ago I bought a wifi adapter for it, as you do. But I couldn&amp;#8217;t get it to work reliably in Raspbian, and I didn&amp;#8217;t even try in Arch Linux. So I tested the adapter on my windoze box, and it worked just fine, and I tried it with Linux and it worked just fine, so I put it in the &amp;#8216;too hard&amp;#8217; box.</description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>http://billthefarmer.github.io/blog/python/</link>
+      <link>https://billthefarmer.github.io/blog/python/</link>
       <pubDate>Sat, 21 Dec 2013 18:54:52 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/python/</guid>
+      <guid>https://billthefarmer.github.io/blog/python/</guid>
       <description>I&amp;#8217;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &amp;#8216;Blank space shalt not be significant except to separate tokens where necessary.&amp;#8217;. That&amp;#8217;s why you can minimise a lengthy JavaScript script like jQuery to one enormously long line and it still works just fine.
 But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter an advent calender competition which involved checking a web page to see if your name has come up and sending an email if it does.</description>
     </item>
     
     <item>
       <title>Clementine Cake</title>
-      <link>http://billthefarmer.github.io/blog/clementine-cake/</link>
+      <link>https://billthefarmer.github.io/blog/clementine-cake/</link>
       <pubDate>Sun, 15 Dec 2013 13:46:57 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/clementine-cake/</guid>
+      <guid>https://billthefarmer.github.io/blog/clementine-cake/</guid>
       <description>This is an adaptation of a Marguerite Patten recipe dated 1963. As adapted by She-who-shall-be-ignored, with additional chutney technique.
 Ingredients Cake  7oz self raising flour 1/4tsp Baking powder 5oz margarine or butter 4oz golden granulated sugar 3 medium eggs 3 clementines, chopped up into small pieces and any pips removed  Icing  3oz Icing sugar 2oz margarine or butter  Method  Put the sugar and the chopped clementines in a small saucepan on a gentle heat.</description>
     </item>
     
     <item>
       <title>Doug&amp;#8217;s Seafood Risotto</title>
-      <link>http://billthefarmer.github.io/blog/dougs-seafood-risotto/</link>
+      <link>https://billthefarmer.github.io/blog/dougs-seafood-risotto/</link>
       <pubDate>Wed, 11 Dec 2013 18:12:24 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/dougs-seafood-risotto/</guid>
+      <guid>https://billthefarmer.github.io/blog/dougs-seafood-risotto/</guid>
       <description>This is my interpretation of my brother&amp;#8217;s risotto. This is in no way a conventional risotto recipe, but it works nicely. Hearty dinner for four.
 Ingredients  2 cups of risotto rice Three or four onions, depending on size Three cloves of garlic A red pepper and a green pepper A punnet of mushrooms, approx 200g 350g approx of seafood selection Freshly ground black pepper Oregano A chicken stockpot Butter Water Olive oil  Method   Warm up a large saucepan with a good glug of olive oil in it.</description>
     </item>
     
     <item>
       <title>Spanish Frittata</title>
-      <link>http://billthefarmer.github.io/blog/spanish-frittata/</link>
+      <link>https://billthefarmer.github.io/blog/spanish-frittata/</link>
       <pubDate>Wed, 11 Dec 2013 16:13:17 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/spanish-frittata/</guid>
+      <guid>https://billthefarmer.github.io/blog/spanish-frittata/</guid>
       <description>Another not so light lunch for two.
 Ingredients  Two largish onions Four or five eggs, depending on size Chorizo, sliced Cheese, sliced Freshly ground black pepper Oil for cooking  Method  Warm up a large skillet or frying pan with some cooking oil in it. While the pan is warming slice the onions into rings and place in the pan. Whip up the eggs and grind some black pepper into them.</description>
     </item>
     
     <item>
       <title>Pasta Picante</title>
-      <link>http://billthefarmer.github.io/blog/pasta-picante/</link>
+      <link>https://billthefarmer.github.io/blog/pasta-picante/</link>
       <pubDate>Wed, 11 Dec 2013 14:43:34 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/pasta-picante/</guid>
+      <guid>https://billthefarmer.github.io/blog/pasta-picante/</guid>
       <description>We ate this in the Restaurante Terraza del Mar along the coast path from Puerto de la Cruz in Tenerife. This is my adaptation. Light lunch for two.
 Ingredients  Pasta for 2, whatever you like Small fresh chilli Small onion Couple of cloves of garlic Freshly ground black pepper Oregano Olive oil Anything else you fancy, we put some grated carrot in ours  Method  Cook the pasta in boiling water and drain when done.</description>
     </item>
     
     <item>
       <title>Morris-o-meter</title>
-      <link>http://billthefarmer.github.io/blog/morris-o-meter/</link>
+      <link>https://billthefarmer.github.io/blog/morris-o-meter/</link>
       <pubDate>Tue, 03 Dec 2013 18:10:32 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/morris-o-meter/</guid>
+      <guid>https://billthefarmer.github.io/blog/morris-o-meter/</guid>
       <description>The Old Shoreham Buccaneers very own Morris-o-meter  {{&amp;lt; whatever-o-meter &amp;gt;}}
 This doesn&amp;rsquo;t do anything because I have to fathom out how to make the Whatever-o-meter work in Hugo.</description>
     </item>
     
     <item>
       <title>Spanish omelette</title>
-      <link>http://billthefarmer.github.io/blog/spanish-omelette/</link>
+      <link>https://billthefarmer.github.io/blog/spanish-omelette/</link>
       <pubDate>Sat, 30 Nov 2013 12:51:47 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/spanish-omelette/</guid>
+      <guid>https://billthefarmer.github.io/blog/spanish-omelette/</guid>
       <description>A nice tasty potato and onion omelette for breakfast.
 Ingredients  2 eggs medium sized potato, cubed small onion, chopped chorizo, sliced, if liked Fresh ground black pepper vegetable oil  Method  Warm up a medium sized cast iron skillet, or omelette pan with a smidgeon of oil in it. Tilt the pan to make sure the oil covers the bottom and sides While the pan is warming up, chop the potato and onions.</description>
     </item>
     
     <item>
       <title>Leek and Potato Soup</title>
-      <link>http://billthefarmer.github.io/blog/leek-and-potato-soup/</link>
+      <link>https://billthefarmer.github.io/blog/leek-and-potato-soup/</link>
       <pubDate>Thu, 28 Nov 2013 17:33:42 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/leek-and-potato-soup/</guid>
+      <guid>https://billthefarmer.github.io/blog/leek-and-potato-soup/</guid>
       <description>A vegetable soup that’s full of flavour. Make it into a meal with plenty of bread and butter. Enough for two, double the recipe for four.
 Ingredients  1 tbsp olive oil 1 onion, chopped 125g/4oz potatoes, cubed 1 medium leek, chopped 1 clove garlic, crushed 1&amp;frasl;2 a fresh chilli, if desired 1 small carrot, grated 350ml/3/4 pint milk and water salt and freshly ground black pepper  Preparation method  Heat the oil in a large pan and add the onions, garlic, carrot, potatoes and leeks.</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>http://billthefarmer.github.io/blog/about/</link>
+      <link>https://billthefarmer.github.io/blog/about/</link>
       <pubDate>Thu, 28 Nov 2013 17:28:33 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/about/</guid>
+      <guid>https://billthefarmer.github.io/blog/about/</guid>
       <description>Playing at Oldland Mill, near Ditchling.
 I am retired, a morris musician and an itinerant developer. I was a chartered electrical engineer until I stopped paying for a journal I couldn&amp;#8217;t understand. Over the course of a long career working for the local electrick light company I developed various bits and pieces of software in so many different languages I can no longer remember them all. In rough order they are:</description>
     </item>
     
     <item>
       <title>Test-o-meter</title>
-      <link>http://billthefarmer.github.io/blog/test-o-meter/</link>
+      <link>https://billthefarmer.github.io/blog/test-o-meter/</link>
       <pubDate>Wed, 20 Nov 2013 19:52:58 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/test-o-meter/</guid>
+      <guid>https://billthefarmer.github.io/blog/test-o-meter/</guid>
       <description>Some long winded explanation of what it all means, the meaning of life and which way is up. {{&amp;lt; whatever-o-meter &amp;gt;}}
 The real page content  This is some fairly boring text just to prove it comes out below the Test-o-meter. This doesn&amp;rsquo;t do anything because I have to fathom out how to make the Whatever-o-meter work in Hugo.</description>
     </item>
     
     <item>
       <title>Whatever-o-meter</title>
-      <link>http://billthefarmer.github.io/blog/whatever-o-meter/</link>
+      <link>https://billthefarmer.github.io/blog/whatever-o-meter/</link>
       <pubDate>Wed, 20 Nov 2013 18:55:54 +0000</pubDate>
       
-      <guid>http://billthefarmer.github.io/blog/whatever-o-meter/</guid>
+      <guid>https://billthefarmer.github.io/blog/whatever-o-meter/</guid>
       <description>Introduction Whatever-o-meter is a WordPress plugin that shows a tachometer-like dial with a pointer, asks a series of predefined questions which are answered by moving a slider, shows one of several predefined results, and moves the tacho pointer to a position determined by the value of the result. The project is on Github.
 Documentation Whatever-o-meter uses the shortcode [whateverometer] or [whatever-o-meter] to insert the whatever-o-meter display into the page. Other page content above and below the shortcode will appear on the page as normal.</description>
     </item>
