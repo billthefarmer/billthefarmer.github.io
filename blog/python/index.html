@@ -192,56 +192,52 @@ But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter 
 <p>But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter an advent calender competition which involved checking a web page to see if your name has come up and sending an email if it does. So I thought that&#8217;s an ideal little job to run on my <a href="http://www.raspberrypi.org">Raspberry Pi</a>. So I installed the ssmtp package and attempted to test sending an email. After several days of faffing about with no joy I gave up.</p>
 
 <p>One of the things that comes front and centre with the standard <a href="http://www.raspberrypi.org/downloads">Raspbian</a> installation is Python. So, after checking the documentation for smtp and http libraries, etc, I decided to give it a go. You can test your code on the command line before sticking it in a file, and you get, unlike ssmtp, helpful messages that tell you what&#8217;s going on. So you end up with a script that looks like this, and it actually appears to work.</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic">#! /usr/bin/env python</span>
 
-<pre>
-#! /usr/bin/env python
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">urllib2</span>
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">smtplib</span>
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">os.path</span>
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">os</span> <span style="color: #008000; font-weight: bold">import</span> utime
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">datetime</span> <span style="color: #008000; font-weight: bold">import</span> date
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">email.mime.text</span> <span style="color: #008000; font-weight: bold">import</span> MIMEText
 
-import urllib2
-import smtplib
-import os.path
-from os import utime
-from datetime import date
-from email.mime.text import MIMEText
-
-if os.path.exists("sent")
+<span style="color: #008000; font-weight: bold">if</span> os<span style="color: #666666">.</span>path<span style="color: #666666">.</span>exists(<span style="color: #BA2121">&quot;sent&quot;</span>)
   quit()
 
-f = urllib2.urlopen("url")
+f <span style="color: #666666">=</span> urllib2<span style="color: #666666">.</span>urlopen(<span style="color: #BA2121">&quot;url&quot;</span>)
 
-today = False
-for line in f:
-  if "winners" in line:
-    today = str(date.today().day) in line
-    break
+today <span style="color: #666666">=</span> <span style="color: #008000">False</span>
+<span style="color: #008000; font-weight: bold">for</span> line <span style="color: #AA22FF; font-weight: bold">in</span> f:
+  <span style="color: #008000; font-weight: bold">if</span> <span style="color: #BA2121">&quot;winners&quot;</span> <span style="color: #AA22FF; font-weight: bold">in</span> line:
+    today <span style="color: #666666">=</span> <span style="color: #008000">str</span>(date<span style="color: #666666">.</span>today()<span style="color: #666666">.</span>day) <span style="color: #AA22FF; font-weight: bold">in</span> line
+    <span style="color: #008000; font-weight: bold">break</span>
 
-line = f.readline()
+line <span style="color: #666666">=</span> f<span style="color: #666666">.</span>readline()
 
-f.close()
+f<span style="color: #666666">.</span>close()
 
-if today and "name" in line:
-  s = smtplib.SMTP_SSL("smtp.mail.yahoo.com")
-  s.login("user","password")
-  msg = MIMEText("I would like to claim my prize\r\n\r\nRegards\r\nname")
-  msg['Subject'] = "Advent Calendar Competition"
-  msg['From'] = "from email"
-  msg['To'] = "to email"
-  msg['Bcc'] = "from email"
-  s.sendmail("from email", ["to email","from email"], msg.as_string())
-  s.quit()
-  print(msg.as_string())
-  open("sent", "w").close()
+<span style="color: #008000; font-weight: bold">if</span> today <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #BA2121">&quot;name&quot;</span> <span style="color: #AA22FF; font-weight: bold">in</span> line:
+  s <span style="color: #666666">=</span> smtplib<span style="color: #666666">.</span>SMTP_SSL(<span style="color: #BA2121">&quot;smtp.mail.yahoo.com&quot;</span>)
+  s<span style="color: #666666">.</span>login(<span style="color: #BA2121">&quot;user&quot;</span>,<span style="color: #BA2121">&quot;password&quot;</span>)
+  msg <span style="color: #666666">=</span> MIMEText(<span style="color: #BA2121">&quot;I would like to claim my prize</span><span style="color: #BB6622; font-weight: bold">\r\n\r\n</span><span style="color: #BA2121">Regards</span><span style="color: #BB6622; font-weight: bold">\r\n</span><span style="color: #BA2121">name&quot;</span>)
+  msg[<span style="color: #BA2121">&#39;Subject&#39;</span>] <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;Advent Calendar Competition&quot;</span>
+  msg[<span style="color: #BA2121">&#39;From&#39;</span>] <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;from email&quot;</span>
+  msg[<span style="color: #BA2121">&#39;To&#39;</span>] <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;to email&quot;</span>
+  msg[<span style="color: #BA2121">&#39;Bcc&#39;</span>] <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;from email&quot;</span>
+  s<span style="color: #666666">.</span>sendmail(<span style="color: #BA2121">&quot;from email&quot;</span>, [<span style="color: #BA2121">&quot;to email&quot;</span>,<span style="color: #BA2121">&quot;from email&quot;</span>], msg<span style="color: #666666">.</span>as_string())
+  s<span style="color: #666666">.</span>quit()
+  <span style="color: #008000; font-weight: bold">print</span>(msg<span style="color: #666666">.</span>as_string())
+  <span style="color: #008000">open</span>(<span style="color: #BA2121">&quot;sent&quot;</span>, <span style="color: #BA2121">&quot;w&quot;</span>)<span style="color: #666666">.</span>close()
 
-with file("last", "a"):
-  utime("last", None)
-</pre>
+<span style="color: #008000; font-weight: bold">with</span> <span style="color: #008000">file</span>(<span style="color: #BA2121">&quot;last&quot;</span>, <span style="color: #BA2121">&quot;a&quot;</span>):
+  utime(<span style="color: #BA2121">&quot;last&quot;</span>, <span style="color: #008000">None</span>)
+</pre></div>
 
 <p>So, very careful with the indenting. We shall have to see if anyone wins anything. The script gets fired off periodically with a crontab entry.</p>
-
-<pre>
-CRON_TZ=Europe/London
-MAILTO=bill
-*/1 9-10 1-24 12 * $HOME/advent/advent.py
-</pre>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #19177C">CRON_TZ</span><span style="color: #666666">=</span>Europe/London
+<span style="color: #19177C">MAILTO</span><span style="color: #666666">=</span>bill
+*/1 <span style="color: #666666">9</span>-10 <span style="color: #666666">1</span>-24 <span style="color: #666666">12</span> * <span style="color: #19177C">$HOME</span>/advent/advent.py
+</pre></div>
 
     </p>
     

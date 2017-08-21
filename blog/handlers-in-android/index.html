@@ -197,40 +197,40 @@
 <li>The main activity implements <a href="http://developer.android.com/reference/android/os/Handler.Callback.html">Handler.Callback</a>, and has a <a href="http://developer.android.com/reference/android/os/Handler.Callback.html#handleMessage%28android.os.Message%29">handleMessage</a> function.</li>
 <li>When the worker thread is created, include a reference to the main activity.</li>
 <li>In the worker thread constructor, create a <a href="http://developer.android.com/reference/android/os/Handler.html">Handler</a>, including the reference to the main activity.</li>
-<li>When some results need passing back, send a <a href="http://developer.android.com/reference/android/os/Message.html">Message</a> back to the main activity using the handler.
-<pre>
-public class MyActivity extends <a href="http://developer.android.com/reference/android/app/Activity.html">Activity</a> implements <a href="http://developer.android.com/reference/android/os/Handler.Callback.html">Handler.Callback</a>
-{
-    //&hellip;
-    // On create
-    @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
-        //&hellip;
-        WorkerThread worker = new WorkerThread(this);
-    //&hellip;
-    public boolean <a href="http://developer.android.com/reference/android/os/Handler.Callback.html#handleMessage%28android.os.Message%29">handleMessage</a>(<a href="http://developer.android.com/reference/android/os/Message.html">Message</a> msg)
-    {
-    //&hellip;
-public class WorkerThread extends Thread
-{
-    <a href="http://developer.android.com/reference/android/os/Handler.html">Handler</a> handler;
-    //&hellip;
-    // Constructor
-    public WorkerThread(Handler.Callback callback)
-    {
-        handler = new <a href="http://developer.android.com/reference/android/os/Handler.html#Handler%28android.os.Handler.Callback%29">Handler</a>(callback);
-        //&hellip;
-    private void someFunction()
-    {
-        handler.<a href="http://developer.android.com/reference/android/os/Handler.html#sendEmptyMessage%28int%29">sendEmptyMessage</a>(WHATEVER);
-        // or
-        <a href="http://developer.android.com/reference/android/os/Message.html">Message</a> msg = handler.<a href="http://developer.android.com/reference/android/os/Handler.html#obtainMessage%28int,%20java.lang.Object%29">obtainMessage</a>(WHATEVER, thingy);
-        handler.<a href="http://developer.android.com/reference/android/os/Handler.html#sendMessage%28android.os.Message%29">sendMessage</a>(msg);
-        //&hellip;
-</pre>
-The handler will send the message back to the activity in the UI thread, so you can do whatever with the contents.</li>
+<li>When some results need passing back, send a <a href="http://developer.android.com/reference/android/os/Message.html">Message</a> back to the main activity using the handler.</li>
 </ol>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyActivity</span> <span style="color: #008000; font-weight: bold">extends</span> Activity <span style="color: #008000; font-weight: bold">implements</span> Handler<span style="color: #666666">.</span><span style="color: #7D9029">Callback</span>
+    <span style="color: #666666">{</span>
+        <span style="color: #408080; font-style: italic">//...</span>
+        <span style="color: #408080; font-style: italic">// On create</span>
+        <span style="color: #AA22FF">@Override</span>
+        <span style="color: #008000; font-weight: bold">public</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">onCreate</span><span style="color: #666666">(</span>Bundle savedInstanceState<span style="color: #666666">)</span>
+        <span style="color: #666666">{</span>
+            <span style="color: #408080; font-style: italic">//...</span>
+            WorkerThread worker <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">new</span> WorkerThread<span style="color: #666666">(</span><span style="color: #008000; font-weight: bold">this</span><span style="color: #666666">);</span>
+        <span style="color: #408080; font-style: italic">//...</span>
+        <span style="color: #008000; font-weight: bold">public</span> <span style="color: #B00040">boolean</span> <span style="color: #0000FF">handleMessage</span><span style="color: #666666">(</span>Message msg<span style="color: #666666">)</span>
+        <span style="color: #666666">{</span>
+        <span style="color: #408080; font-style: italic">//...</span>
+    <span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">WorkerThread</span> <span style="color: #008000; font-weight: bold">extends</span> Thread
+    <span style="color: #666666">{</span>
+        Handler handler<span style="color: #666666">;</span>
+        <span style="color: #408080; font-style: italic">//...</span>
+        <span style="color: #408080; font-style: italic">// Constructor</span>
+        <span style="color: #008000; font-weight: bold">public</span> <span style="color: #0000FF">WorkerThread</span><span style="color: #666666">(</span>Handler<span style="color: #666666">.</span><span style="color: #7D9029">Callback</span> callback<span style="color: #666666">)</span>
+        <span style="color: #666666">{</span>
+            handler <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">new</span> Handler<span style="color: #666666">(</span>callback<span style="color: #666666">);</span>
+            <span style="color: #408080; font-style: italic">//...</span>
+        <span style="color: #008000; font-weight: bold">private</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">someFunction</span><span style="color: #666666">()</span>
+        <span style="color: #666666">{</span>
+            handler<span style="color: #666666">.</span><span style="color: #7D9029">sendEmptyMessage</span><span style="color: #666666">(</span>WHATEVER<span style="color: #666666">);</span>
+            <span style="color: #408080; font-style: italic">// or</span>
+            Message msg <span style="color: #666666">=</span> handler<span style="color: #666666">.</span><span style="color: #7D9029">obtainMessage</span><span style="color: #666666">(</span>WHATEVER<span style="color: #666666">,</span> thingy<span style="color: #666666">);</span>
+            handler<span style="color: #666666">.</span><span style="color: #7D9029">sendMessage</span><span style="color: #666666">(</span>msg<span style="color: #666666">);</span>
+            <span style="color: #408080; font-style: italic">//...</span>
+</pre></div>
+
+<p>The handler will send the message back to the activity in the UI thread, so you can do whatever with the contents.</p>
 
     </p>
     

@@ -32,7 +32,7 @@
 
 
 <meta itemprop="dateModified" content="2013-12-21T20:16:37&#43;00:00" />
-<meta itemprop="wordCount" content="288">
+<meta itemprop="wordCount" content="290">
 
 
 
@@ -191,9 +191,7 @@
 <p>I dug it out again the other day because I wanted to hear just how good the <a href="https://github.com/billthefarmer/mididriver">Sonivox EAS library</a> I ported to the Pi sounded when hooked up to the hifi with some decent speakers. After extensive googling, and putting together various bits and pieces of info from various blog posts, and wikis, I came up with sort-of working configs for Raspbian and Arch Linux.</p>
 
 <h2 id="raspbian">Raspbian</h2>
-
-<pre>
-    /etc/network/interfaces:
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>/etc/network/interfaces:
     
     auto lo
     iface lo inet loopback
@@ -203,40 +201,35 @@
     auto wlan0
     iface wlan0 inet dhcp
     wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
-</pre>
+</pre></div>
 
 <p>You can use <code>wpa_passphrase</code> to generate the <code>wpa_supplicant.conf</code> file:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ wpa_passphrase ssid passphrase
 
-<pre>
-    $ wpa_passphrase ssid passphrase
-    network={
-            ssid="ssid"
-            #psk="passphrase"
-            psk=41167ee7545cb4d9b1c7d7e113cfc1f0ac367b020141c46c9418965c1926fd80
-    }
-</pre>
+    <span style="color: #19177C">network</span><span style="color: #666666">={</span>
+            <span style="color: #19177C">ssid</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;ssid&quot;</span>
+            <span style="color: #408080; font-style: italic">#psk=&quot;passphrase&quot;</span>
+            <span style="color: #19177C">psk</span><span style="color: #666666">=</span>41167ee7545cb4d9b1c7d7e113cfc1f0ac367b020141c46c9418965c1926fd80
+    <span style="color: #666666">}</span>
+</pre></div>
 
 <p>Redirect the output to the <code>wpa_supplicant.conf</code> file. I found this in the Arch Linux wiki. The wpa-conf and wpa-roam stanzas do not appear to be officially documented anywhere I can find.</p>
 
 <h3 id="raspbian-jessie">Raspbian Jessie</h3>
 
 <p>If your wifi router has a WPS button, press it. Run <code>wpa_cli</code> on the Pi and enter the following commands:</p>
-
-<pre>
-    > wps_pbc
-    > quit
-</pre>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    &gt; wps_pbc
+    &gt; quit
+</pre></div>
 
 <p>This should automatically pick up the ssid and key, connect, and set up <code>wpa_supplicant.conf</code> so that the Pi will reconnect when rebooted.</p>
 
 <h2 id="arch-linux">Arch Linux</h2>
 
 <p>Use <code>wifi-menu</code> to create a <code>netctl</code> profile. Use <code>netctl list</code> to list profiles and <code>netctl</code> to enable and start your profile.</p>
-
-<pre>
-    sudo netctl enable wlan0-yourSSIDhere
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    sudo netctl <span style="color: #008000">enable</span> wlan0-yourSSIDhere
     sudo netctl start wlan0-yourSSIDhere
-</pre>
+</pre></div>
 
 <p>This appears to work just fine.</p>
 
