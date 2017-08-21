@@ -36,7 +36,7 @@ I looked for migration tools, and found two:
 
 
 <meta itemprop="dateModified" content="2017-08-19T14:30:00&#43;00:00" />
-<meta itemprop="wordCount" content="1109">
+<meta itemprop="wordCount" content="1115">
 
 
 
@@ -65,44 +65,20 @@ I looked for migration tools, and found two:
     
 
     
-      <link href="http://billthefarmer.github.io/blog/css/cookieconsent.min.css" rel="stylesheet" type="text/css">
-<script src="http://billthefarmer.github.io/blog/js/cookieconsent.min.js" async></script>
-
-<script>
-window.addEventListener("load", function(){
-  window.cookieconsent.initialise({
-    "palette": {
-      "popup": {
-        "background": "#428bca",
-        "text": "#ffffff"
-      },
-      "button": {
-        "background": "#f71559"
-      }
-    },
-    "content": {
-      "message": 'This website uses cookies.',
-      "dismiss": 'Got it!',
-      "link": 'Learn more.',
-      "href": "http:\/\/cookiesandyou.com"
-    },
-    "position": "bottom-right"
-  })});
-</script>
-
-    
 
     
     
 
 <style>
 .callout.large {
-    background-image: url(images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
 }
 </style>
+
+
 
 
   </head>
@@ -242,11 +218,13 @@ error on the exporter issues page, and found Sourceforge was using an
 old version of PHP. So I looked at the PHP code, and found it was
 using square brackets for an array, which I&rsquo;d found an annoyance while
 writing a Wordpress plugin.</p>
-        if (in_array($post->post_status, ['draft', 'private'])) {
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>        if (in_array($post-&gt;post_status, [&#39;draft&#39;, &#39;private&#39;])) {
+</pre></div>
 
 <p>So I changed it to the old style syntax, and found that was it, it
 just worked. So change one line to make it work with old PHP versions.</p>
-        if (in_array($post->post_status, array('draft', 'private'))) {
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>        if (in_array($post-&gt;post_status, array(&#39;draft&#39;, &#39;private&#39;))) {
+</pre></div>
 
 <p>Except it didn&rsquo;t, I couldn&rsquo;t find the output, not where it said it was
 anyway. So I used the plugin from the admin page instead, which did
@@ -277,22 +255,21 @@ to run <a href="https://www.python.org">Python</a> utilities in, so installing t
 <a href="https://github.com/dbohdan/remarshal">remarshal</a> and getting it working was not a problem.</p>
 
 <p>So now I&rsquo;ve got a config file which does what I want it to do:</p>
-
-<pre><code>---
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #0000FF; font-weight: bold">---</span>
 baseURL: http://billthefarmer.github.io/blog/
 languageCode: en-gb
-title: Bill Farmer's Blog
-copyright: Copyright &amp;copy; 2017 Bill Farmer
+title: Bill Farmer&#39;s Blog
+copyright: Copyright © 2017 Bill Farmer
 theme: theme-hugo-foundation6
 publishDir: d:/billthefarmer.github.io/blog/
 pygmentscodefences: true
 
-# number of posts to show on home/category/tag pages (Default: 10)
+<span style="color: #408080; font-style: italic"># number of posts to show on home/category/tag pages (Default: 10)</span>
 paginate: 5
 
 taxonomies:
   category: categories
-  # tag: tags
+  <span style="color: #408080; font-style: italic"># tag: tags</span>
 
 permalinks:
   page: /:slug/
@@ -309,13 +286,13 @@ params:
   description: Random thoughts on random subjects
   header_background: images/2013/12/cropped-P1010089.jpg
   sidebar:
-    # Optional about block for sidebar (can be Markdown)
-    # about: Bill Farmer's Blog
+    <span style="color: #408080; font-style: italic"># Optional about block for sidebar (can be Markdown)</span>
+    <span style="color: #408080; font-style: italic"># about: Bill Farmer&#39;s Blog</span>
     num_recent_posts: 5
   sharingicons:
     hide: true
-...
-</code></pre>
+<span style="color: #0000FF; font-weight: bold">...</span>
+</pre></div>
 
 <p>The useful bits are <code>copyright: Copyright &amp;copy; 2017 Bill Farmer</code>,
 which overrides the page footer, <code>publishDir:
@@ -332,22 +309,21 @@ for modifying the blog header, but there is for the page <code>&lt;head&gt;</cod
 I copied the <code>head-custom.html</code> from the <code>layouts/partials</code> folder in
 the theme to <code>layouts/partials</code> in the blog source and modified it
 with some extra styles.</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic">&lt;!--</span>
+<span style="color: #408080; font-style: italic">    Create &lt;project-root&gt;/layouts/partials/head-custom.html to</span>
+<span style="color: #408080; font-style: italic">    overwrite this empty template and put custom code into the &lt;head&gt;</span>
+<span style="color: #408080; font-style: italic">    section.</span>
+<span style="color: #408080; font-style: italic">  --&gt;</span>
 
-<pre><code>&lt;!--
-    Create &lt;project-root&gt;/layouts/partials/head-custom.html to
-    overwrite this empty template and put custom code into the &lt;head&gt;
-    section.
-  --&gt;
-
-&lt;style&gt;
-.callout.large {
-    background-image: url({{ $.Site.Params.header_background }});
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat;
+&lt;<span style="color: #008000; font-weight: bold">style</span>&gt;
+.<span style="color: #0000FF; font-weight: bold">callout</span>.<span style="color: #0000FF; font-weight: bold">large</span> {
+    <span style="color: #008000; font-weight: bold">background-image</span>: <span style="color: #008000">url</span>(<span style="color: #008000">{{ $.Site.Params.header_background }}</span>);
+    <span style="color: #008000; font-weight: bold">background-size</span>: <span style="color: #008000; font-weight: bold">cover</span>;
+    <span style="color: #008000; font-weight: bold">background-position</span>: <span style="color: #008000; font-weight: bold">center</span> <span style="color: #008000; font-weight: bold">bottom</span>;
+    <span style="color: #008000; font-weight: bold">background-repeat</span>: <span style="color: #008000; font-weight: bold">no-repeat</span>;
 }
-&lt;/style&gt;
-</code></pre>
+&lt;/<span style="color: #008000; font-weight: bold">style</span>&gt;
+</pre></div>
 
 <p>Reading the documentation on <a href="http://gohugo.io/variables">variables</a>, I put an entry in the
 config file <code>header_background: images/2013/12/cropped-P1010089.jpg</code>
@@ -363,45 +339,45 @@ the styles.</p>
 <p>I shall have to try it on Linux to see if it works there, which it
 does, but the style is horrible. I changed it to <code>default</code>.</p>
 
-<p>I gave up on highlighting to get my site index page working. I found a
-template on the <a href="https://gohugo.io/variables/taxonomy">Taxonomy Variables</a> page to generate a list of
-blog pages.</p>
+<p>To get the highlighting working in windows I had to install real
+windows python and install Pygments there.</p>
 
-<pre><code>&lt;section&gt;
-  &lt;ul&gt;
+<p>I found a template on the <a href="https://gohugo.io/variables/taxonomy">Taxonomy Variables</a> page to generate a
+list of blog pages.</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>&lt;<span style="color: #008000; font-weight: bold">section</span>&gt;
+  &lt;<span style="color: #008000; font-weight: bold">ul</span>&gt;
     {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
-      &lt;li&gt;&lt;a href=&quot;{{ &quot;/&quot; | relLangURL}}{{ $taxonomyname | urlize }}&quot;&gt;{{ $taxonomyname }}&lt;/a&gt;
-        &lt;ul&gt;
+      &lt;<span style="color: #008000; font-weight: bold">li</span>&gt;&lt;<span style="color: #008000; font-weight: bold">a</span> <span style="color: #7D9029">href</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;{{ &quot;</span><span style="border: 1px solid #FF0000">/&quot;</span> <span style="border: 1px solid #FF0000">|</span> <span style="color: #7D9029">relLangURL</span><span style="border: 1px solid #FF0000">}}{{</span> <span style="border: 1px solid #FF0000">$</span><span style="color: #7D9029">taxonomyname</span> <span style="border: 1px solid #FF0000">|</span> <span style="color: #7D9029">urlize</span> <span style="border: 1px solid #FF0000">}}&quot;</span>&gt;{{ $taxonomyname }}&lt;/<span style="color: #008000; font-weight: bold">a</span>&gt;
+        &lt;<span style="color: #008000; font-weight: bold">ul</span>&gt;
           {{ range $key, $value := $taxonomy }}
-          &lt;li&gt; {{ $key }} &lt;/li&gt;
-                &lt;ul&gt;
+          &lt;<span style="color: #008000; font-weight: bold">li</span>&gt; {{ $key }} &lt;/<span style="color: #008000; font-weight: bold">li</span>&gt;
+                &lt;<span style="color: #008000; font-weight: bold">ul</span>&gt;
                 {{ range $value.Pages }}
-                    &lt;li&gt;&lt;a href=&quot;{{ .Permalink}}&quot;&gt; {{ .LinkTitle }} &lt;/a&gt; &lt;/li&gt;
+                    &lt;<span style="color: #008000; font-weight: bold">li</span>&gt;&lt;<span style="color: #008000; font-weight: bold">a</span> <span style="color: #7D9029">href</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;{{ .Permalink}}&quot;</span>&gt; {{ .LinkTitle }} &lt;/<span style="color: #008000; font-weight: bold">a</span>&gt; &lt;/<span style="color: #008000; font-weight: bold">li</span>&gt;
                 {{ end }}
-                &lt;/ul&gt;
+                &lt;/<span style="color: #008000; font-weight: bold">ul</span>&gt;
           {{ end }}
-        &lt;/ul&gt;
-      &lt;/li&gt;
+        &lt;/<span style="color: #008000; font-weight: bold">ul</span>&gt;
+      &lt;/<span style="color: #008000; font-weight: bold">li</span>&gt;
     {{ end }}
-  &lt;/ul&gt;
-&lt;/section&gt;
-</code></pre>
+  &lt;/<span style="color: #008000; font-weight: bold">ul</span>&gt;
+&lt;/<span style="color: #008000; font-weight: bold">section</span>&gt;
+</pre></div>
 
 <p>After hacking that about and putting it in
 <code>layouts/shortcodes/site-index.html</code>, and putting a shortcode <code>{{&lt;
 site-index &gt;}}</code> in the index page, I got a reasonable site index.</p>
-
-<pre><code>&lt;section&gt;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>&lt;<span style="color: #008000; font-weight: bold">section</span>&gt;
   {{ range $key, $value := .Site.Taxonomies.categories }}
-  &lt;h3&gt;{{ title $key }}&lt;/h3&gt;
-  &lt;ul&gt;
+  &lt;<span style="color: #008000; font-weight: bold">h3</span>&gt;{{ title $key }}&lt;/<span style="color: #008000; font-weight: bold">h3</span>&gt;
+  &lt;<span style="color: #008000; font-weight: bold">ul</span>&gt;
     {{ range $value.Pages.ByTitle }}
-    &lt;li&gt;&lt;a href=&quot;{{ .Permalink }}&quot;&gt;{{ safeHTML .LinkTitle }}&lt;/a&gt;&lt;/li&gt;
+    &lt;<span style="color: #008000; font-weight: bold">li</span>&gt;&lt;<span style="color: #008000; font-weight: bold">a</span> <span style="color: #7D9029">href</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;{{ .Permalink }}&quot;</span>&gt;{{ safeHTML .LinkTitle }}&lt;/<span style="color: #008000; font-weight: bold">a</span>&gt;&lt;/<span style="color: #008000; font-weight: bold">li</span>&gt;
     {{ end }}
-  &lt;/ul&gt;
+  &lt;/<span style="color: #008000; font-weight: bold">ul</span>&gt;
   {{ end }}
-&lt;/section&gt;
-</code></pre>
+&lt;/<span style="color: #008000; font-weight: bold">section</span>&gt;
+</pre></div>
 
 <p>There were a couple of extra tweaks that took a long time to find in
 the docs. The <code>key</code> for each category is in lower case, and I wanted
@@ -461,6 +437,14 @@ showing up as <code>&amp;#8217;</code> in the post titles in the index. I found
     
       <li><a href="/blog/replacing-micro-bore-radiators/">
         Replacing micro-bore radiators
+      </a></li>
+    
+      <li><a href="/blog/upgrading-to-windows-10/">
+        Upgrading to Windows 10
+      </a></li>
+    
+      <li><a href="/blog/whole-broad-beans-in-olive-oil/">
+        Whole Broad Beans in Olive Oil
       </a></li>
     
   </ul>
