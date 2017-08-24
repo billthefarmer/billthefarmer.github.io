@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2017 Bill Farmer</copyright>
-    <lastBuildDate>Sat, 19 Aug 2017 14:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Aug 2017 11:47:00 +0100</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Whatever-o-meter revisited</title>
+      <link>https://billthefarmer.github.io/blog/whatever-o-meter-revisited/</link>
+      <pubDate>Thu, 24 Aug 2017 11:47:00 +0100</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/whatever-o-meter-revisited/</guid>
+      <description>I wrote the whatever-o-meter about five years ago in PHP and Javascript as a Wordpress plugin. As I have migrated my blog to Hugo, I thought to have a go at reimplementing it. The exporter I used made a good job of translating the Wordpress custom fields to Hugo front matter parameters. I had to put dashes in quotes, otherwise they get interpreted as [&amp;lt;nil&amp;gt;].
+intro: Please answer the following questions carefully and truthfully.</description>
+    </item>
     
     <item>
       <title>Migrating this blog from Wordpress</title>

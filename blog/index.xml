@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2017 Bill Farmer</copyright>
-    <lastBuildDate>Sat, 19 Aug 2017 14:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Aug 2017 11:47:00 +0100</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Whatever-o-meter revisited</title>
+      <link>https://billthefarmer.github.io/blog/whatever-o-meter-revisited/</link>
+      <pubDate>Thu, 24 Aug 2017 11:47:00 +0100</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/whatever-o-meter-revisited/</guid>
+      <description>I wrote the whatever-o-meter about five years ago in PHP and Javascript as a Wordpress plugin. As I have migrated my blog to Hugo, I thought to have a go at reimplementing it. The exporter I used made a good job of translating the Wordpress custom fields to Hugo front matter parameters. I had to put dashes in quotes, otherwise they get interpreted as [&amp;lt;nil&amp;gt;].
+intro: Please answer the following questions carefully and truthfully.</description>
+    </item>
     
     <item>
       <title>Migrating this blog from Wordpress</title>
@@ -196,7 +206,7 @@ I used gnuparted to copy the partition from one disk to another. The standard me
       <pubDate>Fri, 07 Aug 2015 09:32:42 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/index/</guid>
-      <description>DiyReplacing micro-bore radiatorsHackingBuild Mac OSX apps using command line toolsC++Concurrency, Threads, Semaphores and MutexesDownload streamed videoFast Fourier TransformHandlers in AndroidHandling run time changes in AndroidHaskellInstall OSX El Capitan on a PC (MBR)Java CollectionsMigrating this blog from WordpressMove Linux Mint Root PartitionPythonRaspberry Pi WifiRead iBook books on an Android tabletResolving content uris in androidResurrecting a netbook as a web serverSearch Engine Optimisation (SEO)SlimStatTransfer contacts from iPhone to AndroidUpgrading WordPressUpgrading a Moto GUpgrading to Windows 10Using Emacs as an IDEWhatever-o-meterRecipesCatalan slow cooked chickenChorizo Egg and Tomato Toasted SandwichClementine CakeCoarse RatatouilleDoug&amp;#8217;s Seafood RisottoFabada AsturianaFaggots and Peas with Onion GravyFried RiceLeek and Potato SoupMexican BreakfastPan fried lamb&amp;#8217;s liver, bacon and chorizoPasta PicanteSausages with Green LentilsShoreham fish chowderSlow cooked lambSlow cooked ox cheekSpanish FrittataSpanish omeletteStuffed PeppersTruly Evil Onion GravyUnobtainiumVegetable Soup PlusVegetables cooked in olive oilVenison and Chorizo CasseroleWhole Broad Beans in Olive Oil</description>
+      <description>RecipesCatalan slow cooked chickenChorizo Egg and Tomato Toasted SandwichClementine CakeCoarse RatatouilleDoug&amp;#8217;s Seafood RisottoFabada AsturianaFaggots and Peas with Onion GravyFried RiceLeek and Potato SoupMexican BreakfastPan fried lamb&amp;#8217;s liver, bacon and chorizoPasta PicanteSausages with Green LentilsShoreham fish chowderSlow cooked lambSlow cooked ox cheekSpanish FrittataSpanish omeletteStuffed PeppersTruly Evil Onion GravyUnobtainiumVegetable Soup PlusVegetables cooked in olive oilVenison and Chorizo CasseroleWhole Broad Beans in Olive OilHackingBuild Mac OSX apps using command line toolsC++Concurrency, Threads, Semaphores and MutexesDownload streamed videoFast Fourier TransformHandlers in AndroidHandling run time changes in AndroidHaskellInstall OSX El Capitan on a PC (MBR)Java CollectionsMigrating this blog from WordpressMove Linux Mint Root PartitionPythonRaspberry Pi WifiRead iBook books on an Android tabletResolving content uris in androidResurrecting a netbook as a web serverSearch Engine Optimisation (SEO)SlimStatTransfer contacts from iPhone to AndroidUpgrading WordPressUpgrading a Moto GUpgrading to Windows 10Using Emacs as an IDEWhatever-o-meterWhatever-o-meter revisitedDiyReplacing micro-bore radiators</description>
     </item>
     
     <item>
