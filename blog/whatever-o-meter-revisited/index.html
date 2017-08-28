@@ -34,7 +34,7 @@ intro: Please answer the following questions carefully and truthfully.">
 
 
 <meta itemprop="dateModified" content="2017-08-24T11:47:00&#43;01:00" />
-<meta itemprop="wordCount" content="546">
+<meta itemprop="wordCount" content="544">
 
 
 
@@ -216,7 +216,7 @@ more: https://billthefarmer.github.io/blog/morris-o-meter
 re-implementing as a hugo shortcode. The first part of the plugin just
 outputs svg code to draw the dial and pointer, that was fairly easy to
 implement, it just has some iteration in it. I had to change the ticks
-slightly as Hugo doesn&rsquo;t appear to support floating point arithmatic
+slightly as Hugo doesn&rsquo;t appear to support floating point arithmetic
 in templates.</p>
 
 <p>The really difficult part was reading the page parameters, as most of
@@ -288,7 +288,7 @@ were passed by Hugo as an array of strings, to be interpreted as numbers.</p>
         {
             value <span style="color: #666666">+=</span> $(<span style="color: #BA2121">&quot;#value-&quot;</span> <span style="color: #666666">+</span> panel).slider(<span style="color: #BA2121">&quot;value&quot;</span>) <span style="color: #666666">*</span>
 	        weights[index];
-            total <span style="color: #666666">+=</span> weights[index] <span style="color: #666666">*</span> <span style="color: #666666">1</span>;
+            total <span style="color: #666666">+=</span> <span style="color: #666666">+</span>weights[index];
         }
 </pre></div>
 
