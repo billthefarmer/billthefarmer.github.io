@@ -34,7 +34,7 @@ intro: Please answer the following questions carefully and truthfully.">
 
 
 <meta itemprop="dateModified" content="2017-08-24T11:47:00&#43;01:00" />
-<meta itemprop="wordCount" content="544">
+<meta itemprop="wordCount" content="540">
 
 
 
@@ -212,7 +212,7 @@ centre:
 more: https://billthefarmer.github.io/blog/morris-o-meter
 </pre></div>
 
-<p>The javascript part should just work as it is, the PHP plugin needs
+<p>The javascript part should just work as it is, the PHP plugin needed
 re-implementing as a hugo shortcode. The first part of the plugin just
 outputs svg code to draw the dial and pointer, that was fairly easy to
 implement, it just has some iteration in it. I had to change the ticks
@@ -224,15 +224,14 @@ them are optional, and some of the arrays can have bits missing. PHP
 just coped with that, anything not defined just becomes <code>null</code>. In
 Hugo I had to make a great deal of use of <code>default</code> and <code>slice</code> to
 create default values.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>  {{ $intro := .Page.Params.intro }}
-  &lt;<span style="color: #008000; font-weight: bold">div</span> <span style="color: #7D9029">id</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;first&quot;</span> <span style="color: #7D9029">style</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;text-align: center&quot;</span>&gt;
-    &lt;<span style="color: #008000; font-weight: bold">h4</span>&gt;{{ $intro }}&lt;/<span style="color: #008000; font-weight: bold">h4</span>&gt;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>  &lt;<span style="color: #008000; font-weight: bold">div</span> <span style="color: #7D9029">id</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;first&quot;</span> <span style="color: #7D9029">style</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;text-align: center&quot;</span>&gt;
+    &lt;<span style="color: #008000; font-weight: bold">h4</span>&gt;{{ .intro }}&lt;/<span style="color: #008000; font-weight: bold">h4</span>&gt;
     &lt;<span style="color: #008000; font-weight: bold">input</span> <span style="color: #7D9029">type</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;button&quot;</span> <span style="color: #7D9029">value</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;Start&quot;</span> <span style="color: #7D9029">class</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;start&quot;</span> <span style="color: #7D9029">id</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;start&quot;</span> /&gt;
   &lt;/<span style="color: #008000; font-weight: bold">div</span>&gt;
-  {{ $questions := .Page.Params.question }}
-  {{ $left_texts := default (slice &quot;No&quot;) .Page.Params.left }}
-  {{ $centre_texts := default (slice &quot;-&quot;) (default .Page.Params.centre .Page.Params.center) }}
-  {{ $right_texts := default (slice &quot;Yes&quot;) .Page.Params.right }}
+  {{ $questions := .question }}
+  {{ $left_texts := default (slice &quot;No&quot;) .left }}
+  {{ $centre_texts := default (slice &quot;-&quot;) (default .centre .center) }}
+  {{ $right_texts := default (slice &quot;Yes&quot;) .right }}
   {{ $last_index := sub (len $questions) 1 }}
   {{ range $index, $question := $questions }}
   {{ $left := default &quot;No&quot; (index $left_texts $index) }}
@@ -244,23 +243,24 @@ create default values.</p>
 json to the javascript. I had to use <code>Scratch</code> inside if blocks to
 save values. Luckily <code>Scratch.Get</code> returns <code>null</code> if the key doesn&rsquo;t
 exist.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>{{ if .Page.Params.result }}
-{{ .Scratch.Set &quot;results&quot; .Page.Params.result }}
-{{ if (default .Page.Params.colors .Page.Params.colours) }}
-{{ .Scratch.Set &quot;colours&quot; (split (default .Page.Params.colors .Page.Params.colours) &quot;,&quot;) }}
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>{{ with .result }}
+{{ $.Scratch.Set &quot;results&quot; . }}
 {{ end }}
-{{ if .Page.Params.weights }}
-{{ .Scratch.Set &quot;weights&quot; (split .Page.Params.weights &quot;,&quot;) }}
+{{ with (default .colors .colours) }}
+{{ $.Scratch.Set &quot;colours&quot; (split . &quot;,&quot;) }}
 {{ end }}
-{{ if .Page.Params.duration }}
-{{ .Scratch.Set &quot;duration&quot; .Page.Params.duration }}
+{{ with .weights }}
+{{ $.Scratch.Set &quot;weights&quot; (split . &quot;,&quot;) }}
 {{ end }}
-{{ if .Page.Params.easing }}
-{{ .Scratch.Set &quot;easing&quot; .Page.Params.easing }}
+{{ with .duration }}
+{{ $.Scratch.Set &quot;duration&quot; . }}
 {{ end }}
-{{ $json := dict &quot;results&quot; (.Scratch.Get &quot;results&quot;) &quot;colours&quot;
-(.Scratch.Get &quot;colours&quot;) &quot;weights&quot; (.Scratch.Get &quot;weights&quot;) &quot;duration&quot;
-(.Scratch.Get &quot;duration&quot;) &quot;easing&quot; (.Scratch.Get &quot;easing&quot;) }}
+{{ with .easing }}
+{{ $.Scratch.Set &quot;easing&quot; . }}
+{{ end }}
+{{ $json := dict &quot;results&quot; ($.Scratch.Get &quot;results&quot;) &quot;colours&quot; ($.Scratch.Get &quot;colours&quot;)
+                 &quot;weights&quot; ($.Scratch.Get &quot;weights&quot;) &quot;duration&quot; ($.Scratch.Get &quot;duration&quot;)
+                 &quot;easing&quot; ($.Scratch.Get &quot;easing&quot;) }}
 &lt;<span style="color: #008000; font-weight: bold">script</span> <span style="color: #7D9029">type</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;text/javascript&quot;</span>&gt;
   <span style="color: #008000; font-weight: bold">var</span> whatever_data <span style="color: #666666">=</span> {{ safeJS (jsonify $json) }};
 &lt;/<span style="color: #008000; font-weight: bold">script</span>&gt;
@@ -271,7 +271,7 @@ exist.</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #666666">&lt;</span>script type<span style="color: #666666">=</span><span style="color: #BA2121">&quot;text/javascript&quot;</span><span style="color: #666666">&gt;</span>
 <span style="color: #008000; font-weight: bold">var</span> whatever_data <span style="color: #666666">=</span>
   {<span style="color: #BA2121">&quot;colours&quot;</span><span style="color: #666666">:</span><span style="color: #008000; font-weight: bold">null</span>,<span style="color: #BA2121">&quot;duration&quot;</span><span style="color: #666666">:</span><span style="color: #008000; font-weight: bold">null</span>,<span style="color: #BA2121">&quot;easing&quot;</span><span style="color: #666666">:</span><span style="color: #008000; font-weight: bold">null</span>,<span style="color: #BA2121">&quot;results&quot;</span><span style="color: #666666">:</span>[<span style="color: #BA2121">&quot;%d percent,</span>
-<span style="color: #BA2121">   Perhaps you should consider emigration.&quot;</span>,...],<span style="color: #BA2121">&quot;weights&quot;</span><span style="color: #666666">:</span>[<span style="color: #BA2121">&quot;2&quot;</span>,<span style="color: #BA2121">&quot;1&quot;</span>,<span style="color: #BA2121">&quot;1&quot;</span>,<span style="color: #BA2121">&quot;1&quot;</span>,<span style="color: #BA2121">&quot;1&quot;</span>]};
+<span style="color: #BA2121">    Perhaps you should consider emigration.&quot;</span>,...],<span style="color: #BA2121">&quot;weights&quot;</span><span style="color: #666666">:</span>[<span style="color: #BA2121">&quot;2&quot;</span>,<span style="color: #BA2121">&quot;1&quot;</span>,<span style="color: #BA2121">&quot;1&quot;</span>,<span style="color: #BA2121">&quot;1&quot;</span>,<span style="color: #BA2121">&quot;1&quot;</span>]};
 <span style="color: #666666">&lt;</span><span style="border: 1px solid #FF0000">/script&gt;</span>
 </pre></div>
 
