@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recipes on Bill Farmer’s Blog</title>
+    <title>Recipes on Bill Farmer</title>
     <link>https://billthefarmer.github.io/blog/categories/recipes/</link>
-    <description>Recent content in Recipes on Bill Farmer’s Blog</description>
+    <description>Recent content in Recipes on Bill Farmer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2017 Bill Farmer</copyright>
