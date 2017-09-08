@@ -9,7 +9,7 @@
 <meta property="og:title" content="Adding a calendar event in android" />
 <meta property="og:description" content="The android docs for the Calendar Provider are quite useful, but recommend the use of an AsyncQueryHandler for querying or adding events to calendars in an asynchronous thread. However the AsyncQueryHandler docs don&rsquo;t include much guidance as to how to use it.
 To add an entry to an android calendar you first have to find out the calendar id using an asynchronous query on the calendars table.
-// QueryHandler public class QueryHandler extends AsyncQueryHandler { private static final String TAG = &quot;QueryHandler&quot;; // Projection arrays private static final String[] CALENDAR_PROJECTION = new String[] { Calendars." />
+// QueryHandler public class QueryHandler extends AsyncQueryHandler { private static final String TAG = &quot;QueryHandler&quot;; private static final String REMINDER_SELECT = &quot;((&quot; &#43; Reminders." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/adding-a-calendar-event/" />
 
@@ -32,11 +32,11 @@ To add an entry to an android calendar you first have to find out the calendar i
 <meta itemprop="name" content="Adding a calendar event in android">
 <meta itemprop="description" content="The android docs for the Calendar Provider are quite useful, but recommend the use of an AsyncQueryHandler for querying or adding events to calendars in an asynchronous thread. However the AsyncQueryHandler docs don&rsquo;t include much guidance as to how to use it.
 To add an entry to an android calendar you first have to find out the calendar id using an asynchronous query on the calendars table.
-// QueryHandler public class QueryHandler extends AsyncQueryHandler { private static final String TAG = &quot;QueryHandler&quot;; // Projection arrays private static final String[] CALENDAR_PROJECTION = new String[] { Calendars.">
+// QueryHandler public class QueryHandler extends AsyncQueryHandler { private static final String TAG = &quot;QueryHandler&quot;; private static final String REMINDER_SELECT = &quot;((&quot; &#43; Reminders.">
 
 
 <meta itemprop="dateModified" content="2017-09-05T14:54:25&#43;01:00" />
-<meta itemprop="wordCount" content="435">
+<meta itemprop="wordCount" content="612">
 
 
 
@@ -45,7 +45,7 @@ To add an entry to an android calendar you first have to find out the calendar i
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Adding a calendar event in android"/>
 <meta name="twitter:description" content="The android docs for the Calendar Provider are quite useful, but recommend the use of an AsyncQueryHandler for querying or adding events to calendars in an asynchronous thread. However the AsyncQueryHandler docs don&rsquo;t include much guidance as to how to use it.
 To add an entry to an android calendar you first have to find out the calendar id using an asynchronous query on the calendars table.
-// QueryHandler public class QueryHandler extends AsyncQueryHandler { private static final String TAG = &quot;QueryHandler&quot;; // Projection arrays private static final String[] CALENDAR_PROJECTION = new String[] { Calendars."/>
+// QueryHandler public class QueryHandler extends AsyncQueryHandler { private static final String TAG = &quot;QueryHandler&quot;; private static final String REMINDER_SELECT = &quot;((&quot; &#43; Reminders."/>
 
 
 
@@ -204,6 +204,9 @@ calendar id using an asynchronous query on the calendars table.</p>
 <span style="color: #666666">{</span>
     <span style="color: #008000; font-weight: bold">private</span> <span style="color: #008000; font-weight: bold">static</span> <span style="color: #008000; font-weight: bold">final</span> String TAG <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;QueryHandler&quot;</span><span style="color: #666666">;</span>
 
+    <span style="color: #008000; font-weight: bold">private</span> <span style="color: #008000; font-weight: bold">static</span> <span style="color: #008000; font-weight: bold">final</span> String REMINDER_SELECT <span style="color: #666666">=</span>
+        <span style="color: #BA2121">&quot;((&quot;</span> <span style="color: #666666">+</span> Reminders<span style="color: #666666">.</span><span style="color: #7D9029">EVENT_ID</span> <span style="color: #666666">+</span> <span style="color: #BA2121">&quot;=?) AND (&quot;</span> <span style="color: #666666">+</span> Reminders<span style="color: #666666">.</span><span style="color: #7D9029">METHOD</span> <span style="color: #666666">+</span> <span style="color: #BA2121">&quot;=?))&quot;</span><span style="color: #666666">;</span>
+
     <span style="color: #408080; font-style: italic">// Projection arrays</span>
     <span style="color: #008000; font-weight: bold">private</span> <span style="color: #008000; font-weight: bold">static</span> <span style="color: #008000; font-weight: bold">final</span> String<span style="color: #666666">[]</span> CALENDAR_PROJECTION <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">new</span> String<span style="color: #666666">[]</span>
         <span style="color: #666666">{</span>
@@ -211,7 +214,13 @@ calendar id using an asynchronous query on the calendars table.</p>
         <span style="color: #666666">};</span>
 
     <span style="color: #408080; font-style: italic">// The indices for the projection array above.</span>
-    <span style="color: #008000; font-weight: bold">private</span> <span style="color: #008000; font-weight: bold">static</span> <span style="color: #008000; font-weight: bold">final</span> <span style="color: #B00040">int</span> PROJECTION_ID_INDEX <span style="color: #666666">=</span> <span style="color: #666666">0;</span>
+    <span style="color: #008000; font-weight: bold">private</span> <span style="color: #008000; font-weight: bold">static</span> <span style="color: #008000; font-weight: bold">final</span> <span style="color: #B00040">int</span> CALENDAR_ID_INDEX <span style="color: #666666">=</span> <span style="color: #666666">0;</span>
+
+    <span style="color: #008000; font-weight: bold">private</span> <span style="color: #008000; font-weight: bold">static</span> <span style="color: #008000; font-weight: bold">final</span> <span style="color: #B00040">int</span> CALENDAR <span style="color: #666666">=</span> <span style="color: #666666">0;</span>
+    <span style="color: #008000; font-weight: bold">private</span> <span style="color: #008000; font-weight: bold">static</span> <span style="color: #008000; font-weight: bold">final</span> <span style="color: #B00040">int</span> EVENT    <span style="color: #666666">=</span> <span style="color: #666666">1;</span>
+    <span style="color: #008000; font-weight: bold">private</span> <span style="color: #008000; font-weight: bold">static</span> <span style="color: #008000; font-weight: bold">final</span> <span style="color: #B00040">int</span> REMINDER <span style="color: #666666">=</span> <span style="color: #666666">2;</span>
+
+    <span style="color: #008000; font-weight: bold">private</span> <span style="color: #008000; font-weight: bold">static</span> <span style="color: #008000; font-weight: bold">final</span> <span style="color: #B00040">int</span> REMINDER_MESSAGE <span style="color: #666666">=</span> <span style="color: #666666">-2;</span>
 
     <span style="color: #008000; font-weight: bold">private</span> <span style="color: #008000; font-weight: bold">static</span> QueryHandler queryHandler<span style="color: #666666">;</span>
 
@@ -237,7 +246,7 @@ calendar id using an asynchronous query on the calendars table.</p>
 
         Log<span style="color: #666666">.</span><span style="color: #7D9029">d</span><span style="color: #666666">(</span>TAG<span style="color: #666666">,</span> <span style="color: #BA2121">&quot;Event insert start&quot;</span><span style="color: #666666">);</span>
 
-        queryHandler<span style="color: #666666">.</span><span style="color: #7D9029">startQuery</span><span style="color: #666666">(0,</span> values<span style="color: #666666">,</span> Calendars<span style="color: #666666">.</span><span style="color: #7D9029">CONTENT_URI</span><span style="color: #666666">,</span>
+        queryHandler<span style="color: #666666">.</span><span style="color: #7D9029">startQuery</span><span style="color: #666666">(</span>CALENDAR<span style="color: #666666">,</span> values<span style="color: #666666">,</span> Calendars<span style="color: #666666">.</span><span style="color: #7D9029">CONTENT_URI</span><span style="color: #666666">,</span>
                                 CALENDAR_PROJECTION<span style="color: #666666">,</span> <span style="color: #008000; font-weight: bold">null</span><span style="color: #666666">,</span> <span style="color: #008000; font-weight: bold">null</span><span style="color: #666666">,</span> <span style="color: #008000; font-weight: bold">null</span><span style="color: #666666">);</span>
     <span style="color: #666666">}</span>
 </pre></div>
@@ -254,20 +263,21 @@ method. This starts an asynchronous query on the Calendars table to
 find the first calendar id. A database cursor and the values are
 passed to the <code>onQueryComplete()</code> method.</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #408080; font-style: italic">// onQueryComplete</span>
+    <span style="color: #AA22FF">@Override</span>
     <span style="color: #008000; font-weight: bold">public</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">onQueryComplete</span><span style="color: #666666">(</span><span style="color: #B00040">int</span> token<span style="color: #666666">,</span> Object cookie<span style="color: #666666">,</span> Cursor cursor<span style="color: #666666">)</span>
     <span style="color: #666666">{</span>
         <span style="color: #408080; font-style: italic">// Use the cursor to move through the returned records</span>
         cursor<span style="color: #666666">.</span><span style="color: #7D9029">moveToFirst</span><span style="color: #666666">();</span>
 
         <span style="color: #408080; font-style: italic">// Get the field values</span>
-        <span style="color: #B00040">long</span> calendarID <span style="color: #666666">=</span> cursor<span style="color: #666666">.</span><span style="color: #7D9029">getLong</span><span style="color: #666666">(</span>PROJECTION_ID_INDEX<span style="color: #666666">);</span>
+        <span style="color: #B00040">long</span> calendarID <span style="color: #666666">=</span> cursor<span style="color: #666666">.</span><span style="color: #7D9029">getLong</span><span style="color: #666666">(</span>CALENDAR_ID_INDEX<span style="color: #666666">);</span>
 
         ContentValues values <span style="color: #666666">=</span> <span style="color: #666666">(</span>ContentValues<span style="color: #666666">)</span> cookie<span style="color: #666666">;</span>
         values<span style="color: #666666">.</span><span style="color: #7D9029">put</span><span style="color: #666666">(</span>Events<span style="color: #666666">.</span><span style="color: #7D9029">CALENDAR_ID</span><span style="color: #666666">,</span> calendarID<span style="color: #666666">);</span>
         values<span style="color: #666666">.</span><span style="color: #7D9029">put</span><span style="color: #666666">(</span>Events<span style="color: #666666">.</span><span style="color: #7D9029">EVENT_TIMEZONE</span><span style="color: #666666">,</span>
                    TimeZone<span style="color: #666666">.</span><span style="color: #7D9029">getDefault</span><span style="color: #666666">().</span><span style="color: #7D9029">getDisplayName</span><span style="color: #666666">());</span>
 
-        startInsert<span style="color: #666666">(0,</span> <span style="color: #008000; font-weight: bold">null</span><span style="color: #666666">,</span> Events<span style="color: #666666">.</span><span style="color: #7D9029">CONTENT_URI</span><span style="color: #666666">,</span> values<span style="color: #666666">);</span>
+        startInsert<span style="color: #666666">(</span>EVENT<span style="color: #666666">,</span> <span style="color: #008000; font-weight: bold">null</span><span style="color: #666666">,</span> Events<span style="color: #666666">.</span><span style="color: #7D9029">CONTENT_URI</span><span style="color: #666666">,</span> values<span style="color: #666666">);</span>
     <span style="color: #666666">}</span>
 </pre></div>
 
@@ -278,9 +288,52 @@ instances where it isn&rsquo;t. The <code>startInsert()</code> method inserts th
 asynchronously and the result is passed to the <code>onInsertComplete()</code>
 method.</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #408080; font-style: italic">// onInsertComplete</span>
+    <span style="color: #AA22FF">@Override</span>
     <span style="color: #008000; font-weight: bold">public</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">onInsertComplete</span><span style="color: #666666">(</span><span style="color: #B00040">int</span> token<span style="color: #666666">,</span> Object cookie<span style="color: #666666">,</span> Uri uri<span style="color: #666666">)</span>
     <span style="color: #666666">{</span>
-        Log<span style="color: #666666">.</span><span style="color: #7D9029">d</span><span style="color: #666666">(</span>TAG<span style="color: #666666">,</span> <span style="color: #BA2121">&quot;Event insert complete &quot;</span> <span style="color: #666666">+</span> uri<span style="color: #666666">);</span>
+        Log<span style="color: #666666">.</span><span style="color: #7D9029">d</span><span style="color: #666666">(</span>TAG<span style="color: #666666">,</span> <span style="color: #BA2121">&quot;Event insert complete &quot;</span> <span style="color: #666666">+</span> uri<span style="color: #666666">.</span><span style="color: #7D9029">getLastPathSegment</span><span style="color: #666666">());</span>
+
+        Message msg <span style="color: #666666">=</span>
+            obtainMessage<span style="color: #666666">(</span>REMINDER_MESSAGE<span style="color: #666666">,</span> uri<span style="color: #666666">.</span><span style="color: #7D9029">getLastPathSegment</span><span style="color: #666666">());</span>
+        sendMessageDelayed<span style="color: #666666">(</span>msg<span style="color: #666666">,</span> <span style="color: #666666">60000);</span>
+    <span style="color: #666666">}</span>
+</pre></div>
+
+<p>The inserted event has two reminders added after a delay, an alert and
+an email reminder. The email reminder is annoying, so it is removed by
+the <code>onInsertComplete()</code> method sending a delayed message with the
+reminder id. The <code>AsyncQueryHandler</code> uses messages internally, so the
+<code>handleMessage()</code> method passes on unrecognised messages.</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #408080; font-style: italic">// handleMessage</span>
+    <span style="color: #AA22FF">@Override</span>
+    <span style="color: #008000; font-weight: bold">public</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">handleMessage</span><span style="color: #666666">(</span>Message msg<span style="color: #666666">)</span>
+    <span style="color: #666666">{</span>
+        <span style="color: #008000; font-weight: bold">switch</span> <span style="color: #666666">(</span>msg<span style="color: #666666">.</span><span style="color: #7D9029">what</span><span style="color: #666666">)</span>
+        <span style="color: #666666">{</span>
+        <span style="color: #008000; font-weight: bold">case</span> REMINDER_MESSAGE<span style="color: #666666">:</span>
+            Log<span style="color: #666666">.</span><span style="color: #7D9029">d</span><span style="color: #666666">(</span>TAG<span style="color: #666666">,</span> <span style="color: #BA2121">&quot;Reminder delete start&quot;</span><span style="color: #666666">);</span>
+
+            String selectionArgs<span style="color: #666666">[]</span> <span style="color: #666666">=</span> 
+                <span style="color: #666666">{(</span>String<span style="color: #666666">)</span> msg<span style="color: #666666">.</span><span style="color: #7D9029">obj</span><span style="color: #666666">,</span> String<span style="color: #666666">.</span><span style="color: #7D9029">valueOf</span><span style="color: #666666">(</span>Reminders<span style="color: #666666">.</span><span style="color: #7D9029">METHOD_EMAIL</span><span style="color: #666666">)};</span>
+
+            startDelete<span style="color: #666666">(</span>REMINDER<span style="color: #666666">,</span> <span style="color: #008000; font-weight: bold">null</span><span style="color: #666666">,</span> Reminders<span style="color: #666666">.</span><span style="color: #7D9029">CONTENT_URI</span><span style="color: #666666">,</span>
+                        REMINDER_SELECT<span style="color: #666666">,</span> selectionArgs<span style="color: #666666">);</span>
+            <span style="color: #008000; font-weight: bold">break</span><span style="color: #666666">;</span>
+
+<span style="color: #A0A000">        default:</span>
+            <span style="color: #008000; font-weight: bold">super</span><span style="color: #666666">.</span><span style="color: #7D9029">handleMessage</span><span style="color: #666666">(</span>msg<span style="color: #666666">);</span>
+        <span style="color: #666666">}</span>
+    <span style="color: #666666">}</span>
+</pre></div>
+
+<p>The <code>startDelete()</code> method in the message handler deletes the reminder
+asynchronously and the result is passed to the <code>onDeleteComplete()</code>
+method.</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #408080; font-style: italic">// onDeleteComplete</span>
+    <span style="color: #AA22FF">@Override</span>
+    <span style="color: #008000; font-weight: bold">public</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">onDeleteComplete</span><span style="color: #666666">(</span><span style="color: #B00040">int</span> token<span style="color: #666666">,</span> Object object<span style="color: #666666">,</span> <span style="color: #B00040">int</span> result<span style="color: #666666">)</span>
+    <span style="color: #666666">{</span>
+        Log<span style="color: #666666">.</span><span style="color: #7D9029">d</span><span style="color: #666666">(</span>TAG<span style="color: #666666">,</span> <span style="color: #BA2121">&quot;Reminder delete complete &quot;</span> <span style="color: #666666">+</span> result<span style="color: #666666">);</span>
     <span style="color: #666666">}</span>
 </pre></div>
 
