@@ -264,7 +264,7 @@ find the first calendar id. A database cursor and the values are
 passed to the <code>onQueryComplete()</code> method.</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #408080; font-style: italic">// onQueryComplete</span>
     <span style="color: #AA22FF">@Override</span>
-    <span style="color: #008000; font-weight: bold">public</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">onQueryComplete</span><span style="color: #666666">(</span><span style="color: #B00040">int</span> token<span style="color: #666666">,</span> Object cookie<span style="color: #666666">,</span> Cursor cursor<span style="color: #666666">)</span>
+    <span style="color: #008000; font-weight: bold">public</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">onQueryComplete</span><span style="color: #666666">(</span><span style="color: #B00040">int</span> token<span style="color: #666666">,</span> Object object<span style="color: #666666">,</span> Cursor cursor<span style="color: #666666">)</span>
     <span style="color: #666666">{</span>
         <span style="color: #408080; font-style: italic">// Use the cursor to move through the returned records</span>
         cursor<span style="color: #666666">.</span><span style="color: #7D9029">moveToFirst</span><span style="color: #666666">();</span>
@@ -272,7 +272,7 @@ passed to the <code>onQueryComplete()</code> method.</p>
         <span style="color: #408080; font-style: italic">// Get the field values</span>
         <span style="color: #B00040">long</span> calendarID <span style="color: #666666">=</span> cursor<span style="color: #666666">.</span><span style="color: #7D9029">getLong</span><span style="color: #666666">(</span>CALENDAR_ID_INDEX<span style="color: #666666">);</span>
 
-        ContentValues values <span style="color: #666666">=</span> <span style="color: #666666">(</span>ContentValues<span style="color: #666666">)</span> cookie<span style="color: #666666">;</span>
+        ContentValues values <span style="color: #666666">=</span> <span style="color: #666666">(</span>ContentValues<span style="color: #666666">)</span> object<span style="color: #666666">;</span>
         values<span style="color: #666666">.</span><span style="color: #7D9029">put</span><span style="color: #666666">(</span>Events<span style="color: #666666">.</span><span style="color: #7D9029">CALENDAR_ID</span><span style="color: #666666">,</span> calendarID<span style="color: #666666">);</span>
         values<span style="color: #666666">.</span><span style="color: #7D9029">put</span><span style="color: #666666">(</span>Events<span style="color: #666666">.</span><span style="color: #7D9029">EVENT_TIMEZONE</span><span style="color: #666666">,</span>
                    TimeZone<span style="color: #666666">.</span><span style="color: #7D9029">getDefault</span><span style="color: #666666">().</span><span style="color: #7D9029">getDisplayName</span><span style="color: #666666">());</span>
@@ -289,7 +289,7 @@ asynchronously and the result is passed to the <code>onInsertComplete()</code>
 method.</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #408080; font-style: italic">// onInsertComplete</span>
     <span style="color: #AA22FF">@Override</span>
-    <span style="color: #008000; font-weight: bold">public</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">onInsertComplete</span><span style="color: #666666">(</span><span style="color: #B00040">int</span> token<span style="color: #666666">,</span> Object cookie<span style="color: #666666">,</span> Uri uri<span style="color: #666666">)</span>
+    <span style="color: #008000; font-weight: bold">public</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">onInsertComplete</span><span style="color: #666666">(</span><span style="color: #B00040">int</span> token<span style="color: #666666">,</span> Object object<span style="color: #666666">,</span> Uri uri<span style="color: #666666">)</span>
     <span style="color: #666666">{</span>
         Log<span style="color: #666666">.</span><span style="color: #7D9029">d</span><span style="color: #666666">(</span>TAG<span style="color: #666666">,</span> <span style="color: #BA2121">&quot;Event insert complete &quot;</span> <span style="color: #666666">+</span> uri<span style="color: #666666">.</span><span style="color: #7D9029">getLastPathSegment</span><span style="color: #666666">());</span>
 
