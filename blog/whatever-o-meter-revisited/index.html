@@ -34,7 +34,7 @@ intro: Please answer the following questions carefully and truthfully.">
 
 
 <meta itemprop="dateModified" content="2017-08-24T11:47:00&#43;01:00" />
-<meta itemprop="wordCount" content="540">
+<meta itemprop="wordCount" content="544">
 
 
 
@@ -224,7 +224,8 @@ them are optional, and some of the arrays can have bits missing. PHP
 just coped with that, anything not defined just becomes <code>null</code>. In
 Hugo I had to make a great deal of use of <code>default</code> and <code>slice</code> to
 create default values.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>  &lt;<span style="color: #008000; font-weight: bold">div</span> <span style="color: #7D9029">id</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;first&quot;</span> <span style="color: #7D9029">style</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;text-align: center&quot;</span>&gt;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>{{ with .Page.Params }}
+  &lt;<span style="color: #008000; font-weight: bold">div</span> <span style="color: #7D9029">id</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;first&quot;</span> <span style="color: #7D9029">style</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;text-align: center&quot;</span>&gt;
     &lt;<span style="color: #008000; font-weight: bold">h4</span>&gt;{{ .intro }}&lt;/<span style="color: #008000; font-weight: bold">h4</span>&gt;
     &lt;<span style="color: #008000; font-weight: bold">input</span> <span style="color: #7D9029">type</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;button&quot;</span> <span style="color: #7D9029">value</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;Start&quot;</span> <span style="color: #7D9029">class</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;start&quot;</span> <span style="color: #7D9029">id</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;start&quot;</span> /&gt;
   &lt;/<span style="color: #008000; font-weight: bold">div</span>&gt;
