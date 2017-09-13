@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2017 Bill Farmer</copyright>
-    <lastBuildDate>Tue, 05 Sep 2017 14:54:25 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 13 Sep 2017 11:30:00 +0000</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Getting Related Content working</title>
+      <link>https://billthefarmer.github.io/blog/getting-related-content-working/</link>
+      <pubDate>Wed, 13 Sep 2017 11:30:00 +0000</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/getting-related-content-working/</guid>
+      <description>The latest release of Hugo includes Related Content, which I thought would be nice to add to my blog. However the docs, although they show you how to set it up, don&amp;rsquo;t explain how it works. To find that out, I had to look at the various threads on the Hugo forums.
+There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:</description>
+    </item>
     
     <item>
       <title>Adding a calendar event in android</title>

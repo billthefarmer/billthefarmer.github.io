@@ -6,19 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:title" content="Raspberry Pi Wifi" />
-<meta property="og:description" content="When I got my Pi some months ago I bought a wifi adapter for it, as you do. But I couldn&#8217;t get it to work reliably in Raspbian, and I didn&#8217;t even try in Arch Linux. So I tested the adapter on my windoze box, and it worked just fine, and I tried it with Linux and it worked just fine, so I put it in the &#8216;too hard&#8217; box." />
+<meta property="og:title" content="Getting Related Content working" />
+<meta property="og:description" content="The latest release of Hugo includes Related Content, which I thought would be nice to add to my blog. However the docs, although they show you how to set it up, don&rsquo;t explain how it works. To find that out, I had to look at the various threads on the Hugo forums.
+There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://billthefarmer.github.io/blog/raspberry-pi-wifi/" />
+<meta property="og:url" content="https://billthefarmer.github.io/blog/getting-related-content-working/" />
 
 
 
-<meta property="article:published_time" content="2013-12-21T20:16:37&#43;00:00"/>
-<meta property="article:modified_time" content="2013-12-21T20:16:37&#43;00:00"/>
-
-
-
-
+<meta property="article:published_time" content="2017-09-13T11:30:00&#43;00:00"/>
+<meta property="article:modified_time" content="2017-09-13T11:30:00&#43;00:00"/>
 
 
 
@@ -27,19 +24,25 @@
 
 
 
-<meta itemprop="name" content="Raspberry Pi Wifi">
-<meta itemprop="description" content="When I got my Pi some months ago I bought a wifi adapter for it, as you do. But I couldn&#8217;t get it to work reliably in Raspbian, and I didn&#8217;t even try in Arch Linux. So I tested the adapter on my windoze box, and it worked just fine, and I tried it with Linux and it worked just fine, so I put it in the &#8216;too hard&#8217; box.">
 
 
-<meta itemprop="dateModified" content="2013-12-21T20:16:37&#43;00:00" />
-<meta itemprop="wordCount" content="290">
+
+
+<meta itemprop="name" content="Getting Related Content working">
+<meta itemprop="description" content="The latest release of Hugo includes Related Content, which I thought would be nice to add to my blog. However the docs, although they show you how to set it up, don&rsquo;t explain how it works. To find that out, I had to look at the various threads on the Hugo forums.
+There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:">
+
+
+<meta itemprop="dateModified" content="2017-09-13T11:30:00&#43;00:00" />
+<meta itemprop="wordCount" content="234">
 
 
 
 <meta itemprop="keywords" content="" />
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Raspberry Pi Wifi"/>
-<meta name="twitter:description" content="When I got my Pi some months ago I bought a wifi adapter for it, as you do. But I couldn&#8217;t get it to work reliably in Raspbian, and I didn&#8217;t even try in Arch Linux. So I tested the adapter on my windoze box, and it worked just fine, and I tried it with Linux and it worked just fine, so I put it in the &#8216;too hard&#8217; box."/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Getting Related Content working"/>
+<meta name="twitter:description" content="The latest release of Hugo includes Related Content, which I thought would be nice to add to my blog. However the docs, although they show you how to set it up, don&rsquo;t explain how it works. To find that out, I had to look at the various threads on the Hugo forums.
+There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:"/>
 
 
 
@@ -50,8 +53,8 @@
 
 
     <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/raspberry-pi-wifi/">
-    <title>Raspberry Pi Wifi | Bill Farmer</title>
+    <link rel="canonical" href="https://billthefarmer.github.io/blog/getting-related-content-working/">
+    <title>Getting Related Content working | Bill Farmer</title>
 
     <!-- CSS -->
     <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
@@ -163,12 +166,12 @@
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/raspberry-pi-wifi/">Raspberry Pi Wifi</a>
+      <a href="https://billthefarmer.github.io/blog/getting-related-content-working/">Getting Related Content working</a>
     </h3>
     <div class="callout small">
       <small>
-        <time datetime="2013-12-21T20:16:37Z">
-          Sat Dec 21, 2013
+        <time datetime="2017-09-13T11:30:00Z">
+          Wed Sep 13, 2017
         </time> by Bill Farmer.
         Categories: 
   
@@ -185,58 +188,81 @@
       </small>
     </div>
     <p>
-      
+      <p>The latest release of <a href="https://github.com/gohugoio/hugo/releases">Hugo</a> includes <a href="http://gohugo.io/content-management/related">Related Content</a>, which I
+thought would be nice to add to my blog. However the docs, although
+they show you how to set it up, don&rsquo;t explain how it works. To find
+that out, I had to look at the various threads on the
+<a href="https://discourse.gohugo.io">Hugo forums</a>.</p>
 
-<p>When I got my Pi some months ago I bought a wifi adapter for it, as you do. But I couldn&#8217;t get it to work reliably in Raspbian, and I didn&#8217;t even try in Arch Linux. So I tested the adapter on my windoze box, and it worked just fine, and I tried it with Linux and it worked just fine, so I put it in the &#8216;too hard&#8217; box.</p>
-
-<p>I dug it out again the other day because I wanted to hear just how good the <a href="https://github.com/billthefarmer/mididriver">Sonivox EAS library</a> I ported to the Pi sounded when hooked up to the hifi with some decent speakers. After extensive googling, and putting together various bits and pieces of info from various blog posts, and wikis, I came up with sort-of working configs for Raspbian and Arch Linux.</p>
-
-<h2 id="raspbian">Raspbian</h2>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>/etc/network/interfaces:
-    
-    auto lo
-    iface lo inet loopback
-    
-    iface eth0 inet dhcp
-    
-    auto wlan0
-    iface wlan0 inet dhcp
-    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+<p>There are four parts - you need to create a new partial template in
+<code>layouts/partials/related.html</code> containing something like this:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+&lt;<span style="color: #008000; font-weight: bold">hr</span>&gt;
+&lt;<span style="color: #008000; font-weight: bold">h3</span>&gt;See Also&lt;/<span style="color: #008000; font-weight: bold">h3</span>&gt;
+&lt;<span style="color: #008000; font-weight: bold">ul</span>&gt;
+  {{ range . }}
+  &lt;<span style="color: #008000; font-weight: bold">li</span>&gt;&lt;<span style="color: #008000; font-weight: bold">a</span> <span style="color: #7D9029">href</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;{{ .RelPermalink }}&quot;</span>&gt;{{ .Title }}&lt;/<span style="color: #008000; font-weight: bold">a</span>&gt;&lt;/<span style="color: #008000; font-weight: bold">li</span>&gt;
+  {{ end }}
+&lt;/<span style="color: #008000; font-weight: bold">ul</span>&gt;
+{{ end }}
 </pre></div>
 
-<p>You can use <code>wpa_passphrase</code> to generate the <code>wpa_supplicant.conf</code> file:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ wpa_passphrase ssid passphrase
-
-    <span style="color: #19177C">network</span><span style="color: #666666">={</span>
-            <span style="color: #19177C">ssid</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;ssid&quot;</span>
-            <span style="color: #408080; font-style: italic">#psk=&quot;passphrase&quot;</span>
-            <span style="color: #19177C">psk</span><span style="color: #666666">=</span>41167ee7545cb4d9b1c7d7e113cfc1f0ac367b020141c46c9418965c1926fd80
-    <span style="color: #666666">}</span>
+<p>You need to add a reference to your new partial template in your single page template in <code>layouts/_default/single.html</code> possibly near the end:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    {{ partial &quot;related&quot; . }}
 </pre></div>
 
-<p>Redirect the output to the <code>wpa_supplicant.conf</code> file. I found this in the Arch Linux wiki. The wpa-conf and wpa-roam stanzas do not appear to be officially documented anywhere I can find.</p>
-
-<h3 id="raspbian-jessie">Raspbian Jessie</h3>
-
-<p>If your wifi router has a WPS button, press it. Run <code>wpa_cli</code> on the Pi and enter the following commands:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    &gt; wps_pbc
-    &gt; quit
+<p>You need to add some configuration options to your config file:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>related:
+  threshold: 10
+  toLower: true
+  indices:
+    - name: keywords
+      weight: 150
+    - name: date
+      pattern: <span style="color: #BA2121">&#39;2006&#39;</span>
+      weight: 10
 </pre></div>
 
-<p>This should automatically pick up the ssid and key, connect, and set up <code>wpa_supplicant.conf</code> so that the Pi will reconnect when rebooted.</p>
-
-<h2 id="arch-linux">Arch Linux</h2>
-
-<p>Use <code>wifi-menu</code> to create a <code>netctl</code> profile. Use <code>netctl list</code> to list profiles and <code>netctl</code> to enable and start your profile.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    sudo netctl <span style="color: #008000">enable</span> wlan0-yourSSIDhere
-    sudo netctl start wlan0-yourSSIDhere
+<p>You need to add some keywords to the front matter of your posts. I
+tried tags initially, but couldn&rsquo;t get it to work, so I tried
+keywords:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #0000FF; font-weight: bold">---</span>
+title: Handling run time changes in Android
+author: Bill Farmer
+type: post
+date: 2017-01-08T18:49:31+00:00
+url: /handling-run-time-changes-in-android/
+categories:
+  - Hacking
+keywords:
+  - android
+  - configuration
+  - fragment
+  - singleton
+<span style="color: #0000FF; font-weight: bold">---</span>
 </pre></div>
 
-<p>This appears to work just fine.</p>
+<p>You then have to go through all your posts and add keywords to the
+front matter.</p>
 
     </p>
     
     
+
+<hr>
+<h3>See Also</h3>
+<ul>
+  
+  <li><a href="/blog/whatever-o-meter-revisited/">Whatever-o-meter revisited</a></li>
+  
+  <li><a href="/blog/migrating-blog-from-wordpress/">Migrating this blog from Wordpress</a></li>
+  
+  <li><a href="/blog/resolving-content-uris-in-android/">Resolving content uris in android</a></li>
+  
+  <li><a href="/blog/whatever-o-meter/">Whatever-o-meter</a></li>
+  
+</ul>
 
 
       <hr>
@@ -327,7 +353,7 @@
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/raspberry-pi-wifi/#">Back to top</a>
+          <a href="https://billthefarmer.github.io/blog/getting-related-content-working/#">Back to top</a>
         </p>
       </div>
     </footer>

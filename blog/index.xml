@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2017 Bill Farmer</copyright>
-    <lastBuildDate>Tue, 05 Sep 2017 14:54:25 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 13 Sep 2017 11:30:00 +0000</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Getting Related Content working</title>
+      <link>https://billthefarmer.github.io/blog/getting-related-content-working/</link>
+      <pubDate>Wed, 13 Sep 2017 11:30:00 +0000</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/getting-related-content-working/</guid>
+      <description>The latest release of Hugo includes Related Content, which I thought would be nice to add to my blog. However the docs, although they show you how to set it up, don&amp;rsquo;t explain how it works. To find that out, I had to look at the various threads on the Hugo forums.
+There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:</description>
+    </item>
     
     <item>
       <title>Adding a calendar event in android</title>
@@ -217,7 +227,7 @@ I used gnuparted to copy the partition from one disk to another. The standard me
       <pubDate>Fri, 07 Aug 2015 09:32:42 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/index/</guid>
-      <description>RecipesCatalan slow cooked chickenChorizo Egg and Tomato Toasted SandwichClementine CakeCoarse RatatouilleDoug&amp;#8217;s Seafood RisottoFabada AsturianaFaggots and Peas with Onion GravyFried RiceLeek and Potato SoupMexican BreakfastPan fried lamb&amp;#8217;s liver, bacon and chorizoPasta PicanteSausages with Green LentilsShoreham fish chowderSlow cooked lambSlow cooked ox cheekSpanish FrittataSpanish omeletteStuffed PeppersTruly Evil Onion GravyUnobtainiumVegetable Soup PlusVegetables cooked in olive oilVenison and Chorizo CasseroleWhole Broad Beans in Olive OilHackingAdding a calendar event in androidBuild Mac OSX apps using command line toolsC++Concurrency, Threads, Semaphores and MutexesDownload streamed videoFast Fourier TransformHandlers in AndroidHandling run time changes in AndroidHaskellInstall OSX El Capitan on a PC (MBR)Java CollectionsMigrating this blog from WordpressMove Linux Mint Root PartitionPythonRaspberry Pi WifiRead iBook books on an Android tabletResolving content uris in androidResurrecting a netbook as a web serverSearch Engine Optimisation (SEO)SlimStatTransfer contacts from iPhone to AndroidUpgrading WordPressUpgrading a Moto GUpgrading to Windows 10Using Emacs as an IDEWhatever-o-meterWhatever-o-meter revisitedDiyReplacing micro-bore radiators</description>
+      <description>RecipesCatalan slow cooked chickenChorizo Egg and Tomato Toasted SandwichClementine CakeCoarse RatatouilleDoug&amp;#8217;s Seafood RisottoFabada AsturianaFaggots and Peas with Onion GravyFried RiceLeek and Potato SoupMexican BreakfastPan fried lamb&amp;#8217;s liver, bacon and chorizoPasta PicanteSausages with Green LentilsShoreham fish chowderSlow cooked lambSlow cooked ox cheekSpanish FrittataSpanish omeletteStuffed PeppersTruly Evil Onion GravyUnobtainiumVegetable Soup PlusVegetables cooked in olive oilVenison and Chorizo CasseroleWhole Broad Beans in Olive OilHackingAdding a calendar event in androidBuild Mac OSX apps using command line toolsC++Concurrency, Threads, Semaphores and MutexesDownload streamed videoFast Fourier TransformGetting Related Content workingHandlers in AndroidHandling run time changes in AndroidHaskellInstall OSX El Capitan on a PC (MBR)Java CollectionsMigrating this blog from WordpressMove Linux Mint Root PartitionPythonRaspberry Pi WifiRead iBook books on an Android tabletResolving content uris in androidResurrecting a netbook as a web serverSearch Engine Optimisation (SEO)SlimStatTransfer contacts from iPhone to AndroidUpgrading WordPressUpgrading a Moto GUpgrading to Windows 10Using Emacs as an IDEWhatever-o-meterWhatever-o-meter revisitedDiyReplacing micro-bore radiators</description>
     </item>
     
     <item>
