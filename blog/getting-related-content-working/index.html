@@ -34,7 +34,7 @@ There are four parts - you need to create a new partial template in layouts/part
 
 
 <meta itemprop="dateModified" content="2017-09-13T11:30:00&#43;00:00" />
-<meta itemprop="wordCount" content="234">
+<meta itemprop="wordCount" content="228">
 
 
 
@@ -202,7 +202,7 @@ that out, I had to look at the various threads on the
 &lt;<span style="color: #008000; font-weight: bold">h3</span>&gt;See Also&lt;/<span style="color: #008000; font-weight: bold">h3</span>&gt;
 &lt;<span style="color: #008000; font-weight: bold">ul</span>&gt;
   {{ range . }}
-  &lt;<span style="color: #008000; font-weight: bold">li</span>&gt;&lt;<span style="color: #008000; font-weight: bold">a</span> <span style="color: #7D9029">href</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;{{ .RelPermalink }}&quot;</span>&gt;{{ .Title }}&lt;/<span style="color: #008000; font-weight: bold">a</span>&gt;&lt;/<span style="color: #008000; font-weight: bold">li</span>&gt;
+  &lt;<span style="color: #008000; font-weight: bold">li</span>&gt;&lt;<span style="color: #008000; font-weight: bold">a</span> <span style="color: #7D9029">href</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;{{ .RelPermalink }}&quot;</span>&gt;{{ safeHTML .Title }}&lt;/<span style="color: #008000; font-weight: bold">a</span>&gt;&lt;/<span style="color: #008000; font-weight: bold">li</span>&gt;
   {{ end }}
 &lt;/<span style="color: #008000; font-weight: bold">ul</span>&gt;
 {{ end }}
@@ -219,9 +219,6 @@ that out, I had to look at the various threads on the
   indices:
     - name: keywords
       weight: 150
-    - name: date
-      pattern: <span style="color: #BA2121">&#39;2006&#39;</span>
-      weight: 10
 </pre></div>
 
 <p>You need to add some keywords to the front matter of your posts. I
