@@ -49,7 +49,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.27" />
+<meta name="generator" content="Hugo 0.27.1" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -189,38 +189,38 @@
     </div>
     <p>
       <p>If you write an android app that handles images or any other sort of file your app may be required to deal with &#8216;content&#8217; uris (<code>content://</code>). There is a very useful utility which resolves these into &#8216;file&#8217; uris (<code>file:///</code>) <a href="https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ipaulpro/afilechooser/utils/FileUtils.java">FileUtils.java</a>. This contains one external reference to <a href="https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ianhanniballake/localstorage/LocalStorageProvider.java">LocalStorageProvider</a>, which can be resolved by replacing the reference with a string.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #408080; font-style: italic">// import com.ianhanniballake.localstorage.LocalStorageProvider;</span>
-    <span style="color: #408080; font-style: italic">// ...</span>
-        <span style="color: #408080; font-style: italic">/**</span>
-<span style="color: #408080; font-style: italic">         * @param uri The Uri to check.</span>
-<span style="color: #408080; font-style: italic">         * @return Whether the Uri authority is {@link LocalStorageProvider}.</span>
-<span style="color: #408080; font-style: italic">         * @author paulburke</span>
-<span style="color: #408080; font-style: italic">         */</span>
-        <span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">static</span> <span style="color: #B00040">boolean</span> <span style="color: #0000FF">isLocalStorageDocument</span><span style="color: #666666">(</span>Uri uri<span style="color: #666666">)</span> <span style="color: #666666">{</span>
-            <span style="color: #408080; font-style: italic">// return LocalStorageProvider.AUTHORITY.equals(uri.getAuthority());</span>
-            <span style="color: #008000; font-weight: bold">return</span> <span style="color: #BA2121">&quot;com.ianhanniballake.localstorage.documents&quot;</span>
-                <span style="color: #666666">.</span><span style="color: #7D9029">equals</span><span style="color: #666666">(</span>uri<span style="color: #666666">.</span><span style="color: #7D9029">getAuthority</span><span style="color: #666666">());</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #008800; font-style: italic">// import com.ianhanniballake.localstorage.LocalStorageProvider;</span>
+    <span style="color: #008800; font-style: italic">// ...</span>
+        <span style="color: #008800; font-style: italic">/**</span>
+<span style="color: #008800; font-style: italic">         * @param uri The Uri to check.</span>
+<span style="color: #008800; font-style: italic">         * @return Whether the Uri authority is {@link LocalStorageProvider}.</span>
+<span style="color: #008800; font-style: italic">         * @author paulburke</span>
+<span style="color: #008800; font-style: italic">         */</span>
+        <span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">static</span> <span style="color: #00BB00; font-weight: bold">boolean</span> <span style="color: #00A000">isLocalStorageDocument</span><span style="color: #666666">(</span>Uri uri<span style="color: #666666">)</span> <span style="color: #666666">{</span>
+            <span style="color: #008800; font-style: italic">// return LocalStorageProvider.AUTHORITY.equals(uri.getAuthority());</span>
+            <span style="color: #AA22FF; font-weight: bold">return</span> <span style="color: #BB4444">&quot;com.ianhanniballake.localstorage.documents&quot;</span>
+                <span style="color: #666666">.</span><span style="color: #BB4444">equals</span><span style="color: #666666">(</span>uri<span style="color: #666666">.</span><span style="color: #BB4444">getAuthority</span><span style="color: #666666">());</span>
     
         <span style="color: #666666">}</span>
 </pre></div>
 
 <p>Alternatively, you could just comment out this function and references to it. Having done that, you can then resolve &#8216;content&#8217; uris</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">final</span> <span style="color: #008000; font-weight: bold">static</span> String CONTENT <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;content&quot;</span><span style="color: #666666">;</span>
-    <span style="color: #408080; font-style: italic">// ...</span>
-            <span style="color: #008000; font-weight: bold">if</span> <span style="color: #666666">(</span>uri<span style="color: #666666">.</span><span style="color: #7D9029">getScheme</span><span style="color: #666666">().</span><span style="color: #7D9029">equalsIgnoreCase</span><span style="color: #666666">(</span>CONTENT<span style="color: #666666">))</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">final</span> <span style="color: #AA22FF; font-weight: bold">static</span> String CONTENT <span style="color: #666666">=</span> <span style="color: #BB4444">&quot;content&quot;</span><span style="color: #666666">;</span>
+    <span style="color: #008800; font-style: italic">// ...</span>
+            <span style="color: #AA22FF; font-weight: bold">if</span> <span style="color: #666666">(</span>uri<span style="color: #666666">.</span><span style="color: #BB4444">getScheme</span><span style="color: #666666">().</span><span style="color: #BB4444">equalsIgnoreCase</span><span style="color: #666666">(</span>CONTENT<span style="color: #666666">))</span>
                 uri <span style="color: #666666">=</span> resolveContent<span style="color: #666666">(</span>uri<span style="color: #666666">);</span>
-    <span style="color: #408080; font-style: italic">// ...</span>
-        <span style="color: #408080; font-style: italic">// resolveContent</span>
-        <span style="color: #008000; font-weight: bold">private</span> Uri <span style="color: #0000FF">resolveContent</span><span style="color: #666666">(</span>Uri uri<span style="color: #666666">)</span>
+    <span style="color: #008800; font-style: italic">// ...</span>
+        <span style="color: #008800; font-style: italic">// resolveContent</span>
+        <span style="color: #AA22FF; font-weight: bold">private</span> Uri <span style="color: #00A000">resolveContent</span><span style="color: #666666">(</span>Uri uri<span style="color: #666666">)</span>
         <span style="color: #666666">{</span>
-            String path <span style="color: #666666">=</span> FileUtils<span style="color: #666666">.</span><span style="color: #7D9029">getPath</span><span style="color: #666666">(</span><span style="color: #008000; font-weight: bold">this</span><span style="color: #666666">,</span> uri<span style="color: #666666">);</span>
-            <span style="color: #008000; font-weight: bold">if</span> <span style="color: #666666">(</span>path <span style="color: #666666">!=</span> <span style="color: #008000; font-weight: bold">null</span><span style="color: #666666">)</span>
+            String path <span style="color: #666666">=</span> FileUtils<span style="color: #666666">.</span><span style="color: #BB4444">getPath</span><span style="color: #666666">(</span><span style="color: #AA22FF; font-weight: bold">this</span><span style="color: #666666">,</span> uri<span style="color: #666666">);</span>
+            <span style="color: #AA22FF; font-weight: bold">if</span> <span style="color: #666666">(</span>path <span style="color: #666666">!=</span> <span style="color: #AA22FF; font-weight: bold">null</span><span style="color: #666666">)</span>
             <span style="color: #666666">{</span>
-                File file <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">new</span> File<span style="color: #666666">(</span>path<span style="color: #666666">);</span>
-                <span style="color: #008000; font-weight: bold">if</span> <span style="color: #666666">(</span>file<span style="color: #666666">.</span><span style="color: #7D9029">canRead</span><span style="color: #666666">())</span>
-                    uri <span style="color: #666666">=</span> Uri<span style="color: #666666">.</span><span style="color: #7D9029">fromFile</span><span style="color: #666666">(</span>file<span style="color: #666666">);</span>
+                File file <span style="color: #666666">=</span> <span style="color: #AA22FF; font-weight: bold">new</span> File<span style="color: #666666">(</span>path<span style="color: #666666">);</span>
+                <span style="color: #AA22FF; font-weight: bold">if</span> <span style="color: #666666">(</span>file<span style="color: #666666">.</span><span style="color: #BB4444">canRead</span><span style="color: #666666">())</span>
+                    uri <span style="color: #666666">=</span> Uri<span style="color: #666666">.</span><span style="color: #BB4444">fromFile</span><span style="color: #666666">(</span>file<span style="color: #666666">);</span>
             <span style="color: #666666">}</span>
-            <span style="color: #008000; font-weight: bold">return</span> uri<span style="color: #666666">;</span>
+            <span style="color: #AA22FF; font-weight: bold">return</span> uri<span style="color: #666666">;</span>
         <span style="color: #666666">}</span>
 </pre></div>
 

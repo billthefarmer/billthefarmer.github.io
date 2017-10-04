@@ -52,7 +52,7 @@ You can try it out in your browser: http://tryhaskell.org
 
 
 
-<meta name="generator" content="Hugo 0.27" />
+<meta name="generator" content="Hugo 0.27.1" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -196,47 +196,47 @@ You can try it out in your browser: http://tryhaskell.org
 <p>I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I&#8217;s give it a go and see how I got on.</p>
 
 <p>You can try it out in your browser: <a href="http://tryhaskell.org">http://tryhaskell.org</a></p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    λ <span style="color: #008000; font-weight: bold">let</span> factorial n <span style="color: #AA22FF; font-weight: bold">=</span> product [<span style="color: #666666">1..</span>n] <span style="color: #008000; font-weight: bold">in</span> factorial <span style="color: #666666">99</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    λ <span style="color: #AA22FF; font-weight: bold">let</span> factorial n <span style="color: #AA22FF; font-weight: bold">=</span> product [<span style="color: #666666">1..</span>n] <span style="color: #AA22FF; font-weight: bold">in</span> factorial <span style="color: #666666">99</span>
     <span style="color: #666666">9332621544394415268169923885626670049071596826438162146859</span>
     <span style="color: #666666">2963895217599993229915608941463976156518286253697920827223</span>
     <span style="color: #666666">7582511852109168640000000000000000000000</span>
-    <span style="color: #AA22FF; font-weight: bold">::</span> (<span style="color: #B00040">Enum</span> a, <span style="color: #B00040">Num</span> a) <span style="color: #AA22FF; font-weight: bold">=&gt;</span> a
+    <span style="color: #AA22FF; font-weight: bold">::</span> (<span style="color: #00BB00; font-weight: bold">Enum</span> a, <span style="color: #00BB00; font-weight: bold">Num</span> a) <span style="color: #AA22FF; font-weight: bold">=&gt;</span> a
     λ  
 </pre></div>
 
 <p>Pretty impressive! So I thought I&#8217;d try a simple web application.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">Network.CGI</span>
-    cgiMain <span style="color: #AA22FF; font-weight: bold">::</span> <span style="color: #B00040">CGI</span> <span style="color: #B00040">CGIResult</span>
-    cgiMain <span style="color: #AA22FF; font-weight: bold">=</span> <span style="color: #008000; font-weight: bold">do</span>
-        setHeader <span style="color: #BA2121">&quot;Content-Type&quot;</span> <span style="color: #BA2121">&quot;text/html; charset=UTF-8&quot;</span>
-        output <span style="color: #BA2121">&quot;Hello World!</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>
-    main <span style="color: #AA22FF; font-weight: bold">::</span> <span style="color: #B00040">IO</span> <span style="color: #008000">()</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #AA22FF; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">Network.CGI</span>
+    cgiMain <span style="color: #AA22FF; font-weight: bold">::</span> <span style="color: #00BB00; font-weight: bold">CGI</span> <span style="color: #00BB00; font-weight: bold">CGIResult</span>
+    cgiMain <span style="color: #AA22FF; font-weight: bold">=</span> <span style="color: #AA22FF; font-weight: bold">do</span>
+        setHeader <span style="color: #BB4444">&quot;Content-Type&quot;</span> <span style="color: #BB4444">&quot;text/html; charset=UTF-8&quot;</span>
+        output <span style="color: #BB4444">&quot;Hello World!</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BB4444">&quot;</span>
+    main <span style="color: #AA22FF; font-weight: bold">::</span> <span style="color: #00BB00; font-weight: bold">IO</span> <span style="color: #AA22FF">()</span>
     main <span style="color: #AA22FF; font-weight: bold">=</span> runCGI (handleErrors cgiMain)
 </pre></div>
 
 <p>This seemed to work, so I tried a graphical GTK app.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">Graphics.UI.Gtk</span>
-    main <span style="color: #AA22FF; font-weight: bold">::</span> <span style="color: #B00040">IO</span> <span style="color: #008000">()</span>
-    main <span style="color: #AA22FF; font-weight: bold">=</span> <span style="color: #008000; font-weight: bold">do</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #AA22FF; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">Graphics.UI.Gtk</span>
+    main <span style="color: #AA22FF; font-weight: bold">::</span> <span style="color: #00BB00; font-weight: bold">IO</span> <span style="color: #AA22FF">()</span>
+    main <span style="color: #AA22FF; font-weight: bold">=</span> <span style="color: #AA22FF; font-weight: bold">do</span>
         initGUI
         window <span style="color: #AA22FF; font-weight: bold">&lt;-</span> windowNew
-        vbox <span style="color: #AA22FF; font-weight: bold">&lt;-</span> vBoxNew <span style="color: #B00040">False</span> <span style="color: #666666">10</span>
-        hbox <span style="color: #AA22FF; font-weight: bold">&lt;-</span> hBoxNew <span style="color: #B00040">False</span> <span style="color: #666666">0</span>
+        vbox <span style="color: #AA22FF; font-weight: bold">&lt;-</span> vBoxNew <span style="color: #00BB00; font-weight: bold">False</span> <span style="color: #666666">10</span>
+        hbox <span style="color: #AA22FF; font-weight: bold">&lt;-</span> hBoxNew <span style="color: #00BB00; font-weight: bold">False</span> <span style="color: #666666">0</span>
         button <span style="color: #AA22FF; font-weight: bold">&lt;-</span> buttonNew
-        pixbuf <span style="color: #AA22FF; font-weight: bold">&lt;-</span> pixbufNewFromFileAtSize <span style="color: #BA2121">&quot;941118.jpg&quot;</span> <span style="color: #666666">480</span> <span style="color: #666666">360</span>
+        pixbuf <span style="color: #AA22FF; font-weight: bold">&lt;-</span> pixbufNewFromFileAtSize <span style="color: #BB4444">&quot;941118.jpg&quot;</span> <span style="color: #666666">480</span> <span style="color: #666666">360</span>
         image <span style="color: #AA22FF; font-weight: bold">&lt;-</span> imageNewFromPixbuf pixbuf
         quit <span style="color: #AA22FF; font-weight: bold">&lt;-</span> buttonNew
-        set window [ containerBorderWidth <span style="color: #B00040">:=</span> <span style="color: #666666">10</span>,
-                     containerChild <span style="color: #B00040">:=</span> vbox ]
-        boxPackStart hbox button <span style="color: #B00040">PackNatural</span> <span style="color: #666666">0</span>
-        boxPackStart vbox hbox <span style="color: #B00040">PackNatural</span> <span style="color: #666666">0</span>
-        boxPackStart vbox image <span style="color: #B00040">PackNatural</span> <span style="color: #666666">0</span>
-        hbox <span style="color: #AA22FF; font-weight: bold">&lt;-</span> hBoxNew <span style="color: #B00040">False</span> <span style="color: #666666">0</span>
-        boxPackEnd hbox quit <span style="color: #B00040">PackNatural</span> <span style="color: #666666">0</span>
-        boxPackEnd vbox hbox <span style="color: #B00040">PackNatural</span> <span style="color: #666666">0</span>
-        set button [ buttonLabel <span style="color: #B00040">:=</span> <span style="color: #BA2121">&quot; Hello World &quot;</span> ]
-        set quit [ buttonLabel <span style="color: #B00040">:=</span> <span style="color: #BA2121">&quot;  Quit  &quot;</span> ]
-        onClicked button (putStrLn <span style="color: #BA2121">&quot;Hello World&quot;</span>)
+        set window [ containerBorderWidth <span style="color: #00BB00; font-weight: bold">:=</span> <span style="color: #666666">10</span>,
+                     containerChild <span style="color: #00BB00; font-weight: bold">:=</span> vbox ]
+        boxPackStart hbox button <span style="color: #00BB00; font-weight: bold">PackNatural</span> <span style="color: #666666">0</span>
+        boxPackStart vbox hbox <span style="color: #00BB00; font-weight: bold">PackNatural</span> <span style="color: #666666">0</span>
+        boxPackStart vbox image <span style="color: #00BB00; font-weight: bold">PackNatural</span> <span style="color: #666666">0</span>
+        hbox <span style="color: #AA22FF; font-weight: bold">&lt;-</span> hBoxNew <span style="color: #00BB00; font-weight: bold">False</span> <span style="color: #666666">0</span>
+        boxPackEnd hbox quit <span style="color: #00BB00; font-weight: bold">PackNatural</span> <span style="color: #666666">0</span>
+        boxPackEnd vbox hbox <span style="color: #00BB00; font-weight: bold">PackNatural</span> <span style="color: #666666">0</span>
+        set button [ buttonLabel <span style="color: #00BB00; font-weight: bold">:=</span> <span style="color: #BB4444">&quot; Hello World &quot;</span> ]
+        set quit [ buttonLabel <span style="color: #00BB00; font-weight: bold">:=</span> <span style="color: #BB4444">&quot;  Quit  &quot;</span> ]
+        onClicked button (putStrLn <span style="color: #BB4444">&quot;Hello World&quot;</span>)
         onClicked quit mainQuit
         onDestroy window mainQuit
         widgetShowAll window
@@ -246,7 +246,7 @@ You can try it out in your browser: http://tryhaskell.org
 <p><img src="images/2014/03/gtk.png" alt="Gtk" /></p>
 
 <p>However I can&#8217;t see any real difference between this and doing it the usual step by step procedural way. I even tried reusing a variable to see if it objected. The other problem is that the documentation is written in mathematical jargon which is difficult to understand. for example, the docs for the constructor function pixbufNewFromFileAtSize is:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    pixbufNewFromFileAtSize <span style="color: #AA22FF; font-weight: bold">::</span> <span style="color: #B00040">String</span> <span style="color: #AA22FF; font-weight: bold">-&gt;</span> <span style="color: #B00040">Int</span> <span style="color: #AA22FF; font-weight: bold">-&gt;</span> <span style="color: #B00040">Int</span> <span style="color: #AA22FF; font-weight: bold">-&gt;</span> <span style="color: #B00040">IO</span> <span style="color: #B00040">Pixbuf</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    pixbufNewFromFileAtSize <span style="color: #AA22FF; font-weight: bold">::</span> <span style="color: #00BB00; font-weight: bold">String</span> <span style="color: #AA22FF; font-weight: bold">-&gt;</span> <span style="color: #00BB00; font-weight: bold">Int</span> <span style="color: #AA22FF; font-weight: bold">-&gt;</span> <span style="color: #00BB00; font-weight: bold">Int</span> <span style="color: #AA22FF; font-weight: bold">-&gt;</span> <span style="color: #00BB00; font-weight: bold">IO</span> <span style="color: #00BB00; font-weight: bold">Pixbuf</span>
 </pre></div>
 
 <p>I interpret that to mean: Take the function pixbufNewFromFileAtSize and give it a string and two integers and after a bit of IO you should get a pixbuf, which is reverse Polish to me.</p>

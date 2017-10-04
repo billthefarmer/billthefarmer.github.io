@@ -52,7 +52,7 @@ I looked for migration tools, and found two:
 
 
 
-<meta name="generator" content="Hugo 0.27" />
+<meta name="generator" content="Hugo 0.27.1" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -264,12 +264,12 @@ theme: theme-hugo-foundation6
 publishDir: d:/billthefarmer.github.io/blog/
 pygmentscodefences: true
 
-<span style="color: #408080; font-style: italic"># number of posts to show on home/category/tag pages (Default: 10)</span>
+<span style="color: #008800; font-style: italic"># number of posts to show on home/category/tag pages (Default: 10)</span>
 paginate: 5
 
 taxonomies:
   category: categories
-  <span style="color: #408080; font-style: italic"># tag: tags</span>
+  <span style="color: #008800; font-style: italic"># tag: tags</span>
 
 permalinks:
   page: /:slug/
@@ -286,8 +286,8 @@ params:
   description: Random thoughts on random subjects
   header_background: images/2013/12/cropped-P1010089.jpg
   sidebar:
-    <span style="color: #408080; font-style: italic"># Optional about block for sidebar (can be Markdown)</span>
-    <span style="color: #408080; font-style: italic"># about: Bill Farmer&#39;s Blog</span>
+    <span style="color: #008800; font-style: italic"># Optional about block for sidebar (can be Markdown)</span>
+    <span style="color: #008800; font-style: italic"># about: Bill Farmer&#39;s Blog</span>
     num_recent_posts: 5
   sharingicons:
     hide: true
@@ -309,18 +309,18 @@ for modifying the blog header, but there is for the page <code>&lt;head&gt;</cod
 I copied the <code>head-custom.html</code> from the <code>layouts/partials</code> folder in
 the theme to <code>layouts/partials</code> in the blog source and modified it
 with some extra styles.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic">&lt;!--</span>
-<span style="color: #408080; font-style: italic">    Create &lt;project-root&gt;/layouts/partials/head-custom.html to</span>
-<span style="color: #408080; font-style: italic">    overwrite this empty template and put custom code into the &lt;head&gt;</span>
-<span style="color: #408080; font-style: italic">    section.</span>
-<span style="color: #408080; font-style: italic">  --&gt;</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008800; font-style: italic">&lt;!--</span>
+<span style="color: #008800; font-style: italic">    Create &lt;project-root&gt;/layouts/partials/head-custom.html to</span>
+<span style="color: #008800; font-style: italic">    overwrite this empty template and put custom code into the &lt;head&gt;</span>
+<span style="color: #008800; font-style: italic">    section.</span>
+<span style="color: #008800; font-style: italic">  --&gt;</span>
 
 &lt;<span style="color: #008000; font-weight: bold">style</span>&gt;
-.<span style="color: #0000FF; font-weight: bold">callout</span>.<span style="color: #0000FF; font-weight: bold">large</span> {
-    <span style="color: #008000; font-weight: bold">background-image</span>: <span style="color: #008000">url</span>(<span style="color: #008000">{{ $.Site.Params.header_background }}</span>);
-    <span style="color: #008000; font-weight: bold">background-size</span>: <span style="color: #008000; font-weight: bold">cover</span>;
-    <span style="color: #008000; font-weight: bold">background-position</span>: <span style="color: #008000; font-weight: bold">center</span> <span style="color: #008000; font-weight: bold">bottom</span>;
-    <span style="color: #008000; font-weight: bold">background-repeat</span>: <span style="color: #008000; font-weight: bold">no-repeat</span>;
+.<span style="color: #0000FF">callout</span>.<span style="color: #0000FF">large</span> {
+    <span style="color: #AA22FF; font-weight: bold">background-image</span>: <span style="color: #AA22FF">url</span>(<span style="color: #008000">{{ $.Site.Params.header_background }}</span>);
+    <span style="color: #AA22FF; font-weight: bold">background-size</span>: <span style="color: #AA22FF; font-weight: bold">cover</span>;
+    <span style="color: #AA22FF; font-weight: bold">background-position</span>: <span style="color: #AA22FF; font-weight: bold">center</span> <span style="color: #AA22FF; font-weight: bold">bottom</span>;
+    <span style="color: #AA22FF; font-weight: bold">background-repeat</span>: <span style="color: #AA22FF; font-weight: bold">no-repeat</span>;
 }
 &lt;/<span style="color: #008000; font-weight: bold">style</span>&gt;
 </pre></div>
@@ -347,13 +347,13 @@ list of blog pages.</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>&lt;<span style="color: #008000; font-weight: bold">section</span>&gt;
   &lt;<span style="color: #008000; font-weight: bold">ul</span>&gt;
     {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
-      &lt;<span style="color: #008000; font-weight: bold">li</span>&gt;&lt;<span style="color: #008000; font-weight: bold">a</span> <span style="color: #7D9029">href</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;{{ &quot;</span><span style="border: 1px solid #FF0000">/&quot;</span> <span style="border: 1px solid #FF0000">|</span> <span style="color: #7D9029">relLangURL</span><span style="border: 1px solid #FF0000">}}{{</span> <span style="border: 1px solid #FF0000">$</span><span style="color: #7D9029">taxonomyname</span> <span style="border: 1px solid #FF0000">|</span> <span style="color: #7D9029">urlize</span> <span style="border: 1px solid #FF0000">}}&quot;</span>&gt;{{ $taxonomyname }}&lt;/<span style="color: #008000; font-weight: bold">a</span>&gt;
+      &lt;<span style="color: #008000; font-weight: bold">li</span>&gt;&lt;<span style="color: #008000; font-weight: bold">a</span> <span style="color: #BB4444">href</span><span style="color: #666666">=</span><span style="color: #BB4444">&quot;{{ &quot;</span><span style="border: 1px solid #FF0000">/&quot;</span> <span style="border: 1px solid #FF0000">|</span> <span style="color: #BB4444">relLangURL</span><span style="border: 1px solid #FF0000">}}{{</span> <span style="border: 1px solid #FF0000">$</span><span style="color: #BB4444">taxonomyname</span> <span style="border: 1px solid #FF0000">|</span> <span style="color: #BB4444">urlize</span> <span style="border: 1px solid #FF0000">}}&quot;</span>&gt;{{ $taxonomyname }}&lt;/<span style="color: #008000; font-weight: bold">a</span>&gt;
         &lt;<span style="color: #008000; font-weight: bold">ul</span>&gt;
           {{ range $key, $value := $taxonomy }}
           &lt;<span style="color: #008000; font-weight: bold">li</span>&gt; {{ $key }} &lt;/<span style="color: #008000; font-weight: bold">li</span>&gt;
                 &lt;<span style="color: #008000; font-weight: bold">ul</span>&gt;
                 {{ range $value.Pages }}
-                    &lt;<span style="color: #008000; font-weight: bold">li</span>&gt;&lt;<span style="color: #008000; font-weight: bold">a</span> <span style="color: #7D9029">href</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;{{ .Permalink}}&quot;</span>&gt; {{ .LinkTitle }} &lt;/<span style="color: #008000; font-weight: bold">a</span>&gt; &lt;/<span style="color: #008000; font-weight: bold">li</span>&gt;
+                    &lt;<span style="color: #008000; font-weight: bold">li</span>&gt;&lt;<span style="color: #008000; font-weight: bold">a</span> <span style="color: #BB4444">href</span><span style="color: #666666">=</span><span style="color: #BB4444">&quot;{{ .Permalink}}&quot;</span>&gt; {{ .LinkTitle }} &lt;/<span style="color: #008000; font-weight: bold">a</span>&gt; &lt;/<span style="color: #008000; font-weight: bold">li</span>&gt;
                 {{ end }}
                 &lt;/<span style="color: #008000; font-weight: bold">ul</span>&gt;
           {{ end }}
@@ -372,7 +372,7 @@ site-index &gt;}}</code> in the index page, I got a reasonable site index.</p>
   &lt;<span style="color: #008000; font-weight: bold">h3</span>&gt;{{ title $key }}&lt;/<span style="color: #008000; font-weight: bold">h3</span>&gt;
   &lt;<span style="color: #008000; font-weight: bold">ul</span>&gt;
     {{ range $value.Pages.ByTitle }}
-    &lt;<span style="color: #008000; font-weight: bold">li</span>&gt;&lt;<span style="color: #008000; font-weight: bold">a</span> <span style="color: #7D9029">href</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;{{ .Permalink }}&quot;</span>&gt;{{ safeHTML .LinkTitle }}&lt;/<span style="color: #008000; font-weight: bold">a</span>&gt;&lt;/<span style="color: #008000; font-weight: bold">li</span>&gt;
+    &lt;<span style="color: #008000; font-weight: bold">li</span>&gt;&lt;<span style="color: #008000; font-weight: bold">a</span> <span style="color: #BB4444">href</span><span style="color: #666666">=</span><span style="color: #BB4444">&quot;{{ .Permalink }}&quot;</span>&gt;{{ safeHTML .LinkTitle }}&lt;/<span style="color: #008000; font-weight: bold">a</span>&gt;&lt;/<span style="color: #008000; font-weight: bold">li</span>&gt;
     {{ end }}
   &lt;/<span style="color: #008000; font-weight: bold">ul</span>&gt;
   {{ end }}

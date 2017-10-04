@@ -49,7 +49,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.27" />
+<meta name="generator" content="Hugo 0.27.1" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -197,115 +197,115 @@
 
 <p>A simpler and less complex solution is to use a static singleton, mentioned here in a different context: <a href="https://developer.android.com/training/volley/requestqueue.html">Setting Up a RequestQueue</a>. This is quite simple to implement, like this:</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    
-    <span style="color: #408080; font-style: italic">// Activity</span>
-        <span style="color: #408080; font-style: italic">// On create</span>
+    <span style="color: #008800; font-style: italic">// Activity</span>
+        <span style="color: #008800; font-style: italic">// On create</span>
         <span style="color: #AA22FF">@Override</span>
-        <span style="color: #008000; font-weight: bold">public</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">onCreate</span><span style="color: #666666">(</span>Bundle savedInstanceState<span style="color: #666666">)</span>
+        <span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #00BB00; font-weight: bold">void</span> <span style="color: #00A000">onCreate</span><span style="color: #666666">(</span>Bundle savedInstanceState<span style="color: #666666">)</span>
         <span style="color: #666666">{</span>
-            <span style="color: #008000; font-weight: bold">super</span><span style="color: #666666">.</span><span style="color: #7D9029">onCreate</span><span style="color: #666666">(</span>savedInstanceState<span style="color: #666666">);</span>
-            setContentView<span style="color: #666666">(</span>R<span style="color: #666666">.</span><span style="color: #7D9029">layout</span><span style="color: #666666">.</span><span style="color: #7D9029">main</span><span style="color: #666666">);</span>
+            <span style="color: #AA22FF; font-weight: bold">super</span><span style="color: #666666">.</span><span style="color: #BB4444">onCreate</span><span style="color: #666666">(</span>savedInstanceState<span style="color: #666666">);</span>
+            setContentView<span style="color: #666666">(</span>R<span style="color: #666666">.</span><span style="color: #BB4444">layout</span><span style="color: #666666">.</span><span style="color: #BB4444">main</span><span style="color: #666666">);</span>
     
-    	<span style="color: #408080; font-style: italic">// Get data instance</span>
-    	instance <span style="color: #666666">=</span> Data<span style="color: #666666">.</span><span style="color: #7D9029">getInstance</span><span style="color: #666666">(</span><span style="color: #008000; font-weight: bold">this</span><span style="color: #666666">);</span>
-            <span style="color: #408080; font-style: italic">// ...</span>
+    	<span style="color: #008800; font-style: italic">// Get data instance</span>
+    	instance <span style="color: #666666">=</span> Data<span style="color: #666666">.</span><span style="color: #BB4444">getInstance</span><span style="color: #666666">(</span><span style="color: #AA22FF; font-weight: bold">this</span><span style="color: #666666">);</span>
+            <span style="color: #008800; font-style: italic">// ...</span>
     
-        <span style="color: #408080; font-style: italic">// On resume</span>
+        <span style="color: #008800; font-style: italic">// On resume</span>
         <span style="color: #AA22FF">@Override</span>
-        <span style="color: #008000; font-weight: bold">protected</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">onResume</span><span style="color: #666666">()</span>
+        <span style="color: #AA22FF; font-weight: bold">protected</span> <span style="color: #00BB00; font-weight: bold">void</span> <span style="color: #00A000">onResume</span><span style="color: #666666">()</span>
         <span style="color: #666666">{</span>
-            <span style="color: #008000; font-weight: bold">super</span><span style="color: #666666">.</span><span style="color: #7D9029">onResume</span><span style="color: #666666">();</span>
+            <span style="color: #AA22FF; font-weight: bold">super</span><span style="color: #666666">.</span><span style="color: #BB4444">onResume</span><span style="color: #666666">();</span>
     
-    	<span style="color: #408080; font-style: italic">// Connect callbacks</span>
-    	instance <span style="color: #666666">=</span> Data<span style="color: #666666">.</span><span style="color: #7D9029">getInstance</span><span style="color: #666666">(</span><span style="color: #008000; font-weight: bold">this</span><span style="color: #666666">);</span>
+    	<span style="color: #008800; font-style: italic">// Connect callbacks</span>
+    	instance <span style="color: #666666">=</span> Data<span style="color: #666666">.</span><span style="color: #BB4444">getInstance</span><span style="color: #666666">(</span><span style="color: #AA22FF; font-weight: bold">this</span><span style="color: #666666">);</span>
      
-            <span style="color: #408080; font-style: italic">// Check data instance</span>
-            <span style="color: #008000; font-weight: bold">if</span> <span style="color: #666666">(</span>instance <span style="color: #666666">!=</span> <span style="color: #008000; font-weight: bold">null</span><span style="color: #666666">)</span>
+            <span style="color: #008800; font-style: italic">// Check data instance</span>
+            <span style="color: #AA22FF; font-weight: bold">if</span> <span style="color: #666666">(</span>instance <span style="color: #666666">!=</span> <span style="color: #AA22FF; font-weight: bold">null</span><span style="color: #666666">)</span>
             <span style="color: #666666">{</span>
-                <span style="color: #408080; font-style: italic">// Get the saved select list</span>
-                List list <span style="color: #666666">=</span> instance<span style="color: #666666">.</span><span style="color: #7D9029">getList</span><span style="color: #666666">();</span>
-                <span style="color: #408080; font-style: italic">// ...</span>
+                <span style="color: #008800; font-style: italic">// Get the saved select list</span>
+                List list <span style="color: #666666">=</span> instance<span style="color: #666666">.</span><span style="color: #BB4444">getList</span><span style="color: #666666">();</span>
+                <span style="color: #008800; font-style: italic">// ...</span>
     
-                <span style="color: #408080; font-style: italic">// Get the saved value map</span>
-                valueMap <span style="color: #666666">=</span> instance<span style="color: #666666">.</span><span style="color: #7D9029">getMap</span><span style="color: #666666">();</span>
+                <span style="color: #008800; font-style: italic">// Get the saved value map</span>
+                valueMap <span style="color: #666666">=</span> instance<span style="color: #666666">.</span><span style="color: #BB4444">getMap</span><span style="color: #666666">();</span>
             <span style="color: #666666">}</span>
-        <span style="color: #408080; font-style: italic">// ...</span>
+        <span style="color: #008800; font-style: italic">// ...</span>
     
-        <span style="color: #408080; font-style: italic">// On pause</span>
+        <span style="color: #008800; font-style: italic">// On pause</span>
         <span style="color: #AA22FF">@Override</span>
-        <span style="color: #008000; font-weight: bold">protected</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">onPause</span><span style="color: #666666">()</span>
+        <span style="color: #AA22FF; font-weight: bold">protected</span> <span style="color: #00BB00; font-weight: bold">void</span> <span style="color: #00A000">onPause</span><span style="color: #666666">()</span>
         <span style="color: #666666">{</span>
-            <span style="color: #008000; font-weight: bold">super</span><span style="color: #666666">.</span><span style="color: #7D9029">onPause</span><span style="color: #666666">();</span>
-            <span style="color: #408080; font-style: italic">// ...</span>
+            <span style="color: #AA22FF; font-weight: bold">super</span><span style="color: #666666">.</span><span style="color: #BB4444">onPause</span><span style="color: #666666">();</span>
+            <span style="color: #008800; font-style: italic">// ...</span>
     
-            <span style="color: #408080; font-style: italic">// Save the select list and value map in the data instance</span>
-            <span style="color: #008000; font-weight: bold">if</span> <span style="color: #666666">(</span>instance <span style="color: #666666">!=</span> <span style="color: #008000; font-weight: bold">null</span><span style="color: #666666">)</span>
+            <span style="color: #008800; font-style: italic">// Save the select list and value map in the data instance</span>
+            <span style="color: #AA22FF; font-weight: bold">if</span> <span style="color: #666666">(</span>instance <span style="color: #666666">!=</span> <span style="color: #AA22FF; font-weight: bold">null</span><span style="color: #666666">)</span>
             <span style="color: #666666">{</span>
-                instance<span style="color: #666666">.</span><span style="color: #7D9029">setList</span><span style="color: #666666">(</span>selectList<span style="color: #666666">);</span>
-                instance<span style="color: #666666">.</span><span style="color: #7D9029">setMap</span><span style="color: #666666">(</span>valueMap<span style="color: #666666">);</span>
+                instance<span style="color: #666666">.</span><span style="color: #BB4444">setList</span><span style="color: #666666">(</span>selectList<span style="color: #666666">);</span>
+                instance<span style="color: #666666">.</span><span style="color: #BB4444">setMap</span><span style="color: #666666">(</span>valueMap<span style="color: #666666">);</span>
             <span style="color: #666666">}</span>
     
-    	<span style="color: #408080; font-style: italic">// Disconnect callbacks</span>
-    	instance <span style="color: #666666">=</span> Data<span style="color: #666666">.</span><span style="color: #7D9029">getInstance</span><span style="color: #666666">(</span><span style="color: #008000; font-weight: bold">null</span><span style="color: #666666">);</span>
+    	<span style="color: #008800; font-style: italic">// Disconnect callbacks</span>
+    	instance <span style="color: #666666">=</span> Data<span style="color: #666666">.</span><span style="color: #BB4444">getInstance</span><span style="color: #666666">(</span><span style="color: #AA22FF; font-weight: bold">null</span><span style="color: #666666">);</span>
         <span style="color: #666666">}</span>
     
-    <span style="color: #408080; font-style: italic">// Data singleton</span>
+    <span style="color: #008800; font-style: italic">// Data singleton</span>
     
-    <span style="color: #408080; font-style: italic">// Data class</span>
-    <span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">Data</span>
+    <span style="color: #008800; font-style: italic">// Data class</span>
+    <span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">class</span> <span style="color: #0000FF">Data</span>
     <span style="color: #666666">{</span>
-        <span style="color: #008000; font-weight: bold">private</span> <span style="color: #008000; font-weight: bold">static</span> Data instance<span style="color: #666666">;</span>
+        <span style="color: #AA22FF; font-weight: bold">private</span> <span style="color: #AA22FF; font-weight: bold">static</span> Data instance<span style="color: #666666">;</span>
     
-        <span style="color: #008000; font-weight: bold">private</span> Map<span style="color: #666666">&lt;</span>String<span style="color: #666666">,</span> Double<span style="color: #666666">&gt;</span> map<span style="color: #666666">;</span>
-        <span style="color: #008000; font-weight: bold">private</span> List list<span style="color: #666666">;</span>
+        <span style="color: #AA22FF; font-weight: bold">private</span> Map<span style="color: #666666">&lt;</span>String<span style="color: #666666">,</span> Double<span style="color: #666666">&gt;</span> map<span style="color: #666666">;</span>
+        <span style="color: #AA22FF; font-weight: bold">private</span> List list<span style="color: #666666">;</span>
     
-        <span style="color: #008000; font-weight: bold">private</span> TaskCallbacks callbacks<span style="color: #666666">;</span>
+        <span style="color: #AA22FF; font-weight: bold">private</span> TaskCallbacks callbacks<span style="color: #666666">;</span>
     
     
-        <span style="color: #408080; font-style: italic">// Constructor</span>
-        <span style="color: #008000; font-weight: bold">private</span> <span style="color: #0000FF">Data</span><span style="color: #666666">()</span>
+        <span style="color: #008800; font-style: italic">// Constructor</span>
+        <span style="color: #AA22FF; font-weight: bold">private</span> <span style="color: #00A000">Data</span><span style="color: #666666">()</span>
         <span style="color: #666666">{</span>
         <span style="color: #666666">}</span>
     
-        <span style="color: #408080; font-style: italic">// Get instance</span>
-        <span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">static</span> Data <span style="color: #0000FF">getInstance</span><span style="color: #666666">(</span>TaskCallbacks callbacks<span style="color: #666666">)</span>
+        <span style="color: #008800; font-style: italic">// Get instance</span>
+        <span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #AA22FF; font-weight: bold">static</span> Data <span style="color: #00A000">getInstance</span><span style="color: #666666">(</span>TaskCallbacks callbacks<span style="color: #666666">)</span>
         <span style="color: #666666">{</span>
-            <span style="color: #008000; font-weight: bold">if</span> <span style="color: #666666">(</span>instance <span style="color: #666666">==</span> <span style="color: #008000; font-weight: bold">null</span><span style="color: #666666">)</span>
-                instance <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">new</span> Data<span style="color: #666666">();</span>
+            <span style="color: #AA22FF; font-weight: bold">if</span> <span style="color: #666666">(</span>instance <span style="color: #666666">==</span> <span style="color: #AA22FF; font-weight: bold">null</span><span style="color: #666666">)</span>
+                instance <span style="color: #666666">=</span> <span style="color: #AA22FF; font-weight: bold">new</span> Data<span style="color: #666666">();</span>
     
-            instance<span style="color: #666666">.</span><span style="color: #7D9029">callbacks</span> <span style="color: #666666">=</span> callbacks<span style="color: #666666">;</span>
-            <span style="color: #008000; font-weight: bold">return</span> instance<span style="color: #666666">;</span>
+            instance<span style="color: #666666">.</span><span style="color: #BB4444">callbacks</span> <span style="color: #666666">=</span> callbacks<span style="color: #666666">;</span>
+            <span style="color: #AA22FF; font-weight: bold">return</span> instance<span style="color: #666666">;</span>
         <span style="color: #666666">}</span>
     
-        <span style="color: #408080; font-style: italic">// Set list</span>
-        <span style="color: #008000; font-weight: bold">public</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">setList</span><span style="color: #666666">(</span>List list<span style="color: #666666">)</span>
+        <span style="color: #008800; font-style: italic">// Set list</span>
+        <span style="color: #AA22FF; font-weight: bold">public</span> <span style="color: #00BB00; font-weight: bold">void</span> <span style="color: #00A000">setList</span><span style="color: #666666">(</span>List list<span style="color: #666666">)</span>
         <span style="color: #666666">{</span>
-            <span style="color: #008000; font-weight: bold">this</span><span style="color: #666666">.</span><span style="color: #7D9029">list</span> <span style="color: #666666">=</span> list<span style="color: #666666">;</span>
+            <span style="color: #AA22FF; font-weight: bold">this</span><span style="color: #666666">.</span><span style="color: #BB4444">list</span> <span style="color: #666666">=</span> list<span style="color: #666666">;</span>
         <span style="color: #666666">}</span>
     
-        <span style="color: #408080; font-style: italic">// Get list</span>
-        <span style="color: #008000; font-weight: bold">public</span> List <span style="color: #0000FF">getList</span><span style="color: #666666">()</span>
+        <span style="color: #008800; font-style: italic">// Get list</span>
+        <span style="color: #AA22FF; font-weight: bold">public</span> List <span style="color: #00A000">getList</span><span style="color: #666666">()</span>
         <span style="color: #666666">{</span>
-            <span style="color: #008000; font-weight: bold">return</span> list<span style="color: #666666">;</span>
+            <span style="color: #AA22FF; font-weight: bold">return</span> list<span style="color: #666666">;</span>
         <span style="color: #666666">}</span>
     
-        <span style="color: #408080; font-style: italic">// ...</span>
-        <span style="color: #408080; font-style: italic">// Start parse task</span>
-        <span style="color: #008000; font-weight: bold">protected</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">startParseTask</span><span style="color: #666666">(</span>String url<span style="color: #666666">)</span>
+        <span style="color: #008800; font-style: italic">// ...</span>
+        <span style="color: #008800; font-style: italic">// Start parse task</span>
+        <span style="color: #AA22FF; font-weight: bold">protected</span> <span style="color: #00BB00; font-weight: bold">void</span> <span style="color: #00A000">startParseTask</span><span style="color: #666666">(</span>String url<span style="color: #666666">)</span>
         <span style="color: #666666">{</span>
-            ParseTask parseTask <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">new</span> ParseTask<span style="color: #666666">();</span>
-            parseTask<span style="color: #666666">.</span><span style="color: #7D9029">execute</span><span style="color: #666666">(</span>url<span style="color: #666666">);</span>
+            ParseTask parseTask <span style="color: #666666">=</span> <span style="color: #AA22FF; font-weight: bold">new</span> ParseTask<span style="color: #666666">();</span>
+            parseTask<span style="color: #666666">.</span><span style="color: #BB4444">execute</span><span style="color: #666666">(</span>url<span style="color: #666666">);</span>
         <span style="color: #666666">}</span>
     
-        <span style="color: #408080; font-style: italic">// ParseTask class</span>
-        <span style="color: #008000; font-weight: bold">protected</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">ParseTask</span>
-            <span style="color: #008000; font-weight: bold">extends</span> AsyncTask<span style="color: #666666">&lt;</span>String<span style="color: #666666">,</span> String<span style="color: #666666">,</span> Map<span style="color: #666666">&lt;</span>String<span style="color: #666666">,</span> Double<span style="color: #666666">&gt;&gt;</span>
+        <span style="color: #008800; font-style: italic">// ParseTask class</span>
+        <span style="color: #AA22FF; font-weight: bold">protected</span> <span style="color: #AA22FF; font-weight: bold">class</span> <span style="color: #0000FF">ParseTask</span>
+            <span style="color: #AA22FF; font-weight: bold">extends</span> AsyncTask<span style="color: #666666">&lt;</span>String<span style="color: #666666">,</span> String<span style="color: #666666">,</span> Map<span style="color: #666666">&lt;</span>String<span style="color: #666666">,</span> Double<span style="color: #666666">&gt;&gt;</span>
         <span style="color: #666666">{</span>
-        <span style="color: #408080; font-style: italic">// ...</span>
-        <span style="color: #408080; font-style: italic">// TaskCallbacks interface</span>
-        <span style="color: #008000; font-weight: bold">interface</span> <span style="color: #0000FF; font-weight: bold">TaskCallbacks</span>
+        <span style="color: #008800; font-style: italic">// ...</span>
+        <span style="color: #008800; font-style: italic">// TaskCallbacks interface</span>
+        <span style="color: #AA22FF; font-weight: bold">interface</span> <span style="color: #0000FF">TaskCallbacks</span>
         <span style="color: #666666">{</span>
-            <span style="color: #B00040">void</span> <span style="color: #0000FF">onProgressUpdate</span><span style="color: #666666">(</span>String<span style="color: #666666">...</span> date<span style="color: #666666">);</span>
-            <span style="color: #B00040">void</span> <span style="color: #0000FF">onPostExecute</span><span style="color: #666666">(</span>Map<span style="color: #666666">&lt;</span>String<span style="color: #666666">,</span> Double<span style="color: #666666">&gt;</span> map<span style="color: #666666">);</span>
+            <span style="color: #00BB00; font-weight: bold">void</span> <span style="color: #00A000">onProgressUpdate</span><span style="color: #666666">(</span>String<span style="color: #666666">...</span> date<span style="color: #666666">);</span>
+            <span style="color: #00BB00; font-weight: bold">void</span> <span style="color: #00A000">onPostExecute</span><span style="color: #666666">(</span>Map<span style="color: #666666">&lt;</span>String<span style="color: #666666">,</span> Double<span style="color: #666666">&gt;</span> map<span style="color: #666666">);</span>
         <span style="color: #666666">}</span>
     <span style="color: #666666">}</span>
 </pre></div>

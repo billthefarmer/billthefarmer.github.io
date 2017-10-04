@@ -46,7 +46,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.27" />
+<meta name="generator" content="Hugo 0.27.1" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -207,10 +207,10 @@
 <p>You can use <code>wpa_passphrase</code> to generate the <code>wpa_supplicant.conf</code> file:</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ wpa_passphrase ssid passphrase
 
-    <span style="color: #19177C">network</span><span style="color: #666666">={</span>
-            <span style="color: #19177C">ssid</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;ssid&quot;</span>
-            <span style="color: #408080; font-style: italic">#psk=&quot;passphrase&quot;</span>
-            <span style="color: #19177C">psk</span><span style="color: #666666">=</span>41167ee7545cb4d9b1c7d7e113cfc1f0ac367b020141c46c9418965c1926fd80
+    <span style="color: #B8860B">network</span><span style="color: #666666">={</span>
+            <span style="color: #B8860B">ssid</span><span style="color: #666666">=</span><span style="color: #BB4444">&quot;ssid&quot;</span>
+            <span style="color: #008800; font-style: italic">#psk=&quot;passphrase&quot;</span>
+            <span style="color: #B8860B">psk</span><span style="color: #666666">=</span>41167ee7545cb4d9b1c7d7e113cfc1f0ac367b020141c46c9418965c1926fd80
     <span style="color: #666666">}</span>
 </pre></div>
 
@@ -228,7 +228,7 @@
 <h2 id="arch-linux">Arch Linux</h2>
 
 <p>Use <code>wifi-menu</code> to create a <code>netctl</code> profile. Use <code>netctl list</code> to list profiles and <code>netctl</code> to enable and start your profile.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    sudo netctl <span style="color: #008000">enable</span> wlan0-yourSSIDhere
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    sudo netctl <span style="color: #AA22FF">enable</span> wlan0-yourSSIDhere
     sudo netctl start wlan0-yourSSIDhere
 </pre></div>
 

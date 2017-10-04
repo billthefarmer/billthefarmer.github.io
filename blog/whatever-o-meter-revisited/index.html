@@ -49,7 +49,7 @@ intro: Please answer the following questions carefully and truthfully."/>
 
 
 
-<meta name="generator" content="Hugo 0.27" />
+<meta name="generator" content="Hugo 0.27.1" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -198,16 +198,16 @@ interpreted as <code>[&lt;nil&gt;]</code>.</p>
 question:
   - You are lying in bed on Monday morning...
 result:
-  - <span style="color: #BA2121">&#39;%d</span><span style="color: #19177C"> </span><span style="color: #BA2121">percent,</span><span style="color: #19177C"> </span><span style="color: #BA2121">Perhaps</span><span style="color: #19177C"> </span><span style="color: #BA2121">you</span><span style="color: #19177C"> </span><span style="color: #BA2121">should</span><span style="color: #19177C"> </span><span style="color: #BA2121">consider</span><span style="color: #19177C"> </span><span style="color: #BA2121">emigration.&#39;</span>
-  - <span style="color: #BA2121">&#39;%d%,</span><span style="color: #19177C"> </span><span style="color: #BA2121">Consider</span><span style="color: #19177C"> </span><span style="color: #BA2121">taking</span><span style="color: #19177C"> </span><span style="color: #BA2121">a</span><span style="color: #19177C"> </span><span style="color: #BA2121">long</span><span style="color: #19177C"> </span><span style="color: #BA2121">holiday</span><span style="color: #19177C"> </span><span style="color: #BA2121">somewhere</span><span style="color: #19177C"> </span><span style="color: #BA2121">far</span><span style="color: #19177C"> </span><span style="color: #BA2121">away.&#39;</span>
+  - <span style="color: #BB4444">&#39;%d</span><span style="color: #B8860B"> </span><span style="color: #BB4444">percent,</span><span style="color: #B8860B"> </span><span style="color: #BB4444">Perhaps</span><span style="color: #B8860B"> </span><span style="color: #BB4444">you</span><span style="color: #B8860B"> </span><span style="color: #BB4444">should</span><span style="color: #B8860B"> </span><span style="color: #BB4444">consider</span><span style="color: #B8860B"> </span><span style="color: #BB4444">emigration.&#39;</span>
+  - <span style="color: #BB4444">&#39;%d%,</span><span style="color: #B8860B"> </span><span style="color: #BB4444">Consider</span><span style="color: #B8860B"> </span><span style="color: #BB4444">taking</span><span style="color: #B8860B"> </span><span style="color: #BB4444">a</span><span style="color: #B8860B"> </span><span style="color: #BB4444">long</span><span style="color: #B8860B"> </span><span style="color: #BB4444">holiday</span><span style="color: #B8860B"> </span><span style="color: #BB4444">somewhere</span><span style="color: #B8860B"> </span><span style="color: #BB4444">far</span><span style="color: #B8860B"> </span><span style="color: #BB4444">away.&#39;</span>
 left:
   - Go and jump in the shower quick
 right:
   - Jump on him
 weights: 2,1,1,1,1
 centre:
-  - <span style="color: #BA2121">&#39;-&#39;</span>
-  - <span style="color: #BA2121">&#39;-&#39;</span>
+  - <span style="color: #BB4444">&#39;-&#39;</span>
+  - <span style="color: #BB4444">&#39;-&#39;</span>
   - So so
 more: https://billthefarmer.github.io/blog/morris-o-meter
 </pre></div>
@@ -225,9 +225,9 @@ just coped with that, anything not defined just becomes <code>null</code>. In
 Hugo I had to make a great deal of use of <code>default</code> and <code>slice</code> to
 create default values.</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>{{ with .Page.Params }}
-  &lt;<span style="color: #008000; font-weight: bold">div</span> <span style="color: #7D9029">id</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;first&quot;</span> <span style="color: #7D9029">style</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;text-align: center&quot;</span>&gt;
+  &lt;<span style="color: #008000; font-weight: bold">div</span> <span style="color: #BB4444">id</span><span style="color: #666666">=</span><span style="color: #BB4444">&quot;first&quot;</span> <span style="color: #BB4444">style</span><span style="color: #666666">=</span><span style="color: #BB4444">&quot;text-align: center&quot;</span>&gt;
     &lt;<span style="color: #008000; font-weight: bold">h4</span>&gt;{{ .intro }}&lt;/<span style="color: #008000; font-weight: bold">h4</span>&gt;
-    &lt;<span style="color: #008000; font-weight: bold">input</span> <span style="color: #7D9029">type</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;button&quot;</span> <span style="color: #7D9029">value</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;Start&quot;</span> <span style="color: #7D9029">class</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;start&quot;</span> <span style="color: #7D9029">id</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;start&quot;</span> /&gt;
+    &lt;<span style="color: #008000; font-weight: bold">input</span> <span style="color: #BB4444">type</span><span style="color: #666666">=</span><span style="color: #BB4444">&quot;button&quot;</span> <span style="color: #BB4444">value</span><span style="color: #666666">=</span><span style="color: #BB4444">&quot;Start&quot;</span> <span style="color: #BB4444">class</span><span style="color: #666666">=</span><span style="color: #BB4444">&quot;start&quot;</span> <span style="color: #BB4444">id</span><span style="color: #666666">=</span><span style="color: #BB4444">&quot;start&quot;</span> /&gt;
   &lt;/<span style="color: #008000; font-weight: bold">div</span>&gt;
   {{ $questions := .question }}
   {{ $left_texts := default (slice &quot;No&quot;) .left }}
@@ -262,32 +262,32 @@ exist.</p>
 {{ $json := dict &quot;results&quot; ($.Scratch.Get &quot;results&quot;) &quot;colours&quot; ($.Scratch.Get &quot;colours&quot;)
                  &quot;weights&quot; ($.Scratch.Get &quot;weights&quot;) &quot;duration&quot; ($.Scratch.Get &quot;duration&quot;)
                  &quot;easing&quot; ($.Scratch.Get &quot;easing&quot;) }}
-&lt;<span style="color: #008000; font-weight: bold">script</span> <span style="color: #7D9029">type</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;text/javascript&quot;</span>&gt;
-  <span style="color: #008000; font-weight: bold">var</span> whatever_data <span style="color: #666666">=</span> {{ safeJS (jsonify $json) }};
+&lt;<span style="color: #008000; font-weight: bold">script</span> <span style="color: #BB4444">type</span><span style="color: #666666">=</span><span style="color: #BB4444">&quot;text/javascript&quot;</span>&gt;
+  <span style="color: #AA22FF; font-weight: bold">var</span> whatever_data <span style="color: #666666">=</span> {{ safeJS (jsonify $json) }};
 &lt;/<span style="color: #008000; font-weight: bold">script</span>&gt;
 {{ end }}
 </pre></div>
 
 <p>So the generated json looks like this, with nulls for the missing keys.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #666666">&lt;</span>script type<span style="color: #666666">=</span><span style="color: #BA2121">&quot;text/javascript&quot;</span><span style="color: #666666">&gt;</span>
-<span style="color: #008000; font-weight: bold">var</span> whatever_data <span style="color: #666666">=</span>
-  {<span style="color: #BA2121">&quot;colours&quot;</span><span style="color: #666666">:</span><span style="color: #008000; font-weight: bold">null</span>,<span style="color: #BA2121">&quot;duration&quot;</span><span style="color: #666666">:</span><span style="color: #008000; font-weight: bold">null</span>,<span style="color: #BA2121">&quot;easing&quot;</span><span style="color: #666666">:</span><span style="color: #008000; font-weight: bold">null</span>,<span style="color: #BA2121">&quot;results&quot;</span><span style="color: #666666">:</span>[<span style="color: #BA2121">&quot;%d percent,</span>
-<span style="color: #BA2121">    Perhaps you should consider emigration.&quot;</span>,...],<span style="color: #BA2121">&quot;weights&quot;</span><span style="color: #666666">:</span>[<span style="color: #BA2121">&quot;2&quot;</span>,<span style="color: #BA2121">&quot;1&quot;</span>,<span style="color: #BA2121">&quot;1&quot;</span>,<span style="color: #BA2121">&quot;1&quot;</span>,<span style="color: #BA2121">&quot;1&quot;</span>]};
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #666666">&lt;</span>script type<span style="color: #666666">=</span><span style="color: #BB4444">&quot;text/javascript&quot;</span><span style="color: #666666">&gt;</span>
+<span style="color: #AA22FF; font-weight: bold">var</span> whatever_data <span style="color: #666666">=</span>
+  {<span style="color: #BB4444">&quot;colours&quot;</span><span style="color: #666666">:</span><span style="color: #AA22FF; font-weight: bold">null</span>,<span style="color: #BB4444">&quot;duration&quot;</span><span style="color: #666666">:</span><span style="color: #AA22FF; font-weight: bold">null</span>,<span style="color: #BB4444">&quot;easing&quot;</span><span style="color: #666666">:</span><span style="color: #AA22FF; font-weight: bold">null</span>,<span style="color: #BB4444">&quot;results&quot;</span><span style="color: #666666">:</span>[<span style="color: #BB4444">&quot;%d percent,</span>
+<span style="color: #BB4444">    Perhaps you should consider emigration.&quot;</span>,...],<span style="color: #BB4444">&quot;weights&quot;</span><span style="color: #666666">:</span>[<span style="color: #BB4444">&quot;2&quot;</span>,<span style="color: #BB4444">&quot;1&quot;</span>,<span style="color: #BB4444">&quot;1&quot;</span>,<span style="color: #BB4444">&quot;1&quot;</span>,<span style="color: #BB4444">&quot;1&quot;</span>]};
 <span style="color: #666666">&lt;</span><span style="border: 1px solid #FF0000">/script&gt;</span>
 </pre></div>
 
 <p>The javascript code needed a bit of work to force the weights, which
 were passed by Hugo as an array of strings, to be interpreted as numbers.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>        <span style="color: #408080; font-style: italic">// Check if weights are defined</span>
-        <span style="color: #008000; font-weight: bold">if</span> (weights <span style="color: #666666">==</span> <span style="color: #008000; font-weight: bold">null</span>)
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>        <span style="color: #008800; font-style: italic">// Check if weights are defined</span>
+        <span style="color: #AA22FF; font-weight: bold">if</span> (weights <span style="color: #666666">==</span> <span style="color: #AA22FF; font-weight: bold">null</span>)
         {
-            value <span style="color: #666666">+=</span> $(<span style="color: #BA2121">&quot;#value-&quot;</span> <span style="color: #666666">+</span> panel).slider(<span style="color: #BA2121">&quot;value&quot;</span>);
+            value <span style="color: #666666">+=</span> $(<span style="color: #BB4444">&quot;#value-&quot;</span> <span style="color: #666666">+</span> panel).slider(<span style="color: #BB4444">&quot;value&quot;</span>);
             total<span style="color: #666666">++</span>;
         }
 
-        <span style="color: #008000; font-weight: bold">else</span>
+        <span style="color: #AA22FF; font-weight: bold">else</span>
         {
-            value <span style="color: #666666">+=</span> $(<span style="color: #BA2121">&quot;#value-&quot;</span> <span style="color: #666666">+</span> panel).slider(<span style="color: #BA2121">&quot;value&quot;</span>) <span style="color: #666666">*</span>
+            value <span style="color: #666666">+=</span> $(<span style="color: #BB4444">&quot;#value-&quot;</span> <span style="color: #666666">+</span> panel).slider(<span style="color: #BB4444">&quot;value&quot;</span>) <span style="color: #666666">*</span>
 	        weights[index];
             total <span style="color: #666666">+=</span> <span style="color: #666666">+</span>weights[index];
         }

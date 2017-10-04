@@ -49,7 +49,7 @@ There are four parts - you need to create a new partial template in layouts/part
 
 
 
-<meta name="generator" content="Hugo 0.27" />
+<meta name="generator" content="Hugo 0.27.1" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -202,7 +202,7 @@ that out, I had to look at the various threads on the
 &lt;<span style="color: #008000; font-weight: bold">h3</span>&gt;See Also&lt;/<span style="color: #008000; font-weight: bold">h3</span>&gt;
 &lt;<span style="color: #008000; font-weight: bold">ul</span>&gt;
   {{ range . }}
-  &lt;<span style="color: #008000; font-weight: bold">li</span>&gt;&lt;<span style="color: #008000; font-weight: bold">a</span> <span style="color: #7D9029">href</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;{{ .RelPermalink }}&quot;</span>&gt;{{ safeHTML .Title }}&lt;/<span style="color: #008000; font-weight: bold">a</span>&gt;&lt;/<span style="color: #008000; font-weight: bold">li</span>&gt;
+  &lt;<span style="color: #008000; font-weight: bold">li</span>&gt;&lt;<span style="color: #008000; font-weight: bold">a</span> <span style="color: #BB4444">href</span><span style="color: #666666">=</span><span style="color: #BB4444">&quot;{{ .RelPermalink }}&quot;</span>&gt;{{ safeHTML .Title }}&lt;/<span style="color: #008000; font-weight: bold">a</span>&gt;&lt;/<span style="color: #008000; font-weight: bold">li</span>&gt;
   {{ end }}
 &lt;/<span style="color: #008000; font-weight: bold">ul</span>&gt;
 {{ end }}
