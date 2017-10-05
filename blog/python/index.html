@@ -7,7 +7,7 @@
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 <meta property="og:title" content="Python" />
-<meta property="og:description" content="I&#8217;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &#8216;Blank space shalt not be significant except to separate tokens where necessary.&#8217;. That&#8217;s why you can minimise a lengthy JavaScript script like jQuery to one enormously long line and it still works just fine.
+<meta property="og:description" content="I&rsquo;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &lsquo;Blank space shalt not be significant except to separate tokens where necessary.&rsquo;. That&rsquo;s why you can minimise a lengthy JavaScript script like jQuery to one enormously long line and it still works just fine.
 But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter an advent calender competition which involved checking a web page to see if your name has come up and sending an email if it does." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/python/" />
@@ -29,7 +29,7 @@ But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter 
 
 
 <meta itemprop="name" content="Python">
-<meta itemprop="description" content="I&#8217;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &#8216;Blank space shalt not be significant except to separate tokens where necessary.&#8217;. That&#8217;s why you can minimise a lengthy JavaScript script like jQuery to one enormously long line and it still works just fine.
+<meta itemprop="description" content="I&rsquo;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &lsquo;Blank space shalt not be significant except to separate tokens where necessary.&rsquo;. That&rsquo;s why you can minimise a lengthy JavaScript script like jQuery to one enormously long line and it still works just fine.
 But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter an advent calender competition which involved checking a web page to see if your name has come up and sending an email if it does.">
 
 
@@ -41,7 +41,7 @@ But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter 
 <meta itemprop="keywords" content="" />
 
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Python"/>
-<meta name="twitter:description" content="I&#8217;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &#8216;Blank space shalt not be significant except to separate tokens where necessary.&#8217;. That&#8217;s why you can minimise a lengthy JavaScript script like jQuery to one enormously long line and it still works just fine.
+<meta name="twitter:description" content="I&rsquo;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &lsquo;Blank space shalt not be significant except to separate tokens where necessary.&rsquo;. That&rsquo;s why you can minimise a lengthy JavaScript script like jQuery to one enormously long line and it still works just fine.
 But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter an advent calender competition which involved checking a web page to see if your name has come up and sending an email if it does."/>
 
 
@@ -49,7 +49,7 @@ But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter 
 
 
 
-<meta name="generator" content="Hugo 0.27.1" />
+<meta name="generator" content="Hugo 0.29" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -188,58 +188,56 @@ But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter 
       </small>
     </div>
     <p>
-      <p>I&#8217;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &#8216;Blank space shalt not be significant except to separate tokens where necessary.&#8217;. That&#8217;s why you can minimise a lengthy JavaScript script like <a href="http://jquery.com">jQuery</a> to one enormously long line and it still works just fine.</p>
+      <p>I&rsquo;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &lsquo;Blank space shalt not be significant except to separate tokens where necessary.&rsquo;. That&rsquo;s why you can minimise a lengthy JavaScript script like <a href="http://jquery.com">jQuery</a> to one enormously long line and it still works just fine.</p>
 
-<p>But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter an advent calender competition which involved checking a web page to see if your name has come up and sending an email if it does. So I thought that&#8217;s an ideal little job to run on my <a href="http://www.raspberrypi.org">Raspberry Pi</a>. So I installed the ssmtp package and attempted to test sending an email. After several days of faffing about with no joy I gave up.</p>
+<p>But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter an advent calender competition which involved checking a web page to see if your name has come up and sending an email if it does. So I thought that&rsquo;s an ideal little job to run on my <a href="http://www.raspberrypi.org">Raspberry Pi</a>. So I installed the ssmtp package and attempted to test sending an email. After several days of faffing about with no joy I gave up.</p>
 
-<p>One of the things that comes front and centre with the standard <a href="http://www.raspberrypi.org/downloads">Raspbian</a> installation is Python. So, after checking the documentation for smtp and http libraries, etc, I decided to give it a go. You can test your code on the command line before sticking it in a file, and you get, unlike ssmtp, helpful messages that tell you what&#8217;s going on. So you end up with a script that looks like this, and it actually appears to work.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008800; font-style: italic">#! /usr/bin/env python</span>
+<p>One of the things that comes front and centre with the standard <a href="http://www.raspberrypi.org/downloads">Raspbian</a> installation is Python. So, after checking the documentation for smtp and http libraries, etc, I decided to give it a go. You can test your code on the command line before sticking it in a file, and you get, unlike ssmtp, helpful messages that tell you what&rsquo;s going on. So you end up with a script that looks like this, and it actually appears to work.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#080;font-style:italic">#! /usr/bin/env python</span>
 
-<span style="color: #AA22FF; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">urllib2</span>
-<span style="color: #AA22FF; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">smtplib</span>
-<span style="color: #AA22FF; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">os.path</span>
-<span style="color: #AA22FF; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">os</span> <span style="color: #AA22FF; font-weight: bold">import</span> utime
-<span style="color: #AA22FF; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">datetime</span> <span style="color: #AA22FF; font-weight: bold">import</span> date
-<span style="color: #AA22FF; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">email.mime.text</span> <span style="color: #AA22FF; font-weight: bold">import</span> MIMEText
+<span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">urllib2</span>
+<span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">smtplib</span>
+<span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">os.path</span>
+<span style="color:#a2f;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">os</span> <span style="color:#a2f;font-weight:bold">import</span> utime
+<span style="color:#a2f;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">datetime</span> <span style="color:#a2f;font-weight:bold">import</span> date
+<span style="color:#a2f;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">email.mime.text</span> <span style="color:#a2f;font-weight:bold">import</span> MIMEText
 
-<span style="color: #AA22FF; font-weight: bold">if</span> os<span style="color: #666666">.</span>path<span style="color: #666666">.</span>exists(<span style="color: #BB4444">&quot;sent&quot;</span>)
+<span style="color:#a2f;font-weight:bold">if</span> os<span style="color:#666">.</span>path<span style="color:#666">.</span>exists(<span style="color:#b44"></span><span style="color:#b44">&#34;sent&#34;</span>)
   quit()
 
-f <span style="color: #666666">=</span> urllib2<span style="color: #666666">.</span>urlopen(<span style="color: #BB4444">&quot;url&quot;</span>)
+f <span style="color:#666">=</span> urllib2<span style="color:#666">.</span>urlopen(<span style="color:#b44"></span><span style="color:#b44">&#34;url&#34;</span>)
 
-today <span style="color: #666666">=</span> <span style="color: #AA22FF">False</span>
-<span style="color: #AA22FF; font-weight: bold">for</span> line <span style="color: #AA22FF; font-weight: bold">in</span> f:
-  <span style="color: #AA22FF; font-weight: bold">if</span> <span style="color: #BB4444">&quot;winners&quot;</span> <span style="color: #AA22FF; font-weight: bold">in</span> line:
-    today <span style="color: #666666">=</span> <span style="color: #AA22FF">str</span>(date<span style="color: #666666">.</span>today()<span style="color: #666666">.</span>day) <span style="color: #AA22FF; font-weight: bold">in</span> line
-    <span style="color: #AA22FF; font-weight: bold">break</span>
+today <span style="color:#666">=</span> False
+<span style="color:#a2f;font-weight:bold">for</span> line <span style="color:#a2f;font-weight:bold">in</span> f:
+  <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#b44"></span><span style="color:#b44">&#34;winners&#34;</span> <span style="color:#a2f;font-weight:bold">in</span> line:
+    today <span style="color:#666">=</span> <span style="color:#a2f">str</span>(date<span style="color:#666">.</span>today()<span style="color:#666">.</span>day) <span style="color:#a2f;font-weight:bold">in</span> line
+    <span style="color:#a2f;font-weight:bold">break</span>
 
-line <span style="color: #666666">=</span> f<span style="color: #666666">.</span>readline()
+line <span style="color:#666">=</span> f<span style="color:#666">.</span>readline()
 
-f<span style="color: #666666">.</span>close()
+f<span style="color:#666">.</span>close()
 
-<span style="color: #AA22FF; font-weight: bold">if</span> today <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #BB4444">&quot;name&quot;</span> <span style="color: #AA22FF; font-weight: bold">in</span> line:
-  s <span style="color: #666666">=</span> smtplib<span style="color: #666666">.</span>SMTP_SSL(<span style="color: #BB4444">&quot;smtp.mail.yahoo.com&quot;</span>)
-  s<span style="color: #666666">.</span>login(<span style="color: #BB4444">&quot;user&quot;</span>,<span style="color: #BB4444">&quot;password&quot;</span>)
-  msg <span style="color: #666666">=</span> MIMEText(<span style="color: #BB4444">&quot;I would like to claim my prize</span><span style="color: #BB6622; font-weight: bold">\r\n\r\n</span><span style="color: #BB4444">Regards</span><span style="color: #BB6622; font-weight: bold">\r\n</span><span style="color: #BB4444">name&quot;</span>)
-  msg[<span style="color: #BB4444">&#39;Subject&#39;</span>] <span style="color: #666666">=</span> <span style="color: #BB4444">&quot;Advent Calendar Competition&quot;</span>
-  msg[<span style="color: #BB4444">&#39;From&#39;</span>] <span style="color: #666666">=</span> <span style="color: #BB4444">&quot;from email&quot;</span>
-  msg[<span style="color: #BB4444">&#39;To&#39;</span>] <span style="color: #666666">=</span> <span style="color: #BB4444">&quot;to email&quot;</span>
-  msg[<span style="color: #BB4444">&#39;Bcc&#39;</span>] <span style="color: #666666">=</span> <span style="color: #BB4444">&quot;from email&quot;</span>
-  s<span style="color: #666666">.</span>sendmail(<span style="color: #BB4444">&quot;from email&quot;</span>, [<span style="color: #BB4444">&quot;to email&quot;</span>,<span style="color: #BB4444">&quot;from email&quot;</span>], msg<span style="color: #666666">.</span>as_string())
-  s<span style="color: #666666">.</span>quit()
-  <span style="color: #AA22FF; font-weight: bold">print</span>(msg<span style="color: #666666">.</span>as_string())
-  <span style="color: #AA22FF">open</span>(<span style="color: #BB4444">&quot;sent&quot;</span>, <span style="color: #BB4444">&quot;w&quot;</span>)<span style="color: #666666">.</span>close()
+<span style="color:#a2f;font-weight:bold">if</span> today <span style="color:#a2f;font-weight:bold">and</span> <span style="color:#b44"></span><span style="color:#b44">&#34;name&#34;</span> <span style="color:#a2f;font-weight:bold">in</span> line:
+  s <span style="color:#666">=</span> smtplib<span style="color:#666">.</span>SMTP_SSL(<span style="color:#b44"></span><span style="color:#b44">&#34;smtp.mail.yahoo.com&#34;</span>)
+  s<span style="color:#666">.</span>login(<span style="color:#b44"></span><span style="color:#b44">&#34;user&#34;</span>,<span style="color:#b44"></span><span style="color:#b44">&#34;password&#34;</span>)
+  msg <span style="color:#666">=</span> MIMEText(<span style="color:#b44"></span><span style="color:#b44">&#34;I would like to claim my prize</span><span style="color:#b62;font-weight:bold">\r\n\r\n</span><span style="color:#b44">Regards</span><span style="color:#b62;font-weight:bold">\r\n</span><span style="color:#b44">name&#34;</span>)
+  msg[<span style="color:#b44"></span><span style="color:#b44">&#39;Subject&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44"></span><span style="color:#b44">&#34;Advent Calendar Competition&#34;</span>
+  msg[<span style="color:#b44"></span><span style="color:#b44">&#39;From&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44"></span><span style="color:#b44">&#34;from email&#34;</span>
+  msg[<span style="color:#b44"></span><span style="color:#b44">&#39;To&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44"></span><span style="color:#b44">&#34;to email&#34;</span>
+  msg[<span style="color:#b44"></span><span style="color:#b44">&#39;Bcc&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44"></span><span style="color:#b44">&#34;from email&#34;</span>
+  s<span style="color:#666">.</span>sendmail(<span style="color:#b44"></span><span style="color:#b44">&#34;from email&#34;</span>, [<span style="color:#b44"></span><span style="color:#b44">&#34;to email&#34;</span>,<span style="color:#b44"></span><span style="color:#b44">&#34;from email&#34;</span>], msg<span style="color:#666">.</span>as_string())
+  s<span style="color:#666">.</span>quit()
+  <span style="color:#a2f;font-weight:bold">print</span>(msg<span style="color:#666">.</span>as_string())
+  <span style="color:#a2f">open</span>(<span style="color:#b44"></span><span style="color:#b44">&#34;sent&#34;</span>, <span style="color:#b44"></span><span style="color:#b44">&#34;w&#34;</span>)<span style="color:#666">.</span>close()
 
-<span style="color: #AA22FF; font-weight: bold">with</span> <span style="color: #AA22FF">file</span>(<span style="color: #BB4444">&quot;last&quot;</span>, <span style="color: #BB4444">&quot;a&quot;</span>):
-  utime(<span style="color: #BB4444">&quot;last&quot;</span>, <span style="color: #AA22FF">None</span>)
-</pre></div>
-
+<span style="color:#a2f;font-weight:bold">with</span> <span style="color:#a2f">file</span>(<span style="color:#b44"></span><span style="color:#b44">&#34;last&#34;</span>, <span style="color:#b44"></span><span style="color:#b44">&#34;a&#34;</span>):
+  utime(<span style="color:#b44"></span><span style="color:#b44">&#34;last&#34;</span>, None)</code></pre>
+</div>
 <p>So, very careful with the indenting. We shall have to see if anyone wins anything. The script gets fired off periodically with a crontab entry.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #B8860B">CRON_TZ</span><span style="color: #666666">=</span>Europe/London
-<span style="color: #B8860B">MAILTO</span><span style="color: #666666">=</span>bill
-*/1 <span style="color: #666666">9</span>-10 <span style="color: #666666">1</span>-24 <span style="color: #666666">12</span> * <span style="color: #B8860B">$HOME</span>/advent/advent.py
-</pre></div>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#b8860b">CRON_TZ</span><span style="color:#666">=</span>Europe/London
+<span style="color:#b8860b">MAILTO</span><span style="color:#666">=</span>bill
+*/1 <span style="color:#666">9</span>-10 <span style="color:#666">1</span>-24 <span style="color:#666">12</span> * <span style="color:#b8860b">$HOME</span>/advent/advent.py</code></pre>
+</div>
     </p>
     
     

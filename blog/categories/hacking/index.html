@@ -37,7 +37,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.27.1" />
+<meta name="generator" content="Hugo 0.29" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -214,7 +214,7 @@ There are four parts - you need to create a new partial template in layouts/part
   <p>
     The android docs for the Calendar Provider are quite useful, but recommend the use of an AsyncQueryHandler for querying or adding events to calendars in an asynchronous thread. However the AsyncQueryHandler docs don&rsquo;t include much guidance as to how to use it.
 To add an entry to an android calendar you first have to find out the calendar id using an asynchronous query on the calendars table.
-// QueryHandler public class QueryHandler extends AsyncQueryHandler { private static final String TAG = &quot;QueryHandler&quot;; // Projection arrays private static final String[] CALENDAR_PROJECTION = new String[] { Calendars.
+// QueryHandler public class QueryHandler extends AsyncQueryHandler { private static final String TAG = &#34;QueryHandler&#34;; // Projection arrays  private static final String[] CALENDAR_PROJECTION = new String[] { Calendars.
   </p>
   <a href='https://billthefarmer.github.io/blog/adding-a-calendar-event/'>Read more →</a>
   <hr>
@@ -310,8 +310,8 @@ I looked for migration tools, and found two:
     </small>
   </div>
   <p>
-    If you write an android app that handles images or any other sort of file your app may be required to deal with &#8216;content&#8217; uris (content://). There is a very useful utility which resolves these into &#8216;file&#8217; uris (file:///) FileUtils.java. This contains one external reference to LocalStorageProvider, which can be resolved by replacing the reference with a string.
- // import com.ianhanniballake.localstorage.LocalStorageProvider; // ... /** * @param uri The Uri to check.
+    If you write an android app that handles images or any other sort of file your app may be required to deal with &lsquo;content&rsquo; uris (content://). There is a very useful utility which resolves these into &lsquo;file&rsquo; uris (file:///) FileUtils.java. This contains one external reference to LocalStorageProvider, which can be resolved by removing the function isLocalStorageDocument() and references to it.
+// import com.ianhanniballake.localstorage.LocalStorageProvider;  // ...  /** * @param uri The Uri to check.
   </p>
   <a href='https://billthefarmer.github.io/blog/resolving-content-uris-in-android/'>Read more →</a>
   <hr>

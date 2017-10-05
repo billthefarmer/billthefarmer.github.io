@@ -49,7 +49,7 @@ When I first installed Cyanogenmod, I had to use an unofficial build, as an offi
 
 
 
-<meta name="generator" content="Hugo 0.27.1" />
+<meta name="generator" content="Hugo 0.29" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -192,11 +192,11 @@ When I first installed Cyanogenmod, I had to use an unofficial build, as an offi
 
 <p>I got myself a refurbished Moto G phone a while ago. It came with Android Kitkat 4.4.4, complete with Moto bloat. I had already put <a href="http://www.cyanogenmod.org">Cyanogenmod</a> on my tablet, so I installed Cyanogenmod 11, android 4.4.4 on it, in accordance with the instructions on the <a href="https://wiki.cyanogenmod.org/w/Install_CM_for_falcon">wiki</a>, no problem. That got rid of the bloat and allows fine control of app snooping via Privacy Guard in the settings.</p>
 
-<p>When I first installed Cyanogenmod, I had to use an unofficial build, as an official build for Kitkat 4.4.4 wasn&#8217;t available. Now there are six official builds <a href="http://download.cyanogenmod.org/?type=snapshot&amp;device=falcon">available</a>, including two for Marshmallow. I tried to upgrade to Lollipop using the built in upgrade system, but failed I think it complained about the bootloader.</p>
+<p>When I first installed Cyanogenmod, I had to use an unofficial build, as an official build for Kitkat 4.4.4 wasn&rsquo;t available. Now there are six official builds <a href="http://download.cyanogenmod.org/?type=snapshot&amp;device=falcon">available</a>, including two for Marshmallow. I tried to upgrade to Lollipop using the built in upgrade system, but failed I think it complained about the bootloader.</p>
 
-<p>So I downloaded the official factory image for Lollipop 5.1 from <a href="http://www.filefactory.com/folder/c6cdedc45a775d27">here </a> (XT1032_FALCON_RETGB_5.1_LPBS23.13-56-2_cid7_CFC.xml.zip) and attempted to install it. I followed the instructions <a href="http://forum.xda-developers.com/showthread.php?t=2542219">here</a>, which appeared to work ok, but the phone wouldn&#8217;t boot. Fastboot appeared to be erasing the system partition each time I loaded another sparsechunk file.</p>
+<p>So I downloaded the official factory image for Lollipop 5.1 from <a href="http://www.filefactory.com/folder/c6cdedc45a775d27">here </a> (XT1032_FALCON_RETGB_5.1_LPBS23.13-56-2_cid7_CFC.xml.zip) and attempted to install it. I followed the instructions <a href="http://forum.xda-developers.com/showthread.php?t=2542219">here</a>, which appeared to work ok, but the phone wouldn&rsquo;t boot. Fastboot appeared to be erasing the system partition each time I loaded another sparsechunk file.</p>
 
-<p>So I looked in the flashfile.xml, which appears to contain the instructions for flashing and found a couple of extra commands, which stopped fastboot erasing the partitions. This doesn&#8217;t appear to be in the xdadevelopers forum thread, or I couldn&#8217;t find it. So the commands for flashing the phone are:</p>
+<p>So I looked in the flashfile.xml, which appears to contain the instructions for flashing and found a couple of extra commands, which stopped fastboot erasing the partitions. This doesn&rsquo;t appear to be in the xdadevelopers forum thread, or I couldn&rsquo;t find it. So the commands for flashing the phone are:</p>
 
 <pre>
 mfastboot oem fb_mode_set
@@ -219,7 +219,7 @@ mfastboot oem fb_mode_clear
 mfastboot reboot
 </pre>
 
-<p>This worked fine and the phone booted up into Lollipop ok. Having done that, I was able to install Cyanogenmod (cm-12.1-20151117-SNAPSHOT-YOG7DAO1K9-falcon.zip) without too much difficulty. I also found a copy of the MotoCamera app <a href="http://forum.xda-developers.com/devdb/project/dl/?id=15250">here</a>, which I installed, and a replacement <a href="http://forum.xda-developers.com/showthread.php?t=2548530">boot logo file</a> which replaced the annoying unlock warning boot message. It probably wasn&#8217;t necessary to install all of the factory images, just installing the updated partition, motoboot, logo and recovery images would have allowed me to install the latest Cyanogenmod .</p>
+<p>This worked fine and the phone booted up into Lollipop ok. Having done that, I was able to install Cyanogenmod (cm-12.1-20151117-SNAPSHOT-YOG7DAO1K9-falcon.zip) without too much difficulty. I also found a copy of the MotoCamera app <a href="http://forum.xda-developers.com/devdb/project/dl/?id=15250">here</a>, which I installed, and a replacement <a href="http://forum.xda-developers.com/showthread.php?t=2548530">boot logo file</a> which replaced the annoying unlock warning boot message. It probably wasn&rsquo;t necessary to install all of the factory images, just installing the updated partition, motoboot, logo and recovery images would have allowed me to install the latest Cyanogenmod .</p>
 
 <p><img src="images/2016/09/Screenshot_2016-09-18-21-23-45.png" alt="Screenshot" /></p>
 

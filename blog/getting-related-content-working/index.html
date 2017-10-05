@@ -49,7 +49,7 @@ There are four parts - you need to create a new partial template in layouts/part
 
 
 
-<meta name="generator" content="Hugo 0.27.1" />
+<meta name="generator" content="Hugo 0.29" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -196,35 +196,32 @@ that out, I had to look at the various threads on the
 
 <p>There are four parts - you need to create a new partial template in
 <code>layouts/partials/related.html</code> containing something like this:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>{{ $related := .Site.RegularPages.Related . | first 5 }}
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ $related := .Site.RegularPages.Related . | first 5 }}
 {{ with $related }}
-&lt;<span style="color: #008000; font-weight: bold">hr</span>&gt;
-&lt;<span style="color: #008000; font-weight: bold">h3</span>&gt;See Also&lt;/<span style="color: #008000; font-weight: bold">h3</span>&gt;
-&lt;<span style="color: #008000; font-weight: bold">ul</span>&gt;
+&lt;<span style="color:#008000;font-weight:bold">hr</span>&gt;
+&lt;<span style="color:#008000;font-weight:bold">h3</span>&gt;See Also&lt;/<span style="color:#008000;font-weight:bold">h3</span>&gt;
+&lt;<span style="color:#008000;font-weight:bold">ul</span>&gt;
   {{ range . }}
-  &lt;<span style="color: #008000; font-weight: bold">li</span>&gt;&lt;<span style="color: #008000; font-weight: bold">a</span> <span style="color: #BB4444">href</span><span style="color: #666666">=</span><span style="color: #BB4444">&quot;{{ .RelPermalink }}&quot;</span>&gt;{{ safeHTML .Title }}&lt;/<span style="color: #008000; font-weight: bold">a</span>&gt;&lt;/<span style="color: #008000; font-weight: bold">li</span>&gt;
+  &lt;<span style="color:#008000;font-weight:bold">li</span>&gt;&lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#b44">href</span><span style="color:#666">=</span><span style="color:#b44">&#34;{{ .RelPermalink }}&#34;</span>&gt;{{ safeHTML .Title }}&lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;&lt;/<span style="color:#008000;font-weight:bold">li</span>&gt;
   {{ end }}
-&lt;/<span style="color: #008000; font-weight: bold">ul</span>&gt;
-{{ end }}
-</pre></div>
-
+&lt;/<span style="color:#008000;font-weight:bold">ul</span>&gt;
+{{ end }}</code></pre>
+</div>
 <p>You need to add a reference to your new partial template in your single page template in <code>layouts/_default/single.html</code> possibly near the end:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    {{ partial &quot;related&quot; . }}
-</pre></div>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    {{ partial &#34;related&#34; . }}</code></pre>
+</div>
 <p>You need to add some configuration options to your config file:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>related:
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">related:
   threshold: 10
   toLower: true
   indices:
     - name: keywords
-      weight: 150
-</pre></div>
-
+      weight: 150</code></pre>
+</div>
 <p>You need to add some keywords to the front matter of your posts. I
 tried tags initially, but couldn&rsquo;t get it to work, so I tried
 keywords:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #0000FF; font-weight: bold">---</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
 title: Handling run time changes in Android
 author: Bill Farmer
 type: post
@@ -237,9 +234,8 @@ keywords:
   - configuration
   - fragment
   - singleton
-<span style="color: #0000FF; font-weight: bold">---</span>
-</pre></div>
-
+---</code></pre>
+</div>
 <p>You then have to go through all your posts and add keywords to the
 front matter.</p>
 
