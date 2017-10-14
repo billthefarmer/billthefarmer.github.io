@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2017 Bill Farmer</copyright>
-    <lastBuildDate>Wed, 13 Sep 2017 11:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Oct 2017 12:59:06 +0100</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Markdown OpenStreetMap Maps</title>
+      <link>https://billthefarmer.github.io/blog/markdown-openstreetmap-maps/</link>
+      <pubDate>Sat, 14 Oct 2017 12:59:06 +0100</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/markdown-openstreetmap-maps/</guid>
+      <description>There does not seem to be a convention for showing maps or co-ordinates in Markdown, but almost anything gets put in square brackets [&amp;lt;anything&amp;gt;].
+I had a request from Marco the other day to put OpenStreetMap maps in my Diary app using
+ [&amp;lt;lat&amp;gt;,&amp;lt;lng&amp;gt;]  syntax. So I did a bit of a search to see if there was a convention in Markdown for co-ordinates and couldn&amp;rsquo;t find anything. So we seem to have broken new ground here.</description>
+    </item>
     
     <item>
       <title>Getting Related Content working</title>
