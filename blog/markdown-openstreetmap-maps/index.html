@@ -36,7 +36,7 @@ I had a request from Marco the other day to put OpenStreetMap maps in my Diary a
 
 
 <meta itemprop="dateModified" content="2017-10-14T12:59:06&#43;01:00" />
-<meta itemprop="wordCount" content="457">
+<meta itemprop="wordCount" content="489">
 
 
 
@@ -247,7 +247,24 @@ template for the iframe is</p>
 </div>
 <p>I have replaced the &lsquo;<code>%2C</code>&rsquo;s with commas, and changed the dimensions
 slightly, which seems to work OK. The android Java code to do this is</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// mapCheck
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// loadMarkdown
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">loadMarkdown</span><span style="color:#666">(</span>String text<span style="color:#666">)</span>
+    <span style="color:#666">{</span>
+        markdownView<span style="color:#666">.</span><span style="color:#b44">loadMarkdown</span><span style="color:#666">(</span>getBaseUrl<span style="color:#666">(),</span> markdownCheck<span style="color:#666">(</span>text<span style="color:#666">),</span>
+                                  getStyles<span style="color:#666">());</span>
+    <span style="color:#666">}</span>
+
+    <span style="color:#080;font-style:italic">// markdownCheck
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> String <span style="color:#00a000">markdownCheck</span><span style="color:#666">(</span>String text<span style="color:#666">)</span>
+    <span style="color:#666">{</span>
+        <span style="color:#080;font-style:italic">// Check for media
+</span><span style="color:#080;font-style:italic"></span>        text <span style="color:#666">=</span> mediaCheck<span style="color:#666">(</span>text<span style="color:#666">);</span>
+
+        <span style="color:#080;font-style:italic">// Check for map
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">return</span> mapCheck<span style="color:#666">(</span>text<span style="color:#666">);</span>
+    <span style="color:#666">}</span>
+
+    <span style="color:#080;font-style:italic">// mapCheck
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> String <span style="color:#00a000">mapCheck</span><span style="color:#666">(</span>String text<span style="color:#666">)</span>
     <span style="color:#666">{</span>
         StringBuffer buffer <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> StringBuffer<span style="color:#666">();</span>
