@@ -36,7 +36,7 @@ I had a request from Marco the other day to put OpenStreetMap maps in my Diary a
 
 
 <meta itemprop="dateModified" content="2017-10-14T12:59:06&#43;01:00" />
-<meta itemprop="wordCount" content="489">
+<meta itemprop="wordCount" content="513">
 
 
 
@@ -230,20 +230,22 @@ that looks like the above. The obvious tool in android Java is the
 <a href="https://developer.android.com/reference/java/util/regex/Pattern.html">Pattern</a> and <a href="https://developer.android.com/reference/java/util/regex/Matcher.html">Matcher</a> classes, which parse regular
 expressions. The regular expression for the pattern is</p>
 
-<pre><code>    &quot;\\[(\\d+[,.]\\d+)[,;](\\d+[,.]\\d+)\\]&quot;
+<pre><code>    &quot;\\[(?:osm:)?(-?\\d+[,.]\\d+)[,;](-?\\d+[,.]\\d+)\\]&quot;
 </code></pre>
 
 <p>The double backslashes are because it&rsquo;s a string, so one of them will
 be removed before the matcher gets to see it. I also have to deal with
-European locales which use different conventions for co-ordinates. The
-template for the iframe is</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &#34;&lt;<span style="color:#008000;font-weight:bold">iframe</span> <span style="color:#b44">width</span><span style="color:#666">=</span><span style="color:#b44">\&#34;560\&#34;</span> <span style="color:#b44">height</span><span style="color:#666">=</span><span style="color:#b44">\&#34;420\&#34;</span> <span style="color:#b44">src</span><span style="color:#666">=</span><span style="color:#b44">\&#34;http://www.openstreetmap.org/export/embed.html?</span>
+European locales which use different conventions for co-ordinates. I
+added the option to have a prefix &lsquo;<code>osm:</code>&rsquo;, as using prefixes seems to
+be a markdown convention. It also allows for having different
+maps. The template for the iframe is</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &#34;&lt;<span style="color:#008000;font-weight:bold">iframe</span> <span style="color:#b44">width</span><span style="color:#666">=</span><span style="color:#b44">\&#34;560\&#34;</span> <span style="color:#b44">height</span><span style="color:#666">=</span><span style="color:#b44">\&#34;420\&#34;</span>
+    <span style="color:#b44">src</span><span style="color:#666">=</span><span style="color:#b44">\&#34;http://www.openstreetmap.org/export/embed.html?</span>
     <span style="color:#b44">bbox</span><span style="color:#666">=</span><span style="color:#b44">%f,%f,%f,%f&amp;layer=mapnik\&#34;</span>
     <span style="color:#b44">style</span><span style="color:#666">=</span><span style="color:#b44">\&#34;border:</span> <span style="color:#b44">1px</span> <span style="color:#b44">solid</span> <span style="color:#b44">black</span><span style="">\&#34;</span>&gt;
     &lt;/<span style="color:#008000;font-weight:bold">iframe</span>&gt;&lt;<span style="color:#008000;font-weight:bold">br</span>/&gt;
-    &lt;<span style="color:#008000;font-weight:bold">small</span>&gt;
-    &lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#b44">href</span><span style="color:#666">=</span><span style="color:#b44">\&#34;http://www.openstreetmap.org/#map=16/%f/%f\&#34;</span>&gt;View Larger Map&lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;
-    &lt;/<span style="color:#008000;font-weight:bold">small</span>&gt;\n&#34;</code></pre>
+    &lt;<span style="color:#008000;font-weight:bold">small</span>&gt;&lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#b44">href</span><span style="color:#666">=</span><span style="color:#b44">\&#34;http://www.openstreetmap.org/#map=16/%f/%f\&#34;</span>&gt;
+    View Larger Map&lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;&lt;/<span style="color:#008000;font-weight:bold">small</span>&gt;\n&#34;</code></pre>
 </div>
 <p>I have replaced the &lsquo;<code>%2C</code>&rsquo;s with commas, and changed the dimensions
 slightly, which seems to work OK. The android Java code to do this is</p>
