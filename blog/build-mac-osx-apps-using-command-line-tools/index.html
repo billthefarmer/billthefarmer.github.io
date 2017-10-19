@@ -34,7 +34,7 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
 
 
 <meta itemprop="dateModified" content="2016-02-02T17:59:09&#43;00:00" />
-<meta itemprop="wordCount" content="455">
+<meta itemprop="wordCount" content="541">
 
 
 
@@ -188,7 +188,9 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
       </small>
     </div>
     <p>
-      <p>You will need to install the Xcode command line tools, you don&rsquo;t need the Xcode app. The easiest way to do this is to attempt to build an app like emacs by typing <code>./configure</code> on the command line. A dialog box will pop up asking if you want to download and install the tools.</p>
+      
+
+<p>You will need to install the Xcode command line tools, you don&rsquo;t need the Xcode app. The easiest way to do this is to attempt to build an app like emacs by typing <code>./configure</code> on the command line. A dialog box will pop up asking if you want to download and install the tools.</p>
 
 <p>Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to find. You can type <code>gcc -help</code> or <code>clang -help</code> on the command line to get some info. I found two web pages with more useful info: <a href="http://clang.llvm.org/docs/CommandGuide/clang.html">http://clang.llvm.org/docs/CommandGuide/clang.html</a> and <a href="https://developer.apple.com/library/prerelease/mac/documentation/Porting/Conceptual/PortingUnix/compiling/compiling.html">https://developer.apple.com/library/prerelease/mac/documentation/Porting/Conceptual/PortingUnix/compiling/compiling.html</a>.</p>
 
@@ -293,6 +295,24 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
 <p><code>APPLLMS</code></p>
 
 <p><img src="images/2016/02/Emacs.png" alt="Emacs" /></p>
+
+<h3 id="swift-apps">Swift Apps</h3>
+
+<p>This can be extended to build <a href="https://www.apple.com/uk/swift">Swift</a> apps using a similar
+Makefile. You need to add the swift compiler and a list of your source
+files and compiler flags.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile">  <span style="color:#b8860b">SWIFTC</span><span style="color:#666">=</span>swiftc
+  <span style="color:#b8860b">SOURCES</span><span style="color:#666">=</span>AppDelegate.swift, &lt;rest of <span style="color:#a2f">source</span> files&gt;
+  <span style="">FLAGS=-mmacosx-version-min=10.9</span></code></pre>
+</div>
+<p>You don&rsquo;t seem to need <code>-framework</code> as Swift seems to sort that out
+itself from the import statements in the source files. The
+<code>-mmacosx-version-min=10.9</code> may be redundant as well. The compile
+lines are</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="color:#00a000">$(APPNAME)</span><span style="color:#666">:</span> <span style="color:#a2f;font-weight:bold">$(</span><span style="color:#b8860b">SOURCES</span><span style="color:#a2f;font-weight:bold">)</span>
+	<span style="color:#a2f;font-weight:bold">$(</span><span style="color:#b8860b">SWIFTC</span><span style="color:#a2f;font-weight:bold">)</span> <span style="color:#a2f;font-weight:bold">$(</span><span style="color:#b8860b">SOURCES</span><span style="color:#a2f;font-weight:bold">)</span> <span style="">-o</span> <span style="color:#a2f;font-weight:bold">$(</span><span style="color:#b8860b">APPNAME</span><span style="color:#a2f;font-weight:bold">)</span> <span style="color:#a2f;font-weight:bold">$(</span><span style="color:#b8860b">FLAGS</span><span style="color:#a2f;font-weight:bold">)</span></code></pre>
+</div>
+<p>The app and icon building part is identical.</p>
 
     </p>
     
