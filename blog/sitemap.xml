@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://billthefarmer.github.io/blog/using-emacs-in-android-development/</loc>
+    <lastmod>2017-10-19T15:51:28+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://billthefarmer.github.io/blog/markdown-openstreetmap-maps/</loc>
     <lastmod>2017-10-14T12:59:06+01:00</lastmod>
   </url>
@@ -299,7 +304,7 @@
   
   <url>
     <loc>https://billthefarmer.github.io/blog/</loc>
-    <lastmod>2017-10-14T12:59:06+01:00</lastmod>
+    <lastmod>2017-10-19T15:51:28+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -316,13 +321,13 @@
   
   <url>
     <loc>https://billthefarmer.github.io/blog/categories/hacking/</loc>
-    <lastmod>2017-10-14T12:59:06+01:00</lastmod>
+    <lastmod>2017-10-19T15:51:28+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://billthefarmer.github.io/blog/post/</loc>
-    <lastmod>2017-10-14T12:59:06+01:00</lastmod>
+    <lastmod>2017-10-19T15:51:28+01:00</lastmod>
     <priority>0</priority>
   </url>
   

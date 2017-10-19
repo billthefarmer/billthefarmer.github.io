@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2017 Bill Farmer</copyright>
-    <lastBuildDate>Sat, 14 Oct 2017 12:59:06 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 19 Oct 2017 15:51:28 +0100</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using Emacs in Android Development</title>
+      <link>https://billthefarmer.github.io/blog/using-emacs-in-android-development/</link>
+      <pubDate>Thu, 19 Oct 2017 15:51:28 +0100</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/using-emacs-in-android-development/</guid>
+      <description>I&amp;rsquo;ve got a folder full of country flags which I have renamed using scripts so the names correspond to currency symbols. I want an integer array with references to the flags as android resources. This can be automated using emacs.
+I get a list of the file names into a buffer using find, which I then open with emacs.
+% find src/ -name flag* &amp;gt; data/sym-flags.lst  They are already sorted, but just to make sure I use M-x sort-lines.</description>
+    </item>
     
     <item>
       <title>Markdown OpenStreetMap Maps</title>
