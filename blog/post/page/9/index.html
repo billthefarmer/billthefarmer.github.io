@@ -13,7 +13,7 @@
 
 
 
-<meta property="og:updated_time" content="2014-05-27T18:53:22&#43;00:00"/>
+<meta property="og:updated_time" content="2014-06-04T15:45:20&#43;00:00"/>
 
 
 
@@ -160,6 +160,71 @@
 
 <div class="blog-post">
   <h3>
+    <a href="https://billthefarmer.github.io/blog/concurrency-threads-semaphores-and-mutexes/">Concurrency, Threads, Semaphores and Mutexes</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2014-06-04T15:45:20Z">
+        Wed Jun 4, 2014
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    I have written several applications in both Java and C that involve running an audio thread in the background to read or write audio from or to the audio system while displaying the results and interacting with the user in the foreground. I have used lots of threads, but never a semaphore or mutex apart from the odd boolean variable.
+This issue is reminiscent of back in the day when you actually had or could get a circuit diagram of your computer and could understand it.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/concurrency-threads-semaphores-and-mutexes/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/upgrading-wordpress/">Upgrading WordPress</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2014-05-28T11:05:54Z">
+        Wed May 28, 2014
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    This site has the firewall set up so that the web server has no external access. This means that I can&rsquo;t use the usual WordPress update mechanism to keep it up to date. I use FileZilla for maintaining the server, and I recently discovered you can use drag and drop to move stuff around remotely.
+So my easy WordPress upgrade method is:
+ Download the latest zip file and unzip it.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/upgrading-wordpress/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
     <a href="https://billthefarmer.github.io/blog/faggots-and-peas-with-onion-gravy/">Faggots and Peas with Onion Gravy</a>
   </h3>
   <div class="callout small">
@@ -252,71 +317,6 @@ Ingredients  375g or thereabouts packet of dried butter beans 4-500g belly pork 
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/vegetable-soup-plus/">Vegetable Soup Plus</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2014-04-26T17:33:36Z">
-        Sat Apr 26, 2014
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/recipes">
-        Recipes
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    A vegetable soup with a bit of meat that’s full of flavour. Similar to leek and potato soup recipe. Make it into a meal with plenty of bread and butter. Enough for two, double the recipe for four.
-Ingredients  1 tbsp olive oil 1 onion, chopped 1 small potato, cubed 1 clove garlic, crushed 1&frasl;2 a fresh chilli, if desired Additional vegetables as available: grated carrot, leek, courgette, cabbage, etc a few slices of chorizo or other tasty sausage, chopped Freshly ground black pepper Milk  Method  Heat the oil in a large pan and add the vegetables and sausage.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/vegetable-soup-plus/'>Read more →</a>
-  <hr>
-</div>
-
-
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/haskell/">Haskell</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2014-03-29T15:26:14Z">
-        Sat Mar 29, 2014
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I&rsquo;s give it a go and see how I got on.
-You can try it out in your browser: http://tryhaskell.org
-λ let factorial n = product [1..n] in factorial 99 9332621544394415268169923885626670049071596826438162146859 2963895217599993229915608941463976156518286253697920827223 7582511852109168640000000000000000000000 :: (Enum a, Num a) =&gt; a λ   Pretty impressive! So I thought I&rsquo;d try a simple web application.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/haskell/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -341,6 +341,14 @@ You can try it out in your browser: http://tryhaskell.org
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/thai-red-curry-with-noodles/">
+        Thai Red Curry with Noodles
+      </a></li>
+    
+      <li><a href="/blog/carrot-and-coriander-soup/">
+        Carrot and Coriander Soup
+      </a></li>
     
       <li><a href="/blog/using-emacs-in-android-development/">
         Using Emacs in Android Development
@@ -372,14 +380,6 @@ You can try it out in your browser: http://tryhaskell.org
     
       <li><a href="/blog/vegetables-cooked-in-olive-oil/">
         Vegetables cooked in olive oil
-      </a></li>
-    
-      <li><a href="/blog/slow-cooked-ox-cheek/">
-        Slow cooked ox cheek
-      </a></li>
-    
-      <li><a href="/blog/handling-run-time-changes-in-android/">
-        Handling run time changes in Android
       </a></li>
     
   </ul>

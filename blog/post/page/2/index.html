@@ -13,7 +13,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-08-19T14:30:00&#43;00:00"/>
+<meta property="og:updated_time" content="2017-09-05T14:54:25&#43;01:00"/>
 
 
 
@@ -160,6 +160,71 @@
 
 <div class="blog-post">
   <h3>
+    <a href="https://billthefarmer.github.io/blog/adding-a-calendar-event/">Adding a calendar event in android</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2017-09-05T14:54:25&#43;01:00">
+        Tue Sep 5, 2017
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    The android docs for the Calendar Provider are quite useful, but recommend the use of an AsyncQueryHandler for querying or adding events to calendars in an asynchronous thread. However the AsyncQueryHandler docs don&rsquo;t include much guidance as to how to use it.
+To add an entry to an android calendar you first have to find out the calendar id using an asynchronous query on the calendars table.
+// QueryHandler public class QueryHandler extends AsyncQueryHandler { private static final String TAG = &#34;QueryHandler&#34;; // Projection arrays  private static final String[] CALENDAR_PROJECTION = new String[] { Calendars.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/adding-a-calendar-event/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/whatever-o-meter-revisited/">Whatever-o-meter revisited</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2017-08-24T11:47:00&#43;01:00">
+        Thu Aug 24, 2017
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    I wrote the whatever-o-meter about five years ago in PHP and Javascript as a Wordpress plugin. As I have migrated my blog to Hugo, I thought to have a go at reimplementing it. The exporter I used made a good job of translating the Wordpress custom fields to Hugo front matter parameters. I had to put dashes in quotes, otherwise they get interpreted as [&lt;nil&gt;].
+intro: Please answer the following questions carefully and truthfully.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/whatever-o-meter-revisited/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
     <a href="https://billthefarmer.github.io/blog/migrating-blog-from-wordpress/">Migrating this blog from Wordpress</a>
   </h3>
   <div class="callout small">
@@ -253,70 +318,6 @@ Ingredients  Sliced onions Potatoes Carrots Whatever green veg is to hand Olive 
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/slow-cooked-ox-cheek/">Slow cooked ox cheek</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2017-04-26T10:09:36Z">
-        Wed Apr 26, 2017
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/recipes">
-        Recipes
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-     Ox cheek is a tasty cut of beef, but it contains tough connective tissue which melts away when slow cooked.
-Ingredients  Ox cheek 4-6 chopped onions 3-4 large carrots Olive oil Black pepper Bay leaves  Method  Put ox cheek in slow cooker and set to high heat Put a couple of bay leaves in the pot, grind black pepper over the meat and pour some olive oil over it Surround the meat with chopped onions and chopped carrots Put on the lid and allow to cook for a while When bubbling melted down onion and meat juices become visible around the meat, turn the heat down to low Allow to cook for 4-5 hours Enjoy with potatoes and green veg  
-  </p>
-  <a href='https://billthefarmer.github.io/blog/slow-cooked-ox-cheek/'>Read more →</a>
-  <hr>
-</div>
-
-
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/handling-run-time-changes-in-android/">Handling run time changes in Android</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2017-01-08T18:49:31Z">
-        Sun Jan 8, 2017
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    Two articles, Handling Configuration Changes and Handling Configuration Changes with Fragments recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:
- An android fragment is quite a complex heavyweight object to use just for retaining data and possibly a background task, and the fragment management is not simple. Fragments are not retained if the associated activity is discarded by calling finish().
-  </p>
-  <a href='https://billthefarmer.github.io/blog/handling-run-time-changes-in-android/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -341,6 +342,14 @@ Ingredients  Ox cheek 4-6 chopped onions 3-4 large carrots Olive oil Black peppe
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/thai-red-curry-with-noodles/">
+        Thai Red Curry with Noodles
+      </a></li>
+    
+      <li><a href="/blog/carrot-and-coriander-soup/">
+        Carrot and Coriander Soup
+      </a></li>
     
       <li><a href="/blog/using-emacs-in-android-development/">
         Using Emacs in Android Development
@@ -372,14 +381,6 @@ Ingredients  Ox cheek 4-6 chopped onions 3-4 large carrots Olive oil Black peppe
     
       <li><a href="/blog/vegetables-cooked-in-olive-oil/">
         Vegetables cooked in olive oil
-      </a></li>
-    
-      <li><a href="/blog/slow-cooked-ox-cheek/">
-        Slow cooked ox cheek
-      </a></li>
-    
-      <li><a href="/blog/handling-run-time-changes-in-android/">
-        Handling run time changes in Android
       </a></li>
     
   </ul>
