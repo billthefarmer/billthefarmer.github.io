@@ -34,7 +34,7 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
 
 
 <meta itemprop="dateModified" content="2016-02-02T17:59:09&#43;00:00" />
-<meta itemprop="wordCount" content="541">
+<meta itemprop="wordCount" content="549">
 
 
 
@@ -300,7 +300,7 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
 
 <p>This can be extended to build <a href="https://www.apple.com/uk/swift">Swift</a> apps using a similar
 Makefile. You need to add the swift compiler and a list of your source
-files and compiler flags.</p>
+files and compiler flags. Xcode needs to be installed to use Swift.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile">  <span style="color:#b8860b">SWIFTC</span><span style="color:#666">=</span>swiftc
   <span style="color:#b8860b">SOURCES</span><span style="color:#666">=</span>AppDelegate.swift, &lt;rest of <span style="color:#a2f">source</span> files&gt;
   <span style="">FLAGS=-mmacosx-version-min=10.9</span></code></pre>
