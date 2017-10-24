@@ -36,7 +36,7 @@ I had a request from Marco the other day to put OpenStreetMap maps in my Diary a
 
 
 <meta itemprop="dateModified" content="2017-10-14T12:59:06&#43;01:00" />
-<meta itemprop="wordCount" content="513">
+<meta itemprop="wordCount" content="591">
 
 
 
@@ -191,7 +191,9 @@ I had a request from Marco the other day to put OpenStreetMap maps in my Diary a
       </small>
     </div>
     <p>
-      <p>There does not seem to be a convention for showing maps or
+      
+
+<p>There does not seem to be a convention for showing maps or
 co-ordinates in Markdown, but almost anything gets put in square
 brackets <code>[&lt;anything&gt;]</code>.</p>
 
@@ -317,6 +319,16 @@ fussy. It is important to use the <code>&quot;en&quot;</code> locale so the outp
 dots for decimal points. The <a href="https://developer.android.com/reference/java/util/regex/Matcher.html#appendReplacement(java.lang.StringBuffer,%20java.lang.String)">appendReplacement</a> and
 <a href="https://developer.android.com/reference/java/util/regex/Matcher.html#appendTail(java.lang.StringBuffer)">appendTail</a> Java methods are ready made for this pattern matching
 and replacement.</p>
+
+<h4 id="update">Update</h4>
+
+<p>After I had implemented this It was suggested that perhaps I should be
+using a geo Uri (<code>![](geo:&lt;lat,&lt;lng&gt;)</code>) for the map markdown syntax. I
+hadn&rsquo;t thought of that, and it raises the possibility of receiving a
+geo Uri and turning it into a map. So I decided to convert existing
+<code>[&lt;lat&gt;,&lt;lng&gt;]</code> markdown to <code>![osm](geo:&lt;lat&gt;,&lt;lng&gt;)</code> markdown, and
+convert that to an iframe as before. The code to do that is very
+similar to the above with updated templates.</p>
 
     </p>
     
