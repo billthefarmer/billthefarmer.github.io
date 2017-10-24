@@ -15,6 +15,7 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
 
 
 <meta property="article:published_time" content="2016-02-02T17:59:09&#43;00:00"/>
+
 <meta property="article:modified_time" content="2016-02-02T17:59:09&#43;00:00"/>
 
 
@@ -33,6 +34,7 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
 Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to find. You can type gcc -help or clang -help on the command line to get some info.">
 
 
+<meta itemprop="datePublished" content="2016-02-02T17:59:09&#43;00:00" />
 <meta itemprop="dateModified" content="2016-02-02T17:59:09&#43;00:00" />
 <meta itemprop="wordCount" content="549">
 
@@ -49,7 +51,7 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
 
 
 
-<meta name="generator" content="Hugo 0.29" />
+<meta name="generator" content="Hugo 0.30.2" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -256,8 +258,8 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
 	<span style="color:#a2f;font-weight:bold">$(</span>SIPS<span style="color:#a2f;font-weight:bold">)</span> -z <span style="color:#666">512</span> <span style="color:#666">512</span> <span style="color:#a2f;font-weight:bold">$(</span>APPNAME<span style="color:#a2f;font-weight:bold">)</span>.png --out <span style="color:#a2f;font-weight:bold">$(</span>APPNAME<span style="color:#a2f;font-weight:bold">)</span>.iconset/icon_512x512.png
 	<span style="color:#a2f;font-weight:bold">$(</span>CP<span style="color:#a2f;font-weight:bold">)</span> <span style="color:#a2f;font-weight:bold">$(</span>APPNAME<span style="color:#a2f;font-weight:bold">)</span>.png <span style="color:#a2f;font-weight:bold">$(</span>APPNAME<span style="color:#a2f;font-weight:bold">)</span>.iconset/icon_512x512@2x.png
 	iconutil -c icns -o <span style="color:#a2f;font-weight:bold">$(</span>APPNAME<span style="color:#a2f;font-weight:bold">)</span>.icns <span style="color:#a2f;font-weight:bold">$(</span>APPNAME<span style="color:#a2f;font-weight:bold">)</span>.iconset
-	<span style="color:#a2f;font-weight:bold">$(</span><span style="color:#b8860b">RM</span><span style="color:#a2f;font-weight:bold">)</span> <span style="">-r</span> <span style="color:#a2f;font-weight:bold">$(</span><span style="color:#b8860b">APPNAME</span><span style="color:#a2f;font-weight:bold">)</span><span style="">.iconset</span></code></pre>
-</div>
+	<span style="color:#a2f;font-weight:bold">$(</span>RM<span style="color:#a2f;font-weight:bold">)</span> -r <span style="color:#a2f;font-weight:bold">$(</span>APPNAME<span style="color:#a2f;font-weight:bold">)</span>.iconset
+</code></pre></div>
 <p>This compiles the code, makes an icon file from an image and builds the app structure. The reason for the <code>-Wno-deprecated-declarations</code> is that this app was first written on OSX 10.4 using Carbon and I&rsquo;m compiling for 10.6. You need two other text files <code>Info,plist</code> and <code>PkgInfo</code>.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
 <span style="color:#080">&lt;!DOCTYPE plist PUBLIC &#34;-//Apple//DTD PLIST 1.0//EN&#34;
@@ -288,8 +290,7 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
     <span style="color:#008000;font-weight:bold">&lt;key&gt;</span>LSApplicationCategoryType<span style="color:#008000;font-weight:bold">&lt;/key&gt;</span>
     <span style="color:#008000;font-weight:bold">&lt;string&gt;</span>public.app-category.utilities<span style="color:#008000;font-weight:bold">&lt;/string&gt;</span>
   <span style="color:#008000;font-weight:bold">&lt;/dict&gt;</span>
-<span style="color:#008000;font-weight:bold">&lt;/plist&gt;</span></code></pre>
-</div>
+<span style="color:#008000;font-weight:bold">&lt;/plist&gt;</span></code></pre></div>
 <p>The PkgInfo file is just one line, the package type and the app signature concatenated.</p>
 
 <p><code>APPLLMS</code></p>
@@ -303,15 +304,15 @@ Makefile. You need to add the swift compiler and a list of your source
 files and compiler flags. Xcode needs to be installed to use Swift.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile">  <span style="color:#b8860b">SWIFTC</span><span style="color:#666">=</span>swiftc
   <span style="color:#b8860b">SOURCES</span><span style="color:#666">=</span>AppDelegate.swift, &lt;rest of <span style="color:#a2f">source</span> files&gt;
-  <span style="">FLAGS=-mmacosx-version-min=10.9</span></code></pre>
-</div>
+  <span style="color:#b8860b">FLAGS</span><span style="color:#666">=</span>-mmacosx-version-min<span style="color:#666">=</span><span style="color:#666">10</span>.9
+</code></pre></div>
 <p>You don&rsquo;t seem to need <code>-framework</code> as Swift seems to sort that out
 itself from the import statements in the source files. The
 <code>-mmacosx-version-min=10.9</code> may be redundant as well. The compile
 lines are</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="color:#00a000">$(APPNAME)</span><span style="color:#666">:</span> <span style="color:#a2f;font-weight:bold">$(</span><span style="color:#b8860b">SOURCES</span><span style="color:#a2f;font-weight:bold">)</span>
-	<span style="color:#a2f;font-weight:bold">$(</span><span style="color:#b8860b">SWIFTC</span><span style="color:#a2f;font-weight:bold">)</span> <span style="color:#a2f;font-weight:bold">$(</span><span style="color:#b8860b">SOURCES</span><span style="color:#a2f;font-weight:bold">)</span> <span style="">-o</span> <span style="color:#a2f;font-weight:bold">$(</span><span style="color:#b8860b">APPNAME</span><span style="color:#a2f;font-weight:bold">)</span> <span style="color:#a2f;font-weight:bold">$(</span><span style="color:#b8860b">FLAGS</span><span style="color:#a2f;font-weight:bold">)</span></code></pre>
-</div>
+	<span style="color:#a2f;font-weight:bold">$(</span>SWIFTC<span style="color:#a2f;font-weight:bold">)</span> <span style="color:#a2f;font-weight:bold">$(</span>SOURCES<span style="color:#a2f;font-weight:bold">)</span> -o <span style="color:#a2f;font-weight:bold">$(</span>APPNAME<span style="color:#a2f;font-weight:bold">)</span> <span style="color:#a2f;font-weight:bold">$(</span>FLAGS<span style="color:#a2f;font-weight:bold">)</span>
+</code></pre></div>
 <p>The app and icon building part is identical.</p>
 
     </p>

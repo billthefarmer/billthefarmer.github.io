@@ -15,6 +15,7 @@ There are four parts - you need to create a new partial template in layouts/part
 
 
 <meta property="article:published_time" content="2017-09-13T11:30:00&#43;00:00"/>
+
 <meta property="article:modified_time" content="2017-09-13T11:30:00&#43;00:00"/>
 
 
@@ -33,8 +34,9 @@ There are four parts - you need to create a new partial template in layouts/part
 There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:">
 
 
+<meta itemprop="datePublished" content="2017-09-13T11:30:00&#43;00:00" />
 <meta itemprop="dateModified" content="2017-09-13T11:30:00&#43;00:00" />
-<meta itemprop="wordCount" content="228">
+<meta itemprop="wordCount" content="189">
 
 
 
@@ -49,7 +51,7 @@ There are four parts - you need to create a new partial template in layouts/part
 
 
 
-<meta name="generator" content="Hugo 0.29" />
+<meta name="generator" content="Hugo 0.30.2" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -205,37 +207,33 @@ that out, I had to look at the various threads on the
   &lt;<span style="color:#008000;font-weight:bold">li</span>&gt;&lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#b44">href</span><span style="color:#666">=</span><span style="color:#b44">&#34;{{ .RelPermalink }}&#34;</span>&gt;{{ safeHTML .Title }}&lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;&lt;/<span style="color:#008000;font-weight:bold">li</span>&gt;
   {{ end }}
 &lt;/<span style="color:#008000;font-weight:bold">ul</span>&gt;
-{{ end }}</code></pre>
-</div>
+{{ end }}</code></pre></div>
 <p>You need to add a reference to your new partial template in your single page template in <code>layouts/_default/single.html</code> possibly near the end:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    {{ partial &#34;related&#34; . }}</code></pre>
-</div>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    {{ partial &#34;related&#34; . }}</code></pre></div>
 <p>You need to add some configuration options to your config file:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">related:
-  threshold: 10
-  toLower: true
-  indices:
-    - name: keywords
-      weight: 150</code></pre>
-</div>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">related:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>threshold:<span style="color:#bbb"> </span><span style="color:#666">10</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span>toLower:<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span>indices:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>-<span style="color:#bbb"> </span>name:<span style="color:#bbb"> </span>keywords<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>weight:<span style="color:#bbb"> </span><span style="color:#666">150</span></code></pre></div>
 <p>You need to add some keywords to the front matter of your posts. I
 tried tags initially, but couldn&rsquo;t get it to work, so I tried
 keywords:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-title: Handling run time changes in Android
-author: Bill Farmer
-type: post
-date: 2017-01-08T18:49:31+00:00
-url: /handling-run-time-changes-in-android/
-categories:
-  - Hacking
-keywords:
-  - android
-  - configuration
-  - fragment
-  - singleton
----</code></pre>
-</div>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---<span style="color:#bbb">
+</span><span style="color:#bbb"></span>title:<span style="color:#bbb"> </span>Handling<span style="color:#bbb"> </span>run<span style="color:#bbb"> </span>time<span style="color:#bbb"> </span>changes<span style="color:#bbb"> </span>in<span style="color:#bbb"> </span>Android<span style="color:#bbb">
+</span><span style="color:#bbb"></span>author:<span style="color:#bbb"> </span>Bill<span style="color:#bbb"> </span>Farmer<span style="color:#bbb">
+</span><span style="color:#bbb"></span>type:<span style="color:#bbb"> </span>post<span style="color:#bbb">
+</span><span style="color:#bbb"></span>date:<span style="color:#bbb"> </span>2017-01-08T18:49:31+<span style="color:#666">00</span>:<span style="color:#666">00</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>url:<span style="color:#bbb"> </span>/handling-run-time-changes-in-android/<span style="color:#bbb">
+</span><span style="color:#bbb"></span>categories:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>-<span style="color:#bbb"> </span>Hacking<span style="color:#bbb">
+</span><span style="color:#bbb"></span>keywords:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>-<span style="color:#bbb"> </span>android<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>-<span style="color:#bbb"> </span>configuration<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>-<span style="color:#bbb"> </span>fragment<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>-<span style="color:#bbb"> </span>singleton<span style="color:#bbb">
+</span><span style="color:#bbb"></span>---</code></pre></div>
 <p>You then have to go through all your posts and add keywords to the
 front matter.</p>
 

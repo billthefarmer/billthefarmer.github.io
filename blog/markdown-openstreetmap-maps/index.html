@@ -16,6 +16,7 @@ I had a request from Marco the other day to put OpenStreetMap maps in my Diary a
 
 
 <meta property="article:published_time" content="2017-10-14T12:59:06&#43;01:00"/>
+
 <meta property="article:modified_time" content="2017-10-14T12:59:06&#43;01:00"/>
 
 
@@ -35,6 +36,7 @@ I had a request from Marco the other day to put OpenStreetMap maps in my Diary a
  [&lt;lat&gt;,&lt;lng&gt;]  syntax. So I did a bit of a search to see if there was a convention in Markdown for co-ordinates and couldn&rsquo;t find anything. So we seem to have broken new ground here.">
 
 
+<meta itemprop="datePublished" content="2017-10-14T12:59:06&#43;01:00" />
 <meta itemprop="dateModified" content="2017-10-14T12:59:06&#43;01:00" />
 <meta itemprop="wordCount" content="591">
 
@@ -52,7 +54,7 @@ I had a request from Marco the other day to put OpenStreetMap maps in my Diary a
 
 
 
-<meta name="generator" content="Hugo 0.29" />
+<meta name="generator" content="Hugo 0.30.2" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -224,8 +226,7 @@ embedded map from their map page and customise it.</p>
   &lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#b44">href</span><span style="color:#666">=</span><span style="color:#b44">&#34;http://www.openstreetmap.org/#map=16/42.2651/3.1707&#34;</span>&gt;
     View Larger Map
   &lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;
-&lt;/<span style="color:#008000;font-weight:bold">small</span>&gt;</code></pre>
-</div>
+&lt;/<span style="color:#008000;font-weight:bold">small</span>&gt;</code></pre></div>
 <p>I have removed some non HTML5 code from the above. So the goal is to
 parse something that looks like <code>[42.265,3.17]</code> and produce something
 that looks like the above. The obvious tool in android Java is the
@@ -247,8 +248,7 @@ maps. The template for the iframe is</p>
     <span style="color:#b44">style</span><span style="color:#666">=</span><span style="color:#b44">\&#34;border:</span> <span style="color:#b44">1px</span> <span style="color:#b44">solid</span> <span style="color:#b44">black</span><span style="">\&#34;</span>&gt;
     &lt;/<span style="color:#008000;font-weight:bold">iframe</span>&gt;&lt;<span style="color:#008000;font-weight:bold">br</span>/&gt;
     &lt;<span style="color:#008000;font-weight:bold">small</span>&gt;&lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#b44">href</span><span style="color:#666">=</span><span style="color:#b44">\&#34;http://www.openstreetmap.org/#map=16/%f/%f\&#34;</span>&gt;
-    View Larger Map&lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;&lt;/<span style="color:#008000;font-weight:bold">small</span>&gt;\n&#34;</code></pre>
-</div>
+    View Larger Map&lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;&lt;/<span style="color:#008000;font-weight:bold">small</span>&gt;\n&#34;</code></pre></div>
 <p>I have replaced the &lsquo;<code>%2C</code>&rsquo;s with commas, and changed the dimensions
 slightly, which seems to work OK. The android Java code to do this is</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// loadMarkdown
@@ -309,8 +309,7 @@ slightly, which seems to work OK. The android Java code to do this is</p>
 </span><span style="color:#080;font-style:italic"></span>        matcher<span style="color:#666">.</span><span style="color:#b44">appendTail</span><span style="color:#666">(</span>buffer<span style="color:#666">);</span>
 
         <span style="color:#a2f;font-weight:bold">return</span> buffer<span style="color:#666">.</span><span style="color:#b44">toString</span><span style="color:#666">();</span>
-    <span style="color:#666">}</span></code></pre>
-</div>
+    <span style="color:#666">}</span></code></pre></div>
 <p>The input string is the markdown code to be parsed, the output is the
 same code with matched template substitutions. I have just added and
 subtracted 0.005 from the given co-ordinates to create a bounding box

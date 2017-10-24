@@ -14,6 +14,7 @@
 
 
 <meta property="article:published_time" content="2016-12-10T13:59:22&#43;00:00"/>
+
 <meta property="article:modified_time" content="2016-12-10T13:59:22&#43;00:00"/>
 
 
@@ -31,6 +32,7 @@
 <meta itemprop="description" content="I had to learn Emacs on Unix many years ago as it was at that time the only development environment for Smallworld Magik. Having learnt it, I have stuck with it as it provides a consistent platform for editing source code and building applications in as many computer languages and platforms as I have used and many more I haven&rsquo;t. It is the only source code editor I have used that always gets the indentation and syntax highlighting right.">
 
 
+<meta itemprop="datePublished" content="2016-12-10T13:59:22&#43;00:00" />
 <meta itemprop="dateModified" content="2016-12-10T13:59:22&#43;00:00" />
 <meta itemprop="wordCount" content="689">
 
@@ -46,7 +48,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.29" />
+<meta name="generator" content="Hugo 0.30.2" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -211,8 +213,7 @@
 
 <p>There are several ways of customising Emacs, but it all ends up in your ~/.emacs config file. First off, you need to install the Emacs packages you need, like groovy-mode for editing Android Gradle build files, JS3-mode for Javascript files, Markdown-mode for Github README files, yaml-mode for Travis Cl build files, etc. This is on the Options-&gt;Manage Emacs Packages menu. You can change some settings on the Options menu, like Options-&gt;Use CUA keys (Cut/Paste with C-x/C-c/C-v), but remember to Options-&gt;Save Options before you quit. Some of them are buried deeply in Options-&gt;Customise Emacs and can be a pain to find. It&rsquo;s easier to just put them in your ~/.emacs file. Examples are:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">    <span style="color:#666">&#39;</span>(<span style="color:#b8860b">c-basic-offset</span> <span style="color:#666">4</span>)
-    <span style="color:#666">&#39;</span>(<span style="color:#b8860b">c-offsets-alist</span> (<span style="color:#b8860b">quote</span> ((<span style="color:#b8860b">substatement-open</span> <span style="color:#666">.</span> <span style="color:#666">0</span>))))</code></pre>
-</div>
+    <span style="color:#666">&#39;</span>(<span style="color:#b8860b">c-offsets-alist</span> (<span style="color:#b8860b">quote</span> ((<span style="color:#b8860b">substatement-open</span> <span style="color:#666">.</span> <span style="color:#666">0</span>))))</code></pre></div>
 <p>That gives you an indent of four spaces for all code editing, and makes it put the opening bracket of if or for statements in the right place.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">    (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;auto-mode-alist</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;\\.c\\&#39;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">c++-mode</span>))
     (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;auto-mode-alist</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;\\.h\\&#39;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">c++-mode</span>))
@@ -228,8 +229,7 @@
     (<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;groovy-mode-hook</span>
     	  (<span style="color:#b8860b">lambda</span> ()
     	    (<span style="color:#b8860b">set</span> (<span style="color:#b8860b">make-local-variable</span> <span style="color:#b8860b">&#39;compile-command</span>)
-    		 <span style="color:#b44">&#34;gradle build&#34;</span>)))</code></pre>
-</div>
+    		 <span style="color:#b44">&#34;gradle build&#34;</span>)))</code></pre></div>
 <p>The above Lisp code makes Emacs use c++mode for .c and .h source files, change the compile command to &lsquo;ant debug&rsquo; for Android xml files, use groovy-mode for .gradle files and change the compile command to &lsquo;gradle build&rsquo; for Android gradle files.</p>
 
 <p>To use some of the options on the Tools menu, like diff, compile, egrep, etc., require the tools to be in your path. You can achieve this on windows by installing MSYS2 and making sure your path picks it up. Linux and OSX will have these tools installed if you are using it for development.</p>

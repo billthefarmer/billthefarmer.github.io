@@ -16,6 +16,7 @@ To add an entry to an android calendar you first have to find out the calendar i
 
 
 <meta property="article:published_time" content="2017-09-05T14:54:25&#43;01:00"/>
+
 <meta property="article:modified_time" content="2017-09-05T14:54:25&#43;01:00"/>
 
 
@@ -35,6 +36,7 @@ To add an entry to an android calendar you first have to find out the calendar i
 // QueryHandler public class QueryHandler extends AsyncQueryHandler { private static final String TAG = &#34;QueryHandler&#34;; // Projection arrays  private static final String[] CALENDAR_PROJECTION = new String[] { Calendars.">
 
 
+<meta itemprop="datePublished" content="2017-09-05T14:54:25&#43;01:00" />
 <meta itemprop="dateModified" content="2017-09-05T14:54:25&#43;01:00" />
 <meta itemprop="wordCount" content="531">
 
@@ -52,7 +54,7 @@ To add an entry to an android calendar you first have to find out the calendar i
 
 
 
-<meta name="generator" content="Hugo 0.29" />
+<meta name="generator" content="Hugo 0.30.2" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -244,12 +246,10 @@ calendar id using an asynchronous query on the calendars table.</p>
 
         queryHandler<span style="color:#666">.</span><span style="color:#b44">startQuery</span><span style="color:#666">(</span>CALENDAR<span style="color:#666">,</span> values<span style="color:#666">,</span> Calendars<span style="color:#666">.</span><span style="color:#b44">CONTENT_URI</span><span style="color:#666">,</span>
                                 CALENDAR_PROJECTION<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">);</span>
-    <span style="color:#666">}</span></code></pre>
-</div>
+    <span style="color:#666">}</span></code></pre></div>
 <p>This method is called from an app activity.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        QueryHandler<span style="color:#666">.</span><span style="color:#b44">insertEvent</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">,</span> startTime<span style="color:#666">.</span><span style="color:#b44">getTimeInMillis</span><span style="color:#666">(),</span>
-                                 endTime<span style="color:#666">.</span><span style="color:#b44">getTimeInMillis</span><span style="color:#666">(),</span> title<span style="color:#666">);</span></code></pre>
-</div>
+                                 endTime<span style="color:#666">.</span><span style="color:#b44">getTimeInMillis</span><span style="color:#666">(),</span> title<span style="color:#666">);</span></code></pre></div>
 <p>The <code>insertEvent()</code> method first creates a new <code>QueryHandler</code> which is
 subsequently reused. The start time, end time and title of the event
 are added to a <code>ContentValues</code> object and passed to the <code>startQuery()</code>
@@ -275,8 +275,7 @@ passed to the <code>onQueryComplete()</code> method.</p>
                    TimeZone<span style="color:#666">.</span><span style="color:#b44">getDefault</span><span style="color:#666">().</span><span style="color:#b44">getDisplayName</span><span style="color:#666">());</span>
 
         startInsert<span style="color:#666">(</span>EVENT<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> Events<span style="color:#666">.</span><span style="color:#b44">CONTENT_URI</span><span style="color:#666">,</span> values<span style="color:#666">);</span>
-    <span style="color:#666">}</span></code></pre>
-</div>
+    <span style="color:#666">}</span></code></pre></div>
 <p>This gets the calendar id from the cursor and adds it to the values
 along with the timezone. It&rsquo;s probably not necessary to query the
 first calendar id because the value seems to be one, but there may be
@@ -304,8 +303,7 @@ method.</p>
                 <span style="color:#a2f;font-weight:bold">break</span><span style="color:#666">;</span>
             <span style="color:#666">}</span>
         <span style="color:#666">}</span>
-    <span style="color:#666">}</span></code></pre>
-</div>
+    <span style="color:#666">}</span></code></pre></div>
 <p>This gets the event id and inserts a 10 minute reminder. All the
 <code>AsyncQueryHandler</code> asynchronous methods include an integer and an
 <code>Object</code> in the argument list which are passed to the <code>onComplete()</code>
@@ -313,8 +311,7 @@ methods. This is useful for passing on parameters to be used later.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#666">09</span>-11 <span style="color:#666">10</span>:27:56.518  <span style="color:#666">9808</span>  <span style="color:#666">9808</span> D QueryHandler: Calendar query start
 <span style="color:#666">09</span>-11 <span style="color:#666">10</span>:27:56.687  <span style="color:#666">9808</span>  <span style="color:#666">9808</span> D QueryHandler: Calendar query <span style="color:#a2f">complete</span> <span style="color:#666">1</span>
 <span style="color:#666">09</span>-11 <span style="color:#666">10</span>:27:56.801  <span style="color:#666">9808</span>  <span style="color:#666">9808</span> D QueryHandler: Insert <span style="color:#a2f">complete</span> <span style="color:#666">112</span>
-<span style="color:#666">09</span>-11 <span style="color:#666">10</span>:27:56.944  <span style="color:#666">9808</span>  <span style="color:#666">9808</span> D QueryHandler: Insert <span style="color:#a2f">complete</span> <span style="color:#666">1</span></code></pre>
-</div>
+<span style="color:#666">09</span>-11 <span style="color:#666">10</span>:27:56.944  <span style="color:#666">9808</span>  <span style="color:#666">9808</span> D QueryHandler: Insert <span style="color:#a2f">complete</span> <span style="color:#666">1</span></code></pre></div>
 <p>Android takes a while to add the event as can be seen from the log.</p>
 
     </p>

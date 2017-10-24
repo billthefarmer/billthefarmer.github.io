@@ -14,6 +14,7 @@
 
 
 <meta property="article:published_time" content="2013-12-21T20:16:37&#43;00:00"/>
+
 <meta property="article:modified_time" content="2013-12-21T20:16:37&#43;00:00"/>
 
 
@@ -31,6 +32,7 @@
 <meta itemprop="description" content="When I got my Pi some months ago I bought a wifi adapter for it, as you do. But I couldn&rsquo;t get it to work reliably in Raspbian, and I didn&rsquo;t even try in Arch Linux. So I tested the adapter on my windoze box, and it worked just fine, and I tried it with Linux and it worked just fine, so I put it in the &lsquo;too hard&rsquo; box.">
 
 
+<meta itemprop="datePublished" content="2013-12-21T20:16:37&#43;00:00" />
 <meta itemprop="dateModified" content="2013-12-21T20:16:37&#43;00:00" />
 <meta itemprop="wordCount" content="290">
 
@@ -46,7 +48,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.29" />
+<meta name="generator" content="Hugo 0.30.2" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -201,8 +203,7 @@
     
     auto wlan0
     iface wlan0 inet dhcp
-    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf</code></pre>
-</div>
+    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf</code></pre></div>
 <p>You can use <code>wpa_passphrase</code> to generate the <code>wpa_supplicant.conf</code> file:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ wpa_passphrase ssid passphrase
 
@@ -210,24 +211,21 @@
             <span style="color:#b8860b">ssid</span><span style="color:#666">=</span><span style="color:#b44">&#34;ssid&#34;</span>
             <span style="color:#080;font-style:italic">#psk=&#34;passphrase&#34;
 </span><span style="color:#080;font-style:italic"></span>            <span style="color:#b8860b">psk</span><span style="color:#666">=</span>41167ee7545cb4d9b1c7d7e113cfc1f0ac367b020141c46c9418965c1926fd80
-    <span style="color:#666">}</span></code></pre>
-</div>
+    <span style="color:#666">}</span></code></pre></div>
 <p>Redirect the output to the <code>wpa_supplicant.conf</code> file. I found this in the Arch Linux wiki. The wpa-conf and wpa-roam stanzas do not appear to be officially documented anywhere I can find.</p>
 
 <h3 id="raspbian-jessie">Raspbian Jessie</h3>
 
 <p>If your wifi router has a WPS button, press it. Run <code>wpa_cli</code> on the Pi and enter the following commands:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">    &gt; wps_pbc
-    &gt; quit</code></pre>
-</div>
+    &gt; quit</code></pre></div>
 <p>This should automatically pick up the ssid and key, connect, and set up <code>wpa_supplicant.conf</code> so that the Pi will reconnect when rebooted.</p>
 
 <h2 id="arch-linux">Arch Linux</h2>
 
 <p>Use <code>wifi-menu</code> to create a <code>netctl</code> profile. Use <code>netctl list</code> to list profiles and <code>netctl</code> to enable and start your profile.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">    sudo netctl <span style="color:#a2f">enable</span> wlan0-yourSSIDhere
-    sudo netctl start wlan0-yourSSIDhere</code></pre>
-</div>
+    sudo netctl start wlan0-yourSSIDhere</code></pre></div>
 <p>This appears to work just fine.</p>
 
     </p>

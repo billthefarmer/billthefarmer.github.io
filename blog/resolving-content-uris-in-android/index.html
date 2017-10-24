@@ -15,6 +15,7 @@
 
 
 <meta property="article:published_time" content="2017-07-23T10:48:17&#43;00:00"/>
+
 <meta property="article:modified_time" content="2017-07-23T10:48:17&#43;00:00"/>
 
 
@@ -33,6 +34,7 @@
 // import com.ianhanniballake.localstorage.LocalStorageProvider;  // ...  /** * @param uri The Uri to check.">
 
 
+<meta itemprop="datePublished" content="2017-07-23T10:48:17&#43;00:00" />
 <meta itemprop="dateModified" content="2017-07-23T10:48:17&#43;00:00" />
 <meta itemprop="wordCount" content="352">
 
@@ -49,7 +51,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.29" />
+<meta name="generator" content="Hugo 0.30.2" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -198,8 +200,7 @@
 </span><span style="color:#080;font-style:italic">         */</span>
         <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">isLocalStorageDocument</span><span style="color:#666">(</span>Uri uri<span style="color:#666">)</span> <span style="color:#666">{</span>
             <span style="color:#a2f;font-weight:bold">return</span> LocalStorageProvider<span style="color:#666">.</span><span style="color:#b44">AUTHORITY</span><span style="color:#666">.</span><span style="color:#b44">equals</span><span style="color:#666">(</span>uri<span style="color:#666">.</span><span style="color:#b44">getAuthority</span><span style="color:#666">());</span>
-        <span style="color:#666">}</span></code></pre>
-</div>
+        <span style="color:#666">}</span></code></pre></div>
 <p>Having done that, you can then resolve &lsquo;content&rsquo; uris</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String CONTENT <span style="color:#666">=</span> <span style="color:#b44">&#34;content&#34;</span><span style="color:#666">;</span>
     <span style="color:#080;font-style:italic">// ...
@@ -217,8 +218,7 @@
                     uri <span style="color:#666">=</span> Uri<span style="color:#666">.</span><span style="color:#b44">fromFile</span><span style="color:#666">(</span>file<span style="color:#666">);</span>
             <span style="color:#666">}</span>
             <span style="color:#a2f;font-weight:bold">return</span> uri<span style="color:#666">;</span>
-        <span style="color:#666">}</span></code></pre>
-</div>
+        <span style="color:#666">}</span></code></pre></div>
 <p>This may not always work, but I haven&rsquo;t been able to defeat it. Later versions of android have added a &lsquo;Documents&rsquo; folder, which is encoded as &lsquo;home&rsquo;, so some additional code is required to resolve it.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">/**
 </span><span style="color:#080;font-style:italic">     * Get a file path from a Uri. This will get the the path for
@@ -270,8 +270,7 @@
         <span style="color:#080;font-style:italic">// ...
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#666">}</span>
     <span style="color:#080;font-style:italic">// ...
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#666">}</span></code></pre>
-</div>
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#666">}</span></code></pre></div>
     </p>
     
     

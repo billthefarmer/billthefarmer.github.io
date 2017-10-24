@@ -40,7 +40,7 @@ Ingredients  3 large carrots, grated 1 large onion, chopped 2 garlic cloves, cho
       <guid>https://billthefarmer.github.io/blog/using-emacs-in-android-development/</guid>
       <description>I&amp;rsquo;ve got a folder full of country flags which I have renamed using scripts so the names correspond to currency symbols. I want an integer array with references to the flags as android resources. This can be automated using emacs.
 I get a list of the file names into a buffer using find, which I then open with emacs.
-% find src/ -name flag* &amp;gt; data/sym-flags.lst  They are already sorted, but just to make sure I use M-x sort-lines.</description>
+% find src/ -name flag* &amp;gt; data/sym-flags.lst They are already sorted, but just to make sure I use M-x sort-lines.</description>
     </item>
     
     <item>
@@ -82,7 +82,7 @@ To add an entry to an android calendar you first have to find out the calendar i
       
       <guid>https://billthefarmer.github.io/blog/whatever-o-meter-revisited/</guid>
       <description>I wrote the whatever-o-meter about five years ago in PHP and Javascript as a Wordpress plugin. As I have migrated my blog to Hugo, I thought to have a go at reimplementing it. The exporter I used made a good job of translating the Wordpress custom fields to Hugo front matter parameters. I had to put dashes in quotes, otherwise they get interpreted as [&amp;lt;nil&amp;gt;].
-intro: Please answer the following questions carefully and truthfully.</description>
+intro:Pleaseanswerthefollowingquestionscarefullyandtruthfully.question:-YouarelyinginbedonMondaymorning...result:-&amp;#39;%d percent, Perhaps you should consider emigration.</description>
     </item>
     
     <item>
@@ -480,7 +480,7 @@ Ingredients  1 tbsp olive oil 1 onion, chopped 1 small potato, cubed 1 clove gar
       <guid>https://billthefarmer.github.io/blog/haskell/</guid>
       <description>I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I&amp;rsquo;s give it a go and see how I got on.
 You can try it out in your browser: http://tryhaskell.org
-λ let factorial n = product [1..n] in factorial 99 9332621544394415268169923885626670049071596826438162146859 2963895217599993229915608941463976156518286253697920827223 7582511852109168640000000000000000000000 :: (Enum a, Num a) =&amp;gt; a λ   Pretty impressive! So I thought I&amp;rsquo;d try a simple web application.</description>
+λ let factorial n = product [1..n] in factorial 99 9332621544394415268169923885626670049071596826438162146859 2963895217599993229915608941463976156518286253697920827223 7582511852109168640000000000000000000000 :: (Enum a, Num a) =&amp;gt; a λ  Pretty impressive! So I thought I&amp;rsquo;d try a simple web application.</description>
     </item>
     
     <item>

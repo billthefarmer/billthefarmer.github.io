@@ -15,6 +15,7 @@ But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter 
 
 
 <meta property="article:published_time" content="2013-12-21T18:54:52&#43;00:00"/>
+
 <meta property="article:modified_time" content="2013-12-21T18:54:52&#43;00:00"/>
 
 
@@ -33,6 +34,7 @@ But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter 
 But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter an advent calender competition which involved checking a web page to see if your name has come up and sending an email if it does.">
 
 
+<meta itemprop="datePublished" content="2013-12-21T18:54:52&#43;00:00" />
 <meta itemprop="dateModified" content="2013-12-21T18:54:52&#43;00:00" />
 <meta itemprop="wordCount" content="342">
 
@@ -49,7 +51,7 @@ But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter 
 
 
 
-<meta name="generator" content="Hugo 0.29" />
+<meta name="generator" content="Hugo 0.30.2" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -231,13 +233,11 @@ f<span style="color:#666">.</span>close()
   <span style="color:#a2f">open</span>(<span style="color:#b44"></span><span style="color:#b44">&#34;sent&#34;</span>, <span style="color:#b44"></span><span style="color:#b44">&#34;w&#34;</span>)<span style="color:#666">.</span>close()
 
 <span style="color:#a2f;font-weight:bold">with</span> <span style="color:#a2f">file</span>(<span style="color:#b44"></span><span style="color:#b44">&#34;last&#34;</span>, <span style="color:#b44"></span><span style="color:#b44">&#34;a&#34;</span>):
-  utime(<span style="color:#b44"></span><span style="color:#b44">&#34;last&#34;</span>, None)</code></pre>
-</div>
+  utime(<span style="color:#b44"></span><span style="color:#b44">&#34;last&#34;</span>, None)</code></pre></div>
 <p>So, very careful with the indenting. We shall have to see if anyone wins anything. The script gets fired off periodically with a crontab entry.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#b8860b">CRON_TZ</span><span style="color:#666">=</span>Europe/London
 <span style="color:#b8860b">MAILTO</span><span style="color:#666">=</span>bill
-*/1 <span style="color:#666">9</span>-10 <span style="color:#666">1</span>-24 <span style="color:#666">12</span> * <span style="color:#b8860b">$HOME</span>/advent/advent.py</code></pre>
-</div>
+*/1 <span style="color:#666">9</span>-10 <span style="color:#666">1</span>-24 <span style="color:#666">12</span> * <span style="color:#b8860b">$HOME</span>/advent/advent.py</code></pre></div>
     </p>
     
     
