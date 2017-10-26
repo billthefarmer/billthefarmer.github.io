@@ -13,7 +13,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-09-05T14:54:25&#43;01:00"/>
+<meta property="og:updated_time" content="2017-10-14T12:59:06&#43;01:00"/>
 
 
 
@@ -160,6 +160,71 @@
 
 <div class="blog-post">
   <h3>
+    <a href="https://billthefarmer.github.io/blog/markdown-openstreetmap-maps/">Markdown OpenStreetMap Maps</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2017-10-14T12:59:06&#43;01:00">
+        Sat Oct 14, 2017
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    There does not seem to be a convention for showing maps or co-ordinates in Markdown, but almost anything gets put in square brackets [&lt;anything&gt;].
+I had a request from Marco the other day to put OpenStreetMap maps in my Diary app using
+ [&lt;lat&gt;,&lt;lng&gt;]  syntax. So I did a bit of a search to see if there was a convention in Markdown for co-ordinates and couldn&rsquo;t find anything. So we seem to have broken new ground here.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/markdown-openstreetmap-maps/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/getting-related-content-working/">Getting Related Content working</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2017-09-13T11:30:00Z">
+        Wed Sep 13, 2017
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    The latest release of Hugo includes Related Content, which I thought would be nice to add to my blog. However the docs, although they show you how to set it up, don&rsquo;t explain how it works. To find that out, I had to look at the various threads on the Hugo forums.
+There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:
+  </p>
+  <a href='https://billthefarmer.github.io/blog/getting-related-content-working/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
     <a href="https://billthefarmer.github.io/blog/adding-a-calendar-event/">Adding a calendar event in android</a>
   </h3>
   <div class="callout small">
@@ -254,70 +319,6 @@ I looked for migration tools, and found two:
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/resolving-content-uris-in-android/">Resolving content uris in android</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2017-07-23T10:48:17Z">
-        Sun Jul 23, 2017
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    If you write an android app that handles images or any other sort of file your app may be required to deal with &lsquo;content&rsquo; uris (content://). There is a very useful utility which resolves these into &lsquo;file&rsquo; uris (file:///) FileUtils.java. This contains one external reference to LocalStorageProvider, which can be resolved by removing the function isLocalStorageDocument() and references to it.
-// import com.ianhanniballake.localstorage.LocalStorageProvider;  // ...  /** * @param uri The Uri to check.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/resolving-content-uris-in-android/'>Read more →</a>
-  <hr>
-</div>
-
-
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/vegetables-cooked-in-olive-oil/">Vegetables cooked in olive oil</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2017-04-26T10:41:59Z">
-        Wed Apr 26, 2017
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/recipes">
-        Recipes
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-     This method can be used for cooking any selection of vegetables, the trick is to layer them with the slowest cooking, like green beans, carrots, and other root veg at the bottom of the pan, and the faster cooking, like broccoli, cabbage and spinach on top. A layer of sliced onions in the bottom of the pan melts down and steams the veg above.
-Ingredients  Sliced onions Potatoes Carrots Whatever green veg is to hand Olive oil  Method  Cover the bottom of a medium saucepan with oil Place a layer of sliced onions on the bottom Layer sliced carrots, potatoes, and green veg in the pan Put on a low heat for about 20 minutes with the lid on until the veg is cooked to taste  
-  </p>
-  <a href='https://billthefarmer.github.io/blog/vegetables-cooked-in-olive-oil/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -342,6 +343,14 @@ Ingredients  Sliced onions Potatoes Carrots Whatever green veg is to hand Olive 
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/corned-beef-chili/">
+        Corned Beef Chili
+      </a></li>
+    
+      <li><a href="/blog/butter-beans-in-tomato-sauce/">
+        Butter Beans in Tomato Sauce
+      </a></li>
     
       <li><a href="/blog/thai-red-curry-with-noodles/">
         Thai Red Curry with Noodles
@@ -373,14 +382,6 @@ Ingredients  Sliced onions Potatoes Carrots Whatever green veg is to hand Olive 
     
       <li><a href="/blog/migrating-blog-from-wordpress/">
         Migrating this blog from Wordpress
-      </a></li>
-    
-      <li><a href="/blog/resolving-content-uris-in-android/">
-        Resolving content uris in android
-      </a></li>
-    
-      <li><a href="/blog/vegetables-cooked-in-olive-oil/">
-        Vegetables cooked in olive oil
       </a></li>
     
   </ul>
