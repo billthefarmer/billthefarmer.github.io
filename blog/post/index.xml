@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2017 Bill Farmer</copyright>
-    <lastBuildDate>Thu, 26 Oct 2017 10:47:35 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 26 Oct 2017 11:57:27 +0100</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Android Text Search</title>
+      <link>https://billthefarmer.github.io/blog/android-text-search/</link>
+      <pubDate>Thu, 26 Oct 2017 11:57:27 +0100</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/android-text-search/</guid>
+      <description>The Android guide for Search Overview is oriented towards searching external content rather than text. There is a mention of Using the Search Dialog. However all the bits you need are there. To get a search dialog in the toolbar that pops up when needed, you need a seach item in the menu. It should be the first item, unless there is a good reason otherwise.
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt; &amp;lt;menu xmlns:android=&amp;#34;http://schemas.</description>
+    </item>
     
     <item>
       <title>Corned Beef Chili</title>

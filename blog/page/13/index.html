@@ -6,18 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:title" content="Upgrading WordPress" />
-<meta property="og:description" content="This site has the firewall set up so that the web server has no external access. This means that I can&rsquo;t use the usual WordPress update mechanism to keep it up to date. I use FileZilla for maintaining the server, and I recently discovered you can use drag and drop to move stuff around remotely.
-So my easy WordPress upgrade method is:
- Download the latest zip file and unzip it." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://billthefarmer.github.io/blog/upgrading-wordpress/" />
+<meta property="og:title" content="Bill Farmer" />
+<meta property="og:description" content="Random thoughts on random subjects" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://billthefarmer.github.io/blog/" />
 
 
 
-<meta property="article:published_time" content="2014-05-28T11:05:54&#43;00:00"/>
-
-<meta property="article:modified_time" content="2014-05-28T11:05:54&#43;00:00"/>
+<meta property="og:updated_time" content="2013-11-20T18:55:54&#43;00:00"/>
 
 
 
@@ -29,25 +25,12 @@ So my easy WordPress upgrade method is:
 
 
 
-
-<meta itemprop="name" content="Upgrading WordPress">
-<meta itemprop="description" content="This site has the firewall set up so that the web server has no external access. This means that I can&rsquo;t use the usual WordPress update mechanism to keep it up to date. I use FileZilla for maintaining the server, and I recently discovered you can use drag and drop to move stuff around remotely.
-So my easy WordPress upgrade method is:
- Download the latest zip file and unzip it.">
+<meta itemprop="name" content="Bill Farmer">
+<meta itemprop="description" content="Random thoughts on random subjects">
 
 
-<meta itemprop="datePublished" content="2014-05-28T11:05:54&#43;00:00" />
-<meta itemprop="dateModified" content="2014-05-28T11:05:54&#43;00:00" />
-<meta itemprop="wordCount" content="127">
-
-
-
-<meta itemprop="keywords" content="" />
-
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Upgrading WordPress"/>
-<meta name="twitter:description" content="This site has the firewall set up so that the web server has no external access. This means that I can&rsquo;t use the usual WordPress update mechanism to keep it up to date. I use FileZilla for maintaining the server, and I recently discovered you can use drag and drop to move stuff around remotely.
-So my easy WordPress upgrade method is:
- Download the latest zip file and unzip it."/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Bill Farmer"/>
+<meta name="twitter:description" content="Random thoughts on random subjects"/>
 
 
 
@@ -58,12 +41,16 @@ So my easy WordPress upgrade method is:
 
 
     <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/upgrading-wordpress/">
-    <title>Upgrading WordPress | Bill Farmer</title>
+    <link rel="canonical" href="https://billthefarmer.github.io/blog/">
+    <title>Bill Farmer</title>
 
     <!-- CSS -->
     <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
 
+    
+      <!-- RSS 2.0 feed -->
+      <link href="https://billthefarmer.github.io/blog/index.xml" rel="alternate" type="application/rss+xml" title="Bill Farmer" />
+      <link href="https://billthefarmer.github.io/blog/index.xml" rel="feed" type="application/rss+xml" title="Bill Farmer" />
     
 
     
@@ -99,7 +86,7 @@ So my easy WordPress upgrade method is:
           </div>
           <div class="top-bar-right">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class="active"><a href="https://billthefarmer.github.io/blog/">
                 Home
               </a></li>
               
@@ -166,19 +153,21 @@ So my easy WordPress upgrade method is:
       <div class="row" id="content">
         <div class="medium-8 columns">
           
+
+
+
   
 
-
-  <div class="blog-post">
-    <h3>
-      <a href="https://billthefarmer.github.io/blog/upgrading-wordpress/">Upgrading WordPress</a>
-    </h3>
-    <div class="callout small">
-      <small>
-        <time datetime="2014-05-28T11:05:54Z">
-          Wed May 28, 2014
-        </time> by Bill Farmer.
-        Categories: 
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/whatever-o-meter/">Whatever-o-meter</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2013-11-20T18:55:54Z">
+        Wed Nov 20, 2013
+      </time> by Bill Farmer.
+      Categories: 
   
     
       <a href="/blog/categories/hacking">
@@ -187,50 +176,30 @@ So my easy WordPress upgrade method is:
   
 
 .
-        
-        <br>
-        
-      </small>
-    </div>
-    <p>
-      <p>This site has the firewall set up so that the web server has no external access. This means that I can&rsquo;t use the usual WordPress update mechanism to keep it up to date. I use <a href="https://filezilla-project.org">FileZilla</a> for maintaining the server, and I recently discovered you can use drag and drop to move stuff around remotely.</p>
+      
+    </small>
+  </div>
+  <p>
+    Introduction Whatever-o-meter is a WordPress and Hugo plugin that shows a tachometer-like dial with a pointer, asks a series of predefined questions which are answered by moving a slider, shows one of several predefined results, and moves the tacho pointer to a position determined by the value of the result. The project is on Github.
+Documentation Whatever-o-meter uses the shortcode [whatever-o-meter] or {{&lt;whatever-o-meter&gt;}} to insert the whatever-o-meter display into the page.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/whatever-o-meter/'>Read more →</a>
+  <hr>
+</div>
 
-<p>So my easy WordPress upgrade method is:</p>
 
-<ul>
-<li>Download the latest zip file and unzip it.</li>
-<li>Rename the wordpress folder to something else, like wordpress-old.</li>
-<li>Upload the new wordpress folder.</li>
-<li>Move the stuff you need from the old wordpress-old folder, like themes, plugins, uploads, any modified theme files and your config.php file.</li>
-<li>Check it works and upgrade the database.</li>
-<li>Remove the old wordpress-old folder.</li>
-</ul>
 
-<p>Nearly as easy as letting it do it itself.</p>
 
-    </p>
+  <div>
     
     
-
-<hr>
-<h3>See Also</h3>
-<ul>
-  
-  <li><a href="/blog/whatever-o-meter-revisited/">Whatever-o-meter revisited</a></li>
-  
-  <li><a href="/blog/migrating-blog-from-wordpress/">Migrating this blog from Wordpress</a></li>
-  
-  <li><a href="/blog/slimstat/">SlimStat</a></li>
-  
-  <li><a href="/blog/whatever-o-meter/">Whatever-o-meter</a></li>
-  
-</ul>
-
-
-      <hr>
+      <a class="button" href="/blog/page/12/">Previous page</a>
+      <a class="button disabled" href="#" aria-disabled="true">Next page</a>
+    
+    
+    <hr>
   </div>
 
-  
 
 
         </div>
@@ -315,7 +284,7 @@ So my easy WordPress upgrade method is:
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/upgrading-wordpress/#">Back to top</a>
+          <a href="https://billthefarmer.github.io/blog/#">Back to top</a>
         </p>
       </div>
     </footer>
