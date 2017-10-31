@@ -36,7 +36,7 @@
 
 <meta itemprop="datePublished" content="2017-10-26T11:57:27&#43;01:00" />
 <meta itemprop="dateModified" content="2017-10-26T11:57:27&#43;01:00" />
-<meta itemprop="wordCount" content="1227">
+<meta itemprop="wordCount" content="1251">
 
 
 
@@ -223,10 +223,17 @@ called by the <a href="https://developer.android.com/reference/android/widget/Se
         searchView <span style="color:#666">=</span> <span style="color:#666">(</span>SearchView<span style="color:#666">)</span> searchItem<span style="color:#666">.</span><span style="color:#b44">getActionView</span><span style="color:#666">();</span>
 
         <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>searchView <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+        <span style="color:#666">{</span>
+            searchView<span style="color:#666">.</span><span style="color:#b44">setSubmitButtonEnabled</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">);</span>
+            searchView<span style="color:#666">.</span><span style="color:#b44">setImeOptions</span><span style="color:#666">(</span>EditorInfo<span style="color:#666">.</span><span style="color:#b44">IME_ACTION_GO</span><span style="color:#666">);</span>
             searchView<span style="color:#666">.</span><span style="color:#b44">setOnQueryTextListener</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">new</span> QueryTextListener<span style="color:#666">());</span>
+        <span style="color:#666">}</span>
 
         <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
     <span style="color:#666">}</span></code></pre></div>
+<p>Get an extra submit button in the toolbar, change the keyboard button
+to a right arrow, and set the listener</p>
+
 <h3 id="interactive-case-insensitive-search">Interactive Case Insensitive Search</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// QueryTextListener
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">QueryTextListener</span>
