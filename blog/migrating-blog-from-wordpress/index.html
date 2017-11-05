@@ -38,7 +38,7 @@ I looked for migration tools, and found two:
 
 <meta itemprop="datePublished" content="2017-08-19T14:30:00&#43;00:00" />
 <meta itemprop="dateModified" content="2017-08-19T14:30:00&#43;00:00" />
-<meta itemprop="wordCount" content="1101">
+<meta itemprop="wordCount" content="1131">
 
 
 
@@ -256,36 +256,36 @@ to run <a href="https://www.python.org">Python</a> utilities in, so installing t
 <p>So now I&rsquo;ve got a config file which does what I want it to do:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">baseURL:<span style="color:#bbb"> </span>http://billthefarmer.github.io/blog/<span style="color:#bbb">
 </span><span style="color:#bbb"></span>languageCode:<span style="color:#bbb"> </span>en-gb<span style="color:#bbb">
-</span><span style="color:#bbb"></span>title:<span style="color:#bbb"> </span>Bill<span style="color:#bbb"> </span>Farmer<span style="color:#b44">&#39;s Blog
-</span><span style="color:#b44">copyright: Copyright © 2017 Bill Farmer
-</span><span style="color:#b44">theme: theme-hugo-foundation6
-</span><span style="color:#b44">publishDir: d:/billthefarmer.github.io/blog/
-</span><span style="color:#b44">pygmentscodefences: true
-</span><span style="color:#b44">
-</span><span style="color:#b44"># number of posts to show on home/category/tag pages (Default: 10)
-</span><span style="color:#b44">paginate: 5
-</span><span style="color:#b44">
-</span><span style="color:#b44">taxonomies:
-</span><span style="color:#b44">  category: categories
-</span><span style="color:#b44">  # tag: tags
-</span><span style="color:#b44">
-</span><span style="color:#b44">permalinks:
-</span><span style="color:#b44">  page: /:slug/
-</span><span style="color:#b44">  post: /:year/:month/:title/
-</span><span style="color:#b44">
-</span><span style="color:#b44">menu:
-</span><span style="color:#b44">  sidebar:
-</span><span style="color:#b44">    - name: Bill Farmer
-</span><span style="color:#b44">      url: http://billthefarmer.github.io
-</span><span style="color:#b44">    - name: Github
-</span><span style="color:#b44">      url: https://github.com/billthefarmer
-</span><span style="color:#b44">
-</span><span style="color:#b44">params:
-</span><span style="color:#b44">  description: Random thoughts on random subjects
-</span><span style="color:#b44">  header_background: images/2013/12/cropped-P1010089.jpg
-</span><span style="color:#b44">  sidebar:
-</span><span style="color:#b44">    # Optional about block for sidebar (can be Markdown)
-</span><span style="color:#b44">    # about: Bill Farmer&#39;</span>s<span style="color:#bbb"> </span>Blog<span style="color:#bbb">
+</span><span style="color:#bbb"></span>title:<span style="color:#bbb"> </span><span style="color:#b44">&#34;Bill Farmer&#39;s Blog&#34;</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>copyright:<span style="color:#bbb"> </span><span style="color:#b44">&#34;Copyright &amp;copy; 2017 Bill Farmer&#34;</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>theme:<span style="color:#bbb"> </span>theme-hugo-foundation<span style="color:#666">6</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>publishDir:<span style="color:#bbb"> </span>d:/billthefarmer.github.io/blog/<span style="color:#bbb">
+</span><span style="color:#bbb"></span>pygmentscodefences:<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#080;font-style:italic"># number of posts to show on home/category/tag pages (Default: 10)</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>paginate:<span style="color:#bbb"> </span><span style="color:#666">5</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>taxonomies:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>category:<span style="color:#bbb"> </span>categories<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#080;font-style:italic"># tag: tags</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>permalinks:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>page:<span style="color:#bbb"> </span>/:slug/<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>post:<span style="color:#bbb"> </span>/:year/:month/:title/<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>menu:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>sidebar:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>-<span style="color:#bbb"> </span>name:<span style="color:#bbb"> </span>Bill<span style="color:#bbb"> </span>Farmer<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>url:<span style="color:#bbb"> </span>http://billthefarmer.github.io<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>-<span style="color:#bbb"> </span>name:<span style="color:#bbb"> </span>Github<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>url:<span style="color:#bbb"> </span>https://github.com/billthefarmer<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>params:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>description:<span style="color:#bbb"> </span>Random<span style="color:#bbb"> </span>thoughts<span style="color:#bbb"> </span>on<span style="color:#bbb"> </span>random<span style="color:#bbb"> </span>subjects<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>header_background:<span style="color:#bbb"> </span>images/<span style="color:#666">2013</span>/<span style="color:#666">12</span>/cropped-P<span style="color:#666">1010089.</span>jpg<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>sidebar:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic"># Optional about block for sidebar (can be Markdown)</span><span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic"># about: &#34;Bill Farmer&#39;s Blog&#34;</span><span style="color:#bbb">
 </span><span style="color:#bbb">    </span>num_recent_posts:<span style="color:#bbb"> </span><span style="color:#666">5</span><span style="color:#bbb">
 </span><span style="color:#bbb">  </span>sharingicons:<span style="color:#bbb">
 </span><span style="color:#bbb">    </span>hide:<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#bbb">
@@ -336,6 +336,19 @@ does, but the style is horrible. I changed it to <code>default</code>.</p>
 <p>To get the highlighting working in windows I had to install real
 windows python and install Pygments there.</p>
 
+<p><strong>Update</strong> - this is no longer necessary because later versions of
+Hugo include <a href="https://github.com/alecthomas/chroma">Chroma</a>, a port of Pygments. But I did have to
+change the <code>pygmentsStyle</code> to <code>emacs</code> and comment out entries in the
+<code>static/css/app.css</code> file.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#008000;font-weight:bold">code</span> {
+<span style="color:#080;font-style:italic">/*  padding: 0.125rem 0.3125rem 0.0625rem;
+</span><span style="color:#080;font-style:italic">    border: 1px solid #cacaca;
+</span><span style="color:#080;font-style:italic">    background-color: #e6e6e6; */</span>
+  <span style="color:#a2f;font-weight:bold">font-family</span>: Consolas, <span style="color:#b44">&#34;Liberation Mono&#34;</span>, Courier, <span style="color:#a2f;font-weight:bold">monospace</span>;
+  <span style="color:#a2f;font-weight:bold">font-weight</span>: <span style="color:#a2f;font-weight:bold">normal</span>;
+  <span style="color:#a2f;font-weight:bold">color</span>: <span style="color:#666">#0a0a0a</span>; }</code></pre></div>
+<p>This is part of the theme, so not part of Hugo itself.</p>
+
 <p>I found a template on the <a href="https://gohugo.io/variables/taxonomy">Taxonomy Variables</a> page to generate a
 list of blog pages.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#008000;font-weight:bold">section</span>&gt;
@@ -373,8 +386,8 @@ site-index &gt;}}</code> in the index page, I got a reasonable site index.</p>
 the docs. The <code>key</code> for each category is in lower case, and I wanted
 it capitalised. I found <code>upper</code> and <code>lower</code>, tried searching for
 &lsquo;capital&rsquo; and got nothing useful. Eventually I found it somewhere in
-the template docs as a throw away reference: <a href="https://gohugo.io/functions/title"><code>title</code></a>. Wordpress
-put curly quote characters in my posts and post titles and they were
+the template docs as a throw away reference: <code>title</code>. Wordpress put
+curly quote characters in my posts and post titles and they were
 showing up as <code>&amp;rsquo;</code> in the post titles in the index. I found
 <code>safeHTML</code> in the same place which tidied that up.</p>
 
