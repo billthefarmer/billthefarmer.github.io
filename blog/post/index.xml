@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2017 Bill Farmer</copyright>
-    <lastBuildDate>Fri, 15 Dec 2017 11:53:57 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jan 2018 11:02:04 +0000</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Android Custom Attributes</title>
+      <link>https://billthefarmer.github.io/blog/android-custom-attributes/</link>
+      <pubDate>Mon, 08 Jan 2018 11:02:04 +0000</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/android-custom-attributes/</guid>
+      <description>I had resisted adding a dark theme to my Diary app until now because it uses a custom calendar with built in customisable styles and preferences with icons. So I had to work out how to make the custom styles of the calendar revert to styles from the current theme, and how to switch icons for the preferences according to the theme.
+Calendar custom styles The custom calendar has a list of styles that are customisable in a attrs.</description>
+    </item>
     
     <item>
       <title>Android Recent Files</title>
