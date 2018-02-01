@@ -36,7 +36,7 @@ A few years later I ported it to windows, added a few gizmos for tuning accordio
 
 <meta itemprop="datePublished" content="2015-03-03T12:44:13&#43;00:00" />
 <meta itemprop="dateModified" content="2015-03-03T12:44:13&#43;00:00" />
-<meta itemprop="wordCount" content="328">
+<meta itemprop="wordCount" content="337">
 
 
 
@@ -196,7 +196,7 @@ A few years later I ported it to windows, added a few gizmos for tuning accordio
 
 <p>Later still, I ported it to Android, on <a href="https://github.com/billthefarmer/tuner/wiki">GitHub</a>, also on <a href="https://f-droid.org/packages/org.billthefarmer.tuner">FDroid</a>, and the FFT still worked fine in Java on Android. Then I had a request to add a spectrum display to my <a href="https://github.com/billthefarmer/scope/wiki">Oscilloscope</a> app, also on <a href="https://f-droid.org/packages/org.billthefarmer.scope">FDroid</a>. When I tried this on my Moto G phone, the spectrum obviously had a problem. When I checked, the problem was the simplistic FFT I have been using. So I did another <a href="https://duckduckgo.com">web search</a> and discovered <a href="http://anthonix.com/ffts">FFTS</a>, the allegedly Fastest Fourier Transform in the South. I couldn&rsquo;t get this to build for Android using the script provided, so I did a fork on <a href="https://github.com/billthefarmer/ffts-android">Github</a> which I rearranged so it will build with the Android build tools. I also built a test app which does the tests shipped with the library. The FFTS library uses dynamic code which modifies itself, and also makes use of the <a href="http://www.arm.com/products/processors/technologies/neon.php">ARM NEON</a> engine if it is present. All three Android devices we have have NEON support in the processor.</p>
 
-<p>I haven&rsquo;t got to testing it on the spectrum app yet.</p>
+<p>I didn&rsquo;t use this for the spectrum, the FFT buffer size was unnecessarily high, so reducing it solved the problem.</p>
 
     </p>
     

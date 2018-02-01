@@ -34,7 +34,7 @@
 
 <meta itemprop="datePublished" content="2016-01-26T11:36:38&#43;00:00" />
 <meta itemprop="dateModified" content="2016-01-26T11:36:38&#43;00:00" />
-<meta itemprop="wordCount" content="284">
+<meta itemprop="wordCount" content="323">
 
 
 
@@ -222,6 +222,10 @@
 <p>The problem with creating a GPT partitioned disk and installing on it is that you end up with a bios boot menu item &lsquo;Mac OSX&rsquo; which you can&rsquo;t delete, even using the Clover EFI shell or the linux utility efibootmgr. I&rsquo;ve got two flavours of linux and efibootmgr refuses to work on both of them. It may be possible to get around this by installing on a USB drive.</p>
 
 <p>I have since found you need to run the Clover EFI shell while doing a UEFI boot to get access to the bios boot menu items.</p>
+
+<h3 id="later-releases">Later releases</h3>
+
+<p>I couldn&rsquo;t get this to work on Sierra and High Sierra because the installer automagically creates a recovery partition which doesn&rsquo;t get transferred. So I have converted to UEFI, which works fine using the USB stick method.</p>
 
     </p>
     
