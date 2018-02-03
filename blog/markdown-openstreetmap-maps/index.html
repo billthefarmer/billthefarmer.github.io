@@ -44,7 +44,8 @@ I had a request from Marco the other day to put OpenStreetMap maps in my Diary a
 
 <meta itemprop="keywords" content="" />
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Markdown OpenStreetMap Maps"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Markdown OpenStreetMap Maps"/>
 <meta name="twitter:description" content="There does not seem to be a convention for showing maps or co-ordinates in Markdown, but almost anything gets put in square brackets [&lt;anything&gt;].
 I had a request from Marco the other day to put OpenStreetMap maps in my Diary app using
  [&lt;lat&gt;,&lt;lng&gt;]  syntax. So I did a bit of a search to see if there was a convention in Markdown for co-ordinates and couldn&rsquo;t find anything. So we seem to have broken new ground here."/>
@@ -54,7 +55,7 @@ I had a request from Marco the other day to put OpenStreetMap maps in my Diary a
 
 
 
-<meta name="generator" content="Hugo 0.31" />
+<meta name="generator" content="Hugo 0.35" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -217,7 +218,7 @@ doesn&rsquo;t seem to be documented, but you can get the HTML for an
 embedded map from their map page and customise it.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#008000;font-weight:bold">iframe</span> <span style="color:#b44">width</span><span style="color:#666">=</span><span style="color:#b44">&#34;425&#34;</span> <span style="color:#b44">height</span><span style="color:#666">=</span><span style="color:#b44">&#34;350&#34;</span>
         <span style="color:#b44">src</span><span style="color:#666">=</span><span style="color:#b44">&#34;http://www.openstreetmap.org/export/embed.html?
-</span><span style="color:#b44">        bbox=3.1528186798095708%2C42.2577141531011%2C3.1886529922485356%2C42.27241862881183&amp;
+</span><span style="color:#b44">        bbox=3.1528186798095708%2C42.2577141531011%2C3.1886529922485356%2C42.27241862881183&amp;amp;
 </span><span style="color:#b44">        layer=mapnik&#34;</span>
         <span style="color:#b44">style</span><span style="color:#666">=</span><span style="color:#b44">&#34;border: 1px solid black&#34;</span>&gt;
 &lt;/<span style="color:#008000;font-weight:bold">iframe</span>&gt;
@@ -244,7 +245,7 @@ be a markdown convention. It also allows for having different
 maps. The template for the iframe is</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &#34;&lt;<span style="color:#008000;font-weight:bold">iframe</span> <span style="color:#b44">width</span><span style="color:#666">=</span><span style="color:#b44">\&#34;560\&#34;</span> <span style="color:#b44">height</span><span style="color:#666">=</span><span style="color:#b44">\&#34;420\&#34;</span>
     <span style="color:#b44">src</span><span style="color:#666">=</span><span style="color:#b44">\&#34;http://www.openstreetmap.org/export/embed.html?</span>
-    <span style="color:#b44">bbox</span><span style="color:#666">=</span><span style="color:#b44">%f,%f,%f,%f&amp;layer=mapnik\&#34;</span>
+    <span style="color:#b44">bbox</span><span style="color:#666">=</span><span style="color:#b44">%f,%f,%f,%f&amp;amp;layer=mapnik\&#34;</span>
     <span style="color:#b44">style</span><span style="color:#666">=</span><span style="color:#b44">\&#34;border:</span> <span style="color:#b44">1px</span> <span style="color:#b44">solid</span> <span style="color:#b44">black</span><span style="">\&#34;</span>&gt;
     &lt;/<span style="color:#008000;font-weight:bold">iframe</span>&gt;&lt;<span style="color:#008000;font-weight:bold">br</span>/&gt;
     &lt;<span style="color:#008000;font-weight:bold">small</span>&gt;&lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#b44">href</span><span style="color:#666">=</span><span style="color:#b44">\&#34;http://www.openstreetmap.org/#map=16/%f/%f\&#34;</span>&gt;
