@@ -36,7 +36,7 @@ Calendar custom styles The custom calendar has a list of styles that are customi
 
 <meta itemprop="datePublished" content="2018-01-08T11:02:04&#43;00:00" />
 <meta itemprop="dateModified" content="2018-01-08T11:02:04&#43;00:00" />
-<meta itemprop="wordCount" content="496">
+<meta itemprop="wordCount" content="521">
 
 
 
@@ -203,7 +203,7 @@ theme.</p>
 <h3 id="calendar-custom-styles">Calendar custom styles</h3>
 
 <p>The custom calendar has a list of styles that are customisable in a
-<code>attrs.xml</code> file. The <code>name</code> value appears to be ignored.</p>
+<code>attrs.xml</code> file.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 <span style="color:#008000;font-weight:bold">&lt;resources&gt;</span>
   <span style="color:#008000;font-weight:bold">&lt;declare-styleable</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;CustomCalendarView&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
@@ -220,10 +220,26 @@ theme.</p>
     <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;currentDayOfMonthColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
   <span style="color:#008000;font-weight:bold">&lt;/declare-styleable&gt;</span>
 <span style="color:#008000;font-weight:bold">&lt;/resources&gt;</span></code></pre></div>
+<p>The <code>CustomCalendarView</code> value is used in the sources to reference the
+attributes.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// getAttributes
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">getAttributes</span><span style="color:#666">(</span>AttributeSet attrs<span style="color:#666">)</span>
+    <span style="color:#666">{</span>
+        Resources resources <span style="color:#666">=</span> getResources<span style="color:#666">();</span>
+
+        <span style="color:#a2f;font-weight:bold">final</span> TypedArray typedArray <span style="color:#666">=</span>
+            context<span style="color:#666">.</span><span style="color:#b44">obtainStyledAttributes</span><span style="color:#666">(</span>attrs<span style="color:#666">,</span> R<span style="color:#666">.</span><span style="color:#b44">styleable</span>
+                                           <span style="color:#666">.</span><span style="color:#b44">CustomCalendarView</span><span style="color:#666">,</span> 0<span style="color:#666">,</span> 0<span style="color:#666">);</span>
+        calendarBackgroundColor <span style="color:#666">=</span>
+            typedArray<span style="color:#666">.</span><span style="color:#b44">getColor</span><span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">styleable</span>
+                                <span style="color:#666">.</span><span style="color:#b44">CustomCalendarView_calendarBackgroundColor</span><span style="color:#666">,</span>
+                                resources<span style="color:#666">.</span><span style="color:#b44">getColor</span><span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">color</span><span style="color:#666">.</span><span style="color:#b44">white</span><span style="color:#666">));</span>
+        <span style="color:#080;font-style:italic">// ...
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#666">}</span></code></pre></div>
 <p>These styles revert to a default value defined in the code if they are
 not referenced externally. To revert to the current style defined
 values, some of them need to be redefined to attribute values from the
-style system. Again the <code>library</code> value appears to be arbitrary.</p>
+style system.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 <span style="color:#008000;font-weight:bold">&lt;LinearLayout</span>
     <span style="color:#b44">xmlns:android=</span><span style="color:#b44">&#34;http://schemas.android.com/apk/res/android&#34;</span>
@@ -454,7 +470,7 @@ the theme is changed.</p>
       <div class="row column">
         <p>
           
-          Copyright &copy; 2017 Bill Farmer
+          Copyright &copy; 2018 Bill Farmer
           
         </p>
         <p>
