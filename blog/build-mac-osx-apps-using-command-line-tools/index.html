@@ -262,36 +262,36 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
 	<span style="color:#a2f;font-weight:bold">$(</span>RM<span style="color:#a2f;font-weight:bold">)</span> -r <span style="color:#a2f;font-weight:bold">$(</span>APPNAME<span style="color:#a2f;font-weight:bold">)</span>.iconset
 </code></pre></div>
 <p>This compiles the code, makes an icon file from an image and builds the app structure. The reason for the <code>-Wno-deprecated-declarations</code> is that this app was first written on OSX 10.4 using Carbon and I&rsquo;m compiling for 10.6. You need two other text files <code>Info,plist</code> and <code>PkgInfo</code>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#999;font-weight:bold">&amp;lt;</span>?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?<span style="color:#999;font-weight:bold">&amp;gt;</span>
-<span style="color:#999;font-weight:bold">&amp;lt;</span>!DOCTYPE plist PUBLIC &#34;-//Apple//DTD PLIST 1.0//EN&#34;
-  &#34;http://www.apple.com/DTDs/PropertyList-1.0.dtd&#34;<span style="color:#999;font-weight:bold">&amp;gt;</span>
-  <span style="color:#999;font-weight:bold">&amp;lt;</span>dict<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>key<span style="color:#999;font-weight:bold">&amp;gt;</span>CFBundleDevelopmentRegion<span style="color:#999;font-weight:bold">&amp;lt;</span>/key<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>string<span style="color:#999;font-weight:bold">&amp;gt;</span>English<span style="color:#999;font-weight:bold">&amp;lt;</span>/string<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>key<span style="color:#999;font-weight:bold">&amp;gt;</span>CFBundleExecutable<span style="color:#999;font-weight:bold">&amp;lt;</span>/key<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>string<span style="color:#999;font-weight:bold">&amp;gt;</span>LMS<span style="color:#999;font-weight:bold">&amp;lt;</span>/string<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>key<span style="color:#999;font-weight:bold">&amp;gt;</span>CFBundleGetInfoString<span style="color:#999;font-weight:bold">&amp;lt;</span>/key<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>string<span style="color:#999;font-weight:bold">&amp;gt;</span>Copyright 2011 Bill Farmer<span style="color:#999;font-weight:bold">&amp;lt;</span>/string<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>key<span style="color:#999;font-weight:bold">&amp;gt;</span>CFBundleIconFile<span style="color:#999;font-weight:bold">&amp;lt;</span>/key<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>string<span style="color:#999;font-weight:bold">&amp;gt;</span>LMS<span style="color:#999;font-weight:bold">&amp;lt;</span>/string<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>key<span style="color:#999;font-weight:bold">&amp;gt;</span>CFBundleIdentifier<span style="color:#999;font-weight:bold">&amp;lt;</span>/key<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>string<span style="color:#999;font-weight:bold">&amp;gt;</span>com.billthefarmer.LMS<span style="color:#999;font-weight:bold">&amp;lt;</span>/string<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>key<span style="color:#999;font-weight:bold">&amp;gt;</span>CFBundleInfoDictionaryVersion<span style="color:#999;font-weight:bold">&amp;lt;</span>/key<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>string<span style="color:#999;font-weight:bold">&amp;gt;</span>6.0<span style="color:#999;font-weight:bold">&amp;lt;</span>/string<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>key<span style="color:#999;font-weight:bold">&amp;gt;</span>CFBundleName<span style="color:#999;font-weight:bold">&amp;lt;</span>/key<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>string<span style="color:#999;font-weight:bold">&amp;gt;</span>LMS<span style="color:#999;font-weight:bold">&amp;lt;</span>/string<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>key<span style="color:#999;font-weight:bold">&amp;gt;</span>CFBundlePackageType<span style="color:#999;font-weight:bold">&amp;lt;</span>/key<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>string<span style="color:#999;font-weight:bold">&amp;gt;</span>APPL<span style="color:#999;font-weight:bold">&amp;lt;</span>/string<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>key<span style="color:#999;font-weight:bold">&amp;gt;</span>CFBundleShortVersionString<span style="color:#999;font-weight:bold">&amp;lt;</span>/key<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>string<span style="color:#999;font-weight:bold">&amp;gt;</span>1.0<span style="color:#999;font-weight:bold">&amp;lt;</span>/string<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>key<span style="color:#999;font-weight:bold">&amp;gt;</span>CFBundleSignature<span style="color:#999;font-weight:bold">&amp;lt;</span>/key<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>string<span style="color:#999;font-weight:bold">&amp;gt;</span>LMS <span style="color:#999;font-weight:bold">&amp;lt;</span>/string<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>key<span style="color:#999;font-weight:bold">&amp;gt;</span>CFBundleVersion<span style="color:#999;font-weight:bold">&amp;lt;</span>/key<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>string<span style="color:#999;font-weight:bold">&amp;gt;</span>Version 1.0<span style="color:#999;font-weight:bold">&amp;lt;</span>/string<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>key<span style="color:#999;font-weight:bold">&amp;gt;</span>LSApplicationCategoryType<span style="color:#999;font-weight:bold">&amp;lt;</span>/key<span style="color:#999;font-weight:bold">&amp;gt;</span>
-    <span style="color:#999;font-weight:bold">&amp;lt;</span>string<span style="color:#999;font-weight:bold">&amp;gt;</span>public.app-category.utilities<span style="color:#999;font-weight:bold">&amp;lt;</span>/string<span style="color:#999;font-weight:bold">&amp;gt;</span>
-  <span style="color:#999;font-weight:bold">&amp;lt;</span>/dict<span style="color:#999;font-weight:bold">&amp;gt;</span>
-<span style="color:#999;font-weight:bold">&amp;lt;</span>/plist<span style="color:#999;font-weight:bold">&amp;gt;</span></code></pre></div>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+<span style="color:#080">&lt;!DOCTYPE plist PUBLIC &#34;-//Apple//DTD PLIST 1.0//EN&#34;
+</span><span style="color:#080">  &#34;http://www.apple.com/DTDs/PropertyList-1.0.dtd&#34;&gt;</span>
+  <span style="color:#008000;font-weight:bold">&lt;dict&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;key&gt;</span>CFBundleDevelopmentRegion<span style="color:#008000;font-weight:bold">&lt;/key&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;string&gt;</span>English<span style="color:#008000;font-weight:bold">&lt;/string&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;key&gt;</span>CFBundleExecutable<span style="color:#008000;font-weight:bold">&lt;/key&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;string&gt;</span>LMS<span style="color:#008000;font-weight:bold">&lt;/string&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;key&gt;</span>CFBundleGetInfoString<span style="color:#008000;font-weight:bold">&lt;/key&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;string&gt;</span>Copyright 2011 Bill Farmer<span style="color:#008000;font-weight:bold">&lt;/string&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;key&gt;</span>CFBundleIconFile<span style="color:#008000;font-weight:bold">&lt;/key&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;string&gt;</span>LMS<span style="color:#008000;font-weight:bold">&lt;/string&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;key&gt;</span>CFBundleIdentifier<span style="color:#008000;font-weight:bold">&lt;/key&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;string&gt;</span>com.billthefarmer.LMS<span style="color:#008000;font-weight:bold">&lt;/string&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;key&gt;</span>CFBundleInfoDictionaryVersion<span style="color:#008000;font-weight:bold">&lt;/key&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;string&gt;</span>6.0<span style="color:#008000;font-weight:bold">&lt;/string&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;key&gt;</span>CFBundleName<span style="color:#008000;font-weight:bold">&lt;/key&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;string&gt;</span>LMS<span style="color:#008000;font-weight:bold">&lt;/string&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;key&gt;</span>CFBundlePackageType<span style="color:#008000;font-weight:bold">&lt;/key&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;string&gt;</span>APPL<span style="color:#008000;font-weight:bold">&lt;/string&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;key&gt;</span>CFBundleShortVersionString<span style="color:#008000;font-weight:bold">&lt;/key&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;string&gt;</span>1.0<span style="color:#008000;font-weight:bold">&lt;/string&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;key&gt;</span>CFBundleSignature<span style="color:#008000;font-weight:bold">&lt;/key&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;string&gt;</span>LMS <span style="color:#008000;font-weight:bold">&lt;/string&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;key&gt;</span>CFBundleVersion<span style="color:#008000;font-weight:bold">&lt;/key&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;string&gt;</span>Version 1.0<span style="color:#008000;font-weight:bold">&lt;/string&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;key&gt;</span>LSApplicationCategoryType<span style="color:#008000;font-weight:bold">&lt;/key&gt;</span>
+    <span style="color:#008000;font-weight:bold">&lt;string&gt;</span>public.app-category.utilities<span style="color:#008000;font-weight:bold">&lt;/string&gt;</span>
+  <span style="color:#008000;font-weight:bold">&lt;/dict&gt;</span>
+<span style="color:#008000;font-weight:bold">&lt;/plist&gt;</span></code></pre></div>
 <p>The PkgInfo file is just one line, the package type and the app signature concatenated.</p>
 
 <p><code>APPLLMS</code></p>
@@ -348,6 +348,10 @@ lines are</p>
   <h4>Recent Posts</h4>
   <ul>
     
+      <li><a href="/blog/calling-nslog-from-c-in-swift/">
+        Calling NSLog from C in Swift App
+      </a></li>
+    
       <li><a href="/blog/boiled-beef-and-carrots/">
         Boiled Beef and Carrots
       </a></li>
@@ -382,10 +386,6 @@ lines are</p>
     
       <li><a href="/blog/thai-red-curry-with-noodles/">
         Thai Red Curry with Noodles
-      </a></li>
-    
-      <li><a href="/blog/carrot-and-coriander-soup/">
-        Carrot and Coriander Soup
       </a></li>
     
   </ul>

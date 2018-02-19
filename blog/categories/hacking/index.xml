@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2018 Bill Farmer</copyright>
-    <lastBuildDate>Mon, 08 Jan 2018 11:02:04 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Feb 2018 16:10:25 +0000</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Calling NSLog from C in Swift App</title>
+      <link>https://billthefarmer.github.io/blog/calling-nslog-from-c-in-swift/</link>
+      <pubDate>Sun, 18 Feb 2018 16:10:25 +0000</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/calling-nslog-from-c-in-swift/</guid>
+      <description>I have had to write part of a Swift app dealing with CoreAudio for OSX in C because I couldn&amp;rsquo;t get it to work in Swift. There is a function NSLog in Foundation which would be nice to use from C for logging errors etc.
+However if you put
+#include &amp;lt;Foundation/Foundation.h&amp;gt; in your header file it triggers a multitude of errors due the Objective C function definitions. The definition of NSLog in the docs is</description>
+    </item>
     
     <item>
       <title>Android Custom Attributes</title>

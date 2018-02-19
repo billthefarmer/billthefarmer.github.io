@@ -13,7 +13,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-01-08T11:02:04&#43;00:00"/>
+<meta property="og:updated_time" content="2018-02-18T16:10:25&#43;00:00"/>
 
 
 
@@ -161,6 +161,39 @@
 
 <div class="blog-post">
   <h3>
+    <a href="https://billthefarmer.github.io/blog/calling-nslog-from-c-in-swift/">Calling NSLog from C in Swift App</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2018-02-18T16:10:25Z">
+        Sun Feb 18, 2018
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    I have had to write part of a Swift app dealing with CoreAudio for OSX in C because I couldn&rsquo;t get it to work in Swift. There is a function NSLog in Foundation which would be nice to use from C for logging errors etc.
+However if you put
+#include &lt;Foundation/Foundation.h&gt; in your header file it triggers a multitude of errors due the Objective C function definitions. The definition of NSLog in the docs is
+  </p>
+  <a href='https://billthefarmer.github.io/blog/calling-nslog-from-c-in-swift/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
     <a href="https://billthefarmer.github.io/blog/android-custom-attributes/">Android Custom Attributes</a>
   </h3>
   <div class="callout small">
@@ -286,39 +319,6 @@ I get a list of the file names into a buffer using find, which I then open with 
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/markdown-openstreetmap-maps/">Markdown OpenStreetMap Maps</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2017-10-14T12:59:06&#43;01:00">
-        Sat Oct 14, 2017
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    There does not seem to be a convention for showing maps or co-ordinates in Markdown, but almost anything gets put in square brackets [&lt;anything&gt;].
-I had a request from Marco the other day to put OpenStreetMap maps in my Diary app using
- [&lt;lat&gt;,&lt;lng&gt;]  syntax. So I did a bit of a search to see if there was a convention in Markdown for co-ordinates and couldn&rsquo;t find anything. So we seem to have broken new ground here.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/markdown-openstreetmap-maps/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -343,6 +343,10 @@ I had a request from Marco the other day to put OpenStreetMap maps in my Diary a
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/calling-nslog-from-c-in-swift/">
+        Calling NSLog from C in Swift App
+      </a></li>
     
       <li><a href="/blog/boiled-beef-and-carrots/">
         Boiled Beef and Carrots
@@ -378,10 +382,6 @@ I had a request from Marco the other day to put OpenStreetMap maps in my Diary a
     
       <li><a href="/blog/thai-red-curry-with-noodles/">
         Thai Red Curry with Noodles
-      </a></li>
-    
-      <li><a href="/blog/carrot-and-coriander-soup/">
-        Carrot and Coriander Soup
       </a></li>
     
   </ul>
