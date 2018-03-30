@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2018 Bill Farmer</copyright>
-    <lastBuildDate>Sun, 04 Feb 2018 11:50:57 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Mar 2018 15:56:14 +0000</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Swift</title>
+      <link>https://billthefarmer.github.io/blog/swift/</link>
+      <pubDate>Wed, 28 Mar 2018 15:56:14 +0000</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/swift/</guid>
+      <description>Some years ago I wrote an OSX app in C using Carbon because my Hackintosh would only run OSX 10.4 (Tiger). The most difficult part was dealing with the Core Audio API.
+I recently decided to port it to Swift to avoid having to attempt to learn Objective C. A derivation of C that sends selectors to targets using the syntax [target selector arguments...] I don&amp;rsquo;t want to know about.</description>
+    </item>
     
     <item>
       <title>Boiled Beef and Carrots</title>

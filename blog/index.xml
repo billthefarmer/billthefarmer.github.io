@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2018 Bill Farmer</copyright>
-    <lastBuildDate>Sun, 04 Feb 2018 11:50:57 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Mar 2018 15:56:14 +0000</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Swift</title>
+      <link>https://billthefarmer.github.io/blog/swift/</link>
+      <pubDate>Wed, 28 Mar 2018 15:56:14 +0000</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/swift/</guid>
+      <description>Some years ago I wrote an OSX app in C using Carbon because my Hackintosh would only run OSX 10.4 (Tiger). The most difficult part was dealing with the Core Audio API.
+I recently decided to port it to Swift to avoid having to attempt to learn Objective C. A derivation of C that sends selectors to targets using the syntax [target selector arguments...] I don&amp;rsquo;t want to know about.</description>
+    </item>
     
     <item>
       <title>Boiled Beef and Carrots</title>
@@ -349,7 +359,7 @@ I used gnuparted to copy the partition from one disk to another. The standard me
       <pubDate>Fri, 07 Aug 2015 09:32:42 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/index/</guid>
-      <description>RecipesBaked TomatoesBoiled Beef and CarrotsButter Beans in Tomato SauceCarrot and Coriander SoupCatalan slow cooked chickenChorizo Egg and Tomato Toasted SandwichClementine CakeCoarse RatatouilleCorned Beef ChiliDoug&amp;rsquo;s Seafood RisottoFabada AsturianaFaggots and Peas with Onion GravyFried RiceFried Whole MushroomsLeek and Potato SoupMexican BreakfastPan fried lamb&amp;rsquo;s liver, bacon and chorizoPasta PicanteSausages with Green LentilsShoreham fish chowderSlow cooked lambSlow cooked ox cheekSpanish FrittataSpanish omeletteStuffed PeppersThai Red Curry with NoodlesTruly Evil Onion GravyUnobtainiumVegetable Soup PlusVegetables cooked in olive oilVenison and Chorizo CasseroleWhole Broad Beans in Olive OilHackingAdding a calendar event in androidAndroid Custom AttributesAndroid Recent FilesAndroid Text SearchBuild Mac OSX apps using command line toolsC++Concurrency, Threads, Semaphores and MutexesDownload streamed videoFast Fourier TransformGetting Related Content workingHandlers in AndroidHandling run time changes in AndroidHaskellInstall OSX El Capitan on a PC (MBR)Java CollectionsMarkdown OpenStreetMap MapsMigrating this blog from WordpressMove Linux Mint Root PartitionPythonRaspberry Pi WifiRead iBook books on an Android tabletResolving content uris in androidResurrecting a netbook as a web serverSearch Engine Optimisation (SEO)SlimStatTransfer contacts from iPhone to AndroidUpgrading WordPressUpgrading a Moto GUpgrading to Windows 10Using Emacs as an IDEUsing Emacs in Android DevelopmentWhatever-o-meterWhatever-o-meter revisitedDiyReplacing micro-bore radiators</description>
+      <description>RecipesBaked TomatoesBoiled Beef and CarrotsButter Beans in Tomato SauceCarrot and Coriander SoupCatalan slow cooked chickenChorizo Egg and Tomato Toasted SandwichClementine CakeCoarse RatatouilleCorned Beef ChiliDoug&amp;rsquo;s Seafood RisottoFabada AsturianaFaggots and Peas with Onion GravyFried RiceFried Whole MushroomsLeek and Potato SoupMexican BreakfastPan fried lamb&amp;rsquo;s liver, bacon and chorizoPasta PicanteSausages with Green LentilsShoreham fish chowderSlow cooked lambSlow cooked ox cheekSpanish FrittataSpanish omeletteStuffed PeppersThai Red Curry with NoodlesTruly Evil Onion GravyUnobtainiumVegetable Soup PlusVegetables cooked in olive oilVenison and Chorizo CasseroleWhole Broad Beans in Olive OilHackingAdding a calendar event in androidAndroid Custom AttributesAndroid Recent FilesAndroid Text SearchBuild Mac OSX apps using command line toolsC++Concurrency, Threads, Semaphores and MutexesDownload streamed videoFast Fourier TransformGetting Related Content workingHandlers in AndroidHandling run time changes in AndroidHaskellInstall OSX El Capitan on a PC (MBR)Java CollectionsMarkdown OpenStreetMap MapsMigrating this blog from WordpressMove Linux Mint Root PartitionPythonRaspberry Pi WifiRead iBook books on an Android tabletResolving content uris in androidResurrecting a netbook as a web serverSearch Engine Optimisation (SEO)SlimStatSwiftTransfer contacts from iPhone to AndroidUpgrading WordPressUpgrading a Moto GUpgrading to Windows 10Using Emacs as an IDEUsing Emacs in Android DevelopmentWhatever-o-meterWhatever-o-meter revisitedDiyReplacing micro-bore radiators</description>
     </item>
     
     <item>
