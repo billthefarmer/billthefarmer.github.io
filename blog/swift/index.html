@@ -52,7 +52,7 @@ I recently decided to port it to Swift to avoid having to attempt to learn Objec
 
 
 
-<meta name="generator" content="Hugo 0.35" />
+<meta name="generator" content="Hugo 0.41" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -265,8 +265,8 @@ written in C works fine.</p>
     <span style="color:#a2f;font-weight:bold">if</span> (status <span style="color:#666">!=</span> noErr)
     {
         <span style="color:#080;font-style:italic">// AudioObjectGetPropertyData
-</span><span style="color:#080;font-style:italic"></span>        NSLog(<span style="">@</span><span style="color:#b44"></span><span style="color:#b44">&#34;Error in AudioObjectGetPropertyData: &#34;</span> 
-                    <span style="color:#b44"></span><span style="color:#b44">&#34;kAudioHardwarePropertyDefaultInputDevice %s (%d)&#34;</span>,
+</span><span style="color:#080;font-style:italic"></span>        NSLog(<span style="">@</span><span style="color:#b44">&#34;Error in AudioObjectGetPropertyData: &#34;</span> 
+                    <span style="color:#b44">&#34;kAudioHardwarePropertyDefaultInputDevice %s (%d)&#34;</span>,
               AudioUnitErrString(status), status);
         <span style="color:#a2f;font-weight:bold">return</span> status;
     }
@@ -279,8 +279,8 @@ written in C works fine.</p>
     <span style="color:#a2f;font-weight:bold">if</span> (status <span style="color:#666">!=</span> noErr)
     {
         <span style="color:#080;font-style:italic">// AudioUnitSetProperty
-</span><span style="color:#080;font-style:italic"></span>        NSLog(<span style="">@</span><span style="color:#b44"></span><span style="color:#b44">&#34;Error in AudioUnitSetProperty: &#34;</span> 
-                    <span style="color:#b44"></span><span style="color:#b44">&#34;kAudioOutputUnitProperty_CurrentDevice %s (%d)&#34;</span>,
+</span><span style="color:#080;font-style:italic"></span>        NSLog(<span style="">@</span><span style="color:#b44">&#34;Error in AudioUnitSetProperty: &#34;</span> 
+                    <span style="color:#b44">&#34;kAudioOutputUnitProperty_CurrentDevice %s (%d)&#34;</span>,
               AudioUnitErrString(status), status);
         <span style="color:#a2f;font-weight:bold">return</span> status;
     }</code></pre></div>

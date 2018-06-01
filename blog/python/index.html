@@ -52,7 +52,7 @@ But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter 
 
 
 
-<meta name="generator" content="Hugo 0.35" />
+<meta name="generator" content="Hugo 0.41" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -205,14 +205,14 @@ But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter 
 <span style="color:#a2f;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">datetime</span> <span style="color:#a2f;font-weight:bold">import</span> date
 <span style="color:#a2f;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">email.mime.text</span> <span style="color:#a2f;font-weight:bold">import</span> MIMEText
 
-<span style="color:#a2f;font-weight:bold">if</span> os<span style="color:#666">.</span>path<span style="color:#666">.</span>exists(<span style="color:#b44"></span><span style="color:#b44">&#34;sent&#34;</span>)
+<span style="color:#a2f;font-weight:bold">if</span> os<span style="color:#666">.</span>path<span style="color:#666">.</span>exists(<span style="color:#b44">&#34;sent&#34;</span>)
   quit()
 
-f <span style="color:#666">=</span> urllib2<span style="color:#666">.</span>urlopen(<span style="color:#b44"></span><span style="color:#b44">&#34;url&#34;</span>)
+f <span style="color:#666">=</span> urllib2<span style="color:#666">.</span>urlopen(<span style="color:#b44">&#34;url&#34;</span>)
 
 today <span style="color:#666">=</span> False
 <span style="color:#a2f;font-weight:bold">for</span> line <span style="color:#a2f;font-weight:bold">in</span> f:
-  <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#b44"></span><span style="color:#b44">&#34;winners&#34;</span> <span style="color:#a2f;font-weight:bold">in</span> line:
+  <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#b44">&#34;winners&#34;</span> <span style="color:#a2f;font-weight:bold">in</span> line:
     today <span style="color:#666">=</span> <span style="color:#a2f">str</span>(date<span style="color:#666">.</span>today()<span style="color:#666">.</span>day) <span style="color:#a2f;font-weight:bold">in</span> line
     <span style="color:#a2f;font-weight:bold">break</span>
 
@@ -220,21 +220,21 @@ line <span style="color:#666">=</span> f<span style="color:#666">.</span>readlin
 
 f<span style="color:#666">.</span>close()
 
-<span style="color:#a2f;font-weight:bold">if</span> today <span style="color:#a2f;font-weight:bold">and</span> <span style="color:#b44"></span><span style="color:#b44">&#34;name&#34;</span> <span style="color:#a2f;font-weight:bold">in</span> line:
-  s <span style="color:#666">=</span> smtplib<span style="color:#666">.</span>SMTP_SSL(<span style="color:#b44"></span><span style="color:#b44">&#34;smtp.mail.yahoo.com&#34;</span>)
-  s<span style="color:#666">.</span>login(<span style="color:#b44"></span><span style="color:#b44">&#34;user&#34;</span>,<span style="color:#b44"></span><span style="color:#b44">&#34;password&#34;</span>)
-  msg <span style="color:#666">=</span> MIMEText(<span style="color:#b44"></span><span style="color:#b44">&#34;I would like to claim my prize</span><span style="color:#b62;font-weight:bold">\r\n\r\n</span><span style="color:#b44">Regards</span><span style="color:#b62;font-weight:bold">\r\n</span><span style="color:#b44">name&#34;</span>)
-  msg[<span style="color:#b44"></span><span style="color:#b44">&#39;Subject&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44"></span><span style="color:#b44">&#34;Advent Calendar Competition&#34;</span>
-  msg[<span style="color:#b44"></span><span style="color:#b44">&#39;From&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44"></span><span style="color:#b44">&#34;from email&#34;</span>
-  msg[<span style="color:#b44"></span><span style="color:#b44">&#39;To&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44"></span><span style="color:#b44">&#34;to email&#34;</span>
-  msg[<span style="color:#b44"></span><span style="color:#b44">&#39;Bcc&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44"></span><span style="color:#b44">&#34;from email&#34;</span>
-  s<span style="color:#666">.</span>sendmail(<span style="color:#b44"></span><span style="color:#b44">&#34;from email&#34;</span>, [<span style="color:#b44"></span><span style="color:#b44">&#34;to email&#34;</span>,<span style="color:#b44"></span><span style="color:#b44">&#34;from email&#34;</span>], msg<span style="color:#666">.</span>as_string())
+<span style="color:#a2f;font-weight:bold">if</span> today <span style="color:#a2f;font-weight:bold">and</span> <span style="color:#b44">&#34;name&#34;</span> <span style="color:#a2f;font-weight:bold">in</span> line:
+  s <span style="color:#666">=</span> smtplib<span style="color:#666">.</span>SMTP_SSL(<span style="color:#b44">&#34;smtp.mail.yahoo.com&#34;</span>)
+  s<span style="color:#666">.</span>login(<span style="color:#b44">&#34;user&#34;</span>,<span style="color:#b44">&#34;password&#34;</span>)
+  msg <span style="color:#666">=</span> MIMEText(<span style="color:#b44">&#34;I would like to claim my prize</span><span style="color:#b62;font-weight:bold">\r\n\r\n</span><span style="color:#b44">Regards</span><span style="color:#b62;font-weight:bold">\r\n</span><span style="color:#b44">name&#34;</span>)
+  msg[<span style="color:#b44">&#39;Subject&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44">&#34;Advent Calendar Competition&#34;</span>
+  msg[<span style="color:#b44">&#39;From&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44">&#34;from email&#34;</span>
+  msg[<span style="color:#b44">&#39;To&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44">&#34;to email&#34;</span>
+  msg[<span style="color:#b44">&#39;Bcc&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44">&#34;from email&#34;</span>
+  s<span style="color:#666">.</span>sendmail(<span style="color:#b44">&#34;from email&#34;</span>, [<span style="color:#b44">&#34;to email&#34;</span>,<span style="color:#b44">&#34;from email&#34;</span>], msg<span style="color:#666">.</span>as_string())
   s<span style="color:#666">.</span>quit()
   <span style="color:#a2f;font-weight:bold">print</span>(msg<span style="color:#666">.</span>as_string())
-  <span style="color:#a2f">open</span>(<span style="color:#b44"></span><span style="color:#b44">&#34;sent&#34;</span>, <span style="color:#b44"></span><span style="color:#b44">&#34;w&#34;</span>)<span style="color:#666">.</span>close()
+  <span style="color:#a2f">open</span>(<span style="color:#b44">&#34;sent&#34;</span>, <span style="color:#b44">&#34;w&#34;</span>)<span style="color:#666">.</span>close()
 
-<span style="color:#a2f;font-weight:bold">with</span> <span style="color:#a2f">file</span>(<span style="color:#b44"></span><span style="color:#b44">&#34;last&#34;</span>, <span style="color:#b44"></span><span style="color:#b44">&#34;a&#34;</span>):
-  utime(<span style="color:#b44"></span><span style="color:#b44">&#34;last&#34;</span>, None)</code></pre></div>
+<span style="color:#a2f;font-weight:bold">with</span> <span style="color:#a2f">file</span>(<span style="color:#b44">&#34;last&#34;</span>, <span style="color:#b44">&#34;a&#34;</span>):
+  utime(<span style="color:#b44">&#34;last&#34;</span>, None)</code></pre></div>
 <p>So, very careful with the indenting. We shall have to see if anyone wins anything. The script gets fired off periodically with a crontab entry.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#b8860b">CRON_TZ</span><span style="color:#666">=</span>Europe/London
 <span style="color:#b8860b">MAILTO</span><span style="color:#666">=</span>bill

@@ -52,7 +52,7 @@ intro:Pleaseanswerthefollowingquestionscarefullyandtruthfully.question:-Youarely
 
 
 
-<meta name="generator" content="Hugo 0.35" />
+<meta name="generator" content="Hugo 0.41" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -270,7 +270,8 @@ exist.</p>
 <span style="color:#a2f;font-weight:bold">var</span> whatever_data <span style="color:#666">=</span>
   {<span style="color:#b44">&#34;colours&#34;</span><span style="color:#666">:</span><span style="color:#a2f;font-weight:bold">null</span>,<span style="color:#b44">&#34;duration&#34;</span><span style="color:#666">:</span><span style="color:#a2f;font-weight:bold">null</span>,<span style="color:#b44">&#34;easing&#34;</span><span style="color:#666">:</span><span style="color:#a2f;font-weight:bold">null</span>,<span style="color:#b44">&#34;results&#34;</span><span style="color:#666">:</span>[<span style="color:#b44">&#34;%d percent,
 </span><span style="color:#b44">    Perhaps you should consider emigration.&#34;</span>,...],<span style="color:#b44">&#34;weights&#34;</span><span style="color:#666">:</span>[<span style="color:#b44">&#34;2&#34;</span>,<span style="color:#b44">&#34;1&#34;</span>,<span style="color:#b44">&#34;1&#34;</span>,<span style="color:#b44">&#34;1&#34;</span>,<span style="color:#b44">&#34;1&#34;</span>]};
-<span style="color:#666">&lt;</span><span style="">/script&gt;</span></code></pre></div>
+<span style="color:#666">&lt;</span><span style="">/script&gt;</span>
+</code></pre></div>
 <p>The javascript code needed a bit of work to force the weights, which
 were passed by Hugo as an array of strings, to be interpreted as numbers.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">        <span style="color:#080;font-style:italic">// Check if weights are defined
@@ -285,7 +286,8 @@ were passed by Hugo as an array of strings, to be interpreted as numbers.</p>
             value <span style="color:#666">+=</span> $(<span style="color:#b44">&#34;#value-&#34;</span> <span style="color:#666">+</span> panel).slider(<span style="color:#b44">&#34;value&#34;</span>) <span style="color:#666">*</span>
 	        weights[index];
             total <span style="color:#666">+=</span> <span style="color:#666">+</span>weights[index];
-        }</code></pre></div>
+        }
+</code></pre></div>
     </p>
     
     
