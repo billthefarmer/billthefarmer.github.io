@@ -13,7 +13,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-03-28T15:56:14&#43;00:00"/>
+<meta property="og:updated_time" content="2018-06-19T20:23:44&#43;01:00"/>
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.41" />
+<meta name="generator" content="Hugo 0.40.1" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -155,6 +155,37 @@
         <div class="medium-8 columns">
           
 
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/post/handling-resizing-in-windows/">Handling Resizing in Windows</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2018-06-19T20:23:44&#43;01:00">
+        Tue Jun 19, 2018
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    I have a windows app where I want the app window to maintain it&rsquo;s aspect ratio when it is resized. Windows provides two mechanisms for this, the WM_SIZE message and the WM_SIZING message. The WM_SIZE message is sent when a window has been resized to allow child windows to be resized, the WM_SIZING message is sent while the user is resizing it to allow the size to be adjusted. The messages are handled in the WindowProc callback function.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/post/handling-resizing-in-windows/'>Read more →</a>
+  <hr>
+</div>
 
 
   
@@ -285,39 +316,6 @@ Calendar custom styles The custom calendar has a list of styles that are customi
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/using-emacs-in-android-development/">Using Emacs in Android Development</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2017-10-18T15:51:28&#43;01:00">
-        Wed Oct 18, 2017
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    I&rsquo;ve got a folder full of country flags which I have renamed using scripts so the names correspond to currency symbols. I want an integer array with references to the flags as android resources. This can be automated using emacs.
-I get a list of the file names into a buffer using find, which I then open with emacs.
-% find src/ -name flag* &gt; data/sym-flags.lst They are already sorted, but just to make sure I use M-x sort-lines.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/using-emacs-in-android-development/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -342,6 +340,10 @@ I get a list of the file names into a buffer using find, which I then open with 
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/post/handling-resizing-in-windows/">
+        Handling Resizing in Windows
+      </a></li>
     
       <li><a href="/blog/swift/">
         Swift
@@ -377,10 +379,6 @@ I get a list of the file names into a buffer using find, which I then open with 
     
       <li><a href="/blog/butter-beans-in-tomato-sauce/">
         Butter Beans in Tomato Sauce
-      </a></li>
-    
-      <li><a href="/blog/thai-red-curry-with-noodles/">
-        Thai Red Curry with Noodles
       </a></li>
     
   </ul>
