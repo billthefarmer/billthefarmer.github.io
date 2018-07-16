@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://billthefarmer.github.io/blog/post/smart-meters/</loc>
+    <lastmod>2018-07-14T21:22:37+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://billthefarmer.github.io/blog/post/mullard-5-20-amplifier/</loc>
     <lastmod>2018-07-01T16:25:18+01:00</lastmod>
   </url>
@@ -369,7 +374,7 @@
   
   <url>
     <loc>https://billthefarmer.github.io/blog/</loc>
-    <lastmod>2018-07-01T16:25:18+01:00</lastmod>
+    <lastmod>2018-07-14T21:22:37+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -386,7 +391,7 @@
   
   <url>
     <loc>https://billthefarmer.github.io/blog/categories/electronics/</loc>
-    <lastmod>2018-07-01T16:25:18+01:00</lastmod>
+    <lastmod>2018-07-14T21:22:37+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -398,7 +403,7 @@
   
   <url>
     <loc>https://billthefarmer.github.io/blog/post/</loc>
-    <lastmod>2018-07-01T16:25:18+01:00</lastmod>
+    <lastmod>2018-07-14T21:22:37+01:00</lastmod>
     <priority>0</priority>
   </url>
   
