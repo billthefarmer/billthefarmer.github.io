@@ -34,7 +34,7 @@
 
 <meta itemprop="datePublished" content="2018-07-14T21:22:37&#43;01:00" />
 <meta itemprop="dateModified" content="2018-07-14T21:22:37&#43;01:00" />
-<meta itemprop="wordCount" content="846">
+<meta itemprop="wordCount" content="860">
 
 
 
@@ -277,10 +277,10 @@ communicated with the metering processor.</p>
 <p>I did develop several useful gadgets for testing purposes, one was the
 CALMU Super Snooper which had a two line <a href="https://en.wikipedia.org/wiki/Liquid-crystal_display">LCD</a> display and a
 hexadecimal keypad. This allowed interrogating a CALMU by sending a
-query message and displaying the reply. It had a piezo buzzer mounted
-on the pcb which provided audio feedback for the keypad. If you held a
-button down while turning it on it played the tune from Super Trouper
-by Abba.</p>
+query message and displaying the reply. It used the EPROM variant 8051
+processor. It had a piezo buzzer mounted on the pcb which provided
+audio feedback for the keypad. If you held a button down while turning
+it on it played the tune from Super Trouper by Abba.</p>
 
 <p><img src="images/2018/07/F5326385-01.jpg" alt="LCD Display" /></p>
 
@@ -290,13 +290,17 @@ by Abba.</p>
 
 <p>Another was a radio teleswitch receiver using an 8051 variant which
 was connected to a <a href="https://en.wikipedia.org/wiki/BBC_Micro">BBC Micro</a> digital I/O port. This, in
-conjunction with some software on the BBC Micro, enabled the messages
-to be displayed. The other was an EPROM that turned an <a href="https://en.wikipedia.org/wiki/Acorn_Atom">Acorn
-Atom</a> into a serial terminal. The standard keyboard scanner in an
-Atom was horrible to type on, it only registered a key press when you
-released the key. So I wrote my own, included in the EPROM. I can&rsquo;t
-remember why we wanted a serial terminal, but we must have done or I
-wouldn&rsquo;t have had the idea.</p>
+conjunction with some software on the BBC Micro, enabled the radio
+teleswitch messages to be displayed.</p>
+
+<h4 id="acorn-atom-terminal">Acorn Atom terminal</h4>
+
+<p>The other was an EPROM that turned an <a href="https://en.wikipedia.org/wiki/Acorn_Atom">Acorn Atom</a> into a serial
+terminal. The standard keyboard scanner in an Atom was horrible to
+type on, it only registered a key press when you released the key. So
+I wrote my own, included in the EPROM. I can&rsquo;t remember why we wanted
+a serial terminal, but we must have done or I wouldn&rsquo;t have had the
+idea.</p>
 
 <h4 id="other-projects">Other projects</h4>
 
@@ -304,7 +308,7 @@ wouldn&rsquo;t have had the idea.</p>
 broad band communication down the customers&rsquo; electricity supply cable
 from the nearest substation. This worked during times of low demand on
 the power network, but became unreliable during times of high demand
-due to the noise level.</p>
+due to the high noise level.</p>
 
 <h4 id="kilostream">Kilostream</h4>
 
@@ -316,7 +320,7 @@ communication with devices on a customer&rsquo;s premises via the telephone
 line. The prices they wanted for the service were completely out of
 scope for meter reading. So that was the end of that. Since then all
 the utilities have been privatised, so any joint metering projects
-became exceedingly unlikely. They have all done their own thing.</p>
+became exceedingly unlikely. They have since all done their own thing.</p>
 
     </p>
     
