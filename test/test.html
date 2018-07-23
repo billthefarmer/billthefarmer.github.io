@@ -1,29 +1,45 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
   <head>
-    <title>Test</title>
-    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Bill Farmer">
     <meta name="description" content="Test">
+    <title>Test</title>
     <meta http-equiv="content-language" content="en-gb" />
-    <script>
-      window.onload = function() {
-        if (!localStorage.getItem('test')) {
-          let e = document.querySelector('div');
-          e.innerHTML = '<p>Failed</p>';
-        }
-        else
-        {
-          let e = document.querySelector('div');
-          e.innerHTML = '<p>Success</p>';
-        }
-        localStorage.setItem('test', 'value');
-      }
-    </script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/test.js"></script>  
   </head>
   <body>
-    <h1>Test</h1>
-    <div></div>
+    <header>
+      <h1>Test</h1>
+    </header>
+    <div class="intro">
+      <fieldset>
+        <h4 id="intro"></h4>
+        <input type="button" id="start" value="Start" />
+      </fieldset>
+    </div>
+    <div class="question">
+      <fieldset>
+        <h4 id="question"></h4>
+        <input type="radio" id="radio-1" value="answer-1" />
+        <label for="radio-1" id="label-1"></label><br />
+        <input type="radio" id="radio-2" value="answer-2" />
+        <label for="radio-2" id="label-2"></label><br />
+      </fieldset>
+    </div>
+    <div class="result">
+      <fieldset>
+        <h4>Results</h4>
+        <pre id="result"></pre>
+      </fieldset>
+    </div>
+    <footer>
+      <p>Copyright &copy; 2018 Bill Farmer</p>
+    </footer>
   </body>
 </html>

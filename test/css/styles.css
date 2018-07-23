@@ -1,0 +1,9 @@
+body {
+    background: cornsilk;
+    width: 560px;
+    margin: 0 auto;
+}
+
+div.question, div.result {
+    display: none;
+}
