@@ -71,6 +71,7 @@ jQuery(document).ready(function($) {
         question++;
         if (question < questions.length)
         {
+            $(".question").fadeOut(function(){$(".question").fadeIn()});
             let type = questions[question].t;
             $("#question").html(questions[question].q);
             $("#label-1").html(questions[question].a[0]);
