@@ -71,15 +71,15 @@ jQuery(document).ready(function($) {
         question++;
         if (question < questions.length)
         {
-            $(".question").fadeOut(function(){$(".question").fadeIn()});
             let type = questions[question].t;
-            $("#question").html(questions[question].q);
-            $("#label-1").html(questions[question].a[0]);
-            $("#radio-1").attr("value", questions[question].v[0]);
-            $("#label-2").html(questions[question].a[1]);
-            $("#radio-2").attr("value", questions[question].v[1]);
-            $("input[type=radio]").prop("checked", false);
-            type = questions[question].t;
+            $(".question").fadeOut(function() {
+                $("#question").html(questions[question].q);
+                $("#label-1").html(questions[question].a[0]);
+                $("#radio-1").attr("value", questions[question].v[0]);
+                $("#label-2").html(questions[question].a[1]);
+                $("#radio-2").attr("value", questions[question].v[1]);
+                $("input[type=radio]").prop("checked", false);
+                $(".question").fadeIn()});
         }
 
         else
