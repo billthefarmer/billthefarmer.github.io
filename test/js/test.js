@@ -50,11 +50,12 @@ jQuery(document).ready(function($) {
 
     $("#intro").html(data.intro);
 
-    let question = 0;
+    let question;
     let questions = data.questions;
 
     // Process the start button
     $("#start").click(function() {
+        question = 0;
         $(".intro").fadeOut(function(){$(".question").fadeIn()});
         $("#question").html(questions[question].q);
         $("#label-1").html(questions[question].a[0]);
@@ -88,5 +89,11 @@ jQuery(document).ready(function($) {
             $("#result").html(JSON.stringify(data.results, null, 4));
             console.log(data.results);
         }
+    });
+
+    $("#again").click(function() {
+        $(".result").fadeOut(function(){$(".intro").fadeIn()});
+        for (let [key, value] in data.results)
+            data.results[key] = 0;
     });
 });
