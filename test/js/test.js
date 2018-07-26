@@ -223,9 +223,17 @@ jQuery(document).ready(function($) {
 
     // Process the again button
     $("#again").click(function() {
-        $(".result").fadeOut(function(){$(".intro").fadeIn()});
-        for (let [key, value] in results)
-            results[key] = 0;
+        $(".result").fadeOut(function() {
+            for (let [key, value] in results)
+            {
+                if (key == "A")
+                    results[key] = [0, 0];
+
+                else
+                    results[key] = 0;
+            }
+            $(".intro").fadeIn();
+        });
     });
 });
 
