@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-language" content="en-gb" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Bill Farmer">
     <meta name="description" content="Test">
     <title>Test</title>
-    <meta http-equiv="content-language" content="en-gb" />
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <script src="js/jquery.min.js"></script>
@@ -20,27 +20,46 @@
     <div class="intro">
       <fieldset>
         <h4 id="intro"></h4>
-        <input type="button" id="start" value="Start" />
+        <input type="button" id="start" value="Begin!" />
       </fieldset>
     </div>
     <div class="question">
       <fieldset>
         <h4 id="question"></h4>
-        <input type="radio" id="radio-1" value="answer-1" />
+        <input type="radio" id="radio-1" class="answer" value="answer-1" />
         <label for="radio-1" id="label-1"></label><br />
-        <input type="radio" id="radio-2" value="answer-2" />
+        <input type="radio" id="radio-2" class="answer" value="answer-2" />
         <label for="radio-2" id="label-2"></label><br />
+        <br />
+        <input type="button" id="back" class="back" value="Back" />
+      </fieldset>
+    </div>
+    <div class="last">
+      <fieldset>
+        <h4 id="last"></h4>
+        <input type="radio" id="radio-3" class="last" value="answer-3" />
+        <label for="radio-3" id="label-3"></label><br />
+        <input type="radio" id="radio-4" class="last" value="answer-4" />
+        <label for="radio-4" id="label-4"></label><br />
+        <input type="radio" id="radio-5" class="last" value="answer-5" />
+        <label for="radio-5" id="label-5"></label><br />
+        <input type="radio" id="radio-6" class="last" value="answer-6" />
+        <label for="radio-6" id="label-6"></label><br />
+        <br />
+        <input type="button" id="prev" class="back" value="Back" />
       </fieldset>
     </div>
     <div class="result">
       <fieldset>
         <h4>Results</h4>
         <pre id="result"></pre>
+        <pre id="calc"></pre>
         <input type="button" id="again" value="Again" />
       </fieldset>
     </div>
     <footer>
       <p>Copyright &copy; 2018 Bill Farmer</p>
     </footer>
+    <pre id="data"></pre>
   </body>
 </html>
