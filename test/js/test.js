@@ -100,7 +100,7 @@ jQuery(document).ready(function($) {
     //     data = json;
     // });
 
-    $("#data").html(JSON.stringify(data, null, 2));
+    // $("#data").html(JSON.stringify(data, null, 2));
 
     // Set up buttons
     $("input[type=button]").button();
