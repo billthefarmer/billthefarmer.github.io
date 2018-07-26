@@ -96,9 +96,9 @@ jQuery(document).ready(function($) {
 
     // let data = {};
 
-    // $.getJSON("js/test.json", function(json) {
-    //     data = json;
-    // });
+    $.getJSON("js/test.json", function(json) {
+        data = json;
+    });
 
     // $("#data").html(JSON.stringify(data, null, 2));
 
