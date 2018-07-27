@@ -4,6 +4,6 @@ body {
     margin: 0 auto;
 }
 
-div.question, div.last, div.result, input.back {
+div.question, div.last, div.result, pre.data, input.back {
     display: none;
 }

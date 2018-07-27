@@ -8,7 +8,7 @@
 // Copyright (C) 2018 Bill Farmer
 
 jQuery(document).ready(function($) {
-
+    /*
     let data =
         {intro: "Please answer the following questions as carefully and accurately as you can",
          questions:
@@ -93,17 +93,20 @@ jQuery(document).ready(function($) {
           F: ["Singular", "Related", "Varied", "Diverse"]
          },
         };
-
+    */
     // let data = {};
 
-    $.getJSON("js/test.json", function(json) {
-        data = json;
-    });
+    // $.getJSON("js/test.json", function(json) {
+    //     data = json;
+    // });
 
     // $("#data").html(JSON.stringify(data, null, 2));
 
+    let data = JSON.parse($("#data").html());
+
     // Set up buttons
     $("input[type=button]").button();
+    $("input[type=submit]").button();
 
     // Set up radio buttons
     // $("input[type=radio]").checkboxradio();
@@ -212,9 +215,13 @@ jQuery(document).ready(function($) {
         $("div.last").fadeOut(function() {
             results.A[0] = results.B;
             results.A[1] = results.E;
-            $("#result").html(JSON.stringify(results, null, 4));
-            $("#calc").html(JSON.stringify(calculate(results, matrix),
-                                          null, 4));
+            let result = calculate(results, matrix);
+            $("#arch").attr("value", result.A);
+            $("#brain").attr("value", result.B);
+            $("#comm").attr("value", result.C);
+            $("#direct").attr("value", result.D);
+            $("#exec").attr("value", result.E);
+            $("#focus").attr("value", result.F);            
             $("div.result").fadeIn();
             console.log(results);
             console.log(calculate(results, matrix));
