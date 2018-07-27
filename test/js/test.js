@@ -127,10 +127,21 @@ jQuery(document).ready(function($) {
         $("#data").css("display", "none");
         $(".intro").fadeOut(function(){$(".question").fadeIn()});
         $("#question").html(questions[question].q);
-        $("#label-1").html(questions[question].a[0]);
-        $("#radio-1").attr("value", questions[question].v[0]);
-        $("#label-2").html(questions[question].a[1]);
-        $("#radio-2").attr("value", questions[question].v[1]);
+        if (Math.round(Math.random()))
+        {
+            $("#label-1").html(questions[question].a[0]);
+            $("#radio-1").attr("value", questions[question].v[0]);
+            $("#label-2").html(questions[question].a[1]);
+            $("#radio-2").attr("value", questions[question].v[1]);
+        }
+
+        else
+        {
+            $("#label-2").html(questions[question].a[0]);
+            $("#radio-2").attr("value", questions[question].v[0]);
+            $("#label-1").html(questions[question].a[1]);
+            $("#radio-1").attr("value", questions[question].v[1]);
+        }
         $("input[type=radio]").prop("checked", false);
     });
 
@@ -143,10 +154,21 @@ jQuery(document).ready(function($) {
             $("input.back").css("display", "none");
         $(".question").fadeOut(function() {
             $("#question").html(questions[question].q);
-            $("#label-1").html(questions[question].a[0]);
-            $("#radio-1").attr("value", questions[question].v[0]);
-            $("#label-2").html(questions[question].a[1]);
-            $("#radio-2").attr("value", questions[question].v[1]);
+            if (Math.round(Math.random()))
+            {
+                $("#label-1").html(questions[question].a[0]);
+                $("#radio-1").attr("value", questions[question].v[0]);
+                $("#label-2").html(questions[question].a[1]);
+                $("#radio-2").attr("value", questions[question].v[1]);
+            }
+
+            else
+            {
+                $("#label-2").html(questions[question].a[0]);
+                $("#radio-2").attr("value", questions[question].v[0]);
+                $("#label-1").html(questions[question].a[1]);
+                $("#radio-1").attr("value", questions[question].v[1]);
+            }
             $("input[type=radio]").prop("checked", false);
             $(".question").fadeIn();
         });
@@ -159,10 +181,21 @@ jQuery(document).ready(function($) {
         results[type] -= value;
         $("div.last").fadeOut(function() {
             $("#question").html(questions[question].q);
-            $("#label-1").html(questions[question].a[0]);
-            $("#radio-1").attr("value", questions[question].v[0]);
-            $("#label-2").html(questions[question].a[1]);
-            $("#radio-2").attr("value", questions[question].v[1]);
+            if (Math.round(Math.random()))
+            {
+                $("#label-1").html(questions[question].a[0]);
+                $("#radio-1").attr("value", questions[question].v[0]);
+                $("#label-2").html(questions[question].a[1]);
+                $("#radio-2").attr("value", questions[question].v[1]);
+            }
+
+            else
+            {
+                $("#label-2").html(questions[question].a[0]);
+                $("#radio-2").attr("value", questions[question].v[0]);
+                $("#label-1").html(questions[question].a[1]);
+                $("#radio-1").attr("value", questions[question].v[1]);
+            }
             $("input[type=radio]").prop("checked", false);
             $(".question").fadeIn();
         });
@@ -179,10 +212,21 @@ jQuery(document).ready(function($) {
             let type = questions[question].t;
             $("div.question").fadeOut(function() {
                 $("#question").html(questions[question].q);
-                $("#label-1").html(questions[question].a[0]);
-                $("#radio-1").attr("value", questions[question].v[0]);
-                $("#label-2").html(questions[question].a[1]);
-                $("#radio-2").attr("value", questions[question].v[1]);
+                if (Math.round(Math.random()))
+                {
+                    $("#label-1").html(questions[question].a[0]);
+                    $("#radio-1").attr("value", questions[question].v[0]);
+                    $("#label-2").html(questions[question].a[1]);
+                    $("#radio-2").attr("value", questions[question].v[1]);
+                }
+
+                else
+                {
+                    $("#label-2").html(questions[question].a[0]);
+                    $("#radio-2").attr("value", questions[question].v[0]);
+                    $("#label-1").html(questions[question].a[1]);
+                    $("#radio-1").attr("value", questions[question].v[1]);
+                }
                 $("input[type=radio]").prop("checked", false);
                 $("input.back").css("display", "block");
                 $("div.question").fadeIn();
@@ -221,7 +265,8 @@ jQuery(document).ready(function($) {
             $("#comm").attr("value", result.C);
             $("#direct").attr("value", result.D);
             $("#exec").attr("value", result.E);
-            $("#focus").attr("value", result.F);            
+            $("#focus").attr("value", result.F);
+            $("#journey").attr("value", result.J);
             $("div.result").fadeIn();
             console.log(results);
             console.log(calculate(results, matrix));
@@ -250,13 +295,15 @@ function calculate(results, matrix) {
     let d = (results.D / 2) - 3;
     let e = (results.E / 2) - 3;
     let f = (results.F / 2) - 3;
+    let j = (results.J / 2) - 1;
 
     let result = {A: matrix.A[Math.trunc(b / 2)][Math.trunc(e / 2)],
                   B: matrix.B[b],
                   C: matrix.C[c],
                   D: matrix.D[d],
                   E: matrix.E[e],
-                  F: matrix.F[f]};
+                  F: matrix.F[f],
+                  J: matrix.J[j]};
 
     return result;
 }

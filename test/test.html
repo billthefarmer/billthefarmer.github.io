@@ -26,9 +26,11 @@
     <div class="question">
       <fieldset>
         <h4 id="question"></h4>
-        <input type="radio" id="radio-1" class="answer" value="answer-1" />
+        <input type="radio" id="radio-1" name="answer"
+               class="answer" value="answer-1" />
         <label for="radio-1" id="label-1"></label><br />
-        <input type="radio" id="radio-2" class="answer" value="answer-2" />
+        <input type="radio" id="radio-2" name="answer"
+               class="answer" value="answer-2" />
         <label for="radio-2" id="label-2"></label><br />
         <br />
         <input type="button" id="back" class="back" value="Back" />
@@ -37,13 +39,17 @@
     <div class="last">
       <fieldset>
         <h4 id="last"></h4>
-        <input type="radio" id="radio-3" class="last" value="answer-3" />
+        <input type="radio" id="radio-3" name="last"
+               class="last" value="answer-3" />
         <label for="radio-3" id="label-3"></label><br />
-        <input type="radio" id="radio-4" class="last" value="answer-4" />
+        <input type="radio" id="radio-4" name="last"
+               class="last" value="answer-4" />
         <label for="radio-4" id="label-4"></label><br />
-        <input type="radio" id="radio-5" class="last" value="answer-5" />
+        <input type="radio" id="radio-5" name="last"
+               class="last" value="answer-5" />
         <label for="radio-5" id="label-5"></label><br />
-        <input type="radio" id="radio-6" class="last" value="answer-6" />
+        <input type="radio" id="radio-6" name="last"
+               class="last" value="answer-6" />
         <label for="radio-6" id="label-6"></label><br />
         <br />
         <input type="button" id="prev" class="back" value="Back" />
@@ -73,10 +79,13 @@
               <tr><td><label for="arch">Focus: </label></td>
                 <td><input type="text" id="focus"
                            name="focus" readonly></td></tr>
+              <tr><td><label for="journey">Journey: </label></td>
+                <td><input type="text" id="journey"
+                           name="journey" readonly></td></tr>
             </table>
-            </fieldset>
-              <h3>Contact Information</h3>
-            <fieldset>
+          </fieldset>
+          <h3>Contact Information</h3>
+          <fieldset>
             <table>
               <tr><td><label for="forename">First name: </label></td>
                 <td><input type="text" id="forename"
@@ -332,12 +341,18 @@
       "Developer",
       "Architect",
       "Torch-bearer"
-    ],
+      ],
     "F": [
       "Singular",
       "Related",
       "Varied",
       "Diverse"
+      ],
+    "J": [
+      "Deciding",
+      "Decided",
+      "Started",
+      "Expanding"
     ]
   }
 }</pre>
