@@ -7,3 +7,7 @@ body {
 div.question, div.last, div.result, pre.data, input.back {
     display: none;
 }
+
+progress {
+    width: 100%;
+}

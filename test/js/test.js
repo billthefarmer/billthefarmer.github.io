@@ -126,6 +126,7 @@ jQuery(document).ready(function($) {
         question = 0;
         $("#data").css("display", "none");
         $(".intro").fadeOut(function(){$(".question").fadeIn()});
+        $("#progress").attr("value", 6.25);
         $("#question").html(questions[question].q);
         if (Math.round(Math.random()))
         {
@@ -153,6 +154,8 @@ jQuery(document).ready(function($) {
         if (question == 0)
             $("input.back").css("display", "none");
         $(".question").fadeOut(function() {
+            let progress = (question + 1) * 6.25;
+            $("#progress").attr("value", progress);
             $("#question").html(questions[question].q);
             if (Math.round(Math.random()))
             {
@@ -180,6 +183,8 @@ jQuery(document).ready(function($) {
         let type = questions[question].t;
         results[type] -= value;
         $("div.last").fadeOut(function() {
+            let progress = (question + 1) * 6.25;
+            $("#progress").attr("value", progress);
             $("#question").html(questions[question].q);
             if (Math.round(Math.random()))
             {
@@ -211,6 +216,8 @@ jQuery(document).ready(function($) {
         {
             let type = questions[question].t;
             $("div.question").fadeOut(function() {
+                let progress = (question + 1) * 6.25;
+                $("#progress").attr("value", progress);
                 $("#question").html(questions[question].q);
                 if (Math.round(Math.random()))
                 {
