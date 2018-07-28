@@ -108,6 +108,10 @@ jQuery(document).ready(function($) {
     $("input[type=button]").button();
     $("input[type=submit]").button();
 
+    // Set up progress bars
+    $("#progress").progressbar({value: 6.25});
+    $("#max").progressbar({value: 100});
+
     // Set up radio buttons
     // $("input[type=radio]").checkboxradio();
 
@@ -126,7 +130,7 @@ jQuery(document).ready(function($) {
         question = 0;
         $("#data").css("display", "none");
         $(".intro").fadeOut(function(){$(".question").fadeIn()});
-        $("#progress").attr("value", 6.25);
+        $("#progress").progressbar("option", "value", 6.25);
         $("#question").html(questions[question].q);
         if (Math.round(Math.random()))
         {
@@ -155,7 +159,7 @@ jQuery(document).ready(function($) {
             $("input.back").css("display", "none");
         $(".question").fadeOut(function() {
             let progress = (question + 1) * 6.25;
-            $("#progress").attr("value", progress);
+            $("#progress").progressbar("option", "value", progress);
             $("#question").html(questions[question].q);
             if (Math.round(Math.random()))
             {
@@ -184,7 +188,7 @@ jQuery(document).ready(function($) {
         results[type] -= value;
         $("div.last").fadeOut(function() {
             let progress = (question + 1) * 6.25;
-            $("#progress").attr("value", progress);
+            $("#progress").progressbar("option", "value", progress);
             $("#question").html(questions[question].q);
             if (Math.round(Math.random()))
             {
@@ -217,7 +221,7 @@ jQuery(document).ready(function($) {
             let type = questions[question].t;
             $("div.question").fadeOut(function() {
                 let progress = (question + 1) * 6.25;
-                $("#progress").attr("value", progress);
+                $("#progress").progressbar("option", "value", progress);
                 $("#question").html(questions[question].q);
                 if (Math.round(Math.random()))
                 {
