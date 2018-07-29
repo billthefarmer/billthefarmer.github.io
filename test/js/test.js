@@ -286,7 +286,7 @@ jQuery(document).ready(function($) {
 
     // Process the again button
     $("#again").click(function() {
-        $(".result").fadeOut(function() {
+        $("div.result").fadeOut(function() {
             for (let [key, value] in results)
             {
                 if (key == "A")
@@ -295,26 +295,26 @@ jQuery(document).ready(function($) {
                 else
                     results[key] = 0;
             }
-            $(".intro").fadeIn();
+            $("div.intro").fadeIn();
         });
     });
+
+    function calculate(results, matrix) {
+        let b = (results.B / 2) - 3;
+        let c = (results.C / 2) - 3;
+        let d = (results.D / 2) - 3;
+        let e = (results.E / 2) - 3;
+        let f = (results.F / 2) - 3;
+        let j = (results.J / 2) - 1;
+
+        let result = {A: matrix.A[Math.trunc(b / 2)][Math.trunc(e / 2)],
+                      B: matrix.B[b],
+                      C: matrix.C[c],
+                      D: matrix.D[d],
+                      E: matrix.E[e],
+                      F: matrix.F[f],
+                      J: matrix.J[j]};
+
+        return result;
+    }
 });
-
-function calculate(results, matrix) {
-    let b = (results.B / 2) - 3;
-    let c = (results.C / 2) - 3;
-    let d = (results.D / 2) - 3;
-    let e = (results.E / 2) - 3;
-    let f = (results.F / 2) - 3;
-    let j = (results.J / 2) - 1;
-
-    let result = {A: matrix.A[Math.trunc(b / 2)][Math.trunc(e / 2)],
-                  B: matrix.B[b],
-                  C: matrix.C[c],
-                  D: matrix.D[d],
-                  E: matrix.E[e],
-                  F: matrix.F[f],
-                  J: matrix.J[j]};
-
-    return result;
-}
