@@ -60,59 +60,66 @@
       </fieldset>
     </div>
     <div class="result">
-      <form action="report.html" method="get" class="result">
+      <fieldset>
+        <h3>Results</h3>
         <fieldset>
-          <h3>Results</h3>
-          <fieldset>
-            <table>
-              <tr><td><label for="arch">Archetype: </label></td>
-                <td><input type="text" id="arch"
-                           name="arch" readonly></td></tr>
-              <tr><td><label for="brain">Brain: </label></td>
-                <td><input type="text" id="brain"
-                           name="brain" readonly></td></tr>
-              <tr><td><label for="arch">Communication: </label></td>
-                <td><input type="text" id="comm"
-                           name="comm" readonly></td></tr>
-              <tr><td><label for="arch">Direction: </label></td>
-                <td><input type="text" id="direct"
-                           name="direct" readonly></td></tr>
-              <tr><td><label for="arch">Execution: </label></td>
-                <td><input type="text" id="exec"
-                           name="exec" readonly></td></tr>
-              <tr><td><label for="arch">Focus: </label></td>
-                <td><input type="text" id="focus"
-                           name="focus" readonly></td></tr>
-              <tr><td><label for="journey">Journey: </label></td>
-                <td><input type="text" id="journey"
-                           name="journey" readonly></td></tr>
-            </table>
-          </fieldset>
+          <table>
+            <tr><td><label for="arch">Archetype: </label></td>
+              <td><input type="text" id="arch"
+                         name="arch" readonly /></td></tr>
+            <tr><td><label for="brain">Brain: </label></td>
+              <td><input type="text" id="brain"
+                         name="brain" readonly /></td></tr>
+            <tr><td><label for="arch">Communication: </label></td>
+              <td><input type="text" id="comm"
+                         name="comm" readonly /></td></tr>
+            <tr><td><label for="arch">Direction: </label></td>
+              <td><input type="text" id="direct"
+                         name="direct" readonly /></td></tr>
+            <tr><td><label for="arch">Execution: </label></td>
+              <td><input type="text" id="exec"
+                         name="exec" readonly /></td></tr>
+            <tr><td><label for="arch">Focus: </label></td>
+              <td><input type="text" id="focus"
+                         name="focus" readonly /></td></tr>
+            <tr><td><label for="journey">Journey: </label></td>
+              <td><input type="text" id="journey"
+                         name="journey" readonly /></td></tr>
+          </table>
+        </fieldset>
+        <form action="report.html" method="get" class="result">
+          <input type="hidden" id="A" name="A" />
+          <input type="hidden" id="B" name="B" />
+          <input type="hidden" id="C" name="C" />
+          <input type="hidden" id="D" name="D" />
+          <input type="hidden" id="E" name="E" />
+          <input type="hidden" id="F" name="F" />
+          <input type="hidden" id="J" name="J" />
           <h3>Contact Information</h3>
           <fieldset>
             <table>
               <tr><td><label for="forename">First name: </label></td>
                 <td><input type="text" id="forename"
-                           name="forename" required></td></tr>
+                           name="forename" required /></td></tr>
               <tr><td><label for="lastname">Last name: </label></td>
                 <td><input type="text" id="lastname"
-                           name="lastname" required></td></tr>
+                           name="lastname" required /></td></tr>
               <tr><td><label for="email">Email: </label></td>
                 <td><input type="email" id="email"
-                           name="email" required></td></tr>
+                           name="email" required /></td></tr>
             </table>
           </fieldset>
           <br />
           <input type="button" id="again" value="Again" />
           <input type="submit" id="submit" value="Results" />
-        </fieldset>
-      </form>
+        </form>
+      </fieldset>
     </div>
     <footer>
       <p>Copyright &copy; 2018 Bill Farmer</p>
     </footer>
     <pre id="data" class="data">{
-  "intro": "Please answer the following questions as carefully and  as you can",
+  "intro": "Please answer the following questions as carefully and accurately as you can",
   "questions": [
     {
       "q": "I prefer dealing with",

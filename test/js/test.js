@@ -198,6 +198,13 @@ jQuery(document).ready(function($) {
             $("#exec").attr("value", result.E);
             $("#focus").attr("value", result.F);
             $("#journey").attr("value", result.J);
+            $("#A").attr("value", results.A);
+            $("#B").attr("value", results.B);
+            $("#C").attr("value", results.C);
+            $("#D").attr("value", results.D);
+            $("#E").attr("value", results.E);
+            $("#F").attr("value", results.F);
+            $("#J").attr("value", results.J);
             $("div.result").fadeIn();
             console.log(results);
             console.log(calculate(results, matrix));
@@ -215,6 +222,7 @@ jQuery(document).ready(function($) {
                 else
                     results[key] = 0;
             }
+            $("input.back").css("display", "none");
             $("div.intro").fadeIn();
         });
     });
