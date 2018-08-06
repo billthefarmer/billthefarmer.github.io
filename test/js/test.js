@@ -175,6 +175,8 @@ jQuery(document).ready(function($) {
                 $("#radio-5").attr("value", last.v[2]);
                 $("#label-6").html(last.a[3]);
                 $("#radio-6").attr("value", last.v[3]);
+                $("#label-7").html(last.a[4]);
+                $("#radio-7").attr("value", last.v[4]);
                 $("input[type=radio]").checkboxradio("refresh");
                 $("input[type=radio]").prop("checked", false);
                 $("div.last").fadeIn();

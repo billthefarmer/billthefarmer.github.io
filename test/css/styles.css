@@ -11,6 +11,10 @@ body.report {
     width: 1480px;
 }
 
+main {
+    background: white;
+}
+
 div.left {
     width: 560px;
     margin: 20px;
