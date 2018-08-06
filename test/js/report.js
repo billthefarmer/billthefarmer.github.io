@@ -109,7 +109,7 @@ jQuery(document).ready(function($) {
     doc.addPage();
     y = margin;
 
-    text = "\nYour D Type describes how you prefer to draw influence in your work. Is it your natural tendency to innovate or do you prefer to rely on time-tested methods? Both are options inside of business and the same as with the other types, expecting something different of yourself will not serve you.\n\nYour E-Type is your execution style. What role do you want to take as a business owner? Do you want to implement or do you want an advisory role. It is possible to build strong, profitable businesses in either and it's important to know your natural preference.\n\nour F-Type describes your natural focus point. Do you work methodically through one project at a time or do you like to have multiple projects to work on at once? This affects how you niche and how you run your business so that it works for you.\n\nI hope you find your design to be insightful in your business building journey!\n\n";
+    text = "\nYour D Type describes how you prefer to draw influence in your work. Is it your natural tendency to innovate or do you prefer to rely on time-tested methods? Both are options inside of business and the same as with the other types, expecting something different of yourself will not serve you.\n\nYour E-Type is your execution style. What role do you want to take as a business owner? Do you want to implement or do you want an advisory role. It is possible to build strong, profitable businesses in either and it's important to know your natural preference.\n\nYour F-Type describes your natural focus point. Do you work methodically through one project at a time or do you like to have multiple projects to work on at once? This affects how you niche and how you run your business so that it works for you.\n\nI hope you find your design to be insightful in your business building journey!\n\n";
 
     y = addText(text, doc, margin, y, textWidth);
 
@@ -154,7 +154,6 @@ jQuery(document).ready(function($) {
     function addImage(src, type, doc, page, x, y, width, height, func) {
         let img = new Image();
         img.src = src;
-        console.log(img);
         img.addEventListener('load', function(event) {
             let dataUrl = getDataUrl(event.currentTarget, type);
             doc.setPage(page);
@@ -170,7 +169,6 @@ jQuery(document).ready(function($) {
         canvas.height = img.height;
         var context = canvas.getContext('2d');
         context.drawImage(img, 0, 0);
-        console.log(type);
         return canvas.toDataURL('image/' + type);
     }
 });
