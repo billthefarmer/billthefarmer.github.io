@@ -119,7 +119,29 @@ jQuery(document).ready(function($) {
 	         $('#preview').attr('src', string);
              });
 
-        $("#update").click(function() {
+    // Page 4
+    doc.addPage();
+    y = margin;
+    doc.text("\nThis page blank", margin, y);
+
+    // Page 5
+    doc.addPage();
+    y = margin;
+
+    addImage('images/EDPS-Masterclass.jpg', 'jpeg', doc, 5,
+             margin, y, textWidth, 349,
+             function() {
+                 let string = doc.output('bloburi');
+	         $('#preview').attr('src', string);
+             });
+
+    text = "Copyright © 2018 Cat LeBlanc\n\nAll rights reserved. No part of this report may be reproduced, stored in a retrieval system, communicated or transmitted in any form or by any means without prior written permission. All enquires should be made to hello@catleblanc.com.\n\n\nDisclaimer\n\nThe material in this report is of the nature of general comment only, and does not represent professional advice. It is not intended to provide specific guidance for particular circumstances and it should not be relied on as a basis for decision to take action or not take action on any matter which it covers. Readers should obtain professional, individual advice where appropriate, before making any such decision.\n\nTo the maximum extent permitted by law the author disclaims all responsibility and liability to any person, arising directly or indirectly from any person taking or not taking action based on the information in this report."
+
+    doc.setFontSize(12);
+    doc.setTextColor(150);
+    y = addText(text, doc, margin, margin + 425, textWidth);
+
+    $("#update").click(function() {
         var string = doc.output('bloburi');
 	$('#preview').attr('src', string);
     });
