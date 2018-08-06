@@ -1,7 +1,25 @@
 body {
     background: cornsilk;
-    width: 560px;
     margin: 0 auto;
+}
+
+body.test {
+    width: 560px;
+}
+
+body.report {
+    width: 1480px;
+}
+
+div.left {
+    width: 560px;
+    margin: 20px;
+    float: left;
+}
+
+div.right {
+    margin: 20px;
+    float: left;
 }
 
 div.question, div.last, div.result, pre.data, input.back {

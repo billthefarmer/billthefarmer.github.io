@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-language" content="en-gb" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Bill Farmer">
+    <meta name="description" content="Report">
+    <title>Report</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jspdf.min.js"></script>
+    <script src="js/pdf.js"></script>
+  </head>
+  <body style="width: 1480px; margin: 0 auto;">
+    <div class="left" style="width: 560px; margin: 20px; float: left;">
+    <img src="images/EDPS-Front-Page-Image.png" style="width: 100%;" \>
+    <h2 id="name">Bill Farmer</h2>
+    <p>
+      You are a deeply intuitive person. You make decisions by feeling
+      into them. You are in tune with your heart and gut brain. You
+      often sense the right direction to take without needing to think
+      through the pros and cons.
+    </p>
+    <input type="button" id="update" name="update" value="Update" />
+    <input type="button" id="report" name="report" value="Report" />
+    </div>
+    <div class="right" style="margin: 20px; float: left">
+      <iframe id="preview" class="preview" type="application/pdf"
+              width="840" height="1200" frameborder="0"></iframe>
+    </div>
+  </body>
+</html>

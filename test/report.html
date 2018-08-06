@@ -5,22 +5,88 @@
     <meta http-equiv="content-language" content="en-gb" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Bill Farmer">
-    <meta name="description" content="Test">
+    <meta name="description" content="Report">
     <title>Report</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
-    <script src="js/test.js"></script>  
+    <script src="js/jspdf.min.js"></script>
+    <script src="js/report.js"></script>  
   </head>
-  <body>
-    <header>
-      <h1>Report</h1>
-    </header>
-    <div class="content">
+  <body class="report">
+    <div class="left">
+      <header>
+        <img src="images/EDPS-Front-Page-Image.png" style="width: 100%;" \>
+      </header>
+      <div class="content">
+        <h2 id="name" class="name"></h2>
+        <input type="button" id="update" name="update"
+               value="Update Preview" />
+        <input type="button" id="report" name="report"
+               value="Download Report" />
+        <br /><br />
+      </div>
+      <footer>
+        <img src="images/EDPS-Footer.png" style="width: 100%;" \>
+        <p>Copyright &copy; 2018 Bill Farmer</p>
+      </footer>
     </div>
-    <footer>
-      <p>Copyright &copy; 2018 Bill Farmer</p>
-    </footer>
+    <div class="right">
+      <iframe id="preview" class="preview" type="application/pdf"
+              width="840" height="1200" frameborder="0"></iframe>
+    </div>
+    <pre id="data" class="data">
+    {
+        "matrix": {
+            "A": [
+                [
+                    "Growth Engine",
+                    "Dynamic Pioneer"
+                ],
+                [
+                    "Creative Powerhouse",
+                    "Visionary Guide"
+                ]
+            ],
+            "B": [
+                "Analytical",
+                "Strategic",
+                "Emotive",
+                "Intuitive"
+            ],
+            "C": [
+                "Reflector",
+                "Relater",
+                "Engager",
+                "Presenter"
+            ],
+            "D": [
+                "Innovative",
+                "Agile",
+                "Pragmatic",
+                "Trusted"
+            ],
+            "E": [
+                "Producer",
+                "Developer",
+                "Architect",
+                "Torch-bearer"
+            ],
+            "F": [
+                "Singular",
+                "Related",
+                "Varied",
+                "Diverse"
+            ],
+            "J": [
+                "Deciding",
+                "Decided",
+                "Started",
+                "Expanding"
+            ]
+        }
+    }
+    </pre>
   </body>
 </html>
