@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
     // Dimensions in points
     let pageWidth = 595;
     let pageHeight = 842;
-    let margin = 36; // 0.5in
+    let margin = 72;
     let textWidth = pageWidth - (margin * 2);
 
     $("#update, #report").button();
@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
 
     // Page 1
     addImage('images/EDPS-Front-Page-Image.png', 'png',
-             doc, 1, margin, margin, textWidth, 435,
+             doc, 1, margin, margin, textWidth, null,
              function() {
                  let string = doc.output('bloburi');
 	         $('#preview').attr('src', string);
@@ -59,7 +59,7 @@ jQuery(document).ready(function($) {
     doc.text(name, margin, 531);
 
     addImage('images/EDPS-Footer.png', 'png',
-             doc, 1, margin, pageHeight - margin - 103, textWidth, 103,
+             doc, 1, margin, -pageHeight + margin, textWidth, null,
              function() {
                  let string = doc.output('bloburi');
 	         $('#preview').attr('src', string);
@@ -71,7 +71,7 @@ jQuery(document).ready(function($) {
     doc.text("How to read your report", margin, margin + 18);
 
     addImage('images/EDPS-Cat.jpg', 'jpeg',
-             doc, 2, pageWidth / 2, margin, textWidth / 2, textWidth / 2,
+             doc, 2, pageWidth / 2, margin, textWidth / 2, null,
              function() {
                  let string = doc.output('bloburi');
 	         $('#preview').attr('src', string);
@@ -80,9 +80,9 @@ jQuery(document).ready(function($) {
     let y = margin + textWidth / 2;
     doc.setFontSize(14);
     doc.setFontType('normal');
-    y = addText("\nDear " + forename, doc, margin, y, textWidth);
+    y = addText("\n\n\n\nDear " + forename, doc, margin, y, textWidth);
 
-    let text = "\nWe are all individuals, yet often people want to treat us as the same. We're told we have to have certain qualities as an entrepreneur, but frequently it's not that simple.\n\nWe all want meaningful work, but we also want to feel good turning up to do that work each day.\n\nIn Your Entrepreneurial Design Profile you'll gain a deeper insight into who you are and how you can build a business that is aligned with your fundamental nature as a human being.\n\n"
+    let text = "\nWe are all individuals, yet often people want to treat us as the same. We're told we have to have certain qualities as an entrepreneur, but frequently it's not that simple.\n\nWe all want meaningful work, but we also want to feel good turning up to do that work each day.\n\nIn Your Entrepreneurial Design Profile you'll gain a deeper insight into who you are and how you can build a business that is aligned with your fundamental nature as a human being.\n\n\n\n";
 
     y = addText(text, doc, margin, y, textWidth);
 
@@ -101,15 +101,11 @@ jQuery(document).ready(function($) {
     doc.setFontType('normal');
     y = addText(text, doc, margin, y, textWidth);
 
-    text = "\nYour B Type describes how you prefer to think. Are you more left-brained or right-brained? Do you lean towards logic or intuition? Neither is right or wrong but your natural type will affect how you want to run and show up in your business.\n\nYour C Type is your communication style. How do you prefer to interact with others? Does interaction with others fuel or drain you? Knowing this and working with your natural type will enable you to work better with other people and manage your own energy in a way that supports you."
-
-    y = addText(text, doc, margin, y, textWidth);
-
     // Page 3
     doc.addPage();
     y = margin;
 
-    text = "\nYour D Type describes how you prefer to draw influence in your work. Is it your natural tendency to innovate or do you prefer to rely on time-tested methods? Both are options inside of business and the same as with the other types, expecting something different of yourself will not serve you.\n\nYour E-Type is your execution style. What role do you want to take as a business owner? Do you want to implement or do you want an advisory role. It is possible to build strong, profitable businesses in either and it's important to know your natural preference.\n\nYour F-Type describes your natural focus point. Do you work methodically through one project at a time or do you like to have multiple projects to work on at once? This affects how you niche and how you run your business so that it works for you.\n\nI hope you find your design to be insightful in your business building journey!\n\n";
+    text = "\nYour B Type describes how you prefer to think. Are you more left-brained or right-brained? Do you lean towards logic or intuition? Neither is right or wrong but your natural type will affect how you want to run and show up in your business.\n\nYour C Type is your communication style. How do you prefer to interact with others? Does interaction with others fuel or drain you? Knowing this and working with your natural type will enable you to work better with other people and manage your own energy in a way that supports you.\n\nYour D Type describes how you prefer to draw influence in your work. Is it your natural tendency to innovate or do you prefer to rely on time-tested methods? Both are options inside of business and the same as with the other types, expecting something different of yourself will not serve you.\n\nYour E-Type is your execution style. What role do you want to take as a business owner? Do you want to implement or do you want an advisory role. It is possible to build strong, profitable businesses in either and it's important to know your natural preference.\n\nYour F-Type describes your natural focus point. Do you work methodically through one project at a time or do you like to have multiple projects to work on at once? This affects how you niche and how you run your business so that it works for you.\n\nI hope you find your design to be insightful in your business building journey!\n\n";
 
     y = addText(text, doc, margin, y, textWidth);
 
@@ -129,13 +125,13 @@ jQuery(document).ready(function($) {
     y = margin;
 
     addImage('images/EDPS-Masterclass.jpg', 'jpeg', doc, 5,
-             margin, y, textWidth, 349,
+             margin, y, textWidth, null,
              function() {
                  let string = doc.output('bloburi');
 	         $('#preview').attr('src', string);
              });
 
-    text = "Copyright © 2018 Cat LeBlanc\n\nAll rights reserved. No part of this report may be reproduced, stored in a retrieval system, communicated or transmitted in any form or by any means without prior written permission. All enquires should be made to hello@catleblanc.com.\n\n\nDisclaimer\n\nThe material in this report is of the nature of general comment only, and does not represent professional advice. It is not intended to provide specific guidance for particular circumstances and it should not be relied on as a basis for decision to take action or not take action on any matter which it covers. Readers should obtain professional, individual advice where appropriate, before making any such decision.\n\nTo the maximum extent permitted by law the author disclaims all responsibility and liability to any person, arising directly or indirectly from any person taking or not taking action based on the information in this report."
+    text = "Copyright © 2018 Cat LeBlanc\n\nAll rights reserved. No part of this report may be reproduced, stored in a retrieval system, communicated or transmitted in any form or by any means without prior written permission. All enquires should be made to hello@catleblanc.com.\n\n\nDisclaimer\n\nThe material in this report is of the nature of general comment only, and does not represent professional advice. It is not intended to provide specific guidance for particular circumstances and it should not be relied on as a basis for decision to take action or not take action on any matter which it covers. Readers should obtain professional, individual advice where appropriate, before making any such decision.\n\nTo the maximum extent permitted by law the author disclaims all responsibility and liability to any person, arising directly or indirectly from any person taking or not taking action based on the information in this report.";
 
     doc.setFontSize(12);
     doc.setTextColor(150);
@@ -155,42 +151,90 @@ jQuery(document).ready(function($) {
 	$('#preview').attr('src', string);
     }
 
+    /**
+     * Gets URL parameter value.
+     * @name  getURLParameter
+     * @param param  Parameter to return
+     * @returns Parameter value
+     */
     function getURLParameter(param)
     {
         let pageURL = window.location.search.substring(1);
-        let URLVariables = pageURL.split('&');
-        for (let i = 0; i < URLVariables.length; i++)
+        let URLParameters = pageURL.split('&');
+        for (let parameter of URLParameters)
         {
-            let parameterName = URLVariables[i].split('=');
+            let parameterName = parameter.split('=');
             if (parameterName[0] == param)
                 return parameterName[1];
         }
     }
 
+    /**
+     * Adds text to document.
+     * @name  addText
+     * @param text   Text to add
+     * @param doc    jsPDF document
+     * @param page   Page number to place image
+     * @param x      X location on page
+     * @param y      Y location on page
+     * @param width  Text width on page
+     * @returns Y location of bottom of text
+     */
     function addText(text, doc, x, y, width) {
         let textLines = doc.splitTextToSize(text, width);
         doc.text(textLines, x, y);
         return y + (textLines.length * doc.getLineHeight());
     }
 
+
+    /**
+     * Adds image to document.
+     * @name  addImage
+     * @param src    Path to image to add
+     * @param type   Type of image, 'png' or 'jpeg'
+     * @param doc    jsPDF document
+     * @param page   Page number to place image
+     * @param x      X location on page
+     * @param y      Y location on page
+     * @param width  Image width on page
+     * @param height Image height on  page
+     * @param func   Function to call after image added
+     * @description
+     * If the y parameter is negative, used as bottom of image.
+     * If the height is null or 0, height is calculated to
+     * preverve image aspect ratio.
+     */
     function addImage(src, type, doc, page, x, y, width, height, func) {
         let img = new Image();
         img.src = src;
         img.addEventListener('load', function(event) {
-            let dataUrl = getDataUrl(event.currentTarget, type);
+            let data = getDataUrl(event.currentTarget, type);
+            height = height? height: width * data.height / data.width;
+            y = y < 0? -y - height: y;
             doc.setPage(page);
-            doc.addImage(dataUrl, type, x, y, width, height);
+            doc.addImage(data.url, type, x, y, width, height);
             if (func)
                 func();
         });
     }
 
+    /**
+     * Gets data URL, width, height for image.
+     * @name  getDataUrl
+     * @param img  Image object
+     * @param type Type of image, 'png' or 'jpeg'
+     * @returns {url: data URL,
+     *           width: image width,
+     *           height: image height}
+     */
     function getDataUrl(img, type) {
-        var canvas = document.createElement('canvas');
+        let canvas = document.createElement('canvas');
         canvas.width = img.width;
         canvas.height = img.height;
-        var context = canvas.getContext('2d');
+        let context = canvas.getContext('2d');
         context.drawImage(img, 0, 0);
-        return canvas.toDataURL('image/' + type);
+        return {url: canvas.toDataURL('image/' + type),
+                width: img.width,
+                height: img.height};
     }
 });
