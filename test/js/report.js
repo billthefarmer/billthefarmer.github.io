@@ -22,10 +22,20 @@ jQuery(document).ready(function($) {
     let lastname = getURLParameter('lastname');
     let email = getURLParameter('email');
 
-    let data = JSON.parse($("#data").html());
+    if (forename == undefined)
+        forename = "Cat";
+    if (lastname == undefined)
+        lastname = "LeBlanc";
+
+    let name = forename + " " + lastname;
+
+    // let data = JSON.parse($("#data").html());
 
     let results = {A: [0, 0], B: 0, C: 0, D: 0, E: 0, F: 0, J: 0};
     let matrix = data.matrix;
+    let pages = data.pages;
+    let answers = data.answers;
+    let last = data.last
 
     // Dimensions in points
     let pageWidth = 595;
@@ -33,109 +43,83 @@ jQuery(document).ready(function($) {
     let margin = 72;
     let textWidth = pageWidth - (margin * 2);
 
+    // Style buttons
     $("#update, #report").button();
 
-    let doc = jsPDF({unit: 'pt',
-                     compress: true});
-
-    // Page 1
-    addImage('images/EDPS-Front-Page-Image.png', 'png',
-             doc, 1, margin, margin, textWidth, null,
-             function() {
-                 let string = doc.output('bloburi');
-	         $('#preview').attr('src', string);
-             });
-
-    if (forename == undefined)
-        forename = "John";
-    if (lastname == undefined)
-        lastname = "Doe";
-
-    let name = forename + " " + lastname;
-
+    // Add name
     $("#name").html(name);
-    doc.setFontSize(24);
-    doc.setFontType('bold');
-    doc.text(name, margin, 531);
 
-    addImage('images/EDPS-Footer.png', 'png',
-             doc, 1, margin, -pageHeight + margin, textWidth, null,
-             function() {
-                 let string = doc.output('bloburi');
-	         $('#preview').attr('src', string);
-             });
+    let doc = jsPDF({unit: 'pt'});
 
-    // Page 2
+    let pageno = 1;
+    for (let page of pages)
+    {
+        pageno = page.pageno;
+        if (pageno != 1)
+            doc.addPage();
+
+        for (let image of page.images)
+            addImageObject(image, doc, pageno, 
+                           function() {
+                               let string = doc.output('bloburi');
+	                       $('#preview').attr('src', string);
+                           });
+
+        let y = margin;
+        for (let text of page.text)
+            y = addTextObject(text, doc, y)
+        if (0)
+        {
+            if (text.size)
+                doc.setFontSize(text.size);
+            if (text.type)
+                doc.setFontType(text.type);
+            if (text.color)
+                doc.setTextColor(text.color);
+            y = text.y? text.y: y;
+            let string = text.text;
+            if (string.match(/~[a-z]+~/))
+                string = string.replace(/~forename~/g, forename)
+                .replace(/~lastname~/g, lastname);
+            y = addText(string, doc, margin, y, textWidth);
+        }
+    }
+
     doc.addPage();
-    doc.setFontSize(18);
-    doc.text("How to read your report", margin, margin + 18);
+    pageno++;
+    for (let image of last.images)
+        addImageObject(image, doc, pageno, 
+                       function() {
+                           let string = doc.output('bloburi');
+	                   $('#preview').attr('src', string);
+                       });
+    if (0)
+    {
+        let y = image.y;
+        y = y? (y < 0)? -pageHeight + margin: y: margin;
+        let x = image.x;
+        x = x? (x < 0)? -pageWidth + margin: x: margin;
+        let width = image.width;
+        width = width? width: textWidth;
+        addImage(image.src, image.type, doc, pageno, x, y,
+                 width, image.height,
+                 function() {
+                     let string = doc.output('bloburi');
+	             $('#preview').attr('src', string);
+                 });
+    }
 
-    addImage('images/EDPS-Cat.jpg', 'jpeg',
-             doc, 2, pageWidth / 2, margin, textWidth / 2, null,
-             function() {
-                 let string = doc.output('bloburi');
-	         $('#preview').attr('src', string);
-             });
-
-    let y = margin + textWidth / 2;
-    doc.setFontSize(14);
-    doc.setFontType('normal');
-    y = addText("\n\n\n\nDear " + forename, doc, margin, y, textWidth);
-
-    let text = "\nWe are all individuals, yet often people want to treat us as the same. We're told we have to have certain qualities as an entrepreneur, but frequently it's not that simple.\n\nWe all want meaningful work, but we also want to feel good turning up to do that work each day.\n\nIn Your Entrepreneurial Design Profile you'll gain a deeper insight into who you are and how you can build a business that is aligned with your fundamental nature as a human being.\n\n\n\n";
-
-    y = addText(text, doc, margin, y, textWidth);
-
-    doc.setFontType('bold');
-    y = addText("Your Entrepreneurial Design Profile", doc,
-                margin, y, textWidth);
-
-    text = ["",
-            "Your Entrepreneurial Design Profile is broken down into 5 Types:",
-            "", "B - Type -> Brain Type",
-            "C - Type -> Communication Type",
-            "D - Type -> Direction Type",
-            "E - Type -> Execution Type",
-            "F - Type -> Focus Type"];
-
-    doc.setFontType('normal');
-    y = addText(text, doc, margin, y, textWidth);
-
-    // Page 3
-    doc.addPage();
-    y = margin;
-
-    text = "\nYour B Type describes how you prefer to think. Are you more left-brained or right-brained? Do you lean towards logic or intuition? Neither is right or wrong but your natural type will affect how you want to run and show up in your business.\n\nYour C Type is your communication style. How do you prefer to interact with others? Does interaction with others fuel or drain you? Knowing this and working with your natural type will enable you to work better with other people and manage your own energy in a way that supports you.\n\nYour D Type describes how you prefer to draw influence in your work. Is it your natural tendency to innovate or do you prefer to rely on time-tested methods? Both are options inside of business and the same as with the other types, expecting something different of yourself will not serve you.\n\nYour E-Type is your execution style. What role do you want to take as a business owner? Do you want to implement or do you want an advisory role. It is possible to build strong, profitable businesses in either and it's important to know your natural preference.\n\nYour F-Type describes your natural focus point. Do you work methodically through one project at a time or do you like to have multiple projects to work on at once? This affects how you niche and how you run your business so that it works for you.\n\nI hope you find your design to be insightful in your business building journey!\n\n";
-
-    y = addText(text, doc, margin, y, textWidth);
-
-    addImage('images/EDPS-Sig.png', 'png', doc, 3, margin, y, 106, 64,
-             function() {
-                 let string = doc.output('bloburi');
-	         $('#preview').attr('src', string);
-             });
-
-    // Page 4
-    doc.addPage();
-    y = margin;
-    doc.text("\nThis page blank", margin, y);
-
-    // Page 5
-    doc.addPage();
-    y = margin;
-
-    addImage('images/EDPS-Masterclass.jpg', 'jpeg', doc, 5,
-             margin, y, textWidth, null,
-             function() {
-                 let string = doc.output('bloburi');
-	         $('#preview').attr('src', string);
-             });
-
-    text = "Copyright © 2018 Cat LeBlanc\n\nAll rights reserved. No part of this report may be reproduced, stored in a retrieval system, communicated or transmitted in any form or by any means without prior written permission. All enquires should be made to hello@catleblanc.com.\n\n\nDisclaimer\n\nThe material in this report is of the nature of general comment only, and does not represent professional advice. It is not intended to provide specific guidance for particular circumstances and it should not be relied on as a basis for decision to take action or not take action on any matter which it covers. Readers should obtain professional, individual advice where appropriate, before making any such decision.\n\nTo the maximum extent permitted by law the author disclaims all responsibility and liability to any person, arising directly or indirectly from any person taking or not taking action based on the information in this report.";
-
-    doc.setFontSize(12);
-    doc.setTextColor(150);
-    y = addText(text, doc, margin, margin + 425, textWidth);
+    for (let text of last.text)
+    {
+        if (text.size)
+            doc.setFontSize(text.size);
+        if (text.type)
+            doc.setFontType(text.type);
+        if (text.color)
+            doc.setTextColor(text.color);
+        y = text.y? text.y: y;
+        y = addText(text.text, doc, margin, y, textWidth);
+    }
 
     $("#update").click(function() {
         var string = doc.output('bloburi');
@@ -169,6 +153,34 @@ jQuery(document).ready(function($) {
         }
     }
 
+    function addTextObject(text, doc, y)
+    {
+        if (text.size)
+            doc.setFontSize(text.size);
+        if (text.type)
+            doc.setFontType(text.type);
+        if (text.color)
+            doc.setTextColor(text.color);
+        y = text.y? text.y: y;
+        let string = text.text;
+        if (string.match(/~[a-z]+~/))
+            string = string.replace(/~forename~/g, forename)
+            .replace(/~lastname~/g, lastname);
+        return addText(string, doc, margin, y, textWidth);
+    }
+
+    function addImageObject(image, doc, pageno, func)
+    {
+        let y = image.y;
+        y = y? (y < 0)? -pageHeight + margin: y: margin;
+        let x = image.x;
+        x = x? (x < 0)? -pageWidth + margin: x: margin;
+        let width = image.width;
+        width = width? width: textWidth;
+        addImage(image.src, image.type, doc, pageno, x, y,
+                 width, image.height, func);
+    }
+
     /**
      * Adds text to document.
      * @name  addText
@@ -186,7 +198,6 @@ jQuery(document).ready(function($) {
         return y + (textLines.length * doc.getLineHeight());
     }
 
-
     /**
      * Adds image to document.
      * @name  addImage
@@ -200,9 +211,10 @@ jQuery(document).ready(function($) {
      * @param height Image height on  page
      * @param func   Function to call after image added
      * @description
-     * If the y parameter is negative, used as bottom of image.
+     * If the x parameter is negative, used as right edge of image.
+     * If the y parameter is negative, used as bottom edge of image.
      * If the height is null or 0, height is calculated to
-     * preverve image aspect ratio.
+     * preserve image aspect ratio.
      */
     function addImage(src, type, doc, page, x, y, width, height, func) {
         let img = new Image();
@@ -210,6 +222,7 @@ jQuery(document).ready(function($) {
         img.addEventListener('load', function(event) {
             let data = getDataUrl(event.currentTarget, type);
             height = height? height: width * data.height / data.width;
+            x = x < 0? -x - width: x;
             y = y < 0? -y - height: y;
             doc.setPage(page);
             doc.addImage(data.url, type, x, y, width, height);
