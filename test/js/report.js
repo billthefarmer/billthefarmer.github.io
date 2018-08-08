@@ -29,8 +29,6 @@ jQuery(document).ready(function($) {
 
     let name = forename + " " + lastname;
 
-    // let data = JSON.parse($("#data").html());
-
     let results = {A: [0, 0], B: 0, C: 0, D: 0, E: 0, F: 0, J: 0};
     let matrix = data.matrix;
     let pages = data.pages;
@@ -87,39 +85,20 @@ jQuery(document).ready(function($) {
 
     doc.addPage();
     pageno++;
+    addText("This page blank", doc, margin, margin, textWidth);
+
+    doc.addPage();
+    pageno++;
     for (let image of last.images)
         addImageObject(image, doc, pageno, 
                        function() {
                            let string = doc.output('bloburi');
 	                   $('#preview').attr('src', string);
                        });
-    if (0)
-    {
-        let y = image.y;
-        y = y? (y < 0)? -pageHeight + margin: y: margin;
-        let x = image.x;
-        x = x? (x < 0)? -pageWidth + margin: x: margin;
-        let width = image.width;
-        width = width? width: textWidth;
-        addImage(image.src, image.type, doc, pageno, x, y,
-                 width, image.height,
-                 function() {
-                     let string = doc.output('bloburi');
-	             $('#preview').attr('src', string);
-                 });
-    }
 
+    let y = margin;
     for (let text of last.text)
-    {
-        if (text.size)
-            doc.setFontSize(text.size);
-        if (text.type)
-            doc.setFontType(text.type);
-        if (text.color)
-            doc.setTextColor(text.color);
-        y = text.y? text.y: y;
-        y = addText(text.text, doc, margin, y, textWidth);
-    }
+        addTextObject(text, doc, y);
 
     $("#update").click(function() {
         var string = doc.output('bloburi');
@@ -186,7 +165,6 @@ jQuery(document).ready(function($) {
      * @name  addText
      * @param text   Text to add
      * @param doc    jsPDF document
-     * @param page   Page number to place image
      * @param x      X location on page
      * @param y      Y location on page
      * @param width  Text width on page
