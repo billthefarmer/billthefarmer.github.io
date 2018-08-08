@@ -96,10 +96,6 @@ jQuery(document).ready(function($) {
         y = addText(text, doc, margin, y, textWidth) + doc.getLineHeight();
     }
 
-    doc.addPage();
-    y = margin;
-    pageno++;
-
     if (D)
     {
         let type = answers['D'][D].type;
@@ -109,6 +105,10 @@ jQuery(document).ready(function($) {
         doc.setFontType('normal');
         y = addText(text, doc, margin, y, textWidth) + doc.getLineHeight();
     }
+
+    doc.addPage();
+    y = margin;
+    pageno++;
 
     if (E)
     {
