@@ -8,16 +8,14 @@ body.test {
 }
 
 body.report {
-    width: 1480px;
-}
-
-main {
-    background: white;
+    width: 1520px;
 }
 
 div.left {
+    background: white;
     width: 560px;
     margin: 20px;
+    padding: 20px;
     float: left;
 }
 
