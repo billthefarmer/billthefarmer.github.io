@@ -29,8 +29,6 @@ jQuery(document).ready(function($) {
 
     let name = forename + " " + lastname;
 
-    let results = {A: [0, 0], B: 0, C: 0, D: 0, E: 0, F: 0, J: 0};
-    let matrix = data.matrix;
     let pages = data.pages;
     let answers = data.answers;
     let last = data.last
@@ -47,8 +45,10 @@ jQuery(document).ready(function($) {
     // Add name
     $("#name").html(name);
 
+    // Create document
     let doc = jsPDF({unit: 'pt'});
 
+    // Print front page and explanatory letter
     let pageno = 1;
     for (let page of pages)
     {
@@ -66,27 +66,68 @@ jQuery(document).ready(function($) {
         let y = margin;
         for (let text of page.text)
             y = addTextObject(text, doc, y)
-        if (0)
-        {
-            if (text.size)
-                doc.setFontSize(text.size);
-            if (text.type)
-                doc.setFontType(text.type);
-            if (text.color)
-                doc.setTextColor(text.color);
-            y = text.y? text.y: y;
-            let string = text.text;
-            if (string.match(/~[a-z]+~/))
-                string = string.replace(/~forename~/g, forename)
-                .replace(/~lastname~/g, lastname);
-            y = addText(string, doc, margin, y, textWidth);
-        }
+    }
+
+    // Create report
+    doc.addPage();
+    let y = margin;
+    pageno++;
+
+    if (B)
+    {
+        let type = answers['B'][B].type;
+        let text = answers['B'][B].text;
+        doc.setFontType('bold');
+        y = addText(type, doc, margin, y, textWidth) + doc.getLineHeight();
+        doc.setFontType('normal');
+        y = addText(text, doc, margin, y, textWidth) + doc.getLineHeight();
+    }
+
+    if (C)
+    {
+        let type = answers['C'][C].type;
+        let text = answers['C'][C].text;
+        doc.setFontType('bold');
+        y = addText(type, doc, margin, y, textWidth) + doc.getLineHeight();
+        doc.setFontType('normal');
+        y = addText(text, doc, margin, y, textWidth) + doc.getLineHeight();
     }
 
     doc.addPage();
+    y = margin;
     pageno++;
-    addText("This page blank", doc, margin, margin, textWidth);
 
+    if (D)
+    {
+        let type = answers['D'][D].type;
+        let text = answers['D'][D].text;
+        doc.setFontType('bold');
+        y = addText(type, doc, margin, y, textWidth) + doc.getLineHeight();
+        doc.setFontType('normal');
+        y = addText(text, doc, margin, y, textWidth) + doc.getLineHeight();
+    }
+
+    if (E)
+    {
+        let type = answers['E'][E].type;
+        let text = answers['E'][E].text;
+        doc.setFontType('bold');
+        y = addText(type, doc, margin, y, textWidth) + doc.getLineHeight();
+        doc.setFontType('normal');
+        y = addText(text, doc, margin, y, textWidth) + doc.getLineHeight();
+    }
+
+    if (F)
+    {
+        let type = answers['F'][F].type;
+        let text = answers['F'][F].text;
+        doc.setFontType('bold');
+        y = addText(type, doc, margin, y, textWidth) + doc.getLineHeight();
+        doc.setFontType('normal');
+        y = addText(text, doc, margin, y, textWidth) + doc.getLineHeight();
+    }
+
+    // Create disclaimer
     doc.addPage();
     pageno++;
     for (let image of last.images)
@@ -96,7 +137,7 @@ jQuery(document).ready(function($) {
 	                   $('#preview').attr('src', string);
                        });
 
-    let y = margin;
+    y = margin;
     for (let text of last.text)
         addTextObject(text, doc, y);
 
