@@ -27,6 +27,9 @@ jQuery(document).ready(function($) {
     if (lastname == undefined)
         lastname = "LeBlanc";
 
+    forename = forename.replace('+', ' ');
+    lastname = lastname.replace('+', ' ');
+    
     let name = forename + " " + lastname;
 
     let pages = data.pages;
