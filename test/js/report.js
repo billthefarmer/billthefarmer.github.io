@@ -203,6 +203,11 @@ jQuery(document).ready(function($) {
         width = width? width: textWidth;
         addImage(image.src, image.type, doc, pageno, x, y,
                  width, image.height, func);
+        if (image.link)
+        {
+            let options = {url: image.link};
+            doc.link(x, y, width, height, options);
+        }
     }
 
     /**
