@@ -31,3 +31,7 @@ div.question, div.last, div.result, pre.data, input.back {
 progress {
     width: 100%;
 }
+
+div.ui-progressbar-value {
+    background: #B1Bf34;
+}
