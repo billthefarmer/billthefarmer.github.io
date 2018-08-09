@@ -202,12 +202,7 @@ jQuery(document).ready(function($) {
         let width = image.width;
         width = width? width: textWidth;
         addImage(image.src, image.type, doc, pageno, x, y,
-                 width, image.height, func);
-        if (image.link)
-        {
-            let options = {url: image.link};
-            doc.link(x, y, width, height, options);
-        }
+                 width, image.height, image.link, func);
     }
 
     /**
@@ -237,6 +232,7 @@ jQuery(document).ready(function($) {
      * @param y      Y location on page
      * @param width  Image width on page
      * @param height Image height on  page
+     * @param link   Link to add to image
      * @param func   Function to call after image added
      * @description
      * If the x parameter is negative, used as right edge of image.
@@ -244,7 +240,7 @@ jQuery(document).ready(function($) {
      * If the height is null or 0, height is calculated to
      * preserve image aspect ratio.
      */
-    function addImage(src, type, doc, page, x, y, width, height, func) {
+    function addImage(src, type, doc, page, x, y, width, height, link, func) {
         let img = new Image();
         img.src = src;
         img.addEventListener('load', function(event) {
@@ -254,6 +250,11 @@ jQuery(document).ready(function($) {
             y = y < 0? -y - height: y;
             doc.setPage(page);
             doc.addImage(data.url, type, x, y, width, height);
+            if (link)
+            {
+                let options = {url: link};
+                doc.link(x, y, width, height, options);
+            }
             if (func)
                 func();
         });
