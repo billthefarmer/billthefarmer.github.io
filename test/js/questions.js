@@ -118,7 +118,8 @@ let data =
                 "Varied",
                 "Diverse"],
             J: ["Deciding",
-                "Decided",
+                "Preparing",
                 "Started",
-                "Expanding"]}
+                "Inconsistent",
+                "Growth"]}
     };

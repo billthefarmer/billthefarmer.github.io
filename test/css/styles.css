@@ -1,5 +1,6 @@
 body {
     background: cornsilk;
+    font-family: verdana;
     margin: 0 auto;
 }
 
@@ -24,6 +25,10 @@ div.right {
     float: left;
 }
 
+div.centred {
+    text-align: center;
+}
+
 div.question, div.last, div.result, pre.data, input.back {
     display: none;
 }
@@ -33,5 +38,15 @@ progress {
 }
 
 div.ui-progressbar-value {
-    background: #B1Bf34;
+    background: #b1bf34;
+}
+
+input.ui-button {
+    background: #b1bf34;
+    color: white;
+}
+
+input.ui-button:hover {
+    background: orange;
+    color: white;
 }
