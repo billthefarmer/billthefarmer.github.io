@@ -9,15 +9,13 @@
 
 jQuery(document).ready(function($) {
 
-    // let data = {};
-
-    // $.getJSON("js/test.json", function(json) {
-    //     data = json;
-    // });
-
-    // $("#data").html(JSON.stringify(data, null, 2));
-
     let data = JSON.parse($("#data").html());
+
+    // Set up data
+    intro = data.intro;
+    questions = data.questions;
+    last = data.last;
+    matrix = data.matrix;
 
     // Set up buttons
     $("input[type=button]").button();
@@ -30,40 +28,39 @@ jQuery(document).ready(function($) {
     // Set up radio buttons
     $("input[type=radio]").checkboxradio();
 
-    $("#intro").html(data.intro);
+    $("#intro").html(intro);
 
     let question = 0;
     let value = 0;
-    
-    let questions = data.questions;
-    let last = data.last;
+
     let results = {A: [0, 0], B: 0, C: 0, D: 0, E: 0, F: 0, J: 0};
-    let matrix = data.matrix;
 
     // Process the start button
     $("#start").click(function() {
         question = 0;
         $("#data").css("display", "none");
-        $(".intro").fadeOut(function(){$(".question").fadeIn()});
-        $("#progress").progressbar("option", "value", 6.25);
-        $("#question").html(questions[question].q);
-        if (Math.round(Math.random()))
-        {
-            $("#label-1").html(questions[question].a[0]);
-            $("#radio-1").attr("value", questions[question].v[0]);
-            $("#label-2").html(questions[question].a[1]);
-            $("#radio-2").attr("value", questions[question].v[1]);
-        }
+        $(".intro").fadeOut(function() {
+            $("#progress").progressbar("option", "value", 6.25);
+            $("#question").html(questions[question].q);
+            if (Math.round(Math.random()))
+            {
+                $("#label-1").html(questions[question].a[0]);
+                $("#radio-1").attr("value", questions[question].v[0]);
+                $("#label-2").html(questions[question].a[1]);
+                $("#radio-2").attr("value", questions[question].v[1]);
+            }
 
-        else
-        {
-            $("#label-2").html(questions[question].a[0]);
-            $("#radio-2").attr("value", questions[question].v[0]);
-            $("#label-1").html(questions[question].a[1]);
-            $("#radio-1").attr("value", questions[question].v[1]);
-        }
-        $("input[type=radio]").prop("checked", false);
-        $("input[type=radio]").checkboxradio("refresh");
+            else
+            {
+                $("#label-2").html(questions[question].a[0]);
+                $("#radio-2").attr("value", questions[question].v[0]);
+                $("#label-1").html(questions[question].a[1]);
+                $("#radio-1").attr("value", questions[question].v[1]);
+            }
+            $("input[type=radio]").prop("checked", false);
+            $("input[type=radio]").checkboxradio("refresh");
+            $(".question").fadeIn();
+        });
     });
 
     // Process the back button

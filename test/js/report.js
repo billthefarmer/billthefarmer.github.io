@@ -132,7 +132,9 @@ jQuery(document).ready(function($) {
 
     // Create disclaimer
     doc.addPage();
+    y = margin;
     pageno++;
+
     for (let image of last.images)
         addImageObject(image, doc, pageno, 
                        function() {
@@ -140,7 +142,6 @@ jQuery(document).ready(function($) {
 	                   $('#preview').attr('src', string);
                        });
 
-    y = margin;
     for (let text of last.text)
         addTextObject(text, doc, y);
 

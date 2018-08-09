@@ -48,8 +48,7 @@ let data =
          height: 64}]}
      ],
      last:
-     {pageno: -1,
-      images:
+     {images:
       [{src: 'images/EDPS-Masterclass.jpg',
         type: 'jpeg'}],
       text:
