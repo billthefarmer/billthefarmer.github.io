@@ -49,7 +49,8 @@ jQuery(document).ready(function($) {
     $("#name").html(name);
 
     // Create document
-    let doc = jsPDF({unit: 'pt'});
+    let doc = jsPDF({unit: 'pt',
+                     compress: true});
 
     // Print front page and explanatory letter
     let pageno = 1;
