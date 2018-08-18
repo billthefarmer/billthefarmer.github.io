@@ -47,6 +47,12 @@ let data =
          width: 106,
          height: 64}]}
      ],
+     notes:
+     [{text: "NEXT STEPS",
+       type: 'bold',
+       y: 632},
+      {text: "\nIf you'd like to learn more about starting a business that suits you, while lowering your start up costs and getting you earning money as soon as possible reserve a spot on my next free training",
+       type: 'normal'}],
      last:
      {images:
       [{src: 'images/EDPS-Masterclass.jpg',

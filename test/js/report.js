@@ -34,7 +34,8 @@ jQuery(document).ready(function($) {
 
     let pages = data.pages;
     let answers = data.answers;
-    let last = data.last
+    let notes = data.notes;
+    let last = data.last;
 
     // Dimensions in points
     let pageWidth = 595;
@@ -130,6 +131,10 @@ jQuery(document).ready(function($) {
         doc.setFontType('normal');
         y = addText(text, doc, margin, y, textWidth) + doc.getLineHeight();
     }
+
+    // Note
+    for (note of notes)
+        y = addTextObject(note, doc, y);
 
     // Create disclaimer
     doc.addPage();

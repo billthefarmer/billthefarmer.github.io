@@ -12,10 +12,10 @@ jQuery(document).ready(function($) {
     let data = JSON.parse($("#data").html());
 
     // Set up data
-    intro = data.intro;
-    questions = data.questions;
-    last = data.last;
-    matrix = data.matrix;
+    let intro = data.intro;
+    let questions = data.questions;
+    let last = data.last;
+    let matrix = data.matrix;
 
     // Set up buttons
     $("input[type=button]").button();
