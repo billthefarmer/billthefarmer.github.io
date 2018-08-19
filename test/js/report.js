@@ -70,8 +70,7 @@ jQuery(document).ready(function($) {
 
         let y = margin;
         for (let text of page.text)
-            y = addTextObject(text, doc, y);
-        console.log(y);
+            y = addTextObject(text, doc, y)
     }
 
     // Create report
