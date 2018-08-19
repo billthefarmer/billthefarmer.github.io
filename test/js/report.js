@@ -70,7 +70,8 @@ jQuery(document).ready(function($) {
 
         let y = margin;
         for (let text of page.text)
-            y = addTextObject(text, doc, y)
+            y = addTextObject(text, doc, y);
+        console.log(y);
     }
 
     // Create report
@@ -80,31 +81,37 @@ jQuery(document).ready(function($) {
 
     if (B)
     {
+        let desc = answers['B'].desc;
         let type = answers['B'][B].type;
         let text = answers['B'][B].text;
         doc.setFontType('bold');
         y = addText(type, doc, margin, y, textWidth) + doc.getLineHeight();
         doc.setFontType('normal');
+        y = addText(desc, doc, margin, y, textWidth) + doc.getLineHeight();
         y = addText(text, doc, margin, y, textWidth) + doc.getLineHeight();
     }
 
     if (C)
     {
+        let desc = answers['C'].desc;
         let type = answers['C'][C].type;
         let text = answers['C'][C].text;
         doc.setFontType('bold');
         y = addText(type, doc, margin, y, textWidth) + doc.getLineHeight();
         doc.setFontType('normal');
+        y = addText(desc, doc, margin, y, textWidth) + doc.getLineHeight();
         y = addText(text, doc, margin, y, textWidth) + doc.getLineHeight();
     }
 
     if (D)
     {
+        let desc = answers['D'].desc;
         let type = answers['D'][D].type;
         let text = answers['D'][D].text;
         doc.setFontType('bold');
         y = addText(type, doc, margin, y, textWidth) + doc.getLineHeight();
         doc.setFontType('normal');
+        y = addText(desc, doc, margin, y, textWidth) + doc.getLineHeight();
         y = addText(text, doc, margin, y, textWidth) + doc.getLineHeight();
     }
 
@@ -114,32 +121,35 @@ jQuery(document).ready(function($) {
 
     if (E)
     {
+        let desc = answers['E'].desc;
         let type = answers['E'][E].type;
         let text = answers['E'][E].text;
         doc.setFontType('bold');
         y = addText(type, doc, margin, y, textWidth) + doc.getLineHeight();
         doc.setFontType('normal');
+        y = addText(desc, doc, margin, y, textWidth) + doc.getLineHeight();
         y = addText(text, doc, margin, y, textWidth) + doc.getLineHeight();
     }
 
     if (F)
     {
+        let desc = answers['F'].desc;
         let type = answers['F'][F].type;
         let text = answers['F'][F].text;
         doc.setFontType('bold');
         y = addText(type, doc, margin, y, textWidth) + doc.getLineHeight();
         doc.setFontType('normal');
+        y = addText(desc, doc, margin, y, textWidth) + doc.getLineHeight();
         y = addText(text, doc, margin, y, textWidth) + doc.getLineHeight();
     }
 
     // Note
-    for (note of notes)
-        y = addTextObject(note, doc, y);
-
-    // Create disclaimer
     doc.addPage();
     y = margin;
     pageno++;
+
+    for (note of notes)
+        y = addTextObject(note, doc, y);
 
     for (let image of last.images)
         addImageObject(image, doc, pageno, 
@@ -148,8 +158,9 @@ jQuery(document).ready(function($) {
 	                   $('#preview').attr('src', string);
                        });
 
+    // Create disclaimer
     for (let text of last.text)
-        addTextObject(text, doc, y);
+        y = addTextObject(text, doc, y);
 
     $("#update").click(function() {
         var string = doc.output('bloburi');

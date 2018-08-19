@@ -29,10 +29,10 @@ let data =
          size: 18,
          type: 'bold'},
         {text: "Dear ~forename~",
-         size: 14,
+         size: 12,
          type: 'normal',
          y: 340},
-        {text: "\nWe are all individuals, yet often people want to treat us as the same. We're told we have to have certain qualities as an entrepreneur, but frequently it's not that simple.\n\nWe all want meaningful work, but we also want to feel good turning up to do that work each day.\n\nIn Your Entrepreneurial Design Profile you'll gain a deeper insight into who you are and how you can build a business that is aligned with your fundamental nature as a human being.\n\n\n\n"},
+        {text: "\nWe are all individuals, yet often people want to treat us as the same.\n\nWe're told we have to have certain qualities as an entrepreneur, but frequently it's not that simple.\n\nWe all want meaningful work, but we also want to feel good turning up to do that work each day.\n\nIn Your Entrepreneurial Design Profile you'll gain a deeper insight into who you are and how you can build a business that is aligned with your fundamental nature as a human being.\n\n\n\n"},
         {text: "Your Entrepreneurial Design Profile",
          type: 'bold'},
         {text: "\nYour Entrepreneurial Design Profile is broken down into 5 Types:\n\nB Type => Brain Type\nC Type => Communication Type\nD Type => Direction Type\nE Type => Execution Type\nF Type => Focus Type",
@@ -43,30 +43,31 @@ let data =
        images:
        [{src: 'images/EDPS-Sig.png',
          type: 'png',
-         y: 560,
+         y: 460,
          width: 106,
          height: 64}]}
      ],
      notes:
      [{text: "NEXT STEPS",
-       type: 'bold',
-       y: 632},
-      {text: "\nIf you'd like to learn more about starting a business that suits you, while lowering your start up costs and getting you earning money as soon as possible reserve a spot on my next free training",
+       type: 'bold'},
+      {text: "\nIf you'd like to learn more about starting a business that suits you, while lowering your start up costs and getting you earning money as soon as possible reserve a spot on my next free training:",
        type: 'normal'}],
      last:
      {images:
       [{src: 'images/EDPS-Masterclass.jpg',
         type: 'jpeg',
+        y: 156,
         link: 'https://catleblanc.com/masterclass'}],
       text:
       [{text: "Copyright © 2018 Cat LeBlanc\n\nAll rights reserved. No part of this report may be reproduced, stored in a retrieval system, communicated or transmitted in any form or by any means without prior written permission. All enquires should be made to hello@catleblanc.com.\n\n\nDisclaimer\n\nThe material in this report is of the nature of general comment only, and does not represent professional advice. It is not intended to provide specific guidance for particular circumstances and it should not be relied on as a basis for decision to take action or not take action on any matter which it covers. Readers should obtain professional, individual advice where appropriate, before making any such decision.\n\nTo the maximum extent permitted by law the author disclaims all responsibility and liability to any person, arising directly or indirectly from any person taking or not taking action based on the information in this report.",
         size: 12,
         color: 150,
-        y: 425}]
+        y: 496}]
      },
      answers:
      {B:
-      {12:
+      {desc: "Your B Type refers to your Brain Type. It describes the way that you approach decision-making.",
+       12:
        {type: "Your B Type is Intuitive.",
         text: "You are a deeply intuitive person. You make decisions by feeling into them. You are in tune with your heart and gut brain. You often sense the right direction to take without needing to think through the pros and cons.\n\nYou may be highly creative and outside the box and enjoy doing things differently from the norm.\n\nYou will be happiest in a business where you are able to exercise this creativity and intuition. While business will always require dealing with numbers so your job is to balance where you can feel into the business and where more pragmatic decisions can be made.\n\nYou will need to make sure to protect your creative flow as well as maintain good boundaries to keep your energy high.\n\nWhen it comes to spreading the word about your business you may want to harness your creativity and visual talents. The more visual of the social media platforms are likely a good choice for you to gain exposure."},
        10:
@@ -79,7 +80,8 @@ let data =
        {type: "Your B Type is Analytical.",
         text: "You are highly analytical. You like to analyse all the data when it comes to making decisions. You like to work with solid facts and specifics.\n\nYour business idea is likely to reflect your analytical nature and critical thinking skills as these abilities are in extremely valuable to those who don't possess them."}},
       C:
-      {12:
+      {desc: "Your C Type refers to your Communication Type. It describes how you prefer to interact with people.",
+       12:
        {type: "Your C Type is Presenter.",
         text: "You love to be around people. You get energy from a crowded room.\n\nYou may consider having communication and other people as a core part of your business.\n\nGiven your highly sociable personality you will likely prefer to work in a sociable environment like a co-working hub or to have an office where other people are also moving around.\n\nWhen it comes to promoting your business and finding clients you may like to do speaking gigs or run workshops. Anything that harnesses your love of connecting with people will enable you to flow more.\n\nYou may like to get yourself interviewed or run an interview series to grow your business and get your work in front of more people."},
        10:
@@ -92,7 +94,8 @@ let data =
        {type: "Your C Type is Reflector.",
         text: "You enjoy quality one on one time with people you know well and are generally not a fan of situations that involve dealing with lots of people at once. You like deep engrossing conversation and are a great listener.\n\nYou will likely prefer working mainly by yourself or with a small supportive team. You may well be attracted to the idea of online business because of the fact it removes you from a busy office environment.\n\nWhen it comes to promoting your business you'll likely want to choose options that don't have you in placed in crowded environments. You may lean towards more choices like automated webinars so that you don't need to constantly show up personally which taxes your energy or building strong partnerships with a small number of key people that can help you grow your business."}},
       D:
-      {12:
+      {desc: "Your D Type refers to your Direction Type. It describes whether in the content of your work you prefer to be self-directed or externally directed.",
+       12:
        {type: "Your D Type is Trusted.",
         text: "You prefer trusted, proven methods that are established as winners. You prefer to have a high level of certainty in your work methods.\n\nYou may prefer using another expert's system to start off with, at least while finding your feet. \n\nThis could mean certifying under another expert or it could mean using a franchise, or multilevel marketing system."},
        10:
@@ -105,7 +108,8 @@ let data =
        {type: "Your D Type is Innovative.",
         text: "You love to operate at the cutting edge and uncover new exciting approaches and techniques. You would love your work to at the forefront of its field and it breaking new ground.\n\nYou enjoy bringing completely new, innovative approaches to the marketplace."}},
       E:
-      {12:
+      {desc: "Your E Type refers to your Execution Type. It describes your role in relationship with your clients, whether you prefer to execute (as in do the work!) or lead.",
+       12:
        {type: "Your E Type is Torch-bearer.",
         text: "You are a leader. You prefer guiding people on how tasks should be done as opposed to doing the work. You natural tendency is to take charge.\n\nThe business idea that suits you best will center around being an advisor as opposed to implementing work for other people. This could be in the field of coaching or consulting."},
        10:
@@ -118,7 +122,8 @@ let data =
        {type: "Your E Type is Producer.",
         text: "Your preferred style of work is production. You like to build solutions and prefer to be given a really clear brief. You don't want to take charge of the direction, you prefer to lose yourself in the flow of the actual work.\n\nThe business idea that suits you best will be a form of done for you work, where you are given a solid information on what is needed and you produce the finished work."}},
       F:
-      {12:
+      {desc: "Your F Type refers to your Focus Type. It describes where you are on the scale between single-tasker and multitasker.",
+       12:
        {type: "Your F Type is Diverse.",
         text: "You are the ultimate multitasker and the definition of multipassionate. You have diverse interests, you are always thinking of the next thing and you love big picture thinking.\n\nYou have almost certainly found it hard to take the traditional advice of 'choose one thing and stick with it'. While it is true that energy flows where attention goes this does not necessarily mean you have to choose one interest and give up all the others to be successful in business.\n\nThe good news is there is likely an overarching theme that can be used to tie many of your interests together. In many cases your interests tie back to one key vision for the future or belief that you are wanting to bring to the world.\n\nYour challenge in terms of day to day in the business will be making sure that there is enough attention on one idea at a time to bring it to life. You may well enjoy the idea phase but not have as much passion for the implementation.\n\nThe key for you will be putting systems in place so that projects come to life. That may well be hiring implementation support or in the beginning taking focussed time to get the detail work done so the big picture can come to life.\n\nIn terms of marketing your business you will likely enjoy using lots of different strategies to keep it interesting and get your big vision out to the world. You will probably have fun experimenting with new methods to see what works for you."},
        10:

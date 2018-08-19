@@ -48,7 +48,7 @@ let data =
           a: ["Developing new approaches",
               "Taking what has worked for others"],
           v: [2, 4]},
-         {q: "My modus operandi is",
+         {q: "My natural way of moving ahead is",
           t: "E",
           a: ["To take charge",
               "To build a solution"],
@@ -84,13 +84,13 @@ let data =
               "Having lots of projects to work on"],
           v: [2, 4]}],
         last: {
-            q: "Where are you on your business journey right now?",
+            q: "What stage are you at in your business right now?",
             a: ["Deciding on my business idea or niche",
                 "I have my business idea, I'm preparing to start",
                 "I've started but haven't had paying clients yet",
                 "I've had a few paying clients but it's inconsistent",
                 "I've had a good number of paying clients and am focused on growth"],
-            t: "J",
+            t: "S",
             v: [2, 4, 6, 8, 10]},
         matrix: {
             A: [["Growth Engine",
@@ -117,9 +117,9 @@ let data =
                 "Related",
                 "Varied",
                 "Diverse"],
-            J: ["Deciding",
-                "Preparing",
-                "Started",
-                "Inconsistent",
+            S: ["Niche",
+                "Starting",
+                "Clients",
+                "Consistency",
                 "Growth"]}
     };

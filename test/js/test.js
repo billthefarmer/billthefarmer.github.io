@@ -9,8 +9,6 @@
 
 jQuery(document).ready(function($) {
 
-    let data = JSON.parse($("#data").html());
-
     // Set up data
     let intro = data.intro;
     let questions = data.questions;
@@ -33,7 +31,7 @@ jQuery(document).ready(function($) {
     let question = 0;
     let value = 0;
 
-    let results = {A: [0, 0], B: 0, C: 0, D: 0, E: 0, F: 0, J: 0};
+    let results = {A: [0, 0], B: 0, C: 0, D: 0, E: 0, F: 0, S: 0};
 
     // Process the start button
     $("#start").click(function() {
@@ -196,14 +194,14 @@ jQuery(document).ready(function($) {
             $("#direct").attr("value", result.D);
             $("#exec").attr("value", result.E);
             $("#focus").attr("value", result.F);
-            $("#journey").attr("value", result.J);
+            $("#stage").attr("value", result.S);
             $("#A").attr("value", results.A);
             $("#B").attr("value", results.B);
             $("#C").attr("value", results.C);
             $("#D").attr("value", results.D);
             $("#E").attr("value", results.E);
             $("#F").attr("value", results.F);
-            $("#J").attr("value", results.J);
+            $("#S").attr("value", results.S);
             $("div.result").fadeIn();
             console.log(results);
             console.log(calculate(results, matrix));
@@ -232,7 +230,7 @@ jQuery(document).ready(function($) {
         let d = (results.D / 2) - 3;
         let e = (results.E / 2) - 3;
         let f = (results.F / 2) - 3;
-        let j = (results.J / 2) - 1;
+        let j = (results.S / 2) - 1;
 
         let result = {A: matrix.A[Math.trunc(b / 2)][Math.trunc(e / 2)],
                       B: matrix.B[b],
@@ -240,7 +238,7 @@ jQuery(document).ready(function($) {
                       D: matrix.D[d],
                       E: matrix.E[e],
                       F: matrix.F[f],
-                      J: matrix.J[j]};
+                      S: matrix.S[j]};
 
         return result;
     }
