@@ -191,6 +191,17 @@ jQuery(document).ready(function($) {
         }
     }
 
+
+    /**
+     * Adds text object to document.
+     * @name  addTextObject
+     * @param text   Text object to add
+     * @param doc    jsPDF document
+     * @param y      Y location on page
+     * @description
+     * Substitutes ~forename~ and ~lastname~ in text
+     * @returns Y location of bottom of text
+     */
     function addTextObject(text, doc, y)
     {
         if (text.size)
@@ -207,7 +218,15 @@ jQuery(document).ready(function($) {
         return addText(string, doc, margin, y, textWidth);
     }
 
-    function addImageObject(image, doc, pageno, func)
+    /**
+     * Adds image object to document.
+     * @name  addImageObject
+     * @param image  Image object to add
+     * @param doc    jsPDF document
+     * @param page   Page number to place image
+     * @param func   Function to call after image added
+     */
+    function addImageObject(image, doc, page, func)
     {
         let y = image.y;
         y = y? (y < 0)? -pageHeight + margin: y: margin;
@@ -215,7 +234,7 @@ jQuery(document).ready(function($) {
         x = x? (x < 0)? -pageWidth + margin: x: margin;
         let width = image.width;
         width = width? width: textWidth;
-        addImage(image.src, image.type, doc, pageno, x, y,
+        addImage(image.src, image.type, doc, page, x, y,
                  width, image.height, image.link, func);
     }
 
