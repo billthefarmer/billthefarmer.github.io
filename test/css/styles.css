@@ -57,7 +57,12 @@ label.ui-checkboxradio-label {
     color: white;
 }
 
-label.ui-checkboxradio-label:hover {
+label.ui-checkboxradio-label:hover,
+label.ui-checkboxradio-label:focus {
     background: orange;
     color: white;
+}
+
+span.ui-checkboxradio-icon {
+    text-align: left;
 }
