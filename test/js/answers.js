@@ -47,11 +47,6 @@ let data =
          width: 106,
          height: 64}]}
      ],
-     notes:
-     [{text: "NEXT STEPS",
-       type: 'bold'},
-      {text: "\nIf you'd like to learn more about starting a business that suits you, while lowering your start up costs and getting you earning money as soon as possible reserve a spot on my next free training:",
-       type: 'normal'}],
      last:
      {images:
       [{src: 'images/EDPS-Masterclass.jpg',
@@ -59,7 +54,11 @@ let data =
         y: 156,
         link: 'https://catleblanc.com/masterclass'}],
       text:
-      [{text: "Copyright © 2018 Cat LeBlanc\n\nAll rights reserved. No part of this report may be reproduced, stored in a retrieval system, communicated or transmitted in any form or by any means without prior written permission. All enquires should be made to hello@catleblanc.com.\n\n\nDisclaimer\n\nThe material in this report is of the nature of general comment only, and does not represent professional advice. It is not intended to provide specific guidance for particular circumstances and it should not be relied on as a basis for decision to take action or not take action on any matter which it covers. Readers should obtain professional, individual advice where appropriate, before making any such decision.\n\nTo the maximum extent permitted by law the author disclaims all responsibility and liability to any person, arising directly or indirectly from any person taking or not taking action based on the information in this report.",
+      [{text: "NEXT STEPS",
+        type: 'bold'},
+       {text: "\nIf you'd like to learn more about starting a business that suits you, while lowering your start up costs and getting you earning money as soon as possible reserve a spot on my next free training:",
+        type: 'normal'},
+       {text: "Copyright © 2018 Cat LeBlanc\n\nAll rights reserved. No part of this report may be reproduced, stored in a retrieval system, communicated or transmitted in any form or by any means without prior written permission. All enquires should be made to hello@catleblanc.com.\n\n\nDisclaimer\n\nThe material in this report is of the nature of general comment only, and does not represent professional advice. It is not intended to provide specific guidance for particular circumstances and it should not be relied on as a basis for decision to take action or not take action on any matter which it covers. Readers should obtain professional, individual advice where appropriate, before making any such decision.\n\nTo the maximum extent permitted by law the author disclaims all responsibility and liability to any person, arising directly or indirectly from any person taking or not taking action based on the information in this report.",
         size: 12,
         color: 150,
         y: 496}]

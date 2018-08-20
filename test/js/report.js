@@ -142,14 +142,12 @@ jQuery(document).ready(function($) {
         y = addText(text, doc, margin, y, textWidth) + doc.getLineHeight();
     }
 
-    // Note
+    // Last page
     doc.addPage();
     y = margin;
     pageno++;
 
-    for (note of notes)
-        y = addTextObject(note, doc, y);
-
+    // Images
     for (let image of last.images)
         addImageObject(image, doc, pageno, 
                        function() {
@@ -157,7 +155,7 @@ jQuery(document).ready(function($) {
 	                   $('#preview').attr('src', string);
                        });
 
-    // Create disclaimer
+    // Text
     for (let text of last.text)
         y = addTextObject(text, doc, y);
 
