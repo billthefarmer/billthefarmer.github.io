@@ -26,7 +26,8 @@ div.right {
 }
 
 div.centred {
-    text-align: center;
+    width: 50%;
+    margin: 0 auto;
 }
 
 div.question, div.last, div.result, pre.data, input.back {
@@ -47,6 +48,16 @@ input.ui-button {
 }
 
 input.ui-button:hover {
+    background: orange;
+    color: white;
+}
+
+label.ui-checkboxradio-label {
+    background: #b1bf34;
+    color: white;
+}
+
+label.ui-checkboxradio-label:hover {
     background: orange;
     color: white;
 }
