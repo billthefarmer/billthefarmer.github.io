@@ -26,8 +26,7 @@ div.right {
 }
 
 div.centred {
-    width: 50%;
-    margin: 0 auto;
+    margin-left: 25%;
 }
 
 div.question, div.last, div.result, pre.data, input.back {
