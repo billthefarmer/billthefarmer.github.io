@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2018 Bill Farmer</copyright>
-    <lastBuildDate>Sat, 14 Jul 2018 21:22:37 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 20 Aug 2018 17:14:32 +0100</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Questionnaire Maker</title>
+      <link>https://billthefarmer.github.io/blog/post/questionnaire/</link>
+      <pubDate>Mon, 20 Aug 2018 17:14:32 +0100</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/post/questionnaire/</guid>
+      <description>Introduction Questionnaire Maker is a WordPress and Hugo plugin that asks a series of questions and produces a PDF report. The project is on Github.
+Documentation The plugin uses the shortcodes [questionnaire-questions] and [questionnaire-report], or {{&amp;lt; questionnaire-questions &amp;gt;}} and {{&amp;lt; questionnaire-report &amp;gt;}}. The shortcode will be replaced on the page with a series of panels containing the questions and options for the answers, or a panel with a preview of the report.</description>
+    </item>
     
     <item>
       <title>Smart Meters</title>
