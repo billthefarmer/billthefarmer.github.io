@@ -8,13 +8,21 @@ img {
 }
 
 div.container {
-    width: 640px;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: -ms-fit-content;
+    width: -o-fit-content;
+    width: fit-content;
     margin: 0 auto;
 }
 
 div.content {
     background: white;
     padding: 20px;
+}
+
+div.questionnaire {
+    width: 640px;
 }
 
 div.report {
