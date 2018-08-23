@@ -20,7 +20,7 @@ Documentation The plugin uses the shortcodes [questionnaire-questions] and [ques
 
 <meta itemprop="datePublished" content="2018-08-20T17:14:32&#43;01:00" />
 <meta itemprop="dateModified" content="2018-08-20T17:14:32&#43;01:00" />
-<meta itemprop="wordCount" content="448">
+<meta itemprop="wordCount" content="639">
 
 
 
@@ -36,7 +36,7 @@ Documentation The plugin uses the shortcodes [questionnaire-questions] and [ques
 
 
 
-<meta name="generator" content="Hugo 0.47" />
+<meta name="generator" content="Hugo 0.47.1" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -233,11 +233,26 @@ encoded as a Javascript object.</p>
           <span style="color:#b44">&#34;Explorative&#34;</span>],...}
     };
 </code></pre></div>
+<p>The fields are:</p>
+
+<ul>
+<li><strong>intro</strong> - Introductory text</li>
+<li><strong>questions</strong> - A series of questions with fields:
+
+<ul>
+<li><strong>q</strong> - The question text</li>
+<li><strong>t</strong> - The type of question</li>
+<li><strong>a</strong> - The options for answers</li>
+<li><strong>v</strong> - Array of values for answers</li>
+</ul></li>
+<li><strong>last</strong> - The last question</li>
+<li><strong>matrix</strong> - Object containing possible texts for each type of question</li>
+</ul>
+
 <p>The intro text appears on the first panel together with a start
-button. The questions will appear on subsequent panels. The question
-data has four fields, <code>q</code> - the question, <code>t</code> - the type of question,
-<code>a</code> - an array of possible answers and <code>v</code> - an array of the value of
-each answer. The last question triggers a contact panel which prompts for name and email address.</p>
+button. The questions will appear on subsequent panels. The last
+question triggers a contact panel which prompts for name and email
+address.</p>
 
 <h4 id="report-data">Report data</h4>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a2f;font-weight:bold">let</span> data <span style="color:#666">=</span>
@@ -291,6 +306,47 @@ each answer. The last question triggers a contact panel which prompts for name a
         text<span style="color:#666">:</span> <span style="color:#b44">&#34;Paragraph of text...&#34;</span>},...}
     }};
 </code></pre></div>
+<p>The fields are:</p>
+
+<ul>
+<li><strong>pages</strong> - Preamble pages with images, with fields:
+
+<ul>
+<li><strong>pageno</strong> - Page number</li>
+<li><strong>images</strong> - Array of images with fields:
+
+<ul>
+<li><strong>src</strong> - Path to image file</li>
+<li><strong>type</strong> - Type of image, png or jpeg</li>
+<li><strong>y</strong> - Y coordinate, if -1 bottom edge, optional</li>
+<li><strong>x</strong> - X coordinate, if -1 right edge, optional</li>
+<li><strong>height</strong> - height of image, optional</li>
+<li><strong>width</strong> - width of image, optional. If width and no height,
+image will be scaled in proportion</li>
+<li><strong>link</strong> - URL of link for image</li>
+</ul></li>
+<li><strong>text</strong> - Text for page with fields:
+<strong>size</strong> - Font size in points, optional
+<strong>type</strong> - Type of font, optional
+<strong>color</strong> - Text colour, optional
+<strong>y</strong> Y coordinate, optional</li>
+</ul></li>
+<li><strong>last</strong> - Last page with images and text, same fields, no pageno</li>
+<li><strong>answers</strong> Paragraphs of text for the report after the preamble
+with fields:
+
+<ul>
+<li><strong>Type</strong> - Type of answer with fields:
+
+<ul>
+<li><strong>desc</strong> - Description of type</li>
+<li><strong>Score</strong> - Value of score for that type with fields:</li>
+<li><strong>type</strong> - Description of result</li>
+<li><strong>text</strong> - Paragraph of explanatory text</li>
+</ul></li>
+</ul></li>
+</ul>
+
 <p>The report can contain several pages of preamble with images and
 text. Images with no coordinates or dimensions will be placed full
 width at the top of the page. Images with a <code>y</code> coordinate of <code>-1</code>
