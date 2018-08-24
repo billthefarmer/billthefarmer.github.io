@@ -22,7 +22,7 @@ div.content {
 }
 
 div.questionnaire {
-    width: 640px;
+    width: 560px;
 }
 
 div.report {
@@ -40,6 +40,10 @@ div.left {
 div.right {
     margin: 20px;
     float: left;
+}
+
+iframe.preview {
+    border: none;
 }
 
 div.centred {
