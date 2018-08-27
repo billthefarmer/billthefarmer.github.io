@@ -42,10 +42,6 @@ div.right {
     float: left;
 }
 
-iframe.preview {
-    border: none;
-}
-
 div.centred {
     margin-left: 20%;
 }
@@ -56,6 +52,10 @@ div.question, div.last, div.result, input.back {
 
 div.ui-progressbar-value {
     background: #b1bf34;
+}
+
+iframe.preview {
+    border: none;
 }
 
 input.ui-button {
