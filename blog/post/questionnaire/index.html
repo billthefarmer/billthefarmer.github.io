@@ -20,7 +20,7 @@ Documentation The plugin uses the shortcodes [questionnaire-questions] and [ques
 
 <meta itemprop="datePublished" content="2018-08-20T17:14:32&#43;01:00" />
 <meta itemprop="dateModified" content="2018-08-20T17:14:32&#43;01:00" />
-<meta itemprop="wordCount" content="639">
+<meta itemprop="wordCount" content="642">
 
 
 
@@ -245,7 +245,7 @@ encoded as a Javascript object.</p>
 <li><strong>a</strong> - The options for answers</li>
 <li><strong>v</strong> - Array of values for answers</li>
 </ul></li>
-<li><strong>last</strong> - The last question</li>
+<li><strong>last</strong> - The last question, fields as above</li>
 <li><strong>matrix</strong> - Object containing possible texts for each type of question</li>
 </ul>
 
@@ -326,10 +326,13 @@ image will be scaled in proportion</li>
 <li><strong>link</strong> - URL of link for image</li>
 </ul></li>
 <li><strong>text</strong> - Text for page with fields:
-<strong>size</strong> - Font size in points, optional
-<strong>type</strong> - Type of font, optional
-<strong>color</strong> - Text colour, optional
-<strong>y</strong> Y coordinate, optional</li>
+
+<ul>
+<li><strong>size</strong> - Font size in points, optional</li>
+<li><strong>type</strong> - Type of font, optional</li>
+<li><strong>color</strong> - Text colour, optional</li>
+<li><strong>y</strong> Y coordinate, optional</li>
+</ul></li>
 </ul></li>
 <li><strong>last</strong> - Last page with images and text, same fields, no pageno</li>
 <li><strong>answers</strong> Paragraphs of text for the report after the preamble
