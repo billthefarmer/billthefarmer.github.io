@@ -13,6 +13,7 @@
 <meta property="og:url" content="https://billthefarmer.github.io/blog/android-recent-files/" /><meta property="article:published_time" content="2017-12-15T11:53:57&#43;00:00"/>
 <meta property="article:modified_time" content="2017-12-15T11:53:57&#43;00:00"/>
 
+
 <meta itemprop="name" content="Android Recent Files">
 <meta itemprop="description" content="There are several parts to this - creating the list of files, saving the list in the preferences, restoring the list on startup and creating the list in the menu.
 // onCreate  @Override protected void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this); // Create a map of scroll positions by file name  Set&lt;String&gt; pathSet = preferences.getStringSet(PREF_PATHS, null); pathMap = new HashMap&lt;String, Integer&gt;(); if (pathSet != null) for (String path : pathSet) pathMap.">
@@ -36,7 +37,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.48" />
+<meta name="generator" content="Hugo 0.49.1" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -320,6 +321,10 @@ old ones are added to the remove list.</p>
   <h4>Recent Posts</h4>
   <ul>
     
+      <li><a href="/blog/post/create-pdf-report/">
+        Create PDF Report
+      </a></li>
+    
       <li><a href="/blog/post/questionnaire/">
         Questionnaire Maker
       </a></li>
@@ -354,10 +359,6 @@ old ones are added to the remove list.</p>
     
       <li><a href="/blog/baked-tomatoes/">
         Baked Tomatoes
-      </a></li>
-    
-      <li><a href="/blog/fried-whole-mushrooms/">
-        Fried Whole Mushrooms
       </a></li>
     
   </ul>
