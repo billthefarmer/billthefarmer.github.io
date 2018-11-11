@@ -37,7 +37,7 @@ I used gnuparted to copy the partition from one disk to another. The standard me
 
 
 
-<meta name="generator" content="Hugo 0.49.1" />
+<meta name="generator" content="Hugo 0.51" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -193,14 +193,14 @@ code {
       <p>I recently added a new disk drive to my workstation and, as part of reorganising, wanted to move the Linux Mint root partition from one disk to another. Naturally I <del>googled</del> duckied it and found a certain amount of useful info.</p>
 
 <p>I used gnuparted to copy the partition from one disk to another. The standard method to reinstall grub on a partition so it will boot appears to be to mount it and use grub-install with the &#8211;boot-directory option like this.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#080;font-style:italic">#mount /dev/dsc4 /mnt
-</span><span style="color:#080;font-style:italic"></span>#grub-install --boot-directory<span style="color:#666">=</span>/mnt/boot /dev/sdc</code></pre></div>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#080;font-style:italic">#mount /dev/dsc4 /mnt</span>
+<span style="color:#080;font-style:italic">#grub-install --boot-directory=/mnt/boot /dev/sdc</span></code></pre></div>
 <p>However, because grub2 uses partition uuids to identify partitions, and because the new partition kept it&rsquo;s uuid, it just booted the old location. So I created a new uuid and tried again:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#080;font-style:italic">#uuidgen
-</span><span style="color:#080;font-style:italic"></span>2b12199a-84ed-4e3f-8339-48dadffac45b
-<span style="color:#080;font-style:italic">#tune2fs /dev/sdc4 -U 2b12199a-84ed-4e3f-8339-48dadffac45b
-</span><span style="color:#080;font-style:italic">#mount /dev/dsc4 /mnt
-</span><span style="color:#080;font-style:italic"></span>#grub-install --boot-directory<span style="color:#666">=</span>/mnt/boot /dev/sdc</code></pre></div>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#080;font-style:italic">#uuidgen</span>
+2b12199a-84ed-4e3f-8339-48dadffac45b
+<span style="color:#080;font-style:italic">#tune2fs /dev/sdc4 -U 2b12199a-84ed-4e3f-8339-48dadffac45b</span>
+<span style="color:#080;font-style:italic">#mount /dev/dsc4 /mnt</span>
+<span style="color:#080;font-style:italic">#grub-install --boot-directory=/mnt/boot /dev/sdc</span></code></pre></div>
 <p>That didn&rsquo;t work either as grub-install wouldn&rsquo;t change the uuids in grub.cfg so the new partition would boot.</p>
 
 <p>So I got evil, I used emacs to do a global search and replace on the old and new uuids in grub.cfg. That worked. Once the new partition had booted I did another grub-install to correct the hacked grub.cfg. What interests me &#8211; Is there a less evil way of doing this with grub2?</p>
@@ -234,6 +234,10 @@ code {
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/green-tomatoes/">
+        Green Tomatoes
+      </a></li>
     
       <li><a href="/blog/post/create-pdf-report/">
         Create PDF Report
@@ -269,10 +273,6 @@ code {
     
       <li><a href="/blog/android-recent-files/">
         Android Recent Files
-      </a></li>
-    
-      <li><a href="/blog/baked-tomatoes/">
-        Baked Tomatoes
       </a></li>
     
   </ul>
