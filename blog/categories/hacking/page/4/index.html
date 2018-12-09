@@ -10,7 +10,7 @@
 <meta property="og:description" content="Random thoughts on random subjects" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/categories/hacking/" />
-<meta property="og:updated_time" content="2016-12-10T13:59:22&#43;00:00"/>
+<meta property="og:updated_time" content="2017-01-08T18:49:31&#43;00:00"/>
 
 
 <meta itemprop="name" content="Hacking">
@@ -163,6 +163,38 @@ code {
 
 <div class="blog-post">
   <h3>
+    <a href="https://billthefarmer.github.io/blog/handling-run-time-changes-in-android/">Handling run time changes in Android</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2017-01-08T18:49:31Z">
+        Sun Jan 8, 2017
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    Two articles, Handling Configuration Changes and Handling Configuration Changes with Fragments recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:
+ An android fragment is quite a complex heavyweight object to use just for retaining data and possibly a background task, and the fragment management is not simple. Fragments are not retained if the associated activity is discarded by calling finish().
+  </p>
+  <a href='https://billthefarmer.github.io/blog/handling-run-time-changes-in-android/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
     <a href="https://billthefarmer.github.io/blog/using-emacs-as-an-ide/">Using Emacs as an IDE</a>
   </h3>
   <div class="callout small">
@@ -285,38 +317,6 @@ That was it until recently, when I read an article about putting Windows 10 on o
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/build-mac-osx-apps-using-command-line-tools/">Build Mac OSX apps using command line tools</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2016-02-02T17:59:09Z">
-        Tue Feb 2, 2016
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    You will need to install the Xcode command line tools, you don&rsquo;t need the Xcode app. The easiest way to do this is to attempt to build an app like emacs by typing ./configure on the command line. A dialog box will pop up asking if you want to download and install the tools.
-Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to find. You can type gcc -help or clang -help on the command line to get some info.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/build-mac-osx-apps-using-command-line-tools/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -341,6 +341,10 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/post/expand-android-selection/">
+        Expand Android Selection
+      </a></li>
     
       <li><a href="/blog/interesting-mash/">
         Interesting Mash
@@ -376,10 +380,6 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
     
       <li><a href="/blog/boiled-beef-and-carrots/">
         Boiled Beef and Carrots
-      </a></li>
-    
-      <li><a href="/blog/android-custom-attributes/">
-        Android Custom Attributes
       </a></li>
     
   </ul>

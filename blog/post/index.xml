@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2018 Bill Farmer</copyright>
-    <lastBuildDate>Sun, 09 Dec 2018 10:34:18 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Dec 2018 12:21:39 +0000</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Expand Android Selection</title>
+      <link>https://billthefarmer.github.io/blog/post/expand-android-selection/</link>
+      <pubDate>Sun, 09 Dec 2018 12:21:39 +0000</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/post/expand-android-selection/</guid>
+      <description>When editing data or source files it would be useful to have selections triggered by a double tap or long press expand to enclosing delimiters or brackets.
+There is a section in the Android docs which explains how to set up your own context menu or contextual action mode, but not how to change the selection.
+This method is fine if you have only one text editor view in your app, but would be difficult with more than one as there is no way to identify the originating view.</description>
+    </item>
     
     <item>
       <title>Interesting Mash</title>
