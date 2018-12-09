@@ -10,7 +10,7 @@
 <meta property="og:description" content="Random thoughts on random subjects" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/post/" />
-<meta property="og:updated_time" content="2017-11-05T12:47:25&#43;00:00"/>
+<meta property="og:updated_time" content="2017-12-15T11:53:57&#43;00:00"/>
 
 
 <meta itemprop="name" content="Posts">
@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.51" />
+<meta name="generator" content="Hugo 0.52" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -163,6 +163,38 @@ code {
 
 <div class="blog-post">
   <h3>
+    <a href="https://billthefarmer.github.io/blog/android-recent-files/">Android Recent Files</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2017-12-15T11:53:57Z">
+        Fri Dec 15, 2017
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    There are several parts to this - creating the list of files, saving the list in the preferences, restoring the list on startup and creating the list in the menu.
+// onCreate  @Override protected void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this); // Create a map of scroll positions by file name  Set&lt;String&gt; pathSet = preferences.getStringSet(PREF_PATHS, null); pathMap = new HashMap&lt;String, Integer&gt;(); if (pathSet != null) for (String path : pathSet) pathMap.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/android-recent-files/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
     <a href="https://billthefarmer.github.io/blog/baked-tomatoes/">Baked Tomatoes</a>
   </h3>
   <div class="callout small">
@@ -287,38 +319,6 @@ Ingredients  Tin of corned beef Tin of red beans Tin of chopped tomatoes Packet 
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/butter-beans-in-tomato-sauce/">Butter Beans in Tomato Sauce</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2017-10-26T09:49:29&#43;01:00">
-        Thu Oct 26, 2017
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/recipes">
-        Recipes
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    We have been offered this in many Greek tavernas, especially the ones with what&rsquo;s on offer displayed in a glass counter. On a trip to Alonnisos we saw big tins of these, called Gigantes, at the back of a taverna/supermarket/cash &amp; carry that seemed to stock everything.
-Ingredients  Tin of butter beans Tin of chopped tomatoes 2 cloves of garlic, chopped 2 onions, chopped Oregano Olive oil  Method  Fry the onions, garlic and oregano in olive oil in a medium sized skillet until soft Add the tin of chopped tomatoes, stir, and allow to simmer gently.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/butter-beans-in-tomato-sauce/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -343,6 +343,10 @@ Ingredients  Tin of butter beans Tin of chopped tomatoes 2 cloves of garlic, cho
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/interesting-mash/">
+        Interesting Mash
+      </a></li>
     
       <li><a href="/blog/green-tomatoes/">
         Green Tomatoes
@@ -378,10 +382,6 @@ Ingredients  Tin of butter beans Tin of chopped tomatoes 2 cloves of garlic, cho
     
       <li><a href="/blog/android-custom-attributes/">
         Android Custom Attributes
-      </a></li>
-    
-      <li><a href="/blog/android-recent-files/">
-        Android Recent Files
       </a></li>
     
   </ul>

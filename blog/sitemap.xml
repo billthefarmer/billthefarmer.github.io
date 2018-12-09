@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://billthefarmer.github.io/blog/interesting-mash/</loc>
+    <lastmod>2018-12-09T10:34:18+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://billthefarmer.github.io/blog/green-tomatoes/</loc>
     <lastmod>2018-11-11T13:23:50+00:00</lastmod>
   </url>
@@ -389,7 +394,7 @@
   
   <url>
     <loc>https://billthefarmer.github.io/blog/</loc>
-    <lastmod>2018-11-11T13:23:50+00:00</lastmod>
+    <lastmod>2018-12-09T10:34:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -418,13 +423,13 @@
   
   <url>
     <loc>https://billthefarmer.github.io/blog/post/</loc>
-    <lastmod>2018-11-11T13:23:50+00:00</lastmod>
+    <lastmod>2018-12-09T10:34:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://billthefarmer.github.io/blog/categories/recipes/</loc>
-    <lastmod>2018-11-11T13:23:50+00:00</lastmod>
+    <lastmod>2018-12-09T10:34:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
