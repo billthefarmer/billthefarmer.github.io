@@ -236,7 +236,8 @@ vertical axis is reversed.</p>
         <span style="color:#666">{</span>14<span style="color:#666">.</span><span style="color:#b44">9f</span><span style="color:#666">,</span>16<span style="color:#666">.</span><span style="color:#b44">5f</span><span style="color:#666">},</span> <span style="color:#666">{</span>16<span style="color:#666">.</span><span style="color:#b44">9f</span><span style="color:#666">,</span>16<span style="color:#666">.</span><span style="color:#b44">5f</span><span style="color:#666">},</span> <span style="color:#666">{</span>16<span style="color:#666">.</span><span style="color:#b44">9f</span><span style="color:#666">,</span>15<span style="color:#666">},</span>
         <span style="color:#666">{</span>16<span style="color:#666">.</span><span style="color:#b44">9f</span><span style="color:#666">,</span>13<span style="color:#666">.</span><span style="color:#b44">5f</span><span style="color:#666">},</span> <span style="color:#666">{</span>14<span style="color:#666">.</span><span style="color:#b44">9f</span><span style="color:#666">,</span>13<span style="color:#666">.</span><span style="color:#b44">5f</span><span style="color:#666">},</span> <span style="color:#666">{</span>14<span style="color:#666">.</span><span style="color:#b44">9f</span><span style="color:#666">,</span>15<span style="color:#666">}</span>
     <span style="color:#666">};</span></code></pre></div>
-<p>Both these sets of points are made up of an initial move, followed by
+<p><br>
+Both these sets of points are made up of an initial move, followed by
 a series of cubic bezier curves. The bass clef has three sections, the
 symbol, followed by the two dots.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        <span style="color:#080;font-style:italic">// Treble clef
@@ -267,7 +268,8 @@ symbol, followed by the two dots.</p>
             bclef<span style="color:#666">.</span><span style="color:#b44">cubicTo</span><span style="color:#666">(</span>bc<span style="color:#666">[</span>i<span style="color:#666">][</span>0<span style="color:#666">],</span> bc<span style="color:#666">[</span>i<span style="color:#666">][</span>1<span style="color:#666">],</span>
                           bc<span style="color:#666">[</span>i <span style="color:#666">+</span> 1<span style="color:#666">][</span>0<span style="color:#666">],</span> bc<span style="color:#666">[</span>i <span style="color:#666">+</span> 1<span style="color:#666">][</span>1<span style="color:#666">],</span>
                           bc<span style="color:#666">[</span>i <span style="color:#666">+</span> 2<span style="color:#666">][</span>0<span style="color:#666">],</span> bc<span style="color:#666">[</span>i <span style="color:#666">+</span> 2<span style="color:#666">][</span>1<span style="color:#666">]);</span></code></pre></div>
-<p>It is necessary to scale the paths to fit the view they are to be
+<p><br>
+It is necessary to scale the paths to fit the view they are to be
 drawn in and calculate the line spacing for the staff lines.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        lineHeight <span style="color:#666">=</span> height <span style="color:#666">/</span> 14f<span style="color:#666">;</span>
         margin <span style="color:#666">=</span> width <span style="color:#666">/</span> 32<span style="color:#666">;</span>
@@ -289,7 +291,8 @@ drawn in and calculate the line spacing for the staff lines.</p>
         matrix<span style="color:#666">.</span><span style="color:#b44">setScale</span><span style="color:#666">(-</span>scale<span style="color:#666">,</span> scale<span style="color:#666">);</span>
         matrix<span style="color:#666">.</span><span style="color:#b44">postTranslate</span><span style="color:#666">(</span>margin <span style="color:#666">+</span> lineHeight<span style="color:#666">,</span> lineHeight <span style="color:#666">*</span> 5<span style="color:#666">.</span><span style="color:#b44">4f</span><span style="color:#666">);</span>
         bclef<span style="color:#666">.</span><span style="color:#b44">transform</span><span style="color:#666">(</span>matrix<span style="color:#666">);</span></code></pre></div>
-<p>The staff consists of two sets of five lines, closer together than is
+<p><br>
+The staff consists of two sets of five lines, closer together than is
 usual to allow for a continuous scale from top to bottom. There are
 also three leger lines to allow for showing notes off the staff lines.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        <span style="color:#080;font-style:italic">// Draw staff
@@ -319,7 +322,8 @@ also three leger lines to allow for showing notes off the staff lines.</p>
         <span style="color:#080;font-style:italic">// Draw treble and bass clef
 </span><span style="color:#080;font-style:italic"></span>        canvas<span style="color:#666">.</span><span style="color:#b44">drawPath</span><span style="color:#666">(</span>tclef<span style="color:#666">,</span> paint<span style="color:#666">);</span>
         canvas<span style="color:#666">.</span><span style="color:#b44">drawPath</span><span style="color:#666">(</span>bclef<span style="color:#666">,</span> paint<span style="color:#666">);</span></code></pre></div>
-<p>The bass and treble clef have been made slightly larger than usual as
+<p><br>
+The bass and treble clef have been made slightly larger than usual as
 the view can be quite small on a phone.</p>
 
 <p><img src="images/2019/01/staff.png" alt="Staff" /></p>
