@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2018 Bill Farmer</copyright>
-    <lastBuildDate>Sun, 09 Dec 2018 12:21:39 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Jan 2019 18:35:26 +0000</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Draw Musical Staff</title>
+      <link>https://billthefarmer.github.io/blog/post/draw-musical-staff/</link>
+      <pubDate>Sun, 13 Jan 2019 18:35:26 +0000</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/post/draw-musical-staff/</guid>
+      <description>A musical staff is not a trivial thing to draw because of the complex curves needed for the treble and base clef. What is needed is a source of vector drawing coordinates.
+The data used was originally intended for use in postscript, so the vertical axis is reversed.
+// Treble clef  private static final float tc[][]= { {-6, 16}, {-8, 13}, {-14, 19}, {-10, 35}, {2, 35}, {8, 37}, {21, 30}, {21, 17}, {21, 5}, {10, -1}, {0, -1}, {-12, -1}, {-23, 5}, {-23, 22}, {-23, 29}, {-22, 37}, {-7, 49}, {10, 61}, {10, 68}, {10, 73}, {10, 78}, {9, 82}, {7, 82}, {2, 78}, {-2, 68}, {-2, 62}, {-2, 25}, {10, 18}, {11, -8}, {11, -18}, {5, -23}, {-4, -23}, {-10, -23}, {-15, -18}, {-15, -13}, {-15, -8}, {-12, -4}, {-7, -4}, {3, -4}, {3, -20}, {-6, -17}, {-5, -23}, {9, -20}, {9, -9}, {7, 24}, {-5, 30}, {-5, 67}, {-5, 78}, {-2, 87}, {7, 91}, {13, 87}, {18, 80}, {17, 73}, {17, 62}, {10, 54}, {1, 45}, {-5, 38}, {-15, 33}, {-15, 19}, {-15, 7}, {-8, 1}, {0, 1}, {8, 1}, {15, 6}, {15, 14}, {15, 23}, {7, 26}, {2, 26}, {-5, 26}, {-9, 21}, {-6, 16} }; // Bass clef  private static final float bc[][] = { {-2.</description>
+    </item>
     
     <item>
       <title>Expand Android Selection</title>
@@ -438,7 +449,7 @@ I used gnuparted to copy the partition from one disk to another. The standard me
       <pubDate>Fri, 07 Aug 2015 09:32:42 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/index/</guid>
-      <description>RecipesBaked TomatoesBoiled Beef and CarrotsButter Beans in Tomato SauceCarrot and Coriander SoupCatalan slow cooked chickenChorizo Egg and Tomato Toasted SandwichClementine CakeCoarse RatatouilleCorned Beef ChiliDoug&amp;rsquo;s Seafood RisottoFabada AsturianaFaggots and Peas with Onion GravyFried RiceFried Whole MushroomsGreen TomatoesInteresting MashLeek and Potato SoupMexican BreakfastPan fried lamb&amp;rsquo;s liver, bacon and chorizoPasta PicanteSausages with Green LentilsShoreham fish chowderSlow cooked lambSlow cooked ox cheekSpanish FrittataSpanish omeletteStuffed PeppersThai Red Curry with NoodlesTruly Evil Onion GravyUnobtainiumVegetable Soup PlusVegetables cooked in olive oilVenison and Chorizo CasseroleWhole Broad Beans in Olive OilHackingAdding a calendar event in androidAndroid Custom AttributesAndroid Recent FilesAndroid Text SearchBuild Mac OSX apps using command line toolsC++Concurrency, Threads, Semaphores and MutexesCreate PDF ReportDownload streamed videoExpand Android SelectionFast Fourier TransformGetting Related Content workingHandlers in AndroidHandling Resizing in WindowsHandling run time changes in AndroidHaskellInstall OSX El Capitan on a PC (MBR)Java CollectionsMarkdown OpenStreetMap MapsMigrating this blog from WordpressMove Linux Mint Root PartitionPythonQuestionnaire MakerRaspberry Pi WifiRead iBook books on an Android tabletResolving content uris in androidResurrecting a netbook as a web serverSearch Engine Optimisation (SEO)SlimStatSwiftTransfer contacts from iPhone to AndroidUpgrading WordPressUpgrading a Moto GUpgrading to Windows 10Using Emacs as an IDEUsing Emacs in Android DevelopmentWhatever-o-meterWhatever-o-meter revisitedElectronicsMullard 5-20 AmplifierSmart MetersDiyReplacing microbore radiators</description>
+      <description>RecipesBaked TomatoesBoiled Beef and CarrotsButter Beans in Tomato SauceCarrot and Coriander SoupCatalan slow cooked chickenChorizo Egg and Tomato Toasted SandwichClementine CakeCoarse RatatouilleCorned Beef ChiliDoug&amp;rsquo;s Seafood RisottoFabada AsturianaFaggots and Peas with Onion GravyFried RiceFried Whole MushroomsGreen TomatoesInteresting MashLeek and Potato SoupMexican BreakfastPan fried lamb&amp;rsquo;s liver, bacon and chorizoPasta PicanteSausages with Green LentilsShoreham fish chowderSlow cooked lambSlow cooked ox cheekSpanish FrittataSpanish omeletteStuffed PeppersThai Red Curry with NoodlesTruly Evil Onion GravyUnobtainiumVegetable Soup PlusVegetables cooked in olive oilVenison and Chorizo CasseroleWhole Broad Beans in Olive OilHackingAdding a calendar event in androidAndroid Custom AttributesAndroid Recent FilesAndroid Text SearchBuild Mac OSX apps using command line toolsC++Concurrency, Threads, Semaphores and MutexesCreate PDF ReportDownload streamed videoDraw Musical StaffExpand Android SelectionFast Fourier TransformGetting Related Content workingHandlers in AndroidHandling Resizing in WindowsHandling run time changes in AndroidHaskellInstall OSX El Capitan on a PC (MBR)Java CollectionsMarkdown OpenStreetMap MapsMigrating this blog from WordpressMove Linux Mint Root PartitionPythonQuestionnaire MakerRaspberry Pi WifiRead iBook books on an Android tabletResolving content uris in androidResurrecting a netbook as a web serverSearch Engine Optimisation (SEO)SlimStatSwiftTransfer contacts from iPhone to AndroidUpgrading WordPressUpgrading a Moto GUpgrading to Windows 10Using Emacs as an IDEUsing Emacs in Android DevelopmentWhatever-o-meterWhatever-o-meter revisitedElectronicsMullard 5-20 AmplifierSmart MetersDiyReplacing microbore radiators</description>
     </item>
     
     <item>
