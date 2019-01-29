@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://billthefarmer.github.io/blog/post/musical-temperaments/</loc>
+    <lastmod>2019-01-29T20:58:13+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://billthefarmer.github.io/blog/post/draw-musical-staff/</loc>
     <lastmod>2019-01-13T18:35:26+00:00</lastmod>
   </url>
@@ -404,7 +409,7 @@
   
   <url>
     <loc>https://billthefarmer.github.io/blog/</loc>
-    <lastmod>2019-01-13T18:35:26+00:00</lastmod>
+    <lastmod>2019-01-29T20:58:13+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -427,13 +432,13 @@
   
   <url>
     <loc>https://billthefarmer.github.io/blog/categories/hacking/</loc>
-    <lastmod>2019-01-13T18:35:26+00:00</lastmod>
+    <lastmod>2019-01-29T20:58:13+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://billthefarmer.github.io/blog/post/</loc>
-    <lastmod>2019-01-13T18:35:26+00:00</lastmod>
+    <lastmod>2019-01-29T20:58:13+00:00</lastmod>
     <priority>0</priority>
   </url>
   
