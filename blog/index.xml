@@ -18,7 +18,7 @@
       <pubDate>Tue, 29 Jan 2019 20:58:13 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/post/musical-temperaments/</guid>
-      <description>My tuner app uses equal temperament because that is the current standard and it is relatively easy to calculate using double precision arithmetic and maths library functions. First, declare some constants.
+      <description>My Tuner app uses equal temperament because that is the current standard and it is relatively easy to calculate using double precision arithmetic and maths library functions. First, declare some constants.
 private static final int OCTAVE = 12; private static final int EQUAL = 8; private static final int A_OFFSET = 9; private static final int C5_OFFSET = 57; 
 The calculation first produces the cents relative to the reference, usually 440Hz.</description>
     </item>
