@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2018 Bill Farmer</copyright>
-    <lastBuildDate>Tue, 29 Jan 2019 20:58:13 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 24 Mar 2019 11:01:35 +0000</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Source Code Syntax Highlighting</title>
+      <link>https://billthefarmer.github.io/blog/post/source-code-highlighting/</link>
+      <pubDate>Sun, 24 Mar 2019 11:01:35 +0000</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/post/source-code-highlighting/</guid>
+      <description>One of the enhancements suggested for my android editor is syntax highlighting. The libraries I have found, including the one used in this blog, parse the input and produce output in HTML, using styled spans. Emacs makes extensive use of regular expressions for highlighting.
+HTML output is not very useful for a text editor. It could be used with Html.fromHtml() to produce styled text. This would then be loaded back into the editor all while the user is attempting to edit the text.</description>
+    </item>
     
     <item>
       <title>Musical Temperaments</title>
@@ -19,8 +29,7 @@
       
       <guid>https://billthefarmer.github.io/blog/post/musical-temperaments/</guid>
       <description>My Tuner app uses equal temperament because that is the current standard and it is relatively easy to calculate using double precision arithmetic and maths library functions. First, declare some constants.
-private static final int OCTAVE = 12; private static final int EQUAL = 8; private static final int A_OFFSET = 9; private static final int C5_OFFSET = 57; 
-The calculation first produces the cents relative to the reference, usually 440Hz.</description>
+private static final int OCTAVE = 12; private static final int EQUAL = 8; private static final int A_OFFSET = 9; private static final int C5_OFFSET = 57; The calculation first produces the cents relative to the reference, usually 440Hz.</description>
     </item>
     
     <item>

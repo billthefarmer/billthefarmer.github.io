@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<meta property="og:title" content="Source Code Syntax Highlighting" />
+<meta property="og:description" content="One of the enhancements suggested for my android editor is syntax highlighting. The libraries I have found, including the one used in this blog, parse the input and produce output in HTML, using styled spans. Emacs makes extensive use of regular expressions for highlighting.
+HTML output is not very useful for a text editor. It could be used with Html.fromHtml() to produce styled text. This would then be loaded back into the editor all while the user is attempting to edit the text." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://billthefarmer.github.io/blog/post/source-code-highlighting/" />
+<meta property="article:published_time" content="2019-03-24T11:01:35&#43;00:00"/>
+<meta property="article:modified_time" content="2019-03-24T11:01:35&#43;00:00"/>
+
+
+<meta itemprop="name" content="Source Code Syntax Highlighting">
+<meta itemprop="description" content="One of the enhancements suggested for my android editor is syntax highlighting. The libraries I have found, including the one used in this blog, parse the input and produce output in HTML, using styled spans. Emacs makes extensive use of regular expressions for highlighting.
+HTML output is not very useful for a text editor. It could be used with Html.fromHtml() to produce styled text. This would then be loaded back into the editor all while the user is attempting to edit the text.">
+
+
+<meta itemprop="datePublished" content="2019-03-24T11:01:35&#43;00:00" />
+<meta itemprop="dateModified" content="2019-03-24T11:01:35&#43;00:00" />
+<meta itemprop="wordCount" content="774">
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Source Code Syntax Highlighting"/>
+<meta name="twitter:description" content="One of the enhancements suggested for my android editor is syntax highlighting. The libraries I have found, including the one used in this blog, parse the input and produce output in HTML, using styled spans. Emacs makes extensive use of regular expressions for highlighting.
+HTML output is not very useful for a text editor. It could be used with Html.fromHtml() to produce styled text. This would then be loaded back into the editor all while the user is attempting to edit the text."/>
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.54.0" />
+
+
+    <base href="https://billthefarmer.github.io/blog/">
+    <link rel="canonical" href="https://billthefarmer.github.io/blog/post/source-code-highlighting/">
+    <title>Source Code Syntax Highlighting | Bill Farmer</title>
+
+    <!-- CSS -->
+    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+
+    
+
+    
+
+    
+    
+
+<style>
+.callout.large {
+    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.callout.large a, .callout.large p {
+    color: white;
+}
+pre {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+code {
+    padding: 0;
+    border: 0;
+    background-color: #fff;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-weight: normal;
+    color: #0a0a0a;
+}
+</style>
+
+
+
+
+  </head>
+  <body>
+
+    <header class="nav">
+      <div class="top-bar">
+        <div class="row column">
+          <div class="top-bar-left">
+            <ul class="menu">
+              <li><a href="https://billthefarmer.github.io/blog/">
+                  Bill Farmer
+                </a></li>
+            </ul>
+          </div>
+          <div class="top-bar-right">
+            <ul class="menu">
+              <li class=""><a href="https://billthefarmer.github.io/blog/">
+                Home
+              </a></li>
+              
+                
+                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                    Index
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                    Morris-o-meter
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                    About
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                    Test-o-meter
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/">
+                    Bill Farmer
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                    Categories
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                    Diy
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                    Electronics
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                    Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                    Recipes
+                  </a></li>
+                
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <header class="blog-header">
+      <div class="callout large">
+        <div class="row column text-center">
+          <h1>
+            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+          </h1>
+          
+            <p>
+              Random thoughts on random subjects
+            </p>
+          
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="row" id="content">
+        <div class="medium-8 columns">
+          
+  
+
+
+  <div class="blog-post">
+    <h3>
+      <a href="https://billthefarmer.github.io/blog/post/source-code-highlighting/">Source Code Syntax Highlighting</a>
+    </h3>
+    <div class="callout small">
+      <small>
+        <time datetime="2019-03-24T11:01:35Z">
+          Sun Mar 24, 2019
+        </time> by Bill Farmer.
+        Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+        
+        <br>
+        
+      </small>
+    </div>
+    <p>
+      <p>One of the enhancements suggested for my android <a href="https://github.com/billthefarmer/editor">editor</a> is syntax
+highlighting. The libraries I have found, including the <a href="https://github.com/alecthomas/chroma">one</a> used
+in this blog, parse the input and produce output in HTML, using styled
+spans. <a href="https://www.gnu.org/software/emacs">Emacs</a> makes extensive use of <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expressions</a> for
+highlighting.</p>
+
+<p>HTML output is not very useful for a text editor. It could be used
+with <a href="https://developer.android.com/reference/android/text/Html.html#fromHtml(java.lang.String)">Html.fromHtml()</a> to produce styled text. This would then be
+loaded back into the editor all while the user is attempting to edit
+the text. I don&rsquo;t think so. So I explored alternatives.</p>
+
+<p>C, C++, Objective C, Java, Javascript, Python and other C-like
+languages share a set of mostly common keywords and type
+identifiers. There is a convention that classes are capitalised. There
+is a convention that constants and macros are all caps. Making use of
+these conventions it is possible to highlight source code without
+parsing it. It won&rsquo;t get it right all the time, but most of the
+time. For example MacOS C and Objective C uses a convention of
+<code>kWhatever</code> for constants.</p>
+
+<p>Putting all this together, first produce a list of all the keywords
+and types in the above languages, sort them and delete duplicates and
+make regular expressions. The <code>\\b</code> means a word boundary to stop
+embedded words being highlighted.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String KEYWORDS <span style="color:#666">=</span>
+        <span style="color:#b44">&#34;\\b(abstract|and|any|as|asm|assert|auto|break|case|catch|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;cin|class|const|constructor|continue|cout|def|default|del|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;delete|do|elif|else|end|enum|eval|except|extends|extern|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;false|field|final|finally|for|friend|from|funct|function|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;getter|global|goto|if|implementation|implements|import|in|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;inline|instanceof|interface|is|lambda|let|method|native|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;new|nil|none|nonlocal|not|null|operator|or|override|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;package|pass|private|protected|protocol|public|raise|real|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;register|return|selector|setter|signed|sizeof|static|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;strictfp|string|struct|super|switch|synchronized|template|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;this|throw|throws|traditional|transient|true|try|type|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;typedef|typeof|union|unsigned|var|version|virtual|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;volatile|while|with|yield)\\b&#34;</span><span style="color:#666">;</span>
+
+    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String TYPES <span style="color:#666">=</span>
+        <span style="color:#b44">&#34;\\b(bool(ean)?|byte|char|double|float|int(eger)?|long|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;short|u(byte|char|int|long|short))\\b&#34;</span><span style="color:#666">;</span></code></pre></div>
+<p>Some Javascript libraries can guess the language from the input. Emacs
+relies on the file extension, the <a href="https://github.com/alecthomas/chroma">Chroma</a> library used here relies
+on being told the language. The text editor has the file extension, so
+another regular expression to check file extensions.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String CC_EXT <span style="color:#666">=</span>
+        <span style="color:#b44">&#34;\\.(c(c|pp|xx|\\+\\+)?|h|js|java|m|py)&#34;</span><span style="color:#666">;</span></code></pre></div>
+<p>Check highlighting. The app also does HTML and CSS and has a syntax
+highlight option. The highlighting code is called with a small delay
+after each action that might change or scroll the text, and after
+removing the previous call.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// checkHighlight
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">checkHighlight</span><span style="color:#666">()</span>
+    <span style="color:#666">{</span>
+        <span style="color:#080;font-style:italic">// Check extension
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>highlight <span style="color:#666">&amp;&amp;</span> file <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+        <span style="color:#666">{</span>
+            Uri uri <span style="color:#666">=</span> Uri<span style="color:#666">.</span><span style="color:#b44">fromFile</span><span style="color:#666">(</span>file<span style="color:#666">);</span>
+            String ext <span style="color:#666">=</span> FileUtils<span style="color:#666">.</span><span style="color:#b44">getExtension</span><span style="color:#666">(</span>uri<span style="color:#666">.</span><span style="color:#b44">toString</span><span style="color:#666">());</span>
+            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>ext <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+            <span style="color:#666">{</span>
+                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>ext<span style="color:#666">.</span><span style="color:#b44">matches</span><span style="color:#666">(</span>CC_EXT<span style="color:#666">))</span>
+                    syntax <span style="color:#666">=</span> CC_SYNTAX<span style="color:#666">;</span>
+
+                <span style="color:#a2f;font-weight:bold">else</span> <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>ext<span style="color:#666">.</span><span style="color:#b44">matches</span><span style="color:#666">(</span>HTML_EXT<span style="color:#666">))</span>
+                    syntax <span style="color:#666">=</span> HTML_SYNTAX<span style="color:#666">;</span>
+
+                <span style="color:#a2f;font-weight:bold">else</span> <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>ext<span style="color:#666">.</span><span style="color:#b44">matches</span><span style="color:#666">(</span>CSS_EXT<span style="color:#666">))</span>
+                    syntax <span style="color:#666">=</span> CSS_SYNTAX<span style="color:#666">;</span>
+
+                <span style="color:#a2f;font-weight:bold">else</span>
+                    syntax <span style="color:#666">=</span> NO_SYNTAX<span style="color:#666">;</span>
+
+                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>textView <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span> <span style="color:#666">&amp;&amp;</span> syntax <span style="color:#666">!=</span> NO_SYNTAX<span style="color:#666">)</span>
+                <span style="color:#666">{</span>
+                    <span style="color:#080;font-style:italic">// Set callback
+</span><span style="color:#080;font-style:italic"></span>                    <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>updateHighlight <span style="color:#666">==</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+                        updateHighlight <span style="color:#666">=</span> <span style="color:#666">()</span> <span style="color:#666">-&gt;</span>
+                            highlightText<span style="color:#666">(</span>textView<span style="color:#666">.</span><span style="color:#b44">getEditableText</span><span style="color:#666">());</span>
+
+                    textView<span style="color:#666">.</span><span style="color:#b44">removeCallbacks</span><span style="color:#666">(</span>updateHighlight<span style="color:#666">);</span>
+                    textView<span style="color:#666">.</span><span style="color:#b44">postDelayed</span><span style="color:#666">(</span>updateHighlight<span style="color:#666">,</span> UPDATE_DELAY<span style="color:#666">);</span>
+
+                    <span style="color:#a2f;font-weight:bold">return</span><span style="color:#666">;</span>
+                <span style="color:#666">}</span>
+            <span style="color:#666">}</span>
+        <span style="color:#666">}</span>
+
+        updateHighlight <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">;</span>
+    <span style="color:#666">}</span></code></pre></div>
+<p>Highlight the text. Only highlight the visible region as highlighting
+a long source file is too slow. Adding highlighted spans causes the
+view hierarchy to re-layout the views which causes the text to scroll
+to bring the current selection into view. This is annoying when
+scrolling the text, so move the selection if not editing.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// highlightText
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">highlightText</span><span style="color:#666">(</span>Editable editable<span style="color:#666">)</span>
+    <span style="color:#666">{</span>
+        Pattern pattern<span style="color:#666">;</span>
+        Matcher matcher<span style="color:#666">;</span>
+
+        <span style="color:#080;font-style:italic">// Get visible extent
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#0b0;font-weight:bold">int</span> top <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getScrollY</span><span style="color:#666">();</span>
+        <span style="color:#0b0;font-weight:bold">int</span> height <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getHeight</span><span style="color:#666">();</span>
+
+        <span style="color:#0b0;font-weight:bold">int</span> line <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">().</span><span style="color:#b44">getLineForVertical</span><span style="color:#666">(</span>top<span style="color:#666">);</span>
+        <span style="color:#0b0;font-weight:bold">int</span> start <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">().</span><span style="color:#b44">getOffsetForHorizontal</span><span style="color:#666">(</span>line<span style="color:#666">,</span> 0<span style="color:#666">);</span>
+
+        line <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">().</span><span style="color:#b44">getLineForVertical</span><span style="color:#666">(</span>top <span style="color:#666">+</span> height<span style="color:#666">);</span>
+        <span style="color:#0b0;font-weight:bold">int</span> end <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">().</span><span style="color:#b44">getOffsetForHorizontal</span><span style="color:#666">(</span>line<span style="color:#666">,</span> 0<span style="color:#666">);</span>
+
+        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(!</span>edit<span style="color:#666">)</span>
+        <span style="color:#666">{</span>
+            <span style="color:#080;font-style:italic">// Move selection to centre
+</span><span style="color:#080;font-style:italic"></span>            line <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">().</span><span style="color:#b44">getLineForVertical</span><span style="color:#666">(</span>top <span style="color:#666">+</span> height <span style="color:#666">/</span> 2<span style="color:#666">);</span>
+            <span style="color:#0b0;font-weight:bold">int</span> centre <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">().</span><span style="color:#b44">getOffsetForHorizontal</span><span style="color:#666">(</span>line<span style="color:#666">,</span> 0<span style="color:#666">);</span>
+            textView<span style="color:#666">.</span><span style="color:#b44">setSelection</span><span style="color:#666">(</span>centre<span style="color:#666">,</span> centre<span style="color:#666">);</span>
+        <span style="color:#666">}</span>
+
+        <span style="color:#080;font-style:italic">// Get current spans
+</span><span style="color:#080;font-style:italic"></span>        ForegroundColorSpan spans<span style="color:#666">[]</span> <span style="color:#666">=</span>
+            editable<span style="color:#666">.</span><span style="color:#b44">getSpans</span><span style="color:#666">(</span>0<span style="color:#666">,</span> editable<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">(),</span> ForegroundColorSpan<span style="color:#666">.</span><span style="color:#b44">class</span><span style="color:#666">);</span>
+        <span style="color:#080;font-style:italic">// Remove spans
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">for</span> <span style="color:#666">(</span>ForegroundColorSpan <span style="color:#a0a000">span:</span> spans<span style="color:#666">)</span>
+            editable<span style="color:#666">.</span><span style="color:#b44">removeSpan</span><span style="color:#666">(</span>span<span style="color:#666">);</span>
+
+        <span style="color:#a2f;font-weight:bold">switch</span> <span style="color:#666">(</span>syntax<span style="color:#666">)</span>
+        <span style="color:#666">{</span>
+        <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">CC_SYNTAX:</span>
+            pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>KEYWORDS<span style="color:#666">,</span> Pattern<span style="color:#666">.</span><span style="color:#b44">MULTILINE</span><span style="color:#666">);</span>
+            matcher <span style="color:#666">=</span> pattern<span style="color:#666">.</span><span style="color:#b44">matcher</span><span style="color:#666">(</span>editable<span style="color:#666">);</span>
+            matcher<span style="color:#666">.</span><span style="color:#b44">region</span><span style="color:#666">(</span>start<span style="color:#666">,</span> end<span style="color:#666">);</span>
+
+            <span style="color:#a2f;font-weight:bold">while</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">())</span>
+            <span style="color:#666">{</span>
+                ForegroundColorSpan span <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span>
+                    ForegroundColorSpan<span style="color:#666">(</span>Color<span style="color:#666">.</span><span style="color:#b44">CYAN</span><span style="color:#666">);</span>
+
+                <span style="color:#080;font-style:italic">// Highlight it
+</span><span style="color:#080;font-style:italic"></span>                editable<span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(),</span> matcher<span style="color:#666">.</span><span style="color:#b44">end</span><span style="color:#666">(),</span>
+                                 Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">);</span>
+            <span style="color:#666">}</span>
+
+            pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>TYPES<span style="color:#666">,</span> Pattern<span style="color:#666">.</span><span style="color:#b44">MULTILINE</span><span style="color:#666">);</span>
+            matcher<span style="color:#666">.</span><span style="color:#b44">region</span><span style="color:#666">(</span>start<span style="color:#666">,</span> end<span style="color:#666">).</span><span style="color:#b44">usePattern</span><span style="color:#666">(</span>pattern<span style="color:#666">);</span>
+
+            <span style="color:#a2f;font-weight:bold">while</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">())</span>
+            <span style="color:#666">{</span>
+                ForegroundColorSpan span <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span>
+                    ForegroundColorSpan<span style="color:#666">(</span>Color<span style="color:#666">.</span><span style="color:#b44">MAGENTA</span><span style="color:#666">);</span>
+
+                <span style="color:#080;font-style:italic">// Highlight it
+</span><span style="color:#080;font-style:italic"></span>                editable<span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(),</span> matcher<span style="color:#666">.</span><span style="color:#b44">end</span><span style="color:#666">(),</span>
+                                 Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">);</span>
+            <span style="color:#666">}</span>
+
+            pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>CLASS<span style="color:#666">,</span> Pattern<span style="color:#666">.</span><span style="color:#b44">MULTILINE</span><span style="color:#666">);</span>
+            matcher<span style="color:#666">.</span><span style="color:#b44">region</span><span style="color:#666">(</span>start<span style="color:#666">,</span> end<span style="color:#666">).</span><span style="color:#b44">usePattern</span><span style="color:#666">(</span>pattern<span style="color:#666">);</span>
+
+            <span style="color:#a2f;font-weight:bold">while</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">())</span>
+            <span style="color:#666">{</span>
+                ForegroundColorSpan span <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span>
+                    ForegroundColorSpan<span style="color:#666">(</span>Color<span style="color:#666">.</span><span style="color:#b44">BLUE</span><span style="color:#666">);</span>
+
+                <span style="color:#080;font-style:italic">// Highlight it
+</span><span style="color:#080;font-style:italic"></span>                editable<span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(),</span> matcher<span style="color:#666">.</span><span style="color:#b44">end</span><span style="color:#666">(),</span>
+                                 Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">);</span>
+            <span style="color:#666">}</span>
+
+            pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>CONSTANT<span style="color:#666">,</span> Pattern<span style="color:#666">.</span><span style="color:#b44">MULTILINE</span><span style="color:#666">);</span>
+            matcher<span style="color:#666">.</span><span style="color:#b44">region</span><span style="color:#666">(</span>start<span style="color:#666">,</span> end<span style="color:#666">).</span><span style="color:#b44">usePattern</span><span style="color:#666">(</span>pattern<span style="color:#666">);</span>
+
+            <span style="color:#a2f;font-weight:bold">while</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">())</span>
+            <span style="color:#666">{</span>
+                ForegroundColorSpan span <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span>
+                    ForegroundColorSpan<span style="color:#666">(</span>Color<span style="color:#666">.</span><span style="color:#b44">LTGRAY</span><span style="color:#666">);</span>
+
+                <span style="color:#080;font-style:italic">// Highlight it
+</span><span style="color:#080;font-style:italic"></span>                editable<span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(),</span> matcher<span style="color:#666">.</span><span style="color:#b44">end</span><span style="color:#666">(),</span>
+                                 Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">);</span>
+            <span style="color:#666">}</span>
+
+            pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>CC_COMMENT<span style="color:#666">,</span> Pattern<span style="color:#666">.</span><span style="color:#b44">MULTILINE</span><span style="color:#666">);</span>
+            matcher<span style="color:#666">.</span><span style="color:#b44">region</span><span style="color:#666">(</span>start<span style="color:#666">,</span> end<span style="color:#666">).</span><span style="color:#b44">usePattern</span><span style="color:#666">(</span>pattern<span style="color:#666">);</span>
+
+            <span style="color:#a2f;font-weight:bold">while</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">())</span>
+            <span style="color:#666">{</span>
+                ForegroundColorSpan span <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span>
+                    ForegroundColorSpan<span style="color:#666">(</span>Color<span style="color:#666">.</span><span style="color:#b44">RED</span><span style="color:#666">);</span>
+
+                <span style="color:#080;font-style:italic">// Highlight it
+</span><span style="color:#080;font-style:italic"></span>                editable<span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(),</span> matcher<span style="color:#666">.</span><span style="color:#b44">end</span><span style="color:#666">(),</span>
+                                 Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">);</span>
+            <span style="color:#666">}</span>
+            <span style="color:#a2f;font-weight:bold">break</span><span style="color:#666">;</span>
+        <span style="color:#666">}</span>
+    <span style="color:#666">}</span></code></pre></div>
+<p>There are various triggers to cause the highlighting to change -
+scrolling the text, changing the text and dismissing the
+keyboard. There is no built in check on the keyboard, it can only be
+detected by checking view sizes. Only trigger the highlight on
+dismissing the keyboard.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        scrollView<span style="color:#666">.</span><span style="color:#b44">getViewTreeObserver</span><span style="color:#666">().</span><span style="color:#b44">addOnGlobalLayoutListener</span><span style="color:#666">(()</span> <span style="color:#666">-&gt;</span>
+            <span style="color:#666">{</span>
+                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>updateHighlight <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+                <span style="color:#666">{</span>
+                    <span style="color:#0b0;font-weight:bold">int</span> rootHeight <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getRootView</span><span style="color:#666">().</span><span style="color:#b44">getHeight</span><span style="color:#666">();</span>
+                    <span style="color:#0b0;font-weight:bold">int</span> height <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getHeight</span><span style="color:#666">();</span>
+
+                    <span style="color:#0b0;font-weight:bold">boolean</span> shown <span style="color:#666">=</span> <span style="color:#666">((</span>rootHeight <span style="color:#666">-</span> height<span style="color:#666">)</span> <span style="color:#666">/</span>
+                                     <span style="color:#666">(</span><span style="color:#0b0;font-weight:bold">double</span><span style="color:#666">)</span> rootHeight<span style="color:#666">)</span> <span style="color:#666">&gt;</span> KEYBOARD_RATIO<span style="color:#666">;</span>
+
+                    <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>shown <span style="color:#666">!=</span> keyboard<span style="color:#666">)</span>
+                    <span style="color:#666">{</span>
+                        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(!</span>shown<span style="color:#666">)</span>
+                        <span style="color:#666">{</span>
+                            textView<span style="color:#666">.</span><span style="color:#b44">removeCallbacks</span><span style="color:#666">(</span>updateHighlight<span style="color:#666">);</span>
+                            textView<span style="color:#666">.</span><span style="color:#b44">postDelayed</span><span style="color:#666">(</span>updateHighlight<span style="color:#666">,</span> UPDATE_DELAY<span style="color:#666">);</span>
+                        <span style="color:#666">}</span>
+
+                        keyboard <span style="color:#666">=</span> shown<span style="color:#666">;</span>
+                    <span style="color:#666">}</span>
+                <span style="color:#666">}</span>
+            <span style="color:#666">});</span></code></pre></div>
+    </p>
+    
+    
+
+<hr>
+<h3>See Also</h3>
+<ul>
+  
+  <li><a href="/blog/post/musical-temperaments/">Musical Temperaments</a></li>
+  
+  <li><a href="/blog/post/draw-musical-staff/">Draw Musical Staff</a></li>
+  
+  <li><a href="/blog/post/expand-android-selection/">Expand Android Selection</a></li>
+  
+  <li><a href="/blog/android-custom-attributes/">Android Custom Attributes</a></li>
+  
+  <li><a href="/blog/android-recent-files/">Android Recent Files</a></li>
+  
+</ul>
+
+
+      <hr>
+  </div>
+
+  
+
+
+        </div>
+          <div class="medium-3 columns" data-sticky-container>
+  <div class="sticky" data-sticky data-anchor="content">
+
+  
+
+  
+
+  <h4>Recent Posts</h4>
+  <ul>
+    
+      <li><a href="/blog/post/source-code-highlighting/">
+        Source Code Syntax Highlighting
+      </a></li>
+    
+      <li><a href="/blog/post/musical-temperaments/">
+        Musical Temperaments
+      </a></li>
+    
+      <li><a href="/blog/post/draw-musical-staff/">
+        Draw Musical Staff
+      </a></li>
+    
+      <li><a href="/blog/post/expand-android-selection/">
+        Expand Android Selection
+      </a></li>
+    
+      <li><a href="/blog/interesting-mash/">
+        Interesting Mash
+      </a></li>
+    
+      <li><a href="/blog/green-tomatoes/">
+        Green Tomatoes
+      </a></li>
+    
+      <li><a href="/blog/post/create-pdf-report/">
+        Create PDF Report
+      </a></li>
+    
+      <li><a href="/blog/post/questionnaire/">
+        Questionnaire Maker
+      </a></li>
+    
+      <li><a href="/blog/post/smart-meters/">
+        Smart Meters
+      </a></li>
+    
+      <li><a href="/blog/post/mullard-5-20-amplifier/">
+        Mullard 5-20 Amplifier
+      </a></li>
+    
+  </ul>
+
+  
+    <h4>Links</h4>
+    <ul>
+      
+        <li><a href="https://github.com/billthefarmer">
+          Github
+        </a></li>
+      
+        <li><a href="https://gitlab.com/williamjfarmer">
+          Gitlab
+        </a></li>
+      
+        <li><a href="http://billthefarmer.github.io">
+          Home
+        </a></li>
+      
+    </ul>
+  
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="blog-footer">
+      <div class="row column">
+        <p>
+          
+          Copyright &copy; 2018 Bill Farmer
+          
+        </p>
+        <p>
+          <a href="https://billthefarmer.github.io/blog/post/source-code-highlighting/#">Back to top</a>
+        </p>
+      </div>
+    </footer>
+
+  <foot>
+
+    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+
+  </foot>
+  </body>
+</html>

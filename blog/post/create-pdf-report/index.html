@@ -10,7 +10,8 @@
 <meta property="og:description" content="Introduction As part of the Questionnaire Maker plugin it is necessary to create a pdf report. The best tool to do this appears to be TCPDF, which appears to be part of at least some Linux distributions as php-tcpdf. It is not included in WordPress.
 Implementation As both the plugin and TCPDF are hosted on GitHub, the best way to implement the plugin, and TCPDF if it is not available on the web server, is to clone the repositories and use symbolic links to provide the plugin and the library in the right places." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://billthefarmer.github.io/blog/post/create-pdf-report/" /><meta property="article:published_time" content="2018-09-18T19:27:46&#43;01:00"/>
+<meta property="og:url" content="https://billthefarmer.github.io/blog/post/create-pdf-report/" />
+<meta property="article:published_time" content="2018-09-18T19:27:46&#43;01:00"/>
 <meta property="article:modified_time" content="2018-09-18T19:27:46&#43;01:00"/>
 
 
@@ -37,7 +38,7 @@ Implementation As both the plugin and TCPDF are hosted on GitHub, the best way t
 
 
 
-<meta name="generator" content="Hugo 0.53" />
+<meta name="generator" content="Hugo 0.54.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -63,6 +64,10 @@ Implementation As both the plugin and TCPDF are hosted on GitHub, the best way t
 }
 .callout.large a, .callout.large p {
     color: white;
+}
+pre {
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 code {
     padding: 0;
@@ -213,19 +218,16 @@ user@server:/var/www/html/wordpress/wp-content/plugins $ <span style="color:#a2f
 user@server:~ $ git clone https://github.com/tecnickcom/TCPDF.git tcpdf
 user@server:~ $ <span style="color:#a2f">cd</span> questionnaire/wordpress
 user@server:~/questionnaire/wordpress $ ln -s ~/tcpdf</code></pre></div>
-<p><br>
-The plugin includes code to load TCPDF if it is present and show a
+<p>The plugin includes code to load TCPDF if it is present and show a
 message if it isn&rsquo;t. Using the path <code>tcpdf/tcpdf.php</code> will pick it up
 either from <code>/usr/share/php</code>, if installed, or from the symbolic link.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">// Include TCPDF, if present
 $tcpdf_present = include_once &#39;tcpdf/tcpdf.php&#39;;</code></pre></div>
-<p><br>
-After more work on this project I needed another library which makes
+<p>After more work on this project I needed another library which makes
 use of <a href="https://getcomposer.org">composer</a> for dependencies. TCPDF doesn&rsquo;t have any, but you
 can create a <code>composer.json</code> in the plugin and load TCPDF.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">user@server:~/questionnaire/wordpress $ php composer.phar require tecnickcom/tcpdf</code></pre></div>
-<p><br>
-Using composer, the code to load libraries changes to pick them up
+<p>Using composer, the code to load libraries changes to pick them up
 from the vendor folder.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">// Include composer libraries, if present
 $vendor_present = include_once &#39;vendor/autoload.php&#39;</code></pre></div>
@@ -257,8 +259,7 @@ of the defaults, that isn&rsquo;t necessary.</p>
         // Set margins
         $pdf-&gt;SetMargins($margin, $margin, $margin);
         $pdf-&gt;SetAutoPageBreak(true, $margin);</code></pre></div>
-<p><br>
-TCPDF doesn&rsquo;t seem to include a function to move the insertion point
+<p>TCPDF doesn&rsquo;t seem to include a function to move the insertion point
 down a line, you need to nest three functions to get the right result.
 The functions to add text make use of the <code>MultiCell()</code> function. Also
 the <code>SetFont()</code> function is used to set the font type.</p>
@@ -313,8 +314,7 @@ the <code>SetFont()</code> function is used to set the font type.</p>
             $pdf-&gt;MultiCell(0, 0, $text, 0, &#39;L&#39;);
             new_text_line($pdf);
         };</code></pre></div>
-<p><br>
-To display images requires a set of rules to place the image on the
+<p>To display images requires a set of rules to place the image on the
 page. If the width is empty or zero, text width, else width. If the
 height is empty or zero, height in proportion to width, else
 height. If x is empty or zero, left margin, if negative, right margin,
@@ -335,8 +335,7 @@ else y.</p>
             $pdf-&gt;Image($path . $image-&gt;src, $x, $y, $width, $height,
                         $type, $link);
         };</code></pre></div>
-<p><br>
-The report starts with a preamble.</p>
+<p>The report starts with a preamble.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        // Preamble
         foreach ($pages as $page)
         {            
@@ -351,8 +350,7 @@ The report starts with a preamble.</p>
                 add_image_object($pdf, $image, $margin, $textWidth,
                                  $pageHeight, $pageWidth, $path);
         }</code></pre></div>
-<p><br>
-Then the report body. Because each section starts with an image, start
+<p>Then the report body. Because each section starts with an image, start
 a new page if near the bottom.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        // Report
         $pdf-&gt;AddPage();
@@ -366,8 +364,7 @@ a new page if near the bottom.</p>
         if ($pdf-&gt;GetY() &gt;= $pageHeight - ($margin * 3))
             $pdf-&gt;AddPage();
     // ...</code></pre></div>
-<p><br>
-Then the last page.</p>
+<p>Then the last page.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        $pdf-&gt;AddPage();
 
         // Last page text
@@ -378,8 +375,7 @@ Then the last page.</p>
         foreach ($last-&gt;images as $image)
             add_image_object($pdf, $image, $margin, $textWidth,
                              $pageHeight, $pageWidth, $path);</code></pre></div>
-<p><br>
-Output the document, and return the path to it.</p>
+<p>Output the document, and return the path to it.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        // Output document
         $pdf-&gt;Output($path . &#39;report/&#39; . $filename, &#39;F&#39;);
 
@@ -444,6 +440,10 @@ Output the document, and return the path to it.</p>
   <h4>Recent Posts</h4>
   <ul>
     
+      <li><a href="/blog/post/source-code-highlighting/">
+        Source Code Syntax Highlighting
+      </a></li>
+    
       <li><a href="/blog/post/musical-temperaments/">
         Musical Temperaments
       </a></li>
@@ -478,10 +478,6 @@ Output the document, and return the path to it.</p>
     
       <li><a href="/blog/post/mullard-5-20-amplifier/">
         Mullard 5-20 Amplifier
-      </a></li>
-    
-      <li><a href="/blog/post/handling-resizing-in-windows/">
-        Handling Resizing in Windows
       </a></li>
     
   </ul>

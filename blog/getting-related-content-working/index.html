@@ -10,7 +10,8 @@
 <meta property="og:description" content="The latest release of Hugo includes Related Content, which I thought would be nice to add to my blog. However the docs, although they show you how to set it up, don&rsquo;t explain how it works. To find that out, I had to look at the various threads on the Hugo forums.
 There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://billthefarmer.github.io/blog/getting-related-content-working/" /><meta property="article:published_time" content="2017-09-13T11:30:00&#43;00:00"/>
+<meta property="og:url" content="https://billthefarmer.github.io/blog/getting-related-content-working/" />
+<meta property="article:published_time" content="2017-09-13T11:30:00&#43;00:00"/>
 <meta property="article:modified_time" content="2017-09-13T11:30:00&#43;00:00"/>
 
 
@@ -37,7 +38,7 @@ There are four parts - you need to create a new partial template in layouts/part
 
 
 
-<meta name="generator" content="Hugo 0.53" />
+<meta name="generator" content="Hugo 0.54.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -63,6 +64,10 @@ There are four parts - you need to create a new partial template in layouts/part
 }
 .callout.large a, .callout.large p {
     color: white;
+}
+pre {
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 code {
     padding: 0;
@@ -275,6 +280,10 @@ front matter.</p>
   <h4>Recent Posts</h4>
   <ul>
     
+      <li><a href="/blog/post/source-code-highlighting/">
+        Source Code Syntax Highlighting
+      </a></li>
+    
       <li><a href="/blog/post/musical-temperaments/">
         Musical Temperaments
       </a></li>
@@ -309,10 +318,6 @@ front matter.</p>
     
       <li><a href="/blog/post/mullard-5-20-amplifier/">
         Mullard 5-20 Amplifier
-      </a></li>
-    
-      <li><a href="/blog/post/handling-resizing-in-windows/">
-        Handling Resizing in Windows
       </a></li>
     
   </ul>

@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2018 Bill Farmer</copyright>
-    <lastBuildDate>Tue, 29 Jan 2019 20:58:13 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 24 Mar 2019 11:01:35 +0000</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Source Code Syntax Highlighting</title>
+      <link>https://billthefarmer.github.io/blog/post/source-code-highlighting/</link>
+      <pubDate>Sun, 24 Mar 2019 11:01:35 +0000</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/post/source-code-highlighting/</guid>
+      <description>One of the enhancements suggested for my android editor is syntax highlighting. The libraries I have found, including the one used in this blog, parse the input and produce output in HTML, using styled spans. Emacs makes extensive use of regular expressions for highlighting.
+HTML output is not very useful for a text editor. It could be used with Html.fromHtml() to produce styled text. This would then be loaded back into the editor all while the user is attempting to edit the text.</description>
+    </item>
     
     <item>
       <title>Musical Temperaments</title>
@@ -19,8 +29,7 @@
       
       <guid>https://billthefarmer.github.io/blog/post/musical-temperaments/</guid>
       <description>My Tuner app uses equal temperament because that is the current standard and it is relatively easy to calculate using double precision arithmetic and maths library functions. First, declare some constants.
-private static final int OCTAVE = 12; private static final int EQUAL = 8; private static final int A_OFFSET = 9; private static final int C5_OFFSET = 57; 
-The calculation first produces the cents relative to the reference, usually 440Hz.</description>
+private static final int OCTAVE = 12; private static final int EQUAL = 8; private static final int A_OFFSET = 9; private static final int C5_OFFSET = 57; The calculation first produces the cents relative to the reference, usually 440Hz.</description>
     </item>
     
     <item>
@@ -460,7 +469,7 @@ I used gnuparted to copy the partition from one disk to another. The standard me
       <pubDate>Fri, 07 Aug 2015 09:32:42 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/index/</guid>
-      <description>RecipesBaked TomatoesBoiled Beef and CarrotsButter Beans in Tomato SauceCarrot and Coriander SoupCatalan slow cooked chickenChorizo Egg and Tomato Toasted SandwichClementine CakeCoarse RatatouilleCorned Beef ChiliDoug&amp;rsquo;s Seafood RisottoFabada AsturianaFaggots and Peas with Onion GravyFried RiceFried Whole MushroomsGreen TomatoesInteresting MashLeek and Potato SoupMexican BreakfastPan fried lamb&amp;rsquo;s liver, bacon and chorizoPasta PicanteSausages with Green LentilsShoreham fish chowderSlow cooked lambSlow cooked ox cheekSpanish FrittataSpanish omeletteStuffed PeppersThai Red Curry with NoodlesTruly Evil Onion GravyUnobtainiumVegetable Soup PlusVegetables cooked in olive oilVenison and Chorizo CasseroleWhole Broad Beans in Olive OilHackingAdding a calendar event in androidAndroid Custom AttributesAndroid Recent FilesAndroid Text SearchBuild Mac OSX apps using command line toolsC++Concurrency, Threads, Semaphores and MutexesCreate PDF ReportDownload streamed videoDraw Musical StaffExpand Android SelectionFast Fourier TransformGetting Related Content workingHandlers in AndroidHandling Resizing in WindowsHandling run time changes in AndroidHaskellInstall OSX El Capitan on a PC (MBR)Java CollectionsMarkdown OpenStreetMap MapsMigrating this blog from WordpressMove Linux Mint Root PartitionMusical TemperamentsPythonQuestionnaire MakerRaspberry Pi WifiRead iBook books on an Android tabletResolving content uris in androidResurrecting a netbook as a web serverSearch Engine Optimisation (SEO)SlimStatSwiftTransfer contacts from iPhone to AndroidUpgrading WordPressUpgrading a Moto GUpgrading to Windows 10Using Emacs as an IDEUsing Emacs in Android DevelopmentWhatever-o-meterWhatever-o-meter revisitedElectronicsMullard 5-20 AmplifierSmart MetersDiyReplacing microbore radiators</description>
+      <description>RecipesBaked TomatoesBoiled Beef and CarrotsButter Beans in Tomato SauceCarrot and Coriander SoupCatalan slow cooked chickenChorizo Egg and Tomato Toasted SandwichClementine CakeCoarse RatatouilleCorned Beef ChiliDoug&amp;rsquo;s Seafood RisottoFabada AsturianaFaggots and Peas with Onion GravyFried RiceFried Whole MushroomsGreen TomatoesInteresting MashLeek and Potato SoupMexican BreakfastPan fried lamb&amp;rsquo;s liver, bacon and chorizoPasta PicanteSausages with Green LentilsShoreham fish chowderSlow cooked lambSlow cooked ox cheekSpanish FrittataSpanish omeletteStuffed PeppersThai Red Curry with NoodlesTruly Evil Onion GravyUnobtainiumVegetable Soup PlusVegetables cooked in olive oilVenison and Chorizo CasseroleWhole Broad Beans in Olive OilHackingAdding a calendar event in androidAndroid Custom AttributesAndroid Recent FilesAndroid Text SearchBuild Mac OSX apps using command line toolsC++Concurrency, Threads, Semaphores and MutexesCreate PDF ReportDownload streamed videoDraw Musical StaffExpand Android SelectionFast Fourier TransformGetting Related Content workingHandlers in AndroidHandling Resizing in WindowsHandling run time changes in AndroidHaskellInstall OSX El Capitan on a PC (MBR)Java CollectionsMarkdown OpenStreetMap MapsMigrating this blog from WordpressMove Linux Mint Root PartitionMusical TemperamentsPythonQuestionnaire MakerRaspberry Pi WifiRead iBook books on an Android tabletResolving content uris in androidResurrecting a netbook as a web serverSearch Engine Optimisation (SEO)SlimStatSource Code Syntax HighlightingSwiftTransfer contacts from iPhone to AndroidUpgrading WordPressUpgrading a Moto GUpgrading to Windows 10Using Emacs as an IDEUsing Emacs in Android DevelopmentWhatever-o-meterWhatever-o-meter revisitedElectronicsMullard 5-20 AmplifierSmart MetersDiyReplacing microbore radiators</description>
     </item>
     
     <item>
