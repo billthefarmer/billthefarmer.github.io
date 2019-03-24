@@ -22,7 +22,7 @@ HTML output is not very useful for a text editor. It could be used with Html.fro
 
 <meta itemprop="datePublished" content="2019-03-24T11:01:35&#43;00:00" />
 <meta itemprop="dateModified" content="2019-03-24T11:01:35&#43;00:00" />
-<meta itemprop="wordCount" content="774">
+<meta itemprop="wordCount" content="868">
 
 
 
@@ -420,6 +420,25 @@ dismissing the keyboard.</p>
                     <span style="color:#666">}</span>
                 <span style="color:#666">}</span>
             <span style="color:#666">});</span></code></pre></div>
+<p>Creating a list of HTML tags and making a regular expression is
+similar to creating the C type expression. Creating a list of CSS
+styles produces a rather long list, and the <code>\\b</code> word boundary
+doesn&rsquo;t work properly because of the dashes in the styles. So remove
+the dashes and create a list of unique styles which is a much shorter
+list.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String HTML_TAGS <span style="color:#666">=</span>
+        <span style="color:#b44">&#34;\\b(html|base|head|link|meta|style|title|body|address|article|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;aside|footer|header|h1|hgroup|main|nav|section|blockquote|dd|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;dir|div|dl|dt|figcaption|figure|hr|li|main|ol|p|pre|ul|a|abbr|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;b|bdi|bdo|br|cite|code|data|dfn|em|i|kbd|mark|q|rb|rp|rt|rtc|&#34;</span> <span style="color:#666">+</span>
+    <span style="color:#080;font-style:italic">// ...
+</span><span style="color:#080;font-style:italic"></span>
+    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String CSS_STYLES <span style="color:#666">=</span>
+        <span style="color:#b44">&#34;\\b(action|active|additive|adjust|after|align|all|alternates|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;animation|annotation|area|areas|as|asian|attachment|attr|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;auto|backdrop|backface|background|basis|before|behavior|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;bezier|bidi|blend|block|blur|border|bottom|box|break|&#34;</span> <span style="color:#666">+</span>
+    <span style="color:#666">//</span> <span style="color:#666">...</span></code></pre></div>
     </p>
     
     
