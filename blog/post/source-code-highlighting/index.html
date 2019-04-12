@@ -22,7 +22,7 @@ HTML output is not very useful for a text editor. It could be used with Html.fro
 
 <meta itemprop="datePublished" content="2019-03-24T11:01:35&#43;00:00" />
 <meta itemprop="dateModified" content="2019-03-24T11:01:35&#43;00:00" />
-<meta itemprop="wordCount" content="901">
+<meta itemprop="wordCount" content="903">
 
 
 
@@ -38,7 +38,7 @@ HTML output is not very useful for a text editor. It could be used with Html.fro
 
 
 
-<meta name="generator" content="Hugo 0.55.0" />
+<meta name="generator" content="Hugo 0.55.1" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -204,8 +204,8 @@ with <a href="https://developer.android.com/reference/android/text/Html.html#fro
 loaded back into the editor all while the user is attempting to edit
 the text. I don&rsquo;t think so. So I explored alternatives.</p>
 
-<p>C, C++, Objective C, Java, Javascript, Python and other C-like
-languages share a set of mostly common keywords and type
+<p>C, C++, Objective C, Go, Java, Javascript, Python, Swift and other
+C-like languages share a set of mostly common keywords and type
 identifiers. There is a convention that classes are capitalised. There
 is a convention that constants and macros are all caps. Making use of
 these conventions it is possible to highlight source code without
@@ -218,19 +218,19 @@ and types in the above languages, sort them and delete duplicates and
 make regular expressions. The <code>\\b</code> means a word boundary to stop
 embedded words being highlighted.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String KEYWORDS <span style="color:#666">=</span>
-        <span style="color:#b44">&#34;\\b(abstract|and|any|as|asm|assert|auto|break|case|catch|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;cin|class|const|constructor|continue|cout|def|default|del|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;delete|do|elif|else|end|enum|eval|except|extends|extern|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;false|field|final|finally|for|friend|from|funct|function|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;getter|global|goto|if|implementation|implements|import|in|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;inline|instanceof|interface|is|lambda|let|method|native|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;new|nil|none|nonlocal|not|null|operator|or|override|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;package|pass|private|protected|protocol|public|raise|real|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;register|return|selector|setter|signed|sizeof|static|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;strictfp|string|struct|super|switch|synchronized|template|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;this|throw|throws|traditional|transient|true|try|type|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;typedef|typeof|union|unsigned|var|version|virtual|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;volatile|while|with|yield)\\b&#34;</span><span style="color:#666">;</span>
+        <span style="color:#b44">&#34;\\b(abstract|and|any|as|asm|assert|auto|break|case|catch|chan|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;cin|class|const|const(ructor)?|continue|cout|def|default|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;defer|del|delete|do|elif|else|end|enum|eval|except|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;extends|extern|fallthrough|false|field|final|finally|for|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;friend|from|func(tion)?|getter|global|go|goto|if|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;implement(ation|s)|import|in(line|stanceof|terface)?|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;is|lambda|let|map|method|native|new|nil|none|nonlocal|not|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;null|operator|or|override|package|pass|private|protected|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;protocol|public|raise|range|real|register|return|select|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;selector|setter|signed|sizeof|static|strictfp|string|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;struct|super|switch|synchronized|template|this|throws?|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;traditional|transient|true|try|type(def|of)|un(ion|signed)|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;var|version|virtual|volatile|while|with|yield)\\b&#34;</span><span style="color:#666">;</span>
 
     <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String TYPES <span style="color:#666">=</span>
         <span style="color:#b44">&#34;\\b(j?bool(ean)?|(u|j)?(byte|char|double|float|int(eger)?|&#34;</span> <span style="color:#666">+</span>
@@ -240,7 +240,7 @@ relies on the file extension, the <a href="https://github.com/alecthomas/chroma"
 on being told the language. The text editor has the file extension, so
 another regular expression to check file extensions.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String CC_EXT <span style="color:#666">=</span>
-        <span style="color:#b44">&#34;\\.(c(c|pp|xx|\\+\\+)?|h|js|java|m|py)&#34;</span><span style="color:#666">;</span></code></pre></div>
+        <span style="color:#b44">&#34;\\.(c(c|pp|xx|\\+\\+)?|go|h|java|js|m|py|swift)&#34;</span><span style="color:#666">;</span></code></pre></div>
 <p>Check highlighting. The app also does HTML and CSS and has a syntax
 highlight option. The highlighting code is called with a small delay
 after each action that might change or scroll the text, and after
