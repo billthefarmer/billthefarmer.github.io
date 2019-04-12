@@ -7,27 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2019 Bill Farmer</copyright>
+    <lastBuildDate>Sun, 24 Mar 2019 11:01:35 +0000</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Diy</title>
-      <link>https://billthefarmer.github.io/blog/categories/diy/</link>
-      <pubDate>Sun, 31 Jul 2016 15:46:48 +0000</pubDate>
-      
-      <guid>https://billthefarmer.github.io/blog/categories/diy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Electronics</title>
-      <link>https://billthefarmer.github.io/blog/categories/electronics/</link>
-      <pubDate>Sat, 14 Jul 2018 21:22:37 +0100</pubDate>
-      
-      <guid>https://billthefarmer.github.io/blog/categories/electronics/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Hacking</title>
@@ -44,6 +27,24 @@
       <pubDate>Sun, 09 Dec 2018 10:34:18 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/categories/recipes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Electronics</title>
+      <link>https://billthefarmer.github.io/blog/categories/electronics/</link>
+      <pubDate>Sat, 14 Jul 2018 21:22:37 +0100</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/categories/electronics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DIY</title>
+      <link>https://billthefarmer.github.io/blog/categories/diy/</link>
+      <pubDate>Sun, 31 Jul 2016 15:46:48 +0000</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/categories/diy/</guid>
       <description></description>
     </item>
     
