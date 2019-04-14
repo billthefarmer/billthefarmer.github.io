@@ -22,7 +22,7 @@ HTML output is not very useful for a text editor. It could be used with Html.fro
 
 <meta itemprop="datePublished" content="2019-03-24T11:01:35&#43;00:00" />
 <meta itemprop="dateModified" content="2019-03-24T11:01:35&#43;00:00" />
-<meta itemprop="wordCount" content="903">
+<meta itemprop="wordCount" content="911">
 
 
 
@@ -218,19 +218,23 @@ and types in the above languages, sort them and delete duplicates and
 make regular expressions. The <code>\\b</code> means a word boundary to stop
 embedded words being highlighted.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String KEYWORDS <span style="color:#666">=</span>
-        <span style="color:#b44">&#34;\\b(abstract|and|any|as|asm|assert|auto|break|case|catch|chan|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;cin|class|const|const(ructor)?|continue|cout|def|default|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;defer|del|delete|do|elif|else|end|enum|eval|except|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;extends|extern|fallthrough|false|field|final|finally|for|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;friend|from|func(tion)?|getter|global|go|goto|if|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;implement(ation|s)|import|in(line|stanceof|terface)?|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;is|lambda|let|map|method|native|new|nil|none|nonlocal|not|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;null|operator|or|override|package|pass|private|protected|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;protocol|public|raise|range|real|register|return|select|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;selector|setter|signed|sizeof|static|strictfp|string|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;struct|super|switch|synchronized|template|this|throws?|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;traditional|transient|true|try|type(def|of)|un(ion|signed)|&#34;</span> <span style="color:#666">+</span>
-        <span style="color:#b44">&#34;var|version|virtual|volatile|while|with|yield)\\b&#34;</span><span style="color:#666">;</span>
+        <span style="color:#b44">&#34;\\b(abstract|and|arguments|as(m|sert|sociativity)?|auto|break|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;case|catch|chan|char|class|con(st|tinue|venience)|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;de(bugger|f|fault|fer|init|l|lete)|didset|do|dynamic|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;dynamictype|el(if|else)|enum|eval|ex(cept|ec|plicit|port|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;tends|tension|tern)|fal(lthrough|se)|final(ly)?|for|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;friend|from|func(tion)?|get|global|go(to)?|if|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;im(plements|port)|in(fix|it|line|out|stanceof|terface|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;ternal)?|is|lambda|lazy|left|let|map|mut(able|ating)|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;namespace|native|new|nil|none|nonmutating|not|null|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;operator|optional|or|override|package|pass|postfix|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;pre(cedence|fix)|print|private|prot(ected|ocol)|public|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;raise|range|register|required|return|right|select|self|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;set|signed|sizeof|static|strictfp|struct|subscript|super|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;switch|synchronized|template|this|throw|throws|transient|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;true|try|type(alias|def|id|name|of)?|un(ion|owned|signed)|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;using|var|virtual|void|volatile|weak|wh(ere|ile)|willset|&#34;</span> <span style="color:#666">+</span>
+        <span style="color:#b44">&#34;with|yield)\\b&#34;</span><span style="color:#666">;</span>
 
     <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String TYPES <span style="color:#666">=</span>
         <span style="color:#b44">&#34;\\b(j?bool(ean)?|(u|j)?(byte|char|double|float|int(eger)?|&#34;</span> <span style="color:#666">+</span>
