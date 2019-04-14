@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2019 Bill Farmer</copyright>
-    <lastBuildDate>Sun, 24 Mar 2019 11:01:35 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Apr 2019 16:43:13 +0100</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mushrooms and Soy Sauce</title>
+      <link>https://billthefarmer.github.io/blog/post/mushrooms-and-soy-sauce/</link>
+      <pubDate>Sun, 14 Apr 2019 16:43:13 +0100</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/post/mushrooms-and-soy-sauce/</guid>
+      <description>When I was working for the electric light company in Hove, many years ago, the canteen ladies frequently served up, as part of a buffet, sliced raw mushrooms in soy sauce. Tasty side dish with a salad or buffet.
+Ingredients  Thinly sliced mushrooms Dark soy sauce  Method  Thinly slice the mushrooms into a bowl Sprinkle over the soy sauce Leave for a while for the sauce to soak into and soften the mushrooms  I have not seen this elsewhere or online, so I assume that the canteen ladies came up with the idea themselves.</description>
+    </item>
     
     <item>
       <title>Source Code Syntax Highlighting</title>
@@ -469,7 +479,7 @@ I used gnuparted to copy the partition from one disk to another. The standard me
       <pubDate>Fri, 07 Aug 2015 09:32:42 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/index/</guid>
-      <description>RecipesBaked TomatoesBoiled Beef and CarrotsButter Beans in Tomato SauceCarrot and Coriander SoupCatalan slow cooked chickenChorizo Egg and Tomato Toasted SandwichClementine CakeCoarse RatatouilleCorned Beef ChiliDoug&amp;rsquo;s Seafood RisottoFabada AsturianaFaggots and Peas with Onion GravyFried RiceFried Whole MushroomsGreen TomatoesInteresting MashLeek and Potato SoupMexican BreakfastPan fried lamb&amp;rsquo;s liver, bacon and chorizoPasta PicanteSausages with Green LentilsShoreham fish chowderSlow cooked lambSlow cooked ox cheekSpanish FrittataSpanish omeletteStuffed PeppersThai Red Curry with NoodlesTruly Evil Onion GravyUnobtainiumVegetable Soup PlusVegetables cooked in olive oilVenison and Chorizo CasseroleWhole Broad Beans in Olive OilHackingAdding a calendar event in androidAndroid Custom AttributesAndroid Recent FilesAndroid Text SearchBuild Mac OSX apps using command line toolsC++Concurrency, Threads, Semaphores and MutexesCreate PDF ReportDownload streamed videoDraw Musical StaffExpand Android SelectionFast Fourier TransformGetting Related Content workingHandlers in AndroidHandling Resizing in WindowsHandling run time changes in AndroidHaskellInstall OSX El Capitan on a PC (MBR)Java CollectionsMarkdown OpenStreetMap MapsMigrating this blog from WordpressMove Linux Mint Root PartitionMusical TemperamentsPythonQuestionnaire MakerRaspberry Pi WifiRead iBook books on an Android tabletResolving content uris in androidResurrecting a netbook as a web serverSearch Engine Optimisation (SEO)SlimStatSource Code Syntax HighlightingSwiftTransfer contacts from iPhone to AndroidUpgrading WordPressUpgrading a Moto GUpgrading to Windows 10Using Emacs as an IDEUsing Emacs in Android DevelopmentWhatever-o-meterWhatever-o-meter revisitedElectronicsMullard 5-20 AmplifierSmart MetersDiyReplacing microbore radiators</description>
+      <description>RecipesBaked TomatoesBoiled Beef and CarrotsButter Beans in Tomato SauceCarrot and Coriander SoupCatalan slow cooked chickenChorizo Egg and Tomato Toasted SandwichClementine CakeCoarse RatatouilleCorned Beef ChiliDoug&amp;rsquo;s Seafood RisottoFabada AsturianaFaggots and Peas with Onion GravyFried RiceFried Whole MushroomsGreen TomatoesInteresting MashLeek and Potato SoupMexican BreakfastMushrooms and Soy SaucePan fried lamb&amp;rsquo;s liver, bacon and chorizoPasta PicanteSausages with Green LentilsShoreham fish chowderSlow cooked lambSlow cooked ox cheekSpanish FrittataSpanish omeletteStuffed PeppersThai Red Curry with NoodlesTruly Evil Onion GravyUnobtainiumVegetable Soup PlusVegetables cooked in olive oilVenison and Chorizo CasseroleWhole Broad Beans in Olive OilHackingAdding a calendar event in androidAndroid Custom AttributesAndroid Recent FilesAndroid Text SearchBuild Mac OSX apps using command line toolsC++Concurrency, Threads, Semaphores and MutexesCreate PDF ReportDownload streamed videoDraw Musical StaffExpand Android SelectionFast Fourier TransformGetting Related Content workingHandlers in AndroidHandling Resizing in WindowsHandling run time changes in AndroidHaskellInstall OSX El Capitan on a PC (MBR)Java CollectionsMarkdown OpenStreetMap MapsMigrating this blog from WordpressMove Linux Mint Root PartitionMusical TemperamentsPythonQuestionnaire MakerRaspberry Pi WifiRead iBook books on an Android tabletResolving content uris in androidResurrecting a netbook as a web serverSearch Engine Optimisation (SEO)SlimStatSource Code Syntax HighlightingSwiftTransfer contacts from iPhone to AndroidUpgrading WordPressUpgrading a Moto GUpgrading to Windows 10Using Emacs as an IDEUsing Emacs in Android DevelopmentWhatever-o-meterWhatever-o-meter revisitedElectronicsMullard 5-20 AmplifierSmart MetersDiyReplacing microbore radiators</description>
     </item>
     
     <item>
