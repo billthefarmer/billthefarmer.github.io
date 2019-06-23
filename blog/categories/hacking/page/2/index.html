@@ -11,7 +11,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/categories/hacking/" />
 
-<meta property="og:updated_time" content="2019-03-24T11:01:35&#43;00:00"/>
+<meta property="og:updated_time" content="2019-06-17T18:30:39&#43;01:00"/>
 
 
 <meta itemprop="name" content="Hacking">
@@ -27,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.1" />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -99,12 +99,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
-                    Recipes
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                    Recipes
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
@@ -158,6 +158,38 @@ code {
         <div class="medium-8 columns">
           
 
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/post/create-pdf-report/">Create PDF Report</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2018-09-18T19:27:46&#43;01:00">
+        Tue Sep 18, 2018
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    Introduction As part of the Questionnaire Maker plugin it is necessary to create a pdf report. The best tool to do this appears to be TCPDF, which appears to be part of at least some Linux distributions as php-tcpdf. It is not included in WordPress.
+Implementation As both the plugin and TCPDF are hosted on GitHub, the best way to implement the plugin, and TCPDF if it is not available on the web server, is to clone the repositories and use symbolic links to provide the plugin and the library in the right places.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/post/create-pdf-report/'>Read more →</a>
+  <hr>
+</div>
 
 
   
@@ -287,38 +319,6 @@ Calendar custom styles The custom calendar has a list of styles that are customi
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/android-recent-files/">Android Recent Files</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2017-12-15T11:53:57Z">
-        Fri Dec 15, 2017
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    There are several parts to this - creating the list of files, saving the list in the preferences, restoring the list on startup and creating the list in the menu.
-// onCreate  @Override protected void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this); // Create a map of scroll positions by file name  Set&lt;String&gt; pathSet = preferences.getStringSet(PREF_PATHS, null); pathMap = new HashMap&lt;String, Integer&gt;(); if (pathSet != null) for (String path : pathSet) pathMap.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/android-recent-files/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -343,6 +343,10 @@ Calendar custom styles The custom calendar has a list of styles that are customi
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/pi-hole-cloudflare-setup/">
+        Pi-hole Cloudflare Setup
+      </a></li>
     
       <li><a href="/blog/post/mushrooms-and-soy-sauce/">
         Mushrooms and Soy Sauce
@@ -378,10 +382,6 @@ Calendar custom styles The custom calendar has a list of styles that are customi
     
       <li><a href="/blog/post/questionnaire/">
         Questionnaire Maker
-      </a></li>
-    
-      <li><a href="/blog/post/smart-meters/">
-        Smart Meters
       </a></li>
     
   </ul>

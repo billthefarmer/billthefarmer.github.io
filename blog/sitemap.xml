@@ -4,14 +4,25 @@
   
   <url>
     <loc>https://billthefarmer.github.io/blog/</loc>
-    <lastmod>2019-04-14T16:43:13+01:00</lastmod>
+    <lastmod>2019-06-17T18:30:39+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://billthefarmer.github.io/blog/categories/</loc>
-    <lastmod>2019-04-14T16:43:13+01:00</lastmod>
+    <lastmod>2019-06-17T18:30:39+01:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://billthefarmer.github.io/blog/categories/hacking/</loc>
+    <lastmod>2019-06-17T18:30:39+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://billthefarmer.github.io/blog/pi-hole-cloudflare-setup/</loc>
+    <lastmod>2019-06-17T18:30:39+01:00</lastmod>
   </url>
   
   <url>
@@ -22,12 +33,6 @@
   <url>
     <loc>https://billthefarmer.github.io/blog/categories/recipes/</loc>
     <lastmod>2019-04-14T16:43:13+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://billthefarmer.github.io/blog/categories/hacking/</loc>
-    <lastmod>2019-03-24T11:01:35+00:00</lastmod>
     <priority>0</priority>
   </url>
   

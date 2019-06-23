@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2019 Bill Farmer</copyright>
-    <lastBuildDate>Sun, 24 Mar 2019 11:01:35 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Jun 2019 18:30:39 +0100</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pi-hole Cloudflare Setup</title>
+      <link>https://billthefarmer.github.io/blog/pi-hole-cloudflare-setup/</link>
+      <pubDate>Mon, 17 Jun 2019 18:30:39 +0100</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/pi-hole-cloudflare-setup/</guid>
+      <description>I came across a reference to Pi-hole recently, so as my old pi has been gathering dust, I thought I would try it out. The pi already had Raspbian Stretch Lite installed, so I uninstalled some of the packages I had previously installed, and loaded Pi-Hole using the One-Step Automated Install.
+The installation script asks a series of questions using text dialogs and produces a log as it goes.
+pi@catherine:~ $ curl -sSL https://install.</description>
+    </item>
     
     <item>
       <title>Source Code Syntax Highlighting</title>
