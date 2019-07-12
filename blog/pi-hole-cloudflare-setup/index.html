@@ -6,35 +6,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:title" content="Pi-hole Cloudflare Setup" />
-<meta property="og:description" content="I came across a reference to Pi-hole recently, so as my old pi has been gathering dust, I thought I would try it out. The pi already had Raspbian Stretch Lite installed, so I uninstalled some of the packages I had previously installed, and loaded Pi-Hole using the One-Step Automated Install.
-The installation script asks a series of questions using text dialogs and produces a log as it goes.
-pi@catherine:~ $ curl -sSL https://install." />
+<meta property="og:title" content="Pi-hole Cloudflare, DNSCrypt, Unbound Setup" />
+<meta property="og:description" content="Pi-hole I came across a reference to Pi-hole recently, so as my old pi has been gathering dust, I thought I would try it out. The pi already had Raspbian Stretch Lite installed, so I uninstalled some of the packages I had previously installed, and loaded Pi-Hole using the One-Step Automated Install.
+The installation script asks a series of questions using text dialogs and produces a log as it goes." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/pi-hole-cloudflare-setup/" />
 <meta property="article:published_time" content="2019-06-17T18:30:39&#43;01:00"/>
 <meta property="article:modified_time" content="2019-06-17T18:30:39&#43;01:00"/>
 
 
-<meta itemprop="name" content="Pi-hole Cloudflare Setup">
-<meta itemprop="description" content="I came across a reference to Pi-hole recently, so as my old pi has been gathering dust, I thought I would try it out. The pi already had Raspbian Stretch Lite installed, so I uninstalled some of the packages I had previously installed, and loaded Pi-Hole using the One-Step Automated Install.
-The installation script asks a series of questions using text dialogs and produces a log as it goes.
-pi@catherine:~ $ curl -sSL https://install.">
+<meta itemprop="name" content="Pi-hole Cloudflare, DNSCrypt, Unbound Setup">
+<meta itemprop="description" content="Pi-hole I came across a reference to Pi-hole recently, so as my old pi has been gathering dust, I thought I would try it out. The pi already had Raspbian Stretch Lite installed, so I uninstalled some of the packages I had previously installed, and loaded Pi-Hole using the One-Step Automated Install.
+The installation script asks a series of questions using text dialogs and produces a log as it goes.">
 
 
 <meta itemprop="datePublished" content="2019-06-17T18:30:39&#43;01:00" />
 <meta itemprop="dateModified" content="2019-06-17T18:30:39&#43;01:00" />
-<meta itemprop="wordCount" content="1096">
+<meta itemprop="wordCount" content="1211">
 
 
 
 <meta itemprop="keywords" content="" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Pi-hole Cloudflare Setup"/>
-<meta name="twitter:description" content="I came across a reference to Pi-hole recently, so as my old pi has been gathering dust, I thought I would try it out. The pi already had Raspbian Stretch Lite installed, so I uninstalled some of the packages I had previously installed, and loaded Pi-Hole using the One-Step Automated Install.
-The installation script asks a series of questions using text dialogs and produces a log as it goes.
-pi@catherine:~ $ curl -sSL https://install."/>
+<meta name="twitter:title" content="Pi-hole Cloudflare, DNSCrypt, Unbound Setup"/>
+<meta name="twitter:description" content="Pi-hole I came across a reference to Pi-hole recently, so as my old pi has been gathering dust, I thought I would try it out. The pi already had Raspbian Stretch Lite installed, so I uninstalled some of the packages I had previously installed, and loaded Pi-Hole using the One-Step Automated Install.
+The installation script asks a series of questions using text dialogs and produces a log as it goes."/>
 
 
 
@@ -46,7 +43,7 @@ pi@catherine:~ $ curl -sSL https://install."/>
 
     <base href="https://billthefarmer.github.io/blog/">
     <link rel="canonical" href="https://billthefarmer.github.io/blog/pi-hole-cloudflare-setup/">
-    <title>Pi-hole Cloudflare Setup | Bill Farmer</title>
+    <title>Pi-hole Cloudflare, DNSCrypt, Unbound Setup | Bill Farmer</title>
 
     <!-- CSS -->
     <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
@@ -174,7 +171,7 @@ code {
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/pi-hole-cloudflare-setup/">Pi-hole Cloudflare Setup</a>
+      <a href="https://billthefarmer.github.io/blog/pi-hole-cloudflare-setup/">Pi-hole Cloudflare, DNSCrypt, Unbound Setup</a>
     </h3>
     <div class="callout small">
       <small>
@@ -196,7 +193,11 @@ code {
       </small>
     </div>
     <p>
-      <p>I came across a reference to <a href="https://pi-hole.net">Pi-hole</a> recently, so as my old pi
+      
+
+<h3 id="pi-hole">Pi-hole</h3>
+
+<p>I came across a reference to <a href="https://pi-hole.net">Pi-hole</a> recently, so as my old pi
 has been gathering dust, I thought I would try it out. The pi already
 had <a href="https://www.raspberrypi.org/downloads/raspbian">Raspbian Stretch Lite</a> installed, so I uninstalled some of the
 packages I had previously installed, and loaded Pi-Hole using the
@@ -367,6 +368,8 @@ configuration. I opted to use the ethernet port and use IP address
 DNS configuration, so I changed the default DNS to <code>192.168.1.252</code> so
 I don&rsquo;t have to make any changes to DNS configuration elsewhere.</p>
 
+<h3 id="cloudflared">Cloudflared</h3>
+
 <p>There is a mention in the <a href="https://docs.pi-hole.net">Pi-hole docs</a> of <a href="https://docs.pi-hole.net/guides/dns-over-https">Configuring
 DNS-Over-HTTPS on Pi-hole</a> using <a href="https://developers.cloudflare.com/1.1.1.1/dns-over-https/cloudflared-proxy">Cloudflare</a>. This is useful to
 stop your <a href="https://en.wikipedia.org/wiki/Internet_service_provider">ISP</a> from snooping on your browsing habits. However, the
@@ -403,6 +406,23 @@ I used the <a href="https://web.archive.org/web/20180524132333/https://developer
 cloudflared that might run on the Pi 1B. This turned out to be version
 2018.4.6. I have that version on soak test as third DNS choice in
 Pi-hole, so it may take a while to fail if it is going to.</p>
+
+<p>After about a week I made cloudflared the default choice. After a
+while there started to be problems with missing images in web sites
+and having to refresh the browser to get a web site to load.</p>
+
+<h3 id="dnscrypt">DNSCrypt</h3>
+
+<p>Next I tried <a href="https://github.com/pi-hole/pi-hole/wiki/DNSCrypt-2.0">DNSCrypt</a>. After following the installation
+instructions for Pi-hole, I tried this for a while. I got the same
+sort of symptoms as cloudflared above. It does periodically write an
+interesting list of DNS resolvers and response times to the syslog.</p>
+
+<h3 id="unbound">Unbound</h3>
+
+<p>So I tried <a href="https://docs.pi-hole.net/guides/unbound">unbound</a>. This gives a recursive DNS resolver and
+works very well. It has now been running as the default DNS choice for
+Pi-hole for several days without problems.</p>
 
     </p>
     
@@ -441,7 +461,7 @@ Pi-hole, so it may take a while to fail if it is going to.</p>
       </a></li>
     
       <li><a href="/blog/pi-hole-cloudflare-setup/">
-        Pi-hole Cloudflare Setup
+        Pi-hole Cloudflare, DNSCrypt, Unbound Setup
       </a></li>
     
       <li><a href="/blog/post/mushrooms-and-soy-sauce/">
