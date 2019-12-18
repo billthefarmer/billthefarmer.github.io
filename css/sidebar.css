@@ -29,6 +29,11 @@ a:hover {
     padding: 2em 4em 4em 4em;
 }
 
+#main > section {
+    margin: 2em 0 0 0;
+    padding: 2em 0 0 0;
+}
+
 #main img {
     max-width: 75%;
 }
