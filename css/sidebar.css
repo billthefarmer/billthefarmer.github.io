@@ -1,6 +1,7 @@
 #header {
     background-image: url("/images/cropped-P1010089.jpg");
     background-color: #457FC8;
+    padding: 2em 4em 0 0;
 }
 
 #sidebar a {
@@ -22,6 +23,10 @@ a {
 
 a:hover {
     color: #a2a2a2 !important;
+}
+
+#main {
+    padding: 2em 4em 4em 4em;
 }
 
 #main img {
