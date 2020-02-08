@@ -21,7 +21,7 @@ I had a request from Marco the other day to put OpenStreetMap maps in my Diary a
  [&lt;lat&gt;,&lt;lng&gt;] syntax. So I did a bit of a search to see if there was a convention in Markdown for co-ordinates and couldn&rsquo;t find anything. So we seem to have broken new ground here.">
 <meta itemprop="datePublished" content="2017-10-14T12:59:06&#43;01:00" />
 <meta itemprop="dateModified" content="2017-10-14T12:59:06&#43;01:00" />
-<meta itemprop="wordCount" content="612">
+<meta itemprop="wordCount" content="660">
 
 
 
@@ -208,14 +208,14 @@ variations on that. However the syntax for their embedded iframe API
 doesn&rsquo;t seem to be documented, but you can get the HTML for an
 embedded map from their map page and customise it.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#008000;font-weight:bold">iframe</span> <span style="color:#b44">width</span><span style="color:#666">=</span><span style="color:#b44">&#34;425&#34;</span> <span style="color:#b44">height</span><span style="color:#666">=</span><span style="color:#b44">&#34;350&#34;</span>
-        <span style="color:#b44">src</span><span style="color:#666">=</span><span style="color:#b44">&#34;http://www.openstreetmap.org/export/embed.html?
+        <span style="color:#b44">src</span><span style="color:#666">=</span><span style="color:#b44">&#34;https://www.openstreetmap.org/export/embed.html?
 </span><span style="color:#b44">        bbox=3.1528186798095708%2C42.2577141531011%2C3.1886529922485356%2C42.27241862881183&amp;amp;
 </span><span style="color:#b44">        layer=mapnik&#34;</span>
         <span style="color:#b44">style</span><span style="color:#666">=</span><span style="color:#b44">&#34;border: 1px solid black&#34;</span>&gt;
 &lt;/<span style="color:#008000;font-weight:bold">iframe</span>&gt;
 &lt;<span style="color:#008000;font-weight:bold">br</span>/&gt;
 &lt;<span style="color:#008000;font-weight:bold">small</span>&gt;
-  &lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#b44">href</span><span style="color:#666">=</span><span style="color:#b44">&#34;http://www.openstreetmap.org/#map=16/42.2651/3.1707&#34;</span>&gt;
+  &lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#b44">href</span><span style="color:#666">=</span><span style="color:#b44">&#34;https://www.openstreetmap.org/#map=16/42.2651/3.1707&#34;</span>&gt;
     View Larger Map
   &lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;
 &lt;/<span style="color:#008000;font-weight:bold">small</span>&gt;
@@ -232,11 +232,11 @@ added the option to have a prefix &lsquo;<code>osm:</code>&rsquo;, as using pref
 be a markdown convention. It also allows for having different
 maps. The template for the iframe is</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &#34;&lt;<span style="color:#008000;font-weight:bold">iframe</span> <span style="color:#b44">width</span><span style="color:#666">=</span><span style="color:#b44">\&#34;560\&#34;</span> <span style="color:#b44">height</span><span style="color:#666">=</span><span style="color:#b44">\&#34;420\&#34;</span>
-    <span style="color:#b44">src</span><span style="color:#666">=</span><span style="color:#b44">\&#34;http://www.openstreetmap.org/export/embed.html?</span>
+    <span style="color:#b44">src</span><span style="color:#666">=</span><span style="color:#b44">\&#34;https://www.openstreetmap.org/export/embed.html?</span>
     <span style="color:#b44">bbox</span><span style="color:#666">=</span><span style="color:#b44">%f,%f,%f,%f&amp;amp;layer=mapnik\&#34;</span>
     <span style="color:#b44">style</span><span style="color:#666">=</span><span style="color:#b44">\&#34;border:</span> <span style="color:#b44">1px</span> <span style="color:#b44">solid</span> <span style="color:#b44">black</span><span style="">\</span><span style="">&#34;</span>&gt;
     &lt;/<span style="color:#008000;font-weight:bold">iframe</span>&gt;&lt;<span style="color:#008000;font-weight:bold">br</span>/&gt;
-    &lt;<span style="color:#008000;font-weight:bold">small</span>&gt;&lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#b44">href</span><span style="color:#666">=</span><span style="color:#b44">\&#34;http://www.openstreetmap.org/#map=16/%f/%f\&#34;</span>&gt;
+    &lt;<span style="color:#008000;font-weight:bold">small</span>&gt;&lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#b44">href</span><span style="color:#666">=</span><span style="color:#b44">\&#34;https://www.openstreetmap.org/#map=16/%f/%f\&#34;</span>&gt;
     View Larger Map&lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;&lt;/<span style="color:#008000;font-weight:bold">small</span>&gt;\n&#34;
 </code></pre></div><p>I have replaced the &lsquo;<code>%2C</code>'s with commas, and changed the dimensions
 slightly, which seems to work OK. The android Java code to do this is</p>
@@ -320,7 +320,12 @@ similar to the above with updated patterns and templates.</p>
         &quot;![osm](geo:%f,%f)&quot;
 </code></pre><p>The pattern is just to match a geo Uri, the template is to output a
 geo Uri.</p>
-
+<p>In recent versions of android <code>http://</code> URLs can be rejected by the
+web view, so I have updated the code to use <code>https://</code>. Also, to allow
+the use of <code>http://</code> URLs in the markdown, I have added a line to the
+<code>application</code> element in the app manifest.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">      android:usesCleartextTraffic=&#34;true&#34;
+</code></pre></div>
     </p>
     
     
