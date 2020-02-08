@@ -11,15 +11,12 @@
 Implementation As both the plugin and TCPDF are hosted on GitHub, the best way to implement the plugin, and TCPDF if it is not available on the web server, is to clone the repositories and use symbolic links to provide the plugin and the library in the right places." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/post/create-pdf-report/" />
-<meta property="article:published_time" content="2018-09-18T19:27:46&#43;01:00"/>
-<meta property="article:modified_time" content="2018-09-18T19:27:46&#43;01:00"/>
-
+<meta property="article:published_time" content="2018-09-18T19:27:46+01:00" />
+<meta property="article:modified_time" content="2018-09-18T19:27:46+01:00" />
 
 <meta itemprop="name" content="Create PDF Report">
 <meta itemprop="description" content="Introduction As part of the Questionnaire Maker plugin it is necessary to create a pdf report. The best tool to do this appears to be TCPDF, which appears to be part of at least some Linux distributions as php-tcpdf. It is not included in WordPress.
 Implementation As both the plugin and TCPDF are hosted on GitHub, the best way to implement the plugin, and TCPDF if it is not available on the web server, is to clone the repositories and use symbolic links to provide the plugin and the library in the right places.">
-
-
 <meta itemprop="datePublished" content="2018-09-18T19:27:46&#43;01:00" />
 <meta itemprop="dateModified" content="2018-09-18T19:27:46&#43;01:00" />
 <meta itemprop="wordCount" content="856">
@@ -27,7 +24,6 @@ Implementation As both the plugin and TCPDF are hosted on GitHub, the best way t
 
 
 <meta itemprop="keywords" content="" />
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Create PDF Report"/>
 <meta name="twitter:description" content="Introduction As part of the Questionnaire Maker plugin it is necessary to create a pdf report. The best tool to do this appears to be TCPDF, which appears to be part of at least some Linux distributions as php-tcpdf. It is not included in WordPress.
@@ -38,7 +34,7 @@ Implementation As both the plugin and TCPDF are hosted on GitHub, the best way t
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.64.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -108,12 +104,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
-                    DIY
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                    DIY
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
@@ -193,17 +189,12 @@ code {
       </small>
     </div>
     <p>
-      
-
-<h3 id="introduction">Introduction</h3>
-
+      <h3 id="introduction">Introduction</h3>
 <p>As part of the <a href="https://billthefarmer.github.io/blog/post/questionnaire">Questionnaire Maker</a> plugin it is necessary to
 create a pdf report. The best tool to do this appears to be
 <a href="https://tcpdf.org">TCPDF</a>, which appears to be part of at least some Linux
 distributions as <code>php-tcpdf</code>. It is not included in WordPress.</p>
-
 <h3 id="implementation">Implementation</h3>
-
 <p>As both the plugin and TCPDF are hosted on GitHub, the best way to
 implement the plugin, and TCPDF if it is not available on the web
 server, is to clone the repositories and use symbolic links to provide
@@ -215,29 +206,27 @@ user@server:/var/www/html/wordpress/wp-content/plugins $ ln -s ~/questionnaire/w
 user@server:/var/www/html/wordpress/wp-content/plugins $ <span style="color:#a2f">cd</span> ~
 user@server:~ $ git clone https://github.com/tecnickcom/TCPDF.git tcpdf
 user@server:~ $ <span style="color:#a2f">cd</span> questionnaire/wordpress
-user@server:~/questionnaire/wordpress $ ln -s ~/tcpdf</code></pre></div>
-<p>The plugin includes code to load TCPDF if it is present and show a
+user@server:~/questionnaire/wordpress $ ln -s ~/tcpdf
+</code></pre></div><p>The plugin includes code to load TCPDF if it is present and show a
 message if it isn&rsquo;t. Using the path <code>tcpdf/tcpdf.php</code> will pick it up
 either from <code>/usr/share/php</code>, if installed, or from the symbolic link.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">// Include TCPDF, if present
-$tcpdf_present = include_once &#39;tcpdf/tcpdf.php&#39;;</code></pre></div>
-<p>After more work on this project I needed another library which makes
+$tcpdf_present = include_once &#39;tcpdf/tcpdf.php&#39;;
+</code></pre></div><p>After more work on this project I needed another library which makes
 use of <a href="https://getcomposer.org">composer</a> for dependencies. TCPDF doesn&rsquo;t have any, but you
 can create a <code>composer.json</code> in the plugin and load TCPDF.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">user@server:~/questionnaire/wordpress $ php composer.phar require tecnickcom/tcpdf</code></pre></div>
-<p>Using composer, the code to load libraries changes to pick them up
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">user@server:~/questionnaire/wordpress $ php composer.phar require tecnickcom/tcpdf
+</code></pre></div><p>Using composer, the code to load libraries changes to pick them up
 from the vendor folder.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">// Include composer libraries, if present
-$vendor_present = include_once &#39;vendor/autoload.php&#39;</code></pre></div>
-<h3 id="displaying-errors">Displaying errors</h3>
-
+$vendor_present = include_once &#39;vendor/autoload.php&#39;
+</code></pre></div><h3 id="displaying-errors">Displaying errors</h3>
 <p>To avoid the dreaded WordPress White Screen of Death (WSOD), you can
 temporarily put a couple of lines at the top of the plugin to display
 PHP errors.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">error_reporting(E_ALL);
-ini_set(&#39;display_errors&#39;, 1);</code></pre></div>
-<h3 id="creating-the-document">Creating the document</h3>
-
+ini_set(&#39;display_errors&#39;, 1);
+</code></pre></div><h3 id="creating-the-document">Creating the document</h3>
 <p>The code to create a pdf document is fairly straightforward. The
 examples given always seem to specify everything, but by making note
 of the defaults, that isn&rsquo;t necessary.</p>
@@ -256,8 +245,8 @@ of the defaults, that isn&rsquo;t necessary.</p>
 
         // Set margins
         $pdf-&gt;SetMargins($margin, $margin, $margin);
-        $pdf-&gt;SetAutoPageBreak(true, $margin);</code></pre></div>
-<p>TCPDF doesn&rsquo;t seem to include a function to move the insertion point
+        $pdf-&gt;SetAutoPageBreak(true, $margin);
+</code></pre></div><p>TCPDF doesn&rsquo;t seem to include a function to move the insertion point
 down a line, you need to nest three functions to get the right result.
 The functions to add text make use of the <code>MultiCell()</code> function. Also
 the <code>SetFont()</code> function is used to set the font type.</p>
@@ -311,8 +300,8 @@ the <code>SetFont()</code> function is used to set the font type.</p>
             $pdf-&gt;SetFont(&#39;&#39;, &#39;&#39;);
             $pdf-&gt;MultiCell(0, 0, $text, 0, &#39;L&#39;);
             new_text_line($pdf);
-        };</code></pre></div>
-<p>To display images requires a set of rules to place the image on the
+        };
+</code></pre></div><p>To display images requires a set of rules to place the image on the
 page. If the width is empty or zero, text width, else width. If the
 height is empty or zero, height in proportion to width, else
 height. If x is empty or zero, left margin, if negative, right margin,
@@ -324,17 +313,18 @@ else y.</p>
         {
             $width = (!empty($image-&gt;width))? $image-&gt;width: $textWidth;
             $height = (!empty($image-&gt;height))? $image-&gt;height: 0;
-            $x = (!empty($image-&gt;x))? ($image-&gt;x &lt; <span style="color:#008000;font-weight:bold">0</span><span style="">)?</span>
+            $x = (!empty($image-&gt;x))? ($image-&gt;x &lt; <span style="color:#008000;font-weight:bold">0</span><span style="">)</span><span style="">?</span>
                <span style="">$</span><span style="color:#b44">pageWidth</span> <span style="color:#b44">-</span> <span style="">$</span><span style="color:#b44">margin</span> <span style="color:#b44">-</span> <span style="">$</span><span style="color:#b44">width:</span> <span style="">$</span><span style="color:#b44">image-</span>&gt;x: $margin;
-            $y = (!empty($image-&gt;y))? ($image-&gt;y &lt; <span style="color:#008000;font-weight:bold">0</span><span style="">)?</span>
+            $y = (!empty($image-&gt;y))? ($image-&gt;y &lt; <span style="color:#008000;font-weight:bold">0</span><span style="">)</span><span style="">?</span>
                <span style="">$</span><span style="color:#b44">pageHeight</span> <span style="color:#b44">-</span> <span style="">$</span><span style="color:#b44">margin</span> <span style="color:#b44">-</span> <span style="">$</span><span style="color:#b44">height:</span> <span style="">$</span><span style="color:#b44">image-</span>&gt;y: $margin;
             $type = (!empty($image-&gt;type))? $image-&gt;type: &#39;&#39;;
             $link = (!empty($image-&gt;link))? $image-&gt;link: &#39;&#39;;
             $pdf-&gt;Image($path . $image-&gt;src, $x, $y, $width, $height,
                         $type, $link);
-        };</code></pre></div>
-<p>The report starts with a preamble.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        // Preamble
+        };
+</code></pre></div><p>The report starts with a preamble.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
+        // Preamble
         foreach ($pages as $page)
         {            
             $pdf-&gt;AddPage();
@@ -347,10 +337,11 @@ else y.</p>
             foreach ($page-&gt;images as $image)
                 add_image_object($pdf, $image, $margin, $textWidth,
                                  $pageHeight, $pageWidth, $path);
-        }</code></pre></div>
-<p>Then the report body. Because each section starts with an image, start
+        }
+</code></pre></div><p>Then the report body. Because each section starts with an image, start
 a new page if near the bottom.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        // Report
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
+        // Report
         $pdf-&gt;AddPage();
 
         if ($B)
@@ -361,9 +352,10 @@ a new page if near the bottom.</p>
 
         if ($pdf-&gt;GetY() &gt;= $pageHeight - ($margin * 3))
             $pdf-&gt;AddPage();
-    // ...</code></pre></div>
-<p>Then the last page.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        $pdf-&gt;AddPage();
+    // ...
+</code></pre></div><p>Then the last page.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
+        $pdf-&gt;AddPage();
 
         // Last page text
         foreach ($last-&gt;text as $text)
@@ -372,15 +364,15 @@ a new page if near the bottom.</p>
         // Last page images
         foreach ($last-&gt;images as $image)
             add_image_object($pdf, $image, $margin, $textWidth,
-                             $pageHeight, $pageWidth, $path);</code></pre></div>
-<p>Output the document, and return the path to it.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        // Output document
+                             $pageHeight, $pageWidth, $path);
+</code></pre></div><p>Output the document, and return the path to it.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
+        // Output document
         $pdf-&gt;Output($path . &#39;report/&#39; . $filename, &#39;F&#39;);
 
         // Return file uri
-        return plugins_url(&#39;report/&#39; . $filename, __FILE__);</code></pre></div>
-<h3 id="creating-an-email">Creating an email</h3>
-
+        return plugins_url(&#39;report/&#39; . $filename, __FILE__);
+</code></pre></div><h3 id="creating-an-email">Creating an email</h3>
 <p>To send the report, create an email and send it.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        // Set fields
         $to = &#34;$username <span style="">&lt;</span>$usermail&gt;&#34;;
@@ -399,7 +391,8 @@ a new page if near the bottom.</p>
 
         // Send mail
         wp_mail($to, $subject, $message, $headers,
-                $attachments);</code></pre></div>
+                $attachments);
+</code></pre></div>
     </p>
     
     
@@ -438,6 +431,10 @@ a new page if near the bottom.</p>
   <h4>Recent Posts</h4>
   <ul>
     
+      <li><a href="/blog/derive-edit-position/">
+        Derive Edit Position from Markdown
+      </a></li>
+    
       <li><a href="/blog/fixing-basin-waste-pop-up/">
         Fixing Basin Waste Pop Up
       </a></li>
@@ -474,10 +471,6 @@ a new page if near the bottom.</p>
         Green Tomatoes
       </a></li>
     
-      <li><a href="/blog/post/create-pdf-report/">
-        Create PDF Report
-      </a></li>
-    
   </ul>
 
   
@@ -509,7 +502,7 @@ a new page if near the bottom.</p>
       <div class="row column">
         <p>
           
-          Copyright &copy; 2019 Bill Farmer
+          Copyright © 2019 Bill Farmer
           
         </p>
         <p>

@@ -11,23 +11,19 @@
 Documentation Whatever-o-meter uses the shortcode [whatever-o-meter] or {{&lt;whatever-o-meter&gt;}} to insert the whatever-o-meter display into the page." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/whatever-o-meter/" />
-<meta property="article:published_time" content="2013-11-20T18:55:54&#43;00:00"/>
-<meta property="article:modified_time" content="2013-11-20T18:55:54&#43;00:00"/>
-
+<meta property="article:published_time" content="2013-11-20T18:55:54+00:00" />
+<meta property="article:modified_time" content="2013-11-20T18:55:54+00:00" />
 
 <meta itemprop="name" content="Whatever-o-meter">
 <meta itemprop="description" content="Introduction Whatever-o-meter is a WordPress and Hugo plugin that shows a tachometer-like dial with a pointer, asks a series of predefined questions which are answered by moving a slider, shows one of several predefined results, and moves the tacho pointer to a position determined by the value of the result. The project is on Github.
 Documentation Whatever-o-meter uses the shortcode [whatever-o-meter] or {{&lt;whatever-o-meter&gt;}} to insert the whatever-o-meter display into the page.">
-
-
 <meta itemprop="datePublished" content="2013-11-20T18:55:54&#43;00:00" />
 <meta itemprop="dateModified" content="2013-11-20T18:55:54&#43;00:00" />
-<meta itemprop="wordCount" content="1073">
+<meta itemprop="wordCount" content="1082">
 
 
 
 <meta itemprop="keywords" content="" />
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Whatever-o-meter"/>
 <meta name="twitter:description" content="Introduction Whatever-o-meter is a WordPress and Hugo plugin that shows a tachometer-like dial with a pointer, asks a series of predefined questions which are answered by moving a slider, shows one of several predefined results, and moves the tacho pointer to a position determined by the value of the result. The project is on Github.
@@ -38,7 +34,7 @@ Documentation Whatever-o-meter uses the shortcode [whatever-o-meter] or {{&lt;wh
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.64.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -108,12 +104,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
-                    DIY
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                    DIY
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
@@ -193,18 +189,11 @@ code {
       </small>
     </div>
     <p>
-      
-
-<p><img src="images/2013/11/Whatever.png" alt="Whatever" /></p>
-
+      <p><img src="images/2013/11/Whatever.png" alt="Whatever"></p>
 <h3 id="introduction">Introduction</h3>
-
-<p>Whatever-o-meter is a WordPress and Hugo plugin that shows a tachometer-like dial with a pointer, asks a series of predefined questions which are answered by moving a slider, shows one of several predefined results, and moves the tacho pointer to a position determined by the value of the result. The project is on <a href="https://github.com/billthefarmer/whatever-o-meter">Github</a>.</p>
-
+<p>Whatever-o-meter is a WordPress and Hugo plugin that shows a tachometer-like dial with a pointer, asks a series of predefined questions which are answered by moving a slider, shows one of several predefined results, and moves the tacho pointer to a position determined by the value of the result. The project is on <a href="https://github.com/billthefarmer/whatever-o-meter%22">Github</a>.</p>
 <h3 id="documentation">Documentation</h3>
-
 <p>Whatever-o-meter uses the shortcode [<strong>whatever-o-meter</strong>] or {{&lt;<strong>whatever-o-meter</strong>&gt;}} to insert the whatever-o-meter display into the page. Other page content above and below the shortcode will appear on the page as normal. Do not use more than one whatever-o-meter shortcode on the page, only the first one is likely to work. If the shortcode is used on a page with no questions defined, the code will be replaced with the message:</p>
-
 
 
 
@@ -217,40 +206,33 @@ code {
 
 
 
-
-<p>I&rsquo;ve called the parts of the page that slide up and down panels, because calling them divs, which is what they are, is too technical.</p>
-
+<p>I’ve called the parts of the page that slide up and down panels, because calling them divs, which is what they are, is too technical.</p>
 <p>To define the initial intro panel, the questions, and the results you need to define quite a few custom fields or front matter parameters on the page. In Hugo parameters with a single value are shown as one item, parameters with multiple values are shown as an array. They are:</p>
-
 <ul>
-<li><strong>intro </strong> The initial text that will appear on the panel below the tacho dial and above the start button.</li>
-<li><strong>question</strong>  Each question has it&rsquo;s own entry, as many as required within reason. They will be asked in the order given.</li>
-<li><strong>left</strong>  Each text has it&rsquo;s own entry, as many as required. It will appear on the left below the slider. They will be displayed in the order given. There may be up to the same number of entries as questions. Optional, if not defined &lsquo;No&rsquo; will appear</li>
-<li><strong>center </strong> Alternative spelling for them as can&rsquo;t spell.</li>
-<li><strong>centre </strong> Each text has it&rsquo;s own entry, as many as required. It will appear in the centre below the slider. They will be displayed in the order given. There may be up to the same number of entries as questions. Optional, if not defined no centre text will appear. If an entry contains a single dash (-), no centre text will appear, allowing a centre text for following questions.</li>
-<li><strong>right</strong>  Each text has it&rsquo;s own entry, as many as required. It will appear on the right below the slider. They will be displayed in the order given. There may be up to the same number of entries as questions. Optional, if not defined &lsquo;Yes&rsquo; will appear</li>
-<li><strong>result</strong>  Each result has it&rsquo;s own entry, as many as required. The results will be distributed equally around the tacho dial. If the result text contains <em>%d%</em>, the result percentage will be substituted. If five results are used, they will correspond roughly with the tacho dial segments.</li>
+<li>**intro ** The initial text that will appear on the panel below the tacho dial and above the start button.</li>
+<li><strong>question</strong>  Each question has it’s own entry, as many as required within reason. They will be asked in the order given.</li>
+<li><strong>left</strong>  Each text has it’s own entry, as many as required. It will appear on the left below the slider. They will be displayed in the order given. There may be up to the same number of entries as questions. Optional, if not defined ‘No’ will appear</li>
+<li>**center ** Alternative spelling for them as can’t spell.</li>
+<li>**centre ** Each text has it’s own entry, as many as required. It will appear in the centre below the slider. They will be displayed in the order given. There may be up to the same number of entries as questions. Optional, if not defined no centre text will appear. If an entry contains a single dash (-), no centre text will appear, allowing a centre text for following questions.</li>
+<li><strong>right</strong>  Each text has it’s own entry, as many as required. It will appear on the right below the slider. They will be displayed in the order given. There may be up to the same number of entries as questions. Optional, if not defined ‘Yes’ will appear</li>
+<li><strong>result</strong>  Each result has it’s own entry, as many as required. The results will be distributed equally around the tacho dial. If the result text contains <em>%d%</em>, the result percentage will be substituted. If five results are used, they will correspond roughly with the tacho dial segments.</li>
 <li><strong>weights</strong>  A comma delimited list of weighting values for the questions. If provided, there may be up to the same number of values as questions. Optional, if not provided the weighting value for questions will default to 1.</li>
 <li><strong>duration</strong>  The duration of the animation in milliseconds. Optional, defaults to 2000. See <a href="http://api.jquery.com/animate">JQuery</a> docs.</li>
-<li><strong>easing</strong>  The easing function to be used for the dynamics of the tacho dial pointer. Optional, defaults to &lsquo;easeOutQuad&rsquo;. See <a href="http://api.jqueryui.com/easings">JQuery UI</a> docs.</li>
+<li><strong>easing</strong>  The easing function to be used for the dynamics of the tacho dial pointer. Optional, defaults to ‘easeOutQuad’. See <a href="http://api.jqueryui.com/easings">JQuery UI</a> docs.</li>
 <li><strong>more</strong>  Optional, if this field is defined a Find Out More button will appear on the results panel. The field should contain a valid URL.</li>
-<li><strong>fb-appid </strong> Optional<strong>,</strong> if this field is defined a Facebook button will appear on the results panel which will show a Facebook feed dialog if clicked. The id must relate to an app defined on the <a href="https://developers.facebook.com/apps">Facebook App Dashboard</a> for your site.</li>
+<li><strong>fb-appid ** Optional</strong>,** if this field is defined a Facebook button will appear on the results panel which will show a Facebook feed dialog if clicked. The id must relate to an app defined on the <a href="https://developers.facebook.com/apps">Facebook App Dashboard</a> for your site.</li>
 <li><strong>fb-caption</strong>  Optional, the caption you want to appear on the feed dialog. If not defined this will default to the page title.</li>
 <li><strong>fb-description</strong>  Optional, the description you want to appear in the feed dialog. If not defined, this will default to the result text. If the description contains <em>%d%</em>, the result percentage will be substituted. If the description contains %s, the whole result text will be substituted.</li>
-<li><strong>fb-picture </strong> Optional, the picture you want to appear in the feed dialog. If not defined, Facebook will substitute an image from your site.</li>
-<li><strong>addthis </strong> Optional, If this variable id set to <em>above</em> and the <a href="http://wordpress.org/plugins/addthis">AddThis plugin</a> is installed, an Addthis toolbox with standard Facebook, Twitter, Pinterest, Google+ and share buttons will appear above the whatever-o-meter. If it is set to <em>below</em>, the toolbox will appear below.</li>
-<li><strong> fb-like</strong>  Optional, if this is set to <em>above</em> standard Facebook like and share buttons will appear above the whatever-o-meter. If it is set to <em>below</em>, the buttons will appear below. The like and share buttons are a standard Facebook plugin and will not use information from the fields above.</li>
-<li><strong>colors</strong>  Alternative spelling for them as can&rsquo;t spell.</li>
-<li><strong>colours </strong> The colours you would like to appear in the dial and buttons. Optional, should be a comma delimited list of five colours. The colours are the dial background colour, ticks, digits,  pointer, buttons, any colour format in the <a href="http://www.w3.org/TR/css3-color/#svg-color">CSS standard</a> should work: #abc, #abcdef, goldenrod, rgb(r,g,b). Defaults to palegoldenrod, black, black, black, palegoldenrod.</li>
-<li><strong>debug </strong> Causes the plugin to show the values of the custom fields below the whatever-o-meter for debugging if defined.</li>
+<li>**fb-picture ** Optional, the picture you want to appear in the feed dialog. If not defined, Facebook will substitute an image from your site.</li>
+<li>**addthis ** Optional, If this variable id set to <em>above</em> and the <a href="http://wordpress.org/plugins/addthis">AddThis plugin</a> is installed, an Addthis toolbox with standard Facebook, Twitter, Pinterest, Google+ and share buttons will appear above the whatever-o-meter. If it is set to <em>below</em>, the toolbox will appear below.</li>
+<li>** fb-like**  Optional, if this is set to _above_ standard Facebook like and share buttons will appear above the whatever-o-meter. If it is set to _below_, the buttons will appear below. The like and share buttons are a standard Facebook plugin and will not use information from the fields above.</li>
+<li><strong>colors</strong>  Alternative spelling for them as can’t spell.</li>
+<li>**colours ** The colours you would like to appear in the dial and buttons. Optional, should be a comma delimited list of five colours. The colours are the dial background colour, ticks, digits,  pointer, buttons, any colour format in the <a href="http://www.w3.org/TR/css3-color/#svg-color">CSS standard</a> should work: #abc, #abcdef, goldenrod, rgb(r,g,b). Defaults to palegoldenrod, black, black, black, palegoldenrod.</li>
+<li>**debug ** Causes the plugin to show the values of the custom fields below the whatever-o-meter for debugging if defined.</li>
 </ul>
-
 <h3 id="specification">Specification</h3>
-
 <p>The whatever-o-meter initial display will show the tacho dial with the initial panel with the intro text and the start button below. Any other content on the page will appear above and below.</p>
-
 <p>When the start button is clicked the initial panel will slide up and a panel with first question on it, a slider, and a next button will appear. The slider is moved or clicked and when the next button is clicked the next question will appear in the same manner. This will continue until all the questions have been asked and  answered</p>
-
 <p>The result panel will slide up showing the result text and an again button. The tacho dial pointer will rotate dynamically to a position indicating the value of the result. The tacho dial od-o-meter will be updated with the value of the result. If the again button is clicked the result panel will slide down and the initial intro panel will appear. The tacho dial pointer will rotate back to the rest position and the od-o-meter set back to zero. If the Facebook button is clicked, and the <strong>fb-appid</strong> custom field is defined, a Facebook feed dialog will be popped up by Facebook.</p>
 
     </p>
@@ -291,6 +273,10 @@ code {
   <h4>Recent Posts</h4>
   <ul>
     
+      <li><a href="/blog/derive-edit-position/">
+        Derive Edit Position from Markdown
+      </a></li>
+    
       <li><a href="/blog/fixing-basin-waste-pop-up/">
         Fixing Basin Waste Pop Up
       </a></li>
@@ -327,10 +313,6 @@ code {
         Green Tomatoes
       </a></li>
     
-      <li><a href="/blog/post/create-pdf-report/">
-        Create PDF Report
-      </a></li>
-    
   </ul>
 
   
@@ -362,7 +344,7 @@ code {
       <div class="row column">
         <p>
           
-          Copyright &copy; 2019 Bill Farmer
+          Copyright © 2019 Bill Farmer
           
         </p>
         <p>

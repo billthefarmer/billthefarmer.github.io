@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hacking on Bill Farmer</title>
@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2019 Bill Farmer</copyright>
-    <lastBuildDate>Mon, 17 Jun 2019 18:30:39 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 08 Feb 2020 18:24:23 +0000</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Derive Edit Position from Markdown</title>
+      <link>https://billthefarmer.github.io/blog/derive-edit-position/</link>
+      <pubDate>Sat, 08 Feb 2020 18:24:23 +0000</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/derive-edit-position/</guid>
+      <description>I had a request to switch to the edit view from the markdown view at the double tap position in my Diary app. The app already has a gesture detector so I just had to add an onDoubleTap function.
+To get the tap position in the markdown view it is necessary to compensate for the position of the view on the screen, scrolling, and the display density.
+// onDoubleTap  @Override public boolean onDoubleTap(MotionEvent e) { if (shown) { int[] l = new int[2]; markdownView.</description>
+    </item>
     
     <item>
       <title>Pi-hole Cloudflare, DNSCrypt, Unbound Setup</title>
@@ -152,7 +163,7 @@ I get a list of the file names into a buffer using find, which I then open with 
       <guid>https://billthefarmer.github.io/blog/markdown-openstreetmap-maps/</guid>
       <description>There does not seem to be a convention for showing maps or co-ordinates in Markdown, but almost anything gets put in square brackets [&amp;lt;anything&amp;gt;].
 I had a request from Marco the other day to put OpenStreetMap maps in my Diary app using
- [&amp;lt;lat&amp;gt;,&amp;lt;lng&amp;gt;]  syntax. So I did a bit of a search to see if there was a convention in Markdown for co-ordinates and couldn&amp;rsquo;t find anything. So we seem to have broken new ground here.</description>
+ [&amp;lt;lat&amp;gt;,&amp;lt;lng&amp;gt;] syntax. So I did a bit of a search to see if there was a convention in Markdown for co-ordinates and couldn&amp;rsquo;t find anything. So we seem to have broken new ground here.</description>
     </item>
     
     <item>
@@ -183,7 +194,7 @@ To add an entry to an android calendar you first have to find out the calendar i
       
       <guid>https://billthefarmer.github.io/blog/whatever-o-meter-revisited/</guid>
       <description>I wrote the whatever-o-meter about five years ago in PHP and Javascript as a Wordpress plugin. As I have migrated my blog to Hugo, I thought to have a go at reimplementing it. The exporter I used made a good job of translating the Wordpress custom fields to Hugo front matter parameters. I had to put dashes in quotes, otherwise they get interpreted as [&amp;lt;nil&amp;gt;].
-intro:Pleaseanswerthefollowingquestionscarefullyandtruthfully.question:-YouarelyinginbedonMondaymorning...result:-&amp;#39;%d percent, Perhaps you should consider emigration.</description>
+intro:Pleaseanswerthefollowingquestionscarefullyandtruthfully.question:- YouarelyinginbedonMondaymorning...result:- &amp;#39;%d percent, Perhaps you should consider emigration.</description>
     </item>
     
     <item>
@@ -203,7 +214,7 @@ I looked for migration tools, and found two:
       <pubDate>Sun, 23 Jul 2017 10:48:17 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/resolving-content-uris-in-android/</guid>
-      <description>If you write an android app that handles images or any other sort of file your app may be required to deal with &amp;lsquo;content&amp;rsquo; uris (content://). There is a very useful utility which resolves these into &amp;lsquo;file&amp;rsquo; uris (file:///) FileUtils.java. This contains one external reference to LocalStorageProvider, which can be resolved by removing the function isLocalStorageDocument() and references to it.
+      <description>If you write an android app that handles images or any other sort of file your app may be required to deal with ‘content’ uris (content://). There is a very useful utility which resolves these into ‘file’ uris (file:///) FileUtils.java. This contains one external reference to LocalStorageProvider, which can be resolved by removing the function isLocalStorageDocument() and references to it.
 // import com.ianhanniballake.localstorage.LocalStorageProvider;  // ...  /** * @param uri The Uri to check.</description>
     </item>
     
@@ -223,7 +234,7 @@ I looked for migration tools, and found two:
       <pubDate>Sat, 10 Dec 2016 13:59:22 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/using-emacs-as-an-ide/</guid>
-      <description>I had to learn Emacs on Unix many years ago as it was at that time the only development environment for Smallworld Magik. Having learnt it, I have stuck with it as it provides a consistent platform for editing source code and building applications in as many computer languages and platforms as I have used and many more I haven&amp;rsquo;t. It is the only source code editor I have used that always gets the indentation and syntax highlighting right.</description>
+      <description>I had to learn Emacs on Unix many years ago as it was at that time the only development environment for Smallworld Magik. Having learnt it, I have stuck with it as it provides a consistent platform for editing source code and building applications in as many computer languages and platforms as I have used and many more I haven’t. It is the only source code editor I have used that always gets the indentation and syntax highlighting right.</description>
     </item>
     
     <item>
@@ -242,7 +253,7 @@ When I first installed Cyanogenmod, I had to use an unofficial build, as an offi
       <pubDate>Mon, 25 Jul 2016 19:46:29 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/upgrading-to-windows-10/</guid>
-      <description>I didn&amp;rsquo;t like the Windows 10 preview, I thought it was a pain in the backside, so I have delayed upgrading from Windows 7 until the last minute when I got the countdown notification. I have been running a slightly dodgy copy of Windows 7 for a long time, so I was somewhat surprised when, out of the goodness of their hearts, Microsoft said I could have an activated copy of Windows 10 for free.</description>
+      <description>I didn’t like the Windows 10 preview, I thought it was a pain in the backside, so I have delayed upgrading from Windows 7 until the last minute when I got the countdown notification. I have been running a slightly dodgy copy of Windows 7 for a long time, so I was somewhat surprised when, out of the goodness of their hearts, Microsoft said I could have an activated copy of Windows 10 for free.</description>
     </item>
     
     <item>
@@ -252,7 +263,7 @@ When I first installed Cyanogenmod, I had to use an unofficial build, as an offi
       
       <guid>https://billthefarmer.github.io/blog/resurrecting-a-netbook-as-a-web-server/</guid>
       <description>When I got fed up with Windows XP on my netbook, I tried windows 7 on it, but it was barely usable. So I tried Windows 7 Starter which was better. I upgraded it to Home Premium, which was OK at first, but slowed down as it got clagged up with updates.
-That was it until recently, when I read an article about putting Windows 10 on one. I didn&amp;rsquo;t try that, but I did try Linux Mint on it.</description>
+That was it until recently, when I read an article about putting Windows 10 on one. I didn’t try that, but I did try Linux Mint on it.</description>
     </item>
     
     <item>
@@ -261,7 +272,7 @@ That was it until recently, when I read an article about putting Windows 10 on o
       <pubDate>Tue, 02 Feb 2016 17:59:09 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/build-mac-osx-apps-using-command-line-tools/</guid>
-      <description>You will need to install the Xcode command line tools, you don&amp;rsquo;t need the Xcode app. The easiest way to do this is to attempt to build an app like emacs by typing ./configure on the command line. A dialog box will pop up asking if you want to download and install the tools.
+      <description>You will need to install the Xcode command line tools, you don’t need the Xcode app. The easiest way to do this is to attempt to build an app like emacs by typing ./configure on the command line. A dialog box will pop up asking if you want to download and install the tools.
 Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to find. You can type gcc -help or clang -help on the command line to get some info.</description>
     </item>
     
@@ -282,7 +293,7 @@ There are two ways to do this:
       <pubDate>Tue, 26 Jan 2016 11:36:38 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/install-osx-el-capitan-on-a-pc-mbr/</guid>
-      <description>Prerequisites  A real Mac or Hackintosh A spare disk drive &amp;#8211; at least 8Gb, preferably USB An 8Gb or larger USB stick The Install OSX El Capitan.app from the App Store A disk partition to install in  Install on spare disk drive Connect your spare drive to your PC. Use the method described here to build the El Capitan install USB stick and install OSX using the GPT partition scheme on your spare disk drive.</description>
+      <description>Prerequisites  A real Mac or Hackintosh A spare disk drive – at least 8Gb, preferably USB An 8Gb or larger USB stick The Install OSX El Capitan.app from the App Store A disk partition to install in  Install on spare disk drive Connect your spare drive to your PC. Use the method described here to build the El Capitan install USB stick and install OSX using the GPT partition scheme on your spare disk drive.</description>
     </item>
     
     <item>
@@ -292,7 +303,7 @@ There are two ways to do this:
       
       <guid>https://billthefarmer.github.io/blog/move-linux-mint-root-partition/</guid>
       <description>I recently added a new disk drive to my workstation and, as part of reorganising, wanted to move the Linux Mint root partition from one disk to another. Naturally I googled duckied it and found a certain amount of useful info.
-I used gnuparted to copy the partition from one disk to another. The standard method to reinstall grub on a partition so it will boot appears to be to mount it and use grub-install with the &amp;#8211;boot-directory option like this.</description>
+I used gnuparted to copy the partition from one disk to another. The standard method to reinstall grub on a partition so it will boot appears to be to mount it and use grub-install with the –boot-directory option like this.</description>
     </item>
     
     <item>
@@ -311,7 +322,7 @@ I used gnuparted to copy the partition from one disk to another. The standard me
       <pubDate>Wed, 01 Apr 2015 18:17:07 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/search-engine-optimisation-seo/</guid>
-      <description>I haven&amp;rsquo;t worried too much about search engines since I set this site up. I registered it with Google initially, and after a few days it appeared in the results, so that was good enough for me. If you search for Old Shoreham Buccaneers, or a subset of that, the Buccaneers site appears high in the results, job done.
+      <description>I haven’t worried too much about search engines since I set this site up. I registered it with Google initially, and after a few days it appeared in the results, so that was good enough for me. If you search for Old Shoreham Buccaneers, or a subset of that, the Buccaneers site appears high in the results, job done.
 Since I published a recipe based on the BBC TV programme Italy Unpacked about a month ago, I have been getting a lot of hits on the Recipes page.</description>
     </item>
     
@@ -321,7 +332,7 @@ Since I published a recipe based on the BBC TV programme Italy Unpacked about a 
       <pubDate>Tue, 03 Mar 2015 12:44:13 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/fast-fourier-transform/</guid>
-      <description>I wrote a java tuner app a few years ago, so I needed a Fast Fourier Transform to do the frequency detection. I found a fairly simple implementation in java on the web somewhere, can&amp;rsquo;t remember where, tried it, and it worked fine. The frequency detection algorithm comes from The Dsp Dimension.
+      <description>I wrote a java tuner app a few years ago, so I needed a Fast Fourier Transform to do the frequency detection. I found a fairly simple implementation in java on the web somewhere, can’t remember where, tried it, and it worked fine. The frequency detection algorithm comes from The Dsp Dimension.
 A few years later I ported it to windows, added a few gizmos for tuning accordions and put it on Google Code.</description>
     </item>
     
@@ -331,7 +342,7 @@ A few years later I ported it to windows, added a few gizmos for tuning accordio
       <pubDate>Wed, 18 Feb 2015 17:45:54 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/transfer-contacts-from-iphone-to-android/</guid>
-      <description>I&amp;rsquo;ve been using an old iPhone 3G, and I&amp;rsquo;ve got myself a new Android phone. First off, I googled DuckDuckGo&amp;rsquo;d how to transfer my contacts and found lots of suggestions. First, I tried My Contacts Backup, but it wouldn&amp;rsquo;t install on the iPhone.
+      <description>I’ve been using an old iPhone 3G, and I’ve got myself a new Android phone. First off, I googled DuckDuckGo’d how to transfer my contacts and found lots of suggestions. First, I tried My Contacts Backup, but it wouldn’t install on the iPhone.
 So I synced the contacts with my Hackintosh using iTunes, exported the contacts to a vCard file, transferred it to the phone by email and imported the file to the Contacts app on the phone.</description>
     </item>
     
@@ -341,7 +352,7 @@ So I synced the contacts with my Hackintosh using iTunes, exported the contacts 
       <pubDate>Sat, 01 Nov 2014 13:10:54 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/c/</guid>
-      <description>I made a vow about 20 years ago not to attempt to learn C++, when a colleague went on a C++ course. I did buy a C++ book, but it wasn&amp;rsquo;t that useful. I have looked at the source of various C++ programs over the years to attempt to find out how they worked. I have, until recently, invariably found that the code that does something useful is either hidden in include files, or buried so deep in obscure code that just seems to create and do strange things with various objects, that I have been unable to find it.</description>
+      <description>I made a vow about 20 years ago not to attempt to learn C++, when a colleague went on a C++ course. I did buy a C++ book, but it wasn’t that useful. I have looked at the source of various C++ programs over the years to attempt to find out how they worked. I have, until recently, invariably found that the code that does something useful is either hidden in include files, or buried so deep in obscure code that just seems to create and do strange things with various objects, that I have been unable to find it.</description>
     </item>
     
     <item>
@@ -350,7 +361,7 @@ So I synced the contacts with my Hackintosh using iTunes, exported the contacts 
       <pubDate>Sat, 01 Nov 2014 12:18:28 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/java-collections/</guid>
-      <description>I find Java Collections frustrating and insane. I have been through this loop on several occasions. I decide I want a list to do whatever. So I look up List in the docs and find it&amp;rsquo;s an interface, ie: roll yer own. So I look down the hierarchy and find AbstractList, which is abstract, again: roll yer own. So finally I get to ArrayList which might do the job, but the docs aren&amp;rsquo;t too clear, so I try it and it works.</description>
+      <description>I find Java Collections frustrating and insane. I have been through this loop on several occasions. I decide I want a list to do whatever. So I look up List in the docs and find it’s an interface, ie: roll yer own. So I look down the hierarchy and find AbstractList, which is abstract, again: roll yer own. So finally I get to ArrayList which might do the job, but the docs aren’t too clear, so I try it and it works.</description>
     </item>
     
     <item>
@@ -359,8 +370,8 @@ So I synced the contacts with my Hackintosh using iTunes, exported the contacts 
       <pubDate>Fri, 06 Jun 2014 16:03:16 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/download-streamed-video/</guid>
-      <description>Online video providers tend to stream the video to a javascript player, so making it extremely difficult to capture the video. This blog explains a method using Chrome to spoof the user agent string, pretending to be an iPad. Unfortunately, this doesn&amp;rsquo;t seem to work any more in the latest version of Chrome.
-So I tried installing a user agent spoofing plugin in Firefox. It seemed to work, but the video didn&amp;rsquo;t play, so I couldn&amp;rsquo;t find the url.</description>
+      <description>Online video providers tend to stream the video to a javascript player, so making it extremely difficult to capture the video. This blog explains a method using Chrome to spoof the user agent string, pretending to be an iPad. Unfortunately, this doesn’t seem to work any more in the latest version of Chrome.
+So I tried installing a user agent spoofing plugin in Firefox. It seemed to work, but the video didn’t play, so I couldn’t find the url.</description>
     </item>
     
     <item>
@@ -379,7 +390,7 @@ This issue is reminiscent of back in the day when you actually had or could get 
       <pubDate>Wed, 28 May 2014 11:05:54 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/upgrading-wordpress/</guid>
-      <description>This site has the firewall set up so that the web server has no external access. This means that I can&amp;rsquo;t use the usual WordPress update mechanism to keep it up to date. I use FileZilla for maintaining the server, and I recently discovered you can use drag and drop to move stuff around remotely.
+      <description>This site has the firewall set up so that the web server has no external access. This means that I can’t use the usual WordPress update mechanism to keep it up to date. I use FileZilla for maintaining the server, and I recently discovered you can use drag and drop to move stuff around remotely.
 So my easy WordPress upgrade method is:
  Download the latest zip file and unzip it.</description>
     </item>
@@ -390,9 +401,9 @@ So my easy WordPress upgrade method is:
       <pubDate>Sat, 29 Mar 2014 15:26:14 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/haskell/</guid>
-      <description>I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I&amp;rsquo;s give it a go and see how I got on.
+      <description>I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I’s give it a go and see how I got on.
 You can try it out in your browser: http://tryhaskell.org
-λ let factorial n = product [1..n] in factorial 99 9332621544394415268169923885626670049071596826438162146859 2963895217599993229915608941463976156518286253697920827223 7582511852109168640000000000000000000000 :: (Enum a, Num a) =&amp;gt; a λ  Pretty impressive! So I thought I&amp;rsquo;d try a simple web application.</description>
+λ let factorial n = product [1..n] in factorial 99 9332621544394415268169923885626670049071596826438162146859 2963895217599993229915608941463976156518286253697920827223 7582511852109168640000000000000000000000 :: (Enum a, Num a) =&amp;gt; a λ Pretty impressive! So I thought I’d try a simple web application.</description>
     </item>
     
     <item>
@@ -410,7 +421,7 @@ You can try it out in your browser: http://tryhaskell.org
       <pubDate>Sat, 21 Dec 2013 20:16:37 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/raspberry-pi-wifi/</guid>
-      <description>When I got my Pi some months ago I bought a wifi adapter for it, as you do. But I couldn&amp;rsquo;t get it to work reliably in Raspbian, and I didn&amp;rsquo;t even try in Arch Linux. So I tested the adapter on my windoze box, and it worked just fine, and I tried it with Linux and it worked just fine, so I put it in the &amp;lsquo;too hard&amp;rsquo; box.</description>
+      <description>When I got my Pi some months ago I bought a wifi adapter for it, as you do. But I couldn’t get it to work reliably in Raspbian, and I didn’t even try in Arch Linux. So I tested the adapter on my windoze box, and it worked just fine, and I tried it with Linux and it worked just fine, so I put it in the ‘too hard’ box.</description>
     </item>
     
     <item>
@@ -419,7 +430,7 @@ You can try it out in your browser: http://tryhaskell.org
       <pubDate>Sat, 21 Dec 2013 18:54:52 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/python/</guid>
-      <description>I&amp;rsquo;ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: &amp;lsquo;Blank space shalt not be significant except to separate tokens where necessary.&amp;rsquo;. That&amp;rsquo;s why you can minimise a lengthy JavaScript script like jQuery to one enormously long line and it still works just fine.
+      <description>I’ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: ‘Blank space shalt not be significant except to separate tokens where necessary.’. That’s why you can minimise a lengthy JavaScript script like jQuery to one enormously long line and it still works just fine.
 But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter an advent calender competition which involved checking a web page to see if your name has come up and sending an email if it does.</description>
     </item>
     

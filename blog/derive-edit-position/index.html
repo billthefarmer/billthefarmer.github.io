@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<meta property="og:title" content="Derive Edit Position from Markdown" />
+<meta property="og:description" content="I had a request to switch to the edit view from the markdown view at the double tap position in my Diary app. The app already has a gesture detector so I just had to add an onDoubleTap function.
+To get the tap position in the markdown view it is necessary to compensate for the position of the view on the screen, scrolling, and the display density.
+// onDoubleTap  @Override public boolean onDoubleTap(MotionEvent e) { if (shown) { int[] l = new int[2]; markdownView." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://billthefarmer.github.io/blog/derive-edit-position/" />
+<meta property="article:published_time" content="2020-02-08T18:24:23+00:00" />
+<meta property="article:modified_time" content="2020-02-08T18:24:23+00:00" />
+
+<meta itemprop="name" content="Derive Edit Position from Markdown">
+<meta itemprop="description" content="I had a request to switch to the edit view from the markdown view at the double tap position in my Diary app. The app already has a gesture detector so I just had to add an onDoubleTap function.
+To get the tap position in the markdown view it is necessary to compensate for the position of the view on the screen, scrolling, and the display density.
+// onDoubleTap  @Override public boolean onDoubleTap(MotionEvent e) { if (shown) { int[] l = new int[2]; markdownView.">
+<meta itemprop="datePublished" content="2020-02-08T18:24:23&#43;00:00" />
+<meta itemprop="dateModified" content="2020-02-08T18:24:23&#43;00:00" />
+<meta itemprop="wordCount" content="356">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Derive Edit Position from Markdown"/>
+<meta name="twitter:description" content="I had a request to switch to the edit view from the markdown view at the double tap position in my Diary app. The app already has a gesture detector so I just had to add an onDoubleTap function.
+To get the tap position in the markdown view it is necessary to compensate for the position of the view on the screen, scrolling, and the display density.
+// onDoubleTap  @Override public boolean onDoubleTap(MotionEvent e) { if (shown) { int[] l = new int[2]; markdownView."/>
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.64.0" />
+
+
+    <base href="https://billthefarmer.github.io/blog/">
+    <link rel="canonical" href="https://billthefarmer.github.io/blog/derive-edit-position/">
+    <title>Derive Edit Position from Markdown | Bill Farmer</title>
+
+    <!-- CSS -->
+    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    
+    
+
+    
+    
+
+<style>
+.callout.large {
+    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.callout.large a, .callout.large p {
+    color: white;
+}
+pre {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+code {
+    padding: 0;
+    border: 0;
+    background-color: #fff;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-weight: normal;
+    color: #0a0a0a;
+}
+</style>
+
+
+
+
+  </head>
+  <body>
+
+    <header class="nav">
+      <div class="top-bar">
+        <div class="row column">
+          <div class="top-bar-left">
+            <ul class="menu">
+              <li><a href="https://billthefarmer.github.io/blog/">
+                  Bill Farmer
+                </a></li>
+            </ul>
+          </div>
+          <div class="top-bar-right">
+            <ul class="menu">
+              <li class=""><a href="https://billthefarmer.github.io/blog/">
+                Home
+              </a></li>
+              
+                
+                  <li><a href="https://billthefarmer.github.io/blog/">
+                    Bill Farmer
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                    Categories
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                    Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                    DIY
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                    Recipes
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                    Electronics
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                    Index
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                    Morris-o-meter
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                    About
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                    Test-o-meter
+                  </a></li>
+                
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <header class="blog-header">
+      <div class="callout large">
+        <div class="row column text-center">
+          <h1>
+            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+          </h1>
+          
+            <p>
+              Random thoughts on random subjects
+            </p>
+          
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="row" id="content">
+        <div class="medium-8 columns">
+          
+  
+
+
+  <div class="blog-post">
+    <h3>
+      <a href="https://billthefarmer.github.io/blog/derive-edit-position/">Derive Edit Position from Markdown</a>
+    </h3>
+    <div class="callout small">
+      <small>
+        <time datetime="2020-02-08T18:24:23Z">
+          Sat Feb 8, 2020
+        </time> by Bill Farmer.
+        Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+        
+        <br>
+        
+      </small>
+    </div>
+    <p>
+      <p>I had a request to switch to the edit view from the markdown view at
+the double tap position in my <a href="https://github.com/billthefarmer/diary">Diary</a> app. The app already has a
+gesture detector so I just had to add an <a href="https://developer.android.com/reference/android/view/GestureDetector.SimpleOnGestureListener.html#onDoubleTap(android.view.MotionEvent)">onDoubleTap</a> function.</p>
+<p>To get the tap position in the markdown view it is necessary to
+compensate for the position of the view on the screen, scrolling, and
+the display density.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        <span style="color:#080;font-style:italic">// onDoubleTap
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f">@Override</span>
+        <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">onDoubleTap</span><span style="color:#666">(</span>MotionEvent e<span style="color:#666">)</span>
+        <span style="color:#666">{</span>
+            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>shown<span style="color:#666">)</span>
+            <span style="color:#666">{</span>
+                <span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">[</span><span style="color:#666">]</span> l <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> <span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">[</span>2<span style="color:#666">]</span><span style="color:#666">;</span>
+                markdownView<span style="color:#666">.</span><span style="color:#b44">getLocationOnScreen</span><span style="color:#666">(</span>l<span style="color:#666">)</span><span style="color:#666">;</span>
+
+                <span style="color:#080;font-style:italic">// Get tap position
+</span><span style="color:#080;font-style:italic"></span>                <span style="color:#0b0;font-weight:bold">float</span> y <span style="color:#666">=</span> e<span style="color:#666">.</span><span style="color:#b44">getY</span><span style="color:#666">(</span><span style="color:#666">)</span> <span style="color:#666">-</span> l<span style="color:#666">[</span>1<span style="color:#666">]</span><span style="color:#666">;</span>
+
+                <span style="color:#0b0;font-weight:bold">int</span> scrollY <span style="color:#666">=</span> markdownView<span style="color:#666">.</span><span style="color:#b44">getScrollY</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+                <span style="color:#0b0;font-weight:bold">int</span> contentHeight <span style="color:#666">=</span> markdownView<span style="color:#666">.</span><span style="color:#b44">getContentHeight</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+                <span style="color:#0b0;font-weight:bold">float</span> density <span style="color:#666">=</span> getResources<span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">getDisplayMetrics</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">density</span><span style="color:#666">;</span>
+
+                <span style="color:#080;font-style:italic">// Get markdown position
+</span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">float</span> p <span style="color:#666">=</span> <span style="color:#666">(</span>y <span style="color:#666">+</span> scrollY<span style="color:#666">)</span> <span style="color:#666">/</span> <span style="color:#666">(</span>contentHeight <span style="color:#666">*</span> density<span style="color:#666">)</span><span style="color:#666">;</span>
+</code></pre></div><p>The function to get the view location on screen is a bit arcane in
+that you must provide a two element array for the X and Y
+co-ordinates. The position as a proportion of the total length of the
+displayed markdown is calculated from the corrected Y position, the
+scroll position and the density.</p>
+<p>Switch to the edit view and close any open search.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">                <span style="color:#080;font-style:italic">// Animation
+</span><span style="color:#080;font-style:italic"></span>                animateEdit<span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+
+                <span style="color:#080;font-style:italic">// Close text search
+</span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>searchItem<span style="color:#666">.</span><span style="color:#b44">isActionViewExpanded</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">)</span>
+                    searchItem<span style="color:#666">.</span><span style="color:#b44">collapseActionView</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</code></pre></div><p>It is necessary to scroll after a delay, otherwise it gets ignored. To
+find the position in the edit view it is necessary to get the total
+height of the text, calculate the Y position as a proportion, and then
+use a series of functions to get the text line, the offset in the text
+to set the selection, and the position of the line to scroll to it.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+                <span style="color:#080;font-style:italic">// Scroll after delay
+</span><span style="color:#080;font-style:italic"></span>                textView<span style="color:#666">.</span><span style="color:#b44">postDelayed</span><span style="color:#666">(</span><span style="color:#666">(</span><span style="color:#666">)</span> <span style="color:#666">-</span><span style="color:#666">&gt;</span>
+                <span style="color:#666">{</span>
+                    <span style="color:#0b0;font-weight:bold">int</span> h <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">getHeight</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+                    <span style="color:#0b0;font-weight:bold">int</span> v <span style="color:#666">=</span> Math<span style="color:#666">.</span><span style="color:#b44">round</span><span style="color:#666">(</span>h <span style="color:#666">*</span> p<span style="color:#666">)</span><span style="color:#666">;</span>
+
+                    <span style="color:#080;font-style:italic">// Get line
+</span><span style="color:#080;font-style:italic"></span>                    <span style="color:#0b0;font-weight:bold">int</span> line <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">getLineForVertical</span><span style="color:#666">(</span>v<span style="color:#666">)</span><span style="color:#666">;</span>
+                    <span style="color:#0b0;font-weight:bold">int</span> offset <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">(</span><span style="color:#666">)</span>
+                        <span style="color:#666">.</span><span style="color:#b44">getOffsetForHorizontal</span><span style="color:#666">(</span>line<span style="color:#666">,</span> 0<span style="color:#666">)</span><span style="color:#666">;</span>
+                    textView<span style="color:#666">.</span><span style="color:#b44">setSelection</span><span style="color:#666">(</span>offset<span style="color:#666">)</span><span style="color:#666">;</span>
+
+                    <span style="color:#080;font-style:italic">// get text position
+</span><span style="color:#080;font-style:italic"></span>                    <span style="color:#0b0;font-weight:bold">int</span> position <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">getLineBaseline</span><span style="color:#666">(</span>line<span style="color:#666">)</span><span style="color:#666">;</span>
+
+                    <span style="color:#080;font-style:italic">// Scroll to it
+</span><span style="color:#080;font-style:italic"></span>                    <span style="color:#0b0;font-weight:bold">int</span> height <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getHeight</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+                    scrollView<span style="color:#666">.</span><span style="color:#b44">smoothScrollTo</span><span style="color:#666">(</span>0<span style="color:#666">,</span> position <span style="color:#666">-</span> height <span style="color:#666">/</span> 2<span style="color:#666">)</span><span style="color:#666">;</span>
+                <span style="color:#666">}</span><span style="color:#666">,</span> POSITION_DELAY<span style="color:#666">)</span><span style="color:#666">;</span>
+
+                shown <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
+                <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
+            <span style="color:#666">}</span>
+            <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
+        <span style="color:#666">}</span>
+</code></pre></div><p>This method is not completely accurate because of embedded images,
+text styles, etc, but good enough to get the cursor and scroll
+position in about the right place.</p>
+
+    </p>
+    
+    
+
+<hr>
+<h3>See Also</h3>
+<ul>
+  
+  <li><a href="/blog/markdown-openstreetmap-maps/">Markdown OpenStreetMap Maps</a></li>
+  
+  <li><a href="/blog/post/source-code-highlighting/">Source Code Syntax Highlighting</a></li>
+  
+  <li><a href="/blog/post/musical-temperaments/">Musical Temperaments</a></li>
+  
+  <li><a href="/blog/post/draw-musical-staff/">Draw Musical Staff</a></li>
+  
+  <li><a href="/blog/post/expand-android-selection/">Expand Android Selection</a></li>
+  
+</ul>
+
+
+      <hr>
+  </div>
+
+  
+
+
+        </div>
+          <div class="medium-3 columns" data-sticky-container>
+  <div class="sticky" data-sticky data-anchor="content">
+
+  
+
+  
+
+  <h4>Recent Posts</h4>
+  <ul>
+    
+      <li><a href="/blog/derive-edit-position/">
+        Derive Edit Position from Markdown
+      </a></li>
+    
+      <li><a href="/blog/fixing-basin-waste-pop-up/">
+        Fixing Basin Waste Pop Up
+      </a></li>
+    
+      <li><a href="/blog/pi-hole-cloudflare-setup/">
+        Pi-hole Cloudflare, DNSCrypt, Unbound Setup
+      </a></li>
+    
+      <li><a href="/blog/post/mushrooms-and-soy-sauce/">
+        Mushrooms and Soy Sauce
+      </a></li>
+    
+      <li><a href="/blog/post/source-code-highlighting/">
+        Source Code Syntax Highlighting
+      </a></li>
+    
+      <li><a href="/blog/post/musical-temperaments/">
+        Musical Temperaments
+      </a></li>
+    
+      <li><a href="/blog/post/draw-musical-staff/">
+        Draw Musical Staff
+      </a></li>
+    
+      <li><a href="/blog/post/expand-android-selection/">
+        Expand Android Selection
+      </a></li>
+    
+      <li><a href="/blog/interesting-mash/">
+        Interesting Mash
+      </a></li>
+    
+      <li><a href="/blog/green-tomatoes/">
+        Green Tomatoes
+      </a></li>
+    
+  </ul>
+
+  
+    <h4>Links</h4>
+    <ul>
+      
+        <li><a href="https://github.com/billthefarmer">
+          Github
+        </a></li>
+      
+        <li><a href="https://gitlab.com/williamjfarmer">
+          Gitlab
+        </a></li>
+      
+        <li><a href="http://billthefarmer.github.io">
+          Home
+        </a></li>
+      
+    </ul>
+  
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="blog-footer">
+      <div class="row column">
+        <p>
+          
+          Copyright © 2019 Bill Farmer
+          
+        </p>
+        <p>
+          <a href="https://billthefarmer.github.io/blog/derive-edit-position/#">Back to top</a>
+        </p>
+      </div>
+    </footer>
+
+  <foot>
+
+    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+
+  </foot>
+  </body>
+</html>

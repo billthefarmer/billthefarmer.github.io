@@ -10,14 +10,10 @@
 <meta property="og:description" content="Random thoughts on random subjects" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/categories/hacking/" />
-
-<meta property="og:updated_time" content="2019-06-17T18:30:39&#43;01:00"/>
-
+<meta property="og:updated_time" content="2020-02-08T18:24:23+00:00" />
 
 <meta itemprop="name" content="Hacking">
 <meta itemprop="description" content="Random thoughts on random subjects">
-
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hacking"/>
 <meta name="twitter:description" content="Random thoughts on random subjects"/>
@@ -27,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.64.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -99,12 +95,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
-                    DIY
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                    DIY
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
@@ -160,6 +156,42 @@ code {
 
 
 
+
+
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/handling-run-time-changes-in-android/">Handling run time changes in Android</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2017-01-08T18:49:31Z">
+        Sun Jan 8, 2017
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    Two articles, Handling Configuration Changes and Handling Configuration Changes with Fragments recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:
+ An android fragment is quite a complex heavyweight object to use just for retaining data and possibly a background task, and the fragment management is not simple. Fragments are not retained if the associated activity is discarded by calling finish().
+  </p>
+  <a href='https://billthefarmer.github.io/blog/handling-run-time-changes-in-android/'>Read more →</a>
+  <hr>
+</div>
+
+
   
 
 <div class="blog-post">
@@ -184,7 +216,7 @@ code {
     </small>
   </div>
   <p>
-    I had to learn Emacs on Unix many years ago as it was at that time the only development environment for Smallworld Magik. Having learnt it, I have stuck with it as it provides a consistent platform for editing source code and building applications in as many computer languages and platforms as I have used and many more I haven&rsquo;t. It is the only source code editor I have used that always gets the indentation and syntax highlighting right.
+    I had to learn Emacs on Unix many years ago as it was at that time the only development environment for Smallworld Magik. Having learnt it, I have stuck with it as it provides a consistent platform for editing source code and building applications in as many computer languages and platforms as I have used and many more I haven’t. It is the only source code editor I have used that always gets the indentation and syntax highlighting right.
   </p>
   <a href='https://billthefarmer.github.io/blog/using-emacs-as-an-ide/'>Read more →</a>
   <hr>
@@ -247,7 +279,7 @@ When I first installed Cyanogenmod, I had to use an unofficial build, as an offi
     </small>
   </div>
   <p>
-    I didn&rsquo;t like the Windows 10 preview, I thought it was a pain in the backside, so I have delayed upgrading from Windows 7 until the last minute when I got the countdown notification. I have been running a slightly dodgy copy of Windows 7 for a long time, so I was somewhat surprised when, out of the goodness of their hearts, Microsoft said I could have an activated copy of Windows 10 for free.
+    I didn’t like the Windows 10 preview, I thought it was a pain in the backside, so I have delayed upgrading from Windows 7 until the last minute when I got the countdown notification. I have been running a slightly dodgy copy of Windows 7 for a long time, so I was somewhat surprised when, out of the goodness of their hearts, Microsoft said I could have an activated copy of Windows 10 for free.
   </p>
   <a href='https://billthefarmer.github.io/blog/upgrading-to-windows-10/'>Read more →</a>
   <hr>
@@ -279,41 +311,9 @@ When I first installed Cyanogenmod, I had to use an unofficial build, as an offi
   </div>
   <p>
     When I got fed up with Windows XP on my netbook, I tried windows 7 on it, but it was barely usable. So I tried Windows 7 Starter which was better. I upgraded it to Home Premium, which was OK at first, but slowed down as it got clagged up with updates.
-That was it until recently, when I read an article about putting Windows 10 on one. I didn&rsquo;t try that, but I did try Linux Mint on it.
+That was it until recently, when I read an article about putting Windows 10 on one. I didn’t try that, but I did try Linux Mint on it.
   </p>
   <a href='https://billthefarmer.github.io/blog/resurrecting-a-netbook-as-a-web-server/'>Read more →</a>
-  <hr>
-</div>
-
-
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/build-mac-osx-apps-using-command-line-tools/">Build Mac OSX apps using command line tools</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2016-02-02T17:59:09Z">
-        Tue Feb 2, 2016
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    You will need to install the Xcode command line tools, you don&rsquo;t need the Xcode app. The easiest way to do this is to attempt to build an app like emacs by typing ./configure on the command line. A dialog box will pop up asking if you want to download and install the tools.
-Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to find. You can type gcc -help or clang -help on the command line to get some info.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/build-mac-osx-apps-using-command-line-tools/'>Read more →</a>
   <hr>
 </div>
 
@@ -342,6 +342,10 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/derive-edit-position/">
+        Derive Edit Position from Markdown
+      </a></li>
     
       <li><a href="/blog/fixing-basin-waste-pop-up/">
         Fixing Basin Waste Pop Up
@@ -379,10 +383,6 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
         Green Tomatoes
       </a></li>
     
-      <li><a href="/blog/post/create-pdf-report/">
-        Create PDF Report
-      </a></li>
-    
   </ul>
 
   
@@ -414,7 +414,7 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
       <div class="row column">
         <p>
           
-          Copyright &copy; 2019 Bill Farmer
+          Copyright © 2019 Bill Farmer
           
         </p>
         <p>

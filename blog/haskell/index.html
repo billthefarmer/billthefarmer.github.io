@@ -7,41 +7,37 @@
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 <meta property="og:title" content="Haskell" />
-<meta property="og:description" content="I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I&rsquo;s give it a go and see how I got on.
+<meta property="og:description" content="I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I’s give it a go and see how I got on.
 You can try it out in your browser: http://tryhaskell.org
-λ let factorial n = product [1..n] in factorial 99 9332621544394415268169923885626670049071596826438162146859 2963895217599993229915608941463976156518286253697920827223 7582511852109168640000000000000000000000 :: (Enum a, Num a) =&gt; a λ  Pretty impressive! So I thought I&rsquo;d try a simple web application." />
+λ let factorial n = product [1..n] in factorial 99 9332621544394415268169923885626670049071596826438162146859 2963895217599993229915608941463976156518286253697920827223 7582511852109168640000000000000000000000 :: (Enum a, Num a) =&gt; a λ Pretty impressive! So I thought I’d try a simple web application." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/haskell/" />
-<meta property="article:published_time" content="2014-03-29T15:26:14&#43;00:00"/>
-<meta property="article:modified_time" content="2014-03-29T15:26:14&#43;00:00"/>
-
+<meta property="article:published_time" content="2014-03-29T15:26:14+00:00" />
+<meta property="article:modified_time" content="2014-03-29T15:26:14+00:00" />
 
 <meta itemprop="name" content="Haskell">
-<meta itemprop="description" content="I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I&rsquo;s give it a go and see how I got on.
+<meta itemprop="description" content="I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I’s give it a go and see how I got on.
 You can try it out in your browser: http://tryhaskell.org
-λ let factorial n = product [1..n] in factorial 99 9332621544394415268169923885626670049071596826438162146859 2963895217599993229915608941463976156518286253697920827223 7582511852109168640000000000000000000000 :: (Enum a, Num a) =&gt; a λ  Pretty impressive! So I thought I&rsquo;d try a simple web application.">
-
-
+λ let factorial n = product [1..n] in factorial 99 9332621544394415268169923885626670049071596826438162146859 2963895217599993229915608941463976156518286253697920827223 7582511852109168640000000000000000000000 :: (Enum a, Num a) =&gt; a λ Pretty impressive! So I thought I’d try a simple web application.">
 <meta itemprop="datePublished" content="2014-03-29T15:26:14&#43;00:00" />
 <meta itemprop="dateModified" content="2014-03-29T15:26:14&#43;00:00" />
-<meta itemprop="wordCount" content="347">
+<meta itemprop="wordCount" content="345">
 
 
 
 <meta itemprop="keywords" content="" />
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Haskell"/>
-<meta name="twitter:description" content="I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I&rsquo;s give it a go and see how I got on.
+<meta name="twitter:description" content="I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I’s give it a go and see how I got on.
 You can try it out in your browser: http://tryhaskell.org
-λ let factorial n = product [1..n] in factorial 99 9332621544394415268169923885626670049071596826438162146859 2963895217599993229915608941463976156518286253697920827223 7582511852109168640000000000000000000000 :: (Enum a, Num a) =&gt; a λ  Pretty impressive! So I thought I&rsquo;d try a simple web application."/>
+λ let factorial n = product [1..n] in factorial 99 9332621544394415268169923885626670049071596826438162146859 2963895217599993229915608941463976156518286253697920827223 7582511852109168640000000000000000000000 :: (Enum a, Num a) =&gt; a λ Pretty impressive! So I thought I’d try a simple web application."/>
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.64.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -111,12 +107,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
-                    DIY
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                    DIY
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
@@ -196,61 +192,55 @@ code {
       </small>
     </div>
     <p>
-      
-
-<p>I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I&rsquo;s give it a go and see how I got on.</p>
-
+      <p>I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I’s give it a go and see how I got on.</p>
 <p>You can try it out in your browser: <a href="http://tryhaskell.org">http://tryhaskell.org</a></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">    <span style="color:#00a000">λ</span> <span style="color:#a2f;font-weight:bold">let</span> <span style="color:#00a000">factorial</span> <span style="color:#00a000">n</span> <span style="color:#a2f;font-weight:bold">=</span> <span style="color:#00a000">product</span> [<span style="color:#666">1</span><span style="color:#666">..</span><span style="color:#00a000">n</span>] <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#00a000">factorial</span> <span style="color:#666">99</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">    λ <span style="color:#a2f;font-weight:bold">let</span> factorial n <span style="color:#a2f;font-weight:bold">=</span> product [<span style="color:#666">1</span><span style="color:#666">..</span>n] <span style="color:#a2f;font-weight:bold">in</span> factorial <span style="color:#666">99</span>
     <span style="color:#666">9332621544394415268169923885626670049071596826438162146859</span>
     <span style="color:#666">2963895217599993229915608941463976156518286253697920827223</span>
     <span style="color:#666">7582511852109168640000000000000000000000</span>
-    <span style="color:#a2f;font-weight:bold">::</span> (<span style="color:#0b0;font-weight:bold">Enum</span> <span style="color:#00a000">a</span>, <span style="color:#0b0;font-weight:bold">Num</span> <span style="color:#00a000">a</span>) <span style="color:#a2f;font-weight:bold">=&gt;</span> <span style="color:#00a000">a</span>
-    <span style="color:#00a000">λ</span>  </code></pre></div>
-<p>Pretty impressive! So I thought I&rsquo;d try a simple web application.</p>
+    <span style="color:#a2f;font-weight:bold">::</span> (<span style="color:#0b0;font-weight:bold">Enum</span> a, <span style="color:#0b0;font-weight:bold">Num</span> a) <span style="color:#a2f;font-weight:bold">=&gt;</span> a
+    λ  
+</code></pre></div><p>Pretty impressive! So I thought I’d try a simple web application.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">    <span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">Network.CGI</span>
-    <span style="color:#00a000">cgiMain</span> <span style="color:#a2f;font-weight:bold">::</span> <span style="color:#0b0;font-weight:bold">CGI</span> <span style="color:#0b0;font-weight:bold">CGIResult</span>
-    <span style="color:#00a000">cgiMain</span> <span style="color:#a2f;font-weight:bold">=</span> <span style="color:#a2f;font-weight:bold">do</span>
-        <span style="color:#00a000">setHeader</span> <span style="color:#b44">&#34;Content-Type&#34;</span> <span style="color:#b44">&#34;text/html; charset=UTF-8&#34;</span>
-        <span style="color:#00a000">output</span> <span style="color:#b44">&#34;Hello World!</span><span style="color:#b62;font-weight:bold">\n</span><span style="color:#b44">&#34;</span>
-    <span style="color:#00a000">main</span> <span style="color:#a2f;font-weight:bold">::</span> <span style="color:#0b0;font-weight:bold">IO</span> <span style="color:#a2f">()</span>
-    <span style="color:#00a000">main</span> <span style="color:#a2f;font-weight:bold">=</span> <span style="color:#00a000">runCGI</span> (<span style="color:#00a000">handleErrors</span> <span style="color:#00a000">cgiMain</span>)</code></pre></div>
-<p>This seemed to work, so I tried a graphical GTK app.</p>
+    cgiMain <span style="color:#a2f;font-weight:bold">::</span> <span style="color:#0b0;font-weight:bold">CGI</span> <span style="color:#0b0;font-weight:bold">CGIResult</span>
+    cgiMain <span style="color:#a2f;font-weight:bold">=</span> <span style="color:#a2f;font-weight:bold">do</span>
+        setHeader <span style="color:#b44">&#34;</span><span style="color:#b44">Content-Type</span><span style="color:#b44">&#34;</span> <span style="color:#b44">&#34;</span><span style="color:#b44">text/html; charset=UTF-8</span><span style="color:#b44">&#34;</span>
+        output <span style="color:#b44">&#34;</span><span style="color:#b44">Hello World!</span><span style="color:#b62;font-weight:bold">\</span><span style="color:#b62;font-weight:bold">n</span><span style="color:#b44">&#34;</span>
+    main <span style="color:#a2f;font-weight:bold">::</span> <span style="color:#0b0;font-weight:bold">IO</span> <span style="color:#a2f">()</span>
+    main <span style="color:#a2f;font-weight:bold">=</span> runCGI (handleErrors cgiMain)
+</code></pre></div><p>This seemed to work, so I tried a graphical GTK app.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">    <span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">Graphics.UI.Gtk</span>
-    <span style="color:#00a000">main</span> <span style="color:#a2f;font-weight:bold">::</span> <span style="color:#0b0;font-weight:bold">IO</span> <span style="color:#a2f">()</span>
-    <span style="color:#00a000">main</span> <span style="color:#a2f;font-weight:bold">=</span> <span style="color:#a2f;font-weight:bold">do</span>
-        <span style="color:#00a000">initGUI</span>
-        <span style="color:#00a000">window</span> <span style="color:#a2f;font-weight:bold">&lt;-</span> <span style="color:#00a000">windowNew</span>
-        <span style="color:#00a000">vbox</span> <span style="color:#a2f;font-weight:bold">&lt;-</span> <span style="color:#00a000">vBoxNew</span> <span style="color:#0b0;font-weight:bold">False</span> <span style="color:#666">10</span>
-        <span style="color:#00a000">hbox</span> <span style="color:#a2f;font-weight:bold">&lt;-</span> <span style="color:#00a000">hBoxNew</span> <span style="color:#0b0;font-weight:bold">False</span> <span style="color:#666">0</span>
-        <span style="color:#00a000">button</span> <span style="color:#a2f;font-weight:bold">&lt;-</span> <span style="color:#00a000">buttonNew</span>
-        <span style="color:#00a000">pixbuf</span> <span style="color:#a2f;font-weight:bold">&lt;-</span> <span style="color:#00a000">pixbufNewFromFileAtSize</span> <span style="color:#b44">&#34;941118.jpg&#34;</span> <span style="color:#666">480</span> <span style="color:#666">360</span>
-        <span style="color:#00a000">image</span> <span style="color:#a2f;font-weight:bold">&lt;-</span> <span style="color:#00a000">imageNewFromPixbuf</span> <span style="color:#00a000">pixbuf</span>
-        <span style="color:#00a000">quit</span> <span style="color:#a2f;font-weight:bold">&lt;-</span> <span style="color:#00a000">buttonNew</span>
-        <span style="color:#00a000">set</span> <span style="color:#00a000">window</span> [ <span style="color:#00a000">containerBorderWidth</span> <span style="color:#0b0;font-weight:bold">:=</span> <span style="color:#666">10</span>,
-                     <span style="color:#00a000">containerChild</span> <span style="color:#0b0;font-weight:bold">:=</span> <span style="color:#00a000">vbox</span> ]
-        <span style="color:#00a000">boxPackStart</span> <span style="color:#00a000">hbox</span> <span style="color:#00a000">button</span> <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
-        <span style="color:#00a000">boxPackStart</span> <span style="color:#00a000">vbox</span> <span style="color:#00a000">hbox</span> <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
-        <span style="color:#00a000">boxPackStart</span> <span style="color:#00a000">vbox</span> <span style="color:#00a000">image</span> <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
-        <span style="color:#00a000">hbox</span> <span style="color:#a2f;font-weight:bold">&lt;-</span> <span style="color:#00a000">hBoxNew</span> <span style="color:#0b0;font-weight:bold">False</span> <span style="color:#666">0</span>
-        <span style="color:#00a000">boxPackEnd</span> <span style="color:#00a000">hbox</span> <span style="color:#00a000">quit</span> <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
-        <span style="color:#00a000">boxPackEnd</span> <span style="color:#00a000">vbox</span> <span style="color:#00a000">hbox</span> <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
-        <span style="color:#00a000">set</span> <span style="color:#00a000">button</span> [ <span style="color:#00a000">buttonLabel</span> <span style="color:#0b0;font-weight:bold">:=</span> <span style="color:#b44">&#34; Hello World &#34;</span> ]
-        <span style="color:#00a000">set</span> <span style="color:#00a000">quit</span> [ <span style="color:#00a000">buttonLabel</span> <span style="color:#0b0;font-weight:bold">:=</span> <span style="color:#b44">&#34;  Quit  &#34;</span> ]
-        <span style="color:#00a000">onClicked</span> <span style="color:#00a000">button</span> (<span style="color:#00a000">putStrLn</span> <span style="color:#b44">&#34;Hello World&#34;</span>)
-        <span style="color:#00a000">onClicked</span> <span style="color:#00a000">quit</span> <span style="color:#00a000">mainQuit</span>
-        <span style="color:#00a000">onDestroy</span> <span style="color:#00a000">window</span> <span style="color:#00a000">mainQuit</span>
-        <span style="color:#00a000">widgetShowAll</span> <span style="color:#00a000">window</span>
-        <span style="color:#00a000">mainGUI</span></code></pre></div>
-<p><img src="images/2014/03/gtk.png" alt="Gtk" /></p>
-
-<p>However I can&rsquo;t see any real difference between this and doing it the usual step by step procedural way. I even tried reusing a variable to see if it objected. The other problem is that the documentation is written in mathematical jargon which is difficult to understand. for example, the docs for the constructor function pixbufNewFromFileAtSize is:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">    <span style="color:#00a000">pixbufNewFromFileAtSize</span> <span style="color:#a2f;font-weight:bold">::</span> <span style="color:#0b0;font-weight:bold">String</span> <span style="color:#a2f;font-weight:bold">-&gt;</span> <span style="color:#0b0;font-weight:bold">Int</span> <span style="color:#a2f;font-weight:bold">-&gt;</span> <span style="color:#0b0;font-weight:bold">Int</span> <span style="color:#a2f;font-weight:bold">-&gt;</span> <span style="color:#0b0;font-weight:bold">IO</span> <span style="color:#0b0;font-weight:bold">Pixbuf</span></code></pre></div>
-<p>I interpret that to mean: Take the function pixbufNewFromFileAtSize and give it a string and two integers and after a bit of IO you should get a pixbuf, which is reverse Polish to me.</p>
-
+    main <span style="color:#a2f;font-weight:bold">::</span> <span style="color:#0b0;font-weight:bold">IO</span> <span style="color:#a2f">()</span>
+    main <span style="color:#a2f;font-weight:bold">=</span> <span style="color:#a2f;font-weight:bold">do</span>
+        initGUI
+        window <span style="color:#a2f;font-weight:bold">&lt;-</span> windowNew
+        vbox <span style="color:#a2f;font-weight:bold">&lt;-</span> vBoxNew <span style="color:#0b0;font-weight:bold">False</span> <span style="color:#666">10</span>
+        hbox <span style="color:#a2f;font-weight:bold">&lt;-</span> hBoxNew <span style="color:#0b0;font-weight:bold">False</span> <span style="color:#666">0</span>
+        button <span style="color:#a2f;font-weight:bold">&lt;-</span> buttonNew
+        pixbuf <span style="color:#a2f;font-weight:bold">&lt;-</span> pixbufNewFromFileAtSize <span style="color:#b44">&#34;</span><span style="color:#b44">941118.jpg</span><span style="color:#b44">&#34;</span> <span style="color:#666">480</span> <span style="color:#666">360</span>
+        image <span style="color:#a2f;font-weight:bold">&lt;-</span> imageNewFromPixbuf pixbuf
+        quit <span style="color:#a2f;font-weight:bold">&lt;-</span> buttonNew
+        set window [ containerBorderWidth <span style="color:#0b0;font-weight:bold">:=</span> <span style="color:#666">10</span>,
+                     containerChild <span style="color:#0b0;font-weight:bold">:=</span> vbox ]
+        boxPackStart hbox button <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
+        boxPackStart vbox hbox <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
+        boxPackStart vbox image <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
+        hbox <span style="color:#a2f;font-weight:bold">&lt;-</span> hBoxNew <span style="color:#0b0;font-weight:bold">False</span> <span style="color:#666">0</span>
+        boxPackEnd hbox quit <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
+        boxPackEnd vbox hbox <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
+        set button [ buttonLabel <span style="color:#0b0;font-weight:bold">:=</span> <span style="color:#b44">&#34;</span><span style="color:#b44"> Hello World </span><span style="color:#b44">&#34;</span> ]
+        set quit [ buttonLabel <span style="color:#0b0;font-weight:bold">:=</span> <span style="color:#b44">&#34;</span><span style="color:#b44">  Quit  </span><span style="color:#b44">&#34;</span> ]
+        onClicked button (putStrLn <span style="color:#b44">&#34;</span><span style="color:#b44">Hello World</span><span style="color:#b44">&#34;</span>)
+        onClicked quit mainQuit
+        onDestroy window mainQuit
+        widgetShowAll window
+        mainGUI
+</code></pre></div><p><img src="images/2014/03/gtk.png" alt="Gtk"></p>
+<p>However I can’t see any real difference between this and doing it the usual step by step procedural way. I even tried reusing a variable to see if it objected. The other problem is that the documentation is written in mathematical jargon which is difficult to understand. for example, the docs for the constructor function pixbufNewFromFileAtSize is:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">    pixbufNewFromFileAtSize <span style="color:#a2f;font-weight:bold">::</span> <span style="color:#0b0;font-weight:bold">String</span> <span style="color:#a2f;font-weight:bold">-&gt;</span> <span style="color:#0b0;font-weight:bold">Int</span> <span style="color:#a2f;font-weight:bold">-&gt;</span> <span style="color:#0b0;font-weight:bold">Int</span> <span style="color:#a2f;font-weight:bold">-&gt;</span> <span style="color:#0b0;font-weight:bold">IO</span> <span style="color:#0b0;font-weight:bold">Pixbuf</span>
+</code></pre></div><p>I interpret that to mean: Take the function pixbufNewFromFileAtSize and give it a string and two integers and after a bit of IO you should get a pixbuf, which is reverse Polish to me.</p>
 <h2 id="update">Update</h2>
-
-<p>I tested this on Arch Linux. I found I couldn&rsquo;t update the system with Haskell installed because of dependency errors, so I had to remove it.</p>
+<p>I tested this on Arch Linux. I found I couldn’t update the system with Haskell installed because of dependency errors, so I had to remove it.</p>
 
     </p>
     
@@ -273,6 +263,10 @@ code {
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/derive-edit-position/">
+        Derive Edit Position from Markdown
+      </a></li>
     
       <li><a href="/blog/fixing-basin-waste-pop-up/">
         Fixing Basin Waste Pop Up
@@ -310,10 +304,6 @@ code {
         Green Tomatoes
       </a></li>
     
-      <li><a href="/blog/post/create-pdf-report/">
-        Create PDF Report
-      </a></li>
-    
   </ul>
 
   
@@ -345,7 +335,7 @@ code {
       <div class="row column">
         <p>
           
-          Copyright &copy; 2019 Bill Farmer
+          Copyright © 2019 Bill Farmer
           
         </p>
         <p>

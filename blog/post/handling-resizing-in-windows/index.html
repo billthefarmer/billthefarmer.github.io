@@ -10,22 +10,18 @@
 <meta property="og:description" content="I have a windows app where I want the app window to maintain it&rsquo;s aspect ratio when it is resized. Windows provides two mechanisms for this, the WM_SIZE message and the WM_SIZING message. The WM_SIZE message is sent when a window has been resized to allow child windows to be resized, the WM_SIZING message is sent while the user is resizing it to allow the size to be adjusted. The messages are handled in the WindowProc callback function." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/post/handling-resizing-in-windows/" />
-<meta property="article:published_time" content="2018-06-19T20:23:44&#43;01:00"/>
-<meta property="article:modified_time" content="2018-06-19T20:23:44&#43;01:00"/>
-
+<meta property="article:published_time" content="2018-06-19T20:23:44+01:00" />
+<meta property="article:modified_time" content="2018-06-19T20:23:44+01:00" />
 
 <meta itemprop="name" content="Handling Resizing in Windows">
 <meta itemprop="description" content="I have a windows app where I want the app window to maintain it&rsquo;s aspect ratio when it is resized. Windows provides two mechanisms for this, the WM_SIZE message and the WM_SIZING message. The WM_SIZE message is sent when a window has been resized to allow child windows to be resized, the WM_SIZING message is sent while the user is resizing it to allow the size to be adjusted. The messages are handled in the WindowProc callback function.">
-
-
 <meta itemprop="datePublished" content="2018-06-19T20:23:44&#43;01:00" />
 <meta itemprop="dateModified" content="2018-06-19T20:23:44&#43;01:00" />
-<meta itemprop="wordCount" content="535">
+<meta itemprop="wordCount" content="532">
 
 
 
 <meta itemprop="keywords" content="" />
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Handling Resizing in Windows"/>
 <meta name="twitter:description" content="I have a windows app where I want the app window to maintain it&rsquo;s aspect ratio when it is resized. Windows provides two mechanisms for this, the WM_SIZE message and the WM_SIZING message. The WM_SIZE message is sent when a window has been resized to allow child windows to be resized, the WM_SIZING message is sent while the user is resizing it to allow the size to be adjusted. The messages are handled in the WindowProc callback function."/>
@@ -35,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.64.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -105,12 +101,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
-                    DIY
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                    DIY
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
@@ -197,7 +193,8 @@ this, the <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms63
 child windows to be resized, the <code>WM_SIZING</code> message is sent while the
 user is resizing it to allow the size to be adjusted. The messages are
 handled in the <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms633573(v=vs.85).aspx"><code>WindowProc</code></a> callback function.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#080;font-style:italic">// Main window procedure
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++">
+<span style="color:#080;font-style:italic">// Main window procedure
 </span><span style="color:#080;font-style:italic"></span>LRESULT CALLBACK <span style="color:#00a000">MainWndProc</span>(HWND hWnd,
                              UINT uMsg,
                              WPARAM wParam,
@@ -218,13 +215,13 @@ handled in the <a href="https://msdn.microsoft.com/en-us/library/windows/desktop
     <span style="color:#080;font-style:italic">// ...
 </span><span style="color:#080;font-style:italic"></span>    }
 }
-</code></pre></div>
-<p>Because a window can be zoomed vertically by double clicking on the
+</code></pre></div><p>Because a window can be zoomed vertically by double clicking on the
 window title bar, the <code>WindowResize</code> function checks the aspect ratio
 and resizes the window if necessary. The <code>WIDTH</code> and <code>HEIGHT</code>
 constants define the desired aspect ratio. If the aspect ratio is OK
 the child windows are resized.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#080;font-style:italic">// WindowResize
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++">
+<span style="color:#080;font-style:italic">// WindowResize
 </span><span style="color:#080;font-style:italic"></span>BOOL <span style="color:#00a000">WindowResize</span>(HWND hWnd, WPARAM wParam, LPARAM lParam)
 {
     <span style="color:#0b0;font-weight:bold">int</span> width <span style="color:#666">=</span> LOWORD(lParam);
@@ -254,11 +251,11 @@ the child windows are resized.</p>
     EnumChildWindows(hWnd, EnumChildProc, lParam);
     <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f">true</span>;
 }
-</code></pre></div>
-<p>The <code>WindowResizing</code> function checks the offered window size and
+</code></pre></div><p>The <code>WindowResizing</code> function checks the offered window size and
 adjusts it as necessary depending on which window edge is being
 dragged.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#080;font-style:italic">// Window resizing
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++">
+<span style="color:#080;font-style:italic">// Window resizing
 </span><span style="color:#080;font-style:italic"></span>BOOL <span style="color:#00a000">WindowResizing</span>(HWND hWnd, WPARAM wParam, LPARAM lParam)
 {
     PRECT rectp <span style="color:#666">=</span> (PRECT)lParam;
@@ -278,19 +275,19 @@ dragged.</p>
     <span style="color:#0b0;font-weight:bold">int</span> height <span style="color:#666">=</span> HEIGHT <span style="color:#666">+</span> toolbar.rect.bottom <span style="color:#666">+</span> header;
 
     <span style="color:#080;font-style:italic">// Minimum size
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">if</span> (rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">-</span> rectp<span style="color:#666">-&gt;</span>left <span style="color:#666">&lt;</span> width)
-	rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>left <span style="color:#666">+</span> width;
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">if</span> (rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>right <span style="color:#666">-</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>left <span style="color:#666">&lt;</span> width)
+	rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>right <span style="color:#666">=</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>left <span style="color:#666">+</span> width;
 
-    <span style="color:#a2f;font-weight:bold">if</span> (rectp<span style="color:#666">-&gt;</span>bottom <span style="color:#666">-</span> rectp<span style="color:#666">-&gt;</span>top <span style="color:#666">&lt;</span> height)
-	rectp<span style="color:#666">-&gt;</span>bottom <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>top <span style="color:#666">+</span> height;
+    <span style="color:#a2f;font-weight:bold">if</span> (rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>bottom <span style="color:#666">-</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>top <span style="color:#666">&lt;</span> height)
+	rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>bottom <span style="color:#666">=</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>top <span style="color:#666">+</span> height;
 
     <span style="color:#080;font-style:italic">// Maximum width
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">if</span> (rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">-</span> rectp<span style="color:#666">-&gt;</span>left <span style="color:#666">&gt;</span> STEP <span style="color:#666">+</span> border)
-        rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>left <span style="color:#666">+</span> STEP <span style="color:#666">+</span> border;
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">if</span> (rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>right <span style="color:#666">-</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>left <span style="color:#666">&gt;</span> STEP <span style="color:#666">+</span> border)
+        rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>right <span style="color:#666">=</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>left <span style="color:#666">+</span> STEP <span style="color:#666">+</span> border;
 
     <span style="color:#080;font-style:italic">// Offered width and height
-</span><span style="color:#080;font-style:italic"></span>    width <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">-</span> rectp<span style="color:#666">-&gt;</span>left;
-    height <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>bottom <span style="color:#666">-</span> rectp<span style="color:#666">-&gt;</span>top;
+</span><span style="color:#080;font-style:italic"></span>    width <span style="color:#666">=</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>right <span style="color:#666">-</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>left;
+    height <span style="color:#666">=</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>bottom <span style="color:#666">-</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>top;
 
     <span style="color:#a2f;font-weight:bold">switch</span> (wParam)
     {
@@ -298,35 +295,35 @@ dragged.</p>
     <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">WMSZ_RIGHT</span>:
         height <span style="color:#666">=</span> (((width <span style="color:#666">-</span> border) <span style="color:#666">*</span> HEIGHT) <span style="color:#666">/</span> WIDTH) <span style="color:#666">+</span>
             toolbar.rect.bottom <span style="color:#666">+</span> header;
-        rectp<span style="color:#666">-&gt;</span>bottom <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>top <span style="color:#666">+</span> height;
+        rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>bottom <span style="color:#666">=</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>top <span style="color:#666">+</span> height;
         <span style="color:#a2f;font-weight:bold">break</span>;
 
     <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">WMSZ_TOP</span>:
     <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">WMSZ_BOTTOM</span>:
         width <span style="color:#666">=</span> ((((height <span style="color:#666">-</span> toolbar.rect.bottom) <span style="color:#666">-</span> header) <span style="color:#666">*</span>
                   WIDTH) <span style="color:#666">/</span> HEIGHT) <span style="color:#666">+</span> border;
-        rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>left <span style="color:#666">+</span> width;
+        rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>right <span style="color:#666">=</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>left <span style="color:#666">+</span> width;
         <span style="color:#a2f;font-weight:bold">break</span>;
 
     <span style="color:#a2f;font-weight:bold">default</span><span style="color:#666">:</span>
         width <span style="color:#666">=</span> ((((height <span style="color:#666">-</span> toolbar.rect.bottom) <span style="color:#666">-</span> header) <span style="color:#666">*</span>
                   WIDTH) <span style="color:#666">/</span> HEIGHT) <span style="color:#666">+</span> border;
-        rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>left <span style="color:#666">+</span> width;
+        rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>right <span style="color:#666">=</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>left <span style="color:#666">+</span> width;
         <span style="color:#a2f;font-weight:bold">break</span>;
     }
 
     <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f">true</span>;
 }
-</code></pre></div>
-<p>The <code>WindowResizing</code> function works fine, the <code>WindowResize</code> function
+</code></pre></div><p>The <code>WindowResizing</code> function works fine, the <code>WindowResize</code> function
 handles most cases OK, but isn&rsquo;t completely idiot proof. By contrast
 <a href="https://developer.apple.com/documentation/appkit/nswindow">macOS</a> makes it easy, you define what you want and it just works.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift">        <span style="color:#080;font-style:italic">// Set up window</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift">        <span style="color:#080;font-style:italic">//</span><span style="color:#080;font-style:italic"> </span><span style="color:#080;font-style:italic">S</span><span style="color:#080;font-style:italic">e</span><span style="color:#080;font-style:italic">t</span><span style="color:#080;font-style:italic"> </span><span style="color:#080;font-style:italic">u</span><span style="color:#080;font-style:italic">p</span><span style="color:#080;font-style:italic"> </span><span style="color:#080;font-style:italic">w</span><span style="color:#080;font-style:italic">i</span><span style="color:#080;font-style:italic">n</span><span style="color:#080;font-style:italic">d</span><span style="color:#080;font-style:italic">o</span><span style="color:#080;font-style:italic">w</span>
         window.setContentSize(NSMakeSize(<span style="color:#666">400</span>, <span style="color:#666">480</span>))
         window.contentMinSize = NSMakeSize(<span style="color:#666">400</span>, <span style="color:#666">480</span>)
         window.contentAspectRatio = NSMakeSize(<span style="color:#666">1.0</span>, <span style="color:#666">1.2</span>)
         window.showsResizeIndicator = <span style="color:#a2f;font-weight:bold">true</span>
-        window.collectionBehavior.insert(.fullScreenNone)</code></pre></div>
+        window.collectionBehavior.insert(.fullScreenNone)
+</code></pre></div>
     </p>
     
     
@@ -360,6 +357,10 @@ handles most cases OK, but isn&rsquo;t completely idiot proof. By contrast
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/derive-edit-position/">
+        Derive Edit Position from Markdown
+      </a></li>
     
       <li><a href="/blog/fixing-basin-waste-pop-up/">
         Fixing Basin Waste Pop Up
@@ -397,10 +398,6 @@ handles most cases OK, but isn&rsquo;t completely idiot proof. By contrast
         Green Tomatoes
       </a></li>
     
-      <li><a href="/blog/post/create-pdf-report/">
-        Create PDF Report
-      </a></li>
-    
   </ul>
 
   
@@ -432,7 +429,7 @@ handles most cases OK, but isn&rsquo;t completely idiot proof. By contrast
       <div class="row column">
         <p>
           
-          Copyright &copy; 2019 Bill Farmer
+          Copyright © 2019 Bill Farmer
           
         </p>
         <p>

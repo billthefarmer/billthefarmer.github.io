@@ -12,16 +12,13 @@ To add an entry to an android calendar you first have to find out the calendar i
 // QueryHandler public class QueryHandler extends AsyncQueryHandler { private static final String TAG = &#34;QueryHandler&#34;; // Projection arrays  private static final String[] CALENDAR_PROJECTION = new String[] { Calendars." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/adding-a-calendar-event/" />
-<meta property="article:published_time" content="2017-09-05T14:54:25&#43;01:00"/>
-<meta property="article:modified_time" content="2017-09-05T14:54:25&#43;01:00"/>
-
+<meta property="article:published_time" content="2017-09-05T14:54:25+01:00" />
+<meta property="article:modified_time" content="2017-09-05T14:54:25+01:00" />
 
 <meta itemprop="name" content="Adding a calendar event in android">
 <meta itemprop="description" content="The android docs for the Calendar Provider are quite useful, but recommend the use of an AsyncQueryHandler for querying or adding events to calendars in an asynchronous thread. However the AsyncQueryHandler docs don&rsquo;t include much guidance as to how to use it.
 To add an entry to an android calendar you first have to find out the calendar id using an asynchronous query on the calendars table.
 // QueryHandler public class QueryHandler extends AsyncQueryHandler { private static final String TAG = &#34;QueryHandler&#34;; // Projection arrays  private static final String[] CALENDAR_PROJECTION = new String[] { Calendars.">
-
-
 <meta itemprop="datePublished" content="2017-09-05T14:54:25&#43;01:00" />
 <meta itemprop="dateModified" content="2017-09-05T14:54:25&#43;01:00" />
 <meta itemprop="wordCount" content="531">
@@ -29,7 +26,6 @@ To add an entry to an android calendar you first have to find out the calendar i
 
 
 <meta itemprop="keywords" content="" />
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Adding a calendar event in android"/>
 <meta name="twitter:description" content="The android docs for the Calendar Provider are quite useful, but recommend the use of an AsyncQueryHandler for querying or adding events to calendars in an asynchronous thread. However the AsyncQueryHandler docs don&rsquo;t include much guidance as to how to use it.
@@ -41,7 +37,7 @@ To add an entry to an android calendar you first have to find out the calendar i
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.64.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -111,12 +107,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
-                    DIY
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                    DIY
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
@@ -201,7 +197,6 @@ recommend the use of an <a href="https://developer.android.com/reference/android
 events to calendars in an asynchronous thread. However the
 <code>AsyncQueryHandler</code> docs don&rsquo;t include much guidance as to how to use
 it.</p>
-
 <p>To add an entry to an android calendar you first have to find out the
 calendar id using an asynchronous query on the calendars table.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-style:italic">// QueryHandler
@@ -210,10 +205,10 @@ calendar id using an asynchronous query on the calendars table.</p>
     <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> String TAG <span style="color:#666">=</span> <span style="color:#b44">&#34;QueryHandler&#34;</span><span style="color:#666">;</span>
 
     <span style="color:#080;font-style:italic">// Projection arrays
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> String<span style="color:#666">[]</span> CALENDAR_PROJECTION <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> String<span style="color:#666">[]</span>
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> String<span style="color:#666">[</span><span style="color:#666">]</span> CALENDAR_PROJECTION <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> String<span style="color:#666">[</span><span style="color:#666">]</span>
         <span style="color:#666">{</span>
             Calendars<span style="color:#666">.</span><span style="color:#b44">_ID</span>
-        <span style="color:#666">};</span>
+        <span style="color:#666">}</span><span style="color:#666">;</span>
 
     <span style="color:#080;font-style:italic">// The indices for the projection array above.
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> CALENDAR_ID_INDEX <span style="color:#666">=</span> 0<span style="color:#666">;</span>
@@ -227,33 +222,35 @@ calendar id using an asynchronous query on the calendars table.</p>
     <span style="color:#080;font-style:italic">// QueryHandler
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#00a000">QueryHandler</span><span style="color:#666">(</span>ContentResolver resolver<span style="color:#666">)</span>
     <span style="color:#666">{</span>
-        <span style="color:#a2f;font-weight:bold">super</span><span style="color:#666">(</span>resolver<span style="color:#666">);</span>
+        <span style="color:#a2f;font-weight:bold">super</span><span style="color:#666">(</span>resolver<span style="color:#666">)</span><span style="color:#666">;</span>
     <span style="color:#666">}</span>
 
     <span style="color:#080;font-style:italic">// insertEvent
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">insertEvent</span><span style="color:#666">(</span>Context context<span style="color:#666">,</span> <span style="color:#0b0;font-weight:bold">long</span> startTime<span style="color:#666">,</span>
                                    <span style="color:#0b0;font-weight:bold">long</span> endTime<span style="color:#666">,</span> String title<span style="color:#666">)</span>
     <span style="color:#666">{</span>
-        ContentResolver resolver <span style="color:#666">=</span> context<span style="color:#666">.</span><span style="color:#b44">getContentResolver</span><span style="color:#666">();</span>
+        ContentResolver resolver <span style="color:#666">=</span> context<span style="color:#666">.</span><span style="color:#b44">getContentResolver</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
 
-        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>queryHandler <span style="color:#666">==</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
-            queryHandler <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> QueryHandler<span style="color:#666">(</span>resolver<span style="color:#666">);</span>
+        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>queryHandler <span style="color:#666">=</span><span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+            queryHandler <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> QueryHandler<span style="color:#666">(</span>resolver<span style="color:#666">)</span><span style="color:#666">;</span>
 
-        ContentValues values <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ContentValues<span style="color:#666">();</span>
-        values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Events<span style="color:#666">.</span><span style="color:#b44">DTSTART</span><span style="color:#666">,</span> startTime<span style="color:#666">);</span>
-        values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Events<span style="color:#666">.</span><span style="color:#b44">DTEND</span><span style="color:#666">,</span> endTime<span style="color:#666">);</span>
-        values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Events<span style="color:#666">.</span><span style="color:#b44">TITLE</span><span style="color:#666">,</span> title<span style="color:#666">);</span>
+        ContentValues values <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ContentValues<span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+        values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Events<span style="color:#666">.</span><span style="color:#b44">DTSTART</span><span style="color:#666">,</span> startTime<span style="color:#666">)</span><span style="color:#666">;</span>
+        values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Events<span style="color:#666">.</span><span style="color:#b44">DTEND</span><span style="color:#666">,</span> endTime<span style="color:#666">)</span><span style="color:#666">;</span>
+        values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Events<span style="color:#666">.</span><span style="color:#b44">TITLE</span><span style="color:#666">,</span> title<span style="color:#666">)</span><span style="color:#666">;</span>
 
         <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>BuildConfig<span style="color:#666">.</span><span style="color:#b44">DEBUG</span><span style="color:#666">)</span>
-            Log<span style="color:#666">.</span><span style="color:#b44">d</span><span style="color:#666">(</span>TAG<span style="color:#666">,</span> <span style="color:#b44">&#34;Calendar query start&#34;</span><span style="color:#666">);</span>
+            Log<span style="color:#666">.</span><span style="color:#b44">d</span><span style="color:#666">(</span>TAG<span style="color:#666">,</span> <span style="color:#b44">&#34;Calendar query start&#34;</span><span style="color:#666">)</span><span style="color:#666">;</span>
 
         queryHandler<span style="color:#666">.</span><span style="color:#b44">startQuery</span><span style="color:#666">(</span>CALENDAR<span style="color:#666">,</span> values<span style="color:#666">,</span> Calendars<span style="color:#666">.</span><span style="color:#b44">CONTENT_URI</span><span style="color:#666">,</span>
-                                CALENDAR_PROJECTION<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">);</span>
-    <span style="color:#666">}</span></code></pre></div>
-<p>This method is called from an app activity.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        QueryHandler<span style="color:#666">.</span><span style="color:#b44">insertEvent</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">,</span> startTime<span style="color:#666">.</span><span style="color:#b44">getTimeInMillis</span><span style="color:#666">(),</span>
-                                 endTime<span style="color:#666">.</span><span style="color:#b44">getTimeInMillis</span><span style="color:#666">(),</span> title<span style="color:#666">);</span></code></pre></div>
-<p>The <code>insertEvent()</code> method first creates a new <code>QueryHandler</code> which is
+                                CALENDAR_PROJECTION<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span><span style="color:#666">;</span>
+    <span style="color:#666">}</span>
+
+</code></pre></div><p>This method is called from an app activity.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        QueryHandler<span style="color:#666">.</span><span style="color:#b44">insertEvent</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">,</span> startTime<span style="color:#666">.</span><span style="color:#b44">getTimeInMillis</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">,</span>
+                                 endTime<span style="color:#666">.</span><span style="color:#b44">getTimeInMillis</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">,</span> title<span style="color:#666">)</span><span style="color:#666">;</span>
+
+</code></pre></div><p>The <code>insertEvent()</code> method first creates a new <code>QueryHandler</code> which is
 subsequently reused. The start time, end time and title of the event
 are added to a <code>ContentValues</code> object and passed to the <code>startQuery()</code>
 method. This starts an asynchronous query on the Calendars table to
@@ -264,22 +261,22 @@ passed to the <code>onQueryComplete()</code> method.</p>
     <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onQueryComplete</span><span style="color:#666">(</span><span style="color:#0b0;font-weight:bold">int</span> token<span style="color:#666">,</span> Object object<span style="color:#666">,</span> Cursor cursor<span style="color:#666">)</span>
     <span style="color:#666">{</span>
         <span style="color:#080;font-style:italic">// Use the cursor to move through the returned records
-</span><span style="color:#080;font-style:italic"></span>        cursor<span style="color:#666">.</span><span style="color:#b44">moveToFirst</span><span style="color:#666">();</span>
+</span><span style="color:#080;font-style:italic"></span>        cursor<span style="color:#666">.</span><span style="color:#b44">moveToFirst</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
 
         <span style="color:#080;font-style:italic">// Get the field values
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#0b0;font-weight:bold">long</span> calendarID <span style="color:#666">=</span> cursor<span style="color:#666">.</span><span style="color:#b44">getLong</span><span style="color:#666">(</span>CALENDAR_ID_INDEX<span style="color:#666">);</span>
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#0b0;font-weight:bold">long</span> calendarID <span style="color:#666">=</span> cursor<span style="color:#666">.</span><span style="color:#b44">getLong</span><span style="color:#666">(</span>CALENDAR_ID_INDEX<span style="color:#666">)</span><span style="color:#666">;</span>
 
         <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>BuildConfig<span style="color:#666">.</span><span style="color:#b44">DEBUG</span><span style="color:#666">)</span>
-            Log<span style="color:#666">.</span><span style="color:#b44">d</span><span style="color:#666">(</span>TAG<span style="color:#666">,</span> <span style="color:#b44">&#34;Calendar query complete &#34;</span> <span style="color:#666">+</span> calendarID<span style="color:#666">);</span>
+            Log<span style="color:#666">.</span><span style="color:#b44">d</span><span style="color:#666">(</span>TAG<span style="color:#666">,</span> <span style="color:#b44">&#34;Calendar query complete &#34;</span> <span style="color:#666">+</span> calendarID<span style="color:#666">)</span><span style="color:#666">;</span>
 
         ContentValues values <span style="color:#666">=</span> <span style="color:#666">(</span>ContentValues<span style="color:#666">)</span> object<span style="color:#666">;</span>
-        values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Events<span style="color:#666">.</span><span style="color:#b44">CALENDAR_ID</span><span style="color:#666">,</span> calendarID<span style="color:#666">);</span>
+        values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Events<span style="color:#666">.</span><span style="color:#b44">CALENDAR_ID</span><span style="color:#666">,</span> calendarID<span style="color:#666">)</span><span style="color:#666">;</span>
         values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Events<span style="color:#666">.</span><span style="color:#b44">EVENT_TIMEZONE</span><span style="color:#666">,</span>
-                   TimeZone<span style="color:#666">.</span><span style="color:#b44">getDefault</span><span style="color:#666">().</span><span style="color:#b44">getDisplayName</span><span style="color:#666">());</span>
+                   TimeZone<span style="color:#666">.</span><span style="color:#b44">getDefault</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">getDisplayName</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">)</span><span style="color:#666">;</span>
 
-        startInsert<span style="color:#666">(</span>EVENT<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> Events<span style="color:#666">.</span><span style="color:#b44">CONTENT_URI</span><span style="color:#666">,</span> values<span style="color:#666">);</span>
-    <span style="color:#666">}</span></code></pre></div>
-<p>This gets the calendar id from the cursor and adds it to the values
+        startInsert<span style="color:#666">(</span>EVENT<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> Events<span style="color:#666">.</span><span style="color:#b44">CONTENT_URI</span><span style="color:#666">,</span> values<span style="color:#666">)</span><span style="color:#666">;</span>
+    <span style="color:#666">}</span>
+</code></pre></div><p>This gets the calendar id from the cursor and adds it to the values
 along with the timezone. It&rsquo;s probably not necessary to query the
 first calendar id because the value seems to be one, but there may be
 instances where it isn&rsquo;t. The <code>startInsert()</code> method inserts the event
@@ -289,33 +286,33 @@ method.</p>
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f">@Override</span>
     <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onInsertComplete</span><span style="color:#666">(</span><span style="color:#0b0;font-weight:bold">int</span> token<span style="color:#666">,</span> Object object<span style="color:#666">,</span> Uri uri<span style="color:#666">)</span>
     <span style="color:#666">{</span>
-        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>uri <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>uri <span style="color:#666">!</span><span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
         <span style="color:#666">{</span>
             <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>BuildConfig<span style="color:#666">.</span><span style="color:#b44">DEBUG</span><span style="color:#666">)</span>
-                Log<span style="color:#666">.</span><span style="color:#b44">d</span><span style="color:#666">(</span>TAG<span style="color:#666">,</span> <span style="color:#b44">&#34;Insert complete &#34;</span> <span style="color:#666">+</span> uri<span style="color:#666">.</span><span style="color:#b44">getLastPathSegment</span><span style="color:#666">());</span>
+                Log<span style="color:#666">.</span><span style="color:#b44">d</span><span style="color:#666">(</span>TAG<span style="color:#666">,</span> <span style="color:#b44">&#34;Insert complete &#34;</span> <span style="color:#666">+</span> uri<span style="color:#666">.</span><span style="color:#b44">getLastPathSegment</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">)</span><span style="color:#666">;</span>
 
             <span style="color:#a2f;font-weight:bold">switch</span> <span style="color:#666">(</span>token<span style="color:#666">)</span>
             <span style="color:#666">{</span>
-            <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">EVENT:</span>
-                <span style="color:#0b0;font-weight:bold">long</span> eventID <span style="color:#666">=</span> Long<span style="color:#666">.</span><span style="color:#b44">parseLong</span><span style="color:#666">(</span>uri<span style="color:#666">.</span><span style="color:#b44">getLastPathSegment</span><span style="color:#666">());</span>
-                ContentValues values <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ContentValues<span style="color:#666">();</span>
-                values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Reminders<span style="color:#666">.</span><span style="color:#b44">MINUTES</span><span style="color:#666">,</span> 10<span style="color:#666">);</span>
-                values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Reminders<span style="color:#666">.</span><span style="color:#b44">EVENT_ID</span><span style="color:#666">,</span> eventID<span style="color:#666">);</span>
-                values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Reminders<span style="color:#666">.</span><span style="color:#b44">METHOD</span><span style="color:#666">,</span> Reminders<span style="color:#666">.</span><span style="color:#b44">METHOD_ALERT</span><span style="color:#666">);</span>
-                startInsert<span style="color:#666">(</span>REMINDER<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> Reminders<span style="color:#666">.</span><span style="color:#b44">CONTENT_URI</span><span style="color:#666">,</span> values<span style="color:#666">);</span>
+            <span style="color:#a2f;font-weight:bold">case</span> EVENT<span style="color:#666">:</span>
+                <span style="color:#0b0;font-weight:bold">long</span> eventID <span style="color:#666">=</span> Long<span style="color:#666">.</span><span style="color:#b44">parseLong</span><span style="color:#666">(</span>uri<span style="color:#666">.</span><span style="color:#b44">getLastPathSegment</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">)</span><span style="color:#666">;</span>
+                ContentValues values <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ContentValues<span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+                values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Reminders<span style="color:#666">.</span><span style="color:#b44">MINUTES</span><span style="color:#666">,</span> 10<span style="color:#666">)</span><span style="color:#666">;</span>
+                values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Reminders<span style="color:#666">.</span><span style="color:#b44">EVENT_ID</span><span style="color:#666">,</span> eventID<span style="color:#666">)</span><span style="color:#666">;</span>
+                values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Reminders<span style="color:#666">.</span><span style="color:#b44">METHOD</span><span style="color:#666">,</span> Reminders<span style="color:#666">.</span><span style="color:#b44">METHOD_ALERT</span><span style="color:#666">)</span><span style="color:#666">;</span>
+                startInsert<span style="color:#666">(</span>REMINDER<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> Reminders<span style="color:#666">.</span><span style="color:#b44">CONTENT_URI</span><span style="color:#666">,</span> values<span style="color:#666">)</span><span style="color:#666">;</span>
                 <span style="color:#a2f;font-weight:bold">break</span><span style="color:#666">;</span>
             <span style="color:#666">}</span>
         <span style="color:#666">}</span>
-    <span style="color:#666">}</span></code></pre></div>
-<p>This gets the event id and inserts a 10 minute reminder. All the
+    <span style="color:#666">}</span>
+</code></pre></div><p>This gets the event id and inserts a 10 minute reminder. All the
 <code>AsyncQueryHandler</code> asynchronous methods include an integer and an
 <code>Object</code> in the argument list which are passed to the <code>onComplete()</code>
 methods. This is useful for passing on parameters to be used later.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#666">09</span>-11 <span style="color:#666">10</span>:27:56.518  <span style="color:#666">9808</span>  <span style="color:#666">9808</span> D QueryHandler: Calendar query start
-<span style="color:#666">09</span>-11 <span style="color:#666">10</span>:27:56.687  <span style="color:#666">9808</span>  <span style="color:#666">9808</span> D QueryHandler: Calendar query <span style="color:#a2f">complete</span> <span style="color:#666">1</span>
-<span style="color:#666">09</span>-11 <span style="color:#666">10</span>:27:56.801  <span style="color:#666">9808</span>  <span style="color:#666">9808</span> D QueryHandler: Insert <span style="color:#a2f">complete</span> <span style="color:#666">112</span>
-<span style="color:#666">09</span>-11 <span style="color:#666">10</span>:27:56.944  <span style="color:#666">9808</span>  <span style="color:#666">9808</span> D QueryHandler: Insert <span style="color:#a2f">complete</span> <span style="color:#666">1</span></code></pre></div>
-<p>Android takes a while to add the event as can be seen from the log.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">09-11 10:27:56.518  <span style="color:#666">9808</span>  <span style="color:#666">9808</span> D QueryHandler: Calendar query start
+09-11 10:27:56.687  <span style="color:#666">9808</span>  <span style="color:#666">9808</span> D QueryHandler: Calendar query <span style="color:#a2f">complete</span> <span style="color:#666">1</span>
+09-11 10:27:56.801  <span style="color:#666">9808</span>  <span style="color:#666">9808</span> D QueryHandler: Insert <span style="color:#a2f">complete</span> <span style="color:#666">112</span>
+09-11 10:27:56.944  <span style="color:#666">9808</span>  <span style="color:#666">9808</span> D QueryHandler: Insert <span style="color:#a2f">complete</span> <span style="color:#666">1</span>
+</code></pre></div><p>Android takes a while to add the event as can be seen from the log.</p>
 
     </p>
     
@@ -325,6 +322,8 @@ methods. This is useful for passing on parameters to be used later.</p>
 <h3>See Also</h3>
 <ul>
   
+  <li><a href="/blog/derive-edit-position/">Derive Edit Position from Markdown</a></li>
+  
   <li><a href="/blog/post/source-code-highlighting/">Source Code Syntax Highlighting</a></li>
   
   <li><a href="/blog/post/musical-temperaments/">Musical Temperaments</a></li>
@@ -332,8 +331,6 @@ methods. This is useful for passing on parameters to be used later.</p>
   <li><a href="/blog/post/draw-musical-staff/">Draw Musical Staff</a></li>
   
   <li><a href="/blog/post/expand-android-selection/">Expand Android Selection</a></li>
-  
-  <li><a href="/blog/android-custom-attributes/">Android Custom Attributes</a></li>
   
 </ul>
 
@@ -354,6 +351,10 @@ methods. This is useful for passing on parameters to be used later.</p>
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/derive-edit-position/">
+        Derive Edit Position from Markdown
+      </a></li>
     
       <li><a href="/blog/fixing-basin-waste-pop-up/">
         Fixing Basin Waste Pop Up
@@ -391,10 +392,6 @@ methods. This is useful for passing on parameters to be used later.</p>
         Green Tomatoes
       </a></li>
     
-      <li><a href="/blog/post/create-pdf-report/">
-        Create PDF Report
-      </a></li>
-    
   </ul>
 
   
@@ -426,7 +423,7 @@ methods. This is useful for passing on parameters to be used later.</p>
       <div class="row column">
         <p>
           
-          Copyright &copy; 2019 Bill Farmer
+          Copyright © 2019 Bill Farmer
           
         </p>
         <p>

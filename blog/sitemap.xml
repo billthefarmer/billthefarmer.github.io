@@ -1,34 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://billthefarmer.github.io/blog/</loc>
-    <lastmod>2019-07-12T10:49:21+01:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-02-08T18:24:23+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://billthefarmer.github.io/blog/categories/</loc>
-    <lastmod>2019-07-12T10:49:21+01:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-02-08T18:24:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://billthefarmer.github.io/blog/derive-edit-position/</loc>
+    <lastmod>2020-02-08T18:24:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://billthefarmer.github.io/blog/categories/hacking/</loc>
+    <lastmod>2020-02-08T18:24:23+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://billthefarmer.github.io/blog/categories/diy/</loc>
     <lastmod>2019-07-12T10:49:21+01:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://billthefarmer.github.io/blog/fixing-basin-waste-pop-up/</loc>
     <lastmod>2019-07-12T10:49:21+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://billthefarmer.github.io/blog/categories/hacking/</loc>
-    <lastmod>2019-06-17T18:30:39+01:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -44,7 +45,6 @@
   <url>
     <loc>https://billthefarmer.github.io/blog/categories/recipes/</loc>
     <lastmod>2019-04-14T16:43:13+01:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -90,7 +90,6 @@
   <url>
     <loc>https://billthefarmer.github.io/blog/categories/electronics/</loc>
     <lastmod>2018-07-14T21:22:37+01:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

@@ -7,19 +7,16 @@
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 <meta property="og:title" content="Fast Fourier Transform" />
-<meta property="og:description" content="I wrote a java tuner app a few years ago, so I needed a Fast Fourier Transform to do the frequency detection. I found a fairly simple implementation in java on the web somewhere, can&rsquo;t remember where, tried it, and it worked fine. The frequency detection algorithm comes from The Dsp Dimension.
+<meta property="og:description" content="I wrote a java tuner app a few years ago, so I needed a Fast Fourier Transform to do the frequency detection. I found a fairly simple implementation in java on the web somewhere, can’t remember where, tried it, and it worked fine. The frequency detection algorithm comes from The Dsp Dimension.
 A few years later I ported it to windows, added a few gizmos for tuning accordions and put it on Google Code." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/fast-fourier-transform/" />
-<meta property="article:published_time" content="2015-03-03T12:44:13&#43;00:00"/>
-<meta property="article:modified_time" content="2015-03-03T12:44:13&#43;00:00"/>
-
+<meta property="article:published_time" content="2015-03-03T12:44:13+00:00" />
+<meta property="article:modified_time" content="2015-03-03T12:44:13+00:00" />
 
 <meta itemprop="name" content="Fast Fourier Transform">
-<meta itemprop="description" content="I wrote a java tuner app a few years ago, so I needed a Fast Fourier Transform to do the frequency detection. I found a fairly simple implementation in java on the web somewhere, can&rsquo;t remember where, tried it, and it worked fine. The frequency detection algorithm comes from The Dsp Dimension.
+<meta itemprop="description" content="I wrote a java tuner app a few years ago, so I needed a Fast Fourier Transform to do the frequency detection. I found a fairly simple implementation in java on the web somewhere, can’t remember where, tried it, and it worked fine. The frequency detection algorithm comes from The Dsp Dimension.
 A few years later I ported it to windows, added a few gizmos for tuning accordions and put it on Google Code.">
-
-
 <meta itemprop="datePublished" content="2015-03-03T12:44:13&#43;00:00" />
 <meta itemprop="dateModified" content="2015-03-03T12:44:13&#43;00:00" />
 <meta itemprop="wordCount" content="337">
@@ -27,10 +24,9 @@ A few years later I ported it to windows, added a few gizmos for tuning accordio
 
 
 <meta itemprop="keywords" content="" />
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Fast Fourier Transform"/>
-<meta name="twitter:description" content="I wrote a java tuner app a few years ago, so I needed a Fast Fourier Transform to do the frequency detection. I found a fairly simple implementation in java on the web somewhere, can&rsquo;t remember where, tried it, and it worked fine. The frequency detection algorithm comes from The Dsp Dimension.
+<meta name="twitter:description" content="I wrote a java tuner app a few years ago, so I needed a Fast Fourier Transform to do the frequency detection. I found a fairly simple implementation in java on the web somewhere, can’t remember where, tried it, and it worked fine. The frequency detection algorithm comes from The Dsp Dimension.
 A few years later I ported it to windows, added a few gizmos for tuning accordions and put it on Google Code."/>
 
 
@@ -38,7 +34,7 @@ A few years later I ported it to windows, added a few gizmos for tuning accordio
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.64.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -108,12 +104,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
-                    DIY
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                    DIY
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
@@ -193,12 +189,9 @@ code {
       </small>
     </div>
     <p>
-      <p>I wrote a java tuner app a few years ago, so I needed a <a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">Fast Fourier Transform</a> to do the frequency detection. I found a fairly simple implementation in java on the web somewhere, can&rsquo;t remember where, tried it, and it worked fine. The frequency detection algorithm comes from <a href="http://www.dspdimension.com/admin/pitch-shifting-using-the-ft">The Dsp Dimension</a>.</p>
-
-<p>A few years later I ported it to windows, added a few gizmos for tuning accordions and put it on <a href="https://code.google.com/p/ctuner">Google Code</a>. I was concerned that the FFT implementation was simplistic and did more research online to find better implementations. However, when I actually checked the performance with a profiling tool, I found that the spectrum display code was the bottleneck and the FFT was not significant. I tried a few different FFT implementations anyway, but they didn&rsquo;t make a significant difference. I then ported the app to OSX, which has a built in high performance <a href="https://developer.apple.com/library/ios/documentation/Performance/Conceptual/vDSP_Programming_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40005147">DSP</a> library, so no problem there.</p>
-
-<p>Later still, I ported it to Android, on <a href="https://github.com/billthefarmer/tuner/wiki">GitHub</a>, also on <a href="https://f-droid.org/packages/org.billthefarmer.tuner">FDroid</a>, and the FFT still worked fine in Java on Android. Then I had a request to add a spectrum display to my <a href="https://github.com/billthefarmer/scope/wiki">Oscilloscope</a> app, also on <a href="https://f-droid.org/packages/org.billthefarmer.scope">FDroid</a>. When I tried this on my Moto G phone, the spectrum obviously had a problem. When I checked, the problem was the simplistic FFT I have been using. So I did another <a href="https://duckduckgo.com">web search</a> and discovered <a href="http://anthonix.com/ffts">FFTS</a>, the allegedly Fastest Fourier Transform in the South. I couldn&rsquo;t get this to build for Android using the script provided, so I did a fork on <a href="https://github.com/billthefarmer/ffts-android">Github</a> which I rearranged so it will build with the Android build tools. I also built a test app which does the tests shipped with the library. The FFTS library uses dynamic code which modifies itself, and also makes use of the <a href="http://www.arm.com/products/processors/technologies/neon.php">ARM NEON</a> engine if it is present. All three Android devices we have have NEON support in the processor.</p>
-
+      <p>I wrote a java tuner app a few years ago, so I needed a <a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">Fast Fourier Transform</a> to do the frequency detection. I found a fairly simple implementation in java on the web somewhere, can’t remember where, tried it, and it worked fine. The frequency detection algorithm comes from <a href="http://www.dspdimension.com/admin/pitch-shifting-using-the-ft">The Dsp Dimension</a>.</p>
+<p>A few years later I ported it to windows, added a few gizmos for tuning accordions and put it on <a href="https://code.google.com/p/ctuner">Google Code</a>. I was concerned that the FFT implementation was simplistic and did more research online to find better implementations. However, when I actually checked the performance with a profiling tool, I found that the spectrum display code was the bottleneck and the FFT was not significant. I tried a few different FFT implementations anyway, but they didn’t make a significant difference. I then ported the app to OSX, which has a built in high performance <a href="https://developer.apple.com/library/ios/documentation/Performance/Conceptual/vDSP_Programming_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40005147">DSP</a> library, so no problem there.</p>
+<p>Later still, I ported it to Android, on <a href="https://github.com/billthefarmer/tuner/wiki">GitHub</a>, also on <a href="https://f-droid.org/packages/org.billthefarmer.tuner">FDroid</a>, and the FFT still worked fine in Java on Android. Then I had a request to add a spectrum display to my <a href="https://github.com/billthefarmer/scope/wiki">Oscilloscope</a> app, also on <a href="https://f-droid.org/packages/org.billthefarmer.scope">FDroid</a>. When I tried this on my Moto G phone, the spectrum obviously had a problem. When I checked, the problem was the simplistic FFT I have been using. So I did another <a href="https://duckduckgo.com">web search</a> and discovered <a href="http://anthonix.com/ffts">FFTS</a>, the allegedly Fastest Fourier Transform in the South. I couldn’t get this to build for Android using the script provided, so I did a fork on <a href="https://github.com/billthefarmer/ffts-android">Github</a> which I rearranged so it will build with the Android build tools. I also built a test app which does the tests shipped with the library. The FFTS library uses dynamic code which modifies itself, and also makes use of the <a href="http://www.arm.com/products/processors/technologies/neon.php">ARM NEON</a> engine if it is present. All three Android devices we have have NEON support in the processor.</p>
 <p>I didn&rsquo;t use this for the spectrum, the FFT buffer size was unnecessarily high, so reducing it solved the problem.</p>
 
     </p>
@@ -213,11 +206,11 @@ code {
   
   <li><a href="/blog/java-collections/">Java Collections</a></li>
   
+  <li><a href="/blog/derive-edit-position/">Derive Edit Position from Markdown</a></li>
+  
   <li><a href="/blog/post/source-code-highlighting/">Source Code Syntax Highlighting</a></li>
   
   <li><a href="/blog/post/musical-temperaments/">Musical Temperaments</a></li>
-  
-  <li><a href="/blog/post/draw-musical-staff/">Draw Musical Staff</a></li>
   
 </ul>
 
@@ -238,6 +231,10 @@ code {
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/derive-edit-position/">
+        Derive Edit Position from Markdown
+      </a></li>
     
       <li><a href="/blog/fixing-basin-waste-pop-up/">
         Fixing Basin Waste Pop Up
@@ -275,10 +272,6 @@ code {
         Green Tomatoes
       </a></li>
     
-      <li><a href="/blog/post/create-pdf-report/">
-        Create PDF Report
-      </a></li>
-    
   </ul>
 
   
@@ -310,7 +303,7 @@ code {
       <div class="row column">
         <p>
           
-          Copyright &copy; 2019 Bill Farmer
+          Copyright © 2019 Bill Farmer
           
         </p>
         <p>

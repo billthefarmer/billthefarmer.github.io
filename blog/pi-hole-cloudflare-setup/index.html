@@ -11,15 +11,12 @@
 The installation script asks a series of questions using text dialogs and produces a log as it goes." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/pi-hole-cloudflare-setup/" />
-<meta property="article:published_time" content="2019-06-17T18:30:39&#43;01:00"/>
-<meta property="article:modified_time" content="2019-06-17T18:30:39&#43;01:00"/>
-
+<meta property="article:published_time" content="2019-06-17T18:30:39+01:00" />
+<meta property="article:modified_time" content="2019-06-17T18:30:39+01:00" />
 
 <meta itemprop="name" content="Pi-hole Cloudflare, DNSCrypt, Unbound Setup">
 <meta itemprop="description" content="Pi-hole I came across a reference to Pi-hole recently, so as my old pi has been gathering dust, I thought I would try it out. The pi already had Raspbian Stretch Lite installed, so I uninstalled some of the packages I had previously installed, and loaded Pi-Hole using the One-Step Automated Install.
 The installation script asks a series of questions using text dialogs and produces a log as it goes.">
-
-
 <meta itemprop="datePublished" content="2019-06-17T18:30:39&#43;01:00" />
 <meta itemprop="dateModified" content="2019-06-17T18:30:39&#43;01:00" />
 <meta itemprop="wordCount" content="1211">
@@ -27,7 +24,6 @@ The installation script asks a series of questions using text dialogs and produc
 
 
 <meta itemprop="keywords" content="" />
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Pi-hole Cloudflare, DNSCrypt, Unbound Setup"/>
 <meta name="twitter:description" content="Pi-hole I came across a reference to Pi-hole recently, so as my old pi has been gathering dust, I thought I would try it out. The pi already had Raspbian Stretch Lite installed, so I uninstalled some of the packages I had previously installed, and loaded Pi-Hole using the One-Step Automated Install.
@@ -38,7 +34,7 @@ The installation script asks a series of questions using text dialogs and produc
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.64.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -108,12 +104,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
-                    DIY
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                    DIY
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
@@ -193,20 +189,16 @@ code {
       </small>
     </div>
     <p>
-      
-
-<h3 id="pi-hole">Pi-hole</h3>
-
+      <h3 id="pi-hole">Pi-hole</h3>
 <p>I came across a reference to <a href="https://pi-hole.net">Pi-hole</a> recently, so as my old pi
 has been gathering dust, I thought I would try it out. The pi already
 had <a href="https://www.raspberrypi.org/downloads/raspbian">Raspbian Stretch Lite</a> installed, so I uninstalled some of the
 packages I had previously installed, and loaded Pi-Hole using the
 <a href="https://github.com/pi-hole/pi-hole/#one-step-automated-install">One-Step Automated Install</a>.</p>
-
 <p>The installation script asks a series of questions using text dialogs
 and produces a log as it goes.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-log" data-lang="log">pi@catherine:~ $ curl -sSL https://install.pi-hole.net | bash
-stty: &#39;standard input&#39;: Inappropriate ioctl for device
+<pre><code class="language-log" data-lang="log">pi@catherine:~ $ curl -sSL https://install.pi-hole.net | bash
+stty: 'standard input': Inappropriate ioctl for device
 
   [✗] Root user check
   [i] Script called with non-root privileges
@@ -215,7 +207,7 @@ stty: &#39;standard input&#39;: Inappropriate ioctl for device
       Make sure to download this script from a trusted source
 
   [✓] Sudo utility check
-stty: &#39;standard input&#39;: Inappropriate ioctl for device
+stty: 'standard input': Inappropriate ioctl for device
 
   [✓] Root user check
 
@@ -280,7 +272,7 @@ stty: &#39;standard input&#39;: Inappropriate ioctl for device
   [✓] Detected ARM-hf architecture (armv6l)
   [i] Checking for existing FTL binary...
   [✓] Downloading and Installing FTL
-  [✓] Creating user &#39;pihole&#39;
+  [✓] Creating user 'pihole'
   [✓] Installing scripts from /etc/.pihole
 
   [i] Installing configs from /etc/.pihole...
@@ -351,7 +343,7 @@ stty: &#39;standard input&#39;: Inappropriate ioctl for device
   [✓] Reloading DNS service
   [✓] Pi-hole Enabled
   [i] Web Interface password: ********
-  [i] This can be changed using &#39;pihole -a -p&#39;
+  [i] This can be changed using 'pihole -a -p'
 
   [i] View the web interface at http://pi.hole/admin or http://192.168.1.252/admin
 
@@ -360,16 +352,14 @@ stty: &#39;standard input&#39;: Inappropriate ioctl for device
   [i] If you set a new IP address, please restart the server running the Pi-hole
 
   [i] The install log is located at: /etc/pihole/install.log
-Installation Complete!</code></pre></div>
-<p>My router uses the IP address <code>192.168.1.254</code> and allocates <a href="https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol">DHCP</a>
+Installation Complete!
+</code></pre><p>My router uses the IP address <code>192.168.1.254</code> and allocates <a href="https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol">DHCP</a>
 IP addresses from <code>192.168.1.1</code> and does not allow DHCP
 configuration. I opted to use the ethernet port and use IP address
 <code>192.168.1.252</code> and the Cloudflare DNS service. The router does allow
 DNS configuration, so I changed the default DNS to <code>192.168.1.252</code> so
 I don&rsquo;t have to make any changes to DNS configuration elsewhere.</p>
-
 <h3 id="cloudflared">Cloudflared</h3>
-
 <p>There is a mention in the <a href="https://docs.pi-hole.net">Pi-hole docs</a> of <a href="https://docs.pi-hole.net/guides/dns-over-https">Configuring
 DNS-Over-HTTPS on Pi-hole</a> using <a href="https://developers.cloudflare.com/1.1.1.1/dns-over-https/cloudflared-proxy">Cloudflare</a>. This is useful to
 stop your <a href="https://en.wikipedia.org/wiki/Internet_service_provider">ISP</a> from snooping on your browsing habits. However, the
@@ -377,7 +367,6 @@ latest version of <a href="https://developers.cloudflare.com/1.1.1.1/dns-over-ht
 <a href="https://developers.cloudflare.com/argo-tunnel/downloads">Downloads</a> page crashes instantly when run on my old Pi 1B. Having
 looked at the cloudflared issues on <a href="https://github.com/cloudflare/cloudflared/issues">GitHub</a>, others have had this
 problem and used an older version which did work on an early Pi.</p>
-
 <p>I couldn&rsquo;t find any links to earlier versions, so I installed the
 <a href="https://golang.org">Go</a> compiler on the Pi and attempted to build the latest version
 of the cloudflared. This failed, and having looked again at the
@@ -385,41 +374,35 @@ cloudflared issues, I found I needed a later version of the compiler
 than came with Rasbian. So I downloaded the latest version of the
 compiler from the <a href="https://golang.org/dl">Go Downloads</a> page, installed it and
 successfully built cloudflared.</p>
-
 <p>This version stopped working after a day due to running out of file
 handles. I looked at the <code>Makefile</code> that came with the cloudflared
 sources and decided to build the latest released version.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pi@jennifer:~ $ <span style="color:#a2f">cd</span> gocode/src/github.com/cloudflare/cloudflared/
-pi@jennifer:~/gocode/src/github.com/cloudflare/cloudflared $ git checkout <span style="color:#666">2019</span>.5.0
+pi@jennifer:~/gocode/src/github.com/cloudflare/cloudflared $ git checkout 2019.5.0
 Note: checking out <span style="color:#b44">&#39;2019.5.0&#39;</span>.
 ...
-HEAD is now at 4bff1ef... Release <span style="color:#666">2019</span>.5.0
+HEAD is now at 4bff1ef... Release 2019.5.0
 pi@jennifer:~/gocode/src/github.com/cloudflare/cloudflared $ <span style="color:#a2f">export</span> <span style="color:#b8860b">PATH</span><span style="color:#666">=</span><span style="color:#b8860b">$PATH</span>:/usr/local/go/bin
 pi@jennifer:~/gocode/src/github.com/cloudflare/cloudflared $ <span style="color:#a2f">export</span> <span style="color:#b8860b">GOPATH</span><span style="color:#666">=</span>~/gocode
 pi@jennifer:~/gocode/src/github.com/cloudflare/cloudflared $ go clean
 pi@jennifer:~/gocode/src/github.com/cloudflare/cloudflared $ make cloudflared
 go build -v -ldflags<span style="color:#666">=</span><span style="color:#b44">&#39;-X &#34;main.Version=2019.5.0&#34; -X &#34;main.BuildTime=2019-06-03-1717 UTC&#34;&#39;</span> github.com/cloudflare/cloudflared/cmd/cloudflared
 pi@jennifer:~/gocode/src/github.com/cloudflare/cloudflared $ ./cloudflared -v
-cloudflared version <span style="color:#666">2019</span>.5.0 <span style="color:#666">(</span>built <span style="color:#666">2019</span>-06-03-1717 UTC<span style="color:#666">)</span></code></pre></div>
-<p>This version ran for about a week before failing with the same error.
+cloudflared version 2019.5.0 <span style="color:#666">(</span>built 2019-06-03-1717 UTC<span style="color:#666">)</span>
+</code></pre></div><p>This version ran for about a week before failing with the same error.
 I used the <a href="https://web.archive.org/web/20180524132333/https://developers.cloudflare.com/argo-tunnel/downloads">Wayback Machine</a> to find an <a href="https://web.archive.org/web/20180419005946/https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-arm.tgz">earlier version</a> of
 cloudflared that might run on the Pi 1B. This turned out to be version
 2018.4.6. I have that version on soak test as third DNS choice in
 Pi-hole, so it may take a while to fail if it is going to.</p>
-
 <p>After about a week I made cloudflared the default choice. After a
 while there started to be problems with missing images in web sites
 and having to refresh the browser to get a web site to load.</p>
-
 <h3 id="dnscrypt">DNSCrypt</h3>
-
 <p>Next I tried <a href="https://github.com/pi-hole/pi-hole/wiki/DNSCrypt-2.0">DNSCrypt</a>. After following the installation
 instructions for Pi-hole, I tried this for a while. I got the same
 sort of symptoms as cloudflared above. It does periodically write an
 interesting list of DNS resolvers and response times to the syslog.</p>
-
 <h3 id="unbound">Unbound</h3>
-
 <p>So I tried <a href="https://docs.pi-hole.net/guides/unbound">unbound</a>. This gives a recursive DNS resolver and
 works very well. It has now been running as the default DNS choice for
 Pi-hole for several days without problems.</p>
@@ -455,6 +438,10 @@ Pi-hole for several days without problems.</p>
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/derive-edit-position/">
+        Derive Edit Position from Markdown
+      </a></li>
     
       <li><a href="/blog/fixing-basin-waste-pop-up/">
         Fixing Basin Waste Pop Up
@@ -492,10 +479,6 @@ Pi-hole for several days without problems.</p>
         Green Tomatoes
       </a></li>
     
-      <li><a href="/blog/post/create-pdf-report/">
-        Create PDF Report
-      </a></li>
-    
   </ul>
 
   
@@ -527,7 +510,7 @@ Pi-hole for several days without problems.</p>
       <div class="row column">
         <p>
           
-          Copyright &copy; 2019 Bill Farmer
+          Copyright © 2019 Bill Farmer
           
         </p>
         <p>

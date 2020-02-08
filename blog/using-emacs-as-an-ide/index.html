@@ -7,17 +7,14 @@
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 <meta property="og:title" content="Using Emacs as an IDE" />
-<meta property="og:description" content="I had to learn Emacs on Unix many years ago as it was at that time the only development environment for Smallworld Magik. Having learnt it, I have stuck with it as it provides a consistent platform for editing source code and building applications in as many computer languages and platforms as I have used and many more I haven&rsquo;t. It is the only source code editor I have used that always gets the indentation and syntax highlighting right." />
+<meta property="og:description" content="I had to learn Emacs on Unix many years ago as it was at that time the only development environment for Smallworld Magik. Having learnt it, I have stuck with it as it provides a consistent platform for editing source code and building applications in as many computer languages and platforms as I have used and many more I haven’t. It is the only source code editor I have used that always gets the indentation and syntax highlighting right." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/using-emacs-as-an-ide/" />
-<meta property="article:published_time" content="2016-12-10T13:59:22&#43;00:00"/>
-<meta property="article:modified_time" content="2016-12-10T13:59:22&#43;00:00"/>
-
+<meta property="article:published_time" content="2016-12-10T13:59:22+00:00" />
+<meta property="article:modified_time" content="2016-12-10T13:59:22+00:00" />
 
 <meta itemprop="name" content="Using Emacs as an IDE">
-<meta itemprop="description" content="I had to learn Emacs on Unix many years ago as it was at that time the only development environment for Smallworld Magik. Having learnt it, I have stuck with it as it provides a consistent platform for editing source code and building applications in as many computer languages and platforms as I have used and many more I haven&rsquo;t. It is the only source code editor I have used that always gets the indentation and syntax highlighting right.">
-
-
+<meta itemprop="description" content="I had to learn Emacs on Unix many years ago as it was at that time the only development environment for Smallworld Magik. Having learnt it, I have stuck with it as it provides a consistent platform for editing source code and building applications in as many computer languages and platforms as I have used and many more I haven’t. It is the only source code editor I have used that always gets the indentation and syntax highlighting right.">
 <meta itemprop="datePublished" content="2016-12-10T13:59:22&#43;00:00" />
 <meta itemprop="dateModified" content="2016-12-10T13:59:22&#43;00:00" />
 <meta itemprop="wordCount" content="689">
@@ -25,17 +22,16 @@
 
 
 <meta itemprop="keywords" content="" />
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Using Emacs as an IDE"/>
-<meta name="twitter:description" content="I had to learn Emacs on Unix many years ago as it was at that time the only development environment for Smallworld Magik. Having learnt it, I have stuck with it as it provides a consistent platform for editing source code and building applications in as many computer languages and platforms as I have used and many more I haven&rsquo;t. It is the only source code editor I have used that always gets the indentation and syntax highlighting right."/>
+<meta name="twitter:description" content="I had to learn Emacs on Unix many years ago as it was at that time the only development environment for Smallworld Magik. Having learnt it, I have stuck with it as it provides a consistent platform for editing source code and building applications in as many computer languages and platforms as I have used and many more I haven’t. It is the only source code editor I have used that always gets the indentation and syntax highlighting right."/>
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.64.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -105,12 +101,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
-                    DIY
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                    DIY
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
@@ -190,67 +186,54 @@ code {
       </small>
     </div>
     <p>
-      <p>I had to learn Emacs on Unix many years ago as it was at that time the only development environment for Smallworld Magik. Having learnt it, I have stuck with it as it provides a consistent platform for editing source code and building applications in as many computer languages and platforms as I have used and many more I haven&rsquo;t. It is the only source code editor I have used that always gets the indentation and syntax highlighting right.</p>
-
-<p><img src="images/2016/12/C.png" alt="C" /></p>
-
-<p>There is an initial steep learning curve to Emacs, it can be a bit like Unix ed, once you get stuck, you can&rsquo;t escape, especially on the command line. The thing to remember is Control-G &#8211; Quit. That will get you out of almost anything. Useful keyboard shortcuts to get started in no particular order:</p>
-
+      <p>I had to learn Emacs on Unix many years ago as it was at that time the only development environment for Smallworld Magik. Having learnt it, I have stuck with it as it provides a consistent platform for editing source code and building applications in as many computer languages and platforms as I have used and many more I haven’t. It is the only source code editor I have used that always gets the indentation and syntax highlighting right.</p>
+<p><img src="images/2016/12/C.png" alt="C"></p>
+<p>There is an initial steep learning curve to Emacs, it can be a bit like Unix ed, once you get stuck, you can’t escape, especially on the command line. The thing to remember is Control-G – Quit. That will get you out of almost anything. Useful keyboard shortcuts to get started in no particular order:</p>
 <ul>
-<li><code>Control-g</code> &#8211; Quit</li>
-<li><code>Control-x-&gt;Control-c</code> &#8211; Quit Emacs &#8211; it will prompt if you have unsaved changes.</li>
-<li><code>Control-s</code> &#8211; Incremental search &#8211; type in what you&rsquo;re looking for and keep pressing Control-S until you find the instance you want.</li>
-<li><code>Control-r</code> &#8211; The same thing backwards &#8211; you can switch between the two.</li>
-<li><code>Alt-x</code> &#8211; Type in a command that isn&rsquo;t on the menu &#8211; Control-G will get you out.</li>
-<li><code>Control-x-&gt;Control-f</code> &#8211; Open a new or existing file &#8211; Emacs calls it visiting a file for some reason.</li>
-<li><code>Control-x-&gt;Control-s</code> &#8211; Save the current buffer &#8211; the one you are editing.</li>
-<li><code>Control-x-&gt;Control-w</code> &#8211; Save the current buffer with a new name.</li>
-<li><code>Shift-Alt-%</code> &#8211; Query replace &#8211; Prompts for two strings and does a search and replace forward from the current point, prompting for each replacement. Control-G is your friend again.</li>
-<li><code>Shift-Control-Alt-%</code> &#8211; Query replace regexp &#8211; the same thing with a regular expression instead.</li>
-<li><code>Alt-x-&gt;delete-rectangle</code> &#8211; Delete a rectangular area of text &#8211; useful for editing log files or lists.</li>
+<li><code>Control-g</code> – Quit</li>
+<li><code>Control-x-&gt;Control-c</code> – Quit Emacs – it will prompt if you have unsaved changes.</li>
+<li><code>Control-s</code> – Incremental search – type in what you’re looking for and keep pressing Control-S until you find the instance you want.</li>
+<li><code>Control-r</code> – The same thing backwards – you can switch between the two.</li>
+<li><code>Alt-x</code> – Type in a command that isn’t on the menu – Control-G will get you out.</li>
+<li><code>Control-x-&gt;Control-f</code> – Open a new or existing file – Emacs calls it visiting a file for some reason.</li>
+<li><code>Control-x-&gt;Control-s</code> – Save the current buffer – the one you are editing.</li>
+<li><code>Control-x-&gt;Control-w</code> – Save the current buffer with a new name.</li>
+<li><code>Shift-Alt-%</code> – Query replace – Prompts for two strings and does a search and replace forward from the current point, prompting for each replacement. Control-G is your friend again.</li>
+<li><code>Shift-Control-Alt-%</code> – Query replace regexp – the same thing with a regular expression instead.</li>
+<li><code>Alt-x-&gt;delete-rectangle</code> – Delete a rectangular area of text – useful for editing log files or lists.</li>
 </ul>
-
 <p>Some of these things are on the menu, but the keyboard shortcuts are easier to use. You need to customise Emacs to do some of the things I use it for.</p>
-
-<p><img src="images/2016/12/Custom.png" alt="Custom" /></p>
-
-<p>There are several ways of customising Emacs, but it all ends up in your ~/.emacs config file. First off, you need to install the Emacs packages you need, like groovy-mode for editing Android Gradle build files, JS3-mode for Javascript files, Markdown-mode for Github README files, yaml-mode for Travis Cl build files, etc. This is on the Options-&gt;Manage Emacs Packages menu. You can change some settings on the Options menu, like Options-&gt;Use CUA keys (Cut/Paste with C-x/C-c/C-v), but remember to Options-&gt;Save Options before you quit. Some of them are buried deeply in Options-&gt;Customise Emacs and can be a pain to find. It&rsquo;s easier to just put them in your ~/.emacs file. Examples are:</p>
+<p><img src="images/2016/12/Custom.png" alt="Custom"></p>
+<p>There are several ways of customising Emacs, but it all ends up in your ~/.emacs config file. First off, you need to install the Emacs packages you need, like groovy-mode for editing Android Gradle build files, JS3-mode for Javascript files, Markdown-mode for Github README files, yaml-mode for Travis Cl build files, etc. This is on the Options-&gt;Manage Emacs Packages menu. You can change some settings on the Options menu, like Options-&gt;Use CUA keys (Cut/Paste with C-x/C-c/C-v), but remember to Options-&gt;Save Options before you quit. Some of them are buried deeply in Options-&gt;Customise Emacs and can be a pain to find. It’s easier to just put them in your ~/.emacs file. Examples are:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">    <span style="color:#666">&#39;</span>(<span style="color:#b8860b">c-basic-offset</span> <span style="color:#666">4</span>)
-    <span style="color:#666">&#39;</span>(<span style="color:#b8860b">c-offsets-alist</span> (<span style="color:#b8860b">quote</span> ((<span style="color:#b8860b">substatement-open</span> <span style="color:#666">.</span> <span style="color:#666">0</span>))))</code></pre></div>
-<p>That gives you an indent of four spaces for all code editing, and makes it put the opening bracket of if or for statements in the right place.</p>
+    <span style="color:#666">&#39;</span>(<span style="color:#b8860b">c-offsets-alist</span> (<span style="color:#a2f;font-weight:bold">quote</span> ((<span style="color:#b8860b">substatement-open</span> <span style="color:#666">.</span> <span style="color:#666">0</span>))))
+</code></pre></div><p>That gives you an indent of four spaces for all code editing, and makes it put the opening bracket of if or for statements in the right place.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">    (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;auto-mode-alist</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;\\.c\\&#39;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">c++-mode</span>))
     (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;auto-mode-alist</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;\\.h\\&#39;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">c++-mode</span>))
     (<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;nxml-mode-hook</span>
-    	  (<span style="color:#b8860b">lambda</span> ()
-    	    (<span style="color:#b8860b">set</span> (<span style="color:#b8860b">make-local-variable</span> <span style="color:#b8860b">&#39;compile-command</span>)
+    	  (<span style="color:#a2f">lambda</span> ()
+    	    (<span style="color:#00a000">set</span> (<span style="color:#b8860b">make-local-variable</span> <span style="color:#b8860b">&#39;compile-command</span>)
     		 <span style="color:#b44">&#34;ant debug&#34;</span>)))
-    (<span style="color:#b8860b">require</span> <span style="color:#b8860b">&#39;package</span>)
+    (<span style="color:#00a000">require</span> <span style="color:#b8860b">&#39;package</span>)
     (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;package-archives</span>
              <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;melpa&#34;</span> <span style="color:#666">.</span> <span style="color:#b44">&#34;http://melpa.milkbox.net/packages/&#34;</span>) <span style="color:#800">t</span>)
     (<span style="color:#b8860b">package-initialize</span>)
     (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;auto-mode-alist</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;\\.gradle\\&#39;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">groovy-mode</span>))
     (<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;groovy-mode-hook</span>
-    	  (<span style="color:#b8860b">lambda</span> ()
-    	    (<span style="color:#b8860b">set</span> (<span style="color:#b8860b">make-local-variable</span> <span style="color:#b8860b">&#39;compile-command</span>)
-    		 <span style="color:#b44">&#34;gradle build&#34;</span>)))</code></pre></div>
-<p>The above Lisp code makes Emacs use c++mode for .c and .h source files, change the compile command to &lsquo;ant debug&rsquo; for Android xml files, use groovy-mode for .gradle files and change the compile command to &lsquo;gradle build&rsquo; for Android gradle files.</p>
-
+    	  (<span style="color:#a2f">lambda</span> ()
+    	    (<span style="color:#00a000">set</span> (<span style="color:#b8860b">make-local-variable</span> <span style="color:#b8860b">&#39;compile-command</span>)
+    		 <span style="color:#b44">&#34;gradle build&#34;</span>)))
+</code></pre></div><p>The above Lisp code makes Emacs use c++mode for .c and .h source files, change the compile command to ‘ant debug’ for Android xml files, use groovy-mode for .gradle files and change the compile command to ‘gradle build’ for Android gradle files.</p>
 <p>To use some of the options on the Tools menu, like diff, compile, egrep, etc., require the tools to be in your path. You can achieve this on windows by installing MSYS2 and making sure your path picks it up. Linux and OSX will have these tools installed if you are using it for development.</p>
-
-<p><img src="images/2016/12/Gradle.png" alt="Gradle" />
+<p><img src="images/2016/12/Gradle.png" alt="Gradle">
 Build an Android app using Gradle</p>
-
-<p><img src="images/2016/12/Ant.png" alt="Ant" />
+<p><img src="images/2016/12/Ant.png" alt="Ant">
 Build an Android app using Apache Ant</p>
-
 <p>It will also edit HTML and just about anything else.</p>
-
-<p><img src="images/2016/12/Java.png" alt="Java" />
+<p><img src="images/2016/12/Java.png" alt="Java">
 Java and HTML files</p>
-
-<p><img src="images/2016/12/Error.png" alt="Error" />
+<p><img src="images/2016/12/Error.png" alt="Error">
 Find errors</p>
-
 <p>If you click on compiler error messages it will take you to the point in the source file. This works well with C and C++, but not consistently on Android Java source files due to a missing blank in the error message.</p>
 
     </p>
@@ -267,9 +250,9 @@ Find errors</p>
   
   <li><a href="/blog/java-collections/">Java Collections</a></li>
   
-  <li><a href="/blog/post/source-code-highlighting/">Source Code Syntax Highlighting</a></li>
+  <li><a href="/blog/derive-edit-position/">Derive Edit Position from Markdown</a></li>
   
-  <li><a href="/blog/post/musical-temperaments/">Musical Temperaments</a></li>
+  <li><a href="/blog/post/source-code-highlighting/">Source Code Syntax Highlighting</a></li>
   
 </ul>
 
@@ -290,6 +273,10 @@ Find errors</p>
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/derive-edit-position/">
+        Derive Edit Position from Markdown
+      </a></li>
     
       <li><a href="/blog/fixing-basin-waste-pop-up/">
         Fixing Basin Waste Pop Up
@@ -327,10 +314,6 @@ Find errors</p>
         Green Tomatoes
       </a></li>
     
-      <li><a href="/blog/post/create-pdf-report/">
-        Create PDF Report
-      </a></li>
-    
   </ul>
 
   
@@ -362,7 +345,7 @@ Find errors</p>
       <div class="row column">
         <p>
           
-          Copyright &copy; 2019 Bill Farmer
+          Copyright © 2019 Bill Farmer
           
         </p>
         <p>

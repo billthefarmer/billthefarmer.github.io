@@ -10,14 +10,10 @@
 <meta property="og:description" content="Random thoughts on random subjects" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/categories/hacking/" />
-
-<meta property="og:updated_time" content="2019-06-17T18:30:39&#43;01:00"/>
-
+<meta property="og:updated_time" content="2020-02-08T18:24:23+00:00" />
 
 <meta itemprop="name" content="Hacking">
 <meta itemprop="description" content="Random thoughts on random subjects">
-
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hacking"/>
 <meta name="twitter:description" content="Random thoughts on random subjects"/>
@@ -27,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.64.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -99,12 +95,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
-                    DIY
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                    DIY
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
@@ -158,6 +154,42 @@ code {
         <div class="medium-8 columns">
           
 
+
+
+
+
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/download-streamed-video/">Download streamed video</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2014-06-06T16:03:16Z">
+        Fri Jun 6, 2014
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    Online video providers tend to stream the video to a javascript player, so making it extremely difficult to capture the video. This blog explains a method using Chrome to spoof the user agent string, pretending to be an iPad. Unfortunately, this doesn’t seem to work any more in the latest version of Chrome.
+So I tried installing a user agent spoofing plugin in Firefox. It seemed to work, but the video didn’t play, so I couldn’t find the url.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/download-streamed-video/'>Read more →</a>
+  <hr>
+</div>
 
 
   
@@ -216,7 +248,7 @@ This issue is reminiscent of back in the day when you actually had or could get 
     </small>
   </div>
   <p>
-    This site has the firewall set up so that the web server has no external access. This means that I can&rsquo;t use the usual WordPress update mechanism to keep it up to date. I use FileZilla for maintaining the server, and I recently discovered you can use drag and drop to move stuff around remotely.
+    This site has the firewall set up so that the web server has no external access. This means that I can’t use the usual WordPress update mechanism to keep it up to date. I use FileZilla for maintaining the server, and I recently discovered you can use drag and drop to move stuff around remotely.
 So my easy WordPress upgrade method is:
  Download the latest zip file and unzip it.
   </p>
@@ -249,9 +281,9 @@ So my easy WordPress upgrade method is:
     </small>
   </div>
   <p>
-    I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I&rsquo;s give it a go and see how I got on.
+    I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I’s give it a go and see how I got on.
 You can try it out in your browser: http://tryhaskell.org
-λ let factorial n = product [1..n] in factorial 99 9332621544394415268169923885626670049071596826438162146859 2963895217599993229915608941463976156518286253697920827223 7582511852109168640000000000000000000000 :: (Enum a, Num a) =&gt; a λ  Pretty impressive! So I thought I&rsquo;d try a simple web application.
+λ let factorial n = product [1..n] in factorial 99 9332621544394415268169923885626670049071596826438162146859 2963895217599993229915608941463976156518286253697920827223 7582511852109168640000000000000000000000 :: (Enum a, Num a) =&gt; a λ Pretty impressive! So I thought I’d try a simple web application.
   </p>
   <a href='https://billthefarmer.github.io/blog/haskell/'>Read more →</a>
   <hr>
@@ -289,37 +321,6 @@ You can try it out in your browser: http://tryhaskell.org
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/raspberry-pi-wifi/">Raspberry Pi Wifi</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2013-12-21T20:16:37Z">
-        Sat Dec 21, 2013
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    When I got my Pi some months ago I bought a wifi adapter for it, as you do. But I couldn&rsquo;t get it to work reliably in Raspbian, and I didn&rsquo;t even try in Arch Linux. So I tested the adapter on my windoze box, and it worked just fine, and I tried it with Linux and it worked just fine, so I put it in the &lsquo;too hard&rsquo; box.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/raspberry-pi-wifi/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -344,6 +345,10 @@ You can try it out in your browser: http://tryhaskell.org
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/derive-edit-position/">
+        Derive Edit Position from Markdown
+      </a></li>
     
       <li><a href="/blog/fixing-basin-waste-pop-up/">
         Fixing Basin Waste Pop Up
@@ -381,10 +386,6 @@ You can try it out in your browser: http://tryhaskell.org
         Green Tomatoes
       </a></li>
     
-      <li><a href="/blog/post/create-pdf-report/">
-        Create PDF Report
-      </a></li>
-    
   </ul>
 
   
@@ -416,7 +417,7 @@ You can try it out in your browser: http://tryhaskell.org
       <div class="row column">
         <p>
           
-          Copyright &copy; 2019 Bill Farmer
+          Copyright © 2019 Bill Farmer
           
         </p>
         <p>

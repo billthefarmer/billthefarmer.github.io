@@ -10,14 +10,10 @@
 <meta property="og:description" content="Random thoughts on random subjects" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/categories/hacking/" />
-
-<meta property="og:updated_time" content="2019-06-17T18:30:39&#43;01:00"/>
-
+<meta property="og:updated_time" content="2020-02-08T18:24:23+00:00" />
 
 <meta itemprop="name" content="Hacking">
 <meta itemprop="description" content="Random thoughts on random subjects">
-
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hacking"/>
 <meta name="twitter:description" content="Random thoughts on random subjects"/>
@@ -27,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.64.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -99,12 +95,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
-                    DIY
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                    DIY
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
@@ -158,6 +154,42 @@ code {
         <div class="medium-8 columns">
           
 
+
+
+
+
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/getting-related-content-working/">Getting Related Content working</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2017-09-13T11:30:00Z">
+        Wed Sep 13, 2017
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    The latest release of Hugo includes Related Content, which I thought would be nice to add to my blog. However the docs, although they show you how to set it up, don&rsquo;t explain how it works. To find that out, I had to look at the various threads on the Hugo forums.
+There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:
+  </p>
+  <a href='https://billthefarmer.github.io/blog/getting-related-content-working/'>Read more →</a>
+  <hr>
+</div>
 
 
   
@@ -218,7 +250,7 @@ To add an entry to an android calendar you first have to find out the calendar i
   </div>
   <p>
     I wrote the whatever-o-meter about five years ago in PHP and Javascript as a Wordpress plugin. As I have migrated my blog to Hugo, I thought to have a go at reimplementing it. The exporter I used made a good job of translating the Wordpress custom fields to Hugo front matter parameters. I had to put dashes in quotes, otherwise they get interpreted as [&lt;nil&gt;].
-intro:Pleaseanswerthefollowingquestionscarefullyandtruthfully.question:-YouarelyinginbedonMondaymorning...result:-&#39;%d percent, Perhaps you should consider emigration.
+intro:Pleaseanswerthefollowingquestionscarefullyandtruthfully.question:- YouarelyinginbedonMondaymorning...result:- &#39;%d percent, Perhaps you should consider emigration.
   </p>
   <a href='https://billthefarmer.github.io/blog/whatever-o-meter-revisited/'>Read more →</a>
   <hr>
@@ -282,42 +314,10 @@ I looked for migration tools, and found two:
     </small>
   </div>
   <p>
-    If you write an android app that handles images or any other sort of file your app may be required to deal with &lsquo;content&rsquo; uris (content://). There is a very useful utility which resolves these into &lsquo;file&rsquo; uris (file:///) FileUtils.java. This contains one external reference to LocalStorageProvider, which can be resolved by removing the function isLocalStorageDocument() and references to it.
+    If you write an android app that handles images or any other sort of file your app may be required to deal with ‘content’ uris (content://). There is a very useful utility which resolves these into ‘file’ uris (file:///) FileUtils.java. This contains one external reference to LocalStorageProvider, which can be resolved by removing the function isLocalStorageDocument() and references to it.
 // import com.ianhanniballake.localstorage.LocalStorageProvider;  // ...  /** * @param uri The Uri to check.
   </p>
   <a href='https://billthefarmer.github.io/blog/resolving-content-uris-in-android/'>Read more →</a>
-  <hr>
-</div>
-
-
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/handling-run-time-changes-in-android/">Handling run time changes in Android</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2017-01-08T18:49:31Z">
-        Sun Jan 8, 2017
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    Two articles, Handling Configuration Changes and Handling Configuration Changes with Fragments recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:
- An android fragment is quite a complex heavyweight object to use just for retaining data and possibly a background task, and the fragment management is not simple. Fragments are not retained if the associated activity is discarded by calling finish().
-  </p>
-  <a href='https://billthefarmer.github.io/blog/handling-run-time-changes-in-android/'>Read more →</a>
   <hr>
 </div>
 
@@ -346,6 +346,10 @@ I looked for migration tools, and found two:
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/derive-edit-position/">
+        Derive Edit Position from Markdown
+      </a></li>
     
       <li><a href="/blog/fixing-basin-waste-pop-up/">
         Fixing Basin Waste Pop Up
@@ -383,10 +387,6 @@ I looked for migration tools, and found two:
         Green Tomatoes
       </a></li>
     
-      <li><a href="/blog/post/create-pdf-report/">
-        Create PDF Report
-      </a></li>
-    
   </ul>
 
   
@@ -418,7 +418,7 @@ I looked for migration tools, and found two:
       <div class="row column">
         <p>
           
-          Copyright &copy; 2019 Bill Farmer
+          Copyright © 2019 Bill Farmer
           
         </p>
         <p>

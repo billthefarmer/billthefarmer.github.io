@@ -11,15 +11,12 @@
 Documentation The plugin uses the shortcodes [questionnaire-questions] and [questionnaire-report], or {{&lt; questionnaire-questions &gt;}} and {{&lt; questionnaire-report &gt;}}. The shortcode will be replaced on the page with a series of panels containing the questions and options for the answers, or a panel with a preview of the report." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/post/questionnaire/" />
-<meta property="article:published_time" content="2018-08-20T17:14:32&#43;01:00"/>
-<meta property="article:modified_time" content="2018-08-20T17:14:32&#43;01:00"/>
-
+<meta property="article:published_time" content="2018-08-20T17:14:32+01:00" />
+<meta property="article:modified_time" content="2018-08-20T17:14:32+01:00" />
 
 <meta itemprop="name" content="Questionnaire Maker">
 <meta itemprop="description" content="Introduction Questionnaire Maker is a WordPress and Hugo plugin that asks a series of questions and produces a PDF report. The project is on Github.
 Documentation The plugin uses the shortcodes [questionnaire-questions] and [questionnaire-report], or {{&lt; questionnaire-questions &gt;}} and {{&lt; questionnaire-report &gt;}}. The shortcode will be replaced on the page with a series of panels containing the questions and options for the answers, or a panel with a preview of the report.">
-
-
 <meta itemprop="datePublished" content="2018-08-20T17:14:32&#43;01:00" />
 <meta itemprop="dateModified" content="2018-08-20T17:14:32&#43;01:00" />
 <meta itemprop="wordCount" content="643">
@@ -27,7 +24,6 @@ Documentation The plugin uses the shortcodes [questionnaire-questions] and [ques
 
 
 <meta itemprop="keywords" content="" />
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Questionnaire Maker"/>
 <meta name="twitter:description" content="Introduction Questionnaire Maker is a WordPress and Hugo plugin that asks a series of questions and produces a PDF report. The project is on Github.
@@ -38,7 +34,7 @@ Documentation The plugin uses the shortcodes [questionnaire-questions] and [ques
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.64.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -108,12 +104,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
-                    DIY
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                    DIY
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
@@ -193,24 +189,17 @@ code {
       </small>
     </div>
     <p>
-      
-
-<h3 id="introduction">Introduction</h3>
-
+      <h3 id="introduction">Introduction</h3>
 <p>Questionnaire Maker is a WordPress and Hugo plugin that asks a series
 of questions and produces a PDF report. The project is on <a href="https://github.com/billthefarmer/questionnaire">Github</a>.</p>
-
 <h3 id="documentation">Documentation</h3>
-
 <p>The plugin uses the shortcodes <code>[questionnaire-questions]</code> and
 <code>[questionnaire-report]</code>, or <code>{{&lt; questionnaire-questions &gt;}}</code> and
 <code>{{&lt; questionnaire-report &gt;}}</code>. The shortcode will be replaced on the
 page with a series of panels containing the questions and options for
 the answers, or a panel with a preview of the report.</p>
-
 <p>The plugin requires a large amount of structured data, currently
 encoded as a Javascript object.</p>
-
 <h4 id="question-data">Question data</h4>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a2f;font-weight:bold">let</span> data <span style="color:#666">=</span>
     {intro<span style="color:#666">:</span> <span style="color:#b44">&#34;Please answer the following questions as carefully and accurately as you can&#34;</span>,
@@ -236,28 +225,24 @@ encoded as a Javascript object.</p>
           <span style="color:#b44">&#34;Innovative&#34;</span>,
           <span style="color:#b44">&#34;Explorative&#34;</span>],...}
     };
-</code></pre></div>
-<p>The fields are:</p>
-
+</code></pre></div><p>The fields are:</p>
 <ul>
 <li><strong>intro</strong> - Introductory text</li>
 <li><strong>questions</strong> - A series of questions with fields:
-
 <ul>
 <li><strong>q</strong> - The question text</li>
 <li><strong>t</strong> - The type of question</li>
 <li><strong>a</strong> - The options for answers</li>
 <li><strong>v</strong> - Array of values for answers</li>
-</ul></li>
+</ul>
+</li>
 <li><strong>last</strong> - The last question, fields as above</li>
 <li><strong>matrix</strong> - Object containing possible texts for each type of question</li>
 </ul>
-
 <p>The intro text appears on the first panel together with a start
 button. The questions will appear on subsequent panels. The last
 question triggers a contact panel which prompts for name and email
 address.</p>
-
 <h4 id="report-data">Report data</h4>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a2f;font-weight:bold">let</span> data <span style="color:#666">=</span>
     {pages<span style="color:#666">:</span>
@@ -309,16 +294,12 @@ address.</p>
        {type<span style="color:#666">:</span> <span style="color:#b44">&#34;Type&#34;</span>,
         text<span style="color:#666">:</span> <span style="color:#b44">&#34;Paragraph of text...&#34;</span>},...}
     }};
-</code></pre></div>
-<p>The fields are:</p>
-
+</code></pre></div><p>The fields are:</p>
 <ul>
 <li><strong>pages</strong> - Preamble pages with images, with fields:
-
 <ul>
 <li><strong>pageno</strong> - Page number</li>
 <li><strong>images</strong> - Array of images with fields:
-
 <ul>
 <li><strong>src</strong> - Path to image file</li>
 <li><strong>type</strong> - Type of image, png or jpeg</li>
@@ -328,41 +309,44 @@ address.</p>
 <li><strong>width</strong> - width of image, optional. If width and no height,
 image will be scaled in proportion</li>
 <li><strong>link</strong> - URL of link for image</li>
-</ul></li>
+</ul>
+</li>
 <li><strong>text</strong> - Text for page with fields:
-
 <ul>
 <li><strong>size</strong> - Font size in points, optional</li>
 <li><strong>type</strong> - Type of font, optional</li>
 <li><strong>color</strong> - Text colour, optional</li>
 <li><strong>y</strong> - Y coordinate, optional</li>
-</ul></li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><strong>last</strong> - Last page with images and text, same fields, no pageno</li>
 <li><strong>answers</strong> Paragraphs of text for the report after the preamble
 with fields:
-
 <ul>
 <li><strong>Type</strong> - Type of answer with fields:
-
 <ul>
 <li><strong>desc</strong> - Description of type</li>
-<li><strong>Score</strong> - Value of score for that type with fields:</li>
+<li><strong>Score</strong> - Value of score for that type with fields:
+<ul>
 <li><strong>type</strong> - Description of result</li>
 <li><strong>text</strong> - Paragraph of explanatory text</li>
-</ul></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <p>The report can contain several pages of preamble with images and
 text. Images with no coordinates or dimensions will be placed full
 width at the top of the page. Images with a <code>y</code> coordinate of <code>-1</code>
 will be placed full width at the bottom of the page. Images with an
 <code>x</code> coordinate of <code>-1</code> will be placed at the right margin of the
-page. All coordinates, sizes and dimensions are in points, <sup>1</sup>&frasl;<sub>72</sub>
+page. All coordinates, sizes and dimensions are in points, 1/72
 inch. The fields from the contact panel may be included in text by
 using <code>~forename~</code> and <code>~lastname~</code>.</p>
-
 <p>The description and text for each type for each score will appear on
 subsequent pages. The images and text for the last page will appear
 after the results.</p>
@@ -405,6 +389,10 @@ after the results.</p>
   <h4>Recent Posts</h4>
   <ul>
     
+      <li><a href="/blog/derive-edit-position/">
+        Derive Edit Position from Markdown
+      </a></li>
+    
       <li><a href="/blog/fixing-basin-waste-pop-up/">
         Fixing Basin Waste Pop Up
       </a></li>
@@ -441,10 +429,6 @@ after the results.</p>
         Green Tomatoes
       </a></li>
     
-      <li><a href="/blog/post/create-pdf-report/">
-        Create PDF Report
-      </a></li>
-    
   </ul>
 
   
@@ -476,7 +460,7 @@ after the results.</p>
       <div class="row column">
         <p>
           
-          Copyright &copy; 2019 Bill Farmer
+          Copyright © 2019 Bill Farmer
           
         </p>
         <p>

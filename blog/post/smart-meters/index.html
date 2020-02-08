@@ -10,14 +10,11 @@
 <meta property="og:description" content="CALMU Smart meters are not a new idea. I was a member of a project in the early 1980s which designed and rolled out a prototype smart meter which was far ahead of it&rsquo;s time. The unit was called a CALMU (Credit and Load Management Unit). It was capable of recording electricity consumption with several tariffs, gas consumption, with a connection to a suitable gas meter and water use, with a connection to a suitable water meter." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/post/smart-meters/" />
-<meta property="article:published_time" content="2018-07-14T21:22:37&#43;01:00"/>
-<meta property="article:modified_time" content="2018-07-14T21:22:37&#43;01:00"/>
-
+<meta property="article:published_time" content="2018-07-14T21:22:37+01:00" />
+<meta property="article:modified_time" content="2018-07-14T21:22:37+01:00" />
 
 <meta itemprop="name" content="Smart Meters">
 <meta itemprop="description" content="CALMU Smart meters are not a new idea. I was a member of a project in the early 1980s which designed and rolled out a prototype smart meter which was far ahead of it&rsquo;s time. The unit was called a CALMU (Credit and Load Management Unit). It was capable of recording electricity consumption with several tariffs, gas consumption, with a connection to a suitable gas meter and water use, with a connection to a suitable water meter.">
-
-
 <meta itemprop="datePublished" content="2018-07-14T21:22:37&#43;01:00" />
 <meta itemprop="dateModified" content="2018-07-14T21:22:37&#43;01:00" />
 <meta itemprop="wordCount" content="860">
@@ -25,7 +22,6 @@
 
 
 <meta itemprop="keywords" content="" />
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Smart Meters"/>
 <meta name="twitter:description" content="CALMU Smart meters are not a new idea. I was a member of a project in the early 1980s which designed and rolled out a prototype smart meter which was far ahead of it&rsquo;s time. The unit was called a CALMU (Credit and Load Management Unit). It was capable of recording electricity consumption with several tariffs, gas consumption, with a connection to a suitable gas meter and water use, with a connection to a suitable water meter."/>
@@ -35,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.64.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -105,12 +101,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
-                    DIY
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                    DIY
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
@@ -190,10 +186,7 @@ code {
       </small>
     </div>
     <p>
-      
-
-<h4 id="calmu">CALMU</h4>
-
+      <h4 id="calmu">CALMU</h4>
 <p>Smart meters are not a new idea. I was a member of a project in the
 early 1980s which designed and rolled out a prototype smart meter
 which was far ahead of it&rsquo;s time. The unit was called a <a href="https://www.umsmeters.co.uk/contact-us/manuals-and-downloads/old-pri-meters-kit">CALMU</a>
@@ -202,9 +195,7 @@ electricity consumption with several tariffs, gas consumption, with a
 connection to a suitable gas meter and water use, with a connection to
 a suitable water meter. It had a remote display panel with a <a href="https://en.wikipedia.org/wiki/Vacuum_fluorescent_display">vacuum
 fluorescent display</a> which could be mounted in a suitable position.</p>
-
 <h4 id="metering">Metering</h4>
-
 <p>The electricity meter used a variant of an <a href="https://en.wikipedia.org/wiki/Intel_MCS-51">Intel 8051</a> processor
 which included an eight bit <a href="https://en.wikipedia.org/wiki/Analog-to-digital_converter">A-to-D</a>. To increase the accuracy the
 current and voltage measurements were made against a slowly ramping
@@ -214,9 +205,7 @@ wave. I argued at the time that it would be more accurate to sample
 unsynchronised at a small difference from the supply frequency so the
 sample points drifted across the waveform over time. Who was right I
 have no idea.</p>
-
 <h4 id="radio-teleswitch">Radio teleswitch</h4>
-
 <p>The meter was connected to the customers&rsquo; telephone line via a
 multi-purpose modem/<a href="https://en.wikipedia.org/wiki/Radio_teleswitch">radio teleswitch</a> receiver. The receiver used
 two nested phase lock loops, the inner loop synchronised to the
@@ -227,13 +216,9 @@ simple transistor amplifier connected to an input pin on the
 processor, an <a href="https://en.wikipedia.org/wiki/Intel_MCS-51">Intel 8051</a> variant with an
 <a href="https://en.wikipedia.org/wiki/EPROM">EPROM</a>. Sychronisation to radio teleswitch messages was achieved
 by a successful 13 bit CRC and start bit check.</p>
-
-<p><img src="images/2018/07/P1020804.JPG" alt="Crystal" /></p>
-
+<p><img src="images/2018/07/P1020804.JPG" alt="Crystal"></p>
 <p>Clock crystal used for the radio teleswitch processor.</p>
-
 <h4 id="modem">Modem</h4>
-
 <p>The input from the telephone line was connected to an interrupt pin on
 the processor. When an interrupt occurred due to an incoming message
 from the telephone exchange the processor checked for a signal long
@@ -241,9 +226,7 @@ enough to check for a valid message and either processed the message
 or went back to radio teleswitching. The modem used the <a href="https://en.wikipedia.org/wiki/Kansas_City_standard">CUTS</a>
 cassete tape standard for communication, which AFAIK was never
 intended for use over telephone lines. However it worked.</p>
-
 <h4 id="data-concentrator">Data Concentrator</h4>
-
 <p>At the telephone exchange was a data concentrator which interrogated
 the CALMUs on demand from the computer centre. It was an off the shelf
 Intel 8086 development board in an Intel enclosure. The code was
@@ -252,16 +235,12 @@ probably popular at the time. However a telephone exchange was a high
 electrical noise environment at that time as it was full of busy
 electro-mechanical exchange equipment. So the concentrator crashed
 regularly and had to be reset.</p>
-
 <h4 id="display-panel">Display Panel</h4>
-
 <p>How the display panel communicated with the CALMU I don&rsquo;t remember
 except that it used 4 core telephone wire and probably some sort of
 serial protocol. I also don&rsquo;t remember how the modem processor
 communicated with the metering processor.</p>
-
 <h4 id="super-snooper">Super Snooper</h4>
-
 <p>I did develop several useful gadgets for testing purposes, one was the
 CALMU Super Snooper which had a two line <a href="https://en.wikipedia.org/wiki/Liquid-crystal_display">LCD</a> display and a
 hexadecimal keypad. This allowed interrogating a CALMU by sending a
@@ -269,37 +248,27 @@ query message and displaying the reply. It used the EPROM variant 8051
 processor. It had a piezo buzzer mounted on the pcb which provided
 audio feedback for the keypad. If you held a button down while turning
 it on it played the tune from Super Trouper by Abba.</p>
-
-<p><img src="images/2018/07/F5326385-01.jpg" alt="LCD Display" /></p>
-
+<p><img src="images/2018/07/F5326385-01.jpg" alt="LCD Display"></p>
 <p>Similar LDC display</p>
-
 <h4 id="bbc-micro-receiver">BBC Micro receiver</h4>
-
 <p>Another was a radio teleswitch receiver using an 8051 variant which
 was connected to a <a href="https://en.wikipedia.org/wiki/BBC_Micro">BBC Micro</a> digital I/O port. This, in
 conjunction with some software on the BBC Micro, enabled the radio
 teleswitch messages to be displayed.</p>
-
 <h4 id="acorn-atom-terminal">Acorn Atom terminal</h4>
-
 <p>The other was an EPROM that turned an <a href="https://en.wikipedia.org/wiki/Acorn_Atom">Acorn Atom</a> into a serial
 terminal. The standard keyboard scanner in an Atom was horrible to
 type on, it only registered a key press when you released the key. So
 I wrote my own, included in the EPROM. I can&rsquo;t remember why we wanted
 a serial terminal, but we must have done or I wouldn&rsquo;t have had the
 idea.</p>
-
 <h4 id="other-projects">Other projects</h4>
-
 <p>There were other metering projects going on at the time, one used
 broad band communication down the customers&rsquo; electricity supply cable
 from the nearest substation. This worked during times of low demand on
 the power network, but became unreliable during times of high demand
 due to the high noise level.</p>
-
 <h4 id="kilostream">Kilostream</h4>
-
 <p>The various utilities were all nationalised industries at the time, so
 there was not too much difficulty working with other utilities on an
 interesting project such as this. Shortly after the end of the project
@@ -331,6 +300,10 @@ became exceedingly unlikely. They have since all done their own thing.</p>
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/derive-edit-position/">
+        Derive Edit Position from Markdown
+      </a></li>
     
       <li><a href="/blog/fixing-basin-waste-pop-up/">
         Fixing Basin Waste Pop Up
@@ -368,10 +341,6 @@ became exceedingly unlikely. They have since all done their own thing.</p>
         Green Tomatoes
       </a></li>
     
-      <li><a href="/blog/post/create-pdf-report/">
-        Create PDF Report
-      </a></li>
-    
   </ul>
 
   
@@ -403,7 +372,7 @@ became exceedingly unlikely. They have since all done their own thing.</p>
       <div class="row column">
         <p>
           
-          Copyright &copy; 2019 Bill Farmer
+          Copyright © 2019 Bill Farmer
           
         </p>
         <p>
