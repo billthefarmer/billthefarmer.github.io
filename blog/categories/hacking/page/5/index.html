@@ -10,7 +10,7 @@
 <meta property="og:description" content="Random thoughts on random subjects" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/categories/hacking/" />
-<meta property="og:updated_time" content="2020-02-08T18:24:23+00:00" />
+<meta property="og:updated_time" content="2020-02-15T20:59:47+00:00" />
 
 <meta itemprop="name" content="Hacking">
 <meta itemprop="description" content="Random thoughts on random subjects">
@@ -74,17 +74,8 @@ code {
       <div class="top-bar">
         <div class="row column">
           <div class="top-bar-left">
-            <ul class="menu">
-              <li><a href="https://billthefarmer.github.io/blog/">
-                  Bill Farmer
-                </a></li>
-            </ul>
-          </div>
           <div class="top-bar-right">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
-                Home
-              </a></li>
               
                 
                   <li><a href="https://billthefarmer.github.io/blog/">
@@ -158,6 +149,38 @@ code {
 
 
 
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/resolving-content-uris-in-android/">Resolving content uris in android</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2017-07-23T10:48:17Z">
+        Sun Jul 23, 2017
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    If you write an android app that handles images or any other sort of file your app may be required to deal with ‘content’ uris (content://). There is a very useful utility which resolves these into ‘file’ uris (file:///) FileUtils.java. This contains one external reference to LocalStorageProvider, which can be resolved by removing the function isLocalStorageDocument() and references to it.
+// import com.ianhanniballake.localstorage.LocalStorageProvider;  // ...  /** * @param uri The Uri to check.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/resolving-content-uris-in-android/'>Read more →</a>
+  <hr>
+</div>
 
 
   
@@ -286,38 +309,6 @@ When I first installed Cyanogenmod, I had to use an unofficial build, as an offi
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/resurrecting-a-netbook-as-a-web-server/">Resurrecting a netbook as a web server</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2016-02-27T19:58:47Z">
-        Sat Feb 27, 2016
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    When I got fed up with Windows XP on my netbook, I tried windows 7 on it, but it was barely usable. So I tried Windows 7 Starter which was better. I upgraded it to Home Premium, which was OK at first, but slowed down as it got clagged up with updates.
-That was it until recently, when I read an article about putting Windows 10 on one. I didn’t try that, but I did try Linux Mint on it.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/resurrecting-a-netbook-as-a-web-server/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -342,6 +333,10 @@ That was it until recently, when I read an article about putting Windows 10 on o
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/hiding-button/">
+        Hiding Edit Button
+      </a></li>
     
       <li><a href="/blog/derive-edit-position/">
         Derive Edit Position from Markdown
@@ -377,10 +372,6 @@ That was it until recently, when I read an article about putting Windows 10 on o
     
       <li><a href="/blog/interesting-mash/">
         Interesting Mash
-      </a></li>
-    
-      <li><a href="/blog/green-tomatoes/">
-        Green Tomatoes
       </a></li>
     
   </ul>

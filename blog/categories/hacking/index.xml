@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2019 Bill Farmer</copyright>
-    <lastBuildDate>Sat, 08 Feb 2020 18:24:23 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Feb 2020 20:59:47 +0000</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hiding Edit Button</title>
+      <link>https://billthefarmer.github.io/blog/hiding-button/</link>
+      <pubDate>Sat, 15 Feb 2020 20:59:47 +0000</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/hiding-button/</guid>
+      <description>My Diary and Notes apps have a floating button in the corner of the screen which is used to switch between editing markdown text and viewing the result. Although it is part of the android Material Design, this button has been the subject of several issues raised by users.
+I have seen apps which hide this button on scrolling, and this was one of the suggestions by users. Getting this to work correctly turned out to be more complex than initially considered, requiring two boolean flags and a lambda expression.</description>
+    </item>
     
     <item>
       <title>Derive Edit Position from Markdown</title>

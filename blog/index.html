@@ -10,7 +10,7 @@
 <meta property="og:description" content="Random thoughts on random subjects" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/" />
-<meta property="og:updated_time" content="2020-02-08T18:24:23+00:00" />
+<meta property="og:updated_time" content="2020-02-15T20:59:47+00:00" />
 
 <meta itemprop="name" content="Bill Farmer">
 <meta itemprop="description" content="Random thoughts on random subjects">
@@ -74,17 +74,8 @@ code {
       <div class="top-bar">
         <div class="row column">
           <div class="top-bar-left">
-            <ul class="menu">
-              <li><a href="https://billthefarmer.github.io/blog/">
-                  Bill Farmer
-                </a></li>
-            </ul>
-          </div>
           <div class="top-bar-right">
             <ul class="menu">
-              <li class="active"><a href="https://billthefarmer.github.io/blog/">
-                Home
-              </a></li>
               
                 
                   <li><a href="https://billthefarmer.github.io/blog/">
@@ -160,6 +151,38 @@ code {
   
 
 
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/hiding-button/">Hiding Edit Button</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2020-02-15T20:59:47Z">
+        Sat Feb 15, 2020
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    My Diary and Notes apps have a floating button in the corner of the screen which is used to switch between editing markdown text and viewing the result. Although it is part of the android Material Design, this button has been the subject of several issues raised by users.
+I have seen apps which hide this button on scrolling, and this was one of the suggestions by users. Getting this to work correctly turned out to be more complex than initially considered, requiring two boolean flags and a lambda expression.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/hiding-button/'>Read more →</a>
+  <hr>
+</div>
 
 
   
@@ -292,38 +315,6 @@ Ingredients  Thinly sliced mushrooms Dark soy sauce  Method  Thinly slice the mu
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/post/source-code-highlighting/">Source Code Syntax Highlighting</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2019-03-24T11:01:35Z">
-        Sun Mar 24, 2019
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    One of the enhancements suggested for my android editor is syntax highlighting. The libraries I have found, including the one used in this blog, parse the input and produce output in HTML, using styled spans. Emacs makes extensive use of regular expressions for highlighting.
-HTML output is not very useful for a text editor. It could be used with Html.fromHtml() to produce styled text. This would then be loaded back into the editor all while the user is attempting to edit the text.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/post/source-code-highlighting/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -348,6 +339,10 @@ HTML output is not very useful for a text editor. It could be used with Html.fro
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/hiding-button/">
+        Hiding Edit Button
+      </a></li>
     
       <li><a href="/blog/derive-edit-position/">
         Derive Edit Position from Markdown
@@ -383,10 +378,6 @@ HTML output is not very useful for a text editor. It could be used with Html.fro
     
       <li><a href="/blog/interesting-mash/">
         Interesting Mash
-      </a></li>
-    
-      <li><a href="/blog/green-tomatoes/">
-        Green Tomatoes
       </a></li>
     
   </ul>
