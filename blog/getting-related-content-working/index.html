@@ -34,7 +34,7 @@ There are four parts - you need to create a new partial template in layouts/part
 
 
 
-<meta name="generator" content="Hugo 0.64.0" />
+<meta name="generator" content="Hugo 0.66.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -83,17 +83,11 @@ code {
       <div class="top-bar">
         <div class="row column">
           <div class="top-bar-left">
-          <div class="top-bar-right">
             <ul class="menu">
+              <li class=""><a href="https://billthefarmer.github.io/blog/">
+                Home
+              </a></li>
               
-                
-                  <li><a href="https://billthefarmer.github.io/blog/">
-                    Bill Farmer
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
-                    Categories
-                  </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
@@ -201,10 +195,10 @@ that out, I had to look at the various threads on the
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    {{ partial &#34;related&#34; . }}
 </code></pre></div><p>You need to add some configuration options to your config file:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#a2f;font-weight:bold">related</span>:<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#bbb">  </span><span style="color:#a2f;font-weight:bold">threshold</span>:<span style="color:#bbb"> </span><span style="color:#666">10</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#a2f;font-weight:bold">threshold</span>:<span style="color:#bbb"> </span><span style="color:#666">10</span><span style="color:#bbb">
 </span><span style="color:#bbb">  </span><span style="color:#a2f;font-weight:bold">toLower</span>:<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#bbb">
 </span><span style="color:#bbb">  </span><span style="color:#a2f;font-weight:bold">indices</span>:<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#bbb">    </span>- <span style="color:#a2f;font-weight:bold">name</span>:<span style="color:#bbb"> </span>keywords<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>- <span style="color:#a2f;font-weight:bold">name</span>:<span style="color:#bbb"> </span>keywords<span style="color:#bbb">
 </span><span style="color:#bbb">      </span><span style="color:#a2f;font-weight:bold">weight</span>:<span style="color:#bbb"> </span><span style="color:#666">150</span><span style="color:#bbb">
 </span></code></pre></div><p>You need to add some keywords to the front matter of your posts. I
 tried tags initially, but couldn&rsquo;t get it to work, so I tried
@@ -216,9 +210,9 @@ keywords:</p>
 </span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">date</span>:<span style="color:#bbb"> </span>2017-01-08T18:49:31<span style="color:#666">+00</span>:<span style="color:#666">00</span><span style="color:#bbb">
 </span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">url</span>:<span style="color:#bbb"> </span>/handling-run-time-changes-in-android/<span style="color:#bbb">
 </span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">categories</span>:<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#bbb">  </span>- Hacking<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>- Hacking<span style="color:#bbb">
 </span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">keywords</span>:<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#bbb">  </span>- android<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>- android<span style="color:#bbb">
 </span><span style="color:#bbb">  </span>- configuration<span style="color:#bbb">
 </span><span style="color:#bbb">  </span>- fragment<span style="color:#bbb">
 </span><span style="color:#bbb">  </span>- singleton<span style="color:#bbb">

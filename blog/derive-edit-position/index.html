@@ -37,7 +37,7 @@ To get the tap position in the markdown view it is necessary to compensate for t
 
 
 
-<meta name="generator" content="Hugo 0.64.0" />
+<meta name="generator" content="Hugo 0.66.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -86,17 +86,11 @@ code {
       <div class="top-bar">
         <div class="row column">
           <div class="top-bar-left">
-          <div class="top-bar-right">
             <ul class="menu">
+              <li class=""><a href="https://billthefarmer.github.io/blog/">
+                Home
+              </a></li>
               
-                
-                  <li><a href="https://billthefarmer.github.io/blog/">
-                    Bill Farmer
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
-                    Categories
-                  </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
@@ -195,18 +189,18 @@ the display density.</p>
         <span style="color:#666">{</span>
             <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>shown<span style="color:#666">)</span>
             <span style="color:#666">{</span>
-                <span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">[</span><span style="color:#666">]</span> l <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> <span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">[</span>2<span style="color:#666">]</span><span style="color:#666">;</span>
-                markdownView<span style="color:#666">.</span><span style="color:#b44">getLocationOnScreen</span><span style="color:#666">(</span>l<span style="color:#666">)</span><span style="color:#666">;</span>
+                <span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">[]</span> l <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> <span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">[</span>2<span style="color:#666">];</span>
+                markdownView<span style="color:#666">.</span><span style="color:#b44">getLocationOnScreen</span><span style="color:#666">(</span>l<span style="color:#666">);</span>
 
                 <span style="color:#080;font-style:italic">// Get tap position
-</span><span style="color:#080;font-style:italic"></span>                <span style="color:#0b0;font-weight:bold">float</span> y <span style="color:#666">=</span> e<span style="color:#666">.</span><span style="color:#b44">getY</span><span style="color:#666">(</span><span style="color:#666">)</span> <span style="color:#666">-</span> l<span style="color:#666">[</span>1<span style="color:#666">]</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                <span style="color:#0b0;font-weight:bold">float</span> y <span style="color:#666">=</span> e<span style="color:#666">.</span><span style="color:#b44">getY</span><span style="color:#666">()</span> <span style="color:#666">-</span> l<span style="color:#666">[</span>1<span style="color:#666">];</span>
 
-                <span style="color:#0b0;font-weight:bold">int</span> scrollY <span style="color:#666">=</span> markdownView<span style="color:#666">.</span><span style="color:#b44">getScrollY</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
-                <span style="color:#0b0;font-weight:bold">int</span> contentHeight <span style="color:#666">=</span> markdownView<span style="color:#666">.</span><span style="color:#b44">getContentHeight</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
-                <span style="color:#0b0;font-weight:bold">float</span> density <span style="color:#666">=</span> getResources<span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">getDisplayMetrics</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">density</span><span style="color:#666">;</span>
+                <span style="color:#0b0;font-weight:bold">int</span> scrollY <span style="color:#666">=</span> markdownView<span style="color:#666">.</span><span style="color:#b44">getScrollY</span><span style="color:#666">();</span>
+                <span style="color:#0b0;font-weight:bold">int</span> contentHeight <span style="color:#666">=</span> markdownView<span style="color:#666">.</span><span style="color:#b44">getContentHeight</span><span style="color:#666">();</span>
+                <span style="color:#0b0;font-weight:bold">float</span> density <span style="color:#666">=</span> getResources<span style="color:#666">().</span><span style="color:#b44">getDisplayMetrics</span><span style="color:#666">().</span><span style="color:#b44">density</span><span style="color:#666">;</span>
 
                 <span style="color:#080;font-style:italic">// Get markdown position
-</span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">float</span> p <span style="color:#666">=</span> <span style="color:#666">(</span>y <span style="color:#666">+</span> scrollY<span style="color:#666">)</span> <span style="color:#666">/</span> <span style="color:#666">(</span>contentHeight <span style="color:#666">*</span> density<span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">float</span> p <span style="color:#666">=</span> <span style="color:#666">(</span>y <span style="color:#666">+</span> scrollY<span style="color:#666">)</span> <span style="color:#666">/</span> <span style="color:#666">(</span>contentHeight <span style="color:#666">*</span> density<span style="color:#666">);</span>
 </code></pre></div><p>The function to get the view location on screen is a bit arcane in
 that you must provide a two element array for the X and Y
 co-ordinates. The position as a proportion of the total length of the
@@ -214,11 +208,11 @@ displayed markdown is calculated from the corrected Y position, the
 scroll position and the density.</p>
 <p>Switch to the edit view and close any open search.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">                <span style="color:#080;font-style:italic">// Animation
-</span><span style="color:#080;font-style:italic"></span>                animateEdit<span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                animateEdit<span style="color:#666">();</span>
 
                 <span style="color:#080;font-style:italic">// Close text search
-</span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>searchItem<span style="color:#666">.</span><span style="color:#b44">isActionViewExpanded</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">)</span>
-                    searchItem<span style="color:#666">.</span><span style="color:#b44">collapseActionView</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>searchItem<span style="color:#666">.</span><span style="color:#b44">isActionViewExpanded</span><span style="color:#666">())</span>
+                    searchItem<span style="color:#666">.</span><span style="color:#b44">collapseActionView</span><span style="color:#666">();</span>
 </code></pre></div><p>It is necessary to scroll after a delay, otherwise it gets ignored. To
 find the position in the edit view it is necessary to get the total
 height of the text, calculate the Y position as a proportion, and then
@@ -226,24 +220,24 @@ use a series of functions to get the text line, the offset in the text
 to set the selection, and the position of the line to scroll to it.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
                 <span style="color:#080;font-style:italic">// Scroll after delay
-</span><span style="color:#080;font-style:italic"></span>                textView<span style="color:#666">.</span><span style="color:#b44">postDelayed</span><span style="color:#666">(</span><span style="color:#666">(</span><span style="color:#666">)</span> <span style="color:#666">-</span><span style="color:#666">&gt;</span>
+</span><span style="color:#080;font-style:italic"></span>                textView<span style="color:#666">.</span><span style="color:#b44">postDelayed</span><span style="color:#666">(()</span> <span style="color:#666">-&gt;</span>
                 <span style="color:#666">{</span>
-                    <span style="color:#0b0;font-weight:bold">int</span> h <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">getHeight</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
-                    <span style="color:#0b0;font-weight:bold">int</span> v <span style="color:#666">=</span> Math<span style="color:#666">.</span><span style="color:#b44">round</span><span style="color:#666">(</span>h <span style="color:#666">*</span> p<span style="color:#666">)</span><span style="color:#666">;</span>
+                    <span style="color:#0b0;font-weight:bold">int</span> h <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">().</span><span style="color:#b44">getHeight</span><span style="color:#666">();</span>
+                    <span style="color:#0b0;font-weight:bold">int</span> v <span style="color:#666">=</span> Math<span style="color:#666">.</span><span style="color:#b44">round</span><span style="color:#666">(</span>h <span style="color:#666">*</span> p<span style="color:#666">);</span>
 
                     <span style="color:#080;font-style:italic">// Get line
-</span><span style="color:#080;font-style:italic"></span>                    <span style="color:#0b0;font-weight:bold">int</span> line <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">getLineForVertical</span><span style="color:#666">(</span>v<span style="color:#666">)</span><span style="color:#666">;</span>
-                    <span style="color:#0b0;font-weight:bold">int</span> offset <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">(</span><span style="color:#666">)</span>
-                        <span style="color:#666">.</span><span style="color:#b44">getOffsetForHorizontal</span><span style="color:#666">(</span>line<span style="color:#666">,</span> 0<span style="color:#666">)</span><span style="color:#666">;</span>
-                    textView<span style="color:#666">.</span><span style="color:#b44">setSelection</span><span style="color:#666">(</span>offset<span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                    <span style="color:#0b0;font-weight:bold">int</span> line <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">().</span><span style="color:#b44">getLineForVertical</span><span style="color:#666">(</span>v<span style="color:#666">);</span>
+                    <span style="color:#0b0;font-weight:bold">int</span> offset <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span>
+                        <span style="color:#666">.</span><span style="color:#b44">getOffsetForHorizontal</span><span style="color:#666">(</span>line<span style="color:#666">,</span> 0<span style="color:#666">);</span>
+                    textView<span style="color:#666">.</span><span style="color:#b44">setSelection</span><span style="color:#666">(</span>offset<span style="color:#666">);</span>
 
                     <span style="color:#080;font-style:italic">// get text position
-</span><span style="color:#080;font-style:italic"></span>                    <span style="color:#0b0;font-weight:bold">int</span> position <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">getLineBaseline</span><span style="color:#666">(</span>line<span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                    <span style="color:#0b0;font-weight:bold">int</span> position <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">().</span><span style="color:#b44">getLineBaseline</span><span style="color:#666">(</span>line<span style="color:#666">);</span>
 
                     <span style="color:#080;font-style:italic">// Scroll to it
-</span><span style="color:#080;font-style:italic"></span>                    <span style="color:#0b0;font-weight:bold">int</span> height <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getHeight</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
-                    scrollView<span style="color:#666">.</span><span style="color:#b44">smoothScrollTo</span><span style="color:#666">(</span>0<span style="color:#666">,</span> position <span style="color:#666">-</span> height <span style="color:#666">/</span> 2<span style="color:#666">)</span><span style="color:#666">;</span>
-                <span style="color:#666">}</span><span style="color:#666">,</span> POSITION_DELAY<span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                    <span style="color:#0b0;font-weight:bold">int</span> height <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getHeight</span><span style="color:#666">();</span>
+                    scrollView<span style="color:#666">.</span><span style="color:#b44">smoothScrollTo</span><span style="color:#666">(</span>0<span style="color:#666">,</span> position <span style="color:#666">-</span> height <span style="color:#666">/</span> 2<span style="color:#666">);</span>
+                <span style="color:#666">},</span> POSITION_DELAY<span style="color:#666">);</span>
 
                 shown <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
                 <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>

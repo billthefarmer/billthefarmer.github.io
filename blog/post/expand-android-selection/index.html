@@ -37,7 +37,7 @@ This method is fine if you have only one text editor view in your app, but would
 
 
 
-<meta name="generator" content="Hugo 0.64.0" />
+<meta name="generator" content="Hugo 0.66.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -86,17 +86,11 @@ code {
       <div class="top-bar">
         <div class="row column">
           <div class="top-bar-left">
-          <div class="top-bar-right">
             <ul class="menu">
+              <li class=""><a href="https://billthefarmer.github.io/blog/">
+                Home
+              </a></li>
               
-                
-                  <li><a href="https://billthefarmer.github.io/blog/">
-                    Bill Farmer
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
-                    Categories
-                  </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
@@ -210,40 +204,40 @@ for a newline.</p>
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f">@Override</span>
     <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onActionModeStarted</span><span style="color:#666">(</span>ActionMode mode<span style="color:#666">)</span>
     <span style="color:#666">{</span>
-        <span style="color:#a2f;font-weight:bold">super</span><span style="color:#666">.</span><span style="color:#b44">onActionModeStarted</span><span style="color:#666">(</span>mode<span style="color:#666">)</span><span style="color:#666">;</span>
+        <span style="color:#a2f;font-weight:bold">super</span><span style="color:#666">.</span><span style="color:#b44">onActionModeStarted</span><span style="color:#666">(</span>mode<span style="color:#666">);</span>
 
         <span style="color:#080;font-style:italic">// If there&#39;s a file
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>file <span style="color:#666">!</span><span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>file <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
         <span style="color:#666">{</span>
             <span style="color:#080;font-style:italic">// Get the mime type
-</span><span style="color:#080;font-style:italic"></span>            String type <span style="color:#666">=</span> FileUtils<span style="color:#666">.</span><span style="color:#b44">getMimeType</span><span style="color:#666">(</span>file<span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>            String type <span style="color:#666">=</span> FileUtils<span style="color:#666">.</span><span style="color:#b44">getMimeType</span><span style="color:#666">(</span>file<span style="color:#666">);</span>
             <span style="color:#080;font-style:italic">// If the type is unknown or not text/plain
-</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>type <span style="color:#666">=</span><span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span> <span style="color:#666">|</span><span style="color:#666">|</span> <span style="color:#666">!</span>type<span style="color:#666">.</span><span style="color:#b44">equals</span><span style="color:#666">(</span>TEXT_PLAIN<span style="color:#666">)</span><span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>type <span style="color:#666">==</span> <span style="color:#a2f;font-weight:bold">null</span> <span style="color:#666">||</span> <span style="color:#666">!</span>type<span style="color:#666">.</span><span style="color:#b44">equals</span><span style="color:#666">(</span>TEXT_PLAIN<span style="color:#666">))</span>
             <span style="color:#666">{</span>
                 <span style="color:#080;font-style:italic">// Get the start and end of the selection
-</span><span style="color:#080;font-style:italic"></span>                <span style="color:#0b0;font-weight:bold">int</span> start <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getSelectionStart</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
-                <span style="color:#0b0;font-weight:bold">int</span> end <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getSelectionEnd</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                <span style="color:#0b0;font-weight:bold">int</span> start <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getSelectionStart</span><span style="color:#666">();</span>
+                <span style="color:#0b0;font-weight:bold">int</span> end <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getSelectionEnd</span><span style="color:#666">();</span>
                 <span style="color:#080;font-style:italic">// And the text
-</span><span style="color:#080;font-style:italic"></span>                String text <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getText</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">toString</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                String text <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getText</span><span style="color:#666">().</span><span style="color:#b44">toString</span><span style="color:#666">();</span>
 
                 <span style="color:#080;font-style:italic">// Get a pattern and a matcher for delimiter
 </span><span style="color:#080;font-style:italic"></span>                <span style="color:#080;font-style:italic">// characters
 </span><span style="color:#080;font-style:italic"></span>                Pattern pattern <span style="color:#666">=</span>
-                    Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>PATTERN_CHARS<span style="color:#666">)</span><span style="color:#666">;</span>
+                    Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>PATTERN_CHARS<span style="color:#666">);</span>
                 Matcher matcher <span style="color:#666">=</span>
-                    pattern<span style="color:#666">.</span><span style="color:#b44">matcher</span><span style="color:#666">(</span>text<span style="color:#666">)</span><span style="color:#666">;</span>
+                    pattern<span style="color:#666">.</span><span style="color:#b44">matcher</span><span style="color:#666">(</span>text<span style="color:#666">);</span>
 
                 <span style="color:#080;font-style:italic">// Find the first match after the end of the selection
-</span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">(</span>end<span style="color:#666">)</span><span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">(</span>end<span style="color:#666">))</span>
                 <span style="color:#666">{</span>
                     <span style="color:#080;font-style:italic">// Update the selection end
-</span><span style="color:#080;font-style:italic"></span>                    end <span style="color:#666">=</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                    end <span style="color:#666">=</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">();</span>
 
                     <span style="color:#080;font-style:italic">// Get the matched char
-</span><span style="color:#080;font-style:italic"></span>                    <span style="color:#0b0;font-weight:bold">char</span> c <span style="color:#666">=</span> text<span style="color:#666">.</span><span style="color:#b44">charAt</span><span style="color:#666">(</span>end<span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                    <span style="color:#0b0;font-weight:bold">char</span> c <span style="color:#666">=</span> text<span style="color:#666">.</span><span style="color:#b44">charAt</span><span style="color:#666">(</span>end<span style="color:#666">);</span>
 
                     <span style="color:#080;font-style:italic">// Check for opening brackets
-</span><span style="color:#080;font-style:italic"></span>                    <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>INVALID_CHARS<span style="color:#666">.</span><span style="color:#b44">indexOf</span><span style="color:#666">(</span>c<span style="color:#666">)</span> <span style="color:#666">=</span><span style="color:#666">=</span> <span style="color:#666">-</span>1<span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>                    <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>INVALID_CHARS<span style="color:#666">.</span><span style="color:#b44">indexOf</span><span style="color:#666">(</span>c<span style="color:#666">)</span> <span style="color:#666">==</span> <span style="color:#666">-</span>1<span style="color:#666">)</span>
                     <span style="color:#666">{</span>
                         <span style="color:#a2f;font-weight:bold">switch</span> <span style="color:#666">(</span>c<span style="color:#666">)</span>
                         <span style="color:#666">{</span>
@@ -270,9 +264,9 @@ for a newline.</p>
 </span><span style="color:#080;font-style:italic"></span>                        start <span style="color:#666">=</span> text<span style="color:#666">.</span><span style="color:#b44">lastIndexOf</span><span style="color:#666">(</span>c<span style="color:#666">,</span> start<span style="color:#666">)</span> <span style="color:#666">+</span> 1<span style="color:#666">;</span>
 
                         <span style="color:#080;font-style:italic">// Check for included newline
-</span><span style="color:#080;font-style:italic"></span>                        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>start <span style="color:#666">&gt;</span> text<span style="color:#666">.</span><span style="color:#b44">lastIndexOf</span><span style="color:#666">(</span><span style="color:#b44">&#39;\n&#39;</span><span style="color:#666">,</span> end<span style="color:#666">)</span><span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>                        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>start <span style="color:#666">&gt;</span> text<span style="color:#666">.</span><span style="color:#b44">lastIndexOf</span><span style="color:#666">(</span><span style="color:#b44">&#39;\n&#39;</span><span style="color:#666">,</span> end<span style="color:#666">))</span>
                             <span style="color:#080;font-style:italic">// Update selection
-</span><span style="color:#080;font-style:italic"></span>                            textView<span style="color:#666">.</span><span style="color:#b44">setSelection</span><span style="color:#666">(</span>start<span style="color:#666">,</span> end<span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                            textView<span style="color:#666">.</span><span style="color:#b44">setSelection</span><span style="color:#666">(</span>start<span style="color:#666">,</span> end<span style="color:#666">);</span>
                     <span style="color:#666">}</span>
                 <span style="color:#666">}</span>
             <span style="color:#666">}</span>

@@ -37,7 +37,7 @@ I had a request from Marco the other day to put OpenStreetMap maps in my Diary a
 
 
 
-<meta name="generator" content="Hugo 0.64.0" />
+<meta name="generator" content="Hugo 0.66.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -86,17 +86,11 @@ code {
       <div class="top-bar">
         <div class="row column">
           <div class="top-bar-left">
-          <div class="top-bar-right">
             <ul class="menu">
+              <li class=""><a href="https://billthefarmer.github.io/blog/">
+                Home
+              </a></li>
               
-                
-                  <li><a href="https://billthefarmer.github.io/blog/">
-                    Bill Farmer
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
-                    Categories
-                  </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
@@ -225,7 +219,7 @@ maps. The template for the iframe is</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &#34;&lt;<span style="color:#008000;font-weight:bold">iframe</span> <span style="color:#b44">width</span><span style="color:#666">=</span><span style="color:#b44">\&#34;560\&#34;</span> <span style="color:#b44">height</span><span style="color:#666">=</span><span style="color:#b44">\&#34;420\&#34;</span>
     <span style="color:#b44">src</span><span style="color:#666">=</span><span style="color:#b44">\&#34;https://www.openstreetmap.org/export/embed.html?</span>
     <span style="color:#b44">bbox</span><span style="color:#666">=</span><span style="color:#b44">%f,%f,%f,%f&amp;amp;layer=mapnik\&#34;</span>
-    <span style="color:#b44">style</span><span style="color:#666">=</span><span style="color:#b44">\&#34;border:</span> <span style="color:#b44">1px</span> <span style="color:#b44">solid</span> <span style="color:#b44">black</span><span style="">\</span><span style="">&#34;</span>&gt;
+    <span style="color:#b44">style</span><span style="color:#666">=</span><span style="color:#b44">\&#34;border:</span> <span style="color:#b44">1px</span> <span style="color:#b44">solid</span> <span style="color:#b44">black</span><span style="">\&#34;</span>&gt;
     &lt;/<span style="color:#008000;font-weight:bold">iframe</span>&gt;&lt;<span style="color:#008000;font-weight:bold">br</span>/&gt;
     &lt;<span style="color:#008000;font-weight:bold">small</span>&gt;&lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#b44">href</span><span style="color:#666">=</span><span style="color:#b44">\&#34;https://www.openstreetmap.org/#map=16/%f/%f\&#34;</span>&gt;
     View Larger Map&lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;&lt;/<span style="color:#008000;font-weight:bold">small</span>&gt;\n&#34;
@@ -234,38 +228,38 @@ slightly, which seems to work OK. The android Java code to do this is</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// loadMarkdown
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">loadMarkdown</span><span style="color:#666">(</span>String text<span style="color:#666">)</span>
     <span style="color:#666">{</span>
-        markdownView<span style="color:#666">.</span><span style="color:#b44">loadMarkdown</span><span style="color:#666">(</span>getBaseUrl<span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">,</span> markdownCheck<span style="color:#666">(</span>text<span style="color:#666">)</span><span style="color:#666">,</span>
-                                  getStyles<span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">)</span><span style="color:#666">;</span>
+        markdownView<span style="color:#666">.</span><span style="color:#b44">loadMarkdown</span><span style="color:#666">(</span>getBaseUrl<span style="color:#666">(),</span> markdownCheck<span style="color:#666">(</span>text<span style="color:#666">),</span>
+                                  getStyles<span style="color:#666">());</span>
     <span style="color:#666">}</span>
 
     <span style="color:#080;font-style:italic">// markdownCheck
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> String <span style="color:#00a000">markdownCheck</span><span style="color:#666">(</span>String text<span style="color:#666">)</span>
     <span style="color:#666">{</span>
         <span style="color:#080;font-style:italic">// Check for media
-</span><span style="color:#080;font-style:italic"></span>        text <span style="color:#666">=</span> mediaCheck<span style="color:#666">(</span>text<span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>        text <span style="color:#666">=</span> mediaCheck<span style="color:#666">(</span>text<span style="color:#666">);</span>
 
         <span style="color:#080;font-style:italic">// Check for map
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">return</span> mapCheck<span style="color:#666">(</span>text<span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">return</span> mapCheck<span style="color:#666">(</span>text<span style="color:#666">);</span>
     <span style="color:#666">}</span>
 
     <span style="color:#080;font-style:italic">// mapCheck
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> String <span style="color:#00a000">mapCheck</span><span style="color:#666">(</span>String text<span style="color:#666">)</span>
     <span style="color:#666">{</span>
-        StringBuffer buffer <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> StringBuffer<span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+        StringBuffer buffer <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> StringBuffer<span style="color:#666">();</span>
 
-        Pattern pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>MAP_PATTERN<span style="color:#666">,</span> Pattern<span style="color:#666">.</span><span style="color:#b44">MULTILINE</span><span style="color:#666">)</span><span style="color:#666">;</span>
-        Matcher matcher <span style="color:#666">=</span> pattern<span style="color:#666">.</span><span style="color:#b44">matcher</span><span style="color:#666">(</span>text<span style="color:#666">)</span><span style="color:#666">;</span>
+        Pattern pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>MAP_PATTERN<span style="color:#666">,</span> Pattern<span style="color:#666">.</span><span style="color:#b44">MULTILINE</span><span style="color:#666">);</span>
+        Matcher matcher <span style="color:#666">=</span> pattern<span style="color:#666">.</span><span style="color:#b44">matcher</span><span style="color:#666">(</span>text<span style="color:#666">);</span>
 
         <span style="color:#080;font-style:italic">// Find matches
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">while</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">while</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">())</span>
         <span style="color:#666">{</span>
             <span style="color:#0b0;font-weight:bold">double</span> lat <span style="color:#666">=</span> 1<span style="color:#666">.</span><span style="color:#b44">0</span><span style="color:#666">;</span>
             <span style="color:#0b0;font-weight:bold">double</span> lng <span style="color:#666">=</span> 1<span style="color:#666">.</span><span style="color:#b44">0</span><span style="color:#666">;</span>
 
             <span style="color:#a2f;font-weight:bold">try</span>
             <span style="color:#666">{</span>
-                lat <span style="color:#666">=</span> Double<span style="color:#666">.</span><span style="color:#b44">parseDouble</span><span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">group</span><span style="color:#666">(</span>1<span style="color:#666">)</span><span style="color:#666">)</span><span style="color:#666">;</span>
-                lng <span style="color:#666">=</span> Double<span style="color:#666">.</span><span style="color:#b44">parseDouble</span><span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">group</span><span style="color:#666">(</span>2<span style="color:#666">)</span><span style="color:#666">)</span><span style="color:#666">;</span>
+                lat <span style="color:#666">=</span> Double<span style="color:#666">.</span><span style="color:#b44">parseDouble</span><span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">group</span><span style="color:#666">(</span>1<span style="color:#666">));</span>
+                lng <span style="color:#666">=</span> Double<span style="color:#666">.</span><span style="color:#b44">parseDouble</span><span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">group</span><span style="color:#666">(</span>2<span style="color:#666">));</span>
             <span style="color:#666">}</span>
 
             <span style="color:#080;font-style:italic">// Ignore parse error
@@ -279,16 +273,16 @@ slightly, which seems to work OK. The android Java code to do this is</p>
                 String<span style="color:#666">.</span><span style="color:#b44">format</span><span style="color:#666">(</span>Locale<span style="color:#666">.</span><span style="color:#b44">ENGLISH</span><span style="color:#666">,</span> MAP_TEMPLATE<span style="color:#666">,</span>
                               lng <span style="color:#666">-</span> 0<span style="color:#666">.</span><span style="color:#b44">005</span><span style="color:#666">,</span> lat <span style="color:#666">-</span> 0<span style="color:#666">.</span><span style="color:#b44">005</span><span style="color:#666">,</span>
                               lng <span style="color:#666">+</span> 0<span style="color:#666">.</span><span style="color:#b44">005</span><span style="color:#666">,</span> lat <span style="color:#666">+</span> 0<span style="color:#666">.</span><span style="color:#b44">005</span><span style="color:#666">,</span>
-                              lat<span style="color:#666">,</span> lng<span style="color:#666">)</span><span style="color:#666">;</span>
+                              lat<span style="color:#666">,</span> lng<span style="color:#666">);</span>
 
             <span style="color:#080;font-style:italic">// Substitute replacement
-</span><span style="color:#080;font-style:italic"></span>            matcher<span style="color:#666">.</span><span style="color:#b44">appendReplacement</span><span style="color:#666">(</span>buffer<span style="color:#666">,</span> replace<span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>            matcher<span style="color:#666">.</span><span style="color:#b44">appendReplacement</span><span style="color:#666">(</span>buffer<span style="color:#666">,</span> replace<span style="color:#666">);</span>
         <span style="color:#666">}</span>
 
         <span style="color:#080;font-style:italic">// Append rest of entry
-</span><span style="color:#080;font-style:italic"></span>        matcher<span style="color:#666">.</span><span style="color:#b44">appendTail</span><span style="color:#666">(</span>buffer<span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>        matcher<span style="color:#666">.</span><span style="color:#b44">appendTail</span><span style="color:#666">(</span>buffer<span style="color:#666">);</span>
 
-        <span style="color:#a2f;font-weight:bold">return</span> buffer<span style="color:#666">.</span><span style="color:#b44">toString</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+        <span style="color:#a2f;font-weight:bold">return</span> buffer<span style="color:#666">.</span><span style="color:#b44">toString</span><span style="color:#666">();</span>
     <span style="color:#666">}</span>
 </code></pre></div><p>The input string is the markdown code to be parsed, the output is the
 same code with matched template substitutions. I have just added and

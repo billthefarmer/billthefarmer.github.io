@@ -17,7 +17,7 @@
 <meta itemprop="description" content="I have a windows app where I want the app window to maintain it&rsquo;s aspect ratio when it is resized. Windows provides two mechanisms for this, the WM_SIZE message and the WM_SIZING message. The WM_SIZE message is sent when a window has been resized to allow child windows to be resized, the WM_SIZING message is sent while the user is resizing it to allow the size to be adjusted. The messages are handled in the WindowProc callback function.">
 <meta itemprop="datePublished" content="2018-06-19T20:23:44&#43;01:00" />
 <meta itemprop="dateModified" content="2018-06-19T20:23:44&#43;01:00" />
-<meta itemprop="wordCount" content="532">
+<meta itemprop="wordCount" content="535">
 
 
 
@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.64.0" />
+<meta name="generator" content="Hugo 0.66.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -80,17 +80,11 @@ code {
       <div class="top-bar">
         <div class="row column">
           <div class="top-bar-left">
-          <div class="top-bar-right">
             <ul class="menu">
+              <li class=""><a href="https://billthefarmer.github.io/blog/">
+                Home
+              </a></li>
               
-                
-                  <li><a href="https://billthefarmer.github.io/blog/">
-                    Bill Farmer
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
-                    Categories
-                  </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
@@ -266,19 +260,19 @@ dragged.</p>
     <span style="color:#0b0;font-weight:bold">int</span> height <span style="color:#666">=</span> HEIGHT <span style="color:#666">+</span> toolbar.rect.bottom <span style="color:#666">+</span> header;
 
     <span style="color:#080;font-style:italic">// Minimum size
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">if</span> (rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>right <span style="color:#666">-</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>left <span style="color:#666">&lt;</span> width)
-	rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>right <span style="color:#666">=</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>left <span style="color:#666">+</span> width;
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">if</span> (rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">-</span> rectp<span style="color:#666">-&gt;</span>left <span style="color:#666">&lt;</span> width)
+	rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>left <span style="color:#666">+</span> width;
 
-    <span style="color:#a2f;font-weight:bold">if</span> (rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>bottom <span style="color:#666">-</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>top <span style="color:#666">&lt;</span> height)
-	rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>bottom <span style="color:#666">=</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>top <span style="color:#666">+</span> height;
+    <span style="color:#a2f;font-weight:bold">if</span> (rectp<span style="color:#666">-&gt;</span>bottom <span style="color:#666">-</span> rectp<span style="color:#666">-&gt;</span>top <span style="color:#666">&lt;</span> height)
+	rectp<span style="color:#666">-&gt;</span>bottom <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>top <span style="color:#666">+</span> height;
 
     <span style="color:#080;font-style:italic">// Maximum width
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">if</span> (rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>right <span style="color:#666">-</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>left <span style="color:#666">&gt;</span> STEP <span style="color:#666">+</span> border)
-        rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>right <span style="color:#666">=</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>left <span style="color:#666">+</span> STEP <span style="color:#666">+</span> border;
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">if</span> (rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">-</span> rectp<span style="color:#666">-&gt;</span>left <span style="color:#666">&gt;</span> STEP <span style="color:#666">+</span> border)
+        rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>left <span style="color:#666">+</span> STEP <span style="color:#666">+</span> border;
 
     <span style="color:#080;font-style:italic">// Offered width and height
-</span><span style="color:#080;font-style:italic"></span>    width <span style="color:#666">=</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>right <span style="color:#666">-</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>left;
-    height <span style="color:#666">=</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>bottom <span style="color:#666">-</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>top;
+</span><span style="color:#080;font-style:italic"></span>    width <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">-</span> rectp<span style="color:#666">-&gt;</span>left;
+    height <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>bottom <span style="color:#666">-</span> rectp<span style="color:#666">-&gt;</span>top;
 
     <span style="color:#a2f;font-weight:bold">switch</span> (wParam)
     {
@@ -286,20 +280,20 @@ dragged.</p>
     <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">WMSZ_RIGHT</span>:
         height <span style="color:#666">=</span> (((width <span style="color:#666">-</span> border) <span style="color:#666">*</span> HEIGHT) <span style="color:#666">/</span> WIDTH) <span style="color:#666">+</span>
             toolbar.rect.bottom <span style="color:#666">+</span> header;
-        rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>bottom <span style="color:#666">=</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>top <span style="color:#666">+</span> height;
+        rectp<span style="color:#666">-&gt;</span>bottom <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>top <span style="color:#666">+</span> height;
         <span style="color:#a2f;font-weight:bold">break</span>;
 
     <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">WMSZ_TOP</span>:
     <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">WMSZ_BOTTOM</span>:
         width <span style="color:#666">=</span> ((((height <span style="color:#666">-</span> toolbar.rect.bottom) <span style="color:#666">-</span> header) <span style="color:#666">*</span>
                   WIDTH) <span style="color:#666">/</span> HEIGHT) <span style="color:#666">+</span> border;
-        rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>right <span style="color:#666">=</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>left <span style="color:#666">+</span> width;
+        rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>left <span style="color:#666">+</span> width;
         <span style="color:#a2f;font-weight:bold">break</span>;
 
     <span style="color:#a2f;font-weight:bold">default</span><span style="color:#666">:</span>
         width <span style="color:#666">=</span> ((((height <span style="color:#666">-</span> toolbar.rect.bottom) <span style="color:#666">-</span> header) <span style="color:#666">*</span>
                   WIDTH) <span style="color:#666">/</span> HEIGHT) <span style="color:#666">+</span> border;
-        rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>right <span style="color:#666">=</span> rectp<span style="color:#666">-</span><span style="color:#666">&gt;</span>left <span style="color:#666">+</span> width;
+        rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>left <span style="color:#666">+</span> width;
         <span style="color:#a2f;font-weight:bold">break</span>;
     }
 
@@ -308,7 +302,7 @@ dragged.</p>
 </code></pre></div><p>The <code>WindowResizing</code> function works fine, the <code>WindowResize</code> function
 handles most cases OK, but isn&rsquo;t completely idiot proof. By contrast
 <a href="https://developer.apple.com/documentation/appkit/nswindow">macOS</a> makes it easy, you define what you want and it just works.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift">        <span style="color:#080;font-style:italic">//</span><span style="color:#080;font-style:italic"> </span><span style="color:#080;font-style:italic">S</span><span style="color:#080;font-style:italic">e</span><span style="color:#080;font-style:italic">t</span><span style="color:#080;font-style:italic"> </span><span style="color:#080;font-style:italic">u</span><span style="color:#080;font-style:italic">p</span><span style="color:#080;font-style:italic"> </span><span style="color:#080;font-style:italic">w</span><span style="color:#080;font-style:italic">i</span><span style="color:#080;font-style:italic">n</span><span style="color:#080;font-style:italic">d</span><span style="color:#080;font-style:italic">o</span><span style="color:#080;font-style:italic">w</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift">        <span style="color:#080;font-style:italic">// Set up window</span>
         window.setContentSize(NSMakeSize(<span style="color:#666">400</span>, <span style="color:#666">480</span>))
         window.contentMinSize = NSMakeSize(<span style="color:#666">400</span>, <span style="color:#666">480</span>)
         window.contentAspectRatio = NSMakeSize(<span style="color:#666">1.0</span>, <span style="color:#666">1.2</span>)

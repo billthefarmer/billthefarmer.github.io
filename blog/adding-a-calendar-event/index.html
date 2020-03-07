@@ -37,7 +37,7 @@ To add an entry to an android calendar you first have to find out the calendar i
 
 
 
-<meta name="generator" content="Hugo 0.64.0" />
+<meta name="generator" content="Hugo 0.66.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -86,17 +86,11 @@ code {
       <div class="top-bar">
         <div class="row column">
           <div class="top-bar-left">
-          <div class="top-bar-right">
             <ul class="menu">
+              <li class=""><a href="https://billthefarmer.github.io/blog/">
+                Home
+              </a></li>
               
-                
-                  <li><a href="https://billthefarmer.github.io/blog/">
-                    Bill Farmer
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
-                    Categories
-                  </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
@@ -196,10 +190,10 @@ calendar id using an asynchronous query on the calendars table.</p>
     <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> String TAG <span style="color:#666">=</span> <span style="color:#b44">&#34;QueryHandler&#34;</span><span style="color:#666">;</span>
 
     <span style="color:#080;font-style:italic">// Projection arrays
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> String<span style="color:#666">[</span><span style="color:#666">]</span> CALENDAR_PROJECTION <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> String<span style="color:#666">[</span><span style="color:#666">]</span>
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> String<span style="color:#666">[]</span> CALENDAR_PROJECTION <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> String<span style="color:#666">[]</span>
         <span style="color:#666">{</span>
             Calendars<span style="color:#666">.</span><span style="color:#b44">_ID</span>
-        <span style="color:#666">}</span><span style="color:#666">;</span>
+        <span style="color:#666">};</span>
 
     <span style="color:#080;font-style:italic">// The indices for the projection array above.
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> CALENDAR_ID_INDEX <span style="color:#666">=</span> 0<span style="color:#666">;</span>
@@ -213,33 +207,33 @@ calendar id using an asynchronous query on the calendars table.</p>
     <span style="color:#080;font-style:italic">// QueryHandler
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#00a000">QueryHandler</span><span style="color:#666">(</span>ContentResolver resolver<span style="color:#666">)</span>
     <span style="color:#666">{</span>
-        <span style="color:#a2f;font-weight:bold">super</span><span style="color:#666">(</span>resolver<span style="color:#666">)</span><span style="color:#666">;</span>
+        <span style="color:#a2f;font-weight:bold">super</span><span style="color:#666">(</span>resolver<span style="color:#666">);</span>
     <span style="color:#666">}</span>
 
     <span style="color:#080;font-style:italic">// insertEvent
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">insertEvent</span><span style="color:#666">(</span>Context context<span style="color:#666">,</span> <span style="color:#0b0;font-weight:bold">long</span> startTime<span style="color:#666">,</span>
                                    <span style="color:#0b0;font-weight:bold">long</span> endTime<span style="color:#666">,</span> String title<span style="color:#666">)</span>
     <span style="color:#666">{</span>
-        ContentResolver resolver <span style="color:#666">=</span> context<span style="color:#666">.</span><span style="color:#b44">getContentResolver</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+        ContentResolver resolver <span style="color:#666">=</span> context<span style="color:#666">.</span><span style="color:#b44">getContentResolver</span><span style="color:#666">();</span>
 
-        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>queryHandler <span style="color:#666">=</span><span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
-            queryHandler <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> QueryHandler<span style="color:#666">(</span>resolver<span style="color:#666">)</span><span style="color:#666">;</span>
+        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>queryHandler <span style="color:#666">==</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+            queryHandler <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> QueryHandler<span style="color:#666">(</span>resolver<span style="color:#666">);</span>
 
-        ContentValues values <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ContentValues<span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
-        values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Events<span style="color:#666">.</span><span style="color:#b44">DTSTART</span><span style="color:#666">,</span> startTime<span style="color:#666">)</span><span style="color:#666">;</span>
-        values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Events<span style="color:#666">.</span><span style="color:#b44">DTEND</span><span style="color:#666">,</span> endTime<span style="color:#666">)</span><span style="color:#666">;</span>
-        values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Events<span style="color:#666">.</span><span style="color:#b44">TITLE</span><span style="color:#666">,</span> title<span style="color:#666">)</span><span style="color:#666">;</span>
+        ContentValues values <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ContentValues<span style="color:#666">();</span>
+        values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Events<span style="color:#666">.</span><span style="color:#b44">DTSTART</span><span style="color:#666">,</span> startTime<span style="color:#666">);</span>
+        values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Events<span style="color:#666">.</span><span style="color:#b44">DTEND</span><span style="color:#666">,</span> endTime<span style="color:#666">);</span>
+        values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Events<span style="color:#666">.</span><span style="color:#b44">TITLE</span><span style="color:#666">,</span> title<span style="color:#666">);</span>
 
         <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>BuildConfig<span style="color:#666">.</span><span style="color:#b44">DEBUG</span><span style="color:#666">)</span>
-            Log<span style="color:#666">.</span><span style="color:#b44">d</span><span style="color:#666">(</span>TAG<span style="color:#666">,</span> <span style="color:#b44">&#34;Calendar query start&#34;</span><span style="color:#666">)</span><span style="color:#666">;</span>
+            Log<span style="color:#666">.</span><span style="color:#b44">d</span><span style="color:#666">(</span>TAG<span style="color:#666">,</span> <span style="color:#b44">&#34;Calendar query start&#34;</span><span style="color:#666">);</span>
 
         queryHandler<span style="color:#666">.</span><span style="color:#b44">startQuery</span><span style="color:#666">(</span>CALENDAR<span style="color:#666">,</span> values<span style="color:#666">,</span> Calendars<span style="color:#666">.</span><span style="color:#b44">CONTENT_URI</span><span style="color:#666">,</span>
-                                CALENDAR_PROJECTION<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span><span style="color:#666">;</span>
+                                CALENDAR_PROJECTION<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">);</span>
     <span style="color:#666">}</span>
 
 </code></pre></div><p>This method is called from an app activity.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        QueryHandler<span style="color:#666">.</span><span style="color:#b44">insertEvent</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">,</span> startTime<span style="color:#666">.</span><span style="color:#b44">getTimeInMillis</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">,</span>
-                                 endTime<span style="color:#666">.</span><span style="color:#b44">getTimeInMillis</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">,</span> title<span style="color:#666">)</span><span style="color:#666">;</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        QueryHandler<span style="color:#666">.</span><span style="color:#b44">insertEvent</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">,</span> startTime<span style="color:#666">.</span><span style="color:#b44">getTimeInMillis</span><span style="color:#666">(),</span>
+                                 endTime<span style="color:#666">.</span><span style="color:#b44">getTimeInMillis</span><span style="color:#666">(),</span> title<span style="color:#666">);</span>
 
 </code></pre></div><p>The <code>insertEvent()</code> method first creates a new <code>QueryHandler</code> which is
 subsequently reused. The start time, end time and title of the event
@@ -252,20 +246,20 @@ passed to the <code>onQueryComplete()</code> method.</p>
     <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onQueryComplete</span><span style="color:#666">(</span><span style="color:#0b0;font-weight:bold">int</span> token<span style="color:#666">,</span> Object object<span style="color:#666">,</span> Cursor cursor<span style="color:#666">)</span>
     <span style="color:#666">{</span>
         <span style="color:#080;font-style:italic">// Use the cursor to move through the returned records
-</span><span style="color:#080;font-style:italic"></span>        cursor<span style="color:#666">.</span><span style="color:#b44">moveToFirst</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>        cursor<span style="color:#666">.</span><span style="color:#b44">moveToFirst</span><span style="color:#666">();</span>
 
         <span style="color:#080;font-style:italic">// Get the field values
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#0b0;font-weight:bold">long</span> calendarID <span style="color:#666">=</span> cursor<span style="color:#666">.</span><span style="color:#b44">getLong</span><span style="color:#666">(</span>CALENDAR_ID_INDEX<span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#0b0;font-weight:bold">long</span> calendarID <span style="color:#666">=</span> cursor<span style="color:#666">.</span><span style="color:#b44">getLong</span><span style="color:#666">(</span>CALENDAR_ID_INDEX<span style="color:#666">);</span>
 
         <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>BuildConfig<span style="color:#666">.</span><span style="color:#b44">DEBUG</span><span style="color:#666">)</span>
-            Log<span style="color:#666">.</span><span style="color:#b44">d</span><span style="color:#666">(</span>TAG<span style="color:#666">,</span> <span style="color:#b44">&#34;Calendar query complete &#34;</span> <span style="color:#666">+</span> calendarID<span style="color:#666">)</span><span style="color:#666">;</span>
+            Log<span style="color:#666">.</span><span style="color:#b44">d</span><span style="color:#666">(</span>TAG<span style="color:#666">,</span> <span style="color:#b44">&#34;Calendar query complete &#34;</span> <span style="color:#666">+</span> calendarID<span style="color:#666">);</span>
 
         ContentValues values <span style="color:#666">=</span> <span style="color:#666">(</span>ContentValues<span style="color:#666">)</span> object<span style="color:#666">;</span>
-        values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Events<span style="color:#666">.</span><span style="color:#b44">CALENDAR_ID</span><span style="color:#666">,</span> calendarID<span style="color:#666">)</span><span style="color:#666">;</span>
+        values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Events<span style="color:#666">.</span><span style="color:#b44">CALENDAR_ID</span><span style="color:#666">,</span> calendarID<span style="color:#666">);</span>
         values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Events<span style="color:#666">.</span><span style="color:#b44">EVENT_TIMEZONE</span><span style="color:#666">,</span>
-                   TimeZone<span style="color:#666">.</span><span style="color:#b44">getDefault</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">getDisplayName</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">)</span><span style="color:#666">;</span>
+                   TimeZone<span style="color:#666">.</span><span style="color:#b44">getDefault</span><span style="color:#666">().</span><span style="color:#b44">getDisplayName</span><span style="color:#666">());</span>
 
-        startInsert<span style="color:#666">(</span>EVENT<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> Events<span style="color:#666">.</span><span style="color:#b44">CONTENT_URI</span><span style="color:#666">,</span> values<span style="color:#666">)</span><span style="color:#666">;</span>
+        startInsert<span style="color:#666">(</span>EVENT<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> Events<span style="color:#666">.</span><span style="color:#b44">CONTENT_URI</span><span style="color:#666">,</span> values<span style="color:#666">);</span>
     <span style="color:#666">}</span>
 </code></pre></div><p>This gets the calendar id from the cursor and adds it to the values
 along with the timezone. It&rsquo;s probably not necessary to query the
@@ -277,20 +271,20 @@ method.</p>
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f">@Override</span>
     <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onInsertComplete</span><span style="color:#666">(</span><span style="color:#0b0;font-weight:bold">int</span> token<span style="color:#666">,</span> Object object<span style="color:#666">,</span> Uri uri<span style="color:#666">)</span>
     <span style="color:#666">{</span>
-        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>uri <span style="color:#666">!</span><span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>uri <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
         <span style="color:#666">{</span>
             <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>BuildConfig<span style="color:#666">.</span><span style="color:#b44">DEBUG</span><span style="color:#666">)</span>
-                Log<span style="color:#666">.</span><span style="color:#b44">d</span><span style="color:#666">(</span>TAG<span style="color:#666">,</span> <span style="color:#b44">&#34;Insert complete &#34;</span> <span style="color:#666">+</span> uri<span style="color:#666">.</span><span style="color:#b44">getLastPathSegment</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">)</span><span style="color:#666">;</span>
+                Log<span style="color:#666">.</span><span style="color:#b44">d</span><span style="color:#666">(</span>TAG<span style="color:#666">,</span> <span style="color:#b44">&#34;Insert complete &#34;</span> <span style="color:#666">+</span> uri<span style="color:#666">.</span><span style="color:#b44">getLastPathSegment</span><span style="color:#666">());</span>
 
             <span style="color:#a2f;font-weight:bold">switch</span> <span style="color:#666">(</span>token<span style="color:#666">)</span>
             <span style="color:#666">{</span>
             <span style="color:#a2f;font-weight:bold">case</span> EVENT<span style="color:#666">:</span>
-                <span style="color:#0b0;font-weight:bold">long</span> eventID <span style="color:#666">=</span> Long<span style="color:#666">.</span><span style="color:#b44">parseLong</span><span style="color:#666">(</span>uri<span style="color:#666">.</span><span style="color:#b44">getLastPathSegment</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">)</span><span style="color:#666">;</span>
-                ContentValues values <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ContentValues<span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
-                values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Reminders<span style="color:#666">.</span><span style="color:#b44">MINUTES</span><span style="color:#666">,</span> 10<span style="color:#666">)</span><span style="color:#666">;</span>
-                values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Reminders<span style="color:#666">.</span><span style="color:#b44">EVENT_ID</span><span style="color:#666">,</span> eventID<span style="color:#666">)</span><span style="color:#666">;</span>
-                values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Reminders<span style="color:#666">.</span><span style="color:#b44">METHOD</span><span style="color:#666">,</span> Reminders<span style="color:#666">.</span><span style="color:#b44">METHOD_ALERT</span><span style="color:#666">)</span><span style="color:#666">;</span>
-                startInsert<span style="color:#666">(</span>REMINDER<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> Reminders<span style="color:#666">.</span><span style="color:#b44">CONTENT_URI</span><span style="color:#666">,</span> values<span style="color:#666">)</span><span style="color:#666">;</span>
+                <span style="color:#0b0;font-weight:bold">long</span> eventID <span style="color:#666">=</span> Long<span style="color:#666">.</span><span style="color:#b44">parseLong</span><span style="color:#666">(</span>uri<span style="color:#666">.</span><span style="color:#b44">getLastPathSegment</span><span style="color:#666">());</span>
+                ContentValues values <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ContentValues<span style="color:#666">();</span>
+                values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Reminders<span style="color:#666">.</span><span style="color:#b44">MINUTES</span><span style="color:#666">,</span> 10<span style="color:#666">);</span>
+                values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Reminders<span style="color:#666">.</span><span style="color:#b44">EVENT_ID</span><span style="color:#666">,</span> eventID<span style="color:#666">);</span>
+                values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Reminders<span style="color:#666">.</span><span style="color:#b44">METHOD</span><span style="color:#666">,</span> Reminders<span style="color:#666">.</span><span style="color:#b44">METHOD_ALERT</span><span style="color:#666">);</span>
+                startInsert<span style="color:#666">(</span>REMINDER<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> Reminders<span style="color:#666">.</span><span style="color:#b44">CONTENT_URI</span><span style="color:#666">,</span> values<span style="color:#666">);</span>
                 <span style="color:#a2f;font-weight:bold">break</span><span style="color:#666">;</span>
             <span style="color:#666">}</span>
         <span style="color:#666">}</span>

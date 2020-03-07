@@ -19,7 +19,7 @@ Calendar custom styles The custom calendar has a list of styles that are customi
 Calendar custom styles The custom calendar has a list of styles that are customisable in a attrs.">
 <meta itemprop="datePublished" content="2018-01-08T11:02:04&#43;00:00" />
 <meta itemprop="dateModified" content="2018-01-08T11:02:04&#43;00:00" />
-<meta itemprop="wordCount" content="517">
+<meta itemprop="wordCount" content="521">
 
 
 
@@ -34,7 +34,7 @@ Calendar custom styles The custom calendar has a list of styles that are customi
 
 
 
-<meta name="generator" content="Hugo 0.64.0" />
+<meta name="generator" content="Hugo 0.66.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -83,17 +83,11 @@ code {
       <div class="top-bar">
         <div class="row column">
           <div class="top-bar-left">
-          <div class="top-bar-right">
             <ul class="menu">
+              <li class=""><a href="https://billthefarmer.github.io/blog/">
+                Home
+              </a></li>
               
-                
-                  <li><a href="https://billthefarmer.github.io/blog/">
-                    Bill Farmer
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
-                    Categories
-                  </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
@@ -190,7 +184,7 @@ theme.</p>
 <p>The custom calendar has a list of styles that are customisable in a
 <code>attrs.xml</code> file.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
-<span style="color:#008000;font-weight:bold">&lt;resources</span><span style="color:#008000;font-weight:bold">&gt;</span>
+<span style="color:#008000;font-weight:bold">&lt;resources&gt;</span>
   <span style="color:#008000;font-weight:bold">&lt;declare-styleable</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;CustomCalendarView&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
     <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;calendarTitleTextColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
     <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;dayOfWeekTextColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
@@ -210,15 +204,15 @@ attributes.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// getAttributes
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">getAttributes</span><span style="color:#666">(</span>AttributeSet attrs<span style="color:#666">)</span>
     <span style="color:#666">{</span>
-        Resources resources <span style="color:#666">=</span> getResources<span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+        Resources resources <span style="color:#666">=</span> getResources<span style="color:#666">();</span>
 
         <span style="color:#a2f;font-weight:bold">final</span> TypedArray typedArray <span style="color:#666">=</span>
             context<span style="color:#666">.</span><span style="color:#b44">obtainStyledAttributes</span><span style="color:#666">(</span>attrs<span style="color:#666">,</span> R<span style="color:#666">.</span><span style="color:#b44">styleable</span>
-                                           <span style="color:#666">.</span><span style="color:#b44">CustomCalendarView</span><span style="color:#666">,</span> 0<span style="color:#666">,</span> 0<span style="color:#666">)</span><span style="color:#666">;</span>
+                                           <span style="color:#666">.</span><span style="color:#b44">CustomCalendarView</span><span style="color:#666">,</span> 0<span style="color:#666">,</span> 0<span style="color:#666">);</span>
         calendarBackgroundColor <span style="color:#666">=</span>
             typedArray<span style="color:#666">.</span><span style="color:#b44">getColor</span><span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">styleable</span>
                                 <span style="color:#666">.</span><span style="color:#b44">CustomCalendarView_calendarBackgroundColor</span><span style="color:#666">,</span>
-                                resources<span style="color:#666">.</span><span style="color:#b44">getColor</span><span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">color</span><span style="color:#666">.</span><span style="color:#b44">white</span><span style="color:#666">)</span><span style="color:#666">)</span><span style="color:#666">;</span>
+                                resources<span style="color:#666">.</span><span style="color:#b44">getColor</span><span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">color</span><span style="color:#666">.</span><span style="color:#b44">white</span><span style="color:#666">));</span>
         <span style="color:#080;font-style:italic">// ...
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#666">}</span>
 </code></pre></div><p>These styles revert to a default value defined in the code if they are
@@ -269,12 +263,12 @@ resources&gt;
   <span style="color:#008000;font-weight:bold">&lt;/declare-styleable&gt;</span>
 <span style="color:#008000;font-weight:bold">&lt;/resources&gt;</span>
 </code></pre></div><p>To define values for these attributes for each theme requires a list of items for each style.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#080;font-style:italic">&lt;!--</span><span style="color:#080;font-style:italic"> Application theme. </span><span style="color:#080;font-style:italic">--&gt;</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#080;font-style:italic">&lt;!-- Application theme. --&gt;</span>
   <span style="color:#008000;font-weight:bold">&lt;style</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;AppTheme&#34;</span> <span style="color:#b44">parent=</span><span style="color:#b44">&#34;AppBaseTheme&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
-    <span style="color:#080;font-style:italic">&lt;!--</span><span style="color:#080;font-style:italic">
+    <span style="color:#080;font-style:italic">&lt;!--
 </span><span style="color:#080;font-style:italic">        All customizations that are NOT specific to a particular
-</span><span style="color:#080;font-style:italic">        API</span><span style="color:#080;font-style:italic">-</span><span style="color:#080;font-style:italic">level can go here.
-</span><span style="color:#080;font-style:italic">    </span><span style="color:#080;font-style:italic">--&gt;</span>
+</span><span style="color:#080;font-style:italic">        API-level can go here.
+</span><span style="color:#080;font-style:italic">    --&gt;</span>
     <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_calendar&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_calendar<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
     <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_markdown&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_markdown<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
     <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_folder&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_folder<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
@@ -283,12 +277,12 @@ resources&gt;
     <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_about&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_about<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
   <span style="color:#008000;font-weight:bold">&lt;/style&gt;</span>
 
-  <span style="color:#080;font-style:italic">&lt;!--</span><span style="color:#080;font-style:italic"> Application theme. </span><span style="color:#080;font-style:italic">--&gt;</span>
+  <span style="color:#080;font-style:italic">&lt;!-- Application theme. --&gt;</span>
   <span style="color:#008000;font-weight:bold">&lt;style</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;AppDarkTheme&#34;</span> <span style="color:#b44">parent=</span><span style="color:#b44">&#34;AppDarkBaseTheme&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
-    <span style="color:#080;font-style:italic">&lt;!--</span><span style="color:#080;font-style:italic">
+    <span style="color:#080;font-style:italic">&lt;!--
 </span><span style="color:#080;font-style:italic">        All customizations that are NOT specific to a particular
-</span><span style="color:#080;font-style:italic">        API</span><span style="color:#080;font-style:italic">-</span><span style="color:#080;font-style:italic">level can go here.
-</span><span style="color:#080;font-style:italic">    </span><span style="color:#080;font-style:italic">--&gt;</span>
+</span><span style="color:#080;font-style:italic">        API-level can go here.
+</span><span style="color:#080;font-style:italic">    --&gt;</span>
     <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_calendar&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_calendar_dark<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
     <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_markdown&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_markdown_dark<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
     <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_folder&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_folder_dark<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>

@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.64.0" />
+<meta name="generator" content="Hugo 0.66.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -80,17 +80,11 @@ code {
       <div class="top-bar">
         <div class="row column">
           <div class="top-bar-left">
-          <div class="top-bar-right">
             <ul class="menu">
+              <li class=""><a href="https://billthefarmer.github.io/blog/">
+                Home
+              </a></li>
               
-                
-                  <li><a href="https://billthefarmer.github.io/blog/">
-                    Bill Farmer
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
-                    Categories
-                  </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
@@ -192,16 +186,16 @@ haven&rsquo;t found this suggestion in the docs anywhere.</p>
 
     <span style="color:#080;font-style:italic">// onCreate
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f">@Override</span>
-    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onCreate</span><span style="color:#666">(</span><span style="color:#666">)</span>
+    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onCreate</span><span style="color:#666">()</span>
     <span style="color:#666">{</span>
-        list <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ArrayList<span style="color:#666">&lt;</span>String<span style="color:#666">&gt;</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
-        map <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> LinkedHashMap<span style="color:#666">&lt;</span>String<span style="color:#666">,</span> Integer<span style="color:#666">&gt;</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
-        set <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ArraySet<span style="color:#666">&lt;</span>String<span style="color:#666">&gt;</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+        list <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ArrayList<span style="color:#666">&lt;</span>String<span style="color:#666">&gt;();</span>
+        map <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> LinkedHashMap<span style="color:#666">&lt;</span>String<span style="color:#666">,</span> Integer<span style="color:#666">&gt;();</span>
+        set <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ArraySet<span style="color:#666">&lt;</span>String<span style="color:#666">&gt;();</span>
         <span style="color:#080;font-style:italic">// ...
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#666">}</span>
 
     <span style="color:#080;font-style:italic">// Get map
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">public</span> Map<span style="color:#666">&lt;</span>String<span style="color:#666">,</span> Integer<span style="color:#666">&gt;</span> <span style="color:#00a000">getMap</span><span style="color:#666">(</span><span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">public</span> Map<span style="color:#666">&lt;</span>String<span style="color:#666">,</span> Integer<span style="color:#666">&gt;</span> <span style="color:#00a000">getMap</span><span style="color:#666">()</span>
     <span style="color:#666">{</span>
         <span style="color:#a2f;font-weight:bold">return</span> map<span style="color:#666">;</span>
     <span style="color:#666">}</span>

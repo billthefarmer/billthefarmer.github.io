@@ -34,7 +34,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.64.0" />
+<meta name="generator" content="Hugo 0.66.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -83,17 +83,11 @@ code {
       <div class="top-bar">
         <div class="row column">
           <div class="top-bar-left">
-          <div class="top-bar-right">
             <ul class="menu">
+              <li class=""><a href="https://billthefarmer.github.io/blog/">
+                Home
+              </a></li>
               
-                
-                  <li><a href="https://billthefarmer.github.io/blog/">
-                    Bill Farmer
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
-                    Categories
-                  </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
@@ -189,23 +183,23 @@ code {
 </span><span style="color:#080;font-style:italic">         * @author paulburke
 </span><span style="color:#080;font-style:italic">         */</span>
         <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">isLocalStorageDocument</span><span style="color:#666">(</span>Uri uri<span style="color:#666">)</span> <span style="color:#666">{</span>
-            <span style="color:#a2f;font-weight:bold">return</span> LocalStorageProvider<span style="color:#666">.</span><span style="color:#b44">AUTHORITY</span><span style="color:#666">.</span><span style="color:#b44">equals</span><span style="color:#666">(</span>uri<span style="color:#666">.</span><span style="color:#b44">getAuthority</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">)</span><span style="color:#666">;</span>
+            <span style="color:#a2f;font-weight:bold">return</span> LocalStorageProvider<span style="color:#666">.</span><span style="color:#b44">AUTHORITY</span><span style="color:#666">.</span><span style="color:#b44">equals</span><span style="color:#666">(</span>uri<span style="color:#666">.</span><span style="color:#b44">getAuthority</span><span style="color:#666">());</span>
         <span style="color:#666">}</span>
 </code></pre></div><p>Having done that, you can then resolve ‘content’ uris</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String CONTENT <span style="color:#666">=</span> <span style="color:#b44">&#34;content&#34;</span><span style="color:#666">;</span>
     <span style="color:#080;font-style:italic">// ...
-</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>uri<span style="color:#666">.</span><span style="color:#b44">getScheme</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">equalsIgnoreCase</span><span style="color:#666">(</span>CONTENT<span style="color:#666">)</span><span style="color:#666">)</span>
-                uri <span style="color:#666">=</span> resolveContent<span style="color:#666">(</span>uri<span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>uri<span style="color:#666">.</span><span style="color:#b44">getScheme</span><span style="color:#666">().</span><span style="color:#b44">equalsIgnoreCase</span><span style="color:#666">(</span>CONTENT<span style="color:#666">))</span>
+                uri <span style="color:#666">=</span> resolveContent<span style="color:#666">(</span>uri<span style="color:#666">);</span>
     <span style="color:#080;font-style:italic">// ...
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// resolveContent
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">private</span> Uri <span style="color:#00a000">resolveContent</span><span style="color:#666">(</span>Uri uri<span style="color:#666">)</span>
         <span style="color:#666">{</span>
-            String path <span style="color:#666">=</span> FileUtils<span style="color:#666">.</span><span style="color:#b44">getPath</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">,</span> uri<span style="color:#666">)</span><span style="color:#666">;</span>
-            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>path <span style="color:#666">!</span><span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+            String path <span style="color:#666">=</span> FileUtils<span style="color:#666">.</span><span style="color:#b44">getPath</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">,</span> uri<span style="color:#666">);</span>
+            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>path <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
             <span style="color:#666">{</span>
-                File file <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> File<span style="color:#666">(</span>path<span style="color:#666">)</span><span style="color:#666">;</span>
-                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>file<span style="color:#666">.</span><span style="color:#b44">canRead</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">)</span>
-                    uri <span style="color:#666">=</span> Uri<span style="color:#666">.</span><span style="color:#b44">fromFile</span><span style="color:#666">(</span>file<span style="color:#666">)</span><span style="color:#666">;</span>
+                File file <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> File<span style="color:#666">(</span>path<span style="color:#666">);</span>
+                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>file<span style="color:#666">.</span><span style="color:#b44">canRead</span><span style="color:#666">())</span>
+                    uri <span style="color:#666">=</span> Uri<span style="color:#666">.</span><span style="color:#b44">fromFile</span><span style="color:#666">(</span>file<span style="color:#666">);</span>
             <span style="color:#666">}</span>
             <span style="color:#a2f;font-weight:bold">return</span> uri<span style="color:#666">;</span>
         <span style="color:#666">}</span>
@@ -229,31 +223,31 @@ code {
     <span style="color:#666">{</span>
         <span style="color:#080;font-style:italic">// ...
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">boolean</span> isKitKat <span style="color:#666">=</span>
-            Build<span style="color:#666">.</span><span style="color:#b44">VERSION</span><span style="color:#666">.</span><span style="color:#b44">SDK_INT</span> <span style="color:#666">&gt;</span><span style="color:#666">=</span> Build<span style="color:#666">.</span><span style="color:#b44">VERSION_CODES</span><span style="color:#666">.</span><span style="color:#b44">KITKAT</span><span style="color:#666">;</span>
+            Build<span style="color:#666">.</span><span style="color:#b44">VERSION</span><span style="color:#666">.</span><span style="color:#b44">SDK_INT</span> <span style="color:#666">&gt;=</span> Build<span style="color:#666">.</span><span style="color:#b44">VERSION_CODES</span><span style="color:#666">.</span><span style="color:#b44">KITKAT</span><span style="color:#666">;</span>
 
         <span style="color:#080;font-style:italic">// DocumentProvider
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>isKitKat <span style="color:#666">&amp;</span><span style="color:#666">&amp;</span> DocumentsContract<span style="color:#666">.</span><span style="color:#b44">isDocumentUri</span><span style="color:#666">(</span>context<span style="color:#666">,</span> uri<span style="color:#666">)</span><span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>isKitKat <span style="color:#666">&amp;&amp;</span> DocumentsContract<span style="color:#666">.</span><span style="color:#b44">isDocumentUri</span><span style="color:#666">(</span>context<span style="color:#666">,</span> uri<span style="color:#666">))</span>
         <span style="color:#666">{</span>
             <span style="color:#080;font-style:italic">// ExternalStorageProvider
-</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>isExternalStorageDocument<span style="color:#666">(</span>uri<span style="color:#666">)</span><span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>isExternalStorageDocument<span style="color:#666">(</span>uri<span style="color:#666">))</span>
             <span style="color:#666">{</span>
-                <span style="color:#a2f;font-weight:bold">final</span> String docId <span style="color:#666">=</span> DocumentsContract<span style="color:#666">.</span><span style="color:#b44">getDocumentId</span><span style="color:#666">(</span>uri<span style="color:#666">)</span><span style="color:#666">;</span>
-                <span style="color:#a2f;font-weight:bold">final</span> String<span style="color:#666">[</span><span style="color:#666">]</span> split <span style="color:#666">=</span> docId<span style="color:#666">.</span><span style="color:#b44">split</span><span style="color:#666">(</span><span style="color:#b44">&#34;:&#34;</span><span style="color:#666">)</span><span style="color:#666">;</span>
-                <span style="color:#a2f;font-weight:bold">final</span> String type <span style="color:#666">=</span> split<span style="color:#666">[</span>0<span style="color:#666">]</span><span style="color:#666">;</span>
+                <span style="color:#a2f;font-weight:bold">final</span> String docId <span style="color:#666">=</span> DocumentsContract<span style="color:#666">.</span><span style="color:#b44">getDocumentId</span><span style="color:#666">(</span>uri<span style="color:#666">);</span>
+                <span style="color:#a2f;font-weight:bold">final</span> String<span style="color:#666">[]</span> split <span style="color:#666">=</span> docId<span style="color:#666">.</span><span style="color:#b44">split</span><span style="color:#666">(</span><span style="color:#b44">&#34;:&#34;</span><span style="color:#666">);</span>
+                <span style="color:#a2f;font-weight:bold">final</span> String type <span style="color:#666">=</span> split<span style="color:#666">[</span>0<span style="color:#666">];</span>
 
                 <span style="color:#080;font-style:italic">// /
-</span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span><span style="color:#b44">&#34;primary&#34;</span><span style="color:#666">.</span><span style="color:#b44">equalsIgnoreCase</span><span style="color:#666">(</span>type<span style="color:#666">)</span><span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span><span style="color:#b44">&#34;primary&#34;</span><span style="color:#666">.</span><span style="color:#b44">equalsIgnoreCase</span><span style="color:#666">(</span>type<span style="color:#666">))</span>
                 <span style="color:#666">{</span>
                     <span style="color:#a2f;font-weight:bold">return</span> Environment
-                        <span style="color:#666">.</span><span style="color:#b44">getExternalStorageDirectory</span><span style="color:#666">(</span><span style="color:#666">)</span> <span style="color:#666">+</span> <span style="color:#b44">&#34;/&#34;</span> <span style="color:#666">+</span> split<span style="color:#666">[</span>1<span style="color:#666">]</span><span style="color:#666">;</span>
+                        <span style="color:#666">.</span><span style="color:#b44">getExternalStorageDirectory</span><span style="color:#666">()</span> <span style="color:#666">+</span> <span style="color:#b44">&#34;/&#34;</span> <span style="color:#666">+</span> split<span style="color:#666">[</span>1<span style="color:#666">];</span>
                 <span style="color:#666">}</span>
 
                 <span style="color:#080;font-style:italic">// /Documents
-</span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">else</span> <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span><span style="color:#b44">&#34;home&#34;</span><span style="color:#666">.</span><span style="color:#b44">equalsIgnoreCase</span><span style="color:#666">(</span>type<span style="color:#666">)</span><span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">else</span> <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span><span style="color:#b44">&#34;home&#34;</span><span style="color:#666">.</span><span style="color:#b44">equalsIgnoreCase</span><span style="color:#666">(</span>type<span style="color:#666">))</span>
                 <span style="color:#666">{</span>
                     <span style="color:#a2f;font-weight:bold">return</span> Environment
-                        <span style="color:#666">.</span><span style="color:#b44">getExternalStorageDirectory</span><span style="color:#666">(</span><span style="color:#666">)</span> <span style="color:#666">+</span> <span style="color:#b44">&#34;/Documents/&#34;</span> <span style="color:#666">+</span>
-                        split<span style="color:#666">[</span>1<span style="color:#666">]</span><span style="color:#666">;</span>
+                        <span style="color:#666">.</span><span style="color:#b44">getExternalStorageDirectory</span><span style="color:#666">()</span> <span style="color:#666">+</span> <span style="color:#b44">&#34;/Documents/&#34;</span> <span style="color:#666">+</span>
+                        split<span style="color:#666">[</span>1<span style="color:#666">];</span>
                 <span style="color:#666">}</span>
                 <span style="color:#080;font-style:italic">// TODO handle non-primary volumes
 </span><span style="color:#080;font-style:italic"></span>            <span style="color:#666">}</span>

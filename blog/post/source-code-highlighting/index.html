@@ -34,7 +34,7 @@ HTML output is not very useful for a text editor. It could be used with Html.fro
 
 
 
-<meta name="generator" content="Hugo 0.64.0" />
+<meta name="generator" content="Hugo 0.66.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -83,17 +83,11 @@ code {
       <div class="top-bar">
         <div class="row column">
           <div class="top-bar-left">
-          <div class="top-bar-right">
             <ul class="menu">
+              <li class=""><a href="https://billthefarmer.github.io/blog/">
+                Home
+              </a></li>
               
-                
-                  <li><a href="https://billthefarmer.github.io/blog/">
-                    Bill Farmer
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
-                    Categories
-                  </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
@@ -234,38 +228,38 @@ highlight option. The highlighting code is called with a small delay
 after each action that might change or scroll the text, and after
 removing the previous call.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// checkHighlight
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">checkHighlight</span><span style="color:#666">(</span><span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">checkHighlight</span><span style="color:#666">()</span>
     <span style="color:#666">{</span>
         <span style="color:#080;font-style:italic">// No syntax
 </span><span style="color:#080;font-style:italic"></span>        syntax <span style="color:#666">=</span> NO_SYNTAX<span style="color:#666">;</span>
 
         <span style="color:#080;font-style:italic">// Check extension
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>highlight <span style="color:#666">&amp;</span><span style="color:#666">&amp;</span> file <span style="color:#666">!</span><span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>highlight <span style="color:#666">&amp;&amp;</span> file <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
         <span style="color:#666">{</span>
-            String ext <span style="color:#666">=</span> FileUtils<span style="color:#666">.</span><span style="color:#b44">getExtension</span><span style="color:#666">(</span>file<span style="color:#666">.</span><span style="color:#b44">getName</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">)</span><span style="color:#666">;</span>
-            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>ext <span style="color:#666">!</span><span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+            String ext <span style="color:#666">=</span> FileUtils<span style="color:#666">.</span><span style="color:#b44">getExtension</span><span style="color:#666">(</span>file<span style="color:#666">.</span><span style="color:#b44">getName</span><span style="color:#666">());</span>
+            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>ext <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
             <span style="color:#666">{</span>
-                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>ext<span style="color:#666">.</span><span style="color:#b44">matches</span><span style="color:#666">(</span>CC_EXT<span style="color:#666">)</span><span style="color:#666">)</span>
+                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>ext<span style="color:#666">.</span><span style="color:#b44">matches</span><span style="color:#666">(</span>CC_EXT<span style="color:#666">))</span>
                     syntax <span style="color:#666">=</span> CC_SYNTAX<span style="color:#666">;</span>
 
-                <span style="color:#a2f;font-weight:bold">else</span> <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>ext<span style="color:#666">.</span><span style="color:#b44">matches</span><span style="color:#666">(</span>HTML_EXT<span style="color:#666">)</span><span style="color:#666">)</span>
+                <span style="color:#a2f;font-weight:bold">else</span> <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>ext<span style="color:#666">.</span><span style="color:#b44">matches</span><span style="color:#666">(</span>HTML_EXT<span style="color:#666">))</span>
                     syntax <span style="color:#666">=</span> HTML_SYNTAX<span style="color:#666">;</span>
 
-                <span style="color:#a2f;font-weight:bold">else</span> <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>ext<span style="color:#666">.</span><span style="color:#b44">matches</span><span style="color:#666">(</span>CSS_EXT<span style="color:#666">)</span><span style="color:#666">)</span>
+                <span style="color:#a2f;font-weight:bold">else</span> <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>ext<span style="color:#666">.</span><span style="color:#b44">matches</span><span style="color:#666">(</span>CSS_EXT<span style="color:#666">))</span>
                     syntax <span style="color:#666">=</span> CSS_SYNTAX<span style="color:#666">;</span>
 
                 <span style="color:#a2f;font-weight:bold">else</span>
                     syntax <span style="color:#666">=</span> NO_SYNTAX<span style="color:#666">;</span>
 
-                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>textView <span style="color:#666">!</span><span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span> <span style="color:#666">&amp;</span><span style="color:#666">&amp;</span> syntax <span style="color:#666">!</span><span style="color:#666">=</span> NO_SYNTAX<span style="color:#666">)</span>
+                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>textView <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span> <span style="color:#666">&amp;&amp;</span> syntax <span style="color:#666">!=</span> NO_SYNTAX<span style="color:#666">)</span>
                 <span style="color:#666">{</span>
                     <span style="color:#080;font-style:italic">// Set callback
-</span><span style="color:#080;font-style:italic"></span>                    <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>updateHighlight <span style="color:#666">=</span><span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
-                        updateHighlight <span style="color:#666">=</span> <span style="color:#666">(</span><span style="color:#666">)</span> <span style="color:#666">-</span><span style="color:#666">&gt;</span>
-                            highlightText<span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                    <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>updateHighlight <span style="color:#666">==</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+                        updateHighlight <span style="color:#666">=</span> <span style="color:#666">()</span> <span style="color:#666">-&gt;</span>
+                            highlightText<span style="color:#666">();</span>
 
-                    textView<span style="color:#666">.</span><span style="color:#b44">removeCallbacks</span><span style="color:#666">(</span>updateHighlight<span style="color:#666">)</span><span style="color:#666">;</span>
-                    textView<span style="color:#666">.</span><span style="color:#b44">postDelayed</span><span style="color:#666">(</span>updateHighlight<span style="color:#666">,</span> UPDATE_DELAY<span style="color:#666">)</span><span style="color:#666">;</span>
+                    textView<span style="color:#666">.</span><span style="color:#b44">removeCallbacks</span><span style="color:#666">(</span>updateHighlight<span style="color:#666">);</span>
+                    textView<span style="color:#666">.</span><span style="color:#b44">postDelayed</span><span style="color:#666">(</span>updateHighlight<span style="color:#666">,</span> UPDATE_DELAY<span style="color:#666">);</span>
 
                     <span style="color:#a2f;font-weight:bold">return</span><span style="color:#666">;</span>
                 <span style="color:#666">}</span>
@@ -273,10 +267,10 @@ removing the previous call.</p>
         <span style="color:#666">}</span>
 
         <span style="color:#080;font-style:italic">// Remove highlighting
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>updateHighlight <span style="color:#666">!</span><span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>updateHighlight <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
         <span style="color:#666">{</span>
-            textView<span style="color:#666">.</span><span style="color:#b44">removeCallbacks</span><span style="color:#666">(</span>updateHighlight<span style="color:#666">)</span><span style="color:#666">;</span>
-            textView<span style="color:#666">.</span><span style="color:#b44">postDelayed</span><span style="color:#666">(</span>updateHighlight<span style="color:#666">,</span> UPDATE_DELAY<span style="color:#666">)</span><span style="color:#666">;</span>
+            textView<span style="color:#666">.</span><span style="color:#b44">removeCallbacks</span><span style="color:#666">(</span>updateHighlight<span style="color:#666">);</span>
+            textView<span style="color:#666">.</span><span style="color:#b44">postDelayed</span><span style="color:#666">(</span>updateHighlight<span style="color:#666">,</span> UPDATE_DELAY<span style="color:#666">);</span>
 
             updateHighlight <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">;</span>
         <span style="color:#666">}</span>
@@ -287,37 +281,37 @@ view hierarchy to re-layout the views which causes the text to scroll
 to bring the current selection into view. This is annoying when
 scrolling the text, so move the selection if not editing.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// highlightText
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">highlightText</span><span style="color:#666">(</span><span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">highlightText</span><span style="color:#666">()</span>
     <span style="color:#666">{</span>
         <span style="color:#080;font-style:italic">// Get visible extent
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#0b0;font-weight:bold">int</span> top <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getScrollY</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
-        <span style="color:#0b0;font-weight:bold">int</span> height <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getHeight</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#0b0;font-weight:bold">int</span> top <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getScrollY</span><span style="color:#666">();</span>
+        <span style="color:#0b0;font-weight:bold">int</span> height <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getHeight</span><span style="color:#666">();</span>
 
-        <span style="color:#0b0;font-weight:bold">int</span> line <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">getLineForVertical</span><span style="color:#666">(</span>top<span style="color:#666">)</span><span style="color:#666">;</span>
-        <span style="color:#0b0;font-weight:bold">int</span> start <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">getLineStart</span><span style="color:#666">(</span>line<span style="color:#666">)</span><span style="color:#666">;</span>
+        <span style="color:#0b0;font-weight:bold">int</span> line <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">().</span><span style="color:#b44">getLineForVertical</span><span style="color:#666">(</span>top<span style="color:#666">);</span>
+        <span style="color:#0b0;font-weight:bold">int</span> start <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">().</span><span style="color:#b44">getLineStart</span><span style="color:#666">(</span>line<span style="color:#666">);</span>
 
-        line <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">getLineForVertical</span><span style="color:#666">(</span>top <span style="color:#666">+</span> height<span style="color:#666">)</span><span style="color:#666">;</span>
-        <span style="color:#0b0;font-weight:bold">int</span> end <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">getLineEnd</span><span style="color:#666">(</span>line<span style="color:#666">)</span><span style="color:#666">;</span>
+        line <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">().</span><span style="color:#b44">getLineForVertical</span><span style="color:#666">(</span>top <span style="color:#666">+</span> height<span style="color:#666">);</span>
+        <span style="color:#0b0;font-weight:bold">int</span> end <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">().</span><span style="color:#b44">getLineEnd</span><span style="color:#666">(</span>line<span style="color:#666">);</span>
 
         <span style="color:#080;font-style:italic">// Move selection if outside range
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>textView<span style="color:#666">.</span><span style="color:#b44">getSelectionStart</span><span style="color:#666">(</span><span style="color:#666">)</span> <span style="color:#666">&lt;</span> start<span style="color:#666">)</span>
-            textView<span style="color:#666">.</span><span style="color:#b44">setSelection</span><span style="color:#666">(</span>start<span style="color:#666">,</span> start<span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>textView<span style="color:#666">.</span><span style="color:#b44">getSelectionStart</span><span style="color:#666">()</span> <span style="color:#666">&lt;</span> start<span style="color:#666">)</span>
+            textView<span style="color:#666">.</span><span style="color:#b44">setSelection</span><span style="color:#666">(</span>start<span style="color:#666">,</span> start<span style="color:#666">);</span>
 
-        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>textView<span style="color:#666">.</span><span style="color:#b44">getSelectionStart</span><span style="color:#666">(</span><span style="color:#666">)</span> <span style="color:#666">&gt;</span> end<span style="color:#666">)</span>
+        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>textView<span style="color:#666">.</span><span style="color:#b44">getSelectionStart</span><span style="color:#666">()</span> <span style="color:#666">&gt;</span> end<span style="color:#666">)</span>
         <span style="color:#666">{</span>
-            <span style="color:#0b0;font-weight:bold">int</span> last <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">getLineStart</span><span style="color:#666">(</span>line <span style="color:#666">-</span> 1<span style="color:#666">)</span><span style="color:#666">;</span>
-            textView<span style="color:#666">.</span><span style="color:#b44">setSelection</span><span style="color:#666">(</span>last<span style="color:#666">,</span> last<span style="color:#666">)</span><span style="color:#666">;</span>
+            <span style="color:#0b0;font-weight:bold">int</span> last <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">().</span><span style="color:#b44">getLineStart</span><span style="color:#666">(</span>line <span style="color:#666">-</span> 1<span style="color:#666">);</span>
+            textView<span style="color:#666">.</span><span style="color:#b44">setSelection</span><span style="color:#666">(</span>last<span style="color:#666">,</span> last<span style="color:#666">);</span>
         <span style="color:#666">}</span>
 
         <span style="color:#080;font-style:italic">// Get editable
-</span><span style="color:#080;font-style:italic"></span>        Editable editable <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getEditableText</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>        Editable editable <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getEditableText</span><span style="color:#666">();</span>
 
         <span style="color:#080;font-style:italic">// Get current spans
-</span><span style="color:#080;font-style:italic"></span>        ForegroundColorSpan spans<span style="color:#666">[</span><span style="color:#666">]</span> <span style="color:#666">=</span>
-            editable<span style="color:#666">.</span><span style="color:#b44">getSpans</span><span style="color:#666">(</span>0<span style="color:#666">,</span> editable<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">,</span> ForegroundColorSpan<span style="color:#666">.</span><span style="color:#b44">class</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>        ForegroundColorSpan spans<span style="color:#666">[]</span> <span style="color:#666">=</span>
+            editable<span style="color:#666">.</span><span style="color:#b44">getSpans</span><span style="color:#666">(</span>0<span style="color:#666">,</span> editable<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">(),</span> ForegroundColorSpan<span style="color:#666">.</span><span style="color:#b44">class</span><span style="color:#666">);</span>
         <span style="color:#080;font-style:italic">// Remove spans
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">for</span> <span style="color:#666">(</span>ForegroundColorSpan span<span style="color:#666">:</span> spans<span style="color:#666">)</span>
-            editable<span style="color:#666">.</span><span style="color:#b44">removeSpan</span><span style="color:#666">(</span>span<span style="color:#666">)</span><span style="color:#666">;</span>
+            editable<span style="color:#666">.</span><span style="color:#b44">removeSpan</span><span style="color:#666">(</span>span<span style="color:#666">);</span>
 
         Pattern pattern<span style="color:#666">;</span>
         Matcher matcher<span style="color:#666">;</span>
@@ -325,70 +319,70 @@ scrolling the text, so move the selection if not editing.</p>
         <span style="color:#a2f;font-weight:bold">switch</span> <span style="color:#666">(</span>syntax<span style="color:#666">)</span>
         <span style="color:#666">{</span>
         <span style="color:#a2f;font-weight:bold">case</span> CC_SYNTAX<span style="color:#666">:</span>
-            pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>KEYWORDS<span style="color:#666">,</span> Pattern<span style="color:#666">.</span><span style="color:#b44">MULTILINE</span><span style="color:#666">)</span><span style="color:#666">;</span>
-            matcher <span style="color:#666">=</span> pattern<span style="color:#666">.</span><span style="color:#b44">matcher</span><span style="color:#666">(</span>editable<span style="color:#666">)</span><span style="color:#666">;</span>
-            matcher<span style="color:#666">.</span><span style="color:#b44">region</span><span style="color:#666">(</span>start<span style="color:#666">,</span> end<span style="color:#666">)</span><span style="color:#666">;</span>
+            pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>KEYWORDS<span style="color:#666">,</span> Pattern<span style="color:#666">.</span><span style="color:#b44">MULTILINE</span><span style="color:#666">);</span>
+            matcher <span style="color:#666">=</span> pattern<span style="color:#666">.</span><span style="color:#b44">matcher</span><span style="color:#666">(</span>editable<span style="color:#666">);</span>
+            matcher<span style="color:#666">.</span><span style="color:#b44">region</span><span style="color:#666">(</span>start<span style="color:#666">,</span> end<span style="color:#666">);</span>
 
-            <span style="color:#a2f;font-weight:bold">while</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">)</span>
+            <span style="color:#a2f;font-weight:bold">while</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">())</span>
             <span style="color:#666">{</span>
                 ForegroundColorSpan span <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span>
-                    ForegroundColorSpan<span style="color:#666">(</span>Color<span style="color:#666">.</span><span style="color:#b44">CYAN</span><span style="color:#666">)</span><span style="color:#666">;</span>
+                    ForegroundColorSpan<span style="color:#666">(</span>Color<span style="color:#666">.</span><span style="color:#b44">CYAN</span><span style="color:#666">);</span>
 
                 <span style="color:#080;font-style:italic">// Highlight it
-</span><span style="color:#080;font-style:italic"></span>                editable<span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">end</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">,</span>
-                                 Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                editable<span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(),</span> matcher<span style="color:#666">.</span><span style="color:#b44">end</span><span style="color:#666">(),</span>
+                                 Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">);</span>
             <span style="color:#666">}</span>
 
-            pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>TYPES<span style="color:#666">,</span> Pattern<span style="color:#666">.</span><span style="color:#b44">MULTILINE</span><span style="color:#666">)</span><span style="color:#666">;</span>
-            matcher<span style="color:#666">.</span><span style="color:#b44">region</span><span style="color:#666">(</span>start<span style="color:#666">,</span> end<span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">usePattern</span><span style="color:#666">(</span>pattern<span style="color:#666">)</span><span style="color:#666">;</span>
+            pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>TYPES<span style="color:#666">,</span> Pattern<span style="color:#666">.</span><span style="color:#b44">MULTILINE</span><span style="color:#666">);</span>
+            matcher<span style="color:#666">.</span><span style="color:#b44">region</span><span style="color:#666">(</span>start<span style="color:#666">,</span> end<span style="color:#666">).</span><span style="color:#b44">usePattern</span><span style="color:#666">(</span>pattern<span style="color:#666">);</span>
 
-            <span style="color:#a2f;font-weight:bold">while</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">)</span>
+            <span style="color:#a2f;font-weight:bold">while</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">())</span>
             <span style="color:#666">{</span>
                 ForegroundColorSpan span <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span>
-                    ForegroundColorSpan<span style="color:#666">(</span>Color<span style="color:#666">.</span><span style="color:#b44">MAGENTA</span><span style="color:#666">)</span><span style="color:#666">;</span>
+                    ForegroundColorSpan<span style="color:#666">(</span>Color<span style="color:#666">.</span><span style="color:#b44">MAGENTA</span><span style="color:#666">);</span>
 
                 <span style="color:#080;font-style:italic">// Highlight it
-</span><span style="color:#080;font-style:italic"></span>                editable<span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">end</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">,</span>
-                                 Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                editable<span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(),</span> matcher<span style="color:#666">.</span><span style="color:#b44">end</span><span style="color:#666">(),</span>
+                                 Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">);</span>
             <span style="color:#666">}</span>
 
-            pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>CLASS<span style="color:#666">,</span> Pattern<span style="color:#666">.</span><span style="color:#b44">MULTILINE</span><span style="color:#666">)</span><span style="color:#666">;</span>
-            matcher<span style="color:#666">.</span><span style="color:#b44">region</span><span style="color:#666">(</span>start<span style="color:#666">,</span> end<span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">usePattern</span><span style="color:#666">(</span>pattern<span style="color:#666">)</span><span style="color:#666">;</span>
+            pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>CLASS<span style="color:#666">,</span> Pattern<span style="color:#666">.</span><span style="color:#b44">MULTILINE</span><span style="color:#666">);</span>
+            matcher<span style="color:#666">.</span><span style="color:#b44">region</span><span style="color:#666">(</span>start<span style="color:#666">,</span> end<span style="color:#666">).</span><span style="color:#b44">usePattern</span><span style="color:#666">(</span>pattern<span style="color:#666">);</span>
 
-            <span style="color:#a2f;font-weight:bold">while</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">)</span>
+            <span style="color:#a2f;font-weight:bold">while</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">())</span>
             <span style="color:#666">{</span>
                 ForegroundColorSpan span <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span>
-                    ForegroundColorSpan<span style="color:#666">(</span>Color<span style="color:#666">.</span><span style="color:#b44">BLUE</span><span style="color:#666">)</span><span style="color:#666">;</span>
+                    ForegroundColorSpan<span style="color:#666">(</span>Color<span style="color:#666">.</span><span style="color:#b44">BLUE</span><span style="color:#666">);</span>
 
                 <span style="color:#080;font-style:italic">// Highlight it
-</span><span style="color:#080;font-style:italic"></span>                editable<span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">end</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">,</span>
-                                 Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                editable<span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(),</span> matcher<span style="color:#666">.</span><span style="color:#b44">end</span><span style="color:#666">(),</span>
+                                 Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">);</span>
             <span style="color:#666">}</span>
 
-            pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>CONSTANT<span style="color:#666">,</span> Pattern<span style="color:#666">.</span><span style="color:#b44">MULTILINE</span><span style="color:#666">)</span><span style="color:#666">;</span>
-            matcher<span style="color:#666">.</span><span style="color:#b44">region</span><span style="color:#666">(</span>start<span style="color:#666">,</span> end<span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">usePattern</span><span style="color:#666">(</span>pattern<span style="color:#666">)</span><span style="color:#666">;</span>
+            pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>CONSTANT<span style="color:#666">,</span> Pattern<span style="color:#666">.</span><span style="color:#b44">MULTILINE</span><span style="color:#666">);</span>
+            matcher<span style="color:#666">.</span><span style="color:#b44">region</span><span style="color:#666">(</span>start<span style="color:#666">,</span> end<span style="color:#666">).</span><span style="color:#b44">usePattern</span><span style="color:#666">(</span>pattern<span style="color:#666">);</span>
 
-            <span style="color:#a2f;font-weight:bold">while</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">)</span>
+            <span style="color:#a2f;font-weight:bold">while</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">())</span>
             <span style="color:#666">{</span>
                 ForegroundColorSpan span <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span>
-                    ForegroundColorSpan<span style="color:#666">(</span>Color<span style="color:#666">.</span><span style="color:#b44">LTGRAY</span><span style="color:#666">)</span><span style="color:#666">;</span>
+                    ForegroundColorSpan<span style="color:#666">(</span>Color<span style="color:#666">.</span><span style="color:#b44">LTGRAY</span><span style="color:#666">);</span>
 
                 <span style="color:#080;font-style:italic">// Highlight it
-</span><span style="color:#080;font-style:italic"></span>                editable<span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">end</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">,</span>
-                                 Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                editable<span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(),</span> matcher<span style="color:#666">.</span><span style="color:#b44">end</span><span style="color:#666">(),</span>
+                                 Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">);</span>
             <span style="color:#666">}</span>
 
-            pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>CC_COMMENT<span style="color:#666">,</span> Pattern<span style="color:#666">.</span><span style="color:#b44">MULTILINE</span><span style="color:#666">)</span><span style="color:#666">;</span>
-            matcher<span style="color:#666">.</span><span style="color:#b44">region</span><span style="color:#666">(</span>start<span style="color:#666">,</span> end<span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">usePattern</span><span style="color:#666">(</span>pattern<span style="color:#666">)</span><span style="color:#666">;</span>
+            pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>CC_COMMENT<span style="color:#666">,</span> Pattern<span style="color:#666">.</span><span style="color:#b44">MULTILINE</span><span style="color:#666">);</span>
+            matcher<span style="color:#666">.</span><span style="color:#b44">region</span><span style="color:#666">(</span>start<span style="color:#666">,</span> end<span style="color:#666">).</span><span style="color:#b44">usePattern</span><span style="color:#666">(</span>pattern<span style="color:#666">);</span>
 
-            <span style="color:#a2f;font-weight:bold">while</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">)</span>
+            <span style="color:#a2f;font-weight:bold">while</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">())</span>
             <span style="color:#666">{</span>
                 ForegroundColorSpan span <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span>
-                    ForegroundColorSpan<span style="color:#666">(</span>Color<span style="color:#666">.</span><span style="color:#b44">RED</span><span style="color:#666">)</span><span style="color:#666">;</span>
+                    ForegroundColorSpan<span style="color:#666">(</span>Color<span style="color:#666">.</span><span style="color:#b44">RED</span><span style="color:#666">);</span>
 
                 <span style="color:#080;font-style:italic">// Highlight it
-</span><span style="color:#080;font-style:italic"></span>                editable<span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">end</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">,</span>
-                                 Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                editable<span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(),</span> matcher<span style="color:#666">.</span><span style="color:#b44">end</span><span style="color:#666">(),</span>
+                                 Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">);</span>
             <span style="color:#666">}</span>
             <span style="color:#a2f;font-weight:bold">break</span><span style="color:#666">;</span>
         <span style="color:#666">}</span>
@@ -398,38 +392,38 @@ scrolling the text, changing the text and dismissing the
 keyboard. There is no built in check on the keyboard, it can only be
 detected by checking view sizes. Only trigger the highlight on
 dismissing the keyboard.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">            textView<span style="color:#666">.</span><span style="color:#b44">getViewTreeObserver</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">addOnGlobalLayoutListener</span><span style="color:#666">(</span>
-                <span style="color:#a2f;font-weight:bold">new</span> ViewTreeObserver<span style="color:#666">.</span><span style="color:#b44">OnGlobalLayoutListener</span><span style="color:#666">(</span><span style="color:#666">)</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">            textView<span style="color:#666">.</span><span style="color:#b44">getViewTreeObserver</span><span style="color:#666">().</span><span style="color:#b44">addOnGlobalLayoutListener</span><span style="color:#666">(</span>
+                <span style="color:#a2f;font-weight:bold">new</span> ViewTreeObserver<span style="color:#666">.</span><span style="color:#b44">OnGlobalLayoutListener</span><span style="color:#666">()</span>
             <span style="color:#666">{</span>
                 <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">boolean</span> keyboard<span style="color:#666">;</span>
 
                 <span style="color:#080;font-style:italic">// onGlobalLayout
 </span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f">@Override</span>
-                <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onGlobalLayout</span><span style="color:#666">(</span><span style="color:#666">)</span>
+                <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onGlobalLayout</span><span style="color:#666">()</span>
                 <span style="color:#666">{</span>
-                    <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>updateHighlight <span style="color:#666">!</span><span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+                    <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>updateHighlight <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
                     <span style="color:#666">{</span>
-                        <span style="color:#0b0;font-weight:bold">int</span> rootHeight <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getRootView</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">.</span><span style="color:#b44">getHeight</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
-                        <span style="color:#0b0;font-weight:bold">int</span> height <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getHeight</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+                        <span style="color:#0b0;font-weight:bold">int</span> rootHeight <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getRootView</span><span style="color:#666">().</span><span style="color:#b44">getHeight</span><span style="color:#666">();</span>
+                        <span style="color:#0b0;font-weight:bold">int</span> height <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getHeight</span><span style="color:#666">();</span>
 
-                        <span style="color:#0b0;font-weight:bold">boolean</span> shown <span style="color:#666">=</span> <span style="color:#666">(</span><span style="color:#666">(</span><span style="color:#666">(</span>rootHeight <span style="color:#666">-</span> height<span style="color:#666">)</span> <span style="color:#666">/</span>
+                        <span style="color:#0b0;font-weight:bold">boolean</span> shown <span style="color:#666">=</span> <span style="color:#666">(((</span>rootHeight <span style="color:#666">-</span> height<span style="color:#666">)</span> <span style="color:#666">/</span>
                                          <span style="color:#666">(</span><span style="color:#0b0;font-weight:bold">double</span><span style="color:#666">)</span> rootHeight<span style="color:#666">)</span> <span style="color:#666">&gt;</span>
-                                         KEYBOARD_RATIO<span style="color:#666">)</span><span style="color:#666">;</span>
+                                         KEYBOARD_RATIO<span style="color:#666">);</span>
 
-                        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>shown <span style="color:#666">!</span><span style="color:#666">=</span> keyboard<span style="color:#666">)</span>
+                        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>shown <span style="color:#666">!=</span> keyboard<span style="color:#666">)</span>
                         <span style="color:#666">{</span>
-                            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span><span style="color:#666">!</span>shown<span style="color:#666">)</span>
+                            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(!</span>shown<span style="color:#666">)</span>
                             <span style="color:#666">{</span>
-                                textView<span style="color:#666">.</span><span style="color:#b44">removeCallbacks</span><span style="color:#666">(</span>updateHighlight<span style="color:#666">)</span><span style="color:#666">;</span>
+                                textView<span style="color:#666">.</span><span style="color:#b44">removeCallbacks</span><span style="color:#666">(</span>updateHighlight<span style="color:#666">);</span>
                                 textView<span style="color:#666">.</span><span style="color:#b44">postDelayed</span><span style="color:#666">(</span>updateHighlight<span style="color:#666">,</span>
-                                                     UPDATE_DELAY<span style="color:#666">)</span><span style="color:#666">;</span>
+                                                     UPDATE_DELAY<span style="color:#666">);</span>
                             <span style="color:#666">}</span>
 
                             keyboard <span style="color:#666">=</span> shown<span style="color:#666">;</span>
                         <span style="color:#666">}</span>
                     <span style="color:#666">}</span>
                 <span style="color:#666">}</span>
-            <span style="color:#666">}</span><span style="color:#666">)</span><span style="color:#666">;</span>
+            <span style="color:#666">});</span>
 </code></pre></div><p>Creating a list of HTML tags and making a regular expression is
 similar to creating the C type expression. Creating a list of CSS
 styles produces a rather long list, and the <code>\\b</code> word boundary

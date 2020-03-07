@@ -21,7 +21,7 @@ You can try it out in your browser: http://tryhaskell.org
 λ let factorial n = product [1..n] in factorial 99 9332621544394415268169923885626670049071596826438162146859 2963895217599993229915608941463976156518286253697920827223 7582511852109168640000000000000000000000 :: (Enum a, Num a) =&gt; a λ Pretty impressive! So I thought I’d try a simple web application.">
 <meta itemprop="datePublished" content="2014-03-29T15:26:14&#43;00:00" />
 <meta itemprop="dateModified" content="2014-03-29T15:26:14&#43;00:00" />
-<meta itemprop="wordCount" content="345">
+<meta itemprop="wordCount" content="347">
 
 
 
@@ -37,7 +37,7 @@ You can try it out in your browser: http://tryhaskell.org
 
 
 
-<meta name="generator" content="Hugo 0.64.0" />
+<meta name="generator" content="Hugo 0.66.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -86,17 +86,11 @@ code {
       <div class="top-bar">
         <div class="row column">
           <div class="top-bar-left">
-          <div class="top-bar-right">
             <ul class="menu">
+              <li class=""><a href="https://billthefarmer.github.io/blog/">
+                Home
+              </a></li>
               
-                
-                  <li><a href="https://billthefarmer.github.io/blog/">
-                    Bill Farmer
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
-                    Categories
-                  </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
@@ -195,8 +189,8 @@ code {
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">    <span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">Network.CGI</span>
     cgiMain <span style="color:#a2f;font-weight:bold">::</span> <span style="color:#0b0;font-weight:bold">CGI</span> <span style="color:#0b0;font-weight:bold">CGIResult</span>
     cgiMain <span style="color:#a2f;font-weight:bold">=</span> <span style="color:#a2f;font-weight:bold">do</span>
-        setHeader <span style="color:#b44">&#34;</span><span style="color:#b44">Content-Type</span><span style="color:#b44">&#34;</span> <span style="color:#b44">&#34;</span><span style="color:#b44">text/html; charset=UTF-8</span><span style="color:#b44">&#34;</span>
-        output <span style="color:#b44">&#34;</span><span style="color:#b44">Hello World!</span><span style="color:#b62;font-weight:bold">\</span><span style="color:#b62;font-weight:bold">n</span><span style="color:#b44">&#34;</span>
+        setHeader <span style="color:#b44">&#34;Content-Type&#34;</span> <span style="color:#b44">&#34;text/html; charset=UTF-8&#34;</span>
+        output <span style="color:#b44">&#34;Hello World!</span><span style="color:#b62;font-weight:bold">\n</span><span style="color:#b44">&#34;</span>
     main <span style="color:#a2f;font-weight:bold">::</span> <span style="color:#0b0;font-weight:bold">IO</span> <span style="color:#a2f">()</span>
     main <span style="color:#a2f;font-weight:bold">=</span> runCGI (handleErrors cgiMain)
 </code></pre></div><p>This seemed to work, so I tried a graphical GTK app.</p>
@@ -208,7 +202,7 @@ code {
         vbox <span style="color:#a2f;font-weight:bold">&lt;-</span> vBoxNew <span style="color:#0b0;font-weight:bold">False</span> <span style="color:#666">10</span>
         hbox <span style="color:#a2f;font-weight:bold">&lt;-</span> hBoxNew <span style="color:#0b0;font-weight:bold">False</span> <span style="color:#666">0</span>
         button <span style="color:#a2f;font-weight:bold">&lt;-</span> buttonNew
-        pixbuf <span style="color:#a2f;font-weight:bold">&lt;-</span> pixbufNewFromFileAtSize <span style="color:#b44">&#34;</span><span style="color:#b44">941118.jpg</span><span style="color:#b44">&#34;</span> <span style="color:#666">480</span> <span style="color:#666">360</span>
+        pixbuf <span style="color:#a2f;font-weight:bold">&lt;-</span> pixbufNewFromFileAtSize <span style="color:#b44">&#34;941118.jpg&#34;</span> <span style="color:#666">480</span> <span style="color:#666">360</span>
         image <span style="color:#a2f;font-weight:bold">&lt;-</span> imageNewFromPixbuf pixbuf
         quit <span style="color:#a2f;font-weight:bold">&lt;-</span> buttonNew
         set window [ containerBorderWidth <span style="color:#0b0;font-weight:bold">:=</span> <span style="color:#666">10</span>,
@@ -219,9 +213,9 @@ code {
         hbox <span style="color:#a2f;font-weight:bold">&lt;-</span> hBoxNew <span style="color:#0b0;font-weight:bold">False</span> <span style="color:#666">0</span>
         boxPackEnd hbox quit <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
         boxPackEnd vbox hbox <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
-        set button [ buttonLabel <span style="color:#0b0;font-weight:bold">:=</span> <span style="color:#b44">&#34;</span><span style="color:#b44"> Hello World </span><span style="color:#b44">&#34;</span> ]
-        set quit [ buttonLabel <span style="color:#0b0;font-weight:bold">:=</span> <span style="color:#b44">&#34;</span><span style="color:#b44">  Quit  </span><span style="color:#b44">&#34;</span> ]
-        onClicked button (putStrLn <span style="color:#b44">&#34;</span><span style="color:#b44">Hello World</span><span style="color:#b44">&#34;</span>)
+        set button [ buttonLabel <span style="color:#0b0;font-weight:bold">:=</span> <span style="color:#b44">&#34; Hello World &#34;</span> ]
+        set quit [ buttonLabel <span style="color:#0b0;font-weight:bold">:=</span> <span style="color:#b44">&#34;  Quit  &#34;</span> ]
+        onClicked button (putStrLn <span style="color:#b44">&#34;Hello World&#34;</span>)
         onClicked quit mainQuit
         onDestroy window mainQuit
         widgetShowAll window

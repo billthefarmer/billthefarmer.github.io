@@ -34,7 +34,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.64.0" />
+<meta name="generator" content="Hugo 0.66.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -83,17 +83,11 @@ code {
       <div class="top-bar">
         <div class="row column">
           <div class="top-bar-left">
-          <div class="top-bar-right">
             <ul class="menu">
+              <li class=""><a href="https://billthefarmer.github.io/blog/">
+                Home
+              </a></li>
               
-                
-                  <li><a href="https://billthefarmer.github.io/blog/">
-                    Bill Farmer
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
-                    Categories
-                  </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
@@ -196,7 +190,7 @@ code {
         <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onCreate</span><span style="color:#666">(</span>Bundle savedInstanceState<span style="color:#666">)</span>
         <span style="color:#666">{</span>
             <span style="color:#080;font-style:italic">//...
-</span><span style="color:#080;font-style:italic"></span>            WorkerThread worker <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> WorkerThread<span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>            WorkerThread worker <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> WorkerThread<span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">);</span>
         <span style="color:#080;font-style:italic">//...
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">handleMessage</span><span style="color:#666">(</span>Message msg<span style="color:#666">)</span>
         <span style="color:#666">{</span>
@@ -208,14 +202,14 @@ code {
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// Constructor
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#00a000">WorkerThread</span><span style="color:#666">(</span>Handler<span style="color:#666">.</span><span style="color:#b44">Callback</span> callback<span style="color:#666">)</span>
         <span style="color:#666">{</span>
-            handler <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> Handler<span style="color:#666">(</span>callback<span style="color:#666">)</span><span style="color:#666">;</span>
+            handler <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> Handler<span style="color:#666">(</span>callback<span style="color:#666">);</span>
             <span style="color:#080;font-style:italic">//...
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">someFunction</span><span style="color:#666">(</span><span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">someFunction</span><span style="color:#666">()</span>
         <span style="color:#666">{</span>
-            handler<span style="color:#666">.</span><span style="color:#b44">sendEmptyMessage</span><span style="color:#666">(</span>WHATEVER<span style="color:#666">)</span><span style="color:#666">;</span>
+            handler<span style="color:#666">.</span><span style="color:#b44">sendEmptyMessage</span><span style="color:#666">(</span>WHATEVER<span style="color:#666">);</span>
             <span style="color:#080;font-style:italic">// or
-</span><span style="color:#080;font-style:italic"></span>            Message msg <span style="color:#666">=</span> handler<span style="color:#666">.</span><span style="color:#b44">obtainMessage</span><span style="color:#666">(</span>WHATEVER<span style="color:#666">,</span> thingy<span style="color:#666">)</span><span style="color:#666">;</span>
-            handler<span style="color:#666">.</span><span style="color:#b44">sendMessage</span><span style="color:#666">(</span>msg<span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>            Message msg <span style="color:#666">=</span> handler<span style="color:#666">.</span><span style="color:#b44">obtainMessage</span><span style="color:#666">(</span>WHATEVER<span style="color:#666">,</span> thingy<span style="color:#666">);</span>
+            handler<span style="color:#666">.</span><span style="color:#b44">sendMessage</span><span style="color:#666">(</span>msg<span style="color:#666">);</span>
             <span style="color:#080;font-style:italic">//...
 </span></code></pre></div><p>The handler will send the message back to the activity in the UI thread, so you can do whatever with the contents.</p>
 

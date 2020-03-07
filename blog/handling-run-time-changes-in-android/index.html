@@ -34,7 +34,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.64.0" />
+<meta name="generator" content="Hugo 0.66.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -83,17 +83,11 @@ code {
       <div class="top-bar">
         <div class="row column">
           <div class="top-bar-left">
-          <div class="top-bar-right">
             <ul class="menu">
+              <li class=""><a href="https://billthefarmer.github.io/blog/">
+                Home
+              </a></li>
               
-                
-                  <li><a href="https://billthefarmer.github.io/blog/">
-                    Bill Farmer
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
-                    Categories
-                  </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
@@ -192,50 +186,50 @@ code {
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f">@Override</span>
         <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onCreate</span><span style="color:#666">(</span>Bundle savedInstanceState<span style="color:#666">)</span>
         <span style="color:#666">{</span>
-            <span style="color:#a2f;font-weight:bold">super</span><span style="color:#666">.</span><span style="color:#b44">onCreate</span><span style="color:#666">(</span>savedInstanceState<span style="color:#666">)</span><span style="color:#666">;</span>
-            setContentView<span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">layout</span><span style="color:#666">.</span><span style="color:#b44">main</span><span style="color:#666">)</span><span style="color:#666">;</span>
+            <span style="color:#a2f;font-weight:bold">super</span><span style="color:#666">.</span><span style="color:#b44">onCreate</span><span style="color:#666">(</span>savedInstanceState<span style="color:#666">);</span>
+            setContentView<span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">layout</span><span style="color:#666">.</span><span style="color:#b44">main</span><span style="color:#666">);</span>
     
     	<span style="color:#080;font-style:italic">// Get data instance
-</span><span style="color:#080;font-style:italic"></span>    	instance <span style="color:#666">=</span> Data<span style="color:#666">.</span><span style="color:#b44">getInstance</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>    	instance <span style="color:#666">=</span> Data<span style="color:#666">.</span><span style="color:#b44">getInstance</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">);</span>
             <span style="color:#080;font-style:italic">// ...
 </span><span style="color:#080;font-style:italic"></span>    
         <span style="color:#080;font-style:italic">// On resume
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f">@Override</span>
-        <span style="color:#a2f;font-weight:bold">protected</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onResume</span><span style="color:#666">(</span><span style="color:#666">)</span>
+        <span style="color:#a2f;font-weight:bold">protected</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onResume</span><span style="color:#666">()</span>
         <span style="color:#666">{</span>
-            <span style="color:#a2f;font-weight:bold">super</span><span style="color:#666">.</span><span style="color:#b44">onResume</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+            <span style="color:#a2f;font-weight:bold">super</span><span style="color:#666">.</span><span style="color:#b44">onResume</span><span style="color:#666">();</span>
     
     	<span style="color:#080;font-style:italic">// Connect callbacks
-</span><span style="color:#080;font-style:italic"></span>    	instance <span style="color:#666">=</span> Data<span style="color:#666">.</span><span style="color:#b44">getInstance</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>    	instance <span style="color:#666">=</span> Data<span style="color:#666">.</span><span style="color:#b44">getInstance</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">);</span>
      
             <span style="color:#080;font-style:italic">// Check data instance
-</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>instance <span style="color:#666">!</span><span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>instance <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
             <span style="color:#666">{</span>
                 <span style="color:#080;font-style:italic">// Get the saved select list
-</span><span style="color:#080;font-style:italic"></span>                List list <span style="color:#666">=</span> instance<span style="color:#666">.</span><span style="color:#b44">getList</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                List list <span style="color:#666">=</span> instance<span style="color:#666">.</span><span style="color:#b44">getList</span><span style="color:#666">();</span>
                 <span style="color:#080;font-style:italic">// ...
 </span><span style="color:#080;font-style:italic"></span>    
                 <span style="color:#080;font-style:italic">// Get the saved value map
-</span><span style="color:#080;font-style:italic"></span>                valueMap <span style="color:#666">=</span> instance<span style="color:#666">.</span><span style="color:#b44">getMap</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>                valueMap <span style="color:#666">=</span> instance<span style="color:#666">.</span><span style="color:#b44">getMap</span><span style="color:#666">();</span>
             <span style="color:#666">}</span>
         <span style="color:#080;font-style:italic">// ...
 </span><span style="color:#080;font-style:italic"></span>    
         <span style="color:#080;font-style:italic">// On pause
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f">@Override</span>
-        <span style="color:#a2f;font-weight:bold">protected</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onPause</span><span style="color:#666">(</span><span style="color:#666">)</span>
+        <span style="color:#a2f;font-weight:bold">protected</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onPause</span><span style="color:#666">()</span>
         <span style="color:#666">{</span>
-            <span style="color:#a2f;font-weight:bold">super</span><span style="color:#666">.</span><span style="color:#b44">onPause</span><span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+            <span style="color:#a2f;font-weight:bold">super</span><span style="color:#666">.</span><span style="color:#b44">onPause</span><span style="color:#666">();</span>
             <span style="color:#080;font-style:italic">// ...
 </span><span style="color:#080;font-style:italic"></span>    
             <span style="color:#080;font-style:italic">// Save the select list and value map in the data instance
-</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>instance <span style="color:#666">!</span><span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>instance <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
             <span style="color:#666">{</span>
-                instance<span style="color:#666">.</span><span style="color:#b44">setList</span><span style="color:#666">(</span>selectList<span style="color:#666">)</span><span style="color:#666">;</span>
-                instance<span style="color:#666">.</span><span style="color:#b44">setMap</span><span style="color:#666">(</span>valueMap<span style="color:#666">)</span><span style="color:#666">;</span>
+                instance<span style="color:#666">.</span><span style="color:#b44">setList</span><span style="color:#666">(</span>selectList<span style="color:#666">);</span>
+                instance<span style="color:#666">.</span><span style="color:#b44">setMap</span><span style="color:#666">(</span>valueMap<span style="color:#666">);</span>
             <span style="color:#666">}</span>
     
     	<span style="color:#080;font-style:italic">// Disconnect callbacks
-</span><span style="color:#080;font-style:italic"></span>    	instance <span style="color:#666">=</span> Data<span style="color:#666">.</span><span style="color:#b44">getInstance</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span><span style="color:#666">;</span>
+</span><span style="color:#080;font-style:italic"></span>    	instance <span style="color:#666">=</span> Data<span style="color:#666">.</span><span style="color:#b44">getInstance</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">);</span>
         <span style="color:#666">}</span>
     
     <span style="color:#080;font-style:italic">// Data singleton
@@ -252,15 +246,15 @@ code {
     
     
         <span style="color:#080;font-style:italic">// Constructor
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#00a000">Data</span><span style="color:#666">(</span><span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#00a000">Data</span><span style="color:#666">()</span>
         <span style="color:#666">{</span>
         <span style="color:#666">}</span>
     
         <span style="color:#080;font-style:italic">// Get instance
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">static</span> Data <span style="color:#00a000">getInstance</span><span style="color:#666">(</span>TaskCallbacks callbacks<span style="color:#666">)</span>
         <span style="color:#666">{</span>
-            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>instance <span style="color:#666">=</span><span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
-                instance <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> Data<span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
+            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>instance <span style="color:#666">==</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+                instance <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> Data<span style="color:#666">();</span>
     
             instance<span style="color:#666">.</span><span style="color:#b44">callbacks</span> <span style="color:#666">=</span> callbacks<span style="color:#666">;</span>
             <span style="color:#a2f;font-weight:bold">return</span> instance<span style="color:#666">;</span>
@@ -273,7 +267,7 @@ code {
         <span style="color:#666">}</span>
     
         <span style="color:#080;font-style:italic">// Get list
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">public</span> List <span style="color:#00a000">getList</span><span style="color:#666">(</span><span style="color:#666">)</span>
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">public</span> List <span style="color:#00a000">getList</span><span style="color:#666">()</span>
         <span style="color:#666">{</span>
             <span style="color:#a2f;font-weight:bold">return</span> list<span style="color:#666">;</span>
         <span style="color:#666">}</span>
@@ -282,20 +276,20 @@ code {
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// Start parse task
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">protected</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">startParseTask</span><span style="color:#666">(</span>String url<span style="color:#666">)</span>
         <span style="color:#666">{</span>
-            ParseTask parseTask <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ParseTask<span style="color:#666">(</span><span style="color:#666">)</span><span style="color:#666">;</span>
-            parseTask<span style="color:#666">.</span><span style="color:#b44">execute</span><span style="color:#666">(</span>url<span style="color:#666">)</span><span style="color:#666">;</span>
+            ParseTask parseTask <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ParseTask<span style="color:#666">();</span>
+            parseTask<span style="color:#666">.</span><span style="color:#b44">execute</span><span style="color:#666">(</span>url<span style="color:#666">);</span>
         <span style="color:#666">}</span>
     
         <span style="color:#080;font-style:italic">// ParseTask class
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">protected</span> <span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">ParseTask</span>
-            <span style="color:#a2f;font-weight:bold">extends</span> AsyncTask<span style="color:#666">&lt;</span>String<span style="color:#666">,</span> String<span style="color:#666">,</span> Map<span style="color:#666">&lt;</span>String<span style="color:#666">,</span> Double<span style="color:#666">&gt;</span><span style="color:#666">&gt;</span>
+            <span style="color:#a2f;font-weight:bold">extends</span> AsyncTask<span style="color:#666">&lt;</span>String<span style="color:#666">,</span> String<span style="color:#666">,</span> Map<span style="color:#666">&lt;</span>String<span style="color:#666">,</span> Double<span style="color:#666">&gt;&gt;</span>
         <span style="color:#666">{</span>
         <span style="color:#080;font-style:italic">// ...
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// TaskCallbacks interface
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">interface</span> <span style="color:#00f">TaskCallbacks</span>
         <span style="color:#666">{</span>
-            <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onProgressUpdate</span><span style="color:#666">(</span>String<span style="color:#666">.</span><span style="color:#666">.</span><span style="color:#666">.</span> date<span style="color:#666">)</span><span style="color:#666">;</span>
-            <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onPostExecute</span><span style="color:#666">(</span>Map<span style="color:#666">&lt;</span>String<span style="color:#666">,</span> Double<span style="color:#666">&gt;</span> map<span style="color:#666">)</span><span style="color:#666">;</span>
+            <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onProgressUpdate</span><span style="color:#666">(</span>String<span style="color:#666">...</span> date<span style="color:#666">);</span>
+            <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onPostExecute</span><span style="color:#666">(</span>Map<span style="color:#666">&lt;</span>String<span style="color:#666">,</span> Double<span style="color:#666">&gt;</span> map<span style="color:#666">);</span>
         <span style="color:#666">}</span>
     <span style="color:#666">}</span>
 </code></pre></div><p>The data instance will be retained while the app is running and can be used to avoid expensive operations like downloading data more than once.</p>

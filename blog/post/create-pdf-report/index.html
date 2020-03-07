@@ -34,7 +34,7 @@ Implementation As both the plugin and TCPDF are hosted on GitHub, the best way t
 
 
 
-<meta name="generator" content="Hugo 0.64.0" />
+<meta name="generator" content="Hugo 0.66.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -83,17 +83,11 @@ code {
       <div class="top-bar">
         <div class="row column">
           <div class="top-bar-left">
-          <div class="top-bar-right">
             <ul class="menu">
+              <li class=""><a href="https://billthefarmer.github.io/blog/">
+                Home
+              </a></li>
               
-                
-                  <li><a href="https://billthefarmer.github.io/blog/">
-                    Bill Farmer
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
-                    Categories
-                  </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
@@ -304,9 +298,9 @@ else y.</p>
         {
             $width = (!empty($image-&gt;width))? $image-&gt;width: $textWidth;
             $height = (!empty($image-&gt;height))? $image-&gt;height: 0;
-            $x = (!empty($image-&gt;x))? ($image-&gt;x &lt; <span style="color:#008000;font-weight:bold">0</span><span style="">)</span><span style="">?</span>
+            $x = (!empty($image-&gt;x))? ($image-&gt;x &lt; <span style="color:#008000;font-weight:bold">0</span><span style="">)?</span>
                <span style="">$</span><span style="color:#b44">pageWidth</span> <span style="color:#b44">-</span> <span style="">$</span><span style="color:#b44">margin</span> <span style="color:#b44">-</span> <span style="">$</span><span style="color:#b44">width:</span> <span style="">$</span><span style="color:#b44">image-</span>&gt;x: $margin;
-            $y = (!empty($image-&gt;y))? ($image-&gt;y &lt; <span style="color:#008000;font-weight:bold">0</span><span style="">)</span><span style="">?</span>
+            $y = (!empty($image-&gt;y))? ($image-&gt;y &lt; <span style="color:#008000;font-weight:bold">0</span><span style="">)?</span>
                <span style="">$</span><span style="color:#b44">pageHeight</span> <span style="color:#b44">-</span> <span style="">$</span><span style="color:#b44">margin</span> <span style="color:#b44">-</span> <span style="">$</span><span style="color:#b44">height:</span> <span style="">$</span><span style="color:#b44">image-</span>&gt;y: $margin;
             $type = (!empty($image-&gt;type))? $image-&gt;type: &#39;&#39;;
             $link = (!empty($image-&gt;link))? $image-&gt;link: &#39;&#39;;
