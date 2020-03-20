@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>Marion&#39;s Banana and Walnut Cake</title>
+      <link>https://billthefarmer.github.io/blog/banana-cake/</link>
+      <pubDate>Thu, 27 Feb 2020 16:21:35 +0000</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/banana-cake/</guid>
+      <description>This cake is delicious, quick and easy to make.The amount of sugar is reduced because the banana has natural sweetness. I have substituted rapeseed oil for cooking margarine as it is a healthier option. Using this method you do not need a food processor.
+Ingredients  225g (8oz) self raising flour 1 level teaspoon baking powder 55g (2oz) demerara sugar 2 large ripe bananas 55g (2oz) walnut pieces 55g (2oz) sultanas 2 eggs 2 tablespoons rapeseed oil milk to mix   20cm cake tin (or similar)</description>
+    </item>
+    
+    <item>
       <title>Hiding Edit Button</title>
       <link>https://billthefarmer.github.io/blog/hiding-button/</link>
       <pubDate>Sat, 15 Feb 2020 20:59:47 +0000</pubDate>
@@ -521,7 +531,7 @@ I used gnuparted to copy the partition from one disk to another. The standard me
       <pubDate>Fri, 07 Aug 2015 09:32:42 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/index/</guid>
-      <description>RecipesBaked TomatoesBoiled Beef and CarrotsButter Beans in Tomato SauceCarrot and Coriander SoupCatalan slow cooked chickenChorizo Egg and Tomato Toasted SandwichClementine CakeCoarse RatatouilleCorned Beef ChiliDoug&amp;rsquo;s Seafood RisottoFabada AsturianaFaggots and Peas with Onion GravyFried RiceFried Whole MushroomsGreen TomatoesInteresting MashLeek and Potato SoupMexican BreakfastMushrooms and Soy SaucePan fried lamb&amp;rsquo;s liver, bacon and chorizoPasta PicanteSausages with Green LentilsShoreham fish chowderSlow cooked lambSlow cooked ox cheekSpanish FrittataSpanish omeletteStuffed PeppersThai Red Curry with NoodlesTruly Evil Onion GravyUnobtainiumVegetable Soup PlusVegetables cooked in olive oilVenison and Chorizo CasseroleWhole Broad Beans in Olive OilHackingAdding a calendar event in androidAndroid Custom AttributesAndroid Recent FilesAndroid Text SearchBuild Mac OSX apps using command line toolsC++Concurrency, Threads, Semaphores and MutexesCreate PDF ReportDerive Edit Position from MarkdownDownload streamed videoDraw Musical StaffExpand Android SelectionFast Fourier TransformGetting Related Content workingHandlers in AndroidHandling Resizing in WindowsHandling run time changes in AndroidHaskellHiding Edit ButtonInstall OSX El Capitan on a PC (MBR)Java CollectionsMarkdown OpenStreetMap MapsMigrating this blog from WordpressMove Linux Mint Root PartitionMusical TemperamentsPi-hole Cloudflare, DNSCrypt, Unbound SetupPythonQuestionnaire MakerRaspberry Pi WifiRead iBook books on an Android tabletResolving content uris in androidResurrecting a netbook as a web serverSearch Engine Optimisation (SEO)SlimStatSource Code Syntax HighlightingSwiftTransfer contacts from iPhone to AndroidUpgrading a Moto GUpgrading to Windows 10Upgrading WordPressUsing Emacs as an IDEUsing Emacs in Android DevelopmentWhatever-o-meterWhatever-o-meter revisitedElectronicsMullard 5-20 AmplifierSmart MetersDiyFixing Basin Waste Pop UpReplacing microbore radiators</description>
+      <description>RecipesBaked TomatoesBoiled Beef and CarrotsButter Beans in Tomato SauceCarrot and Coriander SoupCatalan slow cooked chickenChorizo Egg and Tomato Toasted SandwichClementine CakeCoarse RatatouilleCorned Beef ChiliDoug&amp;rsquo;s Seafood RisottoFabada AsturianaFaggots and Peas with Onion GravyFried RiceFried Whole MushroomsGreen TomatoesInteresting MashLeek and Potato SoupMarion&#39;s Banana and Walnut CakeMexican BreakfastMushrooms and Soy SaucePan fried lamb&amp;rsquo;s liver, bacon and chorizoPasta PicanteSausages with Green LentilsShoreham fish chowderSlow cooked lambSlow cooked ox cheekSpanish FrittataSpanish omeletteStuffed PeppersThai Red Curry with NoodlesTruly Evil Onion GravyUnobtainiumVegetable Soup PlusVegetables cooked in olive oilVenison and Chorizo CasseroleWhole Broad Beans in Olive OilHackingAdding a calendar event in androidAndroid Custom AttributesAndroid Recent FilesAndroid Text SearchBuild Mac OSX apps using command line toolsC++Concurrency, Threads, Semaphores and MutexesCreate PDF ReportDerive Edit Position from MarkdownDownload streamed videoDraw Musical StaffExpand Android SelectionFast Fourier TransformGetting Related Content workingHandlers in AndroidHandling Resizing in WindowsHandling run time changes in AndroidHaskellHiding Edit ButtonInstall OSX El Capitan on a PC (MBR)Java CollectionsMarkdown OpenStreetMap MapsMigrating this blog from WordpressMove Linux Mint Root PartitionMusical TemperamentsPi-hole Cloudflare, DNSCrypt, Unbound SetupPythonQuestionnaire MakerRaspberry Pi WifiRead iBook books on an Android tabletResolving content uris in androidResurrecting a netbook as a web serverSearch Engine Optimisation (SEO)SlimStatSource Code Syntax HighlightingSwiftTransfer contacts from iPhone to AndroidUpgrading a Moto GUpgrading to Windows 10Upgrading WordPressUsing Emacs as an IDEUsing Emacs in Android DevelopmentWhatever-o-meterWhatever-o-meter revisitedElectronicsMullard 5-20 AmplifierSmart MetersDiyFixing Basin Waste Pop UpReplacing microbore radiators</description>
     </item>
     
     <item>
@@ -858,7 +868,8 @@ Ingredients  1 tbsp olive oil 1 onion, chopped 125g/4oz potatoes, cubed 1 medium
       
       <guid>https://billthefarmer.github.io/blog/about/</guid>
       <description>Playing at Oldland Mill, near Ditchling.
-I am retired, a morris musician and an itinerant developer. I was a chartered electrical engineer until I stopped paying for a journal I couldn’t understand. Over the course of a long career working for the local electrick light company I developed various bits and pieces of software in so many different languages I can no longer remember them all. In rough order they are:</description>
+I am retired, a morris musician and an itinerant developer. I was a chartered electrical engineer. Over the course of a long career working for the local electrick light company I developed various bits and pieces of software in so many different languages I can no longer remember them all. In rough order they are:
+            6800 assembler DEC Macro Fortran 6502 assembler Basic, various flavours   Forth 8051 assembler BCPL Lisp C   PL1 IBM JCL 68000 assembler Java Smallworld Magik   JavaScript haXe PHP Python C++    Lately I have written various Android apps and a WordPress plugin.</description>
     </item>
     
     <item>
