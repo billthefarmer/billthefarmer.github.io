@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2019 Bill Farmer</copyright>
-    <lastBuildDate>Thu, 27 Feb 2020 16:21:35 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2020 13:02:53 +0000</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hacking</title>
+      <link>https://billthefarmer.github.io/blog/categories/hacking/</link>
+      <pubDate>Thu, 26 Mar 2020 13:02:53 +0000</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/categories/hacking/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Recipes</title>
@@ -18,15 +27,6 @@
       <pubDate>Thu, 27 Feb 2020 16:21:35 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/categories/recipes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hacking</title>
-      <link>https://billthefarmer.github.io/blog/categories/hacking/</link>
-      <pubDate>Sat, 15 Feb 2020 20:59:47 +0000</pubDate>
-      
-      <guid>https://billthefarmer.github.io/blog/categories/hacking/</guid>
       <description></description>
     </item>
     

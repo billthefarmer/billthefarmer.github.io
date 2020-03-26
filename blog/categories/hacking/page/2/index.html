@@ -10,7 +10,7 @@
 <meta property="og:description" content="Random thoughts on random subjects" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/categories/hacking/" />
-<meta property="og:updated_time" content="2020-02-15T20:59:47+00:00" />
+<meta property="og:updated_time" content="2020-03-26T13:02:53+00:00" />
 
 <meta itemprop="name" content="Hacking">
 <meta itemprop="description" content="Random thoughts on random subjects">
@@ -80,12 +80,12 @@ code {
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
-                    Recipes
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                    Recipes
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
@@ -143,6 +143,38 @@ code {
 
 
 
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/post/musical-temperaments/">Musical Temperaments</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2019-01-29T20:58:13Z">
+        Tue Jan 29, 2019
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    My Tuner app uses equal temperament because that is the current standard and it is relatively easy to calculate using double precision arithmetic and maths library functions. First, declare some constants.
+private static final int OCTAVE = 12; private static final int EQUAL = 8; private static final int A_OFFSET = 9; private static final int C5_OFFSET = 57; The calculation first produces the cents relative to the reference, usually 440Hz.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/post/musical-temperaments/'>Read more →</a>
+  <hr>
+</div>
 
 
   
@@ -275,37 +307,6 @@ Documentation The plugin uses the shortcodes [questionnaire-questions] and [ques
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/post/handling-resizing-in-windows/">Handling Resizing in Windows</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2018-06-19T20:23:44&#43;01:00">
-        Tue Jun 19, 2018
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    I have a windows app where I want the app window to maintain it&rsquo;s aspect ratio when it is resized. Windows provides two mechanisms for this, the WM_SIZE message and the WM_SIZING message. The WM_SIZE message is sent when a window has been resized to allow child windows to be resized, the WM_SIZING message is sent while the user is resizing it to allow the size to be adjusted. The messages are handled in the WindowProc callback function.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/post/handling-resizing-in-windows/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -330,6 +331,10 @@ Documentation The plugin uses the shortcodes [questionnaire-questions] and [ques
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/lambda-expressions/">
+        Lambda Expressions
+      </a></li>
     
       <li><a href="/blog/banana-cake/">
         Marion&rsquo;s Banana and Walnut Cake
@@ -365,10 +370,6 @@ Documentation The plugin uses the shortcodes [questionnaire-questions] and [ques
     
       <li><a href="/blog/post/draw-musical-staff/">
         Draw Musical Staff
-      </a></li>
-    
-      <li><a href="/blog/post/expand-android-selection/">
-        Expand Android Selection
       </a></li>
     
   </ul>

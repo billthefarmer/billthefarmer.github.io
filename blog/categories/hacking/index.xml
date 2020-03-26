@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2019 Bill Farmer</copyright>
-    <lastBuildDate>Sat, 15 Feb 2020 20:59:47 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2020 13:02:53 +0000</lastBuildDate>
     
 	<atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Lambda Expressions</title>
+      <link>https://billthefarmer.github.io/blog/lambda-expressions/</link>
+      <pubDate>Thu, 26 Mar 2020 13:02:53 +0000</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/lambda-expressions/</guid>
+      <description>Lambda expressions or anonymous functions can be quite useful. For example using jQuery in JavaScript all the work gets done in anonymous functions unless you particularly want to extract them and give them names&amp;hellip;
+jQuery(document).ready(function($) { // ...  // Process the start button  $(&amp;#34;#start&amp;#34;).click(function() { question = 0; $(&amp;#34;#data&amp;#34;).css(&amp;#34;display&amp;#34;, &amp;#34;none&amp;#34;); $(&amp;#34;.intro&amp;#34;).fadeOut(function() { // Do stuff  }); // ...  }); }); In C++ the syntax is curious in that there are a pair of square brackets enclosing &amp;lsquo;captured&amp;rsquo; variables&amp;hellip;</description>
+    </item>
     
     <item>
       <title>Hiding Edit Button</title>
