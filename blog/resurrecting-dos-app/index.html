@@ -290,14 +290,14 @@ if this is the case.</p>
 <h2 id="console-output">Console output</h2>
 <p>The console window which pops up when starting a console app is the
 wrong dimensions for this app which was written for full screen, which
-appears not to be available except ty typing <code>Alt-Enter</code> into an
+appears not to be available except by typing <code>Alt-Enter</code> into an
 existing console window. The <a href="https://docs.microsoft.com/en-us/windows/console/setconsolewindowinfo">SetConsoleWindowInfo</a> and
 <a href="https://docs.microsoft.com/en-us/windows/console/setconsolescreenbuffersize">SetConsoleScreenBufferSize</a> functions would appear to fix this,
 but in practice didn&rsquo;t work. It was necessary to create a new screen
 buffer with <a href="https://docs.microsoft.com/en-us/windows/console/createconsolescreenbuffer">CreateConsoleScreenBuffer</a> and set it active with
 <a href="https://docs.microsoft.com/en-us/windows/console/setconsoleactivescreenbuffer">SetConsoleActiveScreenBuffer</a>. Doing this ensures the screen
 buffer is the right size and gets rid of any scroll bars. Resizing the
-window or making it full screen destroy the existing display, but
+window or making it full screen destroys the existing display, but
 subsequent output is positioned correctly.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">
 <span style="color:#080;font-style:italic">// textmode
