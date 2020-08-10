@@ -17,13 +17,14 @@ I recently decided to port it to Swift to avoid having to attempt to learn Objec
 <meta itemprop="name" content="Swift">
 <meta itemprop="description" content="Some years ago I wrote an OSX app in C using Carbon because my Hackintosh would only run OSX 10.4 (Tiger). The most difficult part was dealing with the Core Audio API.
 I recently decided to port it to Swift to avoid having to attempt to learn Objective C. A derivation of C that sends selectors to targets using the syntax [target selector arguments...] I don&rsquo;t want to know about.">
-<meta itemprop="datePublished" content="2018-03-28T15:56:14&#43;00:00" />
-<meta itemprop="dateModified" content="2018-03-28T15:56:14&#43;00:00" />
-<meta itemprop="wordCount" content="943">
+<meta itemprop="datePublished" content="2018-03-28T15:56:14+00:00" />
+<meta itemprop="dateModified" content="2018-03-28T15:56:14+00:00" />
+<meta itemprop="wordCount" content="942">
 
 
 
 <meta itemprop="keywords" content="" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Swift"/>
 <meta name="twitter:description" content="Some years ago I wrote an OSX app in C using Carbon because my Hackintosh would only run OSX 10.4 (Tiger). The most difficult part was dealing with the Core Audio API.
@@ -34,7 +35,7 @@ I recently decided to port it to Swift to avoid having to attempt to learn Objec
 
 
 
-<meta name="generator" content="Hugo 0.67.1" />
+<meta name="generator" content="Hugo 0.74.3" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -88,6 +89,10 @@ code {
                 Home
               </a></li>
               
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                    Categories
+                  </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
@@ -187,7 +192,7 @@ discovered that part of it refused to work. The same code originally
 written in C works fine.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">        <span style="color:#a2f;font-weight:bold">var</span> <span style="color:#b8860b">id</span>: AudioDeviceID = kAudioObjectUnknown
 
-        <span style="color:#080;font-style:italic">// Get the default input device</span>
+        <span style="color:#080;font-style:italic">// Get the default input device</span>
         <span style="color:#a2f;font-weight:bold">var</span> <span style="color:#b8860b">inputDeviceAOPA</span>: AudioObjectPropertyAddress =
           AudioObjectPropertyAddress(mSelector:
                                        kAudioHardwarePropertyDefaultInputDevice,
@@ -197,14 +202,14 @@ written in C works fine.</p>
 
         <span style="color:#a2f;font-weight:bold">var</span> <span style="color:#b8860b">size</span>: <span style="color:#a2f">UInt32</span> = <span style="color:#a2f">UInt32</span>(MemoryLayout.size(ofValue: id))
 
-        <span style="color:#080;font-style:italic">// Get device</span>
+        <span style="color:#080;font-style:italic">// Get device</span>
         status =
           AudioObjectGetPropertyData(<span style="color:#a2f">UInt32</span>(kAudioObjectSystemObject),
                                      &amp;inputDeviceAOPA,
                                      <span style="color:#666">0</span>, <span style="color:#a2f;font-weight:bold">nil</span>, &amp;size, &amp;id)
         <span style="color:#a2f;font-weight:bold">if</span> (status <span style="color:#666">!=</span> noErr)
         {
-	    <span style="color:#080;font-style:italic">// AudioObjectGetPropertyData</span>
+	    <span style="color:#080;font-style:italic">// AudioObjectGetPropertyData</span>
             NSLog(<span style="color:#b44">&#34;Error in AudioObjectGetPropertyData: &#34;</span> <span style="color:#666">+</span>
 	            <span style="color:#b44">&#34;kAudioHardwarePropertyDefaultInputDevice %d&#34;</span>, status)
 	    <span style="color:#a2f;font-weight:bold">return</span> status
@@ -212,7 +217,7 @@ written in C works fine.</p>
 
         NSLog(<span style="color:#b44">&#34;System input device %d&#34;</span>, id)
 
-        <span style="color:#080;font-style:italic">// Set the audio unit device</span>
+        <span style="color:#080;font-style:italic">// Set the audio unit device</span>
         status =
           AudioUnitSetProperty(output,
 			       kAudioOutputUnitProperty_CurrentDevice, 
@@ -220,7 +225,7 @@ written in C works fine.</p>
                                <span style="color:#666">0</span>, &amp;id, size)
         <span style="color:#a2f;font-weight:bold">if</span> (status <span style="color:#666">!=</span> noErr)
         {
-            <span style="color:#080;font-style:italic">// AudioUnitSetProperty</span>
+            <span style="color:#080;font-style:italic">// AudioUnitSetProperty</span>
             NSLog(<span style="color:#b44">&#34;Error in AudioUnitSetProperty: &#34;</span> <span style="color:#666">+</span>
 	            <span style="color:#b44">&#34;kAudioOutputUnitProperty_CurrentDevice &#34;</span> <span style="color:#666">+</span>
                     AudioUnitErrString(status))
@@ -271,18 +276,18 @@ amount of interoperability with Swift. In order for this to work, two
 special include files need to be used. <code>&lt;AppName&gt;-Bridging-Header.h</code>
 allows Swift to access C data. It can just include the C include
 file. Use the switch <code>-import-objc-header</code> to import this header.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080">#include</span> <span style="color:#080">&#34;Audio.h&#34;</span><span style="color:#080">
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080">#include</span> <span style="color:#080">&#34;Audio.h&#34;</span><span style="color:#080">
 </span></code></pre></div><p>To allow C to access Swift data requires the use of <code>&lt;AppName&gt;-Swift.h</code>, which is created by the Swift compiler using the switch <code>-emit-objc-header-path</code>.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Makefile" data-lang="Makefile"><span style="color:#b8860b">HEADER</span> <span style="color:#666">=</span> Tuner-Bridging-Header.h
 <span style="color:#b8860b">SWIFTH</span> <span style="color:#666">=</span> Tuner-Swift.h
 
-<span style="color:#b8860b">SOURCES</span> <span style="color:#666">=</span> AppDelegate.swift ScopeView.swift SpectrumView.swift <span style="color:#b62;font-weight:bold">\</span>
-		StrobeView.swift DisplayView.swift MeterView.swift <span style="color:#b62;font-weight:bold">\</span>
-		TunerView.swift Audio.o
+<span style="color:#b8860b">SOURCES</span> <span style="color:#666">=</span> AppDelegate.swift ScopeView.swift SpectrumView.swift <span style="color:#b62;font-weight:bold">\
+</span><span style="color:#b62;font-weight:bold"></span>		StrobeView.swift DisplayView.swift MeterView.swift <span style="color:#b62;font-weight:bold">\
+</span><span style="color:#b62;font-weight:bold"></span>		TunerView.swift Audio.o
 
-<span style="color:#b8860b">SFLAGS</span> <span style="color:#666">=</span> -g -target x86_64-apple-macosx10.9 <span style="color:#b62;font-weight:bold">\</span>
-	-import-objc-header <span style="color:#a2f;font-weight:bold">$(</span>HEADER<span style="color:#a2f;font-weight:bold">)</span> -emit-objc-header-path <span style="color:#a2f;font-weight:bold">$(</span>SWIFTH<span style="color:#a2f;font-weight:bold">)</span> <span style="color:#b62;font-weight:bold">\</span>
-	-Xlinker -rpath -Xlinker @loader_path/../Frameworks -Xlinker -w
+<span style="color:#b8860b">SFLAGS</span> <span style="color:#666">=</span> -g -target x86_64-apple-macosx10.9 <span style="color:#b62;font-weight:bold">\
+</span><span style="color:#b62;font-weight:bold"></span>	-import-objc-header <span style="color:#a2f;font-weight:bold">$(</span>HEADER<span style="color:#a2f;font-weight:bold">)</span> -emit-objc-header-path <span style="color:#a2f;font-weight:bold">$(</span>SWIFTH<span style="color:#a2f;font-weight:bold">)</span> <span style="color:#b62;font-weight:bold">\
+</span><span style="color:#b62;font-weight:bold"></span>	-Xlinker -rpath -Xlinker @loader_path/../Frameworks -Xlinker -w
 
 <span style="color:#b8860b">CFLAGS</span> <span style="color:#666">=</span> -g -target x86_64-apple-macosx10.9
 </code></pre></div><p>Extract from <code>Makefile</code>.</p>
@@ -308,7 +313,7 @@ the enums in the C include file, and then use them in Swift.</p>
     {kRefText <span style="color:#666">=</span> <span style="">&#39;</span>RefT<span style="">&#39;</span>,
      kRefStep <span style="color:#666">=</span> <span style="">&#39;</span>RefS<span style="">&#39;</span>};
 </code></pre></div><p>The enums can then be referenced in Swift.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">    <span style="color:#080;font-style:italic">// buttonClicked</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">    <span style="color:#080;font-style:italic">// buttonClicked</span>
     <span style="color:#a2f;font-weight:bold">@objc</span> <span style="color:#a2f;font-weight:bold">func</span> <span style="color:#00a000">buttonClicked</span>(sender: NSButton)
     {
         print(<span style="color:#b44">&#34;Sender&#34;</span>, sender, sender.state)
@@ -356,10 +361,10 @@ FilterData filterData;
 </code></pre></div><p>These arrays appear as <a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html">tuples</a> in Swift, which is not very
 useful. I found a workaround using reflection on <a href="https://stackoverflow.com/questions/34776546/access-element-of-fixed-length-c-array-in-swift">Stack Overflow</a>,
 but it produces the wrong result.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">    <span style="color:#080;font-style:italic">// This function compiles and appears to work but produces the</span>
-    <span style="color:#080;font-style:italic">// wrong result for a boolean array. Replaced by ObjC access</span>
-    <span style="color:#080;font-style:italic">// functions.</span>
-    <span style="color:#080;font-style:italic">// arrayFromTuple</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">    <span style="color:#080;font-style:italic">// This function compiles and appears to work but produces the</span>
+    <span style="color:#080;font-style:italic">// wrong result for a boolean array. Replaced by ObjC access</span>
+    <span style="color:#080;font-style:italic">// functions.</span>
+    <span style="color:#080;font-style:italic">// arrayFromTuple</span>
     <span style="color:#a2f;font-weight:bold">func</span> <span style="color:#00a000">arrayFromTuple</span>&lt;T, R&gt;(tuple: T) -&gt; [R]
     {
         <span style="color:#a2f;font-weight:bold">let</span> <span style="color:#b8860b">reflection</span> = Mirror(reflecting: tuple)
@@ -442,6 +447,10 @@ doesn&rsquo;t like that either. So I wrote another access function.</p>
   <h4>Recent Posts</h4>
   <ul>
     
+      <li><a href="/blog/resurrecting-dos-app/">
+        Resurrecting an Old Dos App
+      </a></li>
+    
       <li><a href="/blog/lambda-expressions/">
         Lambda Expressions
       </a></li>
@@ -476,10 +485,6 @@ doesn&rsquo;t like that either. So I wrote another access function.</p>
     
       <li><a href="/blog/post/musical-temperaments/">
         Musical Temperaments
-      </a></li>
-    
-      <li><a href="/blog/post/draw-musical-staff/">
-        Draw Musical Staff
       </a></li>
     
   </ul>

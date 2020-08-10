@@ -17,13 +17,14 @@ There are four parts - you need to create a new partial template in layouts/part
 <meta itemprop="name" content="Getting Related Content working">
 <meta itemprop="description" content="The latest release of Hugo includes Related Content, which I thought would be nice to add to my blog. However the docs, although they show you how to set it up, don&rsquo;t explain how it works. To find that out, I had to look at the various threads on the Hugo forums.
 There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:">
-<meta itemprop="datePublished" content="2017-09-13T11:30:00&#43;00:00" />
-<meta itemprop="dateModified" content="2017-09-13T11:30:00&#43;00:00" />
+<meta itemprop="datePublished" content="2017-09-13T11:30:00+00:00" />
+<meta itemprop="dateModified" content="2017-09-13T11:30:00+00:00" />
 <meta itemprop="wordCount" content="193">
 
 
 
 <meta itemprop="keywords" content="" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Getting Related Content working"/>
 <meta name="twitter:description" content="The latest release of Hugo includes Related Content, which I thought would be nice to add to my blog. However the docs, although they show you how to set it up, don&rsquo;t explain how it works. To find that out, I had to look at the various threads on the Hugo forums.
@@ -34,7 +35,7 @@ There are four parts - you need to create a new partial template in layouts/part
 
 
 
-<meta name="generator" content="Hugo 0.67.1" />
+<meta name="generator" content="Hugo 0.74.3" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -88,6 +89,10 @@ code {
                 Home
               </a></li>
               
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                    Categories
+                  </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
@@ -258,6 +263,10 @@ front matter.</p>
   <h4>Recent Posts</h4>
   <ul>
     
+      <li><a href="/blog/resurrecting-dos-app/">
+        Resurrecting an Old Dos App
+      </a></li>
+    
       <li><a href="/blog/lambda-expressions/">
         Lambda Expressions
       </a></li>
@@ -292,10 +301,6 @@ front matter.</p>
     
       <li><a href="/blog/post/musical-temperaments/">
         Musical Temperaments
-      </a></li>
-    
-      <li><a href="/blog/post/draw-musical-staff/">
-        Draw Musical Staff
       </a></li>
     
   </ul>

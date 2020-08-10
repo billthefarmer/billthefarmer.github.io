@@ -3,13 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://billthefarmer.github.io/blog/</loc>
+    <lastmod>2020-08-09T21:24:46+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://billthefarmer.github.io/blog/categories/</loc>
-    <lastmod>2020-03-26T13:02:53+00:00</lastmod>
+    <lastmod>2020-08-09T21:24:46+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://billthefarmer.github.io/blog/categories/hacking/</loc>
-    <lastmod>2020-03-26T13:02:53+00:00</lastmod>
+    <lastmod>2020-08-09T21:24:46+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://billthefarmer.github.io/blog/resurrecting-dos-app/</loc>
+    <lastmod>2020-08-09T21:24:46+01:00</lastmod>
   </url>
   
   <url>
@@ -285,11 +295,6 @@
   <url>
     <loc>https://billthefarmer.github.io/blog/move-linux-mint-root-partition/</loc>
     <lastmod>2015-08-31T13:33:24+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://billthefarmer.github.io/blog/</loc>
-    <lastmod>2015-08-07T09:32:42+00:00</lastmod>
   </url>
   
   <url>
