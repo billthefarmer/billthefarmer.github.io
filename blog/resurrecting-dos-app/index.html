@@ -21,7 +21,7 @@ The app used a conio library provided by the compiler to present colour characte
 It used to run under 32 bit windows but wouldn&rsquo;t run under 64 bit windows as there is no DOS emulation.">
 <meta itemprop="datePublished" content="2020-08-09T21:24:46+01:00" />
 <meta itemprop="dateModified" content="2020-08-09T21:24:46+01:00" />
-<meta itemprop="wordCount" content="757">
+<meta itemprop="wordCount" content="769">
 
 
 
@@ -260,25 +260,25 @@ events. Shift, control, alt and caps lock key events are discarded.</p>
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#666">!</span>special)
         <span style="color:#a2f;font-weight:bold">return</span> record.Event.KeyEvent.uChar.AsciiChar;
 
-    <span style="color:#080;font-style:italic">// Special, shift pressed, return key code plus shift
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">else</span> <span style="color:#a2f;font-weight:bold">if</span> (record.Event.KeyEvent.dwControlKeyState <span style="color:#666">&amp;</span> SHIFT_PRESSED)
+    special <span style="color:#666">=</span> FALSE;
+    <span style="color:#a2f;font-weight:bold">switch</span> (record.Event.KeyEvent.dwControlKeyState <span style="color:#666">&amp;</span>
+            (SHIFT_PRESSED <span style="color:#666">|</span> LEFT_ALT_PRESSED))
     {
-        special <span style="color:#666">=</span> FALSE;
-        <span style="color:#a2f;font-weight:bold">return</span> record.Event.KeyEvent.wVirtualKeyCode <span style="color:#666">+</span> VK_SHIFT;
-    }
-
-    <span style="color:#080;font-style:italic">// Special, alt pressed, return key code plus shift
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">else</span> <span style="color:#a2f;font-weight:bold">if</span> (record.Event.KeyEvent.dwControlKeyState <span style="color:#666">&amp;</span> LEFT_ALT_PRESSED)
-    {
-        special <span style="color:#666">=</span> FALSE;
-        <span style="color:#a2f;font-weight:bold">return</span> record.Event.KeyEvent.wVirtualKeyCode <span style="color:#666">+</span> VK_SHIFT <span style="color:#666">*</span> <span style="color:#666">2</span>;
-    }
-
-    <span style="color:#080;font-style:italic">// Special, return key code
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">else</span>
-    {
-        special <span style="color:#666">=</span> FALSE;
+        <span style="color:#080;font-style:italic">// Special, return key code
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#666">0</span><span style="color:#666">:</span>
         <span style="color:#a2f;font-weight:bold">return</span> record.Event.KeyEvent.wVirtualKeyCode;
+
+        <span style="color:#080;font-style:italic">// Special, shift pressed, return key code plus shift
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">SHIFT_PRESSED</span>:
+        <span style="color:#a2f;font-weight:bold">return</span> record.Event.KeyEvent.wVirtualKeyCode <span style="color:#666">+</span> VK_SHIFT;
+
+        <span style="color:#080;font-style:italic">// Special, alt pressed, return key code plus shift
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">LEFT_ALT_PRESSED</span>:
+        <span style="color:#a2f;font-weight:bold">return</span> record.Event.KeyEvent.wVirtualKeyCode <span style="color:#666">+</span> VK_SHIFT <span style="color:#666">*</span> <span style="color:#666">2</span>;
+
+        <span style="color:#080;font-style:italic">// Special, shift and alt pressed, return key code plus shift
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">case</span> SHIFT_PRESSED <span style="color:#666">|</span> <span style="color:#a0a000">LEFT_ALT_PRESSED</span>:
+        <span style="color:#a2f;font-weight:bold">return</span> record.Event.KeyEvent.wVirtualKeyCode <span style="color:#666">+</span> VK_SHIFT <span style="color:#666">*</span> <span style="color:#666">3</span>;
     }
 }
 </code></pre></div><p>If the key is not a normal key, return zero, set a flag, and don&rsquo;t
