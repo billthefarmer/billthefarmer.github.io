@@ -21,7 +21,7 @@ The app used a conio library provided by the compiler to present colour characte
 It used to run under 32 bit windows but wouldn&rsquo;t run under 64 bit windows as there is no DOS emulation.">
 <meta itemprop="datePublished" content="2020-08-09T21:24:46+01:00" />
 <meta itemprop="dateModified" content="2020-08-09T21:24:46+01:00" />
-<meta itemprop="wordCount" content="769">
+<meta itemprop="wordCount" content="774">
 
 
 
@@ -198,9 +198,9 @@ write a shim which emulated the conio library and passes the calls on
 to the console functions. Most of it is fairly straight forward, there
 were slight differences in the cursor addressing, but keyboard input
 needed some finessing.</p>
-<h2 id="keyboard-input">Keyboard input</h2>
-<p>The conio library provided <code>kbhit()</code> and <code>getch</code> functions. the
-<code>getch</code> function returned the character code for normal keys, and a
+<h3 id="keyboard-input">Keyboard input</h3>
+<p>The conio library provided <code>kbhit()</code> and <code>getch()</code> functions. the
+<code>getch()</code> function returned the character code for normal keys, and a
 zero followed by a code for special and function keys. Windows
 provides <a href="https://docs.microsoft.com/en-us/windows/console/getnumberofconsoleinputevents">GetNumberOfConsoleInputEvents()</a> and <a href="https://docs.microsoft.com/en-us/windows/console/readconsoleinput">ReadConsoleInput()</a>
 functions which offer similar functionality.</p>
@@ -237,9 +237,10 @@ deal with this.</p>
     <span style="color:#a2f;font-weight:bold">return</span> n;
 }
 </code></pre></div><p>The app is in a loop continually calling <code>kbhit()</code> and processing keys
-and timed events at the same time. so <a href="https://docs.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject">WaitForSingleObject()</a> with
-a timeout is used to drop the CPU usage and still allow the timed
-events. Shift, control, alt and caps lock key events are discarded.</p>
+and timed actions at the same time, using a lot of CPU. So
+<a href="https://docs.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject">WaitForSingleObject()</a> with a timeout is used to drop the CPU
+usage and still allow the timed actions. Shift, control, alt and caps
+lock key events are discarded.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">getch</span>()
 {
     DWORD n;
@@ -283,11 +284,11 @@ events. Shift, control, alt and caps lock key events are discarded.</p>
 }
 </code></pre></div><p>If the key is not a normal key, return zero, set a flag, and don&rsquo;t
 read the event. Next time around read the event and return the
-code. The conio library return different codes for special keys if the
-shit or alt keys are pressed and the app uses this, so add an offset
-if this is the case.</p>
+code. The conio library returned different codes for special keys if
+the shift or alt keys are pressed and the app uses this, so add an
+offset if this is the case.</p>
 <p><img src="images/2020/08/Cadec.png" alt="Cadec"></p>
-<h2 id="console-output">Console output</h2>
+<h3 id="console-output">Console output</h3>
 <p>The console window which pops up when starting a console app is the
 wrong dimensions for this app which was written for full screen, which
 appears not to be available except by typing <code>Alt-Enter</code> into an
