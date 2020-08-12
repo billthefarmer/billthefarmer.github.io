@@ -198,6 +198,7 @@ write a shim which emulated the conio library and passes the calls on
 to the console functions. Most of it is fairly straight forward, there
 were slight differences in the cursor addressing, but keyboard input
 needed some finessing.</p>
+<p><img src="images/2020/08/RSX.png" alt="RSX" title="RSX startup"></p>
 <h3 id="keyboard-input">Keyboard input</h3>
 <p>The conio library provided <code>kbhit()</code> and <code>getch()</code> functions. the
 <code>getch()</code> function returned the character code for normal keys, and a
@@ -287,7 +288,7 @@ read the event. Next time around read the event and return the
 code. The conio library returned different codes for special keys if
 the shift or alt keys are pressed and the app uses this, so add an
 offset if this is the case.</p>
-<p><img src="images/2020/08/Cadec.png" alt="Cadec"></p>
+<p><img src="images/2020/08/Cadec.png" alt="Cadec" title="CADEC display"></p>
 <h3 id="console-output">Console output</h3>
 <p>The console window which pops up when starting a console app is the
 wrong dimensions for this app which was written for full screen, which
