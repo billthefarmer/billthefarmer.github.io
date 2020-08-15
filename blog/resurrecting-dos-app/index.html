@@ -21,7 +21,7 @@ The app used a conio library provided by the compiler to present colour characte
 It used to run under 32 bit windows but wouldn&rsquo;t run under 64 bit windows as there is no DOS emulation.">
 <meta itemprop="datePublished" content="2020-08-09T21:24:46+01:00" />
 <meta itemprop="dateModified" content="2020-08-09T21:24:46+01:00" />
-<meta itemprop="wordCount" content="774">
+<meta itemprop="wordCount" content="724">
 
 
 
@@ -211,8 +211,8 @@ deal with this.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#080;font-style:italic">// kbhit
 </span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">kbhit</span>()
 {
-    DWORD n;
     INPUT_RECORD record;
+    DWORD n;
 
     <span style="color:#080;font-style:italic">// Wait for something to happen
 </span><span style="color:#080;font-style:italic"></span>    WaitForSingleObject(hConsoleInput, TIMER);
@@ -244,9 +244,9 @@ usage and still allow the timed actions. Shift, control, alt and caps
 lock key events are discarded.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">getch</span>()
 {
-    DWORD n;
     INPUT_RECORD record;
     <span style="color:#a2f;font-weight:bold">static</span> BOOL special;
+    DWORD n;
 
     <span style="color:#080;font-style:italic">// If the char is zero, return zero, but don&#39;t read event
 </span><span style="color:#080;font-style:italic"></span>    PeekConsoleInput(hConsoleInput, <span style="color:#666">&amp;</span>record, <span style="color:#666">1</span>, <span style="color:#666">&amp;</span>n);
@@ -294,19 +294,16 @@ offset if this is the case.</p>
 wrong dimensions for this app which was written for full screen, which
 appears not to be available except by typing <code>Alt-Enter</code> into an
 existing console window. The <a href="https://docs.microsoft.com/en-us/windows/console/setconsolewindowinfo">SetConsoleWindowInfo</a> and
-<a href="https://docs.microsoft.com/en-us/windows/console/setconsolescreenbuffersize">SetConsoleScreenBufferSize</a> functions would appear to fix this,
-but in practice didn&rsquo;t work. It was necessary to create a new screen
-buffer with <a href="https://docs.microsoft.com/en-us/windows/console/createconsolescreenbuffer">CreateConsoleScreenBuffer</a> and set it active with
-<a href="https://docs.microsoft.com/en-us/windows/console/setconsoleactivescreenbuffer">SetConsoleActiveScreenBuffer</a>. Doing this ensures the screen
-buffer is the right size and gets rid of any scroll bars. Resizing the
-window or making it full screen destroys the existing display, but
-subsequent output is positioned correctly.</p>
+<a href="https://docs.microsoft.com/en-us/windows/console/setconsolescreenbuffersize">SetConsoleScreenBufferSize</a> are used to resize the window and
+ensure the screen buffer is the right size and get rid of any scroll
+bars. Resizing the window or making it full screen destroys the
+existing display, but subsequent output is positioned correctly.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">
 <span style="color:#080;font-style:italic">// textmode
 </span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">textmode</span>()
 {
     CONSOLE_SCREEN_BUFFER_INFO info;
-    HANDLE handle;
+    COORD size;
     DWORD mode;
 
     <span style="color:#080;font-style:italic">// Do it once
@@ -327,28 +324,18 @@ subsequent output is positioned correctly.</p>
 
         <span style="color:#080;font-style:italic">// Resize window
 </span><span style="color:#080;font-style:italic"></span>        GetConsoleScreenBufferInfo(hConsoleOutput, <span style="color:#666">&amp;</span>info);
-        info.srWindow.Right <span style="color:#666">=</span> info.srWindow.Left <span style="color:#666">+</span> WIDTH;
-        info.srWindow.Bottom <span style="color:#666">=</span> info.srWindow.Top <span style="color:#666">+</span> HEIGHT;
+        info.srWindow.Right <span style="color:#666">=</span> info.srWindow.Left <span style="color:#666">+</span> SCREEN_WIDTH;
+        info.srWindow.Bottom <span style="color:#666">=</span> info.srWindow.Top <span style="color:#666">+</span> SCREEN_HEIGHT;
         SetConsoleWindowInfo(hConsoleOutput, TRUE, <span style="color:#666">&amp;</span>info.srWindow);
-
-        <span style="color:#080;font-style:italic">// Save handle
-</span><span style="color:#080;font-style:italic"></span>        handle <span style="color:#666">=</span> hConsoleOutput;
-
-        <span style="color:#080;font-style:italic">// Create new screen buffer to get rid of scroll bars
-</span><span style="color:#080;font-style:italic"></span>        hConsoleOutput <span style="color:#666">=</span>
-            CreateConsoleScreenBuffer(GENERIC_READ <span style="color:#666">|</span> GENERIC_WRITE, <span style="color:#666">0</span>,
-                                      <span style="color:#a2f">NULL</span>, CONSOLE_TEXTMODE_BUFFER,
-                                      <span style="color:#a2f">NULL</span>);
-        SetConsoleActiveScreenBuffer(hConsoleOutput);
+        size.X <span style="color:#666">=</span> BUFFER_WIDTH;
+        size.Y <span style="color:#666">=</span> BUFFER_HEIGHT;
+        SetConsoleScreenBufferSize(hConsoleOutput, size);
 
         <span style="color:#080;font-style:italic">// Set code page
 </span><span style="color:#080;font-style:italic"></span>        SetConsoleOutputCP(<span style="color:#666">437</span>);
-
-        <span style="color:#080;font-style:italic">// Close old handle
-</span><span style="color:#080;font-style:italic"></span>        CloseHandle(handle);
     }
 }
-</code></pre></div><p>To tidy up, save the old handle and close it when done.</p>
+</code></pre></div><p>Set the code page so the character graphics work.</p>
 
     </p>
     
