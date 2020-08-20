@@ -18,8 +18,8 @@
       <pubDate>Tue, 18 Aug 2020 20:49:05 +0100</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/download-playlist-video/</guid>
-      <description>Since I wrote Download streamed video video web sites have upped their game to stop downloading. One of the techniques used is to use a M3U playlist and a complicated set of parameters.
-To handle this it is necessary to use the web browser developer tools. Select the network tab and refresh the relevent web page. Among the various files downloaded will be a file with a name like index.m3u8. The browser may also start preloading some of the video segments.</description>
+      <description>Since I wrote Download streamed video video web sites have upped their game to stop downloading. One of the techniques used is to use a M3U playlist and a complicated set of parameters. Other techniques are to use JavaScript to create a blob and play that, and to use a JavaScript browser app which goes into debug mode if you use the developer tools.
+To handle a playlist it is necessary to use the web browser developer tools.</description>
     </item>
     
     <item>

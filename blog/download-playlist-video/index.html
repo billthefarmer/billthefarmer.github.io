@@ -7,19 +7,19 @@
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 <meta property="og:title" content="Download playlist video" />
-<meta property="og:description" content="Since I wrote Download streamed video video web sites have upped their game to stop downloading. One of the techniques used is to use a M3U playlist and a complicated set of parameters.
-To handle this it is necessary to use the web browser developer tools. Select the network tab and refresh the relevent web page. Among the various files downloaded will be a file with a name like index.m3u8. The browser may also start preloading some of the video segments." />
+<meta property="og:description" content="Since I wrote Download streamed video video web sites have upped their game to stop downloading. One of the techniques used is to use a M3U playlist and a complicated set of parameters. Other techniques are to use JavaScript to create a blob and play that, and to use a JavaScript browser app which goes into debug mode if you use the developer tools.
+To handle a playlist it is necessary to use the web browser developer tools." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/download-playlist-video/" />
 <meta property="article:published_time" content="2020-08-18T20:49:05+01:00" />
 <meta property="article:modified_time" content="2020-08-18T20:49:05+01:00" />
 
 <meta itemprop="name" content="Download playlist video">
-<meta itemprop="description" content="Since I wrote Download streamed video video web sites have upped their game to stop downloading. One of the techniques used is to use a M3U playlist and a complicated set of parameters.
-To handle this it is necessary to use the web browser developer tools. Select the network tab and refresh the relevent web page. Among the various files downloaded will be a file with a name like index.m3u8. The browser may also start preloading some of the video segments.">
+<meta itemprop="description" content="Since I wrote Download streamed video video web sites have upped their game to stop downloading. One of the techniques used is to use a M3U playlist and a complicated set of parameters. Other techniques are to use JavaScript to create a blob and play that, and to use a JavaScript browser app which goes into debug mode if you use the developer tools.
+To handle a playlist it is necessary to use the web browser developer tools.">
 <meta itemprop="datePublished" content="2020-08-18T20:49:05+01:00" />
 <meta itemprop="dateModified" content="2020-08-18T20:49:05+01:00" />
-<meta itemprop="wordCount" content="269">
+<meta itemprop="wordCount" content="363">
 
 
 
@@ -27,8 +27,8 @@ To handle this it is necessary to use the web browser developer tools. Select th
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Download playlist video"/>
-<meta name="twitter:description" content="Since I wrote Download streamed video video web sites have upped their game to stop downloading. One of the techniques used is to use a M3U playlist and a complicated set of parameters.
-To handle this it is necessary to use the web browser developer tools. Select the network tab and refresh the relevent web page. Among the various files downloaded will be a file with a name like index.m3u8. The browser may also start preloading some of the video segments."/>
+<meta name="twitter:description" content="Since I wrote Download streamed video video web sites have upped their game to stop downloading. One of the techniques used is to use a M3U playlist and a complicated set of parameters. Other techniques are to use JavaScript to create a blob and play that, and to use a JavaScript browser app which goes into debug mode if you use the developer tools.
+To handle a playlist it is necessary to use the web browser developer tools."/>
 
 
 
@@ -181,14 +181,27 @@ code {
     <p>
       <p>Since I wrote <a href="download-streamed-video">Download streamed video</a> video web sites have upped
 their game to stop downloading. One of the techniques used is to use a
-<a href="https://en.wikipedia.org/wiki/M3U">M3U</a> playlist and a complicated set of parameters.</p>
-<p>To handle this it is necessary to use the web browser developer
+<a href="https://en.wikipedia.org/wiki/M3U">M3U</a> playlist and a complicated set of parameters. Other
+techniques are to use JavaScript to create a blob and play that, and
+to use a JavaScript browser app which goes into debug mode if you use
+the developer tools.</p>
+<p>To handle a playlist it is necessary to use the web browser developer
 tools. Select the network tab and refresh the relevent web page. Among
 the various files downloaded will be a file with a name like
-<code>index.m3u8</code>. The browser may also start preloading some of the video
-segments.</p>
+<code>720p.h264.mp4</code> or <code>index.m3u8</code>. The browser may also start preloading
+some of the video segments.</p>
 <p><img src="images/2020/08/Url.png" alt="Url"></p>
-<p>Copy the url and use <code>curl</code> to download it.</p>
+<p>Copy the url. You may be able to play it with <code>ffplay</code>. This will
+generate losts of output.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ffplay https://video3.xhcdn.com/key<span style="color:#666">=</span>LJjdx9Px03F-Y2Zmcw4-Kw,end<span style="color:#666">=</span>1597942800,limit<span style="color:#666">=</span>3/<span style="color:#b62;font-weight:bold">\
+</span><span style="color:#b62;font-weight:bold"></span>    <span style="color:#b8860b">data</span><span style="color:#666">=</span>81.174.214.218/speed<span style="color:#666">=</span>0/initial_buffer<span style="color:#666">=</span>275184/media<span style="color:#666">=</span>hlsA/010/877/489/<span style="color:#b62;font-weight:bold">\
+</span><span style="color:#b62;font-weight:bold"></span>    720p.h264.mp4
+</code></pre></div><p>If so, you can use <code>ffmpeg</code> to download the segments and copy them to
+a new file. Again, lots of output.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ffmpeg -i https://video3.xhcdn.com/key<span style="color:#666">=</span>+UoaQySV1FrfRWeeVX6dOA,end<span style="color:#666">=</span>1597939200,limit<span style="color:#666">=</span>3/<span style="color:#b62;font-weight:bold">\
+</span><span style="color:#b62;font-weight:bold"></span>    <span style="color:#b8860b">data</span><span style="color:#666">=</span>81.174.214.218/speed<span style="color:#666">=</span>0/initial_buffer<span style="color:#666">=</span>846704/media<span style="color:#666">=</span>hlsA/013/857/098/<span style="color:#b62;font-weight:bold">\
+</span><span style="color:#b62;font-weight:bold"></span>    720p.h264.mp4 -c copy video.mp4
+</code></pre></div><p>If this doesn&rsquo;t work, use <code>curl</code> to download the index file.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ curl <span style="color:#b44">&#34;https://19-12.b.cdn13.com/hls/bsd/4000/sd/8000/014/953/848/2160p.h264.mp4/index.m3u8?\
 </span><span style="color:#b44">    cdn_creation_time=1597773600&amp;cdn_ttl=14400&amp;cdn_cv_data=81.174.214.218&amp;\
 </span><span style="color:#b44">    cdn_hash=fa429b99fe263a5cdb34180778526c39&#34;</span> -o index.m3u8
@@ -214,8 +227,8 @@ https://1-384-19-12.b.cdn13.com/hls/bsd/4000/sd/8000/014/953/848/2160p.h264.mp4/
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ curl <span style="color:#b44">&#34;https://1-384-19-12.b.cdn13.com/hls/bsd/4000/sd/8000/014/953/848/2160p.h264.mp4/seg-[1-39]-v1-a1.ts?\
 </span><span style="color:#b44">    cdn_creation_time=1597773600&amp;cdn_ttl=14400&amp;cdn_cv_data=81.174.214.218&amp;\
 </span><span style="color:#b44">    cdn_hash=fa429b99fe263a5cdb34180778526c39&#34;</span> -o <span style="color:#b44">&#34;seg-#1-v1-a1.ts&#34;</span>
-</code></pre></div><p>Then use an editor like emacs to remove everything except for the file
-name from the index file.</p>
+</code></pre></div><p>Then use an editor like <code>emacs</code> or your favourite text editor to
+remove everything except for the file names from the index file.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#080;font-style:italic">#EXTM3U</span>
 <span style="color:#080;font-style:italic">#EXT-X-TARGETDURATION:8</span>
 <span style="color:#080;font-style:italic">#EXT-X-ALLOW-CACHE:YES</span>
