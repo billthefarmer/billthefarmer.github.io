@@ -38,7 +38,7 @@ I had a request from Marco the other day to put OpenStreetMap maps in my Diary a
 
 
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.76.5" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -97,12 +97,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
-                    Hacking
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
                     Recipes
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                    Hacking
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
@@ -228,7 +228,7 @@ maps. The template for the iframe is</p>
     &lt;/<span style="color:#008000;font-weight:bold">iframe</span>&gt;&lt;<span style="color:#008000;font-weight:bold">br</span>/&gt;
     &lt;<span style="color:#008000;font-weight:bold">small</span>&gt;&lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#b44">href</span><span style="color:#666">=</span><span style="color:#b44">\&#34;https://www.openstreetmap.org/#map=16/%f/%f\&#34;</span>&gt;
     View Larger Map&lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;&lt;/<span style="color:#008000;font-weight:bold">small</span>&gt;\n&#34;
-</code></pre></div><p>I have replaced the &lsquo;<code>%2C</code>'s with commas, and changed the dimensions
+</code></pre></div><p>I have replaced the &lsquo;<code>%2C</code>&rsquo;s with commas, and changed the dimensions
 slightly, which seems to work OK. The android Java code to do this is</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// loadMarkdown
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">loadMarkdown</span><span style="color:#666">(</span>String text<span style="color:#666">)</span>
@@ -354,6 +354,10 @@ the use of <code>http://</code> URLs in the markdown, I have added a line to the
   <h4>Recent Posts</h4>
   <ul>
     
+      <li><a href="/blog/not-swedish-meatballs/">
+        Not Swedish Meatballs
+      </a></li>
+    
       <li><a href="/blog/download-playlist-video/">
         Download playlist video
       </a></li>
@@ -388,10 +392,6 @@ the use of <code>http://</code> URLs in the markdown, I have added a line to the
     
       <li><a href="/blog/post/mushrooms-and-soy-sauce/">
         Mushrooms and Soy Sauce
-      </a></li>
-    
-      <li><a href="/blog/post/source-code-highlighting/">
-        Source Code Syntax Highlighting
       </a></li>
     
   </ul>

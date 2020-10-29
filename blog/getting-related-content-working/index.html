@@ -19,7 +19,7 @@ There are four parts - you need to create a new partial template in layouts/part
 There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:">
 <meta itemprop="datePublished" content="2017-09-13T11:30:00+00:00" />
 <meta itemprop="dateModified" content="2017-09-13T11:30:00+00:00" />
-<meta itemprop="wordCount" content="193">
+<meta itemprop="wordCount" content="199">
 
 
 
@@ -35,7 +35,7 @@ There are four parts - you need to create a new partial template in layouts/part
 
 
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.76.5" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -94,12 +94,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
-                    Hacking
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
                     Recipes
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                    Hacking
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
@@ -199,29 +199,29 @@ that out, I had to look at the various threads on the
 </code></pre></div><p>You need to add a reference to your new partial template in your single page template in <code>layouts/_default/single.html</code> possibly near the end:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    {{ partial &#34;related&#34; . }}
 </code></pre></div><p>You need to add some configuration options to your config file:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#a2f;font-weight:bold">related</span>:<span style="color:#bbb">
-</span><span style="color:#bbb">  </span><span style="color:#a2f;font-weight:bold">threshold</span>:<span style="color:#bbb"> </span><span style="color:#666">10</span><span style="color:#bbb">
-</span><span style="color:#bbb">  </span><span style="color:#a2f;font-weight:bold">toLower</span>:<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#bbb">
-</span><span style="color:#bbb">  </span><span style="color:#a2f;font-weight:bold">indices</span>:<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>- <span style="color:#a2f;font-weight:bold">name</span>:<span style="color:#bbb"> </span>keywords<span style="color:#bbb">
-</span><span style="color:#bbb">      </span><span style="color:#a2f;font-weight:bold">weight</span>:<span style="color:#bbb"> </span><span style="color:#666">150</span><span style="color:#bbb">
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#008000;font-weight:bold">related</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">threshold</span>:<span style="color:#bbb"> </span><span style="color:#666">10</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">toLower</span>:<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">indices</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>- <span style="color:#008000;font-weight:bold">name</span>:<span style="color:#bbb"> </span>keywords<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#008000;font-weight:bold">weight</span>:<span style="color:#bbb"> </span><span style="color:#666">150</span><span style="color:#bbb">
 </span></code></pre></div><p>You need to add some keywords to the front matter of your posts. I
 tried tags initially, but couldn&rsquo;t get it to work, so I tried
 keywords:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">title</span>:<span style="color:#bbb"> </span>Handling<span style="color:#bbb"> </span>run<span style="color:#bbb"> </span>time<span style="color:#bbb"> </span>changes<span style="color:#bbb"> </span>in<span style="color:#bbb"> </span>Android<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">author</span>:<span style="color:#bbb"> </span>Bill<span style="color:#bbb"> </span>Farmer<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">type</span>:<span style="color:#bbb"> </span>post<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">date</span>:<span style="color:#bbb"> </span>2017-01-08T18:49:31<span style="color:#666">+00</span>:<span style="color:#666">00</span><span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">url</span>:<span style="color:#bbb"> </span>/handling-run-time-changes-in-android/<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">categories</span>:<span style="color:#bbb">
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#00f;font-weight:bold">---</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">title</span>:<span style="color:#bbb"> </span>Handling run time changes in Android<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">author</span>:<span style="color:#bbb"> </span>Bill Farmer<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">type</span>:<span style="color:#bbb"> </span>post<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">date</span>:<span style="color:#bbb"> </span>2017-01-08T18:49:31<span style="color:#666">+00</span>:<span style="color:#666">00</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">url</span>:<span style="color:#bbb"> </span>/handling-run-time-changes-in-android/<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">categories</span>:<span style="color:#bbb">
 </span><span style="color:#bbb">  </span>- Hacking<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">keywords</span>:<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">keywords</span>:<span style="color:#bbb">
 </span><span style="color:#bbb">  </span>- android<span style="color:#bbb">
 </span><span style="color:#bbb">  </span>- configuration<span style="color:#bbb">
 </span><span style="color:#bbb">  </span>- fragment<span style="color:#bbb">
 </span><span style="color:#bbb">  </span>- singleton<span style="color:#bbb">
-</span><span style="color:#bbb"></span>---<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#00f;font-weight:bold">---</span><span style="color:#bbb">
 </span></code></pre></div><p>You then have to go through all your posts and add keywords to the
 front matter.</p>
 
@@ -263,6 +263,10 @@ front matter.</p>
   <h4>Recent Posts</h4>
   <ul>
     
+      <li><a href="/blog/not-swedish-meatballs/">
+        Not Swedish Meatballs
+      </a></li>
+    
       <li><a href="/blog/download-playlist-video/">
         Download playlist video
       </a></li>
@@ -297,10 +301,6 @@ front matter.</p>
     
       <li><a href="/blog/post/mushrooms-and-soy-sauce/">
         Mushrooms and Soy Sauce
-      </a></li>
-    
-      <li><a href="/blog/post/source-code-highlighting/">
-        Source Code Syntax Highlighting
       </a></li>
     
   </ul>

@@ -21,7 +21,7 @@ I looked for migration tools, and found two:
  Exitwp, which reads a Wordpress export xml file and converts to Jeckyll WordPress to Hugo Exporter, which is a Wordpress plugin and exports to Hugo  I found a blog post from Justin Dunham documenting migrating his blog.">
 <meta itemprop="datePublished" content="2017-08-19T14:30:00+00:00" />
 <meta itemprop="dateModified" content="2017-08-19T14:30:00+00:00" />
-<meta itemprop="wordCount" content="1132">
+<meta itemprop="wordCount" content="1137">
 
 
 
@@ -38,7 +38,7 @@ I looked for migration tools, and found two:
 
 
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.76.5" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -97,12 +97,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
-                    Hacking
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
                     Recipes
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                    Hacking
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
@@ -206,10 +206,10 @@ error on the exporter issues page, and found Sourceforge was using an
 old version of PHP. So I looked at the PHP code, and found it was
 using square brackets for an array, which I&rsquo;d found an annoyance while
 writing a Wordpress plugin.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PHP" data-lang="PHP">        if (in_array($post-&gt;post_status, [&#39;draft&#39;, &#39;private&#39;])) {
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PHP" data-lang="PHP">        <span style="color:#a2f;font-weight:bold">if</span> (in_array(<span style="color:#b8860b">$post</span><span style="color:#666">-&gt;</span><span style="color:#b44">post_status</span>, [<span style="color:#b44">&#39;draft&#39;</span>, <span style="color:#b44">&#39;private&#39;</span>])) {
 </code></pre></div><p>So I changed it to the old style syntax, and found that was it, it
 just worked. So change one line to make it work with old PHP versions.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PHP" data-lang="PHP">        if (in_array($post-&gt;post_status, array(&#39;draft&#39;, &#39;private&#39;))) {
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PHP" data-lang="PHP">        <span style="color:#a2f;font-weight:bold">if</span> (in_array(<span style="color:#b8860b">$post</span><span style="color:#666">-&gt;</span><span style="color:#b44">post_status</span>, <span style="color:#a2f;font-weight:bold">array</span>(<span style="color:#b44">&#39;draft&#39;</span>, <span style="color:#b44">&#39;private&#39;</span>))) {
 </code></pre></div><p>Except it didn&rsquo;t, I couldn&rsquo;t find the output, not where it said it was
 anyway. So I used the plugin from the admin page instead, which did
 work. The output looked pretty good, except for making a right pig&rsquo;s
@@ -234,42 +234,42 @@ installed on my Windows box, so I&rsquo;ve got a bash unix like environment
 to run <a href="https://www.python.org">Python</a> utilities in, so installing the prerequisites for
 <a href="https://github.com/dbohdan/remarshal">remarshal</a> and getting it working was not a problem.</p>
 <p>So now I&rsquo;ve got a config file which does what I want it to do:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#a2f;font-weight:bold">baseURL</span>:<span style="color:#bbb"> </span>http://billthefarmer.github.io/blog/<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">languageCode</span>:<span style="color:#bbb"> </span>en-gb<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">title</span>:<span style="color:#bbb"> </span><span style="color:#b44">&#34;Bill Farmer&#39;s Blog&#34;</span><span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">copyright</span>:<span style="color:#bbb"> </span><span style="color:#b44">&#34;Copyright &amp;amp;copy; 2017 Bill Farmer&#34;</span><span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">theme</span>:<span style="color:#bbb"> </span>theme-hugo-foundation6<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">publishDir</span>:<span style="color:#bbb"> </span>d:/billthefarmer.github.io/blog/<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">pygmentscodefences</span>:<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#bbb">
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#008000;font-weight:bold">baseURL</span>:<span style="color:#bbb"> </span>http://billthefarmer.github.io/blog/<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">languageCode</span>:<span style="color:#bbb"> </span>en-gb<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">title</span>:<span style="color:#bbb"> </span><span style="color:#b44">&#34;Bill Farmer&#39;s Blog&#34;</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">copyright</span>:<span style="color:#bbb"> </span><span style="color:#b44">&#34;Copyright &amp;amp;copy; 2017 Bill Farmer&#34;</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">theme</span>:<span style="color:#bbb"> </span>theme-hugo-foundation6<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">publishDir</span>:<span style="color:#bbb"> </span>d:/billthefarmer.github.io/blog/<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">pygmentscodefences</span>:<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#bbb">
 </span><span style="color:#bbb">
 </span><span style="color:#bbb"></span><span style="color:#080;font-style:italic"># number of posts to show on home/category/tag pages (Default: 10)</span><span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">paginate</span>:<span style="color:#bbb"> </span><span style="color:#666">5</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">paginate</span>:<span style="color:#bbb"> </span><span style="color:#666">5</span><span style="color:#bbb">
 </span><span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">taxonomies</span>:<span style="color:#bbb">
-</span><span style="color:#bbb">  </span><span style="color:#a2f;font-weight:bold">category</span>:<span style="color:#bbb"> </span>categories<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">taxonomies</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">category</span>:<span style="color:#bbb"> </span>categories<span style="color:#bbb">
 </span><span style="color:#bbb">  </span><span style="color:#080;font-style:italic"># tag: tags</span><span style="color:#bbb">
 </span><span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">permalinks</span>:<span style="color:#bbb">
-</span><span style="color:#bbb">  </span><span style="color:#a2f;font-weight:bold">page</span>:<span style="color:#bbb"> </span>/:slug/<span style="color:#bbb">
-</span><span style="color:#bbb">  </span><span style="color:#a2f;font-weight:bold">post</span>:<span style="color:#bbb"> </span>/:year/:month/:title/<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">permalinks</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">page</span>:<span style="color:#bbb"> </span>/:slug/<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">post</span>:<span style="color:#bbb"> </span>/:year/:month/:title/<span style="color:#bbb">
 </span><span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">menu</span>:<span style="color:#bbb">
-</span><span style="color:#bbb">  </span><span style="color:#a2f;font-weight:bold">sidebar</span>:<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>- <span style="color:#a2f;font-weight:bold">name</span>:<span style="color:#bbb"> </span>Bill<span style="color:#bbb"> </span>Farmer<span style="color:#bbb">
-</span><span style="color:#bbb">      </span><span style="color:#a2f;font-weight:bold">url</span>:<span style="color:#bbb"> </span>http://billthefarmer.github.io<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>- <span style="color:#a2f;font-weight:bold">name</span>:<span style="color:#bbb"> </span>Github<span style="color:#bbb">
-</span><span style="color:#bbb">      </span><span style="color:#a2f;font-weight:bold">url</span>:<span style="color:#bbb"> </span>https://github.com/billthefarmer<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">menu</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">sidebar</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>- <span style="color:#008000;font-weight:bold">name</span>:<span style="color:#bbb"> </span>Bill Farmer<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#008000;font-weight:bold">url</span>:<span style="color:#bbb"> </span>http://billthefarmer.github.io<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>- <span style="color:#008000;font-weight:bold">name</span>:<span style="color:#bbb"> </span>Github<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#008000;font-weight:bold">url</span>:<span style="color:#bbb"> </span>https://github.com/billthefarmer<span style="color:#bbb">
 </span><span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">params</span>:<span style="color:#bbb">
-</span><span style="color:#bbb">  </span><span style="color:#a2f;font-weight:bold">description</span>:<span style="color:#bbb"> </span>Random<span style="color:#bbb"> </span>thoughts<span style="color:#bbb"> </span>on<span style="color:#bbb"> </span>random<span style="color:#bbb"> </span>subjects<span style="color:#bbb">
-</span><span style="color:#bbb">  </span><span style="color:#a2f;font-weight:bold">header_background</span>:<span style="color:#bbb"> </span>images/<span style="color:#666">2013</span>/<span style="color:#666">12</span>/cropped-P1010089.jpg<span style="color:#bbb">
-</span><span style="color:#bbb">  </span><span style="color:#a2f;font-weight:bold">sidebar</span>:<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">params</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">description</span>:<span style="color:#bbb"> </span>Random thoughts on random subjects<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">header_background</span>:<span style="color:#bbb"> </span>images/2013/12/cropped-P1010089.jpg<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">sidebar</span>:<span style="color:#bbb">
 </span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic"># Optional about block for sidebar (can be Markdown)</span><span style="color:#bbb">
 </span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic"># about: &#34;Bill Farmer&#39;s Blog&#34;</span><span style="color:#bbb">
-</span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">num_recent_posts</span>:<span style="color:#bbb"> </span><span style="color:#666">5</span><span style="color:#bbb">
-</span><span style="color:#bbb">  </span><span style="color:#a2f;font-weight:bold">sharingicons</span>:<span style="color:#bbb">
-</span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">hide</span>:<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#bbb">
-</span><span style="color:#bbb"></span>...<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#008000;font-weight:bold">num_recent_posts</span>:<span style="color:#bbb"> </span><span style="color:#666">5</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">sharingicons</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#008000;font-weight:bold">hide</span>:<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#00f;font-weight:bold">...</span><span style="color:#bbb">
 </span></code></pre></div><p>The useful bits are <code>copyright: Copyright &amp;copy; 2017 Bill Farmer</code>,
 which overrides the page footer, <code>publishDir: d:/billthefarmer.github.io/blog/</code>, which puts the output where I want
 it and <code># tag: tags</code>, which stops generating a tags page. It was
@@ -399,6 +399,10 @@ showing up as <code>&amp;rsquo;</code> in the post titles in the index. I found
   <h4>Recent Posts</h4>
   <ul>
     
+      <li><a href="/blog/not-swedish-meatballs/">
+        Not Swedish Meatballs
+      </a></li>
+    
       <li><a href="/blog/download-playlist-video/">
         Download playlist video
       </a></li>
@@ -433,10 +437,6 @@ showing up as <code>&amp;rsquo;</code> in the post titles in the index. I found
     
       <li><a href="/blog/post/mushrooms-and-soy-sauce/">
         Mushrooms and Soy Sauce
-      </a></li>
-    
-      <li><a href="/blog/post/source-code-highlighting/">
-        Source Code Syntax Highlighting
       </a></li>
     
   </ul>

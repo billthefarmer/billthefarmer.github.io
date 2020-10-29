@@ -7,10 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2019 Bill Farmer</copyright>
-    <lastBuildDate>Tue, 18 Aug 2020 20:49:05 +0100</lastBuildDate>
-    
-	<atom:link href="https://billthefarmer.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Thu, 29 Oct 2020 19:38:45 +0000</lastBuildDate><atom:link href="https://billthefarmer.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Not Swedish Meatballs</title>
+      <link>https://billthefarmer.github.io/blog/not-swedish-meatballs/</link>
+      <pubDate>Thu, 29 Oct 2020 19:38:45 +0000</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/not-swedish-meatballs/</guid>
+      <description>Meatballs are sometimes on offer at our local supermarket, so what can you do with them apart from meatball curry or meatballs with spaghetti? What about swedish meatballs? Well we didn&amp;rsquo;t like the sound of the creamy gravy or sauce they are supposed to be served with and decided that Truly Evil Onion Gravy was the way to go.
+Ingredients  Meatballs Frozen or fresh peas Truly Evil Onion Gravy  Method  Start the gravy first as it takes a while to render the onions down.</description>
+    </item>
     
     <item>
       <title>Download playlist video</title>
@@ -202,7 +208,7 @@ Documentation The plugin uses the shortcodes [questionnaire-questions] and [ques
       <pubDate>Sun, 01 Jul 2018 16:25:18 +0100</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/post/mullard-5-20-amplifier/</guid>
-      <description>Many years ago one of my brothers&amp;rsquo; friends brought me a faulty military surplus valve amplifier which used 807 valves for the output. It appeared to have suffered a flashover which had destroyed much of the wiring and components inside the chassis, but the tagboards appeared to be reusable.
+      <description>Many years ago one of my brothers&#39; friends brought me a faulty military surplus valve amplifier which used 807 valves for the output. It appeared to have suffered a flashover which had destroyed much of the wiring and components inside the chassis, but the tagboards appeared to be reusable.
 I had a copy of a Mullard amplifier book, Mullard Circuits for Audio Amplifiers at the time, which I subsequently lent so someone who never returned it.</description>
     </item>
     
@@ -375,7 +381,7 @@ To add an entry to an android calendar you first have to find out the calendar i
       
       <guid>https://billthefarmer.github.io/blog/whatever-o-meter-revisited/</guid>
       <description>I wrote the whatever-o-meter about five years ago in PHP and Javascript as a Wordpress plugin. As I have migrated my blog to Hugo, I thought to have a go at reimplementing it. The exporter I used made a good job of translating the Wordpress custom fields to Hugo front matter parameters. I had to put dashes in quotes, otherwise they get interpreted as [&amp;lt;nil&amp;gt;].
-intro:Pleaseanswerthefollowingquestionscarefullyandtruthfully.question:- YouarelyinginbedonMondaymorning...result:- &amp;#39;%d percent, Perhaps you should consider emigration.</description>
+intro:Please answer the following questions carefully and truthfully.</description>
     </item>
     
     <item>
@@ -562,7 +568,7 @@ I used gnuparted to copy the partition from one disk to another. The standard me
       <pubDate>Fri, 07 Aug 2015 09:32:42 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/index/</guid>
-      <description>RecipesBaked TomatoesBoiled Beef and CarrotsButter Beans in Tomato SauceCarrot and Coriander SoupCatalan slow cooked chickenChorizo Egg and Tomato Toasted SandwichClementine CakeCoarse RatatouilleCorned Beef ChiliDoug&amp;rsquo;s Seafood RisottoFabada AsturianaFaggots and Peas with Onion GravyFried RiceFried Whole MushroomsGreen TomatoesInteresting MashLeek and Potato SoupMarion&#39;s Banana and Walnut CakeMexican BreakfastMushrooms and Soy SaucePan fried lamb&amp;rsquo;s liver, bacon and chorizoPasta PicanteSausages with Green LentilsShoreham fish chowderSlow cooked lambSlow cooked ox cheekSpanish FrittataSpanish omeletteStuffed PeppersThai Red Curry with NoodlesTruly Evil Onion GravyUnobtainiumVegetable Soup PlusVegetables cooked in olive oilVenison and Chorizo CasseroleWhole Broad Beans in Olive OilHackingAdding a calendar event in androidAndroid Custom AttributesAndroid Recent FilesAndroid Text SearchBuild Mac OSX apps using command line toolsC++Concurrency, Threads, Semaphores and MutexesCreate PDF ReportDerive Edit Position from MarkdownDownload playlist videoDownload streamed videoDraw Musical StaffExpand Android SelectionFast Fourier TransformGetting Related Content workingHandlers in AndroidHandling Resizing in WindowsHandling run time changes in AndroidHaskellHiding Edit ButtonInstall OSX El Capitan on a PC (MBR)Java CollectionsLambda ExpressionsMarkdown OpenStreetMap MapsMigrating this blog from WordpressMove Linux Mint Root PartitionMusical TemperamentsPi-hole Cloudflare, DNSCrypt, Unbound SetupPythonQuestionnaire MakerRaspberry Pi WifiRead iBook books on an Android tabletResolving content uris in androidResurrecting a netbook as a web serverResurrecting an Old Dos AppSearch Engine Optimisation (SEO)SlimStatSource Code Syntax HighlightingSwiftTransfer contacts from iPhone to AndroidUpgrading a Moto GUpgrading to Windows 10Upgrading WordPressUsing Emacs as an IDEUsing Emacs in Android DevelopmentWhatever-o-meterWhatever-o-meter revisitedElectronicsMullard 5-20 AmplifierSmart MetersDiyFixing Basin Waste Pop UpReplacing microbore radiators</description>
+      <description>RecipesBaked TomatoesBoiled Beef and CarrotsButter Beans in Tomato SauceCarrot and Coriander SoupCatalan slow cooked chickenChorizo Egg and Tomato Toasted SandwichClementine CakeCoarse RatatouilleCorned Beef ChiliDoug&amp;rsquo;s Seafood RisottoFabada AsturianaFaggots and Peas with Onion GravyFried RiceFried Whole MushroomsGreen TomatoesInteresting MashLeek and Potato SoupMarion&#39;s Banana and Walnut CakeMexican BreakfastMushrooms and Soy SauceNot Swedish MeatballsPan fried lamb&amp;rsquo;s liver, bacon and chorizoPasta PicanteSausages with Green LentilsShoreham fish chowderSlow cooked lambSlow cooked ox cheekSpanish FrittataSpanish omeletteStuffed PeppersThai Red Curry with NoodlesTruly Evil Onion GravyUnobtainiumVegetable Soup PlusVegetables cooked in olive oilVenison and Chorizo CasseroleWhole Broad Beans in Olive OilHackingAdding a calendar event in androidAndroid Custom AttributesAndroid Recent FilesAndroid Text SearchBuild Mac OSX apps using command line toolsC++Concurrency, Threads, Semaphores and MutexesCreate PDF ReportDerive Edit Position from MarkdownDownload playlist videoDownload streamed videoDraw Musical StaffExpand Android SelectionFast Fourier TransformGetting Related Content workingHandlers in AndroidHandling Resizing in WindowsHandling run time changes in AndroidHaskellHiding Edit ButtonInstall OSX El Capitan on a PC (MBR)Java CollectionsLambda ExpressionsMarkdown OpenStreetMap MapsMigrating this blog from WordpressMove Linux Mint Root PartitionMusical TemperamentsPi-hole Cloudflare, DNSCrypt, Unbound SetupPythonQuestionnaire MakerRaspberry Pi WifiRead iBook books on an Android tabletResolving content uris in androidResurrecting a netbook as a web serverResurrecting an Old Dos AppSearch Engine Optimisation (SEO)SlimStatSource Code Syntax HighlightingSwiftTransfer contacts from iPhone to AndroidUpgrading a Moto GUpgrading to Windows 10Upgrading WordPressUsing Emacs as an IDEUsing Emacs in Android DevelopmentWhatever-o-meterWhatever-o-meter revisitedElectronicsMullard 5-20 AmplifierSmart MetersDiyFixing Basin Waste Pop UpReplacing microbore radiators</description>
     </item>
     
     <item>
@@ -741,7 +747,7 @@ So my easy WordPress upgrade method is:
       
       <guid>https://billthefarmer.github.io/blog/faggots-and-peas-with-onion-gravy/</guid>
       <description>When I was a teenager the chippy at Preston, Weymouth, Dorset used to serve faggots and peas with gravy in those aluminium foil containers that take-away Chinese used to come in. Enough for 2.
-Ingredients  3-5 faggots Frozen or fresh peas Truly Evil Onion Gravy  Method  Start the gravy first as it takes a while to render the onions down. Once the onions are well done, put the faggots in a tin and place in a medium hot oven – 180° C, util they are starting to brown.</description>
+Ingredients  3-5 faggots Frozen or fresh peas Truly Evil Onion Gravy  Method  Start the gravy first as it takes a while to render the onions down. Once the onions are well done, put the faggots in a tin and place in a medium hot oven – 180° C, until they are starting to brown.</description>
     </item>
     
     <item>

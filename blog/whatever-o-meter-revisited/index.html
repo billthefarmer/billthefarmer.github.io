@@ -8,7 +8,7 @@
 
 <meta property="og:title" content="Whatever-o-meter revisited" />
 <meta property="og:description" content="I wrote the whatever-o-meter about five years ago in PHP and Javascript as a Wordpress plugin. As I have migrated my blog to Hugo, I thought to have a go at reimplementing it. The exporter I used made a good job of translating the Wordpress custom fields to Hugo front matter parameters. I had to put dashes in quotes, otherwise they get interpreted as [&lt;nil&gt;].
-intro:Pleaseanswerthefollowingquestionscarefullyandtruthfully.question:- YouarelyinginbedonMondaymorning...result:- &#39;%d percent, Perhaps you should consider emigration." />
+intro:Please answer the following questions carefully and truthfully." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/whatever-o-meter-revisited/" />
 <meta property="article:published_time" content="2017-08-24T11:47:00+01:00" />
@@ -16,10 +16,10 @@ intro:Pleaseanswerthefollowingquestionscarefullyandtruthfully.question:- Youarel
 
 <meta itemprop="name" content="Whatever-o-meter revisited">
 <meta itemprop="description" content="I wrote the whatever-o-meter about five years ago in PHP and Javascript as a Wordpress plugin. As I have migrated my blog to Hugo, I thought to have a go at reimplementing it. The exporter I used made a good job of translating the Wordpress custom fields to Hugo front matter parameters. I had to put dashes in quotes, otherwise they get interpreted as [&lt;nil&gt;].
-intro:Pleaseanswerthefollowingquestionscarefullyandtruthfully.question:- YouarelyinginbedonMondaymorning...result:- &#39;%d percent, Perhaps you should consider emigration.">
+intro:Please answer the following questions carefully and truthfully.">
 <meta itemprop="datePublished" content="2017-08-24T11:47:00+01:00" />
 <meta itemprop="dateModified" content="2017-08-24T11:47:00+01:00" />
-<meta itemprop="wordCount" content="516">
+<meta itemprop="wordCount" content="539">
 
 
 
@@ -28,14 +28,14 @@ intro:Pleaseanswerthefollowingquestionscarefullyandtruthfully.question:- Youarel
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Whatever-o-meter revisited"/>
 <meta name="twitter:description" content="I wrote the whatever-o-meter about five years ago in PHP and Javascript as a Wordpress plugin. As I have migrated my blog to Hugo, I thought to have a go at reimplementing it. The exporter I used made a good job of translating the Wordpress custom fields to Hugo front matter parameters. I had to put dashes in quotes, otherwise they get interpreted as [&lt;nil&gt;].
-intro:Pleaseanswerthefollowingquestionscarefullyandtruthfully.question:- YouarelyinginbedonMondaymorning...result:- &#39;%d percent, Perhaps you should consider emigration."/>
+intro:Please answer the following questions carefully and truthfully."/>
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.76.5" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -94,12 +94,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
-                    Hacking
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
                     Recipes
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                    Hacking
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
@@ -185,22 +185,22 @@ I thought to have a go at reimplementing it. The exporter I used made
 a good job of translating the Wordpress custom fields to Hugo front
 matter parameters. I had to put dashes in quotes, otherwise they get
 interpreted as <code>[&lt;nil&gt;]</code>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#a2f;font-weight:bold">intro</span>:<span style="color:#bbb"> </span>Please<span style="color:#bbb"> </span>answer<span style="color:#bbb"> </span>the<span style="color:#bbb"> </span>following<span style="color:#bbb"> </span>questions<span style="color:#bbb"> </span>carefully<span style="color:#bbb"> </span>and<span style="color:#bbb"> </span>truthfully.<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">question</span>:<span style="color:#bbb">
-</span><span style="color:#bbb">  </span>- You<span style="color:#bbb"> </span>are<span style="color:#bbb"> </span>lying<span style="color:#bbb"> </span>in<span style="color:#bbb"> </span>bed<span style="color:#bbb"> </span>on<span style="color:#bbb"> </span>Monday<span style="color:#bbb"> </span>morning...<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">result</span>:<span style="color:#bbb">
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#008000;font-weight:bold">intro</span>:<span style="color:#bbb"> </span>Please answer the following questions carefully and truthfully.<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">question</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>- You are lying in bed on Monday morning...<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">result</span>:<span style="color:#bbb">
 </span><span style="color:#bbb">  </span>- <span style="color:#b44">&#39;%d percent, Perhaps you should consider emigration.&#39;</span><span style="color:#bbb">
 </span><span style="color:#bbb">  </span>- <span style="color:#b44">&#39;%d%, Consider taking a long holiday somewhere far away.&#39;</span><span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">left</span>:<span style="color:#bbb">
-</span><span style="color:#bbb">  </span>- Go<span style="color:#bbb"> </span>and<span style="color:#bbb"> </span>jump<span style="color:#bbb"> </span>in<span style="color:#bbb"> </span>the<span style="color:#bbb"> </span>shower<span style="color:#bbb"> </span>quick<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">right</span>:<span style="color:#bbb">
-</span><span style="color:#bbb">  </span>- Jump<span style="color:#bbb"> </span>on<span style="color:#bbb"> </span>him<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">weights</span>:<span style="color:#bbb"> </span><span style="color:#666">2</span>,<span style="color:#666">1</span>,<span style="color:#666">1</span>,<span style="color:#666">1</span>,<span style="color:#666">1</span><span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">centre</span>:<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">left</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>- Go and jump in the shower quick<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">right</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>- Jump on him<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">weights</span>:<span style="color:#bbb"> </span><span style="color:#666">2</span>,<span style="color:#666">1</span>,<span style="color:#666">1</span>,<span style="color:#666">1</span>,<span style="color:#666">1</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">centre</span>:<span style="color:#bbb">
 </span><span style="color:#bbb">  </span>- <span style="color:#b44">&#39;-&#39;</span><span style="color:#bbb">
 </span><span style="color:#bbb">  </span>- <span style="color:#b44">&#39;-&#39;</span><span style="color:#bbb">
-</span><span style="color:#bbb">  </span>- So<span style="color:#bbb"> </span>so<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">more</span>:<span style="color:#bbb"> </span>https://billthefarmer.github.io/blog/morris-o-meter<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>- So so<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">more</span>:<span style="color:#bbb"> </span>https://billthefarmer.github.io/blog/morris-o-meter<span style="color:#bbb">
 </span></code></pre></div><p>The javascript part should just work as it is, the PHP plugin needed
 re-implementing as a hugo shortcode. The first part of the plugin just
 outputs svg code to draw the dial and pointer, that was fairly easy to
@@ -312,6 +312,10 @@ were passed by Hugo as an array of strings, to be interpreted as numbers.</p>
   <h4>Recent Posts</h4>
   <ul>
     
+      <li><a href="/blog/not-swedish-meatballs/">
+        Not Swedish Meatballs
+      </a></li>
+    
       <li><a href="/blog/download-playlist-video/">
         Download playlist video
       </a></li>
@@ -346,10 +350,6 @@ were passed by Hugo as an array of strings, to be interpreted as numbers.</p>
     
       <li><a href="/blog/post/mushrooms-and-soy-sauce/">
         Mushrooms and Soy Sauce
-      </a></li>
-    
-      <li><a href="/blog/post/source-code-highlighting/">
-        Source Code Syntax Highlighting
       </a></li>
     
   </ul>
