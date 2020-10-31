@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recipes on Bill Farmer</title>
+    <title>recipes on Bill Farmer</title>
     <link>https://billthefarmer.github.io/blog/categories/recipes/</link>
-    <description>Recent content in Recipes on Bill Farmer</description>
+    <description>Recent content in recipes on Bill Farmer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2019 Bill Farmer</copyright>
-    <lastBuildDate>Thu, 29 Oct 2020 19:38:45 +0000</lastBuildDate><atom:link href="https://billthefarmer.github.io/blog/categories/recipes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Oct 2020 17:41:08 +0000</lastBuildDate><atom:link href="https://billthefarmer.github.io/blog/categories/recipes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Australian Meatball Wiggleoni</title>
+      <link>https://billthefarmer.github.io/blog/australian-meatball-wiggleoni/</link>
+      <pubDate>Sat, 31 Oct 2020 17:41:08 +0000</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/australian-meatball-wiggleoni/</guid>
+      <description>This is an adaptation of a recipe by our daughter&amp;rsquo;s Australian fiancee. His version was a way of getting vegetables into his kids by hiding them in meat sauce. This adaptation uses meatballs instead of mince.
+Ingredients  Meatballs Tomatoes, chopped Tomato paste Olive oil Oregano Onions, chopped Garlic, chopped Carrots, chopped Celery, chopped Cabbage, chopped Fusilli pasta  Method  Fry or cook the meatballs in the oven, keeping them warm.</description>
+    </item>
+    
     <item>
       <title>Not Swedish Meatballs</title>
       <link>https://billthefarmer.github.io/blog/not-swedish-meatballs/</link>
