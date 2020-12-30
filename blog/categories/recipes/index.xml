@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>recipes on Bill Farmer</title>
+    <title>Recipes on Bill Farmer</title>
     <link>https://billthefarmer.github.io/blog/categories/recipes/</link>
-    <description>Recent content in recipes on Bill Farmer</description>
+    <description>Recent content in Recipes on Bill Farmer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2019 Bill Farmer</copyright>
-    <lastBuildDate>Sun, 01 Nov 2020 11:55:12 +0000</lastBuildDate><atom:link href="https://billthefarmer.github.io/blog/categories/recipes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Dec 2020 10:49:50 +0000</lastBuildDate><atom:link href="https://billthefarmer.github.io/blog/categories/recipes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Turkey Gammon Broccoli Bake</title>
+      <link>https://billthefarmer.github.io/blog/turkey-gammon-broccoli-bake/</link>
+      <pubDate>Wed, 30 Dec 2020 10:49:50 +0000</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/turkey-gammon-broccoli-bake/</guid>
+      <description>This is a recipe for using up a Christmas turkey or chicken, gammon joint, veg etc. You will need a large saucepan for the veg and pasta, a small saucepan for the sauce and a casserole dish or similar to bake it in.
+Ingredients  Cooked turkey/chicken, chopped Cooked gammon, chopped Broccoli, cut into florets Any other veg that needs using Penne pasta Cheddar or Red Leicester cheese Plain flour Onion, chopped Garlic, chopped Celery, chopped Black pepper Dried oregano Olive oil Milk  Method Meat, Broccoli and Pasta  First cook the broccoli and any other veg in a large saucepan in the minimum of water.</description>
+    </item>
+    
     <item>
       <title>Draught Hash Brown</title>
       <link>https://billthefarmer.github.io/blog/draught-hash-brown/</link>
