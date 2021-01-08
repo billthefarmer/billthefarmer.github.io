@@ -5,7 +5,8 @@
     <link>https://billthefarmer.github.io/questionnaire/</link>
     <description>Recent content on Questionnaire</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language><atom:link href="https://billthefarmer.github.io/questionnaire/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 06 Jan 2021 15:28:22 +0000</lastBuildDate><atom:link href="https://billthefarmer.github.io/questionnaire/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Report</title>
       <link>https://billthefarmer.github.io/questionnaire/report/</link>
@@ -21,7 +22,7 @@
       <pubDate>Wed, 18 Jul 2018 15:04:26 +0100</pubDate>
       
       <guid>https://billthefarmer.github.io/questionnaire/questions/</guid>
-      <description>ResultsArchetype: Brain: Communication: Direction: Execution: Focus: Stage: Contact InformationFirst name: Last name: Email: let baseURL = &#34;</description>
+      <description>ResultsArchetype: Brain: Communication: Direction: Execution: Focus: Stage: Contact InformationFirst name: Last name: let baseURL = &#34;</description>
     </item>
     
   </channel>
