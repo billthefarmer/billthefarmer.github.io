@@ -46,6 +46,13 @@ div.centred {
     margin-left: 20%;
 }
 
+div.preview {
+    width: 560px;
+    height: 720px;
+    padding: 20px;
+    overflow: auto;
+}
+
 div.question, div.last, div.result, input.back {
     display: none;
 }
