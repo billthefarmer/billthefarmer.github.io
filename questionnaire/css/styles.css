@@ -71,7 +71,7 @@ input.ui-button {
 }
 
 input.ui-button:hover {
-    background: orange;
+    background: #f6e460;
     color: white;
 }
 
@@ -83,6 +83,6 @@ label.ui-checkboxradio-label {
 label.ui-checkboxradio-label:hover,
 label.ui-checkboxradio-label:focus,
 label.ui-checkboxradio-label:active {
-    background: orange;
+    background: #f6e460;
     color: white;
 }
