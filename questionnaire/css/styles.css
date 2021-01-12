@@ -49,6 +49,7 @@ div.centred {
 div.preview {
     width: 560px;
     height: 720px;
+    margin-bottom: 20px;
     padding: 20px;
     overflow: auto;
 }
