@@ -24,11 +24,6 @@ div.container {
     margin: 0 auto;
 }
 
-div.content {
-    background: white;
-    padding: 20px;
-}
-
 div.questionnaire {
     max-width: 640px;
 }
