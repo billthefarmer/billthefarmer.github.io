@@ -1,5 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
-    background: cornsilk;
+    background: white;
     font-family: Verdana, Helvetica, sans-serif;
 }
 
@@ -22,7 +30,7 @@ div.content {
 }
 
 div.questionnaire {
-    width: 560px;
+    max-width: 640px;
 }
 
 div.report {
@@ -31,7 +39,7 @@ div.report {
 
 div.left {
     background: white;
-    width: 560px;
+    max-width: 560px;
     margin: 20px;
     padding: 20px;
     float: left;
@@ -42,12 +50,8 @@ div.right {
     float: left;
 }
 
-div.centred {
-    margin-left: 20%;
-}
-
 div.preview {
-    width: 560px;
+    max-width: 640px;
     height: 720px;
     margin-bottom: 20px;
     padding: 20px;
@@ -71,7 +75,9 @@ input.ui-button {
     color: white;
 }
 
-input.ui-button:hover {
+input.ui-button:hover,
+input.ui-button:focus,
+input.ui-button:active {
     background: #f6e460;
     color: white;
 }
