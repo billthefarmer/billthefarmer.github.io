@@ -7,7 +7,11 @@ html {
 }
 
 body {
-    background: white;
+    
+    background: url(https://billthefarmer.github.io/questionnaire/images/Cat150713_067A.jpg)
+                   no-repeat center fixed;
+    background-size: cover;
+    
     font-family: Verdana, Helvetica, sans-serif;
 }
 
