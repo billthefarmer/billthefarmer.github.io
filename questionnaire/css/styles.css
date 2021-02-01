@@ -16,12 +16,14 @@ img {
 }
 
 div.container {
+    background: white;
     width: -moz-fit-content;
     width: -webkit-fit-content;
     width: -ms-fit-content;
     width: -o-fit-content;
     width: fit-content;
     margin: 0 auto;
+    padding: 20px;
 }
 
 div.questionnaire {
