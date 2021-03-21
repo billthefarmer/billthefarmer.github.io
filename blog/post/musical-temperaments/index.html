@@ -19,7 +19,7 @@ private static final int OCTAVE = 12; private static final int EQUAL = 8; privat
 <meta itemprop="description" content="My Tuner app uses equal temperament because that is the current standard and it is relatively easy to calculate using double precision arithmetic and maths library functions. First, declare some constants.
 private static final int OCTAVE = 12; private static final int EQUAL = 8; private static final int A_OFFSET = 9; private static final int C5_OFFSET = 57; The calculation first produces the cents relative to the reference, usually 440Hz."><meta itemprop="datePublished" content="2019-01-29T20:58:13&#43;00:00" />
 <meta itemprop="dateModified" content="2019-01-29T20:58:13&#43;00:00" />
-<meta itemprop="wordCount" content="385">
+<meta itemprop="wordCount" content="383">
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Musical Temperaments"/>
@@ -231,8 +231,7 @@ both for equal temperament and for that temperament.</p>
 
     <span style="color:#080;font-style:italic">// Temperament adjustment
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#0b0;font-weight:bold">double</span> temperamentAdjust <span style="color:#666">=</span> temperamentRatio <span style="color:#666">/</span> equalRatio<span style="color:#666">;</span>
-</code></pre></div><p>&lt;/br /&gt;
-Then adjust the reference note frequency for that temperament and key.</p>
+</code></pre></div><p>Then adjust the reference note frequency for that temperament and key.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// Reference note frequency
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#0b0;font-weight:bold">double</span> nearest <span style="color:#666">=</span> reference <span style="color:#666">*</span> Math<span style="color:#666">.</span><span style="color:#b44">pow</span><span style="color:#666">(</span>2<span style="color:#666">.</span><span style="color:#b44">0</span><span style="color:#666">,</span> Math<span style="color:#666">.</span><span style="color:#b44">round</span><span style="color:#666">(</span>cf<span style="color:#666">)</span> <span style="color:#666">/</span> 12<span style="color:#666">.</span><span style="color:#b44">0</span><span style="color:#666">)</span> <span style="color:#666">*</span> temperamentAdjust<span style="color:#666">;</span>
 </code></pre></div><p>Adjusting the nearest reference frequency adjusts everything
