@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2021 Bill Farmer</copyright>
-    <lastBuildDate>Tue, 18 Aug 2020 20:49:05 +0100</lastBuildDate><atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Apr 2021 10:28:06 +0100</lastBuildDate><atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android Word Count</title>
+      <link>https://billthefarmer.github.io/blog/word-count/</link>
+      <pubDate>Mon, 05 Apr 2021 10:28:06 +0100</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/word-count/</guid>
+      <description>I was asked to add a word and character count to my Editor app. So I looked it up and found a Gist that uses BreakIterator. This relies on an embedded function that determines what is considered a word.
+So I tested it and found that it gave different results to the linux utility wc. However, the app already makes great use of regular expressions, which include an expression for a word character \w.</description>
+    </item>
+    
     <item>
       <title>Download playlist video</title>
       <link>https://billthefarmer.github.io/blog/download-playlist-video/</link>

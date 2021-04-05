@@ -84,12 +84,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
-                    Recipes
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                    Recipes
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
@@ -149,6 +149,71 @@ code {
   
 
 
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/getting-related-content-working/">Getting Related Content working</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2017-09-13T11:30:00Z">
+        Wed Sep 13, 2017
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    The latest release of Hugo includes Related Content, which I thought would be nice to add to my blog. However the docs, although they show you how to set it up, don&rsquo;t explain how it works. To find that out, I had to look at the various threads on the Hugo forums.
+There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:
+  </p>
+  <a href='https://billthefarmer.github.io/blog/getting-related-content-working/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/adding-a-calendar-event/">Adding a calendar event in android</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2017-09-05T14:54:25&#43;01:00">
+        Tue Sep 5, 2017
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    The android docs for the Calendar Provider are quite useful, but recommend the use of an AsyncQueryHandler for querying or adding events to calendars in an asynchronous thread. However the AsyncQueryHandler docs don&rsquo;t include much guidance as to how to use it.
+To add an entry to an android calendar you first have to find out the calendar id using an asynchronous query on the calendars table.
+// QueryHandler public class QueryHandler extends AsyncQueryHandler { private static final String TAG = &#34;QueryHandler&#34;; // Projection arrays  private static final String[] CALENDAR_PROJECTION = new String[] { Calendars.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/adding-a-calendar-event/'>Read more →</a>
+  <hr>
+</div>
 
 
   
@@ -248,70 +313,6 @@ I looked for migration tools, and found two:
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/vegetables-cooked-in-olive-oil/">Vegetables cooked in olive oil</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2017-04-26T10:41:59Z">
-        Wed Apr 26, 2017
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/recipes">
-        Recipes
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    This method can be used for cooking any selection of vegetables, the trick is to layer them with the slowest cooking, like green beans, carrots, and other root veg at the bottom of the pan, and the faster cooking, like broccoli, cabbage and spinach on top. A layer of sliced onions in the bottom of the pan melts down and steams the veg above.
-Ingredients  Sliced onions Potatoes Carrots Whatever green veg is to hand Olive oil  Method  Cover the bottom of a medium saucepan with oil Place a layer of sliced onions on the bottom Layer sliced carrots, potatoes, and green veg in the pan Put on a low heat for about 20 minutes with the lid on until the veg is cooked to taste  
-  </p>
-  <a href='https://billthefarmer.github.io/blog/vegetables-cooked-in-olive-oil/'>Read more →</a>
-  <hr>
-</div>
-
-
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/slow-cooked-ox-cheek/">Slow cooked ox cheek</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2017-04-26T10:09:36Z">
-        Wed Apr 26, 2017
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/recipes">
-        Recipes
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    Ox cheek is a tasty cut of beef, but it contains tough connective tissue which melts away when slow cooked.
-Ingredients  Ox cheek 4-6 chopped onions 3-4 large carrots Olive oil Black pepper Bay leaves  Method  Put ox cheek in slow cooker and set to high heat Put a couple of bay leaves in the pot, grind black pepper over the meat and pour some olive oil over it Surround the meat with chopped onions and chopped carrots Put on the lid and allow to cook for a while When bubbling melted down onion and meat juices become visible around the meat, turn the heat down to low Allow to cook for 4-5 hours Enjoy with potatoes and green veg  
-  </p>
-  <a href='https://billthefarmer.github.io/blog/slow-cooked-ox-cheek/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -336,6 +337,14 @@ Ingredients  Ox cheek 4-6 chopped onions 3-4 large carrots Olive oil Black peppe
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/word-count/">
+        Android Word Count
+      </a></li>
+    
+      <li><a href="/blog/pea-and-ham-soup/">
+        Pea and Ham (or Bacon) Soup
+      </a></li>
     
       <li><a href="/blog/caldo-verde/">
         Caldo Verde
@@ -367,14 +376,6 @@ Ingredients  Ox cheek 4-6 chopped onions 3-4 large carrots Olive oil Black peppe
     
       <li><a href="/blog/lambda-expressions/">
         Lambda Expressions
-      </a></li>
-    
-      <li><a href="/blog/banana-cake/">
-        Marion&rsquo;s Banana and Walnut Cake
-      </a></li>
-    
-      <li><a href="/blog/hiding-button/">
-        Hiding Edit Button
       </a></li>
     
   </ul>

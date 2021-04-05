@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2021 Bill Farmer</copyright>
-    <lastBuildDate>Sun, 21 Mar 2021 19:47:05 +0000</lastBuildDate><atom:link href="https://billthefarmer.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Apr 2021 10:28:06 +0100</lastBuildDate><atom:link href="https://billthefarmer.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android Word Count</title>
+      <link>https://billthefarmer.github.io/blog/word-count/</link>
+      <pubDate>Mon, 05 Apr 2021 10:28:06 +0100</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/word-count/</guid>
+      <description>I was asked to add a word and character count to my Editor app. So I looked it up and found a Gist that uses BreakIterator. This relies on an embedded function that determines what is considered a word.
+So I tested it and found that it gave different results to the linux utility wc. However, the app already makes great use of regular expressions, which include an expression for a word character \w.</description>
+    </item>
+    
+    <item>
+      <title>Pea and Ham (or Bacon) Soup</title>
+      <link>https://billthefarmer.github.io/blog/pea-and-ham-soup/</link>
+      <pubDate>Mon, 05 Apr 2021 09:43:03 +0100</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/pea-and-ham-soup/</guid>
+      <description>This soup is somewhat complicated to make, but delicious. Marrowfat peas need to be soaked overnight.
+Ingredients  Olive oil 1/3 cup dried marrowfat peas 1/2 teaspoon bicarbonate of soda 1/3 cup frozen or fresh peas 1/2 cup chopped ham or bacon pieces A medium sized onion, chopped finely Two or three cloves of garlic, chopped A stick of celery, chopped finely A medium sized carrot, grated 1/2 vegetable stock cube Milk  Method  Soak the marrowfat peas overnight in a bowl of water with the 1/2 teaspoon of bicarbonate of soda.</description>
+    </item>
+    
     <item>
       <title>Caldo Verde</title>
       <link>https://billthefarmer.github.io/blog/caldo-verde/</link>
@@ -16,7 +36,7 @@
       <guid>https://billthefarmer.github.io/blog/caldo-verde/</guid>
       <description>This is not the traditional method of making caldo verde. The cabbage should something like spring greens, collard greens or cavalo nero. Roll up the leaves and slice thinly.
 Delicious lunch for two.
-Ingredients  Olive oil Two or three green cabbage or kale leaves, sliced thinly A medium onion, chopped Two or three cloves of garlic, chopped A medium sized potato, preferably floury type, chopped into cubes About half a dozen slices of chorizo, chopped into small pieces and another half dozen slices left whole Milk  Method  Cover the bottom of a small saucepan with olive oil and place on a low heat Add the chopped chorizo and allow to warm up until bubbling merrily Add the onion and garlic, the potato, and the cabbage/kale on top Cover and allow to steam until the potatoes mash easily with a fork Add milk to cover and mash most of the potato with the fork Season to taste and ladle into bowls, add the slices of chorizo on top Serve with toast or crust bread  </description>
+Ingredients  Olive oil Two or three green cabbage or kale leaves, sliced thinly A medium onion, chopped Two or three cloves of garlic, chopped A medium sized potato, preferably floury type, chopped into cubes About half a dozen slices of chorizo, chopped into small pieces and another half dozen slices left whole Milk  Method  Cover the bottom of a small saucepan with olive oil and place on a low heat Add the chopped chorizo and allow to warm up until bubbling merrily Add the onion and garlic, the potato, and the cabbage/kale on top Cover and allow to steam until the potatoes mash easily with a fork Add milk to cover and mash most of the potato with the fork Season to taste and ladle into bowls, add the slices of chorizo on top Serve with toast or crusty bread  </description>
     </item>
     
     <item>
@@ -609,7 +629,7 @@ I used gnuparted to copy the partition from one disk to another. The standard me
       <pubDate>Fri, 07 Aug 2015 09:32:42 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/index/</guid>
-      <description>RecipesAustralian Meatball WiggleoniBaked TomatoesBoiled Beef and CarrotsButter Beans in Tomato SauceCaldo VerdeCarrot and Coriander SoupCatalan slow cooked chickenChorizo Egg and Tomato Toasted SandwichClementine CakeCoarse RatatouilleCorned Beef ChiliDoug&amp;rsquo;s Seafood RisottoDraught Hash BrownFabada AsturianaFaggots and Peas with Onion GravyFried RiceFried Whole MushroomsGreen TomatoesInteresting MashLeek and Potato SoupMarion&#39;s Banana and Walnut CakeMexican BreakfastMushrooms and Soy SauceNot Swedish MeatballsPan fried lamb&amp;rsquo;s liver, bacon and chorizoPasta PicanteSausages with Green LentilsShoreham fish chowderSlow cooked lambSlow cooked ox cheekSpanish FrittataSpanish omeletteStuffed PeppersThai Red Curry with NoodlesTruly Evil Onion GravyTurkey Gammon Broccoli BakeUnobtainiumVegetable Soup PlusVegetables cooked in olive oilVenison and Chorizo CasseroleWhole Broad Beans in Olive OilHackingAdding a calendar event in androidAndroid Custom AttributesAndroid Recent FilesAndroid Text SearchBuild Mac OSX apps using command line toolsC++Concurrency, Threads, Semaphores and MutexesCreate PDF ReportDerive Edit Position from MarkdownDownload playlist videoDownload streamed videoDraw Musical StaffExpand Android SelectionFast Fourier TransformGetting Related Content workingHandlers in AndroidHandling Resizing in WindowsHandling run time changes in AndroidHaskellHiding Edit ButtonInstall OSX El Capitan on a PC (MBR)Java CollectionsLambda ExpressionsMarkdown OpenStreetMap MapsMigrating this blog from WordpressMove Linux Mint Root PartitionMusical TemperamentsPi-hole Cloudflare, DNSCrypt, Unbound SetupPythonQuestionnaire MakerRaspberry Pi WifiRead iBook books on an Android tabletResolving content uris in androidResurrecting a netbook as a web serverResurrecting an Old Dos AppSearch Engine Optimisation (SEO)SlimStatSource Code Syntax HighlightingSwiftTransfer contacts from iPhone to AndroidUpgrading a Moto GUpgrading to Windows 10Upgrading WordPressUsing Emacs as an IDEUsing Emacs in Android DevelopmentWhatever-o-meterWhatever-o-meter revisitedElectronicsMullard 5-20 AmplifierSmart MetersDiyFixing Basin Waste Pop UpReplacing microbore radiators</description>
+      <description>RecipesAustralian Meatball WiggleoniBaked TomatoesBoiled Beef and CarrotsButter Beans in Tomato SauceCaldo VerdeCarrot and Coriander SoupCatalan slow cooked chickenChorizo Egg and Tomato Toasted SandwichClementine CakeCoarse RatatouilleCorned Beef ChiliDoug&amp;rsquo;s Seafood RisottoDraught Hash BrownFabada AsturianaFaggots and Peas with Onion GravyFried RiceFried Whole MushroomsGreen TomatoesInteresting MashLeek and Potato SoupMarion&#39;s Banana and Walnut CakeMexican BreakfastMushrooms and Soy SauceNot Swedish MeatballsPan fried lamb&amp;rsquo;s liver, bacon and chorizoPasta PicantePea and Ham (or Bacon) SoupSausages with Green LentilsShoreham fish chowderSlow cooked lambSlow cooked ox cheekSpanish FrittataSpanish omeletteStuffed PeppersThai Red Curry with NoodlesTruly Evil Onion GravyTurkey Gammon Broccoli BakeUnobtainiumVegetable Soup PlusVegetables cooked in olive oilVenison and Chorizo CasseroleWhole Broad Beans in Olive OilHackingAdding a calendar event in androidAndroid Custom AttributesAndroid Recent FilesAndroid Text SearchAndroid Word CountBuild Mac OSX apps using command line toolsC++Concurrency, Threads, Semaphores and MutexesCreate PDF ReportDerive Edit Position from MarkdownDownload playlist videoDownload streamed videoDraw Musical StaffExpand Android SelectionFast Fourier TransformGetting Related Content workingHandlers in AndroidHandling Resizing in WindowsHandling run time changes in AndroidHaskellHiding Edit ButtonInstall OSX El Capitan on a PC (MBR)Java CollectionsLambda ExpressionsMarkdown OpenStreetMap MapsMigrating this blog from WordpressMove Linux Mint Root PartitionMusical TemperamentsPi-hole Cloudflare, DNSCrypt, Unbound SetupPythonQuestionnaire MakerRaspberry Pi WifiRead iBook books on an Android tabletResolving content uris in androidResurrecting a netbook as a web serverResurrecting an Old Dos AppSearch Engine Optimisation (SEO)SlimStatSource Code Syntax HighlightingSwiftTransfer contacts from iPhone to AndroidUpgrading a Moto GUpgrading to Windows 10Upgrading WordPressUsing Emacs as an IDEUsing Emacs in Android DevelopmentWhatever-o-meterWhatever-o-meter revisitedElectronicsMullard 5-20 AmplifierSmart MetersDiyFixing Basin Waste Pop UpReplacing microbore radiators</description>
     </item>
     
     <item>

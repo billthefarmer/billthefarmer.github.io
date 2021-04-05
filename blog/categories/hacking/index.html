@@ -84,12 +84,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
-                    Recipes
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                    Recipes
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
@@ -147,6 +147,38 @@ code {
 
 
 
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/word-count/">Android Word Count</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2021-04-05T10:28:06&#43;01:00">
+        Mon Apr 5, 2021
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    I was asked to add a word and character count to my Editor app. So I looked it up and found a Gist that uses BreakIterator. This relies on an embedded function that determines what is considered a word.
+So I tested it and found that it gave different results to the linux utility wc. However, the app already makes great use of regular expressions, which include an expression for a word character \w.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/word-count/'>Read more →</a>
+  <hr>
+</div>
 
 
   
@@ -278,39 +310,6 @@ I have seen apps which hide this button on scrolling, and this was one of the su
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/derive-edit-position/">Derive Edit Position from Markdown</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2020-02-08T18:24:23Z">
-        Sat Feb 8, 2020
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    I had a request to switch to the edit view from the markdown view at the double tap position in my Diary app. The app already has a gesture detector so I just had to add an onDoubleTap function.
-To get the tap position in the markdown view it is necessary to compensate for the position of the view on the screen, scrolling, and the display density.
-// onDoubleTap  @Override public boolean onDoubleTap(MotionEvent e) { if (shown) { int[] l = new int[2]; markdownView.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/derive-edit-position/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -335,6 +334,14 @@ To get the tap position in the markdown view it is necessary to compensate for t
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/word-count/">
+        Android Word Count
+      </a></li>
+    
+      <li><a href="/blog/pea-and-ham-soup/">
+        Pea and Ham (or Bacon) Soup
+      </a></li>
     
       <li><a href="/blog/caldo-verde/">
         Caldo Verde
@@ -366,14 +373,6 @@ To get the tap position in the markdown view it is necessary to compensate for t
     
       <li><a href="/blog/lambda-expressions/">
         Lambda Expressions
-      </a></li>
-    
-      <li><a href="/blog/banana-cake/">
-        Marion&rsquo;s Banana and Walnut Cake
-      </a></li>
-    
-      <li><a href="/blog/hiding-button/">
-        Hiding Edit Button
       </a></li>
     
   </ul>

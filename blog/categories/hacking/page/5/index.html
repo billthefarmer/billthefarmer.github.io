@@ -84,12 +84,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
-                    Recipes
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                    Recipes
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
@@ -147,6 +147,38 @@ code {
 
 
 
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/getting-related-content-working/">Getting Related Content working</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2017-09-13T11:30:00Z">
+        Wed Sep 13, 2017
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    The latest release of Hugo includes Related Content, which I thought would be nice to add to my blog. However the docs, although they show you how to set it up, don&rsquo;t explain how it works. To find that out, I had to look at the various threads on the Hugo forums.
+There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:
+  </p>
+  <a href='https://billthefarmer.github.io/blog/getting-related-content-working/'>Read more →</a>
+  <hr>
+</div>
 
 
   
@@ -279,38 +311,6 @@ I looked for migration tools, and found two:
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/handling-run-time-changes-in-android/">Handling run time changes in Android</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2017-01-08T18:49:31Z">
-        Sun Jan 8, 2017
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    Two articles, Handling Configuration Changes and Handling Configuration Changes with Fragments recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:
- An android fragment is quite a complex heavyweight object to use just for retaining data and possibly a background task, and the fragment management is not simple. Fragments are not retained if the associated activity is discarded by calling finish().
-  </p>
-  <a href='https://billthefarmer.github.io/blog/handling-run-time-changes-in-android/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -335,6 +335,14 @@ I looked for migration tools, and found two:
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/word-count/">
+        Android Word Count
+      </a></li>
+    
+      <li><a href="/blog/pea-and-ham-soup/">
+        Pea and Ham (or Bacon) Soup
+      </a></li>
     
       <li><a href="/blog/caldo-verde/">
         Caldo Verde
@@ -366,14 +374,6 @@ I looked for migration tools, and found two:
     
       <li><a href="/blog/lambda-expressions/">
         Lambda Expressions
-      </a></li>
-    
-      <li><a href="/blog/banana-cake/">
-        Marion&rsquo;s Banana and Walnut Cake
-      </a></li>
-    
-      <li><a href="/blog/hiding-button/">
-        Hiding Edit Button
       </a></li>
     
   </ul>

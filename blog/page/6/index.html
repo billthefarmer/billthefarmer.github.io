@@ -84,12 +84,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
-                    Recipes
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                    Recipes
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
@@ -149,6 +149,69 @@ code {
   
 
 
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/post/mullard-5-20-amplifier/">Mullard 5-20 Amplifier</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2018-07-01T16:25:18&#43;01:00">
+        Sun Jul 1, 2018
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/electronics">
+        Electronics
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    Many years ago one of my brothers' friends brought me a faulty military surplus valve amplifier which used 807 valves for the output. It appeared to have suffered a flashover which had destroyed much of the wiring and components inside the chassis, but the tagboards appeared to be reusable.
+I had a copy of a Mullard amplifier book, Mullard Circuits for Audio Amplifiers at the time, which I subsequently lent so someone who never returned it.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/post/mullard-5-20-amplifier/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/post/handling-resizing-in-windows/">Handling Resizing in Windows</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2018-06-19T20:23:44&#43;01:00">
+        Tue Jun 19, 2018
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    I have a windows app where I want the app window to maintain it&rsquo;s aspect ratio when it is resized. Windows provides two mechanisms for this, the WM_SIZE message and the WM_SIZING message. The WM_SIZE message is sent when a window has been resized to allow child windows to be resized, the WM_SIZING message is sent while the user is resizing it to allow the size to be adjusted. The messages are handled in the WindowProc callback function.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/post/handling-resizing-in-windows/'>Read more →</a>
+  <hr>
+</div>
 
 
   
@@ -247,70 +310,6 @@ Calendar custom styles The custom calendar has a list of styles that are customi
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/android-recent-files/">Android Recent Files</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2017-12-15T11:53:57Z">
-        Fri Dec 15, 2017
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    There are several parts to this - creating the list of files, saving the list in the preferences, restoring the list on startup and creating the list in the menu.
-// onCreate  @Override protected void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this); // Create a map of scroll positions by file name  Set&lt;String&gt; pathSet = preferences.getStringSet(PREF_PATHS, null); pathMap = new HashMap&lt;String, Integer&gt;(); if (pathSet != null) for (String path : pathSet) pathMap.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/android-recent-files/'>Read more →</a>
-  <hr>
-</div>
-
-
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/baked-tomatoes/">Baked Tomatoes</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2017-11-05T12:47:25Z">
-        Sun Nov 5, 2017
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/recipes">
-        Recipes
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    On a holiday staying at the Atlantic Hotel, St Mary&rsquo;s there seemed to be a different breakfast chef nearly every day. One of them had a novel way of preparing tomatoes for an English breakfast.
-Ingredients  Tomatoes Oregano Olive oil  Method  Take the stems off the tomatoes and place them upside down in a baking tin. They should be stable upside down. Cut a cross in the bottom of each one, put a few drops of oil on each one and sprinkle over some oregano.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/baked-tomatoes/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -335,6 +334,14 @@ Ingredients  Tomatoes Oregano Olive oil  Method  Take the stems off the tomatoes
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/word-count/">
+        Android Word Count
+      </a></li>
+    
+      <li><a href="/blog/pea-and-ham-soup/">
+        Pea and Ham (or Bacon) Soup
+      </a></li>
     
       <li><a href="/blog/caldo-verde/">
         Caldo Verde
@@ -366,14 +373,6 @@ Ingredients  Tomatoes Oregano Olive oil  Method  Take the stems off the tomatoes
     
       <li><a href="/blog/lambda-expressions/">
         Lambda Expressions
-      </a></li>
-    
-      <li><a href="/blog/banana-cake/">
-        Marion&rsquo;s Banana and Walnut Cake
-      </a></li>
-    
-      <li><a href="/blog/hiding-button/">
-        Hiding Edit Button
       </a></li>
     
   </ul>
