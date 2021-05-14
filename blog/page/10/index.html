@@ -155,6 +155,38 @@ code {
 
 <div class="blog-post">
   <h3>
+    <a href="https://billthefarmer.github.io/blog/resolving-content-uris-in-android/">Resolving content uris in android</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2017-07-23T10:48:17Z">
+        Sun Jul 23, 2017
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    If you write an android app that handles images or any other sort of file your app may be required to deal with ‘content’ uris (content://). There is a very useful utility which resolves these into ‘file’ uris (file:///) FileUtils.java. This contains one external reference to LocalStorageProvider, which can be resolved by removing the function isLocalStorageDocument() and references to it.
+// import com.ianhanniballake.localstorage.LocalStorageProvider;  // ...  /** * @param uri The Uri to check.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/resolving-content-uris-in-android/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
     <a href="https://billthefarmer.github.io/blog/vegetables-cooked-in-olive-oil/">Vegetables cooked in olive oil</a>
   </h3>
   <div class="callout small">
@@ -278,38 +310,6 @@ Ingredients  Ox cheek 4-6 chopped onions 3-4 large carrots Olive oil Black peppe
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/upgrading-a-moto-g/">Upgrading a Moto G</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2016-09-18T20:27:57Z">
-        Sun Sep 18, 2016
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    I got myself a refurbished Moto G phone a while ago. It came with Android Kitkat 4.4.4, complete with Moto bloat. I had already put Cyanogenmod on my tablet, so I installed Cyanogenmod 11, android 4.4.4 on it, in accordance with the instructions on the wiki, no problem. That got rid of the bloat and allows fine control of app snooping via Privacy Guard in the settings.
-When I first installed Cyanogenmod, I had to use an unofficial build, as an official build for Kitkat 4.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/upgrading-a-moto-g/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -334,6 +334,10 @@ When I first installed Cyanogenmod, I had to use an unofficial build, as an offi
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/android-kotlin/">
+        Android Kotlin
+      </a></li>
     
       <li><a href="/blog/word-count/">
         Android Word Count
@@ -369,10 +373,6 @@ When I first installed Cyanogenmod, I had to use an unofficial build, as an offi
     
       <li><a href="/blog/resurrecting-dos-app/">
         Resurrecting an Old Dos App
-      </a></li>
-    
-      <li><a href="/blog/lambda-expressions/">
-        Lambda Expressions
       </a></li>
     
   </ul>

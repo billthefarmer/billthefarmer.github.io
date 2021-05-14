@@ -153,6 +153,38 @@ code {
 
 <div class="blog-post">
   <h3>
+    <a href="https://billthefarmer.github.io/blog/hiding-button/">Hiding Edit Button</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2020-02-15T20:59:47Z">
+        Sat Feb 15, 2020
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    My Diary and Notes apps have a floating button in the corner of the screen which is used to switch between editing markdown text and viewing the result. Although it is part of the android Material Design, this button has been the subject of several issues raised by users.
+I have seen apps which hide this button on scrolling, and this was one of the suggestions by users. Getting this to work correctly turned out to be more complex than initially considered, requiring two boolean flags and a lambda expression.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/hiding-button/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
     <a href="https://billthefarmer.github.io/blog/derive-edit-position/">Derive Edit Position from Markdown</a>
   </h3>
   <div class="callout small">
@@ -278,39 +310,6 @@ private static final int OCTAVE = 12; private static final int EQUAL = 8; privat
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/post/draw-musical-staff/">Draw Musical Staff</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2019-01-13T18:35:26Z">
-        Sun Jan 13, 2019
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    A musical staff is not a trivial thing to draw because of the complex curves needed for the treble and bass clef. What is needed is a source of vector drawing coordinates.
-The data used was originally intended for use in postscript, so the vertical axis is reversed.
-// Treble clef  private static final float tc[][]= { {-6, 16}, {-8, 13}, {-14, 19}, {-10, 35}, {2, 35}, {8, 37}, {21, 30}, {21, 17}, {21, 5}, {10, -1}, {0, -1}, {-12, -1}, {-23, 5}, {-23, 22}, {-23, 29}, {-22, 37}, {-7, 49}, {10, 61}, {10, 68}, {10, 73}, {10, 78}, {9, 82}, {7, 82}, {2, 78}, {-2, 68}, {-2, 62}, {-2, 25}, {10, 18}, {11, -8}, {11, -18}, {5, -23}, {-4, -23}, {-10, -23}, {-15, -18}, {-15, -13}, {-15, -8}, {-12, -4}, {-7, -4}, {3, -4}, {3, -20}, {-6, -17}, {-5, -23}, {9, -20}, {9, -9}, {7, 24}, {-5, 30}, {-5, 67}, {-5, 78}, {-2, 87}, {7, 91}, {13, 87}, {18, 80}, {17, 73}, {17, 62}, {10, 54}, {1, 45}, {-5, 38}, {-15, 33}, {-15, 19}, {-15, 7}, {-8, 1}, {0, 1}, {8, 1}, {15, 6}, {15, 14}, {15, 23}, {7, 26}, {2, 26}, {-5, 26}, {-9, 21}, {-6, 16} }; // Bass clef  private static final float bc[][] = { {-2.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/post/draw-musical-staff/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -335,6 +334,10 @@ The data used was originally intended for use in postscript, so the vertical axi
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/android-kotlin/">
+        Android Kotlin
+      </a></li>
     
       <li><a href="/blog/word-count/">
         Android Word Count
@@ -370,10 +373,6 @@ The data used was originally intended for use in postscript, so the vertical axi
     
       <li><a href="/blog/resurrecting-dos-app/">
         Resurrecting an Old Dos App
-      </a></li>
-    
-      <li><a href="/blog/lambda-expressions/">
-        Lambda Expressions
       </a></li>
     
   </ul>

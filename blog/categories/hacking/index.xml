@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2021 Bill Farmer</copyright>
-    <lastBuildDate>Mon, 05 Apr 2021 10:28:06 +0100</lastBuildDate><atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 May 2021 09:49:11 +0100</lastBuildDate><atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android Kotlin</title>
+      <link>https://billthefarmer.github.io/blog/android-kotlin/</link>
+      <pubDate>Fri, 14 May 2021 09:49:11 +0100</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/android-kotlin/</guid>
+      <description>All my android apps have up until now been written in Java, avoiding the use of the support libraries or androidx. The Google developers docs and guides advocate the use of Kotlin rather than Java and the use of androidx almost to the exclusion of the standard android API.
+I have a very simple app, Oglaf, NS(Generally)FW, which is just a wrapper around the web site, with some navigation. So I decided to convert it to Kotlin, just to see how difficult it was and to see what effect, if any, it had on the app.</description>
+    </item>
+    
     <item>
       <title>Android Word Count</title>
       <link>https://billthefarmer.github.io/blog/word-count/</link>
