@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2021 Bill Farmer</copyright>
-    <lastBuildDate>Fri, 14 May 2021 09:49:11 +0100</lastBuildDate><atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Jul 2021 13:37:07 +0100</lastBuildDate><atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android Flutter</title>
+      <link>https://billthefarmer.github.io/blog/android-flutter/</link>
+      <pubDate>Thu, 15 Jul 2021 13:37:07 +0100</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/android-flutter/</guid>
+      <description>Google have made a big thing of their flutter development platform, so I thought I ought to give it a try. It&amp;rsquo;s easy to install, just download the sdk, unzip it in a suitable place and add the bin folder to your path. I had to tell it where I had installed Android Studio.
+$ flutter config --android-studio-dir &amp;#39;D:\adt\Android Studio&amp;#39; Setting &amp;#34;android-studio-dir&amp;#34; value to &amp;#34;D:\adt\Android Studio&amp;#34;. You may need to restart any open editors for them to read new settings.</description>
+    </item>
+    
     <item>
       <title>Android Kotlin</title>
       <link>https://billthefarmer.github.io/blog/android-kotlin/</link>

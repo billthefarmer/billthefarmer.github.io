@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<meta property="og:title" content="Android Flutter" />
+<meta property="og:description" content="Google have made a big thing of their flutter development platform, so I thought I ought to give it a try. It&rsquo;s easy to install, just download the sdk, unzip it in a suitable place and add the bin folder to your path. I had to tell it where I had installed Android Studio.
+$ flutter config --android-studio-dir &#39;D:\adt\Android Studio&#39; Setting &#34;android-studio-dir&#34; value to &#34;D:\adt\Android Studio&#34;. You may need to restart any open editors for them to read new settings." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://billthefarmer.github.io/blog/android-flutter/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-07-15T13:37:07+01:00" />
+<meta property="article:modified_time" content="2021-07-15T13:37:07+01:00" />
+
+
+<meta itemprop="name" content="Android Flutter">
+<meta itemprop="description" content="Google have made a big thing of their flutter development platform, so I thought I ought to give it a try. It&rsquo;s easy to install, just download the sdk, unzip it in a suitable place and add the bin folder to your path. I had to tell it where I had installed Android Studio.
+$ flutter config --android-studio-dir &#39;D:\adt\Android Studio&#39; Setting &#34;android-studio-dir&#34; value to &#34;D:\adt\Android Studio&#34;. You may need to restart any open editors for them to read new settings."><meta itemprop="datePublished" content="2021-07-15T13:37:07+01:00" />
+<meta itemprop="dateModified" content="2021-07-15T13:37:07+01:00" />
+<meta itemprop="wordCount" content="1127">
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Android Flutter"/>
+<meta name="twitter:description" content="Google have made a big thing of their flutter development platform, so I thought I ought to give it a try. It&rsquo;s easy to install, just download the sdk, unzip it in a suitable place and add the bin folder to your path. I had to tell it where I had installed Android Studio.
+$ flutter config --android-studio-dir &#39;D:\adt\Android Studio&#39; Setting &#34;android-studio-dir&#34; value to &#34;D:\adt\Android Studio&#34;. You may need to restart any open editors for them to read new settings."/>
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.85.0" />
+
+
+    <base href="https://billthefarmer.github.io/blog/">
+    <link rel="canonical" href="https://billthefarmer.github.io/blog/android-flutter/">
+    <title>Android Flutter | Bill Farmer</title>
+
+    <!-- CSS -->
+    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    
+    
+
+    
+    
+
+<style>
+.callout.large {
+    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.callout.large a, .callout.large p {
+    color: white;
+}
+pre {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+code {
+    padding: 0;
+    border: 0;
+    background-color: #fff;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-weight: normal;
+    color: #0a0a0a;
+}
+</style>
+
+
+
+
+  </head>
+  <body>
+
+    <header class="nav">
+      <div class="top-bar">
+        <div class="row column">
+          <div class="top-bar-left">
+            <ul class="menu">
+              <li class=""><a href="https://billthefarmer.github.io/blog/">
+                Home
+              </a></li>
+              
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                    Categories
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                    Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                    Recipes
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                    DIY
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                    Electronics
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                    Index
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                    Morris-o-meter
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                    About
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                    Test-o-meter
+                  </a></li>
+                
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <header class="blog-header">
+      <div class="callout large">
+        <div class="row column text-center">
+          <h1>
+            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+          </h1>
+          
+            <p>
+              Random thoughts on random subjects
+            </p>
+          
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="row" id="content">
+        <div class="medium-8 columns">
+          
+  
+
+
+  <div class="blog-post">
+    <h3>
+      <a href="https://billthefarmer.github.io/blog/android-flutter/">Android Flutter</a>
+    </h3>
+    <div class="callout small">
+      <small>
+        <time datetime="2021-07-15T13:37:07&#43;01:00">
+          Thu Jul 15, 2021
+        </time> by Bill Farmer.
+        Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+        
+        <br>
+        
+      </small>
+    </div>
+    <p>
+      <p>Google have made a big <a href="https://medium.com/flutter/announcing-flutter-2-2-at-google-i-o-2021-92f0fcbd7ef9">thing</a> of their <a href="https://flutter.dev/">flutter</a> development
+platform, so I thought I ought to give it a try. It&rsquo;s easy to install,
+just download the <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_2.2.3-stable.zip">sdk</a>, unzip it in a suitable place and add the
+<code>bin</code> folder to your <code>path</code>. I had to tell it where I had installed
+Android Studio.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ flutter config --android-studio-dir <span style="color:#b44">&#39;D:\adt\Android Studio&#39;</span>
+Setting <span style="color:#b44">&#34;android-studio-dir&#34;</span> value to <span style="color:#b44">&#34;D:\adt\Android Studio&#34;</span>.
+
+You may need to restart any open editors <span style="color:#a2f;font-weight:bold">for</span> them to <span style="color:#a2f">read</span> new settings.
+
+$ flutter doctor -v
+<span style="color:#666">[</span>√<span style="color:#666">]</span> Flutter <span style="color:#666">(</span>Channel stable, 2.2.3, on Microsoft Windows <span style="color:#666">[</span>Version 10.0.19043.1110<span style="color:#666">]</span>, locale en-GB<span style="color:#666">)</span>
+    • Flutter version 2.2.3 at D:<span style="color:#b62;font-weight:bold">\a</span>dt<span style="color:#b62;font-weight:bold">\f</span>lutter
+    • Framework revision f4abaa0735 <span style="color:#666">(</span><span style="color:#666">2</span> weeks ago<span style="color:#666">)</span>, 2021-07-01 12:46:11 -0700
+    • Engine revision 241c87ad80
+    • Dart version 2.13.4
+
+<span style="color:#666">[</span>√<span style="color:#666">]</span> Android toolchain - develop <span style="color:#a2f;font-weight:bold">for</span> Android devices <span style="color:#666">(</span>Android SDK version 30.0.3<span style="color:#666">)</span>
+    • Android SDK at D:<span style="color:#b62;font-weight:bold">\a</span>dt<span style="color:#b62;font-weight:bold">\a</span>ndroid-sdk-windows
+    • Platform android-30, build-tools 30.0.3
+    • Java binary at: D:<span style="color:#b62;font-weight:bold">\a</span>dt<span style="color:#b62;font-weight:bold">\A</span>ndroid Studio<span style="color:#b62;font-weight:bold">\j</span>re<span style="color:#b62;font-weight:bold">\b</span>in<span style="color:#b62;font-weight:bold">\j</span>ava
+    • Java version OpenJDK Runtime Environment <span style="color:#666">(</span>build 11.0.8+10-b944.6842174<span style="color:#666">)</span>
+    • All Android licenses accepted.
+
+<span style="color:#666">[</span>√<span style="color:#666">]</span> Chrome - develop <span style="color:#a2f;font-weight:bold">for</span> the web
+    • Chrome at C:<span style="color:#b62;font-weight:bold">\P</span>rogram Files <span style="color:#666">(</span>x86<span style="color:#666">)</span><span style="color:#b62;font-weight:bold">\G</span>oogle<span style="color:#b62;font-weight:bold">\C</span>hrome<span style="color:#b62;font-weight:bold">\A</span>pplication<span style="color:#b62;font-weight:bold">\c</span>hrome.exe
+
+<span style="color:#666">[</span>√<span style="color:#666">]</span> Android Studio
+    • Android Studio at D:<span style="color:#b62;font-weight:bold">\a</span>dt<span style="color:#b62;font-weight:bold">\A</span>ndroid Studio
+    • Flutter plugin can be installed from:
+       https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+       https://plugins.jetbrains.com/plugin/6351-dart
+    • android-studio-dir <span style="color:#666">=</span> D:<span style="color:#b62;font-weight:bold">\a</span>dt<span style="color:#b62;font-weight:bold">\A</span>ndroid Studio
+    • Java version OpenJDK Runtime Environment <span style="color:#666">(</span>build 11.0.8+10-b944.6842174<span style="color:#666">)</span>
+
+<span style="color:#666">[</span>√<span style="color:#666">]</span> Connected device <span style="color:#666">(</span><span style="color:#666">2</span> available<span style="color:#666">)</span>
+    • Moto G <span style="color:#666">(</span>mobile<span style="color:#666">)</span> • TA93003J7P • android-arm    • Android 7.1.2 <span style="color:#666">(</span>API 25<span style="color:#666">)</span>
+    • Chrome <span style="color:#666">(</span>web<span style="color:#666">)</span>    • chrome     • web-javascript • Google Chrome 91.0.4472.124
+
+• No issues found!
+</code></pre></div><p>Having installed flutter and got it working, create a sample app.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ flutter create --org org.billthefarmer --project-name hello --platforms android -t app hello
+Creating project hello...
+  hello<span style="color:#b62;font-weight:bold">\.</span>gitignore <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\.</span>idea<span style="color:#b62;font-weight:bold">\l</span>ibraries<span style="color:#b62;font-weight:bold">\D</span>art_SDK.xml <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\.</span>idea<span style="color:#b62;font-weight:bold">\l</span>ibraries<span style="color:#b62;font-weight:bold">\K</span>otlinJavaRuntime.xml <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\.</span>idea<span style="color:#b62;font-weight:bold">\m</span>odules.xml <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\.</span>idea<span style="color:#b62;font-weight:bold">\r</span>unConfigurations<span style="color:#b62;font-weight:bold">\m</span>ain_dart.xml <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\.</span>idea<span style="color:#b62;font-weight:bold">\w</span>orkspace.xml <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\.</span>metadata <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\a</span>pp<span style="color:#b62;font-weight:bold">\b</span>uild.gradle <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\a</span>pp<span style="color:#b62;font-weight:bold">\s</span>rc<span style="color:#b62;font-weight:bold">\m</span>ain<span style="color:#b62;font-weight:bold">\k</span>otlin<span style="color:#b62;font-weight:bold">\o</span>rg<span style="color:#b62;font-weight:bold">\b</span>illthefarmer<span style="color:#b62;font-weight:bold">\h</span>ello<span style="color:#b62;font-weight:bold">\M</span>ainActivity.kt <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\b</span>uild.gradle <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\h</span>ello_android.iml <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\.</span>gitignore <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\a</span>pp<span style="color:#b62;font-weight:bold">\s</span>rc<span style="color:#b62;font-weight:bold">\d</span>ebug<span style="color:#b62;font-weight:bold">\A</span>ndroidManifest.xml <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\a</span>pp<span style="color:#b62;font-weight:bold">\s</span>rc<span style="color:#b62;font-weight:bold">\m</span>ain<span style="color:#b62;font-weight:bold">\A</span>ndroidManifest.xml <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\a</span>pp<span style="color:#b62;font-weight:bold">\s</span>rc<span style="color:#b62;font-weight:bold">\m</span>ain<span style="color:#b62;font-weight:bold">\r</span>es<span style="color:#b62;font-weight:bold">\d</span>rawable<span style="color:#b62;font-weight:bold">\l</span>aunch_background.xml <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\a</span>pp<span style="color:#b62;font-weight:bold">\s</span>rc<span style="color:#b62;font-weight:bold">\m</span>ain<span style="color:#b62;font-weight:bold">\r</span>es<span style="color:#b62;font-weight:bold">\d</span>rawable-v21<span style="color:#b62;font-weight:bold">\l</span>aunch_background.xml <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\a</span>pp<span style="color:#b62;font-weight:bold">\s</span>rc<span style="color:#b62;font-weight:bold">\m</span>ain<span style="color:#b62;font-weight:bold">\r</span>es<span style="color:#b62;font-weight:bold">\m</span>ipmap-hdpi<span style="color:#b62;font-weight:bold">\i</span>c_launcher.png <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\a</span>pp<span style="color:#b62;font-weight:bold">\s</span>rc<span style="color:#b62;font-weight:bold">\m</span>ain<span style="color:#b62;font-weight:bold">\r</span>es<span style="color:#b62;font-weight:bold">\m</span>ipmap-mdpi<span style="color:#b62;font-weight:bold">\i</span>c_launcher.png <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\a</span>pp<span style="color:#b62;font-weight:bold">\s</span>rc<span style="color:#b62;font-weight:bold">\m</span>ain<span style="color:#b62;font-weight:bold">\r</span>es<span style="color:#b62;font-weight:bold">\m</span>ipmap-xhdpi<span style="color:#b62;font-weight:bold">\i</span>c_launcher.png <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\a</span>pp<span style="color:#b62;font-weight:bold">\s</span>rc<span style="color:#b62;font-weight:bold">\m</span>ain<span style="color:#b62;font-weight:bold">\r</span>es<span style="color:#b62;font-weight:bold">\m</span>ipmap-xxhdpi<span style="color:#b62;font-weight:bold">\i</span>c_launcher.png <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\a</span>pp<span style="color:#b62;font-weight:bold">\s</span>rc<span style="color:#b62;font-weight:bold">\m</span>ain<span style="color:#b62;font-weight:bold">\r</span>es<span style="color:#b62;font-weight:bold">\m</span>ipmap-xxxhdpi<span style="color:#b62;font-weight:bold">\i</span>c_launcher.png <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\a</span>pp<span style="color:#b62;font-weight:bold">\s</span>rc<span style="color:#b62;font-weight:bold">\m</span>ain<span style="color:#b62;font-weight:bold">\r</span>es<span style="color:#b62;font-weight:bold">\v</span>alues<span style="color:#b62;font-weight:bold">\s</span>tyles.xml <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\a</span>pp<span style="color:#b62;font-weight:bold">\s</span>rc<span style="color:#b62;font-weight:bold">\m</span>ain<span style="color:#b62;font-weight:bold">\r</span>es<span style="color:#b62;font-weight:bold">\v</span>alues-night<span style="color:#b62;font-weight:bold">\s</span>tyles.xml <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\a</span>pp<span style="color:#b62;font-weight:bold">\s</span>rc<span style="color:#b62;font-weight:bold">\p</span>rofile<span style="color:#b62;font-weight:bold">\A</span>ndroidManifest.xml <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\g</span>radle<span style="color:#b62;font-weight:bold">\w</span>rapper<span style="color:#b62;font-weight:bold">\g</span>radle-wrapper.properties <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\g</span>radle.properties <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\a</span>ndroid<span style="color:#b62;font-weight:bold">\s</span>ettings.gradle <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\l</span>ib<span style="color:#b62;font-weight:bold">\m</span>ain.dart <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\h</span>ello.iml <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\p</span>ubspec.yaml <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\R</span>EADME.md <span style="color:#666">(</span>created<span style="color:#666">)</span>
+  hello<span style="color:#b62;font-weight:bold">\t</span>est<span style="color:#b62;font-weight:bold">\w</span>idget_test.dart <span style="color:#666">(</span>created<span style="color:#666">)</span>
+Running <span style="color:#b44">&#34;flutter pub get&#34;</span> in hello...                            1,323ms
+Wrote <span style="color:#666">35</span> files.
+
+All <span style="color:#a2f;font-weight:bold">done</span>!
+In order to run your application, type:
+
+  $ <span style="color:#a2f">cd</span> hello
+  $ flutter run
+
+Your application code is in hello<span style="color:#b62;font-weight:bold">\l</span>ib<span style="color:#b62;font-weight:bold">\m</span>ain.dart.
+</code></pre></div><p>And run it&hellip;</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ flutter run
+Launching lib<span style="color:#b62;font-weight:bold">\m</span>ain.dart on Moto G in debug mode...
+Running Gradle task <span style="color:#b44">&#39;assembleDebug&#39;</span>...                             14.3s
+√  Built build<span style="color:#b62;font-weight:bold">\a</span>pp<span style="color:#b62;font-weight:bold">\o</span>utputs<span style="color:#b62;font-weight:bold">\f</span>lutter-apk<span style="color:#b62;font-weight:bold">\a</span>pp-debug.apk.
+Syncing files to device Moto G...                                  127ms
+
+Flutter run key commands.
+r Hot reload.
+R Hot restart.
+h Repeat this <span style="color:#a2f">help</span> message.
+d Detach <span style="color:#666">(</span>terminate <span style="color:#b44">&#34;flutter run&#34;</span> but leave application running<span style="color:#666">)</span>.
+c Clear the screen
+q Quit <span style="color:#666">(</span>terminate the application on the device<span style="color:#666">)</span>.
+
+ Running with sound null safety
+
+An Observatory debugger and profiler on Moto G is available at:
+http://127.0.0.1:54755/SJvWpFhJNaY<span style="color:#666">=</span>/
+The Flutter DevTools debugger and profiler on Moto G is available at:
+http://127.0.0.1:9101?uri<span style="color:#666">=</span>http%3A%2F%2F127.0.0.1%3A54755%2FSJvWpFhJNaY%3D%2F
+q
+
+Application finished.
+</code></pre></div><p>Screenshot of resulting app.</p>
+<p><img src="images/2021/07/Screenshot_20210715-213310.png" alt="Flutter app"></p>
+<p>Flutter created a minimal kotlin file, MainActivity.kt.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#a2f;font-weight:bold">package</span> <span style="color:#00f;font-weight:bold">org.billthefarmer.hello</span>
+
+<span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">io.flutter.embedding.android.FlutterActivity</span>
+
+<span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">MainActivity</span>: FlutterActivity() {
+}
+</code></pre></div><p>And a dart file, main.dart.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#a2f;font-weight:bold">import</span> <span style="color:#b44">&#39;package:flutter/material.dart&#39;</span>;
+
+<span style="color:#0b0;font-weight:bold">void</span> main() {
+  runApp(MyApp());
+}
+
+<span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">MyApp</span> <span style="color:#a2f;font-weight:bold">extends</span> StatelessWidget {
+  <span style="color:#080;font-style:italic">// This widget is the root of your application.
+</span><span style="color:#080;font-style:italic"></span>  <span style="">@</span>override
+  Widget build(BuildContext context) {
+    <span style="color:#a2f;font-weight:bold">return</span> MaterialApp(
+      <span style="color:#a0a000">title:</span> <span style="color:#b44">&#39;Flutter Demo&#39;</span>,
+      <span style="color:#a0a000">theme:</span> ThemeData(
+        <span style="color:#080;font-style:italic">// This is the theme of your application.
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">//
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// Try running your application with &#34;flutter run&#34;. You&#39;ll see the
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// application has a blue toolbar. Then, without quitting the app, try
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// changing the primarySwatch below to Colors.green and then invoke
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// &#34;hot reload&#34; (press &#34;r&#34; in the console where you ran &#34;flutter run&#34;,
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// or simply save your changes to &#34;hot reload&#34; in a Flutter IDE).
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// Notice that the counter didn&#39;t reset back to zero; the application
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// is not restarted.
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a0a000">primarySwatch:</span> Colors.blue,
+      ),
+      <span style="color:#a0a000">home:</span> MyHomePage(<span style="color:#a0a000">title:</span> <span style="color:#b44">&#39;Flutter Demo Home Page&#39;</span>),
+    );
+  }
+}
+
+<span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">MyHomePage</span> <span style="color:#a2f;font-weight:bold">extends</span> StatefulWidget {
+  MyHomePage({Key<span style="color:#666">?</span> key, required <span style="color:#a2f;font-weight:bold">this</span>.title}) <span style="color:#666">:</span> <span style="color:#a2f;font-weight:bold">super</span>(<span style="color:#a0a000">key:</span> key);
+
+  <span style="color:#080;font-style:italic">// This widget is the home page of your application. It is stateful, meaning
+</span><span style="color:#080;font-style:italic"></span>  <span style="color:#080;font-style:italic">// that it has a State object (defined below) that contains fields that affect
+</span><span style="color:#080;font-style:italic"></span>  <span style="color:#080;font-style:italic">// how it looks.
+</span><span style="color:#080;font-style:italic"></span>
+  <span style="color:#080;font-style:italic">// This class is the configuration for the state. It holds the values (in this
+</span><span style="color:#080;font-style:italic"></span>  <span style="color:#080;font-style:italic">// case the title) provided by the parent (in this case the App widget) and
+</span><span style="color:#080;font-style:italic"></span>  <span style="color:#080;font-style:italic">// used by the build method of the State. Fields in a Widget subclass are
+</span><span style="color:#080;font-style:italic"></span>  <span style="color:#080;font-style:italic">// always marked &#34;final&#34;.
+</span><span style="color:#080;font-style:italic"></span>
+  <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">String</span> title;
+
+  <span style="">@</span>override
+  _MyHomePageState createState() <span style="color:#666">=&gt;</span> _MyHomePageState();
+}
+
+<span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">_MyHomePageState</span> <span style="color:#a2f;font-weight:bold">extends</span> State<span style="color:#666">&lt;</span>MyHomePage<span style="color:#666">&gt;</span> {
+  <span style="color:#0b0;font-weight:bold">int</span> _counter <span style="color:#666">=</span> <span style="color:#666">0</span>;
+
+  <span style="color:#0b0;font-weight:bold">void</span> _incrementCounter() {
+    setState(() {
+      <span style="color:#080;font-style:italic">// This call to setState tells the Flutter framework that something has
+</span><span style="color:#080;font-style:italic"></span>      <span style="color:#080;font-style:italic">// changed in this State, which causes it to rerun the build method below
+</span><span style="color:#080;font-style:italic"></span>      <span style="color:#080;font-style:italic">// so that the display can reflect the updated values. If we changed
+</span><span style="color:#080;font-style:italic"></span>      <span style="color:#080;font-style:italic">// _counter without calling setState(), then the build method would not be
+</span><span style="color:#080;font-style:italic"></span>      <span style="color:#080;font-style:italic">// called again, and so nothing would appear to happen.
+</span><span style="color:#080;font-style:italic"></span>      _counter<span style="color:#666">++</span>;
+    });
+  }
+
+  <span style="">@</span>override
+  Widget build(BuildContext context) {
+    <span style="color:#080;font-style:italic">// This method is rerun every time setState is called, for instance as done
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#080;font-style:italic">// by the _incrementCounter method above.
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#080;font-style:italic">//
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#080;font-style:italic">// The Flutter framework has been optimized to make rerunning build methods
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#080;font-style:italic">// fast, so that you can just rebuild anything that needs updating rather
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#080;font-style:italic">// than having to individually change instances of widgets.
+</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">return</span> Scaffold(
+      <span style="color:#a0a000">appBar:</span> AppBar(
+        <span style="color:#080;font-style:italic">// Here we take the value from the MyHomePage object that was created by
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// the App.build method, and use it to set our appbar title.
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a0a000">title:</span> Text(widget.title),
+      ),
+      <span style="color:#a0a000">body:</span> Center(
+        <span style="color:#080;font-style:italic">// Center is a layout widget. It takes a single child and positions it
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// in the middle of the parent.
+</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a0a000">child:</span> Column(
+          <span style="color:#080;font-style:italic">// Column is also a layout widget. It takes a list of children and
+</span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// arranges them vertically. By default, it sizes itself to fit its
+</span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// children horizontally, and tries to be as tall as its parent.
+</span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">//
+</span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// Invoke &#34;debug painting&#34; (press &#34;p&#34; in the console, choose the
+</span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// &#34;Toggle Debug Paint&#34; action from the Flutter Inspector in Android
+</span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// Studio, or the &#34;Toggle Debug Paint&#34; command in Visual Studio Code)
+</span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// to see the wireframe for each widget.
+</span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">//
+</span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// Column has various properties to control how it sizes itself and
+</span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// how it positions its children. Here we use mainAxisAlignment to
+</span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// center the children vertically; the main axis here is the vertical
+</span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// axis because Columns are vertical (the cross axis would be
+</span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// horizontal).
+</span><span style="color:#080;font-style:italic"></span>          <span style="color:#a0a000">mainAxisAlignment:</span> MainAxisAlignment.center,
+          <span style="color:#a0a000">children:</span> <span style="color:#666">&lt;</span>Widget<span style="color:#666">&gt;</span>[
+            Text(
+              <span style="color:#b44">&#39;You have pushed the button this many times:&#39;</span>,
+            ),
+            Text(
+              <span style="color:#b44">&#39;</span><span style="color:#b68;font-weight:bold">$</span>_counter<span style="color:#b44">&#39;</span>,
+              <span style="color:#a0a000">style:</span> Theme.of(context).textTheme.headline4,
+            ),
+          ],
+        ),
+      ),
+      <span style="color:#a0a000">floatingActionButton:</span> FloatingActionButton(
+        <span style="color:#a0a000">onPressed:</span> _incrementCounter,
+        <span style="color:#a0a000">tooltip:</span> <span style="color:#b44">&#39;Increment&#39;</span>,
+        <span style="color:#a0a000">child:</span> Icon(Icons.add),
+      ), <span style="color:#080;font-style:italic">// This trailing comma makes auto-formatting nicer for build methods.
+</span><span style="color:#080;font-style:italic"></span>    );
+  }
+}
+</code></pre></div><p>The generated application file is approximately 50Mb in size, nearly
+all of which is flutter run time libraries, kotlin, androidx,
+etc. Rather a lot of bloat, considering that most of my apps are about
+200Kb in size.</p>
+
+    </p>
+    
+    
+
+<hr>
+<h3>See Also</h3>
+<ul>
+  
+  <li><a href="/blog/android-kotlin/">Android Kotlin</a></li>
+  
+  <li><a href="/blog/word-count/">Android Word Count</a></li>
+  
+  <li><a href="/blog/hiding-button/">Hiding Edit Button</a></li>
+  
+  <li><a href="/blog/derive-edit-position/">Derive Edit Position from Markdown</a></li>
+  
+  <li><a href="/blog/post/source-code-highlighting/">Source Code Syntax Highlighting</a></li>
+  
+</ul>
+
+
+      <hr>
+  </div>
+
+  
+
+
+        </div>
+          <div class="medium-3 columns" data-sticky-container>
+  <div class="sticky" data-sticky data-anchor="content">
+
+  
+
+  
+
+  <h4>Recent Posts</h4>
+  <ul>
+    
+      <li><a href="/blog/android-flutter/">
+        Android Flutter
+      </a></li>
+    
+      <li><a href="/blog/android-kotlin/">
+        Android Kotlin
+      </a></li>
+    
+      <li><a href="/blog/word-count/">
+        Android Word Count
+      </a></li>
+    
+      <li><a href="/blog/pea-and-ham-soup/">
+        Pea and Ham (or Bacon) Soup
+      </a></li>
+    
+      <li><a href="/blog/caldo-verde/">
+        Caldo Verde
+      </a></li>
+    
+      <li><a href="/blog/turkey-gammon-broccoli-bake/">
+        Turkey Gammon Broccoli Bake
+      </a></li>
+    
+      <li><a href="/blog/draught-hash-brown/">
+        Draught Hash Brown
+      </a></li>
+    
+      <li><a href="/blog/australian-meatball-wiggleoni/">
+        Australian Meatball Wiggleoni
+      </a></li>
+    
+      <li><a href="/blog/not-swedish-meatballs/">
+        Not Swedish Meatballs
+      </a></li>
+    
+      <li><a href="/blog/download-playlist-video/">
+        Download playlist video
+      </a></li>
+    
+  </ul>
+
+  
+    <h4>Links</h4>
+    <ul>
+      
+        <li><a href="https://github.com/billthefarmer">
+          Github
+        </a></li>
+      
+        <li><a href="https://gitlab.com/williamjfarmer">
+          Gitlab
+        </a></li>
+      
+        <li><a href="http://billthefarmer.github.io">
+          Home
+        </a></li>
+      
+    </ul>
+  
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="blog-footer">
+      <div class="row column">
+        <p>
+          
+          Copyright © 2021 Bill Farmer
+          
+        </p>
+        <p>
+          <a href="https://billthefarmer.github.io/blog/android-flutter/#">Back to top</a>
+        </p>
+      </div>
+    </footer>
+
+  <foot>
+
+    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+
+  </foot>
+  </body>
+</html>
