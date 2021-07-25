@@ -31,7 +31,7 @@ Since I wrote Download streamed video video web sites have upped their game to s
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -190,23 +190,23 @@ some of the video segments.</p>
 <p><img src="images/2020/08/Url.png" alt="Url"></p>
 <p>Copy the url. You may be able to play it with <code>ffplay</code>. This will
 generate losts of output.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ffplay https://video3.xhcdn.com/key<span style="color:#666">=</span>LJjdx9Px03F-Y2Zmcw4-Kw,end<span style="color:#666">=</span>1597942800,limit<span style="color:#666">=</span>3/<span style="color:#b62;font-weight:bold">\
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ffplay https://video3.xhcdn.com/key<span style="color:#666">=</span>LJjdx9Px03F-Y2Zmcw4-Kw,end<span style="color:#666">=</span>1597942800,limit<span style="color:#666">=</span>3/<span style="color:#b62;font-weight:bold">\
 </span><span style="color:#b62;font-weight:bold"></span>    <span style="color:#b8860b">data</span><span style="color:#666">=</span>81.174.214.218/speed<span style="color:#666">=</span>0/initial_buffer<span style="color:#666">=</span>275184/media<span style="color:#666">=</span>hlsA/010/877/489/<span style="color:#b62;font-weight:bold">\
 </span><span style="color:#b62;font-weight:bold"></span>    720p.h264.mp4
 </code></pre></div><p>If so, you can use <code>ffmpeg</code> to download the segments and copy them to
 a new file. Again, lots of output.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ffmpeg -i https://video3.xhcdn.com/key<span style="color:#666">=</span>+UoaQySV1FrfRWeeVX6dOA,end<span style="color:#666">=</span>1597939200,limit<span style="color:#666">=</span>3/<span style="color:#b62;font-weight:bold">\
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ffmpeg -i https://video3.xhcdn.com/key<span style="color:#666">=</span>+UoaQySV1FrfRWeeVX6dOA,end<span style="color:#666">=</span>1597939200,limit<span style="color:#666">=</span>3/<span style="color:#b62;font-weight:bold">\
 </span><span style="color:#b62;font-weight:bold"></span>    <span style="color:#b8860b">data</span><span style="color:#666">=</span>81.174.214.218/speed<span style="color:#666">=</span>0/initial_buffer<span style="color:#666">=</span>846704/media<span style="color:#666">=</span>hlsA/013/857/098/<span style="color:#b62;font-weight:bold">\
 </span><span style="color:#b62;font-weight:bold"></span>    720p.h264.mp4 -c copy video.mp4
 </code></pre></div><p>If this doesn&rsquo;t work, use <code>curl</code> to download the index file.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ curl <span style="color:#b44">&#34;https://19-12.b.cdn13.com/hls/bsd/4000/sd/8000/014/953/848/2160p.h264.mp4/index.m3u8?\
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ curl <span style="color:#b44">&#34;https://19-12.b.cdn13.com/hls/bsd/4000/sd/8000/014/953/848/2160p.h264.mp4/index.m3u8?\
 </span><span style="color:#b44">    cdn_creation_time=1597773600&amp;cdn_ttl=14400&amp;cdn_cv_data=81.174.214.218&amp;\
 </span><span style="color:#b44">    cdn_hash=fa429b99fe263a5cdb34180778526c39&#34;</span> -o index.m3u8
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 <span style="color:#666">100</span> <span style="color:#666">10992</span>  <span style="color:#666">100</span> <span style="color:#666">10992</span>    <span style="color:#666">0</span>     <span style="color:#666">0</span>  <span style="color:#666">53882</span>      <span style="color:#666">0</span> --:--:-- --:--:-- --:--:-- <span style="color:#666">53882</span>
 </code></pre></div><p>The file will contain a list of urls for the file segments.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#080;font-style:italic">#EXTM3U</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#080;font-style:italic">#EXTM3U</span>
 <span style="color:#080;font-style:italic">#EXT-X-TARGETDURATION:8</span>
 <span style="color:#080;font-style:italic">#EXT-X-ALLOW-CACHE:YES</span>
 <span style="color:#080;font-style:italic">#EXT-X-PLAYLIST-TYPE:VOD</span>
@@ -221,12 +221,12 @@ https://1-384-19-12.b.cdn13.com/hls/bsd/4000/sd/8000/014/953/848/2160p.h264.mp4/
 </span><span style="color:#b62;font-weight:bold"></span>    <span style="color:#b8860b">cdn_creation_time</span><span style="color:#666">=</span>1597773600&amp;<span style="color:#b8860b">cdn_ttl</span><span style="color:#666">=</span>14400&amp;<span style="color:#b8860b">cdn_cv_data</span><span style="color:#666">=</span>81.174.214.218&amp;<span style="color:#b62;font-weight:bold">\
 </span><span style="color:#b62;font-weight:bold"></span>    <span style="color:#b8860b">cdn_hash</span><span style="color:#666">=</span>fa429b99fe263a5cdb34180778526c39
 </code></pre></div><p>You can then use curl to download the segments.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ curl <span style="color:#b44">&#34;https://1-384-19-12.b.cdn13.com/hls/bsd/4000/sd/8000/014/953/848/2160p.h264.mp4/seg-[1-39]-v1-a1.ts?\
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ curl <span style="color:#b44">&#34;https://1-384-19-12.b.cdn13.com/hls/bsd/4000/sd/8000/014/953/848/2160p.h264.mp4/seg-[1-39]-v1-a1.ts?\
 </span><span style="color:#b44">    cdn_creation_time=1597773600&amp;cdn_ttl=14400&amp;cdn_cv_data=81.174.214.218&amp;\
 </span><span style="color:#b44">    cdn_hash=fa429b99fe263a5cdb34180778526c39&#34;</span> -o <span style="color:#b44">&#34;seg-#1-v1-a1.ts&#34;</span>
 </code></pre></div><p>Then use an editor like <code>emacs</code> or your favourite text editor to
 remove everything except for the file names from the index file.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#080;font-style:italic">#EXTM3U</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#080;font-style:italic">#EXTM3U</span>
 <span style="color:#080;font-style:italic">#EXT-X-TARGETDURATION:8</span>
 <span style="color:#080;font-style:italic">#EXT-X-ALLOW-CACHE:YES</span>
 <span style="color:#080;font-style:italic">#EXT-X-PLAYLIST-TYPE:VOD</span>
@@ -237,7 +237,7 @@ seg-1-v1-a1.ts
 <span style="color:#080;font-style:italic">#EXTINF:8.000,</span>
 seg-2-v1-a1.ts
 </code></pre></div><p>Then use ffmpeg to cancatenate all the segments and turn them into one file.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ffmpeg -i index.m3u8 -c copy video.mp4
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ffmpeg -i index.m3u8 -c copy video.mp4
 </code></pre></div><p>This will produce a lot of output, and the whole thing is a lot of
 hassle, but worth it if you particularly want that video. It should be
 possible to automate this with a script using <code>sed</code> to edit the index

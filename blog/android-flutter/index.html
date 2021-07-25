@@ -31,7 +31,7 @@ $ flutter config --android-studio-dir &#39;D:\adt\Android Studio&#39; Setting &#
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -180,7 +180,7 @@ platform, so I thought I ought to give it a try. It&rsquo;s easy to install,
 just download the <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_2.2.3-stable.zip">sdk</a>, unzip it in a suitable place and add the
 <code>bin</code> folder to your <code>path</code>. I had to tell it where I had installed
 Android Studio.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ flutter config --android-studio-dir <span style="color:#b44">&#39;D:\adt\Android Studio&#39;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ flutter config --android-studio-dir <span style="color:#b44">&#39;D:\adt\Android Studio&#39;</span>
 Setting <span style="color:#b44">&#34;android-studio-dir&#34;</span> value to <span style="color:#b44">&#34;D:\adt\Android Studio&#34;</span>.
 
 You may need to restart any open editors <span style="color:#a2f;font-weight:bold">for</span> them to <span style="color:#a2f">read</span> new settings.
@@ -217,7 +217,7 @@ $ flutter doctor -v
 
 • No issues found!
 </code></pre></div><p>Having installed flutter and got it working, create a sample app.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ flutter create --org org.billthefarmer --project-name hello --platforms android -t app hello
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ flutter create --org org.billthefarmer --project-name hello --platforms android -t app hello
 Creating project hello...
   hello<span style="color:#b62;font-weight:bold">\.</span>gitignore <span style="color:#666">(</span>created<span style="color:#666">)</span>
   hello<span style="color:#b62;font-weight:bold">\.</span>idea<span style="color:#b62;font-weight:bold">\l</span>ibraries<span style="color:#b62;font-weight:bold">\D</span>art_SDK.xml <span style="color:#666">(</span>created<span style="color:#666">)</span>
@@ -262,7 +262,7 @@ In order to run your application, type:
 
 Your application code is in hello<span style="color:#b62;font-weight:bold">\l</span>ib<span style="color:#b62;font-weight:bold">\m</span>ain.dart.
 </code></pre></div><p>And run it&hellip;</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ flutter run
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ flutter run
 Launching lib<span style="color:#b62;font-weight:bold">\m</span>ain.dart on Moto G in debug mode...
 Running Gradle task <span style="color:#b44">&#39;assembleDebug&#39;</span>...                             14.3s
 √  Built build<span style="color:#b62;font-weight:bold">\a</span>pp<span style="color:#b62;font-weight:bold">\o</span>utputs<span style="color:#b62;font-weight:bold">\f</span>lutter-apk<span style="color:#b62;font-weight:bold">\a</span>pp-debug.apk.
@@ -288,14 +288,14 @@ Application finished.
 </code></pre></div><p>Screenshot of resulting app.</p>
 <p><img src="images/2021/07/Screenshot_20210715-213310.png" alt="Flutter app"></p>
 <p>Flutter created a minimal kotlin file, MainActivity.kt.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#a2f;font-weight:bold">package</span> <span style="color:#00f;font-weight:bold">org.billthefarmer.hello</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#a2f;font-weight:bold">package</span> <span style="color:#00f;font-weight:bold">org.billthefarmer.hello</span>
 
 <span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">io.flutter.embedding.android.FlutterActivity</span>
 
 <span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">MainActivity</span>: FlutterActivity() {
 }
 </code></pre></div><p>And a dart file, main.dart.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#a2f;font-weight:bold">import</span> <span style="color:#b44">&#39;package:flutter/material.dart&#39;</span>;
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#a2f;font-weight:bold">import</span> <span style="color:#b44">&#39;package:flutter/material.dart&#39;</span>;
 
 <span style="color:#0b0;font-weight:bold">void</span> main() {
   runApp(MyApp());

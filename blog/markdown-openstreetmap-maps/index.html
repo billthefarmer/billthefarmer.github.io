@@ -34,7 +34,7 @@ I had a request from Marco the other day to put OpenStreetMap maps in my Diary a
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -193,7 +193,7 @@ straightforward, you just use
 variations on that. However the syntax for their embedded iframe API
 doesn&rsquo;t seem to be documented, but you can get the HTML for an
 embedded map from their map page and customise it.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#008000;font-weight:bold">iframe</span> <span style="color:#b44">width</span><span style="color:#666">=</span><span style="color:#b44">&#34;425&#34;</span> <span style="color:#b44">height</span><span style="color:#666">=</span><span style="color:#b44">&#34;350&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#008000;font-weight:bold">iframe</span> <span style="color:#b44">width</span><span style="color:#666">=</span><span style="color:#b44">&#34;425&#34;</span> <span style="color:#b44">height</span><span style="color:#666">=</span><span style="color:#b44">&#34;350&#34;</span>
         <span style="color:#b44">src</span><span style="color:#666">=</span><span style="color:#b44">&#34;https://www.openstreetmap.org/export/embed.html?
 </span><span style="color:#b44">        bbox=3.1528186798095708%2C42.2577141531011%2C3.1886529922485356%2C42.27241862881183&amp;amp;
 </span><span style="color:#b44">        layer=mapnik&#34;</span>
@@ -217,7 +217,7 @@ European locales which use different conventions for co-ordinates. I
 added the option to have a prefix &lsquo;<code>osm:</code>&rsquo;, as using prefixes seems to
 be a markdown convention. It also allows for having different
 maps. The template for the iframe is</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &#34;&lt;<span style="color:#008000;font-weight:bold">iframe</span> <span style="color:#b44">width</span><span style="color:#666">=</span><span style="color:#b44">\&#34;560\&#34;</span> <span style="color:#b44">height</span><span style="color:#666">=</span><span style="color:#b44">\&#34;420\&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &#34;&lt;<span style="color:#008000;font-weight:bold">iframe</span> <span style="color:#b44">width</span><span style="color:#666">=</span><span style="color:#b44">\&#34;560\&#34;</span> <span style="color:#b44">height</span><span style="color:#666">=</span><span style="color:#b44">\&#34;420\&#34;</span>
     <span style="color:#b44">src</span><span style="color:#666">=</span><span style="color:#b44">\&#34;https://www.openstreetmap.org/export/embed.html?</span>
     <span style="color:#b44">bbox</span><span style="color:#666">=</span><span style="color:#b44">%f,%f,%f,%f&amp;amp;layer=mapnik\&#34;</span>
     <span style="color:#b44">style</span><span style="color:#666">=</span><span style="color:#b44">\&#34;border:</span> <span style="color:#b44">1px</span> <span style="color:#b44">solid</span> <span style="color:#b44">black</span><span style="">\&#34;</span>&gt;
@@ -226,7 +226,7 @@ maps. The template for the iframe is</p>
     View Larger Map&lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;&lt;/<span style="color:#008000;font-weight:bold">small</span>&gt;\n&#34;
 </code></pre></div><p>I have replaced the &lsquo;<code>%2C</code>&rsquo;s with commas, and changed the dimensions
 slightly, which seems to work OK. The android Java code to do this is</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// loadMarkdown
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// loadMarkdown
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">loadMarkdown</span><span style="color:#666">(</span>String text<span style="color:#666">)</span>
     <span style="color:#666">{</span>
         markdownView<span style="color:#666">.</span><span style="color:#b44">loadMarkdown</span><span style="color:#666">(</span>getBaseUrl<span style="color:#666">(),</span> markdownCheck<span style="color:#666">(</span>text<span style="color:#666">),</span>
@@ -310,7 +310,7 @@ geo Uri.</p>
 web view, so I have updated the code to use <code>https://</code>. Also, to allow
 the use of <code>http://</code> URLs in the markdown, I have added a line to the
 <code>application</code> element in the app manifest.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">      android:usesCleartextTraffic=&#34;true&#34;
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">      android:usesCleartextTraffic=&#34;true&#34;
 </code></pre></div>
     </p>
     

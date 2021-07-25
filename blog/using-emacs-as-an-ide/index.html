@@ -28,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -191,10 +191,10 @@ code {
 <p>Some of these things are on the menu, but the keyboard shortcuts are easier to use. You need to customise Emacs to do some of the things I use it for.</p>
 <p><img src="images/2016/12/Custom.png" alt="Custom"></p>
 <p>There are several ways of customising Emacs, but it all ends up in your ~/.emacs config file. First off, you need to install the Emacs packages you need, like groovy-mode for editing Android Gradle build files, JS3-mode for Javascript files, Markdown-mode for Github README files, yaml-mode for Travis Cl build files, etc. This is on the Options-&gt;Manage Emacs Packages menu. You can change some settings on the Options menu, like Options-&gt;Use CUA keys (Cut/Paste with C-x/C-c/C-v), but remember to Options-&gt;Save Options before you quit. Some of them are buried deeply in Options-&gt;Customise Emacs and can be a pain to find. It’s easier to just put them in your ~/.emacs file. Examples are:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">    <span style="color:#666">&#39;</span>(<span style="color:#b8860b">c-basic-offset</span> <span style="color:#666">4</span>)
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">    <span style="color:#666">&#39;</span>(<span style="color:#b8860b">c-basic-offset</span> <span style="color:#666">4</span>)
     <span style="color:#666">&#39;</span>(<span style="color:#b8860b">c-offsets-alist</span> (<span style="color:#a2f;font-weight:bold">quote</span> ((<span style="color:#b8860b">substatement-open</span> <span style="color:#666">.</span> <span style="color:#666">0</span>))))
 </code></pre></div><p>That gives you an indent of four spaces for all code editing, and makes it put the opening bracket of if or for statements in the right place.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">    (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;auto-mode-alist</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;\\.c\\&#39;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">c++-mode</span>))
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">    (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;auto-mode-alist</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;\\.c\\&#39;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">c++-mode</span>))
     (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;auto-mode-alist</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;\\.h\\&#39;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">c++-mode</span>))
     (<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;nxml-mode-hook</span>
     	  (<span style="color:#a2f">lambda</span> ()

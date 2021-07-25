@@ -34,7 +34,7 @@ It used to run under 32 bit windows but wouldn&rsquo;t run under 64 bit windows 
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -205,7 +205,7 @@ functions which offer similar functionality.</p>
 <p>However, not all the events offered are keyboard events, and both
 keydown and keyup events are presented. The following two functions
 deal with this.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#080;font-style:italic">// kbhit
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#080;font-style:italic">// kbhit
 </span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">kbhit</span>()
 {
     INPUT_RECORD record;
@@ -239,7 +239,7 @@ and timed actions at the same time, using a lot of CPU. So
 <a href="https://docs.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject">WaitForSingleObject()</a> with a timeout is used to drop the CPU
 usage and still allow the timed actions. Shift, control, alt and caps
 lock key events are discarded.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">getch</span>()
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">getch</span>()
 {
     INPUT_RECORD record;
     <span style="color:#a2f;font-weight:bold">static</span> BOOL special;
@@ -295,7 +295,7 @@ existing console window. The <a href="https://docs.microsoft.com/en-us/windows/c
 ensure the screen buffer is the right size and get rid of any scroll
 bars. Resizing the window or making it full screen destroys the
 existing display, but subsequent output is positioned correctly.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">
 <span style="color:#080;font-style:italic">// textmode
 </span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">textmode</span>()
 {

@@ -31,7 +31,7 @@ But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter 
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -178,7 +178,7 @@ code {
       <p>I’ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: ‘Blank space shalt not be significant except to separate tokens where necessary.’. That’s why you can minimise a lengthy JavaScript script like <a href="http://jquery.com">jQuery</a> to one enormously long line and it still works just fine.</p>
 <p>But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter an advent calender competition which involved checking a web page to see if your name has come up and sending an email if it does. So I thought that’s an ideal little job to run on my <a href="http://www.raspberrypi.org">Raspberry Pi</a>. So I installed the ssmtp package and attempted to test sending an email. After several days of faffing about with no joy I gave up.</p>
 <p>One of the things that comes front and centre with the standard <a href="http://www.raspberrypi.org/downloads">Raspbian</a> installation is Python. So, after checking the documentation for smtp and http libraries, etc, I decided to give it a go. You can test your code on the command line before sticking it in a file, and you get, unlike ssmtp, helpful messages that tell you what’s going on. So you end up with a script that looks like this, and it actually appears to work.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#080;font-style:italic">#! /usr/bin/env python</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#080;font-style:italic">#! /usr/bin/env python</span>
 
 <span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">urllib2</span>
 <span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">smtplib</span>
@@ -218,7 +218,7 @@ f<span style="color:#666">.</span>close()
 <span style="color:#a2f;font-weight:bold">with</span> file(<span style="color:#b44">&#34;last&#34;</span>, <span style="color:#b44">&#34;a&#34;</span>):
   utime(<span style="color:#b44">&#34;last&#34;</span>, <span style="color:#a2f;font-weight:bold">None</span>)
 </code></pre></div><p>So, very careful with the indenting. We shall have to see if anyone wins anything. The script gets fired off periodically with a crontab entry.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#b8860b">CRON_TZ</span><span style="color:#666">=</span>Europe/London
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#b8860b">CRON_TZ</span><span style="color:#666">=</span>Europe/London
 <span style="color:#b8860b">MAILTO</span><span style="color:#666">=</span>bill
 */1 9-10 1-24 <span style="color:#666">12</span> * <span style="color:#b8860b">$HOME</span>/advent/advent.py
 </code></pre></div>

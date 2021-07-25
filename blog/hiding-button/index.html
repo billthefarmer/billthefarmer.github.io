@@ -31,7 +31,7 @@ I have seen apps which hide this button on scrolling, and this was one of the su
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -185,7 +185,7 @@ of the suggestions by users. Getting this to work correctly turned out
 to be more complex than initially considered, requiring two boolean
 flags and a lambda expression.</p>
 <p>These flags are required to keep track of scrolling direction.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#0b0;font-weight:bold">int</span> VISIBLE_DELAY <span style="color:#666">=</span> 2048<span style="color:#666">;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#0b0;font-weight:bold">int</span> VISIBLE_DELAY <span style="color:#666">=</span> 2048<span style="color:#666">;</span>
 
     <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">boolean</span> scrollUp <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
     <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">boolean</span> scrollDn <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
@@ -193,7 +193,7 @@ flags and a lambda expression.</p>
 Marshmallow. The lambda expression <code>showEdit()</code> is required to restore
 the button after a delay. The animation is started and the flags
 reset.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>Build<span style="color:#666">.</span><span style="color:#b44">VERSION</span><span style="color:#666">.</span><span style="color:#b44">SDK_INT</span> <span style="color:#666">&gt;=</span> Build<span style="color:#666">.</span><span style="color:#b44">VERSION_CODES</span><span style="color:#666">.</span><span style="color:#b44">M</span><span style="color:#666">)</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>Build<span style="color:#666">.</span><span style="color:#b44">VERSION</span><span style="color:#666">.</span><span style="color:#b44">SDK_INT</span> <span style="color:#666">&gt;=</span> Build<span style="color:#666">.</span><span style="color:#b44">VERSION_CODES</span><span style="color:#666">.</span><span style="color:#b44">M</span><span style="color:#666">)</span>
             <span style="color:#666">{</span>
                 <span style="color:#a2f;font-weight:bold">final</span> Runnable showEdit <span style="color:#666">=</span> <span style="color:#666">()</span> <span style="color:#666">-&gt;</span>
                 <span style="color:#666">{</span>
@@ -205,7 +205,7 @@ reset.</p>
 the flag is set to ensure it only happens once. The delayed call to
 <code>showEdit()</code> is removed and posted again until the view stops
 scrolling, so the delay is from when it stops.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">                <span style="color:#080;font-style:italic">// onScrollChange
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">                <span style="color:#080;font-style:italic">// onScrollChange
 </span><span style="color:#080;font-style:italic"></span>                markdownView<span style="color:#666">.</span><span style="color:#b44">setOnScrollChangeListener</span><span style="color:#666">((</span>v<span style="color:#666">,</span> x<span style="color:#666">,</span> y<span style="color:#666">,</span> oldX<span style="color:#666">,</span> oldY<span style="color:#666">)</span> <span style="color:#666">-&gt;</span>
                 <span style="color:#666">{</span>
                     <span style="color:#080;font-style:italic">// Scroll up
@@ -228,7 +228,7 @@ scrolling, so the delay is from when it stops.</p>
 </code></pre></div><p>On a scroll down the button is restored and the flags are set to
 ensure it only happens once. The delayed call is reset to take care of
 bounce so the button isn&rsquo;t restored again.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">                    <span style="color:#a2f;font-weight:bold">else</span> <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(!</span>scrollDn<span style="color:#666">)</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">                    <span style="color:#a2f;font-weight:bold">else</span> <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(!</span>scrollDn<span style="color:#666">)</span>
                     <span style="color:#666">{</span>
                         <span style="color:#080;font-style:italic">// Set flags
 </span><span style="color:#080;font-style:italic"></span>                        scrollUp <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
@@ -246,7 +246,7 @@ bounce so the button isn&rsquo;t restored again.</p>
 </code></pre></div><p>The app includes previously added functions to hide and restore the
 button using long touches. The flags are reset to stop unwanted
 interaction.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">            <span style="color:#080;font-style:italic">// On long click
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">            <span style="color:#080;font-style:italic">// On long click
 </span><span style="color:#080;font-style:italic"></span>            markdownView<span style="color:#666">.</span><span style="color:#b44">setOnLongClickListener</span><span style="color:#666">(</span>v <span style="color:#666">-&gt;</span>
             <span style="color:#666">{</span>
                 <span style="color:#080;font-style:italic">// Show button
@@ -260,7 +260,7 @@ interaction.</p>
 </code></pre></div><p>There is no point having an animation on hiding the button because it
 is hidden by the user&rsquo;s finger. The flag is set so it isn&rsquo;t hidden
 again on scroll up.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>edit <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>edit <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
         <span style="color:#666">{</span>
             <span style="color:#080;font-style:italic">// On long click
 </span><span style="color:#080;font-style:italic"></span>            edit<span style="color:#666">.</span><span style="color:#b44">setOnLongClickListener</span><span style="color:#666">(</span>v <span style="color:#666">-&gt;</span>
@@ -273,7 +273,7 @@ again on scroll up.</p>
             <span style="color:#666">});</span>
         <span style="color:#666">}</span>
 </code></pre></div><p>The function to start the button animation.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// startAnimation
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// startAnimation
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">startAnimation</span><span style="color:#666">(</span>View view<span style="color:#666">,</span> <span style="color:#0b0;font-weight:bold">int</span> anim<span style="color:#666">,</span> <span style="color:#0b0;font-weight:bold">int</span> visibility<span style="color:#666">)</span>
     <span style="color:#666">{</span>
         Animation animation <span style="color:#666">=</span> AnimationUtils<span style="color:#666">.</span><span style="color:#b44">loadAnimation</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">,</span> anim<span style="color:#666">);</span>

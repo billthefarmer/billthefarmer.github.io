@@ -31,7 +31,7 @@ Implementation As both the plugin and TCPDF are hosted on GitHub, the best way t
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -186,7 +186,7 @@ implement the plugin, and TCPDF if it is not available on the web
 server, is to clone the repositories and use symbolic links to provide
 the plugin and the library in the right places. The same method could
 be used to implement WordPress.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">user@server:~ $ git clone https://github.com/billthefarmer/questionnaire.git
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">user@server:~ $ git clone https://github.com/billthefarmer/questionnaire.git
 user@server:~ $ <span style="color:#a2f">cd</span> /var/www/html/wordpress/wp-content/plugins/
 user@server:/var/www/html/wordpress/wp-content/plugins $ ln -s ~/questionnaire/wordpress questionnaire_maker
 user@server:/var/www/html/wordpress/wp-content/plugins $ <span style="color:#a2f">cd</span> ~
@@ -196,27 +196,27 @@ user@server:~/questionnaire/wordpress $ ln -s ~/tcpdf
 </code></pre></div><p>The plugin includes code to load TCPDF if it is present and show a
 message if it isn&rsquo;t. Using the path <code>tcpdf/tcpdf.php</code> will pick it up
 either from <code>/usr/share/php</code>, if installed, or from the symbolic link.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#080;font-style:italic">// Include TCPDF, if present
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#080;font-style:italic">// Include TCPDF, if present
 </span><span style="color:#080;font-style:italic"></span><span style="color:#b8860b">$tcpdf_present</span> <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">include_once</span> <span style="color:#b44">&#39;tcpdf/tcpdf.php&#39;</span>;
 </code></pre></div><p>After more work on this project I needed another library which makes
 use of <a href="https://getcomposer.org">composer</a> for dependencies. TCPDF doesn&rsquo;t have any, but you
 can create a <code>composer.json</code> in the plugin and load TCPDF.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">user@server:~/questionnaire/wordpress $ php composer.phar require tecnickcom/tcpdf
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">user@server:~/questionnaire/wordpress $ php composer.phar require tecnickcom/tcpdf
 </code></pre></div><p>Using composer, the code to load libraries changes to pick them up
 from the vendor folder.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#080;font-style:italic">// Include composer libraries, if present
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#080;font-style:italic">// Include composer libraries, if present
 </span><span style="color:#080;font-style:italic"></span><span style="color:#b8860b">$vendor_present</span> <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">include_once</span> <span style="color:#b44">&#39;vendor/autoload.php&#39;</span>
 </code></pre></div><h3 id="displaying-errors">Displaying errors</h3>
 <p>To avoid the dreaded WordPress White Screen of Death (WSOD), you can
 temporarily put a couple of lines at the top of the plugin to display
 PHP errors.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">error_reporting(<span style="color:#a2f;font-weight:bold">E_ALL</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">error_reporting(<span style="color:#a2f;font-weight:bold">E_ALL</span>);
 ini_set(<span style="color:#b44">&#39;display_errors&#39;</span>, <span style="color:#666">1</span>);
 </code></pre></div><h3 id="creating-the-document">Creating the document</h3>
 <p>The code to create a pdf document is fairly straightforward. The
 examples given always seem to specify everything, but by making note
 of the defaults, that isn&rsquo;t necessary.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        <span style="color:#080;font-style:italic">// Create document
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        <span style="color:#080;font-style:italic">// Create document
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$pdf</span> <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> TCPDF();
         <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">setPageUnit</span>(<span style="color:#b44">&#39;pt&#39;</span>);
 
@@ -236,7 +236,7 @@ of the defaults, that isn&rsquo;t necessary.</p>
 down a line, you need to nest three functions to get the right result.
 The functions to add text make use of the <code>MultiCell()</code> function. Also
 the <code>SetFont()</code> function is used to set the font type.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        <span style="color:#080;font-style:italic">// New line
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        <span style="color:#080;font-style:italic">// New line
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">function</span> <span style="color:#00a000">new_text_line</span>(<span style="color:#b8860b">$pdf</span>)
         {
             <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">Ln</span>(<span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">getCellHeight</span>(<span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">getFontSize</span>()));
@@ -293,7 +293,7 @@ height is empty or zero, height in proportion to width, else
 height. If x is empty or zero, left margin, if negative, right margin,
 else x. If y is empty or zero, top margin, negative, bottom margin,
 else y.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        <span style="color:#080;font-style:italic">// Add image
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        <span style="color:#080;font-style:italic">// Add image
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">function</span> <span style="color:#00a000">add_image_object</span>(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$image</span>, <span style="color:#b8860b">$margin</span>, <span style="color:#b8860b">$textWidth</span>,
                                   <span style="color:#b8860b">$pageHeight</span>, <span style="color:#b8860b">$pageWidth</span>, <span style="color:#b8860b">$path</span>)
         {
@@ -309,7 +309,7 @@ else y.</p>
                         <span style="color:#b8860b">$type</span>, <span style="color:#b8860b">$link</span>);
         };
 </code></pre></div><p>The report starts with a preamble.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
         <span style="color:#080;font-style:italic">// Preamble
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">foreach</span> (<span style="color:#b8860b">$pages</span> <span style="color:#a2f;font-weight:bold">as</span> <span style="color:#b8860b">$page</span>)
         {            
@@ -326,7 +326,7 @@ else y.</p>
         }
 </code></pre></div><p>Then the report body. Because each section starts with an image, start
 a new page if near the bottom.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
         <span style="color:#080;font-style:italic">// Report
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">AddPage</span>();
 
@@ -340,7 +340,7 @@ a new page if near the bottom.</p>
             <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">AddPage</span>();
     <span style="color:#080;font-style:italic">// ...
 </span></code></pre></div><p>Then the last page.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
         <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">AddPage</span>();
 
         <span style="color:#080;font-style:italic">// Last page text
@@ -352,7 +352,7 @@ a new page if near the bottom.</p>
             add_image_object(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$image</span>, <span style="color:#b8860b">$margin</span>, <span style="color:#b8860b">$textWidth</span>,
                              <span style="color:#b8860b">$pageHeight</span>, <span style="color:#b8860b">$pageWidth</span>, <span style="color:#b8860b">$path</span>);
 </code></pre></div><p>Output the document, and return the path to it.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
         <span style="color:#080;font-style:italic">// Output document
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">Output</span>(<span style="color:#b8860b">$path</span> <span style="color:#666">.</span> <span style="color:#b44">&#39;report/&#39;</span> <span style="color:#666">.</span> <span style="color:#b8860b">$filename</span>, <span style="color:#b44">&#39;F&#39;</span>);
 
@@ -360,7 +360,7 @@ a new page if near the bottom.</p>
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">return</span> plugins_url(<span style="color:#b44">&#39;report/&#39;</span> <span style="color:#666">.</span> <span style="color:#b8860b">$filename</span>, <span style="color:#800">__FILE__</span>);
 </code></pre></div><h3 id="creating-an-email">Creating an email</h3>
 <p>To send the report, create an email and send it.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        <span style="color:#080;font-style:italic">// Set fields
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        <span style="color:#080;font-style:italic">// Set fields
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$to</span> <span style="color:#666">=</span> <span style="color:#b44">&#34;</span><span style="color:#b68;font-weight:bold">$username</span><span style="color:#b44"> &lt;</span><span style="color:#b68;font-weight:bold">$usermail</span><span style="color:#b44">&gt;&#34;</span>;
         <span style="color:#b8860b">$from_email</span> <span style="color:#666">=</span> <span style="color:#b8860b">$data</span><span style="color:#666">-&gt;</span><span style="color:#b44">from_email</span>;
         <span style="color:#b8860b">$from_name</span> <span style="color:#666">=</span> <span style="color:#b8860b">$data</span><span style="color:#666">-&gt;</span><span style="color:#b44">from_name</span>;

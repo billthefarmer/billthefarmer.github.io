@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -181,7 +181,7 @@ searching external content rather than text. There is a mention of
 there. To get a search dialog in the toolbar that pops up when needed,
 you need a seach item in the menu. It should be the first item, unless
 there is a good reason otherwise.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 <span style="color:#008000;font-weight:bold">&lt;menu</span>
     <span style="color:#b44">xmlns:android=</span><span style="color:#b44">&#34;http://schemas.android.com/apk/res/android&#34;</span>
   <span style="">&lt;item</span>
@@ -195,7 +195,7 @@ rather than the toolbar. The dialog pops up and collapses all by
 itself in response to user interaction without any developer code. To
 implement the search, you need an <a href="https://developer.android.com/reference/android/widget/SearchView.OnQueryTextListener.html">OnQueryTextListener</a>, which is
 called by the <a href="https://developer.android.com/reference/android/widget/SearchView.html">SearchView</a>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// onCreateOptionsMenu
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// onCreateOptionsMenu
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f">@Override</span>
     <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">onCreateOptionsMenu</span><span style="color:#666">(</span>Menu menu<span style="color:#666">)</span>
     <span style="color:#666">{</span>
@@ -217,7 +217,7 @@ called by the <a href="https://developer.android.com/reference/android/widget/Se
 </code></pre></div><p>Get an extra submit button in the toolbar, change the keyboard button
 to a right arrow, and set the listener</p>
 <h3 id="interactive-case-insensitive-search">Interactive Case Insensitive Search</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// QueryTextListener
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// QueryTextListener
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">QueryTextListener</span>
         <span style="color:#a2f;font-weight:bold">implements</span> SearchView<span style="color:#666">.</span><span style="color:#b44">OnQueryTextListener</span>
     <span style="color:#666">{</span>
@@ -342,7 +342,7 @@ search index is provided to the matcher <code>find()</code> method so the search
 stays in position if the user deletes search text, duplicating web
 view functionality.</p>
 <h3 id="interactive-regular-expression-search">Interactive Regular Expression Search</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// QueryTextListener
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// QueryTextListener
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">QueryTextListener</span>
         <span style="color:#a2f;font-weight:bold">implements</span> SearchView<span style="color:#666">.</span><span style="color:#b44">OnQueryTextListener</span>
     <span style="color:#666">{</span>
@@ -462,7 +462,7 @@ the index does &lsquo;find next&rsquo;. The check of the text view layout is to
 deal with a null pointer exception when the user loads a file. The
 <code>matcher.reset()</code> statement makes the search begin again from the
 start.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// onOptionsItemSelected
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// onOptionsItemSelected
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f">@Override</span>
     <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">onOptionsItemSelected</span><span style="color:#666">(</span>MenuItem item<span style="color:#666">)</span>
     <span style="color:#666">{</span>
@@ -485,7 +485,7 @@ menu, like loading another file, it won&rsquo;t go away, so it is removed
 before that happens. Collapsing the search view clears the search
 text, so the callback removes the highlight.</p>
 <h3 id="find-text-in-files">Find text in files</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
     <span style="color:#080;font-style:italic">// findAll
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">findAll</span><span style="color:#666">()</span>
     <span style="color:#666">{</span>

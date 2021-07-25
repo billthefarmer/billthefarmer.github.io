@@ -34,7 +34,7 @@ The data used was originally intended for use in postscript, so the vertical axi
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -183,7 +183,7 @@ curves needed for the treble and bass clef. What is needed is a source
 of vector drawing coordinates.</p>
 <p>The data used was originally intended for use in postscript, so the
 vertical axis is reversed.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// Treble clef
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// Treble clef
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">float</span> tc<span style="color:#666">[][]=</span>
     <span style="color:#666">{</span>
         <span style="color:#666">{-</span>6<span style="color:#666">,</span> 16<span style="color:#666">},</span>  <span style="color:#666">{-</span>8<span style="color:#666">,</span> 13<span style="color:#666">},</span>  <span style="color:#666">{-</span>14<span style="color:#666">,</span> 19<span style="color:#666">},</span>  <span style="color:#666">{-</span>10<span style="color:#666">,</span> 35<span style="color:#666">},</span>  <span style="color:#666">{</span>2<span style="color:#666">,</span> 35<span style="color:#666">},</span>  <span style="color:#666">{</span>8<span style="color:#666">,</span> 37<span style="color:#666">},</span>
@@ -223,7 +223,7 @@ vertical axis is reversed.</p>
 </code></pre></div><p>Both these sets of points are made up of an initial move, followed by
 a series of cubic bezier curves. The bass clef has three sections, the
 symbol, followed by the two dots.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        <span style="color:#080;font-style:italic">// Treble clef
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        <span style="color:#080;font-style:italic">// Treble clef
 </span><span style="color:#080;font-style:italic"></span>        tclef <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> Path<span style="color:#666">();</span>
         tclef<span style="color:#666">.</span><span style="color:#b44">moveTo</span><span style="color:#666">(</span>tc<span style="color:#666">[</span>0<span style="color:#666">][</span>0<span style="color:#666">],</span> tc<span style="color:#666">[</span>0<span style="color:#666">][</span>1<span style="color:#666">]);</span>
         tclef<span style="color:#666">.</span><span style="color:#b44">lineTo</span><span style="color:#666">(</span>tc<span style="color:#666">[</span>1<span style="color:#666">][</span>0<span style="color:#666">],</span> tc<span style="color:#666">[</span>1<span style="color:#666">][</span>1<span style="color:#666">]);</span>
@@ -253,7 +253,7 @@ symbol, followed by the two dots.</p>
                           bc<span style="color:#666">[</span>i <span style="color:#666">+</span> 2<span style="color:#666">][</span>0<span style="color:#666">],</span> bc<span style="color:#666">[</span>i <span style="color:#666">+</span> 2<span style="color:#666">][</span>1<span style="color:#666">]);</span>
 </code></pre></div><p>It is necessary to scale the paths to fit the view they are to be
 drawn in and calculate the line spacing for the staff lines.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        lineHeight <span style="color:#666">=</span> height <span style="color:#666">/</span> 14f<span style="color:#666">;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        lineHeight <span style="color:#666">=</span> height <span style="color:#666">/</span> 14f<span style="color:#666">;</span>
         margin <span style="color:#666">=</span> width <span style="color:#666">/</span> 32<span style="color:#666">;</span>
 
         RectF bounds <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> RectF<span style="color:#666">();</span>
@@ -276,7 +276,7 @@ drawn in and calculate the line spacing for the staff lines.</p>
 </code></pre></div><p>The staff consists of two sets of five lines, closer together than is
 usual to allow for a continuous scale from top to bottom. There are
 also three leger lines to allow for showing notes off the staff lines.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
         <span style="color:#080;font-style:italic">// Draw staff
 </span><span style="color:#080;font-style:italic"></span>        canvas<span style="color:#666">.</span><span style="color:#b44">translate</span><span style="color:#666">(</span>0<span style="color:#666">,</span> height <span style="color:#666">/</span> 2f<span style="color:#666">);</span>
         <span style="color:#a2f;font-weight:bold">for</span> <span style="color:#666">(</span><span style="color:#0b0;font-weight:bold">int</span> i <span style="color:#666">=</span> 1<span style="color:#666">;</span> i <span style="color:#666">&lt;</span> 6<span style="color:#666">;</span> i<span style="color:#666">++)</span>

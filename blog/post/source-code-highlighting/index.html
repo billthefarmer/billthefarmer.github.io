@@ -31,7 +31,7 @@ HTML output is not very useful for a text editor. It could be used with Html.fro
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -196,7 +196,7 @@ time. For example MacOS C and Objective C uses a convention of
 and types in the above languages, sort them and delete duplicates and
 make regular expressions. The <code>\\b</code> means a word boundary to stop
 embedded words being highlighted.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String KEYWORDS <span style="color:#666">=</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String KEYWORDS <span style="color:#666">=</span>
         <span style="color:#b44">&#34;\\b(abstract|and|arguments|as(m|sert|sociativity)?|auto|break|&#34;</span> <span style="color:#666">+</span>
         <span style="color:#b44">&#34;case|catch|chan|char|class|con(st|tinue|venience)|&#34;</span> <span style="color:#666">+</span>
         <span style="color:#b44">&#34;de(bugger|f|fault|fer|init|l|lete)|didset|do|dynamic|&#34;</span> <span style="color:#666">+</span>
@@ -222,13 +222,13 @@ embedded words being highlighted.</p>
 relies on the file extension, the <a href="https://github.com/alecthomas/chroma" title="https://github.com/alecthomas/chroma">Chroma</a> library used here relies
 on being told the language. The text editor has the file extension, so
 another regular expression to check file extensions.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String CC_EXT <span style="color:#666">=</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String CC_EXT <span style="color:#666">=</span>
         <span style="color:#b44">&#34;\\.(c(c|pp|xx|\\+\\+)?|go|h|java|js|m|py|swift)&#34;</span><span style="color:#666">;</span>
 </code></pre></div><p>Check highlighting. The app also does HTML and CSS and has a syntax
 highlight option. The highlighting code is called with a small delay
 after each action that might change or scroll the text, and after
 removing the previous call.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// checkHighlight
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// checkHighlight
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">checkHighlight</span><span style="color:#666">()</span>
     <span style="color:#666">{</span>
         <span style="color:#080;font-style:italic">// No syntax
@@ -281,7 +281,7 @@ a long source file is too slow. Adding highlighted spans causes the
 view hierarchy to re-layout the views which causes the text to scroll
 to bring the current selection into view. This is annoying when
 scrolling the text, so move the selection if not editing.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// highlightText
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// highlightText
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">highlightText</span><span style="color:#666">()</span>
     <span style="color:#666">{</span>
         <span style="color:#080;font-style:italic">// Get visible extent
@@ -393,7 +393,7 @@ scrolling the text, changing the text and dismissing the
 keyboard. There is no built in check on the keyboard, it can only be
 detected by checking view sizes. Only trigger the highlight on
 dismissing the keyboard.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">            textView<span style="color:#666">.</span><span style="color:#b44">getViewTreeObserver</span><span style="color:#666">().</span><span style="color:#b44">addOnGlobalLayoutListener</span><span style="color:#666">(</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">            textView<span style="color:#666">.</span><span style="color:#b44">getViewTreeObserver</span><span style="color:#666">().</span><span style="color:#b44">addOnGlobalLayoutListener</span><span style="color:#666">(</span>
                 <span style="color:#a2f;font-weight:bold">new</span> ViewTreeObserver<span style="color:#666">.</span><span style="color:#b44">OnGlobalLayoutListener</span><span style="color:#666">()</span>
             <span style="color:#666">{</span>
                 <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">boolean</span> keyboard<span style="color:#666">;</span>
@@ -431,7 +431,7 @@ styles produces a rather long list, and the <code>\\b</code> word boundary
 doesn&rsquo;t work properly because of the dashes in the styles. So remove
 the dashes and create a list of unique styles which is a much shorter
 list.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String HTML_TAGS <span style="color:#666">=</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String HTML_TAGS <span style="color:#666">=</span>
         <span style="color:#b44">&#34;\\b(html|base|head|link|meta|style|title|body|address|article|&#34;</span> <span style="color:#666">+</span>
         <span style="color:#b44">&#34;aside|footer|header|h\\d|hgroup|main|nav|section|blockquote|dd|&#34;</span> <span style="color:#666">+</span>
         <span style="color:#b44">&#34;dir|div|dl|dt|figcaption|figure|hr|li|main|ol|p|pre|ul|a|abbr|&#34;</span> <span style="color:#666">+</span>

@@ -31,7 +31,7 @@ jQuery(document).ready(function($) { // ...  // Process the start button  $(&#34
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -179,7 +179,7 @@ code {
 example using <a href="https://jquery.com">jQuery</a> in JavaScript all the work gets done in
 anonymous functions unless you particularly want to extract them and
 give them names&hellip;</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">jQuery(<span style="color:#a2f">document</span>).ready(<span style="color:#a2f;font-weight:bold">function</span>($) {
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">jQuery(<span style="color:#a2f">document</span>).ready(<span style="color:#a2f;font-weight:bold">function</span>($) {
     <span style="color:#080;font-style:italic">// ...
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#080;font-style:italic">// Process the start button
 </span><span style="color:#080;font-style:italic"></span>    $(<span style="color:#b44">&#34;#start&#34;</span>).click(<span style="color:#a2f;font-weight:bold">function</span>() {
@@ -193,7 +193,7 @@ give them names&hellip;</p>
 });
 </code></pre></div><p>In C++ the syntax is curious in that there are a pair of square
 brackets enclosing &lsquo;captured&rsquo; variables&hellip;</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C">    <span style="color:#080;font-style:italic">// Must have at least one lambda expression
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C">    <span style="color:#080;font-style:italic">// Must have at least one lambda expression
 </span><span style="color:#080;font-style:italic"></span>    gdk_threads_add_idle([](gpointer widget) <span style="color:#666">-&gt;</span> gboolean
     {
         gtk_widget_queue_draw(GTK_WIDGET(widget));
@@ -203,7 +203,7 @@ brackets enclosing &lsquo;captured&rsquo; variables&hellip;</p>
 function is called a block. I tried to make it a lambda expression but
 had to give up. Whether this is an Objective C or C construct I don&rsquo;t
 know&hellip;</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080;font-style:italic">// Input proc
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080;font-style:italic">// Input proc
 </span><span style="color:#080;font-style:italic"></span>OSStatus <span style="color:#00a000">InputProc</span>(<span style="color:#0b0;font-weight:bold">void</span> <span style="color:#666">*</span>inRefCon, AudioUnitRenderActionFlags <span style="color:#666">*</span>ioActionFlags,
 		   <span style="color:#a2f;font-weight:bold">const</span> AudioTimeStamp <span style="color:#666">*</span>inTimeStamp, UInt32 inBusNumber,
 		   UInt32 inNumberFrames, AudioBufferList <span style="color:#666">*</span>ioData)
@@ -227,7 +227,7 @@ know&hellip;</p>
 </code></pre></div><p>In java they can be used for callbacks or listeners. The syntax is
 simpler, you don&rsquo;t even need the brackets if there&rsquo;s only one
 argument&hellip;</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">                showEdit <span style="color:#666">=</span> <span style="color:#666">()</span> <span style="color:#666">-&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">                showEdit <span style="color:#666">=</span> <span style="color:#666">()</span> <span style="color:#666">-&gt;</span>
                 <span style="color:#666">{</span>
                     startAnimation<span style="color:#666">(</span>edit<span style="color:#666">,</span> R<span style="color:#666">.</span><span style="color:#b44">anim</span><span style="color:#666">.</span><span style="color:#b44">fade_in</span><span style="color:#666">,</span> View<span style="color:#666">.</span><span style="color:#b44">VISIBLE</span><span style="color:#666">);</span>
                     scrollUp <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>

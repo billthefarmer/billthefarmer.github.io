@@ -31,7 +31,7 @@ I recently decided to port it to Swift to avoid having to attempt to learn Objec
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -186,7 +186,7 @@ to know about.</p>
 <p>Having translated the Core Audio part of the app to Swift, I
 discovered that part of it refused to work. The same code originally
 written in C works fine.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">        <span style="color:#a2f;font-weight:bold">var</span> <span style="color:#b8860b">id</span>: AudioDeviceID = kAudioObjectUnknown
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">        <span style="color:#a2f;font-weight:bold">var</span> <span style="color:#b8860b">id</span>: AudioDeviceID = kAudioObjectUnknown
 
         <span style="color:#080;font-style:italic">// Get the default input device</span>
         <span style="color:#a2f;font-weight:bold">var</span> <span style="color:#b8860b">inputDeviceAOPA</span>: AudioObjectPropertyAddress =
@@ -228,7 +228,7 @@ written in C works fine.</p>
 	    <span style="color:#a2f;font-weight:bold">return</span> status
         }
 </code></pre></div><p>Swift version. This fails to set the input device with an error.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">    AudioDeviceID id;
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">    AudioDeviceID id;
     size <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">sizeof</span>(id);
 
     <span style="color:#080;font-style:italic">// Get the default input device
@@ -272,9 +272,9 @@ amount of interoperability with Swift. In order for this to work, two
 special include files need to be used. <code>&lt;AppName&gt;-Bridging-Header.h</code>
 allows Swift to access C data. It can just include the C include
 file. Use the switch <code>-import-objc-header</code> to import this header.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080">#include</span> <span style="color:#080">&#34;Audio.h&#34;</span><span style="color:#080">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080">#include</span> <span style="color:#080">&#34;Audio.h&#34;</span><span style="color:#080">
 </span></code></pre></div><p>To allow C to access Swift data requires the use of <code>&lt;AppName&gt;-Swift.h</code>, which is created by the Swift compiler using the switch <code>-emit-objc-header-path</code>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Makefile" data-lang="Makefile"><span style="color:#b8860b">HEADER</span> <span style="color:#666">=</span> Tuner-Bridging-Header.h
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Makefile" data-lang="Makefile"><span style="color:#b8860b">HEADER</span> <span style="color:#666">=</span> Tuner-Bridging-Header.h
 <span style="color:#b8860b">SWIFTH</span> <span style="color:#666">=</span> Tuner-Swift.h
 
 <span style="color:#b8860b">SOURCES</span> <span style="color:#666">=</span> AppDelegate.swift ScopeView.swift SpectrumView.swift <span style="color:#b62;font-weight:bold">\
@@ -293,7 +293,7 @@ defining lots of constants for use in case statements. You can use
 enums in Swift, but the syntax is more complex, and using them in a
 switch statement in Swift is a pain. I found it was easier to define
 the enums in the C include file, and then use them in Swift.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080;font-style:italic">// Checkbox tags
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080;font-style:italic">// Checkbox tags
 </span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">enum</span>
     {kZoom   <span style="color:#666">=</span> <span style="">&#39;</span>Zoom<span style="">&#39;</span>,
      kFilt   <span style="color:#666">=</span> <span style="">&#39;</span>Filt<span style="">&#39;</span>,
@@ -309,7 +309,7 @@ the enums in the C include file, and then use them in Swift.</p>
     {kRefText <span style="color:#666">=</span> <span style="">&#39;</span>RefT<span style="">&#39;</span>,
      kRefStep <span style="color:#666">=</span> <span style="">&#39;</span>RefS<span style="">&#39;</span>};
 </code></pre></div><p>The enums can then be referenced in Swift.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">    <span style="color:#080;font-style:italic">// buttonClicked</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">    <span style="color:#080;font-style:italic">// buttonClicked</span>
     <span style="color:#a2f;font-weight:bold">@objc</span> <span style="color:#a2f;font-weight:bold">func</span> <span style="color:#00a000">buttonClicked</span>(sender: NSButton)
     {
         print(<span style="color:#b44">&#34;Sender&#34;</span>, sender, sender.state)
@@ -347,7 +347,7 @@ the enums in the C include file, and then use them in Swift.</p>
     }
 </code></pre></div><h3 id="boolean-arrays">Boolean arrays</h3>
 <p>The data defined in the include file includes two boolean arrays.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080;font-style:italic">// Audio filter
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080;font-style:italic">// Audio filter
 </span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">typedef</span> <span style="color:#a2f;font-weight:bold">struct</span>
 {
     <span style="color:#0b0;font-weight:bold">bool</span> note[<span style="color:#666">12</span>];
@@ -357,7 +357,7 @@ FilterData filterData;
 </code></pre></div><p>These arrays appear as <a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html">tuples</a> in Swift, which is not very
 useful. I found a workaround using reflection on <a href="https://stackoverflow.com/questions/34776546/access-element-of-fixed-length-c-array-in-swift">Stack Overflow</a>,
 but it produces the wrong result.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">    <span style="color:#080;font-style:italic">// This function compiles and appears to work but produces the</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">    <span style="color:#080;font-style:italic">// This function compiles and appears to work but produces the</span>
     <span style="color:#080;font-style:italic">// wrong result for a boolean array. Replaced by ObjC access</span>
     <span style="color:#080;font-style:italic">// functions.</span>
     <span style="color:#080;font-style:italic">// arrayFromTuple</span>
@@ -373,7 +373,7 @@ but it produces the wrong result.</p>
         <span style="color:#a2f;font-weight:bold">return</span> array
     }
 </code></pre></div><p>So I wrote some access functions in C as a workaround.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080;font-style:italic">// Boolean array access functions to work around Swift limitations
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080;font-style:italic">// Boolean array access functions to work around Swift limitations
 </span><span style="color:#080;font-style:italic">// getNote
 </span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">bool</span> <span style="color:#00a000">getNote</span>(<span style="color:#0b0;font-weight:bold">int</span> index)
 {
@@ -403,7 +403,7 @@ the <a href="https://developer.apple.com/documentation/appkit/nsslider/1527901-i
 macOS 10.0+. But the compiler says macOS 10.12+ and I want to support
 10.9. The docs for Objective C say <code>vertical</code>, but the compiler
 doesn&rsquo;t like that either. So I wrote another access function.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080;font-style:italic">// setVertical
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080;font-style:italic">// setVertical
 </span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">setVertical</span>(NSSlider <span style="color:#666">*</span>slider, <span style="color:#0b0;font-weight:bold">bool</span> value)
 {
     slider.vertical <span style="color:#666">=</span> value;

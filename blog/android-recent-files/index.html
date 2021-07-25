@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -178,7 +178,7 @@ code {
       <p>There are several parts to this - creating the list of files, saving
 the list in the preferences, restoring the list on startup and
 creating the list in the menu.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
     <span style="color:#080;font-style:italic">// onCreate
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f">@Override</span>
     <span style="color:#a2f;font-weight:bold">protected</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onCreate</span><span style="color:#666">(</span>Bundle savedInstanceState<span style="color:#666">)</span>
@@ -205,7 +205,7 @@ stored as a set, so the last modified date of each file is used below
 to order the list. The code also saves the scroll position of each
 file using the file name as a key. The remove list is used to remove
 old entries.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
     <span style="color:#080;font-style:italic">// savePath
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">savePath</span><span style="color:#666">(</span>String path<span style="color:#666">)</span>
     <span style="color:#666">{</span>
@@ -243,7 +243,7 @@ old entries.</p>
     <span style="color:#666">}</span>
 </code></pre></div><p>The list of file names is ordered by the last modified date and the
 old ones are added to the remove list.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
     <span style="color:#080;font-style:italic">// onPause
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f">@Override</span>
     <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onPause</span> <span style="color:#666">()</span>

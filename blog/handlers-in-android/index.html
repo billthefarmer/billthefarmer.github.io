@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -183,7 +183,7 @@ code {
 <li>In the worker thread constructor, create a <a href="http://developer.android.com/reference/android/os/Handler.html">Handler</a>, including the reference to the main activity.</li>
 <li>When some results need passing back, send a <a href="http://developer.android.com/reference/android/os/Message.html">Message</a> back to the main activity using the handler.</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">MyActivity</span> <span style="color:#a2f;font-weight:bold">extends</span> Activity <span style="color:#a2f;font-weight:bold">implements</span> Handler<span style="color:#666">.</span><span style="color:#b44">Callback</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">MyActivity</span> <span style="color:#a2f;font-weight:bold">extends</span> Activity <span style="color:#a2f;font-weight:bold">implements</span> Handler<span style="color:#666">.</span><span style="color:#b44">Callback</span>
     <span style="color:#666">{</span>
         <span style="color:#080;font-style:italic">//...
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// On create

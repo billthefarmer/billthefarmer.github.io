@@ -31,7 +31,7 @@ private static final int OCTAVE = 12; private static final int EQUAL = 8; privat
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -178,7 +178,7 @@ code {
       <p>My <a href="https://github.com/billthefarmer/tuner">Tuner app</a> uses equal temperament because that is the current
 standard and it is relatively easy to calculate using double precision
 arithmetic and maths library functions. First, declare some constants.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> OCTAVE <span style="color:#666">=</span> 12<span style="color:#666">;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> OCTAVE <span style="color:#666">=</span> 12<span style="color:#666">;</span>
     <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> EQUAL <span style="color:#666">=</span> 8<span style="color:#666">;</span>
     <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> A_OFFSET <span style="color:#666">=</span> 9<span style="color:#666">;</span>
     <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> C5_OFFSET <span style="color:#666">=</span> 57<span style="color:#666">;</span>
@@ -186,7 +186,7 @@ arithmetic and maths library functions. First, declare some constants.</p>
 usually 440Hz. Then the note number with an added constant because
 octaves start at <strong>C</strong>, not <strong>A</strong>. Then the reference frequency for
 that note, then the cents difference.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// Cents relative to reference
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// Cents relative to reference
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#0b0;font-weight:bold">double</span> cf <span style="color:#666">=</span> <span style="color:#666">-</span>12<span style="color:#666">.</span><span style="color:#b44">0</span> <span style="color:#666">*</span> log2<span style="color:#666">(</span>reference <span style="color:#666">/</span> xf<span style="color:#666">[</span>i<span style="color:#666">]);</span>
 
     <span style="color:#080;font-style:italic">// Note number
@@ -198,7 +198,7 @@ that note, then the cents difference.</p>
     <span style="color:#080;font-style:italic">// Cents relative to reference note
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#0b0;font-weight:bold">double</span> cents <span style="color:#666">=</span> <span style="color:#666">-</span>12<span style="color:#666">.</span><span style="color:#b44">0</span> <span style="color:#666">*</span> log2<span style="color:#666">(</span>nearest <span style="color:#666">/</span> frequency<span style="color:#666">)</span> <span style="color:#666">*</span> 100<span style="color:#666">.</span><span style="color:#b44">0</span><span style="color:#666">;</span>
 </code></pre></div><p>I have a large lookup table for 32 temperaments, part of which is shown here.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        <span style="color:#080;font-style:italic">// Bach (Klais)
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        <span style="color:#080;font-style:italic">// Bach (Klais)
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#666">{</span>262<span style="color:#666">.</span><span style="color:#b44">76</span><span style="color:#666">,</span> 276<span style="color:#666">.</span><span style="color:#b44">87</span><span style="color:#666">,</span> 294<span style="color:#666">.</span><span style="color:#b44">30</span><span style="color:#666">,</span> 311<span style="color:#666">.</span><span style="color:#b44">46</span><span style="color:#666">,</span> 328<span style="color:#666">.</span><span style="color:#b44">70</span><span style="color:#666">,</span> 350<span style="color:#666">.</span><span style="color:#b44">37</span><span style="color:#666">,</span>
          369<span style="color:#666">.</span><span style="color:#b44">18</span><span style="color:#666">,</span> 393<span style="color:#666">.</span><span style="color:#b44">70</span><span style="color:#666">,</span> 415<span style="color:#666">.</span><span style="color:#b44">30</span><span style="color:#666">,</span> 440<span style="color:#666">.</span><span style="color:#b44">00</span><span style="color:#666">,</span> 467<span style="color:#666">.</span><span style="color:#b44">18</span><span style="color:#666">,</span> 492<span style="color:#666">.</span><span style="color:#b44">26</span><span style="color:#666">},</span>
 
@@ -219,7 +219,7 @@ that note, then the cents difference.</p>
 calculate the adjustment for a given temperament it is necessary to
 calculate the ratio between the current note and <strong>A</strong> for that key,
 both for equal temperament and for that temperament.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// Octave note number
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// Octave note number
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#0b0;font-weight:bold">int</span> n <span style="color:#666">=</span> <span style="color:#666">(</span>note <span style="color:#666">-</span> key <span style="color:#666">+</span> OCTAVE<span style="color:#666">)</span> <span style="color:#666">%</span> OCTAVE<span style="color:#666">;</span>
     <span style="color:#080;font-style:italic">// A note number
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#0b0;font-weight:bold">int</span> a <span style="color:#666">=</span> <span style="color:#666">(</span>A_OFFSET <span style="color:#666">-</span> key <span style="color:#666">+</span> OCTAVE<span style="color:#666">)</span> <span style="color:#666">%</span> OCTAVE<span style="color:#666">;</span>
@@ -232,7 +232,7 @@ both for equal temperament and for that temperament.</p>
     <span style="color:#080;font-style:italic">// Temperament adjustment
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#0b0;font-weight:bold">double</span> temperamentAdjust <span style="color:#666">=</span> temperamentRatio <span style="color:#666">/</span> equalRatio<span style="color:#666">;</span>
 </code></pre></div><p>Then adjust the reference note frequency for that temperament and key.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// Reference note frequency
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// Reference note frequency
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#0b0;font-weight:bold">double</span> nearest <span style="color:#666">=</span> reference <span style="color:#666">*</span> Math<span style="color:#666">.</span><span style="color:#b44">pow</span><span style="color:#666">(</span>2<span style="color:#666">.</span><span style="color:#b44">0</span><span style="color:#666">,</span> Math<span style="color:#666">.</span><span style="color:#b44">round</span><span style="color:#666">(</span>cf<span style="color:#666">)</span> <span style="color:#666">/</span> 12<span style="color:#666">.</span><span style="color:#b44">0</span><span style="color:#666">)</span> <span style="color:#666">*</span> temperamentAdjust<span style="color:#666">;</span>
 </code></pre></div><p>Adjusting the nearest reference frequency adjusts everything
 calculated following, the cents difference etc. In equal temperament

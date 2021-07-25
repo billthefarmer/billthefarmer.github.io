@@ -34,7 +34,7 @@ To get the tap position in the markdown view it is necessary to compensate for t
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -184,7 +184,7 @@ gesture detector so I just had to add an <a href="https://developer.android.com/
 <p>To get the tap position in the markdown view it is necessary to
 compensate for the position of the view on the screen, scrolling, and
 the display density.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        <span style="color:#080;font-style:italic">// onDoubleTap
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        <span style="color:#080;font-style:italic">// onDoubleTap
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f">@Override</span>
         <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">onDoubleTap</span><span style="color:#666">(</span>MotionEvent e<span style="color:#666">)</span>
         <span style="color:#666">{</span>
@@ -208,7 +208,7 @@ co-ordinates. The position as a proportion of the total length of the
 displayed markdown is calculated from the corrected Y position, the
 scroll position and the density.</p>
 <p>Switch to the edit view and close any open search.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">                <span style="color:#080;font-style:italic">// Animation
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">                <span style="color:#080;font-style:italic">// Animation
 </span><span style="color:#080;font-style:italic"></span>                animateEdit<span style="color:#666">();</span>
 
                 <span style="color:#080;font-style:italic">// Close text search
@@ -219,7 +219,7 @@ find the position in the edit view it is necessary to get the total
 height of the text, calculate the Y position as a proportion, and then
 use a series of functions to get the text line, the offset in the text
 to set the selection, and the position of the line to scroll to it.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
                 <span style="color:#080;font-style:italic">// Scroll after delay
 </span><span style="color:#080;font-style:italic"></span>                textView<span style="color:#666">.</span><span style="color:#b44">postDelayed</span><span style="color:#666">(()</span> <span style="color:#666">-&gt;</span>
                 <span style="color:#666">{</span>

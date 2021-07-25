@@ -34,7 +34,7 @@ I looked for migration tools, and found two:
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -202,10 +202,10 @@ error on the exporter issues page, and found Sourceforge was using an
 old version of PHP. So I looked at the PHP code, and found it was
 using square brackets for an array, which I&rsquo;d found an annoyance while
 writing a Wordpress plugin.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PHP" data-lang="PHP">        <span style="color:#a2f;font-weight:bold">if</span> (in_array(<span style="color:#b8860b">$post</span><span style="color:#666">-&gt;</span><span style="color:#b44">post_status</span>, [<span style="color:#b44">&#39;draft&#39;</span>, <span style="color:#b44">&#39;private&#39;</span>])) {
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PHP" data-lang="PHP">        <span style="color:#a2f;font-weight:bold">if</span> (in_array(<span style="color:#b8860b">$post</span><span style="color:#666">-&gt;</span><span style="color:#b44">post_status</span>, [<span style="color:#b44">&#39;draft&#39;</span>, <span style="color:#b44">&#39;private&#39;</span>])) {
 </code></pre></div><p>So I changed it to the old style syntax, and found that was it, it
 just worked. So change one line to make it work with old PHP versions.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PHP" data-lang="PHP">        <span style="color:#a2f;font-weight:bold">if</span> (in_array(<span style="color:#b8860b">$post</span><span style="color:#666">-&gt;</span><span style="color:#b44">post_status</span>, <span style="color:#a2f;font-weight:bold">array</span>(<span style="color:#b44">&#39;draft&#39;</span>, <span style="color:#b44">&#39;private&#39;</span>))) {
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PHP" data-lang="PHP">        <span style="color:#a2f;font-weight:bold">if</span> (in_array(<span style="color:#b8860b">$post</span><span style="color:#666">-&gt;</span><span style="color:#b44">post_status</span>, <span style="color:#a2f;font-weight:bold">array</span>(<span style="color:#b44">&#39;draft&#39;</span>, <span style="color:#b44">&#39;private&#39;</span>))) {
 </code></pre></div><p>Except it didn&rsquo;t, I couldn&rsquo;t find the output, not where it said it was
 anyway. So I used the plugin from the admin page instead, which did
 work. The output looked pretty good, except for making a right pig&rsquo;s
@@ -230,7 +230,7 @@ installed on my Windows box, so I&rsquo;ve got a bash unix like environment
 to run <a href="https://www.python.org">Python</a> utilities in, so installing the prerequisites for
 <a href="https://github.com/dbohdan/remarshal">remarshal</a> and getting it working was not a problem.</p>
 <p>So now I&rsquo;ve got a config file which does what I want it to do:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#008000;font-weight:bold">baseURL</span>:<span style="color:#bbb"> </span>http://billthefarmer.github.io/blog/<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#008000;font-weight:bold">baseURL</span>:<span style="color:#bbb"> </span>http://billthefarmer.github.io/blog/<span style="color:#bbb">
 </span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">languageCode</span>:<span style="color:#bbb"> </span>en-gb<span style="color:#bbb">
 </span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">title</span>:<span style="color:#bbb"> </span><span style="color:#b44">&#34;Bill Farmer&#39;s Blog&#34;</span><span style="color:#bbb">
 </span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">copyright</span>:<span style="color:#bbb"> </span><span style="color:#b44">&#34;Copyright &amp;amp;copy; 2017 Bill Farmer&#34;</span><span style="color:#bbb">
@@ -279,7 +279,7 @@ for modifying the blog header, but there is for the page <code>&lt;head&gt;</cod
 I copied the <code>head-custom.html</code> from the <code>layouts/partials</code> folder in
 the theme to <code>layouts/partials</code> in the blog source and modified it
 with some extra styles.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#080;font-style:italic">&lt;!--
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#080;font-style:italic">&lt;!--
 </span><span style="color:#080;font-style:italic">    Create &lt;project-root&gt;/layouts/partials/head-custom.html to
 </span><span style="color:#080;font-style:italic">    overwrite this empty template and put custom code into the &lt;head&gt;
 </span><span style="color:#080;font-style:italic">    section.
@@ -308,7 +308,7 @@ windows python and install Pygments there.</p>
 Hugo include <a href="https://github.com/alecthomas/chroma">Chroma</a>, a port of Pygments. But I did have to
 change the <code>pygmentsStyle</code> to <code>emacs</code> and comment out entries in the
 <code>static/css/app.css</code> file.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#008000;font-weight:bold">code</span> {
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#008000;font-weight:bold">code</span> {
 <span style="color:#080;font-style:italic">/*  padding: 0.125rem 0.3125rem 0.0625rem;
 </span><span style="color:#080;font-style:italic">    border: 1px solid #cacaca;
 </span><span style="color:#080;font-style:italic">    background-color: #e6e6e6; */</span>
@@ -318,7 +318,7 @@ change the <code>pygmentsStyle</code> to <code>emacs</code> and comment out entr
 </code></pre></div><p>This is part of the theme, so not part of Hugo itself.</p>
 <p>I found a template on the <a href="https://gohugo.io/variables/taxonomy">Taxonomy Variables</a> page to generate a
 list of blog pages.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#008000;font-weight:bold">section</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#008000;font-weight:bold">section</span>&gt;
   &lt;<span style="color:#008000;font-weight:bold">ul</span>&gt;
     {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
       &lt;<span style="color:#008000;font-weight:bold">li</span>&gt;&lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#b44">href</span><span style="color:#666">=</span><span style="color:#b44">&#34;{{ &#34;</span><span style="">/&#34;</span> <span style="">|</span> <span style="color:#b44">relLangURL</span><span style="">}}{{</span> <span style="">$</span><span style="color:#b44">taxonomyname</span> <span style="">|</span> <span style="color:#b44">urlize</span> <span style="">}}&#34;</span>&gt;{{ $taxonomyname }}&lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;
@@ -338,7 +338,7 @@ list of blog pages.</p>
 &lt;/<span style="color:#008000;font-weight:bold">section</span>&gt;
 </code></pre></div><p>After hacking that about and putting it in
 <code>layouts/shortcodes/site-index.html</code>, and putting a shortcode <code>{{&lt; site-index &gt;}}</code> in the index page, I got a reasonable site index.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#008000;font-weight:bold">section</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#008000;font-weight:bold">section</span>&gt;
   {{ range $key, $value := .Site.Taxonomies.categories }}
   &lt;<span style="color:#008000;font-weight:bold">h3</span>&gt;{{ title $key }}&lt;/<span style="color:#008000;font-weight:bold">h3</span>&gt;
   &lt;<span style="color:#008000;font-weight:bold">ul</span>&gt;

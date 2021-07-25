@@ -31,7 +31,7 @@ Calendar custom styles The custom calendar has a list of styles that are customi
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -184,7 +184,7 @@ theme.</p>
 <h3 id="calendar-custom-styles">Calendar custom styles</h3>
 <p>The custom calendar has a list of styles that are customisable in a
 <code>attrs.xml</code> file.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 <span style="color:#008000;font-weight:bold">&lt;resources&gt;</span>
   <span style="color:#008000;font-weight:bold">&lt;declare-styleable</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;CustomCalendarView&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
     <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;calendarTitleTextColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
@@ -202,7 +202,7 @@ theme.</p>
 <span style="color:#008000;font-weight:bold">&lt;/resources&gt;</span>
 </code></pre></div><p>The <code>CustomCalendarView</code> value is used in the sources to reference the
 attributes.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// getAttributes
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// getAttributes
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">getAttributes</span><span style="color:#666">(</span>AttributeSet attrs<span style="color:#666">)</span>
     <span style="color:#666">{</span>
         Resources resources <span style="color:#666">=</span> getResources<span style="color:#666">();</span>
@@ -220,7 +220,7 @@ attributes.</p>
 not referenced externally. To revert to the current style defined
 values, some of them need to be redefined to attribute values from the
 style system.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 <span style="color:#008000;font-weight:bold">&lt;LinearLayout</span>
     <span style="color:#b44">xmlns:android=</span><span style="color:#b44">&#34;http://schemas.android.com/apk/res/android&#34;</span>
     <span style="color:#b44">xmlns:library=</span><span style="color:#b44">&#34;http://schemas.android.com/apk/res-auto&#34;</span>
@@ -252,7 +252,7 @@ the app.</p>
 on the preference screen, dark icons on a light background, light
 icons on a dark background. To allow the icons to be styleable requires
 another <code>attrs.xml</code> file. Again the <code>name</code> value appears to be ignored.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 resources&gt;
   <span style="color:#008000;font-weight:bold">&lt;declare-styleable</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;Diary&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
     <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_calendar&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;reference&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
@@ -264,7 +264,7 @@ resources&gt;
   <span style="color:#008000;font-weight:bold">&lt;/declare-styleable&gt;</span>
 <span style="color:#008000;font-weight:bold">&lt;/resources&gt;</span>
 </code></pre></div><p>To define values for these attributes for each theme requires a list of items for each style.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#080;font-style:italic">&lt;!-- Application theme. --&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#080;font-style:italic">&lt;!-- Application theme. --&gt;</span>
   <span style="color:#008000;font-weight:bold">&lt;style</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;AppTheme&#34;</span> <span style="color:#b44">parent=</span><span style="color:#b44">&#34;AppBaseTheme&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
     <span style="color:#080;font-style:italic">&lt;!--
 </span><span style="color:#080;font-style:italic">        All customizations that are NOT specific to a particular
@@ -293,7 +293,7 @@ resources&gt;
   <span style="color:#008000;font-weight:bold">&lt;/style&gt;</span>
 </code></pre></div><p>To complete this requires the icon references in the <code>preferences.xml</code>
 file to be changed from a <code>@drawable</code> reference to an <code>?attr</code> reference.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">
 <span style="color:#008000;font-weight:bold">&lt;CheckBoxPreference</span>
 	<span style="color:#b44">android:key=</span><span style="color:#b44">&#34;pref_custom&#34;</span>
 	<span style="color:#b44">android:icon=</span><span style="color:#b44">&#34;?attr/pref_calendar&#34;</span>

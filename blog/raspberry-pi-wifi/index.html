@@ -28,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -175,7 +175,7 @@ code {
       <p>When I got my Pi some months ago I bought a wifi adapter for it, as you do. But I couldn’t get it to work reliably in Raspbian, and I didn’t even try in Arch Linux. So I tested the adapter on my windoze box, and it worked just fine, and I tried it with Linux and it worked just fine, so I put it in the ‘too hard’ box.</p>
 <p>I dug it out again the other day because I wanted to hear just how good the <a href="https://github.com/billthefarmer/mididriver">Sonivox EAS library</a> I ported to the Pi sounded when hooked up to the hifi with some decent speakers. After extensive googling, and putting together various bits and pieces of info from various blog posts, and wikis, I came up with sort-of working configs for Raspbian and Arch Linux.</p>
 <h2 id="raspbian">Raspbian</h2>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/etc/network/interfaces:
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/etc/network/interfaces:
     
     auto lo
     iface lo inet loopback
@@ -186,7 +186,7 @@ code {
     iface wlan0 inet dhcp
     wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 </code></pre></div><p>You can use <code>wpa_passphrase</code> to generate the <code>wpa_supplicant.conf</code> file:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ wpa_passphrase ssid passphrase
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ wpa_passphrase ssid passphrase
 
     <span style="color:#b8860b">network</span><span style="color:#666">={</span>
             <span style="color:#b8860b">ssid</span><span style="color:#666">=</span><span style="color:#b44">&#34;ssid&#34;</span>
@@ -196,12 +196,12 @@ code {
 </code></pre></div><p>Redirect the output to the <code>wpa_supplicant.conf</code> file. I found this in the Arch Linux wiki. The wpa-conf and wpa-roam stanzas do not appear to be officially documented anywhere I can find.</p>
 <h3 id="raspbian-jessie">Raspbian Jessie</h3>
 <p>If your wifi router has a WPS button, press it. Run <code>wpa_cli</code> on the Pi and enter the following commands:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">    &gt; wps_pbc
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">    &gt; wps_pbc
     &gt; quit
 </code></pre></div><p>This should automatically pick up the ssid and key, connect, and set up <code>wpa_supplicant.conf</code> so that the Pi will reconnect when rebooted.</p>
 <h2 id="arch-linux">Arch Linux</h2>
 <p>Use <code>wifi-menu</code> to create a <code>netctl</code> profile. Use <code>netctl list</code> to list profiles and <code>netctl</code> to enable and start your profile.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">    sudo netctl <span style="color:#a2f">enable</span> wlan0-yourSSIDhere
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">    sudo netctl <span style="color:#a2f">enable</span> wlan0-yourSSIDhere
     sudo netctl start wlan0-yourSSIDhere
 </code></pre></div><p>This appears to work just fine.</p>
 

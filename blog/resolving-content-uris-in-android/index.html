@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -176,7 +176,7 @@ code {
     </div>
     <p>
       <p>If you write an android app that handles images or any other sort of file your app may be required to deal with ‘content’ uris (<code>content://</code>). There is a very useful utility which resolves these into ‘file’ uris (<code>file:///</code>) <a href="https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ipaulpro/afilechooser/utils/FileUtils.java">FileUtils.java</a>. This contains one external reference to <a href="https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ianhanniballake/localstorage/LocalStorageProvider.java">LocalStorageProvider</a>, which can be resolved by removing the function <code>isLocalStorageDocument()</code> and references to it.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// import com.ianhanniballake.localstorage.LocalStorageProvider;
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// import com.ianhanniballake.localstorage.LocalStorageProvider;
 </span><span style="color:#080;font-style:italic"></span>    <span style="color:#080;font-style:italic">// ...
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">/**
 </span><span style="color:#080;font-style:italic">         * @param uri The Uri to check.
@@ -187,7 +187,7 @@ code {
             <span style="color:#a2f;font-weight:bold">return</span> LocalStorageProvider<span style="color:#666">.</span><span style="color:#b44">AUTHORITY</span><span style="color:#666">.</span><span style="color:#b44">equals</span><span style="color:#666">(</span>uri<span style="color:#666">.</span><span style="color:#b44">getAuthority</span><span style="color:#666">());</span>
         <span style="color:#666">}</span>
 </code></pre></div><p>Having done that, you can then resolve ‘content’ uris</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String CONTENT <span style="color:#666">=</span> <span style="color:#b44">&#34;content&#34;</span><span style="color:#666">;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> String CONTENT <span style="color:#666">=</span> <span style="color:#b44">&#34;content&#34;</span><span style="color:#666">;</span>
     <span style="color:#080;font-style:italic">// ...
 </span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>uri<span style="color:#666">.</span><span style="color:#b44">getScheme</span><span style="color:#666">().</span><span style="color:#b44">equalsIgnoreCase</span><span style="color:#666">(</span>CONTENT<span style="color:#666">))</span>
                 uri <span style="color:#666">=</span> resolveContent<span style="color:#666">(</span>uri<span style="color:#666">);</span>
@@ -205,7 +205,7 @@ code {
             <span style="color:#a2f;font-weight:bold">return</span> uri<span style="color:#666">;</span>
         <span style="color:#666">}</span>
 </code></pre></div><p>This may not always work, but I haven’t been able to defeat it. Later versions of android have added a ‘Documents’ folder, which is encoded as ‘home’, so some additional code is required to resolve it.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">/**
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">/**
 </span><span style="color:#080;font-style:italic">     * Get a file path from a Uri. This will get the the path for
 </span><span style="color:#080;font-style:italic">     * Storage Access Framework Documents, as well as the _data field
 </span><span style="color:#080;font-style:italic">     * for the MediaStore and other file-based ContentProviders.&lt;br&gt;

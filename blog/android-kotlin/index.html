@@ -31,7 +31,7 @@ I have a very simple app, Oglaf, NS(Generally)FW, which is just a wrapper around
 
 
 
-<meta name="generator" content="Hugo 0.85.0" />
+<meta name="generator" content="Hugo 0.86.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -186,7 +186,7 @@ convert it to Kotlin, just to see how difficult it was and to see what
 effect, if any, it had on the app.</p>
 <p>The obvious differences with java are declaration of variables and
 classes, and not needing semicolons on the end of statements.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-style:italic">// Java
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-style:italic">// Java
 </span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">package</span> <span style="color:#00f;font-weight:bold">org.billthefarmer.oglaf</span><span style="color:#666">;</span>
 
 <span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">android.app.Activity</span><span style="color:#666">;</span>
@@ -232,7 +232,7 @@ classes, and not needing semicolons on the end of statements.</p>
             <span style="color:#080;font-style:italic">// Enable zoom
 </span><span style="color:#080;font-style:italic"></span>            settings<span style="color:#666">.</span><span style="color:#b44">setBuiltInZoomControls</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">);</span>
             settings<span style="color:#666">.</span><span style="color:#b44">setDisplayZoomControls</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">);</span>
-</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#080;font-style:italic">// Kotlin
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#080;font-style:italic">// Kotlin
 </span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">package</span> <span style="color:#00f;font-weight:bold">org.billthefarmer.oglaf</span>
 
 <span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">android.app.Activity</span>
@@ -279,7 +279,7 @@ classes, and not needing semicolons on the end of statements.</p>
 initialised in <code>onCreate()</code>.</p>
 <p>The next bit wasn&rsquo;t so easy. I had to search extensively to find the
 correct syntax for what Kotlin calls an <a href="https://kotlinlang.org/docs/object-declarations.html">object expression</a>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-style:italic">// Java
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-style:italic">// Java
 </span><span style="color:#080;font-style:italic"></span>            <span style="color:#080;font-style:italic">// Follow links and set title
 </span><span style="color:#080;font-style:italic"></span>            webView<span style="color:#666">.</span><span style="color:#b44">setWebViewClient</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">new</span> WebViewClient<span style="color:#666">()</span>
             <span style="color:#666">{</span>
@@ -298,7 +298,7 @@ correct syntax for what Kotlin calls an <a href="https://kotlinlang.org/docs/obj
                         getActionBar<span style="color:#666">().</span><span style="color:#b44">setDisplayHomeAsUpEnabled</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">);</span>
                 <span style="color:#666">}</span>
             <span style="color:#666">});</span>
-</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#080;font-style:italic">// Kotlin
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#080;font-style:italic">// Kotlin
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// Follow links and set title
 </span><span style="color:#080;font-style:italic"></span>        webView.setWebViewClient(<span style="color:#a2f;font-weight:bold">object</span>: WebViewClient()
         {
@@ -318,7 +318,7 @@ correct syntax for what Kotlin calls an <a href="https://kotlinlang.org/docs/obj
         })
 </code></pre></div><p>The other significant difference is that a case statement becomes a
 when statement.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-style:italic">// Java
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-style:italic">// Java
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// Get id
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#0b0;font-weight:bold">int</span> id <span style="color:#666">=</span> item<span style="color:#666">.</span><span style="color:#b44">getItemId</span><span style="color:#666">();</span>
         <span style="color:#a2f;font-weight:bold">switch</span> <span style="color:#666">(</span>id<span style="color:#666">)</span>
@@ -350,7 +350,7 @@ when statement.</p>
 </span><span style="color:#a0a000">        default:</span>
             <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
         <span style="color:#666">}</span>
-</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#080;font-style:italic">// Kotlin
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#080;font-style:italic">// Kotlin
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// Get id
 </span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">val</span> id = item.getItemId()
         <span style="color:#a2f;font-weight:bold">when</span> (id)
