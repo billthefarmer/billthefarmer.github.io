@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.86.0" />
+<meta name="generator" content="Hugo 0.88.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -155,6 +155,38 @@ code {
 
 <div class="blog-post">
   <h3>
+    <a href="https://billthefarmer.github.io/blog/post/create-pdf-report/">Create PDF Report</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2018-09-18T19:27:46&#43;01:00">
+        Tue Sep 18, 2018
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    Introduction As part of the Questionnaire Maker plugin it is necessary to create a pdf report. The best tool to do this appears to be TCPDF, which appears to be part of at least some Linux distributions as php-tcpdf. It is not included in WordPress.
+Implementation As both the plugin and TCPDF are hosted on GitHub, the best way to implement the plugin, and TCPDF if it is not available on the web server, is to clone the repositories and use symbolic links to provide the plugin and the library in the right places.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/post/create-pdf-report/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
     <a href="https://billthefarmer.github.io/blog/post/questionnaire/">Questionnaire Maker</a>
   </h3>
   <div class="callout small">
@@ -277,38 +309,6 @@ I had a copy of a Mullard amplifier book, Mullard Circuits for Audio Amplifiers 
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/swift/">Swift</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2018-03-28T15:56:14Z">
-        Wed Mar 28, 2018
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    Some years ago I wrote an OSX app in C using Carbon because my Hackintosh would only run OSX 10.4 (Tiger). The most difficult part was dealing with the Core Audio API.
-I recently decided to port it to Swift to avoid having to attempt to learn Objective C. A derivation of C that sends selectors to targets using the syntax [target selector arguments...] I don&rsquo;t want to know about.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/swift/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -333,6 +333,10 @@ I recently decided to port it to Swift to avoid having to attempt to learn Objec
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/slowing-down-video/">
+        Slowing Down Video
+      </a></li>
     
       <li><a href="/blog/android-flutter/">
         Android Flutter
@@ -368,10 +372,6 @@ I recently decided to port it to Swift to avoid having to attempt to learn Objec
     
       <li><a href="/blog/not-swedish-meatballs/">
         Not Swedish Meatballs
-      </a></li>
-    
-      <li><a href="/blog/download-playlist-video/">
-        Download playlist video
       </a></li>
     
   </ul>

@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2021 Bill Farmer</copyright>
-    <lastBuildDate>Thu, 15 Jul 2021 13:37:07 +0100</lastBuildDate><atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Sep 2021 17:39:25 +0100</lastBuildDate><atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Slowing Down Video</title>
+      <link>https://billthefarmer.github.io/blog/slowing-down-video/</link>
+      <pubDate>Tue, 07 Sep 2021 17:39:25 +0100</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/slowing-down-video/</guid>
+      <description>Twenty years ago, when we joined a morris side and started learning to play melodeon there was only one free app for slowing down audio that I could find and it was horrible. If you tried to slow down more than a bit it went all echoey and unrecognisable.
+There&amp;rsquo;s a tune, Brother Trip Foot - A Traditional Tune Played on Melodeon, played by Mcgrooger, part of Melnet TotM for September that we both love.</description>
+    </item>
+    
     <item>
       <title>Android Flutter</title>
       <link>https://billthefarmer.github.io/blog/android-flutter/</link>

@@ -34,7 +34,7 @@ I had a request from Marco the other day to put OpenStreetMap maps in my Diary a
 
 
 
-<meta name="generator" content="Hugo 0.86.0" />
+<meta name="generator" content="Hugo 0.88.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -183,7 +183,7 @@ co-ordinates in Markdown, but almost anything gets put in square
 brackets <code>[&lt;anything&gt;]</code>.</p>
 <p>I had a request from <a href="https://github.com/marcoM32">Marco</a> the other day to put
 <a href="http://www.openstreetmap.org">OpenStreetMap</a> maps in my <a href="https://github.com/billthefarmer/diary">Diary</a> app using</p>
-<pre><code>  [&lt;lat&gt;,&lt;lng&gt;]
+<pre tabindex="0"><code>  [&lt;lat&gt;,&lt;lng&gt;]
 </code></pre><p>syntax. So I did a bit of a search to see if there was a convention in
 Markdown for co-ordinates and couldn&rsquo;t find anything. So we seem to
 have broken new ground here.</p>
@@ -210,7 +210,7 @@ parse something that looks like <code>[42.265,3.17]</code> and produce something
 that looks like the above. The obvious tool in android Java is the
 <a href="https://developer.android.com/reference/java/util/regex/Pattern.html">Pattern</a> and <a href="https://developer.android.com/reference/java/util/regex/Matcher.html">Matcher</a> classes, which parse regular
 expressions. The regular expression for the pattern is</p>
-<pre><code>    &quot;\\[(?:osm:)?(-?\\d+[,.]\\d+)[,;](-?\\d+[,.]\\d+)\\]&quot;
+<pre tabindex="0"><code>    &quot;\\[(?:osm:)?(-?\\d+[,.]\\d+)[,;](-?\\d+[,.]\\d+)\\]&quot;
 </code></pre><p>The double backslashes are because it&rsquo;s a string, so one of them will
 be removed before the matcher gets to see it. I also have to deal with
 European locales which use different conventions for co-ordinates. I
@@ -301,7 +301,7 @@ geo Uri and turning it into a map. So I decided to convert existing
 <code>[&lt;lat&gt;,&lt;lng&gt;]</code> markdown to <code>![osm](geo:&lt;lat&gt;,&lt;lng&gt;)</code> markdown, and
 convert that to an iframe as before. The code to do that is very
 similar to the above with updated patterns and templates.</p>
-<pre><code>        &quot;geo:(-?\\d+[.]\\d+), ?(-?\\d+[.]\\d+)&quot;
+<pre tabindex="0"><code>        &quot;geo:(-?\\d+[.]\\d+), ?(-?\\d+[.]\\d+)&quot;
 
         &quot;![osm](geo:%f,%f)&quot;
 </code></pre><p>The pattern is just to match a geo Uri, the template is to output a
@@ -350,6 +350,10 @@ the use of <code>http://</code> URLs in the markdown, I have added a line to the
   <h4>Recent Posts</h4>
   <ul>
     
+      <li><a href="/blog/slowing-down-video/">
+        Slowing Down Video
+      </a></li>
+    
       <li><a href="/blog/android-flutter/">
         Android Flutter
       </a></li>
@@ -384,10 +388,6 @@ the use of <code>http://</code> URLs in the markdown, I have added a line to the
     
       <li><a href="/blog/not-swedish-meatballs/">
         Not Swedish Meatballs
-      </a></li>
-    
-      <li><a href="/blog/download-playlist-video/">
-        Download playlist video
       </a></li>
     
   </ul>

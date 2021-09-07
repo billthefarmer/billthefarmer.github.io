@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.86.0" />
+<meta name="generator" content="Hugo 0.88.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -147,6 +147,38 @@ code {
 
 
 
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/post/source-code-highlighting/">Source Code Syntax Highlighting</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2019-03-24T11:01:35Z">
+        Sun Mar 24, 2019
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    One of the enhancements suggested for my android editor is syntax highlighting. The libraries I have found, including the one used in this blog, parse the input and produce output in HTML, using styled spans. Emacs makes extensive use of regular expressions for highlighting.
+HTML output is not very useful for a text editor. It could be used with Html.fromHtml() to produce styled text. This would then be loaded back into the editor all while the user is attempting to edit the text.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/post/source-code-highlighting/'>Read more →</a>
+  <hr>
+</div>
 
 
   
@@ -279,38 +311,6 @@ Implementation As both the plugin and TCPDF are hosted on GitHub, the best way t
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/post/questionnaire/">Questionnaire Maker</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2018-08-20T17:14:32&#43;01:00">
-        Mon Aug 20, 2018
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    Introduction Questionnaire Maker is a WordPress and Hugo plugin that asks a series of questions and produces a PDF report. The project is on Github.
-Documentation The plugin uses the shortcodes [questionnaire-questions] and [questionnaire-report], or {{&lt; questionnaire-questions &gt;}} and {{&lt; questionnaire-report &gt;}}. The shortcode will be replaced on the page with a series of panels containing the questions and options for the answers, or a panel with a preview of the report.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/post/questionnaire/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -335,6 +335,10 @@ Documentation The plugin uses the shortcodes [questionnaire-questions] and [ques
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/slowing-down-video/">
+        Slowing Down Video
+      </a></li>
     
       <li><a href="/blog/android-flutter/">
         Android Flutter
@@ -370,10 +374,6 @@ Documentation The plugin uses the shortcodes [questionnaire-questions] and [ques
     
       <li><a href="/blog/not-swedish-meatballs/">
         Not Swedish Meatballs
-      </a></li>
-    
-      <li><a href="/blog/download-playlist-video/">
-        Download playlist video
       </a></li>
     
   </ul>
