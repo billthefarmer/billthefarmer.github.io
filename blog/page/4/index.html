@@ -155,39 +155,6 @@ code {
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/derive-edit-position/">Derive Edit Position from Markdown</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2020-02-08T18:24:23Z">
-        Sat Feb 8, 2020
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    I had a request to switch to the edit view from the markdown view at the double tap position in my Diary app. The app already has a gesture detector so I just had to add an onDoubleTap function.
-To get the tap position in the markdown view it is necessary to compensate for the position of the view on the screen, scrolling, and the display density.
-// onDoubleTap  @Override public boolean onDoubleTap(MotionEvent e) { if (shown) { int[] l = new int[2]; markdownView.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/derive-edit-position/'>Read more →</a>
-  <hr>
-</div>
-
-
-  
-
-<div class="blog-post">
-  <h3>
     <a href="https://billthefarmer.github.io/blog/fixing-basin-waste-pop-up/">Fixing Basin Waste Pop Up</a>
   </h3>
   <div class="callout small">
@@ -313,6 +280,38 @@ HTML output is not very useful for a text editor. It could be used with Html.fro
 </div>
 
 
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/post/musical-temperaments/">Musical Temperaments</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2019-01-29T20:58:13Z">
+        Tue Jan 29, 2019
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    My Tuner app uses equal temperament because that is the current standard and it is relatively easy to calculate using double precision arithmetic and maths library functions. First, declare some constants.
+private static final int OCTAVE = 12; private static final int EQUAL = 8; private static final int A_OFFSET = 9; private static final int C5_OFFSET = 57; The calculation first produces the cents relative to the reference, usually 440Hz.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/post/musical-temperaments/'>Read more →</a>
+  <hr>
+</div>
+
+
 
 
   <div>
@@ -337,10 +336,6 @@ HTML output is not very useful for a text editor. It could be used with Html.fro
 
   <h4>Recent Posts</h4>
   <ul>
-    
-      <li><a href="/blog/slowing-down-video/">
-        Slowing Down Video
-      </a></li>
     
       <li><a href="/blog/android-flutter/">
         Android Flutter
@@ -376,6 +371,10 @@ HTML output is not very useful for a text editor. It could be used with Html.fro
     
       <li><a href="/blog/not-swedish-meatballs/">
         Not Swedish Meatballs
+      </a></li>
+    
+      <li><a href="/blog/download-playlist-video/">
+        Download playlist video
       </a></li>
     
   </ul>

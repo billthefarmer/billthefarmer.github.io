@@ -2,19 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://billthefarmer.github.io/blog/android-flutter/</loc>
+    <lastmod>2021-07-15T13:37:07+01:00</lastmod>
+  </url><url>
     <loc>https://billthefarmer.github.io/blog/</loc>
-    <lastmod>2021-09-07T17:39:25+01:00</lastmod>
+    <lastmod>2021-07-15T13:37:07+01:00</lastmod>
   </url><url>
     <loc>https://billthefarmer.github.io/blog/categories/</loc>
-    <lastmod>2021-09-07T17:39:25+01:00</lastmod>
+    <lastmod>2021-07-15T13:37:07+01:00</lastmod>
   </url><url>
     <loc>https://billthefarmer.github.io/blog/categories/hacking/</loc>
-    <lastmod>2021-09-07T17:39:25+01:00</lastmod>
-  </url><url>
-    <loc>https://billthefarmer.github.io/blog/slowing-down-video/</loc>
-    <lastmod>2021-09-07T17:39:25+01:00</lastmod>
-  </url><url>
-    <loc>https://billthefarmer.github.io/blog/android-flutter/</loc>
     <lastmod>2021-07-15T13:37:07+01:00</lastmod>
   </url><url>
     <loc>https://billthefarmer.github.io/blog/android-kotlin/</loc>
