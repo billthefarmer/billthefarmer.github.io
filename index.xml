@@ -5,10 +5,6 @@
     <link>https://billthefarmer.github.io/</link>
     <description>Recent content on Bill Farmer</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    
-	<atom:link href="https://billthefarmer.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-gb</language><atom:link href="https://billthefarmer.github.io/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
