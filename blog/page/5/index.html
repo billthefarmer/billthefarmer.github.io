@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.88.0" />
+<meta name="generator" content="Hugo 0.89.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -84,12 +84,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
-                    Hacking
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
                     Recipes
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                    Hacking
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
@@ -149,6 +149,38 @@ code {
   
 
 
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/post/musical-temperaments/">Musical Temperaments</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2019-01-29T20:58:13Z">
+        Tue Jan 29, 2019
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    My Tuner app uses equal temperament because that is the current standard and it is relatively easy to calculate using double precision arithmetic and maths library functions. First, declare some constants.
+private static final int OCTAVE = 12; private static final int EQUAL = 8; private static final int A_OFFSET = 9; private static final int C5_OFFSET = 57; The calculation first produces the cents relative to the reference, usually 440Hz.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/post/musical-temperaments/'>Read more →</a>
+  <hr>
+</div>
 
 
   
@@ -281,38 +313,6 @@ Green Tomato Chutney Ingredients  175g/6oz light brown sugar 150ml/5fl oz red wi
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/post/create-pdf-report/">Create PDF Report</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2018-09-18T19:27:46&#43;01:00">
-        Tue Sep 18, 2018
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    Introduction As part of the Questionnaire Maker plugin it is necessary to create a pdf report. The best tool to do this appears to be TCPDF, which appears to be part of at least some Linux distributions as php-tcpdf. It is not included in WordPress.
-Implementation As both the plugin and TCPDF are hosted on GitHub, the best way to implement the plugin, and TCPDF if it is not available on the web server, is to clone the repositories and use symbolic links to provide the plugin and the library in the right places.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/post/create-pdf-report/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -337,6 +337,10 @@ Implementation As both the plugin and TCPDF are hosted on GitHub, the best way t
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/risotto-milanese/">
+        Risotto Milanese
+      </a></li>
     
       <li><a href="/blog/android-flutter/">
         Android Flutter
@@ -372,10 +376,6 @@ Implementation As both the plugin and TCPDF are hosted on GitHub, the best way t
     
       <li><a href="/blog/not-swedish-meatballs/">
         Not Swedish Meatballs
-      </a></li>
-    
-      <li><a href="/blog/download-playlist-video/">
-        Download playlist video
       </a></li>
     
   </ul>
