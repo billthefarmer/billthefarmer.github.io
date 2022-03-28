@@ -31,7 +31,7 @@ Implementation As both the plugin and TCPDF are hosted on GitHub, the best way t
 
 
 
-<meta name="generator" content="Hugo 0.91.0" />
+<meta name="generator" content="Hugo 0.94.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -186,199 +186,199 @@ implement the plugin, and TCPDF if it is not available on the web
 server, is to clone the repositories and use symbolic links to provide
 the plugin and the library in the right places. The same method could
 be used to implement WordPress.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">user@server:~ $ git clone https://github.com/billthefarmer/questionnaire.git
-user@server:~ $ <span style="color:#a2f">cd</span> /var/www/html/wordpress/wp-content/plugins/
-user@server:/var/www/html/wordpress/wp-content/plugins $ ln -s ~/questionnaire/wordpress questionnaire_maker
-user@server:/var/www/html/wordpress/wp-content/plugins $ <span style="color:#a2f">cd</span> ~
-user@server:~ $ git clone https://github.com/tecnickcom/TCPDF.git tcpdf
-user@server:~ $ <span style="color:#a2f">cd</span> questionnaire/wordpress
-user@server:~/questionnaire/wordpress $ ln -s ~/tcpdf
-</code></pre></div><p>The plugin includes code to load TCPDF if it is present and show a
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>user@server:~ $ git clone https://github.com/billthefarmer/questionnaire.git
+</span></span><span style="display:flex;"><span>user@server:~ $ <span style="color:#a2f">cd</span> /var/www/html/wordpress/wp-content/plugins/
+</span></span><span style="display:flex;"><span>user@server:/var/www/html/wordpress/wp-content/plugins $ ln -s ~/questionnaire/wordpress questionnaire_maker
+</span></span><span style="display:flex;"><span>user@server:/var/www/html/wordpress/wp-content/plugins $ <span style="color:#a2f">cd</span> ~
+</span></span><span style="display:flex;"><span>user@server:~ $ git clone https://github.com/tecnickcom/TCPDF.git tcpdf
+</span></span><span style="display:flex;"><span>user@server:~ $ <span style="color:#a2f">cd</span> questionnaire/wordpress
+</span></span><span style="display:flex;"><span>user@server:~/questionnaire/wordpress $ ln -s ~/tcpdf
+</span></span></code></pre></div><p>The plugin includes code to load TCPDF if it is present and show a
 message if it isn&rsquo;t. Using the path <code>tcpdf/tcpdf.php</code> will pick it up
 either from <code>/usr/share/php</code>, if installed, or from the symbolic link.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#080;font-style:italic">// Include TCPDF, if present
-</span><span style="color:#080;font-style:italic"></span><span style="color:#b8860b">$tcpdf_present</span> <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">include_once</span> <span style="color:#b44">&#39;tcpdf/tcpdf.php&#39;</span>;
-</code></pre></div><p>After more work on this project I needed another library which makes
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// Include TCPDF, if present
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#b8860b">$tcpdf_present</span> <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">include_once</span> <span style="color:#b44">&#39;tcpdf/tcpdf.php&#39;</span>;
+</span></span></code></pre></div><p>After more work on this project I needed another library which makes
 use of <a href="https://getcomposer.org">composer</a> for dependencies. TCPDF doesn&rsquo;t have any, but you
 can create a <code>composer.json</code> in the plugin and load TCPDF.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">user@server:~/questionnaire/wordpress $ php composer.phar require tecnickcom/tcpdf
-</code></pre></div><p>Using composer, the code to load libraries changes to pick them up
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>user@server:~/questionnaire/wordpress $ php composer.phar require tecnickcom/tcpdf
+</span></span></code></pre></div><p>Using composer, the code to load libraries changes to pick them up
 from the vendor folder.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#080;font-style:italic">// Include composer libraries, if present
-</span><span style="color:#080;font-style:italic"></span><span style="color:#b8860b">$vendor_present</span> <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">include_once</span> <span style="color:#b44">&#39;vendor/autoload.php&#39;</span>
-</code></pre></div><h3 id="displaying-errors">Displaying errors</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// Include composer libraries, if present
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#b8860b">$vendor_present</span> <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">include_once</span> <span style="color:#b44">&#39;vendor/autoload.php&#39;</span>
+</span></span></code></pre></div><h3 id="displaying-errors">Displaying errors</h3>
 <p>To avoid the dreaded WordPress White Screen of Death (WSOD), you can
 temporarily put a couple of lines at the top of the plugin to display
 PHP errors.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">error_reporting(<span style="color:#a2f;font-weight:bold">E_ALL</span>);
-ini_set(<span style="color:#b44">&#39;display_errors&#39;</span>, <span style="color:#666">1</span>);
-</code></pre></div><h3 id="creating-the-document">Creating the document</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>error_reporting(<span style="color:#a2f;font-weight:bold">E_ALL</span>);
+</span></span><span style="display:flex;"><span>ini_set(<span style="color:#b44">&#39;display_errors&#39;</span>, <span style="color:#666">1</span>);
+</span></span></code></pre></div><h3 id="creating-the-document">Creating the document</h3>
 <p>The code to create a pdf document is fairly straightforward. The
 examples given always seem to specify everything, but by making note
 of the defaults, that isn&rsquo;t necessary.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        <span style="color:#080;font-style:italic">// Create document
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$pdf</span> <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> TCPDF();
-        <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">setPageUnit</span>(<span style="color:#b44">&#39;pt&#39;</span>);
-
-        <span style="color:#080;font-style:italic">// Remove default header/footer
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">setPrintHeader</span>(<span style="color:#a2f;font-weight:bold">false</span>);
-        <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">setPrintFooter</span>(<span style="color:#a2f;font-weight:bold">false</span>);
-
-        <span style="color:#b8860b">$margin</span> <span style="color:#666">=</span> <span style="color:#666">72</span>; <span style="color:#080;font-style:italic">// 1&#34;
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$pageWidth</span> <span style="color:#666">=</span> <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">getPageWidth</span>();
-        <span style="color:#b8860b">$pageHeight</span> <span style="color:#666">=</span> <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">getPageHeight</span>();
-        <span style="color:#b8860b">$textWidth</span> <span style="color:#666">=</span> <span style="color:#b8860b">$pageWidth</span> <span style="color:#666">-</span> (<span style="color:#b8860b">$margin</span> <span style="color:#666">*</span> <span style="color:#666">2</span>);
-
-        <span style="color:#080;font-style:italic">// Set margins
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">SetMargins</span>(<span style="color:#b8860b">$margin</span>, <span style="color:#b8860b">$margin</span>, <span style="color:#b8860b">$margin</span>);
-        <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">SetAutoPageBreak</span>(<span style="color:#a2f;font-weight:bold">true</span>, <span style="color:#b8860b">$margin</span>);
-</code></pre></div><p>TCPDF doesn&rsquo;t seem to include a function to move the insertion point
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Create document
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$pdf</span> <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> TCPDF();
+</span></span><span style="display:flex;"><span>        <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">setPageUnit</span>(<span style="color:#b44">&#39;pt&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Remove default header/footer
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">setPrintHeader</span>(<span style="color:#a2f;font-weight:bold">false</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">setPrintFooter</span>(<span style="color:#a2f;font-weight:bold">false</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b8860b">$margin</span> <span style="color:#666">=</span> <span style="color:#666">72</span>; <span style="color:#080;font-style:italic">// 1&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$pageWidth</span> <span style="color:#666">=</span> <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">getPageWidth</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#b8860b">$pageHeight</span> <span style="color:#666">=</span> <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">getPageHeight</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#b8860b">$textWidth</span> <span style="color:#666">=</span> <span style="color:#b8860b">$pageWidth</span> <span style="color:#666">-</span> (<span style="color:#b8860b">$margin</span> <span style="color:#666">*</span> <span style="color:#666">2</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Set margins
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">SetMargins</span>(<span style="color:#b8860b">$margin</span>, <span style="color:#b8860b">$margin</span>, <span style="color:#b8860b">$margin</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">SetAutoPageBreak</span>(<span style="color:#a2f;font-weight:bold">true</span>, <span style="color:#b8860b">$margin</span>);
+</span></span></code></pre></div><p>TCPDF doesn&rsquo;t seem to include a function to move the insertion point
 down a line, you need to nest three functions to get the right result.
 The functions to add text make use of the <code>MultiCell()</code> function. Also
 the <code>SetFont()</code> function is used to set the font type.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        <span style="color:#080;font-style:italic">// New line
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">function</span> <span style="color:#00a000">new_text_line</span>(<span style="color:#b8860b">$pdf</span>)
-        {
-            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">Ln</span>(<span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">getCellHeight</span>(<span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">getFontSize</span>()));
-        };
-
-        <span style="color:#080;font-style:italic">// Add text
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">function</span> <span style="color:#00a000">add_text_object</span>(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$text</span>, <span style="color:#b8860b">$forename</span> <span style="color:#666">=</span> <span style="color:#b44">&#39;&#39;</span>, <span style="color:#b8860b">$lastname</span> <span style="color:#666">=</span> <span style="color:#b44">&#39;&#39;</span>)
-        {
-            <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$text</span><span style="color:#666">-&gt;</span><span style="color:#b44">type</span>))
-                <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">SetFont</span>(<span style="color:#b44">&#39;&#39;</span>, <span style="color:#b8860b">$text</span><span style="color:#666">-&gt;</span><span style="color:#b44">type</span>);
-
-            <span style="color:#a2f;font-weight:bold">else</span>
-                <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">SetFont</span>(<span style="color:#b44">&#39;&#39;</span>, <span style="color:#b44">&#39;&#39;</span>);
-
-            <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$text</span><span style="color:#666">-&gt;</span><span style="color:#b44">size</span>))
-                <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">SetFontSize</span>(<span style="color:#b8860b">$text</span><span style="color:#666">-&gt;</span><span style="color:#b44">size</span>);
-
-            <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$text</span><span style="color:#666">-&gt;</span><span style="color:#b44">color</span>))
-                <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">SetTextColor</span>(<span style="color:#b8860b">$text</span><span style="color:#666">-&gt;</span><span style="color:#b44">color</span>);
-
-            <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$text</span><span style="color:#666">-&gt;</span><span style="color:#b44">y</span>))
-                <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">SetY</span>(<span style="color:#b8860b">$text</span><span style="color:#666">-&gt;</span><span style="color:#b44">y</span>);
-
-            <span style="color:#b8860b">$subst</span> <span style="color:#666">=</span> str_replace([<span style="color:#b44">&#39;~forename~&#39;</span>, <span style="color:#b44">&#39;~lastname~&#39;</span>],
-                                      [<span style="color:#b8860b">$forename</span>, <span style="color:#b8860b">$lastname</span>], <span style="color:#b8860b">$text</span><span style="color:#666">-&gt;</span><span style="color:#b44">text</span>);
-
-            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">MultiCell</span>(<span style="color:#666">0</span>, <span style="color:#666">0</span>, <span style="color:#b8860b">$subst</span>, <span style="color:#666">0</span>, <span style="color:#b44">&#39;L&#39;</span>);
-        };
-
-        <span style="color:#080;font-style:italic">// Add report entry
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">function</span> <span style="color:#00a000">add_entry</span>(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$entry</span>, <span style="color:#b8860b">$value</span>)
-        {
-            <span style="color:#b8860b">$desc</span> <span style="color:#666">=</span> <span style="color:#b8860b">$entry</span><span style="color:#666">-&gt;</span><span style="color:#b44">desc</span>;
-            <span style="color:#b8860b">$type</span> <span style="color:#666">=</span> <span style="color:#b8860b">$entry</span><span style="color:#666">-&gt;</span><span style="color:#b8860b">$value</span><span style="color:#666">-&gt;</span><span style="color:#b44">type</span>;
-            <span style="color:#b8860b">$text</span> <span style="color:#666">=</span> <span style="color:#b8860b">$entry</span><span style="color:#666">-&gt;</span><span style="color:#b8860b">$value</span><span style="color:#666">-&gt;</span><span style="color:#b44">text</span>;
-            <span style="color:#b8860b">$image</span> <span style="color:#666">=</span> <span style="color:#b8860b">$entry</span><span style="color:#666">-&gt;</span><span style="color:#b8860b">$value</span><span style="color:#666">-&gt;</span><span style="color:#b44">image</span>;
-
-            <span style="color:#b8860b">$y</span> <span style="color:#666">=</span> <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">GetY</span>();
-            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">Image</span>(<span style="color:#b8860b">$path</span> <span style="color:#666">.</span> <span style="color:#b8860b">$image</span>, <span style="color:#b8860b">$margin</span>, <span style="color:#b8860b">$y</span>, <span style="color:#b8860b">$textWidth</span>, <span style="color:#666">0</span>,
-                        <span style="color:#b44">&#39;png&#39;</span>, <span style="color:#b44">&#39;&#39;</span>, <span style="color:#b44">&#39;N&#39;</span>);
-
-            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">MultiCell</span>(<span style="color:#666">0</span>, <span style="color:#666">0</span>, <span style="color:#b8860b">$desc</span>, <span style="color:#666">0</span>, <span style="color:#b44">&#39;L&#39;</span>);
-            new_text_line(<span style="color:#b8860b">$pdf</span>);
-            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">SetFont</span>(<span style="color:#b44">&#39;&#39;</span>, <span style="color:#b44">&#39;B&#39;</span>);
-            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">MultiCell</span>(<span style="color:#666">0</span>, <span style="color:#666">0</span>, <span style="color:#b8860b">$type</span>, <span style="color:#666">0</span>, <span style="color:#b44">&#39;L&#39;</span>);
-            new_text_line(<span style="color:#b8860b">$pdf</span>);
-            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">SetFont</span>(<span style="color:#b44">&#39;&#39;</span>, <span style="color:#b44">&#39;&#39;</span>);
-            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">MultiCell</span>(<span style="color:#666">0</span>, <span style="color:#666">0</span>, <span style="color:#b8860b">$text</span>, <span style="color:#666">0</span>, <span style="color:#b44">&#39;L&#39;</span>);
-            new_text_line(<span style="color:#b8860b">$pdf</span>);
-        };
-</code></pre></div><p>To display images requires a set of rules to place the image on the
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// New line
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">function</span> <span style="color:#00a000">new_text_line</span>(<span style="color:#b8860b">$pdf</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">Ln</span>(<span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">getCellHeight</span>(<span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">getFontSize</span>()));
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Add text
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">function</span> <span style="color:#00a000">add_text_object</span>(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$text</span>, <span style="color:#b8860b">$forename</span> <span style="color:#666">=</span> <span style="color:#b44">&#39;&#39;</span>, <span style="color:#b8860b">$lastname</span> <span style="color:#666">=</span> <span style="color:#b44">&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$text</span><span style="color:#666">-&gt;</span><span style="color:#b44">type</span>))
+</span></span><span style="display:flex;"><span>                <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">SetFont</span>(<span style="color:#b44">&#39;&#39;</span>, <span style="color:#b8860b">$text</span><span style="color:#666">-&gt;</span><span style="color:#b44">type</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">else</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">SetFont</span>(<span style="color:#b44">&#39;&#39;</span>, <span style="color:#b44">&#39;&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$text</span><span style="color:#666">-&gt;</span><span style="color:#b44">size</span>))
+</span></span><span style="display:flex;"><span>                <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">SetFontSize</span>(<span style="color:#b8860b">$text</span><span style="color:#666">-&gt;</span><span style="color:#b44">size</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$text</span><span style="color:#666">-&gt;</span><span style="color:#b44">color</span>))
+</span></span><span style="display:flex;"><span>                <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">SetTextColor</span>(<span style="color:#b8860b">$text</span><span style="color:#666">-&gt;</span><span style="color:#b44">color</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$text</span><span style="color:#666">-&gt;</span><span style="color:#b44">y</span>))
+</span></span><span style="display:flex;"><span>                <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">SetY</span>(<span style="color:#b8860b">$text</span><span style="color:#666">-&gt;</span><span style="color:#b44">y</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$subst</span> <span style="color:#666">=</span> str_replace([<span style="color:#b44">&#39;~forename~&#39;</span>, <span style="color:#b44">&#39;~lastname~&#39;</span>],
+</span></span><span style="display:flex;"><span>                                      [<span style="color:#b8860b">$forename</span>, <span style="color:#b8860b">$lastname</span>], <span style="color:#b8860b">$text</span><span style="color:#666">-&gt;</span><span style="color:#b44">text</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">MultiCell</span>(<span style="color:#666">0</span>, <span style="color:#666">0</span>, <span style="color:#b8860b">$subst</span>, <span style="color:#666">0</span>, <span style="color:#b44">&#39;L&#39;</span>);
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Add report entry
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">function</span> <span style="color:#00a000">add_entry</span>(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$entry</span>, <span style="color:#b8860b">$value</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$desc</span> <span style="color:#666">=</span> <span style="color:#b8860b">$entry</span><span style="color:#666">-&gt;</span><span style="color:#b44">desc</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$type</span> <span style="color:#666">=</span> <span style="color:#b8860b">$entry</span><span style="color:#666">-&gt;</span><span style="color:#b8860b">$value</span><span style="color:#666">-&gt;</span><span style="color:#b44">type</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$text</span> <span style="color:#666">=</span> <span style="color:#b8860b">$entry</span><span style="color:#666">-&gt;</span><span style="color:#b8860b">$value</span><span style="color:#666">-&gt;</span><span style="color:#b44">text</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$image</span> <span style="color:#666">=</span> <span style="color:#b8860b">$entry</span><span style="color:#666">-&gt;</span><span style="color:#b8860b">$value</span><span style="color:#666">-&gt;</span><span style="color:#b44">image</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$y</span> <span style="color:#666">=</span> <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">GetY</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">Image</span>(<span style="color:#b8860b">$path</span> <span style="color:#666">.</span> <span style="color:#b8860b">$image</span>, <span style="color:#b8860b">$margin</span>, <span style="color:#b8860b">$y</span>, <span style="color:#b8860b">$textWidth</span>, <span style="color:#666">0</span>,
+</span></span><span style="display:flex;"><span>                        <span style="color:#b44">&#39;png&#39;</span>, <span style="color:#b44">&#39;&#39;</span>, <span style="color:#b44">&#39;N&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">MultiCell</span>(<span style="color:#666">0</span>, <span style="color:#666">0</span>, <span style="color:#b8860b">$desc</span>, <span style="color:#666">0</span>, <span style="color:#b44">&#39;L&#39;</span>);
+</span></span><span style="display:flex;"><span>            new_text_line(<span style="color:#b8860b">$pdf</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">SetFont</span>(<span style="color:#b44">&#39;&#39;</span>, <span style="color:#b44">&#39;B&#39;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">MultiCell</span>(<span style="color:#666">0</span>, <span style="color:#666">0</span>, <span style="color:#b8860b">$type</span>, <span style="color:#666">0</span>, <span style="color:#b44">&#39;L&#39;</span>);
+</span></span><span style="display:flex;"><span>            new_text_line(<span style="color:#b8860b">$pdf</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">SetFont</span>(<span style="color:#b44">&#39;&#39;</span>, <span style="color:#b44">&#39;&#39;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">MultiCell</span>(<span style="color:#666">0</span>, <span style="color:#666">0</span>, <span style="color:#b8860b">$text</span>, <span style="color:#666">0</span>, <span style="color:#b44">&#39;L&#39;</span>);
+</span></span><span style="display:flex;"><span>            new_text_line(<span style="color:#b8860b">$pdf</span>);
+</span></span><span style="display:flex;"><span>        };
+</span></span></code></pre></div><p>To display images requires a set of rules to place the image on the
 page. If the width is empty or zero, text width, else width. If the
 height is empty or zero, height in proportion to width, else
 height. If x is empty or zero, left margin, if negative, right margin,
 else x. If y is empty or zero, top margin, negative, bottom margin,
 else y.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        <span style="color:#080;font-style:italic">// Add image
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">function</span> <span style="color:#00a000">add_image_object</span>(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$image</span>, <span style="color:#b8860b">$margin</span>, <span style="color:#b8860b">$textWidth</span>,
-                                  <span style="color:#b8860b">$pageHeight</span>, <span style="color:#b8860b">$pageWidth</span>, <span style="color:#b8860b">$path</span>)
-        {
-            <span style="color:#b8860b">$width</span> <span style="color:#666">=</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">width</span>))<span style="color:#666">?</span> <span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">width</span><span style="color:#666">:</span> <span style="color:#b8860b">$textWidth</span>;
-            <span style="color:#b8860b">$height</span> <span style="color:#666">=</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">height</span>))<span style="color:#666">?</span> <span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">height</span><span style="color:#666">:</span> <span style="color:#666">0</span>;
-            <span style="color:#b8860b">$x</span> <span style="color:#666">=</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">x</span>))<span style="color:#666">?</span> (<span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">x</span> <span style="color:#666">&lt;</span> <span style="color:#666">0</span>)<span style="color:#666">?</span>
-               <span style="color:#b8860b">$pageWidth</span> <span style="color:#666">-</span> <span style="color:#b8860b">$margin</span> <span style="color:#666">-</span> <span style="color:#b8860b">$width</span><span style="color:#666">:</span> <span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">x</span><span style="color:#666">:</span> <span style="color:#b8860b">$margin</span>;
-            <span style="color:#b8860b">$y</span> <span style="color:#666">=</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">y</span>))<span style="color:#666">?</span> (<span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">y</span> <span style="color:#666">&lt;</span> <span style="color:#666">0</span>)<span style="color:#666">?</span>
-               <span style="color:#b8860b">$pageHeight</span> <span style="color:#666">-</span> <span style="color:#b8860b">$margin</span> <span style="color:#666">-</span> <span style="color:#b8860b">$height</span><span style="color:#666">:</span> <span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">y</span><span style="color:#666">:</span> <span style="color:#b8860b">$margin</span>;
-            <span style="color:#b8860b">$type</span> <span style="color:#666">=</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">type</span>))<span style="color:#666">?</span> <span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">type</span><span style="color:#666">:</span> <span style="color:#b44">&#39;&#39;</span>;
-            <span style="color:#b8860b">$link</span> <span style="color:#666">=</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">link</span>))<span style="color:#666">?</span> <span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">link</span><span style="color:#666">:</span> <span style="color:#b44">&#39;&#39;</span>;
-            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">Image</span>(<span style="color:#b8860b">$path</span> <span style="color:#666">.</span> <span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">src</span>, <span style="color:#b8860b">$x</span>, <span style="color:#b8860b">$y</span>, <span style="color:#b8860b">$width</span>, <span style="color:#b8860b">$height</span>,
-                        <span style="color:#b8860b">$type</span>, <span style="color:#b8860b">$link</span>);
-        };
-</code></pre></div><p>The report starts with a preamble.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
-        <span style="color:#080;font-style:italic">// Preamble
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">foreach</span> (<span style="color:#b8860b">$pages</span> <span style="color:#a2f;font-weight:bold">as</span> <span style="color:#b8860b">$page</span>)
-        {            
-            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">AddPage</span>();
-
-            <span style="color:#080;font-style:italic">// Text
-</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">foreach</span> (<span style="color:#b8860b">$page</span><span style="color:#666">-&gt;</span><span style="color:#b44">text</span> <span style="color:#a2f;font-weight:bold">as</span> <span style="color:#b8860b">$text</span>)
-                add_text_object(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$text</span>, <span style="color:#b8860b">$forename</span>, <span style="color:#b8860b">$lastname</span>);
-
-            <span style="color:#080;font-style:italic">// Images
-</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">foreach</span> (<span style="color:#b8860b">$page</span><span style="color:#666">-&gt;</span><span style="color:#b44">images</span> <span style="color:#a2f;font-weight:bold">as</span> <span style="color:#b8860b">$image</span>)
-                add_image_object(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$image</span>, <span style="color:#b8860b">$margin</span>, <span style="color:#b8860b">$textWidth</span>,
-                                 <span style="color:#b8860b">$pageHeight</span>, <span style="color:#b8860b">$pageWidth</span>, <span style="color:#b8860b">$path</span>);
-        }
-</code></pre></div><p>Then the report body. Because each section starts with an image, start
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Add image
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">function</span> <span style="color:#00a000">add_image_object</span>(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$image</span>, <span style="color:#b8860b">$margin</span>, <span style="color:#b8860b">$textWidth</span>,
+</span></span><span style="display:flex;"><span>                                  <span style="color:#b8860b">$pageHeight</span>, <span style="color:#b8860b">$pageWidth</span>, <span style="color:#b8860b">$path</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$width</span> <span style="color:#666">=</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">width</span>))<span style="color:#666">?</span> <span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">width</span><span style="color:#666">:</span> <span style="color:#b8860b">$textWidth</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$height</span> <span style="color:#666">=</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">height</span>))<span style="color:#666">?</span> <span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">height</span><span style="color:#666">:</span> <span style="color:#666">0</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$x</span> <span style="color:#666">=</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">x</span>))<span style="color:#666">?</span> (<span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">x</span> <span style="color:#666">&lt;</span> <span style="color:#666">0</span>)<span style="color:#666">?</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#b8860b">$pageWidth</span> <span style="color:#666">-</span> <span style="color:#b8860b">$margin</span> <span style="color:#666">-</span> <span style="color:#b8860b">$width</span><span style="color:#666">:</span> <span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">x</span><span style="color:#666">:</span> <span style="color:#b8860b">$margin</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$y</span> <span style="color:#666">=</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">y</span>))<span style="color:#666">?</span> (<span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">y</span> <span style="color:#666">&lt;</span> <span style="color:#666">0</span>)<span style="color:#666">?</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#b8860b">$pageHeight</span> <span style="color:#666">-</span> <span style="color:#b8860b">$margin</span> <span style="color:#666">-</span> <span style="color:#b8860b">$height</span><span style="color:#666">:</span> <span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">y</span><span style="color:#666">:</span> <span style="color:#b8860b">$margin</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$type</span> <span style="color:#666">=</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">type</span>))<span style="color:#666">?</span> <span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">type</span><span style="color:#666">:</span> <span style="color:#b44">&#39;&#39;</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$link</span> <span style="color:#666">=</span> (<span style="color:#666">!</span><span style="color:#a2f;font-weight:bold">empty</span>(<span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">link</span>))<span style="color:#666">?</span> <span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">link</span><span style="color:#666">:</span> <span style="color:#b44">&#39;&#39;</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">Image</span>(<span style="color:#b8860b">$path</span> <span style="color:#666">.</span> <span style="color:#b8860b">$image</span><span style="color:#666">-&gt;</span><span style="color:#b44">src</span>, <span style="color:#b8860b">$x</span>, <span style="color:#b8860b">$y</span>, <span style="color:#b8860b">$width</span>, <span style="color:#b8860b">$height</span>,
+</span></span><span style="display:flex;"><span>                        <span style="color:#b8860b">$type</span>, <span style="color:#b8860b">$link</span>);
+</span></span><span style="display:flex;"><span>        };
+</span></span></code></pre></div><p>The report starts with a preamble.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Preamble
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">foreach</span> (<span style="color:#b8860b">$pages</span> <span style="color:#a2f;font-weight:bold">as</span> <span style="color:#b8860b">$page</span>)
+</span></span><span style="display:flex;"><span>        {            
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">AddPage</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Text
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">foreach</span> (<span style="color:#b8860b">$page</span><span style="color:#666">-&gt;</span><span style="color:#b44">text</span> <span style="color:#a2f;font-weight:bold">as</span> <span style="color:#b8860b">$text</span>)
+</span></span><span style="display:flex;"><span>                add_text_object(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$text</span>, <span style="color:#b8860b">$forename</span>, <span style="color:#b8860b">$lastname</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Images
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">foreach</span> (<span style="color:#b8860b">$page</span><span style="color:#666">-&gt;</span><span style="color:#b44">images</span> <span style="color:#a2f;font-weight:bold">as</span> <span style="color:#b8860b">$image</span>)
+</span></span><span style="display:flex;"><span>                add_image_object(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$image</span>, <span style="color:#b8860b">$margin</span>, <span style="color:#b8860b">$textWidth</span>,
+</span></span><span style="display:flex;"><span>                                 <span style="color:#b8860b">$pageHeight</span>, <span style="color:#b8860b">$pageWidth</span>, <span style="color:#b8860b">$path</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span></code></pre></div><p>Then the report body. Because each section starts with an image, start
 a new page if near the bottom.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
-        <span style="color:#080;font-style:italic">// Report
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">AddPage</span>();
-
-        <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#b8860b">$B</span>)
-            add_entry(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$answers</span><span style="color:#666">-&gt;</span><span style="color:#b44">B</span>, <span style="color:#b8860b">$B</span>, <span style="color:#b8860b">$margin</span>, <span style="color:#b8860b">$textWidth</span>, <span style="color:#b8860b">$path</span>);
-
-        <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#b8860b">$C</span>)
-            add_entry(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$answers</span><span style="color:#666">-&gt;</span><span style="color:#b44">C</span>, <span style="color:#b8860b">$C</span>, <span style="color:#b8860b">$margin</span>, <span style="color:#b8860b">$textWidth</span>, <span style="color:#b8860b">$path</span>);
-
-        <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">GetY</span>() <span style="color:#666">&gt;=</span> <span style="color:#b8860b">$pageHeight</span> <span style="color:#666">-</span> (<span style="color:#b8860b">$margin</span> <span style="color:#666">*</span> <span style="color:#666">3</span>))
-            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">AddPage</span>();
-    <span style="color:#080;font-style:italic">// ...
-</span></code></pre></div><p>Then the last page.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
-        <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">AddPage</span>();
-
-        <span style="color:#080;font-style:italic">// Last page text
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">foreach</span> (<span style="color:#b8860b">$last</span><span style="color:#666">-&gt;</span><span style="color:#b44">text</span> <span style="color:#a2f;font-weight:bold">as</span> <span style="color:#b8860b">$text</span>)
-            add_text_object(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$text</span>);
-
-        <span style="color:#080;font-style:italic">// Last page images
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">foreach</span> (<span style="color:#b8860b">$last</span><span style="color:#666">-&gt;</span><span style="color:#b44">images</span> <span style="color:#a2f;font-weight:bold">as</span> <span style="color:#b8860b">$image</span>)
-            add_image_object(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$image</span>, <span style="color:#b8860b">$margin</span>, <span style="color:#b8860b">$textWidth</span>,
-                             <span style="color:#b8860b">$pageHeight</span>, <span style="color:#b8860b">$pageWidth</span>, <span style="color:#b8860b">$path</span>);
-</code></pre></div><p>Output the document, and return the path to it.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
-        <span style="color:#080;font-style:italic">// Output document
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">Output</span>(<span style="color:#b8860b">$path</span> <span style="color:#666">.</span> <span style="color:#b44">&#39;report/&#39;</span> <span style="color:#666">.</span> <span style="color:#b8860b">$filename</span>, <span style="color:#b44">&#39;F&#39;</span>);
-
-        <span style="color:#080;font-style:italic">// Return file uri
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">return</span> plugins_url(<span style="color:#b44">&#39;report/&#39;</span> <span style="color:#666">.</span> <span style="color:#b8860b">$filename</span>, <span style="color:#800">__FILE__</span>);
-</code></pre></div><h3 id="creating-an-email">Creating an email</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Report
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">AddPage</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#b8860b">$B</span>)
+</span></span><span style="display:flex;"><span>            add_entry(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$answers</span><span style="color:#666">-&gt;</span><span style="color:#b44">B</span>, <span style="color:#b8860b">$B</span>, <span style="color:#b8860b">$margin</span>, <span style="color:#b8860b">$textWidth</span>, <span style="color:#b8860b">$path</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#b8860b">$C</span>)
+</span></span><span style="display:flex;"><span>            add_entry(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$answers</span><span style="color:#666">-&gt;</span><span style="color:#b44">C</span>, <span style="color:#b8860b">$C</span>, <span style="color:#b8860b">$margin</span>, <span style="color:#b8860b">$textWidth</span>, <span style="color:#b8860b">$path</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">GetY</span>() <span style="color:#666">&gt;=</span> <span style="color:#b8860b">$pageHeight</span> <span style="color:#666">-</span> (<span style="color:#b8860b">$margin</span> <span style="color:#666">*</span> <span style="color:#666">3</span>))
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">AddPage</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// ...
+</span></span></span></code></pre></div><p>Then the last page.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">AddPage</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Last page text
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">foreach</span> (<span style="color:#b8860b">$last</span><span style="color:#666">-&gt;</span><span style="color:#b44">text</span> <span style="color:#a2f;font-weight:bold">as</span> <span style="color:#b8860b">$text</span>)
+</span></span><span style="display:flex;"><span>            add_text_object(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$text</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Last page images
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">foreach</span> (<span style="color:#b8860b">$last</span><span style="color:#666">-&gt;</span><span style="color:#b44">images</span> <span style="color:#a2f;font-weight:bold">as</span> <span style="color:#b8860b">$image</span>)
+</span></span><span style="display:flex;"><span>            add_image_object(<span style="color:#b8860b">$pdf</span>, <span style="color:#b8860b">$image</span>, <span style="color:#b8860b">$margin</span>, <span style="color:#b8860b">$textWidth</span>,
+</span></span><span style="display:flex;"><span>                             <span style="color:#b8860b">$pageHeight</span>, <span style="color:#b8860b">$pageWidth</span>, <span style="color:#b8860b">$path</span>);
+</span></span></code></pre></div><p>Output the document, and return the path to it.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Output document
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$pdf</span><span style="color:#666">-&gt;</span><span style="color:#b44">Output</span>(<span style="color:#b8860b">$path</span> <span style="color:#666">.</span> <span style="color:#b44">&#39;report/&#39;</span> <span style="color:#666">.</span> <span style="color:#b8860b">$filename</span>, <span style="color:#b44">&#39;F&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Return file uri
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">return</span> plugins_url(<span style="color:#b44">&#39;report/&#39;</span> <span style="color:#666">.</span> <span style="color:#b8860b">$filename</span>, <span style="color:#800">__FILE__</span>);
+</span></span></code></pre></div><h3 id="creating-an-email">Creating an email</h3>
 <p>To send the report, create an email and send it.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">        <span style="color:#080;font-style:italic">// Set fields
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$to</span> <span style="color:#666">=</span> <span style="color:#b44">&#34;</span><span style="color:#b68;font-weight:bold">$username</span><span style="color:#b44"> &lt;</span><span style="color:#b68;font-weight:bold">$usermail</span><span style="color:#b44">&gt;&#34;</span>;
-        <span style="color:#b8860b">$from_email</span> <span style="color:#666">=</span> <span style="color:#b8860b">$data</span><span style="color:#666">-&gt;</span><span style="color:#b44">from_email</span>;
-        <span style="color:#b8860b">$from_name</span> <span style="color:#666">=</span> <span style="color:#b8860b">$data</span><span style="color:#666">-&gt;</span><span style="color:#b44">from_name</span>;
-        <span style="color:#b8860b">$from</span> <span style="color:#666">=</span> <span style="color:#b44">&#34;</span><span style="color:#b68;font-weight:bold">$from_name</span><span style="color:#b44"> &lt;</span><span style="color:#b68;font-weight:bold">$from_email</span><span style="color:#b44">&gt;&#34;</span>;
-        <span style="color:#b8860b">$subject</span> <span style="color:#666">=</span> str_replace(<span style="color:#b44">&#39;~forename~&#39;</span>, <span style="color:#b8860b">$forename</span>, <span style="color:#b8860b">$data</span><span style="color:#666">-&gt;</span><span style="color:#b44">subject</span>);
-        <span style="color:#b8860b">$message</span> <span style="color:#666">=</span> str_replace(<span style="color:#b44">&#39;~forename~&#39;</span>, <span style="color:#b8860b">$forename</span>, <span style="color:#b8860b">$data</span><span style="color:#666">-&gt;</span><span style="color:#b44">message</span>);
-        <span style="color:#b8860b">$content</span> <span style="color:#666">=</span> <span style="color:#b44">&#34;Content-Type: text/html&#34;</span>;
-        <span style="color:#b8860b">$headers</span> <span style="color:#666">=</span> [<span style="color:#b44">&#34;From: </span><span style="color:#b68;font-weight:bold">$from</span><span style="color:#b44">&#34;</span>,
-                    <span style="color:#b8860b">$content</span>];
-
-        <span style="color:#080;font-style:italic">// Get attachment path
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$path</span> <span style="color:#666">=</span> plugin_dir_path(<span style="color:#800">__FILE__</span>);
-        <span style="color:#b8860b">$attachments</span> <span style="color:#666">=</span> <span style="color:#b8860b">$path</span> <span style="color:#666">.</span> <span style="color:#b44">&#34;report/&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">$filename</span>;
-
-        <span style="color:#080;font-style:italic">// Send mail
-</span><span style="color:#080;font-style:italic"></span>        wp_mail(<span style="color:#b8860b">$to</span>, <span style="color:#b8860b">$subject</span>, <span style="color:#b8860b">$message</span>, <span style="color:#b8860b">$headers</span>,
-                <span style="color:#b8860b">$attachments</span>);
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Set fields
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$to</span> <span style="color:#666">=</span> <span style="color:#b44">&#34;</span><span style="color:#b68;font-weight:bold">$username</span><span style="color:#b44"> &lt;</span><span style="color:#b68;font-weight:bold">$usermail</span><span style="color:#b44">&gt;&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#b8860b">$from_email</span> <span style="color:#666">=</span> <span style="color:#b8860b">$data</span><span style="color:#666">-&gt;</span><span style="color:#b44">from_email</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#b8860b">$from_name</span> <span style="color:#666">=</span> <span style="color:#b8860b">$data</span><span style="color:#666">-&gt;</span><span style="color:#b44">from_name</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#b8860b">$from</span> <span style="color:#666">=</span> <span style="color:#b44">&#34;</span><span style="color:#b68;font-weight:bold">$from_name</span><span style="color:#b44"> &lt;</span><span style="color:#b68;font-weight:bold">$from_email</span><span style="color:#b44">&gt;&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#b8860b">$subject</span> <span style="color:#666">=</span> str_replace(<span style="color:#b44">&#39;~forename~&#39;</span>, <span style="color:#b8860b">$forename</span>, <span style="color:#b8860b">$data</span><span style="color:#666">-&gt;</span><span style="color:#b44">subject</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#b8860b">$message</span> <span style="color:#666">=</span> str_replace(<span style="color:#b44">&#39;~forename~&#39;</span>, <span style="color:#b8860b">$forename</span>, <span style="color:#b8860b">$data</span><span style="color:#666">-&gt;</span><span style="color:#b44">message</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#b8860b">$content</span> <span style="color:#666">=</span> <span style="color:#b44">&#34;Content-Type: text/html&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#b8860b">$headers</span> <span style="color:#666">=</span> [<span style="color:#b44">&#34;From: </span><span style="color:#b68;font-weight:bold">$from</span><span style="color:#b44">&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#b8860b">$content</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Get attachment path
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#b8860b">$path</span> <span style="color:#666">=</span> plugin_dir_path(<span style="color:#800">__FILE__</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#b8860b">$attachments</span> <span style="color:#666">=</span> <span style="color:#b8860b">$path</span> <span style="color:#666">.</span> <span style="color:#b44">&#34;report/&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">$filename</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Send mail
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        wp_mail(<span style="color:#b8860b">$to</span>, <span style="color:#b8860b">$subject</span>, <span style="color:#b8860b">$message</span>, <span style="color:#b8860b">$headers</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#b8860b">$attachments</span>);
+</span></span></code></pre></div>
     </p>
     
     

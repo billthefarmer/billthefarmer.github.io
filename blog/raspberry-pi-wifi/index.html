@@ -28,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.91.0" />
+<meta name="generator" content="Hugo 0.94.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -175,35 +175,35 @@ code {
       <p>When I got my Pi some months ago I bought a wifi adapter for it, as you do. But I couldn’t get it to work reliably in Raspbian, and I didn’t even try in Arch Linux. So I tested the adapter on my windoze box, and it worked just fine, and I tried it with Linux and it worked just fine, so I put it in the ‘too hard’ box.</p>
 <p>I dug it out again the other day because I wanted to hear just how good the <a href="https://github.com/billthefarmer/mididriver">Sonivox EAS library</a> I ported to the Pi sounded when hooked up to the hifi with some decent speakers. After extensive googling, and putting together various bits and pieces of info from various blog posts, and wikis, I came up with sort-of working configs for Raspbian and Arch Linux.</p>
 <h2 id="raspbian">Raspbian</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/etc/network/interfaces:
-    
-    auto lo
-    iface lo inet loopback
-    
-    iface eth0 inet dhcp
-    
-    auto wlan0
-    iface wlan0 inet dhcp
-    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
-</code></pre></div><p>You can use <code>wpa_passphrase</code> to generate the <code>wpa_supplicant.conf</code> file:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ wpa_passphrase ssid passphrase
-
-    <span style="color:#b8860b">network</span><span style="color:#666">={</span>
-            <span style="color:#b8860b">ssid</span><span style="color:#666">=</span><span style="color:#b44">&#34;ssid&#34;</span>
-            <span style="color:#080;font-style:italic">#psk=&#34;passphrase&#34;</span>
-            <span style="color:#b8860b">psk</span><span style="color:#666">=</span>41167ee7545cb4d9b1c7d7e113cfc1f0ac367b020141c46c9418965c1926fd80
-    <span style="color:#666">}</span>
-</code></pre></div><p>Redirect the output to the <code>wpa_supplicant.conf</code> file. I found this in the Arch Linux wiki. The wpa-conf and wpa-roam stanzas do not appear to be officially documented anywhere I can find.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/etc/network/interfaces:
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    auto lo
+</span></span><span style="display:flex;"><span>    iface lo inet loopback
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    iface eth0 inet dhcp
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    auto wlan0
+</span></span><span style="display:flex;"><span>    iface wlan0 inet dhcp
+</span></span><span style="display:flex;"><span>    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+</span></span></code></pre></div><p>You can use <code>wpa_passphrase</code> to generate the <code>wpa_supplicant.conf</code> file:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ wpa_passphrase ssid passphrase
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b8860b">network</span><span style="color:#666">={</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">ssid</span><span style="color:#666">=</span><span style="color:#b44">&#34;ssid&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">#psk=&#34;passphrase&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#b8860b">psk</span><span style="color:#666">=</span>41167ee7545cb4d9b1c7d7e113cfc1f0ac367b020141c46c9418965c1926fd80
+</span></span><span style="display:flex;"><span>    <span style="color:#666">}</span>
+</span></span></code></pre></div><p>Redirect the output to the <code>wpa_supplicant.conf</code> file. I found this in the Arch Linux wiki. The wpa-conf and wpa-roam stanzas do not appear to be officially documented anywhere I can find.</p>
 <h3 id="raspbian-jessie">Raspbian Jessie</h3>
 <p>If your wifi router has a WPS button, press it. Run <code>wpa_cli</code> on the Pi and enter the following commands:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">    &gt; wps_pbc
-    &gt; quit
-</code></pre></div><p>This should automatically pick up the ssid and key, connect, and set up <code>wpa_supplicant.conf</code> so that the Pi will reconnect when rebooted.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>    &gt; wps_pbc
+</span></span><span style="display:flex;"><span>    &gt; quit
+</span></span></code></pre></div><p>This should automatically pick up the ssid and key, connect, and set up <code>wpa_supplicant.conf</code> so that the Pi will reconnect when rebooted.</p>
 <h2 id="arch-linux">Arch Linux</h2>
 <p>Use <code>wifi-menu</code> to create a <code>netctl</code> profile. Use <code>netctl list</code> to list profiles and <code>netctl</code> to enable and start your profile.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">    sudo netctl <span style="color:#a2f">enable</span> wlan0-yourSSIDhere
-    sudo netctl start wlan0-yourSSIDhere
-</code></pre></div><p>This appears to work just fine.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>    sudo netctl <span style="color:#a2f">enable</span> wlan0-yourSSIDhere
+</span></span><span style="display:flex;"><span>    sudo netctl start wlan0-yourSSIDhere
+</span></span></code></pre></div><p>This appears to work just fine.</p>
 
     </p>
     

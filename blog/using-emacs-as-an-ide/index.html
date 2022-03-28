@@ -28,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.91.0" />
+<meta name="generator" content="Hugo 0.94.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -191,25 +191,25 @@ code {
 <p>Some of these things are on the menu, but the keyboard shortcuts are easier to use. You need to customise Emacs to do some of the things I use it for.</p>
 <p><img src="images/2016/12/Custom.png" alt="Custom"></p>
 <p>There are several ways of customising Emacs, but it all ends up in your ~/.emacs config file. First off, you need to install the Emacs packages you need, like groovy-mode for editing Android Gradle build files, JS3-mode for Javascript files, Markdown-mode for Github README files, yaml-mode for Travis Cl build files, etc. This is on the Options-&gt;Manage Emacs Packages menu. You can change some settings on the Options menu, like Options-&gt;Use CUA keys (Cut/Paste with C-x/C-c/C-v), but remember to Options-&gt;Save Options before you quit. Some of them are buried deeply in Options-&gt;Customise Emacs and can be a pain to find. It’s easier to just put them in your ~/.emacs file. Examples are:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">    <span style="color:#666">&#39;</span>(<span style="color:#b8860b">c-basic-offset</span> <span style="color:#666">4</span>)
-    <span style="color:#666">&#39;</span>(<span style="color:#b8860b">c-offsets-alist</span> (<span style="color:#a2f;font-weight:bold">quote</span> ((<span style="color:#b8860b">substatement-open</span> <span style="color:#666">.</span> <span style="color:#666">0</span>))))
-</code></pre></div><p>That gives you an indent of four spaces for all code editing, and makes it put the opening bracket of if or for statements in the right place.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">    (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;auto-mode-alist</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;\\.c\\&#39;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">c++-mode</span>))
-    (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;auto-mode-alist</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;\\.h\\&#39;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">c++-mode</span>))
-    (<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;nxml-mode-hook</span>
-    	  (<span style="color:#a2f">lambda</span> ()
-    	    (<span style="color:#00a000">set</span> (<span style="color:#b8860b">make-local-variable</span> <span style="color:#b8860b">&#39;compile-command</span>)
-    		 <span style="color:#b44">&#34;ant debug&#34;</span>)))
-    (<span style="color:#00a000">require</span> <span style="color:#b8860b">&#39;package</span>)
-    (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;package-archives</span>
-             <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;melpa&#34;</span> <span style="color:#666">.</span> <span style="color:#b44">&#34;http://melpa.milkbox.net/packages/&#34;</span>) <span style="color:#800">t</span>)
-    (<span style="color:#b8860b">package-initialize</span>)
-    (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;auto-mode-alist</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;\\.gradle\\&#39;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">groovy-mode</span>))
-    (<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;groovy-mode-hook</span>
-    	  (<span style="color:#a2f">lambda</span> ()
-    	    (<span style="color:#00a000">set</span> (<span style="color:#b8860b">make-local-variable</span> <span style="color:#b8860b">&#39;compile-command</span>)
-    		 <span style="color:#b44">&#34;gradle build&#34;</span>)))
-</code></pre></div><p>The above Lisp code makes Emacs use c++mode for .c and .h source files, change the compile command to ‘ant debug’ for Android xml files, use groovy-mode for .gradle files and change the compile command to ‘gradle build’ for Android gradle files.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>    <span style="color:#666">&#39;</span>(<span style="color:#b8860b">c-basic-offset</span> <span style="color:#666">4</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#666">&#39;</span>(<span style="color:#b8860b">c-offsets-alist</span> (<span style="color:#a2f;font-weight:bold">quote</span> ((<span style="color:#b8860b">substatement-open</span> <span style="color:#666">.</span> <span style="color:#666">0</span>))))
+</span></span></code></pre></div><p>That gives you an indent of four spaces for all code editing, and makes it put the opening bracket of if or for statements in the right place.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>    (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;auto-mode-alist</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;\\.c\\&#39;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">c++-mode</span>))
+</span></span><span style="display:flex;"><span>    (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;auto-mode-alist</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;\\.h\\&#39;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">c++-mode</span>))
+</span></span><span style="display:flex;"><span>    (<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;nxml-mode-hook</span>
+</span></span><span style="display:flex;"><span>    	  (<span style="color:#a2f">lambda</span> ()
+</span></span><span style="display:flex;"><span>    	    (<span style="color:#00a000">set</span> (<span style="color:#b8860b">make-local-variable</span> <span style="color:#b8860b">&#39;compile-command</span>)
+</span></span><span style="display:flex;"><span>    		 <span style="color:#b44">&#34;ant debug&#34;</span>)))
+</span></span><span style="display:flex;"><span>    (<span style="color:#00a000">require</span> <span style="color:#b8860b">&#39;package</span>)
+</span></span><span style="display:flex;"><span>    (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;package-archives</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;melpa&#34;</span> <span style="color:#666">.</span> <span style="color:#b44">&#34;http://melpa.milkbox.net/packages/&#34;</span>) <span style="color:#800">t</span>)
+</span></span><span style="display:flex;"><span>    (<span style="color:#b8860b">package-initialize</span>)
+</span></span><span style="display:flex;"><span>    (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;auto-mode-alist</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;\\.gradle\\&#39;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">groovy-mode</span>))
+</span></span><span style="display:flex;"><span>    (<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;groovy-mode-hook</span>
+</span></span><span style="display:flex;"><span>    	  (<span style="color:#a2f">lambda</span> ()
+</span></span><span style="display:flex;"><span>    	    (<span style="color:#00a000">set</span> (<span style="color:#b8860b">make-local-variable</span> <span style="color:#b8860b">&#39;compile-command</span>)
+</span></span><span style="display:flex;"><span>    		 <span style="color:#b44">&#34;gradle build&#34;</span>)))
+</span></span></code></pre></div><p>The above Lisp code makes Emacs use c++mode for .c and .h source files, change the compile command to ‘ant debug’ for Android xml files, use groovy-mode for .gradle files and change the compile command to ‘gradle build’ for Android gradle files.</p>
 <p>To use some of the options on the Tools menu, like diff, compile, egrep, etc., require the tools to be in your path. You can achieve this on windows by installing MSYS2 and making sure your path picks it up. Linux and OSX will have these tools installed if you are using it for development.</p>
 <p><img src="images/2016/12/Gradle.png" alt="Gradle">
 Build an Android app using Gradle</p>

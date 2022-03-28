@@ -36,7 +36,7 @@ Ingredients  Olive oil Butter, small knob 3/4 cup arborio rice Medium onion, cho
       
       <guid>https://billthefarmer.github.io/blog/android-flutter/</guid>
       <description>Google have made a big thing of their flutter development platform, so I thought I ought to give it a try. It&amp;rsquo;s easy to install, just download the sdk, unzip it in a suitable place and add the bin folder to your path. I had to tell it where I had installed Android Studio.
-$ flutter config --android-studio-dir &amp;#39;D:\adt\Android Studio&amp;#39; Setting &amp;#34;android-studio-dir&amp;#34; value to &amp;#34;D:\adt\Android Studio&amp;#34;. You may need to restart any open editors for them to read new settings.</description>
+$ flutter config --android-studio-dir &amp;#39;D:\adt\Android Studio&amp;#39; Setting &amp;#34;android-studio-dir&amp;#34; value to &amp;#34;D:\adt\Android Studio&amp;#34;.  You may need to restart any open editors for them to read new settings.</description>
     </item>
     
     <item>
@@ -96,7 +96,7 @@ Ingredients  Cooked turkey/chicken, chopped Cooked gammon, chopped Broccoli, cut
       <pubDate>Sun, 01 Nov 2020 11:55:12 +0000</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/draught-hash-brown/</guid>
-      <description>Many years ago, in a hotel in Hollywood, we thought the breakfast was a bit overpriced. Someone suggested the Dunkin&#39; Donut across the road, so over we went. In there the guy was offering bacon, egg over easy, and hash brown for 99¢. I was intrigued with the hash brown, he just took a handful of grated potato from a plastic bag and chucked it on the griddle plate.
+      <description>Many years ago, in a hotel in Hollywood, we thought the breakfast was a bit overpriced. Someone suggested the Dunkin&amp;rsquo; Donut across the road, so over we went. In there the guy was offering bacon, egg over easy, and hash brown for 99¢. I was intrigued with the hash brown, he just took a handful of grated potato from a plastic bag and chucked it on the griddle plate.
 Ingredients  Grated potato Vegetable cooking oil  Method  Put some cooking oil in a hot medium sized skillet Grate your potatoes and put them in the pan Cook until browned underneath and turn over Serve when browned on the reverse side  Goes extremely well with bacon and eggs and the trimmings.</description>
     </item>
     
@@ -148,7 +148,7 @@ It used to run under 32 bit windows but wouldn&amp;rsquo;t run under 64 bit wind
       
       <guid>https://billthefarmer.github.io/blog/lambda-expressions/</guid>
       <description>Lambda expressions or anonymous functions can be quite useful. For example using jQuery in JavaScript all the work gets done in anonymous functions unless you particularly want to extract them and give them names&amp;hellip;
-jQuery(document).ready(function($) { // ...  // Process the start button  $(&amp;#34;#start&amp;#34;).click(function() { question = 0; $(&amp;#34;#data&amp;#34;).css(&amp;#34;display&amp;#34;, &amp;#34;none&amp;#34;); $(&amp;#34;.intro&amp;#34;).fadeOut(function() { // Do stuff  }); // ...  }); }); In C++ the syntax is curious in that there are a pair of square brackets enclosing &amp;lsquo;captured&amp;rsquo; variables&amp;hellip;</description>
+jQuery(document).ready(function($) {  // ...  // Process the start button  $(&amp;#34;#start&amp;#34;).click(function() {  question = 0;  $(&amp;#34;#data&amp;#34;).css(&amp;#34;display&amp;#34;, &amp;#34;none&amp;#34;);  $(&amp;#34;.intro&amp;#34;).fadeOut(function() {  // Do stuff  });  // ...  }); }); In C++ the syntax is curious in that there are a pair of square brackets enclosing &amp;lsquo;captured&amp;rsquo; variables&amp;hellip;</description>
     </item>
     
     <item>
@@ -179,7 +179,7 @@ I have seen apps which hide this button on scrolling, and this was one of the su
       <guid>https://billthefarmer.github.io/blog/derive-edit-position/</guid>
       <description>I had a request to switch to the edit view from the markdown view at the double tap position in my Diary app. The app already has a gesture detector so I just had to add an onDoubleTap function.
 To get the tap position in the markdown view it is necessary to compensate for the position of the view on the screen, scrolling, and the display density.
-// onDoubleTap  @Override public boolean onDoubleTap(MotionEvent e) { if (shown) { int[] l = new int[2]; markdownView.</description>
+ // onDoubleTap  @Override  public boolean onDoubleTap(MotionEvent e)  {  if (shown)  {  int[] l = new int[2];  markdownView.</description>
     </item>
     
     <item>
@@ -230,7 +230,7 @@ HTML output is not very useful for a text editor. It could be used with Html.fro
       
       <guid>https://billthefarmer.github.io/blog/post/musical-temperaments/</guid>
       <description>My Tuner app uses equal temperament because that is the current standard and it is relatively easy to calculate using double precision arithmetic and maths library functions. First, declare some constants.
-private static final int OCTAVE = 12; private static final int EQUAL = 8; private static final int A_OFFSET = 9; private static final int C5_OFFSET = 57; The calculation first produces the cents relative to the reference, usually 440Hz.</description>
+ private static final int OCTAVE = 12;  private static final int EQUAL = 8;  private static final int A_OFFSET = 9;  private static final int C5_OFFSET = 57; The calculation first produces the cents relative to the reference, usually 440Hz.</description>
     </item>
     
     <item>
@@ -241,7 +241,7 @@ private static final int OCTAVE = 12; private static final int EQUAL = 8; privat
       <guid>https://billthefarmer.github.io/blog/post/draw-musical-staff/</guid>
       <description>A musical staff is not a trivial thing to draw because of the complex curves needed for the treble and bass clef. What is needed is a source of vector drawing coordinates.
 The data used was originally intended for use in postscript, so the vertical axis is reversed.
-// Treble clef  private static final float tc[][]= { {-6, 16}, {-8, 13}, {-14, 19}, {-10, 35}, {2, 35}, {8, 37}, {21, 30}, {21, 17}, {21, 5}, {10, -1}, {0, -1}, {-12, -1}, {-23, 5}, {-23, 22}, {-23, 29}, {-22, 37}, {-7, 49}, {10, 61}, {10, 68}, {10, 73}, {10, 78}, {9, 82}, {7, 82}, {2, 78}, {-2, 68}, {-2, 62}, {-2, 25}, {10, 18}, {11, -8}, {11, -18}, {5, -23}, {-4, -23}, {-10, -23}, {-15, -18}, {-15, -13}, {-15, -8}, {-12, -4}, {-7, -4}, {3, -4}, {3, -20}, {-6, -17}, {-5, -23}, {9, -20}, {9, -9}, {7, 24}, {-5, 30}, {-5, 67}, {-5, 78}, {-2, 87}, {7, 91}, {13, 87}, {18, 80}, {17, 73}, {17, 62}, {10, 54}, {1, 45}, {-5, 38}, {-15, 33}, {-15, 19}, {-15, 7}, {-8, 1}, {0, 1}, {8, 1}, {15, 6}, {15, 14}, {15, 23}, {7, 26}, {2, 26}, {-5, 26}, {-9, 21}, {-6, 16} }; // Bass clef  private static final float bc[][] = { {-2.</description>
+ // Treble clef  private static final float tc[][]=  {  {-6, 16}, {-8, 13}, {-14, 19}, {-10, 35}, {2, 35}, {8, 37},  {21, 30}, {21, 17}, {21, 5}, {10, -1}, {0, -1}, {-12, -1},  {-23, 5}, {-23, 22}, {-23, 29}, {-22, 37}, {-7, 49}, {10, 61},  {10, 68}, {10, 73}, {10, 78}, {9, 82}, {7, 82}, {2, 78},  {-2, 68}, {-2, 62}, {-2, 25}, {10, 18}, {11, -8}, {11, -18},  {5, -23}, {-4, -23}, {-10, -23}, {-15, -18}, {-15, -13},  {-15, -8}, {-12, -4}, {-7, -4}, {3, -4}, {3, -20}, {-6, -17},  {-5, -23}, {9, -20}, {9, -9}, {7, 24}, {-5, 30}, {-5, 67},  {-5, 78}, {-2, 87}, {7, 91}, {13, 87}, {18, 80}, {17, 73},  {17, 62}, {10, 54}, {1, 45}, {-5, 38}, {-15, 33}, {-15, 19},  {-15, 7}, {-8, 1}, {0, 1}, {8, 1}, {15, 6}, {15, 14}, {15, 23},  {7, 26}, {2, 26}, {-5, 26}, {-9, 21}, {-6, 16}  };   // Bass clef  private static final float bc[][] =  {  {-2.</description>
     </item>
     
     <item>
@@ -310,7 +310,7 @@ Documentation The plugin uses the shortcodes [questionnaire-questions] and [ques
       <pubDate>Sun, 01 Jul 2018 16:25:18 +0100</pubDate>
       
       <guid>https://billthefarmer.github.io/blog/post/mullard-5-20-amplifier/</guid>
-      <description>Many years ago one of my brothers&#39; friends brought me a faulty military surplus valve amplifier which used 807 valves for the output. It appeared to have suffered a flashover which had destroyed much of the wiring and components inside the chassis, but the tagboards appeared to be reusable.
+      <description>Many years ago one of my brothers&amp;rsquo; friends brought me a faulty military surplus valve amplifier which used 807 valves for the output. It appeared to have suffered a flashover which had destroyed much of the wiring and components inside the chassis, but the tagboards appeared to be reusable.
 I had a copy of a Mullard amplifier book, Mullard Circuits for Audio Amplifiers at the time, which I subsequently lent so someone who never returned it.</description>
     </item>
     
@@ -360,7 +360,7 @@ Calendar custom styles The custom calendar has a list of styles that are customi
       
       <guid>https://billthefarmer.github.io/blog/android-recent-files/</guid>
       <description>There are several parts to this - creating the list of files, saving the list in the preferences, restoring the list on startup and creating the list in the menu.
-// onCreate  @Override protected void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this); // Create a map of scroll positions by file name  Set&amp;lt;String&amp;gt; pathSet = preferences.getStringSet(PREF_PATHS, null); pathMap = new HashMap&amp;lt;String, Integer&amp;gt;(); if (pathSet != null) for (String path : pathSet) pathMap.</description>
+  // onCreate  @Override  protected void onCreate(Bundle savedInstanceState)  {  super.onCreate(savedInstanceState);   SharedPreferences preferences =  PreferenceManager.getDefaultSharedPreferences(this);   // Create a map of scroll positions by file name  Set&amp;lt;String&amp;gt; pathSet = preferences.getStringSet(PREF_PATHS, null);  pathMap = new HashMap&amp;lt;String, Integer&amp;gt;();   if (pathSet !</description>
     </item>
     
     <item>
@@ -390,7 +390,7 @@ Ingredients  Mushrooms Olive oil  Method  Keep the mushrooms whole, even if they
       
       <guid>https://billthefarmer.github.io/blog/android-text-search/</guid>
       <description>The Android guide for Search Overview is oriented towards searching external content rather than text. There is a mention of Using the Search Dialog. However all the bits you need are there. To get a search dialog in the toolbar that pops up when needed, you need a seach item in the menu. It should be the first item, unless there is a good reason otherwise.
-&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt; &amp;lt;menu xmlns:android=&amp;#34;http://schemas.</description>
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt; &amp;lt;menu  xmlns:android=&amp;#34;http://schemas.</description>
     </item>
     
     <item>
@@ -441,7 +441,7 @@ Ingredients  3 large carrots, grated 1 large onion, chopped 2 garlic cloves, cho
       <guid>https://billthefarmer.github.io/blog/using-emacs-in-android-development/</guid>
       <description>I&amp;rsquo;ve got a folder full of country flags which I have renamed using scripts so the names correspond to currency symbols. I want an integer array with references to the flags as android resources. This can be automated using emacs.
 I get a list of the file names into a buffer using find, which I then open with emacs.
-% find src/ -name flag* &amp;gt; data/sym-flags.lst They are already sorted, but just to make sure I use M-x sort-lines.</description>
+ % find src/ -name flag* &amp;gt; data/sym-flags.lst They are already sorted, but just to make sure I use M-x sort-lines.</description>
     </item>
     
     <item>
@@ -473,7 +473,7 @@ There are four parts - you need to create a new partial template in layouts/part
       <guid>https://billthefarmer.github.io/blog/adding-a-calendar-event/</guid>
       <description>The android docs for the Calendar Provider are quite useful, but recommend the use of an AsyncQueryHandler for querying or adding events to calendars in an asynchronous thread. However the AsyncQueryHandler docs don&amp;rsquo;t include much guidance as to how to use it.
 To add an entry to an android calendar you first have to find out the calendar id using an asynchronous query on the calendars table.
-// QueryHandler public class QueryHandler extends AsyncQueryHandler { private static final String TAG = &amp;#34;QueryHandler&amp;#34;; // Projection arrays  private static final String[] CALENDAR_PROJECTION = new String[] { Calendars.</description>
+// QueryHandler public class QueryHandler extends AsyncQueryHandler {  private static final String TAG = &amp;#34;QueryHandler&amp;#34;;   // Projection arrays  private static final String[] CALENDAR_PROJECTION = new String[]  {  Calendars.</description>
     </item>
     
     <item>
@@ -504,7 +504,7 @@ I looked for migration tools, and found two:
       
       <guid>https://billthefarmer.github.io/blog/resolving-content-uris-in-android/</guid>
       <description>If you write an android app that handles images or any other sort of file your app may be required to deal with ‘content’ uris (content://). There is a very useful utility which resolves these into ‘file’ uris (file:///) FileUtils.java. This contains one external reference to LocalStorageProvider, which can be resolved by removing the function isLocalStorageDocument() and references to it.
-// import com.ianhanniballake.localstorage.LocalStorageProvider;  // ...  /** * @param uri The Uri to check.</description>
+ // import com.ianhanniballake.localstorage.LocalStorageProvider;  // ...  /** * @param uri The Uri to check.</description>
     </item>
     
     <item>
@@ -890,7 +890,7 @@ Ingredients  1 tbsp olive oil 1 onion, chopped 1 small potato, cubed 1 clove gar
       <guid>https://billthefarmer.github.io/blog/haskell/</guid>
       <description>I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I’s give it a go and see how I got on.
 You can try it out in your browser: http://tryhaskell.org
-λ let factorial n = product [1..n] in factorial 99 9332621544394415268169923885626670049071596826438162146859 2963895217599993229915608941463976156518286253697920827223 7582511852109168640000000000000000000000 :: (Enum a, Num a) =&amp;gt; a λ Pretty impressive! So I thought I’d try a simple web application.</description>
+ λ let factorial n = product [1..n] in factorial 99  9332621544394415268169923885626670049071596826438162146859  2963895217599993229915608941463976156518286253697920827223  7582511852109168640000000000000000000000  :: (Enum a, Num a) =&amp;gt; a  λ Pretty impressive! So I thought I’d try a simple web application.</description>
     </item>
     
     <item>

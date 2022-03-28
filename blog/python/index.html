@@ -31,7 +31,7 @@ But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter 
 
 
 
-<meta name="generator" content="Hugo 0.91.0" />
+<meta name="generator" content="Hugo 0.94.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -178,50 +178,50 @@ code {
       <p>I’ve studiously avoided Python up till now, even though it appears to be fairly popular, because it violates the first law of compiler design: ‘Blank space shalt not be significant except to separate tokens where necessary.’. That’s why you can minimise a lengthy JavaScript script like <a href="http://jquery.com">jQuery</a> to one enormously long line and it still works just fine.</p>
 <p>But, she-who-shall-be-ignored (self categorisation) decided she wanted to enter an advent calender competition which involved checking a web page to see if your name has come up and sending an email if it does. So I thought that’s an ideal little job to run on my <a href="http://www.raspberrypi.org">Raspberry Pi</a>. So I installed the ssmtp package and attempted to test sending an email. After several days of faffing about with no joy I gave up.</p>
 <p>One of the things that comes front and centre with the standard <a href="http://www.raspberrypi.org/downloads">Raspbian</a> installation is Python. So, after checking the documentation for smtp and http libraries, etc, I decided to give it a go. You can test your code on the command line before sticking it in a file, and you get, unlike ssmtp, helpful messages that tell you what’s going on. So you end up with a script that looks like this, and it actually appears to work.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#080;font-style:italic">#! /usr/bin/env python</span>
-
-<span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">urllib2</span>
-<span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">smtplib</span>
-<span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">os.path</span>
-<span style="color:#a2f;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">os</span> <span style="color:#a2f;font-weight:bold">import</span> utime
-<span style="color:#a2f;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">datetime</span> <span style="color:#a2f;font-weight:bold">import</span> date
-<span style="color:#a2f;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">email.mime.text</span> <span style="color:#a2f;font-weight:bold">import</span> MIMEText
-
-<span style="color:#a2f;font-weight:bold">if</span> os<span style="color:#666">.</span>path<span style="color:#666">.</span>exists(<span style="color:#b44">&#34;sent&#34;</span>)
-  quit()
-
-f <span style="color:#666">=</span> urllib2<span style="color:#666">.</span>urlopen(<span style="color:#b44">&#34;url&#34;</span>)
-
-today <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">False</span>
-<span style="color:#a2f;font-weight:bold">for</span> line <span style="color:#a2f;font-weight:bold">in</span> f:
-  <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#b44">&#34;winners&#34;</span> <span style="color:#a2f;font-weight:bold">in</span> line:
-    today <span style="color:#666">=</span> <span style="color:#a2f">str</span>(date<span style="color:#666">.</span>today()<span style="color:#666">.</span>day) <span style="color:#a2f;font-weight:bold">in</span> line
-    <span style="color:#a2f;font-weight:bold">break</span>
-
-line <span style="color:#666">=</span> f<span style="color:#666">.</span>readline()
-
-f<span style="color:#666">.</span>close()
-
-<span style="color:#a2f;font-weight:bold">if</span> today <span style="color:#a2f;font-weight:bold">and</span> <span style="color:#b44">&#34;name&#34;</span> <span style="color:#a2f;font-weight:bold">in</span> line:
-  s <span style="color:#666">=</span> smtplib<span style="color:#666">.</span>SMTP_SSL(<span style="color:#b44">&#34;smtp.mail.yahoo.com&#34;</span>)
-  s<span style="color:#666">.</span>login(<span style="color:#b44">&#34;user&#34;</span>,<span style="color:#b44">&#34;password&#34;</span>)
-  msg <span style="color:#666">=</span> MIMEText(<span style="color:#b44">&#34;I would like to claim my prize</span><span style="color:#b62;font-weight:bold">\r\n\r\n</span><span style="color:#b44">Regards</span><span style="color:#b62;font-weight:bold">\r\n</span><span style="color:#b44">name&#34;</span>)
-  msg[<span style="color:#b44">&#39;Subject&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44">&#34;Advent Calendar Competition&#34;</span>
-  msg[<span style="color:#b44">&#39;From&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44">&#34;from email&#34;</span>
-  msg[<span style="color:#b44">&#39;To&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44">&#34;to email&#34;</span>
-  msg[<span style="color:#b44">&#39;Bcc&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44">&#34;from email&#34;</span>
-  s<span style="color:#666">.</span>sendmail(<span style="color:#b44">&#34;from email&#34;</span>, [<span style="color:#b44">&#34;to email&#34;</span>,<span style="color:#b44">&#34;from email&#34;</span>], msg<span style="color:#666">.</span>as_string())
-  s<span style="color:#666">.</span>quit()
-  <span style="color:#a2f">print</span>(msg<span style="color:#666">.</span>as_string())
-  <span style="color:#a2f">open</span>(<span style="color:#b44">&#34;sent&#34;</span>, <span style="color:#b44">&#34;w&#34;</span>)<span style="color:#666">.</span>close()
-
-<span style="color:#a2f;font-weight:bold">with</span> file(<span style="color:#b44">&#34;last&#34;</span>, <span style="color:#b44">&#34;a&#34;</span>):
-  utime(<span style="color:#b44">&#34;last&#34;</span>, <span style="color:#a2f;font-weight:bold">None</span>)
-</code></pre></div><p>So, very careful with the indenting. We shall have to see if anyone wins anything. The script gets fired off periodically with a crontab entry.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#b8860b">CRON_TZ</span><span style="color:#666">=</span>Europe/London
-<span style="color:#b8860b">MAILTO</span><span style="color:#666">=</span>bill
-*/1 9-10 1-24 <span style="color:#666">12</span> * <span style="color:#b8860b">$HOME</span>/advent/advent.py
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#080;font-style:italic">#! /usr/bin/env python</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">urllib2</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">smtplib</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">os.path</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">os</span> <span style="color:#a2f;font-weight:bold">import</span> utime
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">datetime</span> <span style="color:#a2f;font-weight:bold">import</span> date
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">email.mime.text</span> <span style="color:#a2f;font-weight:bold">import</span> MIMEText
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">if</span> os<span style="color:#666">.</span>path<span style="color:#666">.</span>exists(<span style="color:#b44">&#34;sent&#34;</span>)
+</span></span><span style="display:flex;"><span>  quit()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>f <span style="color:#666">=</span> urllib2<span style="color:#666">.</span>urlopen(<span style="color:#b44">&#34;url&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>today <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">False</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">for</span> line <span style="color:#a2f;font-weight:bold">in</span> f:
+</span></span><span style="display:flex;"><span>  <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#b44">&#34;winners&#34;</span> <span style="color:#a2f;font-weight:bold">in</span> line:
+</span></span><span style="display:flex;"><span>    today <span style="color:#666">=</span> <span style="color:#a2f">str</span>(date<span style="color:#666">.</span>today()<span style="color:#666">.</span>day) <span style="color:#a2f;font-weight:bold">in</span> line
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">break</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>line <span style="color:#666">=</span> f<span style="color:#666">.</span>readline()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>f<span style="color:#666">.</span>close()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">if</span> today <span style="color:#a2f;font-weight:bold">and</span> <span style="color:#b44">&#34;name&#34;</span> <span style="color:#a2f;font-weight:bold">in</span> line:
+</span></span><span style="display:flex;"><span>  s <span style="color:#666">=</span> smtplib<span style="color:#666">.</span>SMTP_SSL(<span style="color:#b44">&#34;smtp.mail.yahoo.com&#34;</span>)
+</span></span><span style="display:flex;"><span>  s<span style="color:#666">.</span>login(<span style="color:#b44">&#34;user&#34;</span>,<span style="color:#b44">&#34;password&#34;</span>)
+</span></span><span style="display:flex;"><span>  msg <span style="color:#666">=</span> MIMEText(<span style="color:#b44">&#34;I would like to claim my prize</span><span style="color:#b62;font-weight:bold">\r\n\r\n</span><span style="color:#b44">Regards</span><span style="color:#b62;font-weight:bold">\r\n</span><span style="color:#b44">name&#34;</span>)
+</span></span><span style="display:flex;"><span>  msg[<span style="color:#b44">&#39;Subject&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44">&#34;Advent Calendar Competition&#34;</span>
+</span></span><span style="display:flex;"><span>  msg[<span style="color:#b44">&#39;From&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44">&#34;from email&#34;</span>
+</span></span><span style="display:flex;"><span>  msg[<span style="color:#b44">&#39;To&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44">&#34;to email&#34;</span>
+</span></span><span style="display:flex;"><span>  msg[<span style="color:#b44">&#39;Bcc&#39;</span>] <span style="color:#666">=</span> <span style="color:#b44">&#34;from email&#34;</span>
+</span></span><span style="display:flex;"><span>  s<span style="color:#666">.</span>sendmail(<span style="color:#b44">&#34;from email&#34;</span>, [<span style="color:#b44">&#34;to email&#34;</span>,<span style="color:#b44">&#34;from email&#34;</span>], msg<span style="color:#666">.</span>as_string())
+</span></span><span style="display:flex;"><span>  s<span style="color:#666">.</span>quit()
+</span></span><span style="display:flex;"><span>  <span style="color:#a2f">print</span>(msg<span style="color:#666">.</span>as_string())
+</span></span><span style="display:flex;"><span>  <span style="color:#a2f">open</span>(<span style="color:#b44">&#34;sent&#34;</span>, <span style="color:#b44">&#34;w&#34;</span>)<span style="color:#666">.</span>close()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">with</span> file(<span style="color:#b44">&#34;last&#34;</span>, <span style="color:#b44">&#34;a&#34;</span>):
+</span></span><span style="display:flex;"><span>  utime(<span style="color:#b44">&#34;last&#34;</span>, <span style="color:#a2f;font-weight:bold">None</span>)
+</span></span></code></pre></div><p>So, very careful with the indenting. We shall have to see if anyone wins anything. The script gets fired off periodically with a crontab entry.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#b8860b">CRON_TZ</span><span style="color:#666">=</span>Europe/London
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">MAILTO</span><span style="color:#666">=</span>bill
+</span></span><span style="display:flex;"><span>*/1 9-10 1-24 <span style="color:#666">12</span> * <span style="color:#b8860b">$HOME</span>/advent/advent.py
+</span></span></code></pre></div>
     </p>
     
     

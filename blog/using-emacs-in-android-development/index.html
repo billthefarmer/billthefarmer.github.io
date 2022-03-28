@@ -9,7 +9,7 @@
 <meta property="og:title" content="Using Emacs in Android Development" />
 <meta property="og:description" content="I&rsquo;ve got a folder full of country flags which I have renamed using scripts so the names correspond to currency symbols. I want an integer array with references to the flags as android resources. This can be automated using emacs.
 I get a list of the file names into a buffer using find, which I then open with emacs.
-% find src/ -name flag* &gt; data/sym-flags.lst They are already sorted, but just to make sure I use M-x sort-lines." />
+ % find src/ -name flag* &gt; data/sym-flags.lst They are already sorted, but just to make sure I use M-x sort-lines." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/using-emacs-in-android-development/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2017-10-18T15:51:28+01:00" />
@@ -19,7 +19,7 @@ I get a list of the file names into a buffer using find, which I then open with 
 <meta itemprop="name" content="Using Emacs in Android Development">
 <meta itemprop="description" content="I&rsquo;ve got a folder full of country flags which I have renamed using scripts so the names correspond to currency symbols. I want an integer array with references to the flags as android resources. This can be automated using emacs.
 I get a list of the file names into a buffer using find, which I then open with emacs.
-% find src/ -name flag* &gt; data/sym-flags.lst They are already sorted, but just to make sure I use M-x sort-lines."><meta itemprop="datePublished" content="2017-10-18T15:51:28+01:00" />
+ % find src/ -name flag* &gt; data/sym-flags.lst They are already sorted, but just to make sure I use M-x sort-lines."><meta itemprop="datePublished" content="2017-10-18T15:51:28+01:00" />
 <meta itemprop="dateModified" content="2017-10-18T15:51:28+01:00" />
 <meta itemprop="wordCount" content="159">
 <meta itemprop="keywords" content="" />
@@ -27,14 +27,14 @@ I get a list of the file names into a buffer using find, which I then open with 
 <meta name="twitter:title" content="Using Emacs in Android Development"/>
 <meta name="twitter:description" content="I&rsquo;ve got a folder full of country flags which I have renamed using scripts so the names correspond to currency symbols. I want an integer array with references to the flags as android resources. This can be automated using emacs.
 I get a list of the file names into a buffer using find, which I then open with emacs.
-% find src/ -name flag* &gt; data/sym-flags.lst They are already sorted, but just to make sure I use M-x sort-lines."/>
+ % find src/ -name flag* &gt; data/sym-flags.lst They are already sorted, but just to make sure I use M-x sort-lines."/>
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.91.0" />
+<meta name="generator" content="Hugo 0.94.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -184,8 +184,8 @@ array with references to the flags as android resources. This can be
 automated using emacs.</p>
 <p>I get a list of the file names into a buffer using find, which I then
 open with emacs.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  % find src/ -name flag* &gt; data/sym-flags.lst
-</code></pre></div><p><img src="images/2017/10/flags.png" alt="Flags"></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>  % find src/ -name flag* &gt; data/sym-flags.lst
+</span></span></code></pre></div><p><img src="images/2017/10/flags.png" alt="Flags"></p>
 <p>They are already sorted, but just to make sure I use <code>M-x sort-lines</code>.</p>
 <p><img src="images/2017/10/sort.png" alt="Sort"></p>
 <p>I need to replace the path with <code>R.drawable.</code>, so I use <code>M-% replace string</code>. There is a bulk replace command in the docs somewhere, but it

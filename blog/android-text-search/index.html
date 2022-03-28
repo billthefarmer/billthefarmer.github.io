@@ -8,7 +8,7 @@
 
 <meta property="og:title" content="Android Text Search" />
 <meta property="og:description" content="The Android guide for Search Overview is oriented towards searching external content rather than text. There is a mention of Using the Search Dialog. However all the bits you need are there. To get a search dialog in the toolbar that pops up when needed, you need a seach item in the menu. It should be the first item, unless there is a good reason otherwise.
-&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt; &lt;menu xmlns:android=&#34;http://schemas." />
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt; &lt;menu  xmlns:android=&#34;http://schemas." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/android-text-search/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2017-10-26T11:57:27+01:00" />
@@ -17,21 +17,21 @@
 
 <meta itemprop="name" content="Android Text Search">
 <meta itemprop="description" content="The Android guide for Search Overview is oriented towards searching external content rather than text. There is a mention of Using the Search Dialog. However all the bits you need are there. To get a search dialog in the toolbar that pops up when needed, you need a seach item in the menu. It should be the first item, unless there is a good reason otherwise.
-&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt; &lt;menu xmlns:android=&#34;http://schemas."><meta itemprop="datePublished" content="2017-10-26T11:57:27+01:00" />
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt; &lt;menu  xmlns:android=&#34;http://schemas."><meta itemprop="datePublished" content="2017-10-26T11:57:27+01:00" />
 <meta itemprop="dateModified" content="2017-10-26T11:57:27+01:00" />
 <meta itemprop="wordCount" content="1251">
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Android Text Search"/>
 <meta name="twitter:description" content="The Android guide for Search Overview is oriented towards searching external content rather than text. There is a mention of Using the Search Dialog. However all the bits you need are there. To get a search dialog in the toolbar that pops up when needed, you need a seach item in the menu. It should be the first item, unless there is a good reason otherwise.
-&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt; &lt;menu xmlns:android=&#34;http://schemas."/>
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt; &lt;menu  xmlns:android=&#34;http://schemas."/>
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.91.0" />
+<meta name="generator" content="Hugo 0.94.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -181,152 +181,152 @@ searching external content rather than text. There is a mention of
 there. To get a search dialog in the toolbar that pops up when needed,
 you need a seach item in the menu. It should be the first item, unless
 there is a good reason otherwise.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
-<span style="color:#008000;font-weight:bold">&lt;menu</span>
-    <span style="color:#b44">xmlns:android=</span><span style="color:#b44">&#34;http://schemas.android.com/apk/res/android&#34;</span>
-  <span style="">&lt;item</span>
-      <span style="color:#b44">android:id=</span><span style="color:#b44">&#34;@+id/search&#34;</span>
-      <span style="color:#b44">android:showAsAction=</span><span style="color:#b44">&#34;ifRoom|collapseActionView&#34;</span>
-      <span style="color:#b44">android:title=</span><span style="color:#b44">&#34;@string/search&#34;</span>
-      <span style="color:#b44">android:actionViewClass=</span><span style="color:#b44">&#34;android.widget.SearchView&#34;</span>
-      <span style="color:#b44">android:icon=</span><span style="color:#b44">&#34;@drawable/ic_action_search&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-</code></pre></div><p>The search dialog will still pop up if the search item is in the menu
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">&lt;menu</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b44">xmlns:android=</span><span style="color:#b44">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="">&lt;item</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#b44">android:id=</span><span style="color:#b44">&#34;@+id/search&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#b44">android:showAsAction=</span><span style="color:#b44">&#34;ifRoom|collapseActionView&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#b44">android:title=</span><span style="color:#b44">&#34;@string/search&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#b44">android:actionViewClass=</span><span style="color:#b44">&#34;android.widget.SearchView&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#b44">android:icon=</span><span style="color:#b44">&#34;@drawable/ic_action_search&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span></code></pre></div><p>The search dialog will still pop up if the search item is in the menu
 rather than the toolbar. The dialog pops up and collapses all by
 itself in response to user interaction without any developer code. To
 implement the search, you need an <a href="https://developer.android.com/reference/android/widget/SearchView.OnQueryTextListener.html">OnQueryTextListener</a>, which is
 called by the <a href="https://developer.android.com/reference/android/widget/SearchView.html">SearchView</a>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// onCreateOptionsMenu
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f">@Override</span>
-    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">onCreateOptionsMenu</span><span style="color:#666">(</span>Menu menu<span style="color:#666">)</span>
-    <span style="color:#666">{</span>
-        MenuInflater inflater <span style="color:#666">=</span> getMenuInflater<span style="color:#666">();</span>
-        inflater<span style="color:#666">.</span><span style="color:#b44">inflate</span><span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">menu</span><span style="color:#666">.</span><span style="color:#b44">main</span><span style="color:#666">,</span> menu<span style="color:#666">);</span>
-
-        searchItem <span style="color:#666">=</span> menu<span style="color:#666">.</span><span style="color:#b44">findItem</span><span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">id</span><span style="color:#666">.</span><span style="color:#b44">search</span><span style="color:#666">);</span>
-        searchView <span style="color:#666">=</span> <span style="color:#666">(</span>SearchView<span style="color:#666">)</span> searchItem<span style="color:#666">.</span><span style="color:#b44">getActionView</span><span style="color:#666">();</span>
-
-        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>searchView <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
-        <span style="color:#666">{</span>
-            searchView<span style="color:#666">.</span><span style="color:#b44">setSubmitButtonEnabled</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">);</span>
-            searchView<span style="color:#666">.</span><span style="color:#b44">setImeOptions</span><span style="color:#666">(</span>EditorInfo<span style="color:#666">.</span><span style="color:#b44">IME_ACTION_GO</span><span style="color:#666">);</span>
-            searchView<span style="color:#666">.</span><span style="color:#b44">setOnQueryTextListener</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">new</span> QueryTextListener<span style="color:#666">());</span>
-        <span style="color:#666">}</span>
-
-        <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
-    <span style="color:#666">}</span>
-</code></pre></div><p>Get an extra submit button in the toolbar, change the keyboard button
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// onCreateOptionsMenu
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">onCreateOptionsMenu</span><span style="color:#666">(</span>Menu menu<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>        MenuInflater inflater <span style="color:#666">=</span> getMenuInflater<span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>        inflater<span style="color:#666">.</span><span style="color:#b44">inflate</span><span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">menu</span><span style="color:#666">.</span><span style="color:#b44">main</span><span style="color:#666">,</span> menu<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        searchItem <span style="color:#666">=</span> menu<span style="color:#666">.</span><span style="color:#b44">findItem</span><span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">id</span><span style="color:#666">.</span><span style="color:#b44">search</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>        searchView <span style="color:#666">=</span> <span style="color:#666">(</span>SearchView<span style="color:#666">)</span> searchItem<span style="color:#666">.</span><span style="color:#b44">getActionView</span><span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>searchView <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>            searchView<span style="color:#666">.</span><span style="color:#b44">setSubmitButtonEnabled</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>            searchView<span style="color:#666">.</span><span style="color:#b44">setImeOptions</span><span style="color:#666">(</span>EditorInfo<span style="color:#666">.</span><span style="color:#b44">IME_ACTION_GO</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>            searchView<span style="color:#666">.</span><span style="color:#b44">setOnQueryTextListener</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">new</span> QueryTextListener<span style="color:#666">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">}</span>
+</span></span></code></pre></div><p>Get an extra submit button in the toolbar, change the keyboard button
 to a right arrow, and set the listener</p>
 <h3 id="interactive-case-insensitive-search">Interactive Case Insensitive Search</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// QueryTextListener
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">QueryTextListener</span>
-        <span style="color:#a2f;font-weight:bold">implements</span> SearchView<span style="color:#666">.</span><span style="color:#b44">OnQueryTextListener</span>
-    <span style="color:#666">{</span>
-        <span style="color:#a2f;font-weight:bold">private</span> BackgroundColorSpan span <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span>
-            BackgroundColorSpan<span style="color:#666">(</span>Color<span style="color:#666">.</span><span style="color:#b44">YELLOW</span><span style="color:#666">);</span>
-        <span style="color:#a2f;font-weight:bold">private</span> Editable editable<span style="color:#666">;</span>
-        <span style="color:#a2f;font-weight:bold">private</span> Pattern pattern<span style="color:#666">;</span>
-        <span style="color:#a2f;font-weight:bold">private</span> Matcher matcher<span style="color:#666">;</span>
-        <span style="color:#a2f;font-weight:bold">private</span> String text<span style="color:#666">;</span>
-        <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">int</span> index<span style="color:#666">;</span>
-        <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">int</span> height<span style="color:#666">;</span>
-
-        <span style="color:#080;font-style:italic">// onQueryTextChange
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f">@Override</span>
-        <span style="color:#a2f">@SuppressWarnings</span><span style="color:#666">(</span><span style="color:#b44">&#34;deprecation&#34;</span><span style="color:#666">)</span>
-        <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">onQueryTextChange</span> <span style="color:#666">(</span>String newText<span style="color:#666">)</span>
-        <span style="color:#666">{</span>
-            <span style="color:#080;font-style:italic">// Use web view functionality
-</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>shown<span style="color:#666">)</span>
-                markdownView<span style="color:#666">.</span><span style="color:#b44">findAll</span><span style="color:#666">(</span>newText<span style="color:#666">);</span>
-
-            <span style="color:#080;font-style:italic">// Use regex search and spannable for highlighting
-</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">else</span>
-            <span style="color:#666">{</span>
-                height <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getHeight</span><span style="color:#666">();</span>
-                editable <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getEditableText</span><span style="color:#666">();</span>
-                text <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getText</span><span style="color:#666">().</span><span style="color:#b44">toString</span><span style="color:#666">();</span>
-
-                <span style="color:#080;font-style:italic">// Reset the index and clear highlighting
-</span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>newText<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">()</span> <span style="color:#666">==</span> 0<span style="color:#666">)</span>
-                <span style="color:#666">{</span>
-                    index <span style="color:#666">=</span> 0<span style="color:#666">;</span>
-                    editable<span style="color:#666">.</span><span style="color:#b44">removeSpan</span><span style="color:#666">(</span>span<span style="color:#666">);</span>
-                <span style="color:#666">}</span>
-
-                <span style="color:#080;font-style:italic">// Get pattern
-</span><span style="color:#080;font-style:italic"></span>                pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>newText<span style="color:#666">,</span>
-                                          Pattern<span style="color:#666">.</span><span style="color:#b44">CASE_INSENSITIVE</span> <span style="color:#666">|</span>
-                                          Pattern<span style="color:#666">.</span><span style="color:#b44">LITERAL</span> <span style="color:#666">|</span>
-                                          Pattern<span style="color:#666">.</span><span style="color:#b44">UNICODE_CASE</span><span style="color:#666">);</span>
-                <span style="color:#080;font-style:italic">// Find text
-</span><span style="color:#080;font-style:italic"></span>                matcher <span style="color:#666">=</span> pattern<span style="color:#666">.</span><span style="color:#b44">matcher</span><span style="color:#666">(</span>text<span style="color:#666">);</span>
-                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">(</span>index<span style="color:#666">))</span>
-                <span style="color:#666">{</span>
-                    <span style="color:#080;font-style:italic">// Get index
-</span><span style="color:#080;font-style:italic"></span>                    index <span style="color:#666">=</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">();</span>
-
-                    <span style="color:#080;font-style:italic">// Get text position
-</span><span style="color:#080;font-style:italic"></span>                    <span style="color:#0b0;font-weight:bold">int</span> line <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span>
-                        <span style="color:#666">.</span><span style="color:#b44">getLineForOffset</span><span style="color:#666">(</span>index<span style="color:#666">);</span>
-                    <span style="color:#0b0;font-weight:bold">int</span> pos <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span>
-                        <span style="color:#666">.</span><span style="color:#b44">getLineBaseline</span><span style="color:#666">(</span>line<span style="color:#666">);</span>
-
-                    <span style="color:#080;font-style:italic">// Scroll to it
-</span><span style="color:#080;font-style:italic"></span>                    scrollView<span style="color:#666">.</span><span style="color:#b44">scrollTo</span><span style="color:#666">(</span>0<span style="color:#666">,</span> pos <span style="color:#666">-</span> height <span style="color:#666">/</span> 2<span style="color:#666">);</span>
-
-                    <span style="color:#080;font-style:italic">// Highlight it
-</span><span style="color:#080;font-style:italic"></span>                    editable
-                        <span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> index<span style="color:#666">,</span> index <span style="color:#666">+</span>
-                                 newText<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">(),</span>
-                                 Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">);</span>
-                <span style="color:#666">}</span>
-            <span style="color:#666">}</span>
-
-            <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
-        <span style="color:#666">}</span>
-
-        <span style="color:#080;font-style:italic">// onQueryTextSubmit
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f">@Override</span>
-        <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">onQueryTextSubmit</span> <span style="color:#666">(</span>String query<span style="color:#666">)</span>
-        <span style="color:#666">{</span>
-            <span style="color:#080;font-style:italic">// Use web view functionality
-</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>shown<span style="color:#666">)</span>
-                markdownView<span style="color:#666">.</span><span style="color:#b44">findNext</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">);</span>
-
-            <span style="color:#080;font-style:italic">// Use regex search and spannable for highlighting
-</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">else</span>
-            <span style="color:#666">{</span>
-                <span style="color:#080;font-style:italic">// Find next text
-</span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">())</span>
-                <span style="color:#666">{</span>
-                    <span style="color:#080;font-style:italic">// Get index
-</span><span style="color:#080;font-style:italic"></span>                    index <span style="color:#666">=</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">();</span>
-
-                    <span style="color:#080;font-style:italic">// Get text position
-</span><span style="color:#080;font-style:italic"></span>                    <span style="color:#0b0;font-weight:bold">int</span> line <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span>
-                        <span style="color:#666">.</span><span style="color:#b44">getLineForOffset</span><span style="color:#666">(</span>index<span style="color:#666">);</span>
-                    <span style="color:#0b0;font-weight:bold">int</span> pos <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span>
-                        <span style="color:#666">.</span><span style="color:#b44">getLineBaseline</span><span style="color:#666">(</span>line<span style="color:#666">);</span>
-
-                    <span style="color:#080;font-style:italic">// Scroll to it
-</span><span style="color:#080;font-style:italic"></span>                    scrollView<span style="color:#666">.</span><span style="color:#b44">scrollTo</span><span style="color:#666">(</span>0<span style="color:#666">,</span> pos <span style="color:#666">-</span> height <span style="color:#666">/</span> 2<span style="color:#666">);</span>
-
-                    <span style="color:#080;font-style:italic">// Highlight it
-</span><span style="color:#080;font-style:italic"></span>                    editable
-                        <span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> index<span style="color:#666">,</span> index <span style="color:#666">+</span>
-                                 query<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">(),</span>
-                                 Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">);</span>
-                <span style="color:#666">}</span>
-
-                <span style="color:#080;font-style:italic">// Reset matcher
-</span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">hitEnd</span><span style="color:#666">())</span>
-                    matcher<span style="color:#666">.</span><span style="color:#b44">reset</span><span style="color:#666">();</span>
-            <span style="color:#666">}</span>
-
-            <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
-        <span style="color:#666">}</span>
-    <span style="color:#666">}</span>
-</code></pre></div><p>This implementation searches both a <a href="https://developer.android.com/reference/android/webkit/WebView.html">WebView</a>, and a
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// QueryTextListener
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">QueryTextListener</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">implements</span> SearchView<span style="color:#666">.</span><span style="color:#b44">OnQueryTextListener</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">private</span> BackgroundColorSpan span <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span>
+</span></span><span style="display:flex;"><span>            BackgroundColorSpan<span style="color:#666">(</span>Color<span style="color:#666">.</span><span style="color:#b44">YELLOW</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">private</span> Editable editable<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">private</span> Pattern pattern<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">private</span> Matcher matcher<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">private</span> String text<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">int</span> index<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">int</span> height<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// onQueryTextChange
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f">@Override</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f">@SuppressWarnings</span><span style="color:#666">(</span><span style="color:#b44">&#34;deprecation&#34;</span><span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">onQueryTextChange</span> <span style="color:#666">(</span>String newText<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Use web view functionality
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>shown<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>                markdownView<span style="color:#666">.</span><span style="color:#b44">findAll</span><span style="color:#666">(</span>newText<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Use regex search and spannable for highlighting
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">else</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>                height <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getHeight</span><span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>                editable <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getEditableText</span><span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>                text <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getText</span><span style="color:#666">().</span><span style="color:#b44">toString</span><span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Reset the index and clear highlighting
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>newText<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">()</span> <span style="color:#666">==</span> 0<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>                    index <span style="color:#666">=</span> 0<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>                    editable<span style="color:#666">.</span><span style="color:#b44">removeSpan</span><span style="color:#666">(</span>span<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Get pattern
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>newText<span style="color:#666">,</span>
+</span></span><span style="display:flex;"><span>                                          Pattern<span style="color:#666">.</span><span style="color:#b44">CASE_INSENSITIVE</span> <span style="color:#666">|</span>
+</span></span><span style="display:flex;"><span>                                          Pattern<span style="color:#666">.</span><span style="color:#b44">LITERAL</span> <span style="color:#666">|</span>
+</span></span><span style="display:flex;"><span>                                          Pattern<span style="color:#666">.</span><span style="color:#b44">UNICODE_CASE</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Find text
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                matcher <span style="color:#666">=</span> pattern<span style="color:#666">.</span><span style="color:#b44">matcher</span><span style="color:#666">(</span>text<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">(</span>index<span style="color:#666">))</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#080;font-style:italic">// Get index
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    index <span style="color:#666">=</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#080;font-style:italic">// Get text position
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    <span style="color:#0b0;font-weight:bold">int</span> line <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#666">.</span><span style="color:#b44">getLineForOffset</span><span style="color:#666">(</span>index<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#0b0;font-weight:bold">int</span> pos <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#666">.</span><span style="color:#b44">getLineBaseline</span><span style="color:#666">(</span>line<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#080;font-style:italic">// Scroll to it
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    scrollView<span style="color:#666">.</span><span style="color:#b44">scrollTo</span><span style="color:#666">(</span>0<span style="color:#666">,</span> pos <span style="color:#666">-</span> height <span style="color:#666">/</span> 2<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#080;font-style:italic">// Highlight it
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    editable
+</span></span><span style="display:flex;"><span>                        <span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> index<span style="color:#666">,</span> index <span style="color:#666">+</span>
+</span></span><span style="display:flex;"><span>                                 newText<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">(),</span>
+</span></span><span style="display:flex;"><span>                                 Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// onQueryTextSubmit
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f">@Override</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">onQueryTextSubmit</span> <span style="color:#666">(</span>String query<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Use web view functionality
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>shown<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>                markdownView<span style="color:#666">.</span><span style="color:#b44">findNext</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Use regex search and spannable for highlighting
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">else</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Find next text
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">())</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#080;font-style:italic">// Get index
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    index <span style="color:#666">=</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#080;font-style:italic">// Get text position
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    <span style="color:#0b0;font-weight:bold">int</span> line <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#666">.</span><span style="color:#b44">getLineForOffset</span><span style="color:#666">(</span>index<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#0b0;font-weight:bold">int</span> pos <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#666">.</span><span style="color:#b44">getLineBaseline</span><span style="color:#666">(</span>line<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#080;font-style:italic">// Scroll to it
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    scrollView<span style="color:#666">.</span><span style="color:#b44">scrollTo</span><span style="color:#666">(</span>0<span style="color:#666">,</span> pos <span style="color:#666">-</span> height <span style="color:#666">/</span> 2<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#080;font-style:italic">// Highlight it
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    editable
+</span></span><span style="display:flex;"><span>                        <span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> index<span style="color:#666">,</span> index <span style="color:#666">+</span>
+</span></span><span style="display:flex;"><span>                                 query<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">(),</span>
+</span></span><span style="display:flex;"><span>                                 Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Reset matcher
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">hitEnd</span><span style="color:#666">())</span>
+</span></span><span style="display:flex;"><span>                    matcher<span style="color:#666">.</span><span style="color:#b44">reset</span><span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">}</span>
+</span></span></code></pre></div><p>This implementation searches both a <a href="https://developer.android.com/reference/android/webkit/WebView.html">WebView</a>, and a
 <a href="https://developer.android.com/reference/android/widget/TextView.html">TextView</a>. The search is interactive, the highlighting and scroll
 position moves as the user types. The search button on the keyboard
 provides the &lsquo;find next&rsquo; function. The web view search functionality
@@ -342,119 +342,119 @@ search index is provided to the matcher <code>find()</code> method so the search
 stays in position if the user deletes search text, duplicating web
 view functionality.</p>
 <h3 id="interactive-regular-expression-search">Interactive Regular Expression Search</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// QueryTextListener
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">QueryTextListener</span>
-        <span style="color:#a2f;font-weight:bold">implements</span> SearchView<span style="color:#666">.</span><span style="color:#b44">OnQueryTextListener</span>
-    <span style="color:#666">{</span>
-        <span style="color:#a2f;font-weight:bold">private</span> BackgroundColorSpan span <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span>
-            BackgroundColorSpan<span style="color:#666">(</span>Color<span style="color:#666">.</span><span style="color:#b44">YELLOW</span><span style="color:#666">);</span>
-        <span style="color:#a2f;font-weight:bold">private</span> Editable editable<span style="color:#666">;</span>
-        <span style="color:#a2f;font-weight:bold">private</span> Matcher matcher<span style="color:#666">;</span>
-        <span style="color:#a2f;font-weight:bold">private</span> Pattern pattern<span style="color:#666">;</span>
-        <span style="color:#a2f;font-weight:bold">private</span> String text<span style="color:#666">;</span>
-        <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">int</span> index<span style="color:#666">;</span>
-        <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">int</span> height<span style="color:#666">;</span>
-
-        <span style="color:#080;font-style:italic">// onQueryTextChange
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f">@Override</span>
-        <span style="color:#a2f">@SuppressWarnings</span><span style="color:#666">(</span><span style="color:#b44">&#34;deprecation&#34;</span><span style="color:#666">)</span>
-        <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">onQueryTextChange</span> <span style="color:#666">(</span>String newText<span style="color:#666">)</span>
-        <span style="color:#666">{</span>
-            <span style="color:#080;font-style:italic">// Use regex search and spannable for highlighting
-</span><span style="color:#080;font-style:italic"></span>            height <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getHeight</span><span style="color:#666">();</span>
-            editable <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getEditableText</span><span style="color:#666">();</span>
-            text <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getText</span><span style="color:#666">().</span><span style="color:#b44">toString</span><span style="color:#666">();</span>
-
-            <span style="color:#080;font-style:italic">// Check text
-</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>text<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">()</span> <span style="color:#666">==</span> 0<span style="color:#666">)</span>
-                <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
-
-            <span style="color:#080;font-style:italic">// Reset the index and clear highlighting
-</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>newText<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">()</span> <span style="color:#666">==</span> 0<span style="color:#666">)</span>
-            <span style="color:#666">{</span>
-                index <span style="color:#666">=</span> 0<span style="color:#666">;</span>
-                editable<span style="color:#666">.</span><span style="color:#b44">removeSpan</span><span style="color:#666">(</span>span<span style="color:#666">);</span>
-                <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
-            <span style="color:#666">}</span>
-
-            <span style="color:#080;font-style:italic">// Check pattern
-</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">try</span>
-            <span style="color:#666">{</span>
-                pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>newText<span style="color:#666">,</span> Pattern<span style="color:#666">.</span><span style="color:#b44">MULTILINE</span><span style="color:#666">);</span>
-                matcher <span style="color:#666">=</span> pattern<span style="color:#666">.</span><span style="color:#b44">matcher</span><span style="color:#666">(</span>text<span style="color:#666">);</span>
-            <span style="color:#666">}</span>
-
-            <span style="color:#a2f;font-weight:bold">catch</span> <span style="color:#666">(</span>Exception e<span style="color:#666">)</span>
-            <span style="color:#666">{</span>
-                <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
-            <span style="color:#666">}</span>
-
-            <span style="color:#080;font-style:italic">// Find text
-</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">(</span>index<span style="color:#666">))</span>
-            <span style="color:#666">{</span>
-                <span style="color:#080;font-style:italic">// Get index
-</span><span style="color:#080;font-style:italic"></span>                index <span style="color:#666">=</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">();</span>
-
-                <span style="color:#080;font-style:italic">// Check layout
-</span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span> <span style="color:#666">==</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
-                    <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
-
-                <span style="color:#080;font-style:italic">// Get text position
-</span><span style="color:#080;font-style:italic"></span>                <span style="color:#0b0;font-weight:bold">int</span> line <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span>
-                    <span style="color:#666">.</span><span style="color:#b44">getLineForOffset</span><span style="color:#666">(</span>index<span style="color:#666">);</span>
-                <span style="color:#0b0;font-weight:bold">int</span> pos <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span>
-                    <span style="color:#666">.</span><span style="color:#b44">getLineBaseline</span><span style="color:#666">(</span>line<span style="color:#666">);</span>
-
-                <span style="color:#080;font-style:italic">// Scroll to it
-</span><span style="color:#080;font-style:italic"></span>                scrollView<span style="color:#666">.</span><span style="color:#b44">scrollTo</span><span style="color:#666">(</span>0<span style="color:#666">,</span> pos <span style="color:#666">-</span> height <span style="color:#666">/</span> 2<span style="color:#666">);</span>
-
-                <span style="color:#080;font-style:italic">// Highlight it
-</span><span style="color:#080;font-style:italic"></span>                editable
-                    <span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(),</span> matcher<span style="color:#666">.</span><span style="color:#b44">end</span><span style="color:#666">(),</span>
-                             Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">);</span>
-            <span style="color:#666">}</span>
-
-            <span style="color:#a2f;font-weight:bold">else</span>
-                index <span style="color:#666">=</span> 0<span style="color:#666">;</span>
-
-            <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
-        <span style="color:#666">}</span>
-
-        <span style="color:#080;font-style:italic">// onQueryTextSubmit
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f">@Override</span>
-        <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">onQueryTextSubmit</span> <span style="color:#666">(</span>String query<span style="color:#666">)</span>
-        <span style="color:#666">{</span>
-            <span style="color:#080;font-style:italic">// Find next text
-</span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">())</span>
-            <span style="color:#666">{</span>
-                <span style="color:#080;font-style:italic">// Get index
-</span><span style="color:#080;font-style:italic"></span>                index <span style="color:#666">=</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">();</span>
-
-                <span style="color:#080;font-style:italic">// Get text position
-</span><span style="color:#080;font-style:italic"></span>                <span style="color:#0b0;font-weight:bold">int</span> line <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span>
-                    <span style="color:#666">.</span><span style="color:#b44">getLineForOffset</span><span style="color:#666">(</span>index<span style="color:#666">);</span>
-                <span style="color:#0b0;font-weight:bold">int</span> pos <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span>
-                    <span style="color:#666">.</span><span style="color:#b44">getLineBaseline</span><span style="color:#666">(</span>line<span style="color:#666">);</span>
-
-                <span style="color:#080;font-style:italic">// Scroll to it
-</span><span style="color:#080;font-style:italic"></span>                scrollView<span style="color:#666">.</span><span style="color:#b44">scrollTo</span><span style="color:#666">(</span>0<span style="color:#666">,</span> pos <span style="color:#666">-</span> height <span style="color:#666">/</span> 2<span style="color:#666">);</span>
-
-                <span style="color:#080;font-style:italic">// Highlight it
-</span><span style="color:#080;font-style:italic"></span>                editable
-                    <span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(),</span> matcher<span style="color:#666">.</span><span style="color:#b44">end</span><span style="color:#666">(),</span>
-                             Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">);</span>
-            <span style="color:#666">}</span>
-
-            <span style="color:#a2f;font-weight:bold">else</span>
-            <span style="color:#666">{</span>
-                matcher<span style="color:#666">.</span><span style="color:#b44">reset</span><span style="color:#666">();</span>
-                index <span style="color:#666">=</span> 0<span style="color:#666">;</span>
-            <span style="color:#666">}</span>
-
-            <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
-        <span style="color:#666">}</span>
-    <span style="color:#666">}</span>
-</code></pre></div><p>The regular expression may become invalid as the user types, so the
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// QueryTextListener
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">QueryTextListener</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">implements</span> SearchView<span style="color:#666">.</span><span style="color:#b44">OnQueryTextListener</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">private</span> BackgroundColorSpan span <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span>
+</span></span><span style="display:flex;"><span>            BackgroundColorSpan<span style="color:#666">(</span>Color<span style="color:#666">.</span><span style="color:#b44">YELLOW</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">private</span> Editable editable<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">private</span> Matcher matcher<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">private</span> Pattern pattern<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">private</span> String text<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">int</span> index<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">int</span> height<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// onQueryTextChange
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f">@Override</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f">@SuppressWarnings</span><span style="color:#666">(</span><span style="color:#b44">&#34;deprecation&#34;</span><span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">onQueryTextChange</span> <span style="color:#666">(</span>String newText<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Use regex search and spannable for highlighting
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            height <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getHeight</span><span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>            editable <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getEditableText</span><span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>            text <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getText</span><span style="color:#666">().</span><span style="color:#b44">toString</span><span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Check text
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>text<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">()</span> <span style="color:#666">==</span> 0<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Reset the index and clear highlighting
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>newText<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">()</span> <span style="color:#666">==</span> 0<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>                index <span style="color:#666">=</span> 0<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>                editable<span style="color:#666">.</span><span style="color:#b44">removeSpan</span><span style="color:#666">(</span>span<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Check pattern
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">try</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>                pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>newText<span style="color:#666">,</span> Pattern<span style="color:#666">.</span><span style="color:#b44">MULTILINE</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                matcher <span style="color:#666">=</span> pattern<span style="color:#666">.</span><span style="color:#b44">matcher</span><span style="color:#666">(</span>text<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">catch</span> <span style="color:#666">(</span>Exception e<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Find text
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">(</span>index<span style="color:#666">))</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Get index
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                index <span style="color:#666">=</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Check layout
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span> <span style="color:#666">==</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Get text position
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                <span style="color:#0b0;font-weight:bold">int</span> line <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#666">.</span><span style="color:#b44">getLineForOffset</span><span style="color:#666">(</span>index<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#0b0;font-weight:bold">int</span> pos <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#666">.</span><span style="color:#b44">getLineBaseline</span><span style="color:#666">(</span>line<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Scroll to it
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                scrollView<span style="color:#666">.</span><span style="color:#b44">scrollTo</span><span style="color:#666">(</span>0<span style="color:#666">,</span> pos <span style="color:#666">-</span> height <span style="color:#666">/</span> 2<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Highlight it
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                editable
+</span></span><span style="display:flex;"><span>                    <span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(),</span> matcher<span style="color:#666">.</span><span style="color:#b44">end</span><span style="color:#666">(),</span>
+</span></span><span style="display:flex;"><span>                             Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">else</span>
+</span></span><span style="display:flex;"><span>                index <span style="color:#666">=</span> 0<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// onQueryTextSubmit
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f">@Override</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">onQueryTextSubmit</span> <span style="color:#666">(</span>String query<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Find next text
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">())</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Get index
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                index <span style="color:#666">=</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Get text position
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                <span style="color:#0b0;font-weight:bold">int</span> line <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#666">.</span><span style="color:#b44">getLineForOffset</span><span style="color:#666">(</span>index<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#0b0;font-weight:bold">int</span> pos <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#666">.</span><span style="color:#b44">getLineBaseline</span><span style="color:#666">(</span>line<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Scroll to it
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                scrollView<span style="color:#666">.</span><span style="color:#b44">scrollTo</span><span style="color:#666">(</span>0<span style="color:#666">,</span> pos <span style="color:#666">-</span> height <span style="color:#666">/</span> 2<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Highlight it
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                editable
+</span></span><span style="display:flex;"><span>                    <span style="color:#666">.</span><span style="color:#b44">setSpan</span><span style="color:#666">(</span>span<span style="color:#666">,</span> matcher<span style="color:#666">.</span><span style="color:#b44">start</span><span style="color:#666">(),</span> matcher<span style="color:#666">.</span><span style="color:#b44">end</span><span style="color:#666">(),</span>
+</span></span><span style="display:flex;"><span>                             Spanned<span style="color:#666">.</span><span style="color:#b44">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">else</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>                matcher<span style="color:#666">.</span><span style="color:#b44">reset</span><span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>                index <span style="color:#666">=</span> 0<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">}</span>
+</span></span></code></pre></div><p>The regular expression may become invalid as the user types, so the
 <code>Pattern.compile()</code> statement is wrapped with a <code>try</code> statement to
 trap any exceptions. The <code>matcher.find(index)</code> statement with an index
 always searches from the index, the <code>matcher.find()</code> statement without
@@ -462,105 +462,105 @@ the index does &lsquo;find next&rsquo;. The check of the text view layout is to
 deal with a null pointer exception when the user loads a file. The
 <code>matcher.reset()</code> statement makes the search begin again from the
 start.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// onOptionsItemSelected
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f">@Override</span>
-    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">onOptionsItemSelected</span><span style="color:#666">(</span>MenuItem item<span style="color:#666">)</span>
-    <span style="color:#666">{</span>
-        <span style="color:#a2f;font-weight:bold">switch</span> <span style="color:#666">(</span>item<span style="color:#666">.</span><span style="color:#b44">getItemId</span><span style="color:#666">())</span>
-        <span style="color:#666">{</span>
-        <span style="color:#080;font-style:italic">// ...
-</span><span style="color:#080;font-style:italic"></span><span style="color:#a0a000">
-</span><span style="color:#a0a000">        default:</span>
-            <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">super</span><span style="color:#666">.</span><span style="color:#b44">onOptionsItemSelected</span><span style="color:#666">(</span>item<span style="color:#666">);</span>
-        <span style="color:#666">}</span>
-
-        <span style="color:#080;font-style:italic">// Close text search
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>searchItem<span style="color:#666">.</span><span style="color:#b44">isActionViewExpanded</span><span style="color:#666">())</span>
-            searchItem<span style="color:#666">.</span><span style="color:#b44">collapseActionView</span><span style="color:#666">();</span>
-
-        <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
-    <span style="color:#666">}</span>
-</code></pre></div><p>If the highlight isn&rsquo;t removed when the user does something via the
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// onOptionsItemSelected
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">onOptionsItemSelected</span><span style="color:#666">(</span>MenuItem item<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">switch</span> <span style="color:#666">(</span>item<span style="color:#666">.</span><span style="color:#b44">getItemId</span><span style="color:#666">())</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#a0a000">
+</span></span></span><span style="display:flex;"><span><span style="color:#a0a000">        default:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">super</span><span style="color:#666">.</span><span style="color:#b44">onOptionsItemSelected</span><span style="color:#666">(</span>item<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Close text search
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>searchItem<span style="color:#666">.</span><span style="color:#b44">isActionViewExpanded</span><span style="color:#666">())</span>
+</span></span><span style="display:flex;"><span>            searchItem<span style="color:#666">.</span><span style="color:#b44">collapseActionView</span><span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">}</span>
+</span></span></code></pre></div><p>If the highlight isn&rsquo;t removed when the user does something via the
 menu, like loading another file, it won&rsquo;t go away, so it is removed
 before that happens. Collapsing the search view clears the search
 text, so the callback removes the highlight.</p>
 <h3 id="find-text-in-files">Find text in files</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-    <span style="color:#080;font-style:italic">// findAll
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">findAll</span><span style="color:#666">()</span>
-    <span style="color:#666">{</span>
-        <span style="color:#080;font-style:italic">// Get search string
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">final</span> String search <span style="color:#666">=</span> searchView<span style="color:#666">.</span><span style="color:#b44">getQuery</span><span style="color:#666">().</span><span style="color:#b44">toString</span><span style="color:#666">();</span>
-
-        Pattern pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>search<span style="color:#666">,</span>
-                                          Pattern<span style="color:#666">.</span><span style="color:#b44">CASE_INSENSITIVE</span> <span style="color:#666">|</span>
-                                          Pattern<span style="color:#666">.</span><span style="color:#b44">LITERAL</span> <span style="color:#666">|</span>
-                                          Pattern<span style="color:#666">.</span><span style="color:#b44">UNICODE_CASE</span><span style="color:#666">);</span>
-
-        <span style="color:#080;font-style:italic">// Get entry list
-</span><span style="color:#080;font-style:italic"></span>        List<span style="color:#666">&lt;</span>Calendar<span style="color:#666">&gt;</span> entries <span style="color:#666">=</span> getEntries<span style="color:#666">();</span>
-
-        <span style="color:#080;font-style:italic">// Create a list of matches
-</span><span style="color:#080;font-style:italic"></span>        List<span style="color:#666">&lt;</span>String<span style="color:#666">&gt;</span> matches <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ArrayList<span style="color:#666">&lt;</span>String<span style="color:#666">&gt;();</span>
-
-        <span style="color:#080;font-style:italic">// Check the entries
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">for</span> <span style="color:#666">(</span>Calendar entry<span style="color:#666">:</span> entries<span style="color:#666">)</span>
-        <span style="color:#666">{</span>
-            File file <span style="color:#666">=</span> getDay<span style="color:#666">(</span>entry<span style="color:#666">.</span><span style="color:#b44">get</span><span style="color:#666">(</span>Calendar<span style="color:#666">.</span><span style="color:#b44">YEAR</span><span style="color:#666">),</span>
-                               entry<span style="color:#666">.</span><span style="color:#b44">get</span><span style="color:#666">(</span>Calendar<span style="color:#666">.</span><span style="color:#b44">MONTH</span><span style="color:#666">),</span>
-                               entry<span style="color:#666">.</span><span style="color:#b44">get</span><span style="color:#666">(</span>Calendar<span style="color:#666">.</span><span style="color:#b44">DATE</span><span style="color:#666">));</span>
-
-            Matcher matcher <span style="color:#666">=</span> pattern<span style="color:#666">.</span><span style="color:#b44">matcher</span><span style="color:#666">(</span>read<span style="color:#666">(</span>file<span style="color:#666">));</span>
-            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">())</span>
-                matches<span style="color:#666">.</span><span style="color:#b44">add</span><span style="color:#666">(</span>DateFormat<span style="color:#666">.</span><span style="color:#b44">getDateInstance</span><span style="color:#666">(</span>DateFormat<span style="color:#666">.</span><span style="color:#b44">MEDIUM</span><span style="color:#666">)</span>
-                         <span style="color:#666">.</span><span style="color:#b44">format</span><span style="color:#666">(</span>entry<span style="color:#666">.</span><span style="color:#b44">getTime</span><span style="color:#666">()));</span>
-        <span style="color:#666">}</span>
-
-        <span style="color:#080;font-style:italic">// If found pop up a dialog
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(!</span>matches<span style="color:#666">.</span><span style="color:#b44">isEmpty</span><span style="color:#666">())</span>
-        <span style="color:#666">{</span>
-            AlertDialog<span style="color:#666">.</span><span style="color:#b44">Builder</span> builder <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> AlertDialog<span style="color:#666">.</span><span style="color:#b44">Builder</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">);</span>
-            builder<span style="color:#666">.</span><span style="color:#b44">setTitle</span><span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">string</span><span style="color:#666">.</span><span style="color:#b44">findAll</span><span style="color:#666">);</span>
-            <span style="color:#a2f;font-weight:bold">final</span> String<span style="color:#666">[]</span> choices <span style="color:#666">=</span> matches<span style="color:#666">.</span><span style="color:#b44">toArray</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">new</span> String<span style="color:#666">[</span>0<span style="color:#666">]);</span>
-            builder<span style="color:#666">.</span><span style="color:#b44">setItems</span><span style="color:#666">(</span>choices<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">new</span> DialogInterface<span style="color:#666">.</span><span style="color:#b44">OnClickListener</span><span style="color:#666">()</span>
-                <span style="color:#666">{</span>
-                    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onClick</span> <span style="color:#666">(</span>DialogInterface dialog<span style="color:#666">,</span> 
-                                         <span style="color:#0b0;font-weight:bold">int</span> which<span style="color:#666">)</span>
-                    <span style="color:#666">{</span>
-                        String choice <span style="color:#666">=</span> choices<span style="color:#666">[</span>which<span style="color:#666">];</span>
-                        DateFormat format <span style="color:#666">=</span>
-                            DateFormat<span style="color:#666">.</span><span style="color:#b44">getDateInstance</span><span style="color:#666">(</span>DateFormat<span style="color:#666">.</span><span style="color:#b44">MEDIUM</span><span style="color:#666">);</span>
-
-                        <span style="color:#080;font-style:italic">// Get the entry chosen
-</span><span style="color:#080;font-style:italic"></span>                        <span style="color:#a2f;font-weight:bold">try</span>
-                        <span style="color:#666">{</span>
-                            Date date <span style="color:#666">=</span> format<span style="color:#666">.</span><span style="color:#b44">parse</span><span style="color:#666">(</span>choice<span style="color:#666">);</span>
-                            Calendar entry <span style="color:#666">=</span> Calendar<span style="color:#666">.</span><span style="color:#b44">getInstance</span><span style="color:#666">();</span>
-                            entry<span style="color:#666">.</span><span style="color:#b44">setTime</span><span style="color:#666">(</span>date<span style="color:#666">);</span>
-                            changeDate<span style="color:#666">(</span>entry<span style="color:#666">);</span>
-
-                            <span style="color:#080;font-style:italic">// Put the search text back - why it
-</span><span style="color:#080;font-style:italic"></span>                            <span style="color:#080;font-style:italic">// disappears I have no idea or why I have
-</span><span style="color:#080;font-style:italic"></span>                            <span style="color:#080;font-style:italic">// to do it after a delay
-</span><span style="color:#080;font-style:italic"></span>                            searchView<span style="color:#666">.</span><span style="color:#b44">postDelayed</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">new</span> Runnable<span style="color:#666">()</span>
-                                <span style="color:#666">{</span>
-                                    <span style="color:#080;font-style:italic">// run
-</span><span style="color:#080;font-style:italic"></span>                                    <span style="color:#a2f">@Override</span>
-                                    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">run</span><span style="color:#666">()</span>
-                                    <span style="color:#666">{</span>
-                                        searchView<span style="color:#666">.</span><span style="color:#b44">setQuery</span><span style="color:#666">(</span>search<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">);</span>
-                                    <span style="color:#666">}</span>
-                                <span style="color:#666">},</span> FIND_DELAY<span style="color:#666">);</span>
-                        <span style="color:#666">}</span>
-
-                        <span style="color:#a2f;font-weight:bold">catch</span> <span style="color:#666">(</span>Exception e<span style="color:#666">)</span> <span style="color:#666">{}</span>
-                    <span style="color:#666">}</span>
-                <span style="color:#666">});</span>
-            builder<span style="color:#666">.</span><span style="color:#b44">setNegativeButton</span><span style="color:#666">(</span>android<span style="color:#666">.</span><span style="color:#b44">R</span><span style="color:#666">.</span><span style="color:#b44">string</span><span style="color:#666">.</span><span style="color:#b44">cancel</span><span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">);</span>
-            builder<span style="color:#666">.</span><span style="color:#b44">show</span><span style="color:#666">();</span>
-        <span style="color:#666">}</span>
-    <span style="color:#666">}</span>
-</code></pre></div><p>In this application the method <code>getEntries()</code> returns a list of
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// findAll
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">findAll</span><span style="color:#666">()</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Get search string
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">final</span> String search <span style="color:#666">=</span> searchView<span style="color:#666">.</span><span style="color:#b44">getQuery</span><span style="color:#666">().</span><span style="color:#b44">toString</span><span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Pattern pattern <span style="color:#666">=</span> Pattern<span style="color:#666">.</span><span style="color:#b44">compile</span><span style="color:#666">(</span>search<span style="color:#666">,</span>
+</span></span><span style="display:flex;"><span>                                          Pattern<span style="color:#666">.</span><span style="color:#b44">CASE_INSENSITIVE</span> <span style="color:#666">|</span>
+</span></span><span style="display:flex;"><span>                                          Pattern<span style="color:#666">.</span><span style="color:#b44">LITERAL</span> <span style="color:#666">|</span>
+</span></span><span style="display:flex;"><span>                                          Pattern<span style="color:#666">.</span><span style="color:#b44">UNICODE_CASE</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Get entry list
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        List<span style="color:#666">&lt;</span>Calendar<span style="color:#666">&gt;</span> entries <span style="color:#666">=</span> getEntries<span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Create a list of matches
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        List<span style="color:#666">&lt;</span>String<span style="color:#666">&gt;</span> matches <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ArrayList<span style="color:#666">&lt;</span>String<span style="color:#666">&gt;();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Check the entries
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">for</span> <span style="color:#666">(</span>Calendar entry<span style="color:#666">:</span> entries<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>            File file <span style="color:#666">=</span> getDay<span style="color:#666">(</span>entry<span style="color:#666">.</span><span style="color:#b44">get</span><span style="color:#666">(</span>Calendar<span style="color:#666">.</span><span style="color:#b44">YEAR</span><span style="color:#666">),</span>
+</span></span><span style="display:flex;"><span>                               entry<span style="color:#666">.</span><span style="color:#b44">get</span><span style="color:#666">(</span>Calendar<span style="color:#666">.</span><span style="color:#b44">MONTH</span><span style="color:#666">),</span>
+</span></span><span style="display:flex;"><span>                               entry<span style="color:#666">.</span><span style="color:#b44">get</span><span style="color:#666">(</span>Calendar<span style="color:#666">.</span><span style="color:#b44">DATE</span><span style="color:#666">));</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            Matcher matcher <span style="color:#666">=</span> pattern<span style="color:#666">.</span><span style="color:#b44">matcher</span><span style="color:#666">(</span>read<span style="color:#666">(</span>file<span style="color:#666">));</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">())</span>
+</span></span><span style="display:flex;"><span>                matches<span style="color:#666">.</span><span style="color:#b44">add</span><span style="color:#666">(</span>DateFormat<span style="color:#666">.</span><span style="color:#b44">getDateInstance</span><span style="color:#666">(</span>DateFormat<span style="color:#666">.</span><span style="color:#b44">MEDIUM</span><span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>                         <span style="color:#666">.</span><span style="color:#b44">format</span><span style="color:#666">(</span>entry<span style="color:#666">.</span><span style="color:#b44">getTime</span><span style="color:#666">()));</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// If found pop up a dialog
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(!</span>matches<span style="color:#666">.</span><span style="color:#b44">isEmpty</span><span style="color:#666">())</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>            AlertDialog<span style="color:#666">.</span><span style="color:#b44">Builder</span> builder <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> AlertDialog<span style="color:#666">.</span><span style="color:#b44">Builder</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>            builder<span style="color:#666">.</span><span style="color:#b44">setTitle</span><span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">string</span><span style="color:#666">.</span><span style="color:#b44">findAll</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">final</span> String<span style="color:#666">[]</span> choices <span style="color:#666">=</span> matches<span style="color:#666">.</span><span style="color:#b44">toArray</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">new</span> String<span style="color:#666">[</span>0<span style="color:#666">]);</span>
+</span></span><span style="display:flex;"><span>            builder<span style="color:#666">.</span><span style="color:#b44">setItems</span><span style="color:#666">(</span>choices<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">new</span> DialogInterface<span style="color:#666">.</span><span style="color:#b44">OnClickListener</span><span style="color:#666">()</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onClick</span> <span style="color:#666">(</span>DialogInterface dialog<span style="color:#666">,</span> 
+</span></span><span style="display:flex;"><span>                                         <span style="color:#0b0;font-weight:bold">int</span> which<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>                        String choice <span style="color:#666">=</span> choices<span style="color:#666">[</span>which<span style="color:#666">];</span>
+</span></span><span style="display:flex;"><span>                        DateFormat format <span style="color:#666">=</span>
+</span></span><span style="display:flex;"><span>                            DateFormat<span style="color:#666">.</span><span style="color:#b44">getDateInstance</span><span style="color:#666">(</span>DateFormat<span style="color:#666">.</span><span style="color:#b44">MEDIUM</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#080;font-style:italic">// Get the entry chosen
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                        <span style="color:#a2f;font-weight:bold">try</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>                            Date date <span style="color:#666">=</span> format<span style="color:#666">.</span><span style="color:#b44">parse</span><span style="color:#666">(</span>choice<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                            Calendar entry <span style="color:#666">=</span> Calendar<span style="color:#666">.</span><span style="color:#b44">getInstance</span><span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>                            entry<span style="color:#666">.</span><span style="color:#b44">setTime</span><span style="color:#666">(</span>date<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                            changeDate<span style="color:#666">(</span>entry<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#080;font-style:italic">// Put the search text back - why it
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                            <span style="color:#080;font-style:italic">// disappears I have no idea or why I have
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                            <span style="color:#080;font-style:italic">// to do it after a delay
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                            searchView<span style="color:#666">.</span><span style="color:#b44">postDelayed</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">new</span> Runnable<span style="color:#666">()</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>                                    <span style="color:#080;font-style:italic">// run
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                                    <span style="color:#a2f">@Override</span>
+</span></span><span style="display:flex;"><span>                                    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">run</span><span style="color:#666">()</span>
+</span></span><span style="display:flex;"><span>                                    <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>                                        searchView<span style="color:#666">.</span><span style="color:#b44">setQuery</span><span style="color:#666">(</span>search<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                                    <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#666">},</span> FIND_DELAY<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#a2f;font-weight:bold">catch</span> <span style="color:#666">(</span>Exception e<span style="color:#666">)</span> <span style="color:#666">{}</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#666">});</span>
+</span></span><span style="display:flex;"><span>            builder<span style="color:#666">.</span><span style="color:#b44">setNegativeButton</span><span style="color:#666">(</span>android<span style="color:#666">.</span><span style="color:#b44">R</span><span style="color:#666">.</span><span style="color:#b44">string</span><span style="color:#666">.</span><span style="color:#b44">cancel</span><span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>            builder<span style="color:#666">.</span><span style="color:#b44">show</span><span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">}</span>
+</span></span></code></pre></div><p>In this application the method <code>getEntries()</code> returns a list of
 <code>Calendar</code> objects corresponding to stored files. The method
 <code>getDay()</code> returns a <code>File</code> object for the file corresponding to that
 date and the method <code>read()</code> returns the text in the file. The code

@@ -31,7 +31,7 @@ Documentation The plugin uses the shortcodes [questionnaire-questions] and [ques
 
 
 
-<meta name="generator" content="Hugo 0.91.0" />
+<meta name="generator" content="Hugo 0.94.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -187,31 +187,31 @@ the answers, or a panel with a preview of the report.</p>
 <p>The plugin requires a large amount of structured data, currently
 encoded as a Javascript object.</p>
 <h4 id="question-data">Question data</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a2f;font-weight:bold">let</span> data <span style="color:#666">=</span>
-    {intro<span style="color:#666">:</span> <span style="color:#b44">&#34;Please answer the following questions as carefully and accurately as you can&#34;</span>,
-     questions<span style="color:#666">:</span>
-     [{q<span style="color:#666">:</span> <span style="color:#b44">&#34;I prefer curry with&#34;</span>,
-       t<span style="color:#666">:</span> <span style="color:#b44">&#34;B&#34;</span>,
-       a<span style="color:#666">:</span> [<span style="color:#b44">&#34;Papadums&#34;</span>,
-           <span style="color:#b44">&#34;Chango Mutney&#34;</span>],
-       v<span style="color:#666">:</span> [<span style="color:#666">2</span>, <span style="color:#666">4</span>]},...],
-     last<span style="color:#666">:</span>
-     {q<span style="color:#666">:</span> <span style="color:#b44">&#34;Where do you get your curry?&#34;</span>,
-      a<span style="color:#666">:</span> [<span style="color:#b44">&#34;Make my own&#34;</span>,
-          <span style="color:#b44">&#34;Ready meals&#34;</span>,
-          <span style="color:#b44">&#34;Take away&#34;</span>,
-          <span style="color:#b44">&#34;Indian restaurant&#34;</span>,
-          <span style="color:#b44">&#34;Wetherspoons&#34;</span>],
-      t<span style="color:#666">:</span> <span style="color:#b44">&#34;S&#34;</span>,
-      v<span style="color:#666">:</span> [<span style="color:#666">2</span>, <span style="color:#666">4</span>, <span style="color:#666">6</span>, <span style="color:#666">8</span>, <span style="color:#666">10</span>]},
-     matrix<span style="color:#666">:</span>
-     {B<span style="color:#666">:</span> [<span style="color:#b44">&#34;Introspective&#34;</span>,
-          <span style="color:#b44">&#34;Unimaginative&#34;</span>,
-          <span style="color:#b44">&#34;Extrovertive&#34;</span>,
-          <span style="color:#b44">&#34;Innovative&#34;</span>,
-          <span style="color:#b44">&#34;Explorative&#34;</span>],...}
-    };
-</code></pre></div><p>The fields are:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">let</span> data <span style="color:#666">=</span>
+</span></span><span style="display:flex;"><span>    {intro<span style="color:#666">:</span> <span style="color:#b44">&#34;Please answer the following questions as carefully and accurately as you can&#34;</span>,
+</span></span><span style="display:flex;"><span>     questions<span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>     [{q<span style="color:#666">:</span> <span style="color:#b44">&#34;I prefer curry with&#34;</span>,
+</span></span><span style="display:flex;"><span>       t<span style="color:#666">:</span> <span style="color:#b44">&#34;B&#34;</span>,
+</span></span><span style="display:flex;"><span>       a<span style="color:#666">:</span> [<span style="color:#b44">&#34;Papadums&#34;</span>,
+</span></span><span style="display:flex;"><span>           <span style="color:#b44">&#34;Chango Mutney&#34;</span>],
+</span></span><span style="display:flex;"><span>       v<span style="color:#666">:</span> [<span style="color:#666">2</span>, <span style="color:#666">4</span>]},...],
+</span></span><span style="display:flex;"><span>     last<span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>     {q<span style="color:#666">:</span> <span style="color:#b44">&#34;Where do you get your curry?&#34;</span>,
+</span></span><span style="display:flex;"><span>      a<span style="color:#666">:</span> [<span style="color:#b44">&#34;Make my own&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#b44">&#34;Ready meals&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#b44">&#34;Take away&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#b44">&#34;Indian restaurant&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#b44">&#34;Wetherspoons&#34;</span>],
+</span></span><span style="display:flex;"><span>      t<span style="color:#666">:</span> <span style="color:#b44">&#34;S&#34;</span>,
+</span></span><span style="display:flex;"><span>      v<span style="color:#666">:</span> [<span style="color:#666">2</span>, <span style="color:#666">4</span>, <span style="color:#666">6</span>, <span style="color:#666">8</span>, <span style="color:#666">10</span>]},
+</span></span><span style="display:flex;"><span>     matrix<span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>     {B<span style="color:#666">:</span> [<span style="color:#b44">&#34;Introspective&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#b44">&#34;Unimaginative&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#b44">&#34;Extrovertive&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#b44">&#34;Innovative&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#b44">&#34;Explorative&#34;</span>],...}
+</span></span><span style="display:flex;"><span>    };
+</span></span></code></pre></div><p>The fields are:</p>
 <ul>
 <li><strong>intro</strong> - Introductory text</li>
 <li><strong>questions</strong> - A series of questions with fields:
@@ -230,57 +230,57 @@ button. The questions will appear on subsequent panels. The last
 question triggers a contact panel which prompts for name and email
 address.</p>
 <h4 id="report-data">Report data</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a2f;font-weight:bold">let</span> data <span style="color:#666">=</span>
-    {pages<span style="color:#666">:</span>
-     [{pageno<span style="color:#666">:</span> <span style="color:#666">1</span>,
-       images<span style="color:#666">:</span>
-       [{src<span style="color:#666">:</span> <span style="color:#b44">&#39;images/Header.png&#39;</span>,
-         type<span style="color:#666">:</span> <span style="color:#b44">&#39;png&#39;</span>},
-        {src<span style="color:#666">:</span> <span style="color:#b44">&#39;images/Footer.png&#39;</span>,
-         type<span style="color:#666">:</span> <span style="color:#b44">&#39;png&#39;</span>,
-         y<span style="color:#666">:</span> <span style="color:#666">-</span><span style="color:#666">1</span>}],
-       text<span style="color:#666">:</span>
-       [{text<span style="color:#666">:</span> <span style="color:#b44">&#34;~forename~ ~lastname~&#34;</span>,
-         size<span style="color:#666">:</span> <span style="color:#666">24</span>,
-         type<span style="color:#666">:</span> <span style="color:#b44">&#39;bold&#39;</span>,
-         y<span style="color:#666">:</span> <span style="color:#666">532</span>}]},
-      {pageno<span style="color:#666">:</span> <span style="color:#666">2</span>,
-       images<span style="color:#666">:</span>
-       [{src<span style="color:#666">:</span> <span style="color:#b44">&#39;images/Mugshot.jpg&#39;</span>,
-         type<span style="color:#666">:</span> <span style="color:#b44">&#39;jpeg&#39;</span>,
-         x<span style="color:#666">:</span> <span style="color:#666">-</span><span style="color:#666">1</span>,
-         width<span style="color:#666">:</span> <span style="color:#666">225</span>}],
-       text<span style="color:#666">:</span>
-       [{text<span style="color:#666">:</span> <span style="color:#b44">&#34;How to read your report&#34;</span>,
-         size<span style="color:#666">:</span> <span style="color:#666">18</span>,
-         type<span style="color:#666">:</span> <span style="color:#b44">&#39;bold&#39;</span>},
-        {text<span style="color:#666">:</span> <span style="color:#b44">&#34;Dear ~forename~&#34;</span>,
-         size<span style="color:#666">:</span> <span style="color:#666">12</span>,
-         type<span style="color:#666">:</span> <span style="color:#b44">&#39;normal&#39;</span>,
-         y<span style="color:#666">:</span> <span style="color:#666">340</span>},...]},...],
-     last<span style="color:#666">:</span>
-     {images<span style="color:#666">:</span>
-      [{src<span style="color:#666">:</span> <span style="color:#b44">&#39;images/Image.jpg&#39;</span>,
-        type<span style="color:#666">:</span> <span style="color:#b44">&#39;jpeg&#39;</span>,
-        y<span style="color:#666">:</span> <span style="color:#666">156</span>,
-        link<span style="color:#666">:</span> <span style="color:#b44">&#39;https://github.com/billthefarmer/questionnaire&#39;</span>}],
-     text<span style="color:#666">:</span>
-     [{text<span style="color:#666">:</span> <span style="color:#b44">&#34;Note&#34;</span>,
-       type<span style="color:#666">:</span> <span style="color:#b44">&#39;bold&#39;</span>},
-      {text<span style="color:#666">:</span> <span style="color:#b44">&#34;Text paragraph&#34;</span>,
-       type<span style="color:#666">:</span> <span style="color:#b44">&#39;normal&#39;</span>}],
-      [{text<span style="color:#666">:</span> <span style="color:#b44">&#34;Copyright (c) 2018 Bill Farmer  All rights reserved&#34;</span>,
-        size<span style="color:#666">:</span> <span style="color:#666">12</span>,
-        color<span style="color:#666">:</span> <span style="color:#666">150</span>,
-        y<span style="color:#666">:</span> <span style="color:#666">496</span>}]},
-     answers<span style="color:#666">:</span>
-     {B<span style="color:#666">:</span>
-      {desc<span style="color:#666">:</span> <span style="color:#b44">&#34;Description...&#34;</span>,
-       <span style="color:#666">12</span><span style="color:#666">:</span>
-       {type<span style="color:#666">:</span> <span style="color:#b44">&#34;Type&#34;</span>,
-        text<span style="color:#666">:</span> <span style="color:#b44">&#34;Paragraph of text...&#34;</span>},...}
-    }};
-</code></pre></div><p>The fields are:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">let</span> data <span style="color:#666">=</span>
+</span></span><span style="display:flex;"><span>    {pages<span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>     [{pageno<span style="color:#666">:</span> <span style="color:#666">1</span>,
+</span></span><span style="display:flex;"><span>       images<span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>       [{src<span style="color:#666">:</span> <span style="color:#b44">&#39;images/Header.png&#39;</span>,
+</span></span><span style="display:flex;"><span>         type<span style="color:#666">:</span> <span style="color:#b44">&#39;png&#39;</span>},
+</span></span><span style="display:flex;"><span>        {src<span style="color:#666">:</span> <span style="color:#b44">&#39;images/Footer.png&#39;</span>,
+</span></span><span style="display:flex;"><span>         type<span style="color:#666">:</span> <span style="color:#b44">&#39;png&#39;</span>,
+</span></span><span style="display:flex;"><span>         y<span style="color:#666">:</span> <span style="color:#666">-</span><span style="color:#666">1</span>}],
+</span></span><span style="display:flex;"><span>       text<span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>       [{text<span style="color:#666">:</span> <span style="color:#b44">&#34;~forename~ ~lastname~&#34;</span>,
+</span></span><span style="display:flex;"><span>         size<span style="color:#666">:</span> <span style="color:#666">24</span>,
+</span></span><span style="display:flex;"><span>         type<span style="color:#666">:</span> <span style="color:#b44">&#39;bold&#39;</span>,
+</span></span><span style="display:flex;"><span>         y<span style="color:#666">:</span> <span style="color:#666">532</span>}]},
+</span></span><span style="display:flex;"><span>      {pageno<span style="color:#666">:</span> <span style="color:#666">2</span>,
+</span></span><span style="display:flex;"><span>       images<span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>       [{src<span style="color:#666">:</span> <span style="color:#b44">&#39;images/Mugshot.jpg&#39;</span>,
+</span></span><span style="display:flex;"><span>         type<span style="color:#666">:</span> <span style="color:#b44">&#39;jpeg&#39;</span>,
+</span></span><span style="display:flex;"><span>         x<span style="color:#666">:</span> <span style="color:#666">-</span><span style="color:#666">1</span>,
+</span></span><span style="display:flex;"><span>         width<span style="color:#666">:</span> <span style="color:#666">225</span>}],
+</span></span><span style="display:flex;"><span>       text<span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>       [{text<span style="color:#666">:</span> <span style="color:#b44">&#34;How to read your report&#34;</span>,
+</span></span><span style="display:flex;"><span>         size<span style="color:#666">:</span> <span style="color:#666">18</span>,
+</span></span><span style="display:flex;"><span>         type<span style="color:#666">:</span> <span style="color:#b44">&#39;bold&#39;</span>},
+</span></span><span style="display:flex;"><span>        {text<span style="color:#666">:</span> <span style="color:#b44">&#34;Dear ~forename~&#34;</span>,
+</span></span><span style="display:flex;"><span>         size<span style="color:#666">:</span> <span style="color:#666">12</span>,
+</span></span><span style="display:flex;"><span>         type<span style="color:#666">:</span> <span style="color:#b44">&#39;normal&#39;</span>,
+</span></span><span style="display:flex;"><span>         y<span style="color:#666">:</span> <span style="color:#666">340</span>},...]},...],
+</span></span><span style="display:flex;"><span>     last<span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>     {images<span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>      [{src<span style="color:#666">:</span> <span style="color:#b44">&#39;images/Image.jpg&#39;</span>,
+</span></span><span style="display:flex;"><span>        type<span style="color:#666">:</span> <span style="color:#b44">&#39;jpeg&#39;</span>,
+</span></span><span style="display:flex;"><span>        y<span style="color:#666">:</span> <span style="color:#666">156</span>,
+</span></span><span style="display:flex;"><span>        link<span style="color:#666">:</span> <span style="color:#b44">&#39;https://github.com/billthefarmer/questionnaire&#39;</span>}],
+</span></span><span style="display:flex;"><span>     text<span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>     [{text<span style="color:#666">:</span> <span style="color:#b44">&#34;Note&#34;</span>,
+</span></span><span style="display:flex;"><span>       type<span style="color:#666">:</span> <span style="color:#b44">&#39;bold&#39;</span>},
+</span></span><span style="display:flex;"><span>      {text<span style="color:#666">:</span> <span style="color:#b44">&#34;Text paragraph&#34;</span>,
+</span></span><span style="display:flex;"><span>       type<span style="color:#666">:</span> <span style="color:#b44">&#39;normal&#39;</span>}],
+</span></span><span style="display:flex;"><span>      [{text<span style="color:#666">:</span> <span style="color:#b44">&#34;Copyright (c) 2018 Bill Farmer  All rights reserved&#34;</span>,
+</span></span><span style="display:flex;"><span>        size<span style="color:#666">:</span> <span style="color:#666">12</span>,
+</span></span><span style="display:flex;"><span>        color<span style="color:#666">:</span> <span style="color:#666">150</span>,
+</span></span><span style="display:flex;"><span>        y<span style="color:#666">:</span> <span style="color:#666">496</span>}]},
+</span></span><span style="display:flex;"><span>     answers<span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>     {B<span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>      {desc<span style="color:#666">:</span> <span style="color:#b44">&#34;Description...&#34;</span>,
+</span></span><span style="display:flex;"><span>       <span style="color:#666">12</span><span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>       {type<span style="color:#666">:</span> <span style="color:#b44">&#34;Type&#34;</span>,
+</span></span><span style="display:flex;"><span>        text<span style="color:#666">:</span> <span style="color:#b44">&#34;Paragraph of text...&#34;</span>},...}
+</span></span><span style="display:flex;"><span>    }};
+</span></span></code></pre></div><p>The fields are:</p>
 <ul>
 <li><strong>pages</strong> - Preamble pages with images, with fields:
 <ul>

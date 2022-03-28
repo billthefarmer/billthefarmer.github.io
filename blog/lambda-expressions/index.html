@@ -8,7 +8,7 @@
 
 <meta property="og:title" content="Lambda Expressions" />
 <meta property="og:description" content="Lambda expressions or anonymous functions can be quite useful. For example using jQuery in JavaScript all the work gets done in anonymous functions unless you particularly want to extract them and give them names&hellip;
-jQuery(document).ready(function($) { // ...  // Process the start button  $(&#34;#start&#34;).click(function() { question = 0; $(&#34;#data&#34;).css(&#34;display&#34;, &#34;none&#34;); $(&#34;.intro&#34;).fadeOut(function() { // Do stuff  }); // ...  }); }); In C&#43;&#43; the syntax is curious in that there are a pair of square brackets enclosing &lsquo;captured&rsquo; variables&hellip;" />
+jQuery(document).ready(function($) {  // ...  // Process the start button  $(&#34;#start&#34;).click(function() {  question = 0;  $(&#34;#data&#34;).css(&#34;display&#34;, &#34;none&#34;);  $(&#34;.intro&#34;).fadeOut(function() {  // Do stuff  });  // ...  }); }); In C&#43;&#43; the syntax is curious in that there are a pair of square brackets enclosing &lsquo;captured&rsquo; variables&hellip;" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/lambda-expressions/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2020-03-26T13:02:53+00:00" />
@@ -17,21 +17,21 @@ jQuery(document).ready(function($) { // ...  // Process the start button  $(&#34
 
 <meta itemprop="name" content="Lambda Expressions">
 <meta itemprop="description" content="Lambda expressions or anonymous functions can be quite useful. For example using jQuery in JavaScript all the work gets done in anonymous functions unless you particularly want to extract them and give them names&hellip;
-jQuery(document).ready(function($) { // ...  // Process the start button  $(&#34;#start&#34;).click(function() { question = 0; $(&#34;#data&#34;).css(&#34;display&#34;, &#34;none&#34;); $(&#34;.intro&#34;).fadeOut(function() { // Do stuff  }); // ...  }); }); In C&#43;&#43; the syntax is curious in that there are a pair of square brackets enclosing &lsquo;captured&rsquo; variables&hellip;"><meta itemprop="datePublished" content="2020-03-26T13:02:53+00:00" />
+jQuery(document).ready(function($) {  // ...  // Process the start button  $(&#34;#start&#34;).click(function() {  question = 0;  $(&#34;#data&#34;).css(&#34;display&#34;, &#34;none&#34;);  $(&#34;.intro&#34;).fadeOut(function() {  // Do stuff  });  // ...  }); }); In C&#43;&#43; the syntax is curious in that there are a pair of square brackets enclosing &lsquo;captured&rsquo; variables&hellip;"><meta itemprop="datePublished" content="2020-03-26T13:02:53+00:00" />
 <meta itemprop="dateModified" content="2020-03-26T13:02:53+00:00" />
 <meta itemprop="wordCount" content="254">
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Lambda Expressions"/>
 <meta name="twitter:description" content="Lambda expressions or anonymous functions can be quite useful. For example using jQuery in JavaScript all the work gets done in anonymous functions unless you particularly want to extract them and give them names&hellip;
-jQuery(document).ready(function($) { // ...  // Process the start button  $(&#34;#start&#34;).click(function() { question = 0; $(&#34;#data&#34;).css(&#34;display&#34;, &#34;none&#34;); $(&#34;.intro&#34;).fadeOut(function() { // Do stuff  }); // ...  }); }); In C&#43;&#43; the syntax is curious in that there are a pair of square brackets enclosing &lsquo;captured&rsquo; variables&hellip;"/>
+jQuery(document).ready(function($) {  // ...  // Process the start button  $(&#34;#start&#34;).click(function() {  question = 0;  $(&#34;#data&#34;).css(&#34;display&#34;, &#34;none&#34;);  $(&#34;.intro&#34;).fadeOut(function() {  // Do stuff  });  // ...  }); }); In C&#43;&#43; the syntax is curious in that there are a pair of square brackets enclosing &lsquo;captured&rsquo; variables&hellip;"/>
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.91.0" />
+<meta name="generator" content="Hugo 0.94.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -179,74 +179,74 @@ code {
 example using <a href="https://jquery.com">jQuery</a> in JavaScript all the work gets done in
 anonymous functions unless you particularly want to extract them and
 give them names&hellip;</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">jQuery(<span style="color:#a2f">document</span>).ready(<span style="color:#a2f;font-weight:bold">function</span>($) {
-    <span style="color:#080;font-style:italic">// ...
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#080;font-style:italic">// Process the start button
-</span><span style="color:#080;font-style:italic"></span>    $(<span style="color:#b44">&#34;#start&#34;</span>).click(<span style="color:#a2f;font-weight:bold">function</span>() {
-        question <span style="color:#666">=</span> <span style="color:#666">0</span>;
-        $(<span style="color:#b44">&#34;#data&#34;</span>).css(<span style="color:#b44">&#34;display&#34;</span>, <span style="color:#b44">&#34;none&#34;</span>);
-        $(<span style="color:#b44">&#34;.intro&#34;</span>).fadeOut(<span style="color:#a2f;font-weight:bold">function</span>() {
-        <span style="color:#080;font-style:italic">// Do stuff
-</span><span style="color:#080;font-style:italic"></span>        });
-    <span style="color:#080;font-style:italic">// ...
-</span><span style="color:#080;font-style:italic"></span>    });
-});
-</code></pre></div><p>In C++ the syntax is curious in that there are a pair of square
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>jQuery(<span style="color:#a2f">document</span>).ready(<span style="color:#a2f;font-weight:bold">function</span>($) {
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#080;font-style:italic">// Process the start button
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    $(<span style="color:#b44">&#34;#start&#34;</span>).click(<span style="color:#a2f;font-weight:bold">function</span>() {
+</span></span><span style="display:flex;"><span>        question <span style="color:#666">=</span> <span style="color:#666">0</span>;
+</span></span><span style="display:flex;"><span>        $(<span style="color:#b44">&#34;#data&#34;</span>).css(<span style="color:#b44">&#34;display&#34;</span>, <span style="color:#b44">&#34;none&#34;</span>);
+</span></span><span style="display:flex;"><span>        $(<span style="color:#b44">&#34;.intro&#34;</span>).fadeOut(<span style="color:#a2f;font-weight:bold">function</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Do stuff
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        });
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    });
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>In C++ the syntax is curious in that there are a pair of square
 brackets enclosing &lsquo;captured&rsquo; variables&hellip;</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C">    <span style="color:#080;font-style:italic">// Must have at least one lambda expression
-</span><span style="color:#080;font-style:italic"></span>    gdk_threads_add_idle([](gpointer widget) <span style="color:#666">-&gt;</span> gboolean
-    {
-        gtk_widget_queue_draw(GTK_WIDGET(widget));
-        <span style="color:#a2f;font-weight:bold">return</span> G_SOURCE_REMOVE;
-    }, widget);
-</code></pre></div><p>In Objective C the syntax is even more peculiar. The <code>ProcessAudio</code>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Must have at least one lambda expression
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    gdk_threads_add_idle([](gpointer widget) <span style="color:#666">-&gt;</span> gboolean
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        gtk_widget_queue_draw(GTK_WIDGET(widget));
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> G_SOURCE_REMOVE;
+</span></span><span style="display:flex;"><span>    }, widget);
+</span></span></code></pre></div><p>In Objective C the syntax is even more peculiar. The <code>ProcessAudio</code>
 function is called a block. I tried to make it a lambda expression but
 had to give up. Whether this is an Objective C or C construct I don&rsquo;t
 know&hellip;</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080;font-style:italic">// Input proc
-</span><span style="color:#080;font-style:italic"></span>OSStatus <span style="color:#00a000">InputProc</span>(<span style="color:#0b0;font-weight:bold">void</span> <span style="color:#666">*</span>inRefCon, AudioUnitRenderActionFlags <span style="color:#666">*</span>ioActionFlags,
-		   <span style="color:#a2f;font-weight:bold">const</span> AudioTimeStamp <span style="color:#666">*</span>inTimeStamp, UInt32 inBusNumber,
-		   UInt32 inNumberFrames, AudioBufferList <span style="color:#666">*</span>ioData)
-{
-    <span style="color:#a2f;font-weight:bold">static</span> AudioBufferList abl <span style="color:#666">=</span>
-	{<span style="color:#666">1</span>, {<span style="color:#666">1</span>, <span style="color:#666">0</span>, nil}};
-    <span style="color:#080;font-style:italic">// ...
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#080;font-style:italic">// Run in main queue
-</span><span style="color:#080;font-style:italic"></span>    dispatch_async(dispatch_get_main_queue(), ProcessAudio);
-
-    <span style="color:#a2f;font-weight:bold">return</span> noErr;
-}
-
-<span style="color:#080;font-style:italic">// Process audio
-</span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">void</span> (<span style="color:#666">^</span>ProcessAudio)() <span style="color:#666">=</span> <span style="color:#666">^</span>
-{
-    <span style="color:#a2f;font-weight:bold">enum</span>
-    {kTimerCount <span style="color:#666">=</span> <span style="color:#666">16</span>};
-    <span style="color:#080;font-style:italic">// ...
-</span><span style="color:#080;font-style:italic"></span>};
-</code></pre></div><p>In java they can be used for callbacks or listeners. The syntax is
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// Input proc
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>OSStatus <span style="color:#00a000">InputProc</span>(<span style="color:#0b0;font-weight:bold">void</span> <span style="color:#666">*</span>inRefCon, AudioUnitRenderActionFlags <span style="color:#666">*</span>ioActionFlags,
+</span></span><span style="display:flex;"><span>		   <span style="color:#a2f;font-weight:bold">const</span> AudioTimeStamp <span style="color:#666">*</span>inTimeStamp, UInt32 inBusNumber,
+</span></span><span style="display:flex;"><span>		   UInt32 inNumberFrames, AudioBufferList <span style="color:#666">*</span>ioData)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">static</span> AudioBufferList abl <span style="color:#666">=</span>
+</span></span><span style="display:flex;"><span>	{<span style="color:#666">1</span>, {<span style="color:#666">1</span>, <span style="color:#666">0</span>, nil}};
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#080;font-style:italic">// Run in main queue
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    dispatch_async(dispatch_get_main_queue(), ProcessAudio);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">return</span> noErr;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// Process audio
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">void</span> (<span style="color:#666">^</span>ProcessAudio)() <span style="color:#666">=</span> <span style="color:#666">^</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">enum</span>
+</span></span><span style="display:flex;"><span>    {kTimerCount <span style="color:#666">=</span> <span style="color:#666">16</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>};
+</span></span></code></pre></div><p>In java they can be used for callbacks or listeners. The syntax is
 simpler, you don&rsquo;t even need the brackets if there&rsquo;s only one
 argument&hellip;</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">                showEdit <span style="color:#666">=</span> <span style="color:#666">()</span> <span style="color:#666">-&gt;</span>
-                <span style="color:#666">{</span>
-                    startAnimation<span style="color:#666">(</span>edit<span style="color:#666">,</span> R<span style="color:#666">.</span><span style="color:#b44">anim</span><span style="color:#666">.</span><span style="color:#b44">fade_in</span><span style="color:#666">,</span> View<span style="color:#666">.</span><span style="color:#b44">VISIBLE</span><span style="color:#666">);</span>
-                    scrollUp <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
-                    scrollDn <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
-                <span style="color:#666">};</span>
-                <span style="color:#080;font-style:italic">// ...
-</span><span style="color:#080;font-style:italic"></span>                        <span style="color:#080;font-style:italic">// Show button delayed
-</span><span style="color:#080;font-style:italic"></span>                        markdownView<span style="color:#666">.</span><span style="color:#b44">removeCallbacks</span><span style="color:#666">(</span>showEdit<span style="color:#666">);</span>
-                        markdownView<span style="color:#666">.</span><span style="color:#b44">postDelayed</span><span style="color:#666">(</span>showEdit<span style="color:#666">,</span> VISIBLE_DELAY<span style="color:#666">);</span>
-
-            <span style="color:#080;font-style:italic">// On click
-</span><span style="color:#080;font-style:italic"></span>            accept<span style="color:#666">.</span><span style="color:#b44">setOnClickListener</span><span style="color:#666">(</span>v <span style="color:#666">-&gt;</span>
-            <span style="color:#666">{</span>
-                <span style="color:#080;font-style:italic">// Get text
-</span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>display<span style="color:#666">)</span>
-                    loadMarkdown<span style="color:#666">();</span>
-                <span style="color:#080;font-style:italic">// ...
-</span><span style="color:#080;font-style:italic"></span>            <span style="color:#666">});</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>                showEdit <span style="color:#666">=</span> <span style="color:#666">()</span> <span style="color:#666">-&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>                    startAnimation<span style="color:#666">(</span>edit<span style="color:#666">,</span> R<span style="color:#666">.</span><span style="color:#b44">anim</span><span style="color:#666">.</span><span style="color:#b44">fade_in</span><span style="color:#666">,</span> View<span style="color:#666">.</span><span style="color:#b44">VISIBLE</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                    scrollUp <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>                    scrollDn <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#666">};</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                        <span style="color:#080;font-style:italic">// Show button delayed
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                        markdownView<span style="color:#666">.</span><span style="color:#b44">removeCallbacks</span><span style="color:#666">(</span>showEdit<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                        markdownView<span style="color:#666">.</span><span style="color:#b44">postDelayed</span><span style="color:#666">(</span>showEdit<span style="color:#666">,</span> VISIBLE_DELAY<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// On click
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            accept<span style="color:#666">.</span><span style="color:#b44">setOnClickListener</span><span style="color:#666">(</span>v <span style="color:#666">-&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Get text
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>display<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>                    loadMarkdown<span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#666">});</span>
+</span></span></code></pre></div>
     </p>
     
     

@@ -31,7 +31,7 @@ I recently decided to port it to Swift to avoid having to attempt to learn Objec
 
 
 
-<meta name="generator" content="Hugo 0.91.0" />
+<meta name="generator" content="Hugo 0.94.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -186,84 +186,84 @@ to know about.</p>
 <p>Having translated the Core Audio part of the app to Swift, I
 discovered that part of it refused to work. The same code originally
 written in C works fine.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">        <span style="color:#a2f;font-weight:bold">var</span> <span style="color:#b8860b">id</span>: AudioDeviceID = kAudioObjectUnknown
-
-        <span style="color:#080;font-style:italic">// Get the default input device</span>
-        <span style="color:#a2f;font-weight:bold">var</span> <span style="color:#b8860b">inputDeviceAOPA</span>: AudioObjectPropertyAddress =
-          AudioObjectPropertyAddress(mSelector:
-                                       kAudioHardwarePropertyDefaultInputDevice,
-                                     mScope: kAudioObjectPropertyScopeGlobal,
-                                     mElement:
-                                       kAudioObjectPropertyElementMaster)
-
-        <span style="color:#a2f;font-weight:bold">var</span> <span style="color:#b8860b">size</span>: <span style="color:#a2f">UInt32</span> = <span style="color:#a2f">UInt32</span>(MemoryLayout.size(ofValue: id))
-
-        <span style="color:#080;font-style:italic">// Get device</span>
-        status =
-          AudioObjectGetPropertyData(<span style="color:#a2f">UInt32</span>(kAudioObjectSystemObject),
-                                     &amp;inputDeviceAOPA,
-                                     <span style="color:#666">0</span>, <span style="color:#a2f;font-weight:bold">nil</span>, &amp;size, &amp;id)
-        <span style="color:#a2f;font-weight:bold">if</span> (status <span style="color:#666">!=</span> noErr)
-        {
-	    <span style="color:#080;font-style:italic">// AudioObjectGetPropertyData</span>
-            NSLog(<span style="color:#b44">&#34;Error in AudioObjectGetPropertyData: &#34;</span> <span style="color:#666">+</span>
-	            <span style="color:#b44">&#34;kAudioHardwarePropertyDefaultInputDevice %d&#34;</span>, status)
-	    <span style="color:#a2f;font-weight:bold">return</span> status
-        }
-
-        NSLog(<span style="color:#b44">&#34;System input device %d&#34;</span>, id)
-
-        <span style="color:#080;font-style:italic">// Set the audio unit device</span>
-        status =
-          AudioUnitSetProperty(output,
-			       kAudioOutputUnitProperty_CurrentDevice, 
-			       kAudioUnitScope_Global,
-                               <span style="color:#666">0</span>, &amp;id, size)
-        <span style="color:#a2f;font-weight:bold">if</span> (status <span style="color:#666">!=</span> noErr)
-        {
-            <span style="color:#080;font-style:italic">// AudioUnitSetProperty</span>
-            NSLog(<span style="color:#b44">&#34;Error in AudioUnitSetProperty: &#34;</span> <span style="color:#666">+</span>
-	            <span style="color:#b44">&#34;kAudioOutputUnitProperty_CurrentDevice &#34;</span> <span style="color:#666">+</span>
-                    AudioUnitErrString(status))
-	    <span style="color:#a2f;font-weight:bold">return</span> status
-        }
-</code></pre></div><p>Swift version. This fails to set the input device with an error.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">    AudioDeviceID id;
-    size <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">sizeof</span>(id);
-
-    <span style="color:#080;font-style:italic">// Get the default input device
-</span><span style="color:#080;font-style:italic"></span>    AudioObjectPropertyAddress inputDeviceAOPA <span style="color:#666">=</span>
-        {kAudioHardwarePropertyDefaultInputDevice,
-         kAudioObjectPropertyScopeGlobal,
-         kAudioObjectPropertyElementMaster};
-
-    <span style="color:#080;font-style:italic">// Get device
-</span><span style="color:#080;font-style:italic"></span>    status <span style="color:#666">=</span> AudioObjectGetPropertyData(kAudioObjectSystemObject,
-                                        <span style="color:#666">&amp;</span>inputDeviceAOPA,
-                                        <span style="color:#666">0</span>, nil, <span style="color:#666">&amp;</span>size, <span style="color:#666">&amp;</span>id);
-    <span style="color:#a2f;font-weight:bold">if</span> (status <span style="color:#666">!=</span> noErr)
-    {
-        <span style="color:#080;font-style:italic">// AudioObjectGetPropertyData
-</span><span style="color:#080;font-style:italic"></span>        NSLog(<span style="">@</span><span style="color:#b44">&#34;Error in AudioObjectGetPropertyData: &#34;</span> 
-                    <span style="color:#b44">&#34;kAudioHardwarePropertyDefaultInputDevice %s (%d)&#34;</span>,
-              AudioUnitErrString(status), status);
-        <span style="color:#a2f;font-weight:bold">return</span> status;
-    }
-
-    <span style="color:#080;font-style:italic">// Set the audio unit device
-</span><span style="color:#080;font-style:italic"></span>    status <span style="color:#666">=</span> AudioUnitSetProperty(audioData.output,
-                                  kAudioOutputUnitProperty_CurrentDevice, 
-                                  kAudioUnitScope_Global,
-                                  <span style="color:#666">0</span>, <span style="color:#666">&amp;</span>id, size);
-    <span style="color:#a2f;font-weight:bold">if</span> (status <span style="color:#666">!=</span> noErr)
-    {
-        <span style="color:#080;font-style:italic">// AudioUnitSetProperty
-</span><span style="color:#080;font-style:italic"></span>        NSLog(<span style="">@</span><span style="color:#b44">&#34;Error in AudioUnitSetProperty: &#34;</span> 
-                    <span style="color:#b44">&#34;kAudioOutputUnitProperty_CurrentDevice %s (%d)&#34;</span>,
-              AudioUnitErrString(status), status);
-        <span style="color:#a2f;font-weight:bold">return</span> status;
-    }
-</code></pre></div><p>C version, this works with no error. I asked a question about this on
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">var</span> <span style="color:#b8860b">id</span>: AudioDeviceID = kAudioObjectUnknown
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Get the default input device</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">var</span> <span style="color:#b8860b">inputDeviceAOPA</span>: AudioObjectPropertyAddress =
+</span></span><span style="display:flex;"><span>          AudioObjectPropertyAddress(mSelector:
+</span></span><span style="display:flex;"><span>                                       kAudioHardwarePropertyDefaultInputDevice,
+</span></span><span style="display:flex;"><span>                                     mScope: kAudioObjectPropertyScopeGlobal,
+</span></span><span style="display:flex;"><span>                                     mElement:
+</span></span><span style="display:flex;"><span>                                       kAudioObjectPropertyElementMaster)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">var</span> <span style="color:#b8860b">size</span>: <span style="color:#a2f">UInt32</span> = <span style="color:#a2f">UInt32</span>(MemoryLayout.size(ofValue: id))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Get device</span>
+</span></span><span style="display:flex;"><span>        status =
+</span></span><span style="display:flex;"><span>          AudioObjectGetPropertyData(<span style="color:#a2f">UInt32</span>(kAudioObjectSystemObject),
+</span></span><span style="display:flex;"><span>                                     &amp;inputDeviceAOPA,
+</span></span><span style="display:flex;"><span>                                     <span style="color:#666">0</span>, <span style="color:#a2f;font-weight:bold">nil</span>, &amp;size, &amp;id)
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">if</span> (status <span style="color:#666">!=</span> noErr)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>	    <span style="color:#080;font-style:italic">// AudioObjectGetPropertyData</span>
+</span></span><span style="display:flex;"><span>            NSLog(<span style="color:#b44">&#34;Error in AudioObjectGetPropertyData: &#34;</span> <span style="color:#666">+</span>
+</span></span><span style="display:flex;"><span>	            <span style="color:#b44">&#34;kAudioHardwarePropertyDefaultInputDevice %d&#34;</span>, status)
+</span></span><span style="display:flex;"><span>	    <span style="color:#a2f;font-weight:bold">return</span> status
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        NSLog(<span style="color:#b44">&#34;System input device %d&#34;</span>, id)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Set the audio unit device</span>
+</span></span><span style="display:flex;"><span>        status =
+</span></span><span style="display:flex;"><span>          AudioUnitSetProperty(output,
+</span></span><span style="display:flex;"><span>			       kAudioOutputUnitProperty_CurrentDevice, 
+</span></span><span style="display:flex;"><span>			       kAudioUnitScope_Global,
+</span></span><span style="display:flex;"><span>                               <span style="color:#666">0</span>, &amp;id, size)
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">if</span> (status <span style="color:#666">!=</span> noErr)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// AudioUnitSetProperty</span>
+</span></span><span style="display:flex;"><span>            NSLog(<span style="color:#b44">&#34;Error in AudioUnitSetProperty: &#34;</span> <span style="color:#666">+</span>
+</span></span><span style="display:flex;"><span>	            <span style="color:#b44">&#34;kAudioOutputUnitProperty_CurrentDevice &#34;</span> <span style="color:#666">+</span>
+</span></span><span style="display:flex;"><span>                    AudioUnitErrString(status))
+</span></span><span style="display:flex;"><span>	    <span style="color:#a2f;font-weight:bold">return</span> status
+</span></span><span style="display:flex;"><span>        }
+</span></span></code></pre></div><p>Swift version. This fails to set the input device with an error.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    AudioDeviceID id;
+</span></span><span style="display:flex;"><span>    size <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">sizeof</span>(id);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Get the default input device
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    AudioObjectPropertyAddress inputDeviceAOPA <span style="color:#666">=</span>
+</span></span><span style="display:flex;"><span>        {kAudioHardwarePropertyDefaultInputDevice,
+</span></span><span style="display:flex;"><span>         kAudioObjectPropertyScopeGlobal,
+</span></span><span style="display:flex;"><span>         kAudioObjectPropertyElementMaster};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Get device
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    status <span style="color:#666">=</span> AudioObjectGetPropertyData(kAudioObjectSystemObject,
+</span></span><span style="display:flex;"><span>                                        <span style="color:#666">&amp;</span>inputDeviceAOPA,
+</span></span><span style="display:flex;"><span>                                        <span style="color:#666">0</span>, nil, <span style="color:#666">&amp;</span>size, <span style="color:#666">&amp;</span>id);
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">if</span> (status <span style="color:#666">!=</span> noErr)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// AudioObjectGetPropertyData
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        NSLog(<span style="">@</span><span style="color:#b44">&#34;Error in AudioObjectGetPropertyData: &#34;</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#b44">&#34;kAudioHardwarePropertyDefaultInputDevice %s (%d)&#34;</span>,
+</span></span><span style="display:flex;"><span>              AudioUnitErrString(status), status);
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> status;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Set the audio unit device
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    status <span style="color:#666">=</span> AudioUnitSetProperty(audioData.output,
+</span></span><span style="display:flex;"><span>                                  kAudioOutputUnitProperty_CurrentDevice, 
+</span></span><span style="display:flex;"><span>                                  kAudioUnitScope_Global,
+</span></span><span style="display:flex;"><span>                                  <span style="color:#666">0</span>, <span style="color:#666">&amp;</span>id, size);
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">if</span> (status <span style="color:#666">!=</span> noErr)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// AudioUnitSetProperty
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        NSLog(<span style="">@</span><span style="color:#b44">&#34;Error in AudioUnitSetProperty: &#34;</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#b44">&#34;kAudioOutputUnitProperty_CurrentDevice %s (%d)&#34;</span>,
+</span></span><span style="display:flex;"><span>              AudioUnitErrString(status), status);
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> status;
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p>C version, this works with no error. I asked a question about this on
 the <a href="https://lists.apple.com/archives/coreaudio-api">coreaudio mailing list</a>, but apart from being picked up on my
 coarse use of Swift, since fixed, I didn&rsquo;t get an answer. So I decided
 to leave the audio part of the app in C. I changed the file extension
@@ -272,143 +272,143 @@ amount of interoperability with Swift. In order for this to work, two
 special include files need to be used. <code>&lt;AppName&gt;-Bridging-Header.h</code>
 allows Swift to access C data. It can just include the C include
 file. Use the switch <code>-import-objc-header</code> to import this header.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080">#include</span> <span style="color:#080">&#34;Audio.h&#34;</span><span style="color:#080">
-</span></code></pre></div><p>To allow C to access Swift data requires the use of <code>&lt;AppName&gt;-Swift.h</code>, which is created by the Swift compiler using the switch <code>-emit-objc-header-path</code>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Makefile" data-lang="Makefile"><span style="color:#b8860b">HEADER</span> <span style="color:#666">=</span> Tuner-Bridging-Header.h
-<span style="color:#b8860b">SWIFTH</span> <span style="color:#666">=</span> Tuner-Swift.h
-
-<span style="color:#b8860b">SOURCES</span> <span style="color:#666">=</span> AppDelegate.swift ScopeView.swift SpectrumView.swift <span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>		StrobeView.swift DisplayView.swift MeterView.swift <span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>		TunerView.swift Audio.o
-
-<span style="color:#b8860b">SFLAGS</span> <span style="color:#666">=</span> -g -target x86_64-apple-macosx10.9 <span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>	-import-objc-header <span style="color:#a2f;font-weight:bold">$(</span>HEADER<span style="color:#a2f;font-weight:bold">)</span> -emit-objc-header-path <span style="color:#a2f;font-weight:bold">$(</span>SWIFTH<span style="color:#a2f;font-weight:bold">)</span> <span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>	-Xlinker -rpath -Xlinker @loader_path/../Frameworks -Xlinker -w
-
-<span style="color:#b8860b">CFLAGS</span> <span style="color:#666">=</span> -g -target x86_64-apple-macosx10.9
-</code></pre></div><p>Extract from <code>Makefile</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#080">#include</span> <span style="color:#080">&#34;Audio.h&#34;</span><span style="color:#080">
+</span></span></span></code></pre></div><p>To allow C to access Swift data requires the use of <code>&lt;AppName&gt;-Swift.h</code>, which is created by the Swift compiler using the switch <code>-emit-objc-header-path</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Makefile" data-lang="Makefile"><span style="display:flex;"><span><span style="color:#b8860b">HEADER</span> <span style="color:#666">=</span> Tuner-Bridging-Header.h
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">SWIFTH</span> <span style="color:#666">=</span> Tuner-Swift.h
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">SOURCES</span> <span style="color:#666">=</span> AppDelegate.swift ScopeView.swift SpectrumView.swift <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>		StrobeView.swift DisplayView.swift MeterView.swift <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>		TunerView.swift Audio.o
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">SFLAGS</span> <span style="color:#666">=</span> -g -target x86_64-apple-macosx10.9 <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>	-import-objc-header <span style="color:#a2f;font-weight:bold">$(</span>HEADER<span style="color:#a2f;font-weight:bold">)</span> -emit-objc-header-path <span style="color:#a2f;font-weight:bold">$(</span>SWIFTH<span style="color:#a2f;font-weight:bold">)</span> <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>	-Xlinker -rpath -Xlinker @loader_path/../Frameworks -Xlinker -w
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">CFLAGS</span> <span style="color:#666">=</span> -g -target x86_64-apple-macosx10.9
+</span></span></code></pre></div><p>Extract from <code>Makefile</code>.</p>
 <h3 id="enums">Enums</h3>
 <p>I make great use of <a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Enumerations.html">enums</a> in my apps. They are very useful for
 defining lots of constants for use in case statements. You can use
 enums in Swift, but the syntax is more complex, and using them in a
 switch statement in Swift is a pain. I found it was easier to define
 the enums in the C include file, and then use them in Swift.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080;font-style:italic">// Checkbox tags
-</span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">enum</span>
-    {kZoom   <span style="color:#666">=</span> <span style="">&#39;</span>Zoom<span style="">&#39;</span>,
-     kFilt   <span style="color:#666">=</span> <span style="">&#39;</span>Filt<span style="">&#39;</span>,
-     kMult   <span style="color:#666">=</span> <span style="">&#39;</span>Mult<span style="">&#39;</span>,
-     kFund   <span style="color:#666">=</span> <span style="">&#39;</span>Fund<span style="">&#39;</span>,
-     kStrobe <span style="color:#666">=</span> <span style="">&#39;</span>Strb<span style="">&#39;</span>,
-     kDown   <span style="color:#666">=</span> <span style="">&#39;</span>Down<span style="">&#39;</span>,
-     kLock   <span style="color:#666">=</span> <span style="">&#39;</span>Lock<span style="">&#39;</span>,
-     kNote   <span style="color:#666">=</span> <span style="">&#39;</span>Note<span style="">&#39;</span>};
-
-<span style="color:#080;font-style:italic">// Reference tags
-</span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">enum</span>
-    {kRefText <span style="color:#666">=</span> <span style="">&#39;</span>RefT<span style="">&#39;</span>,
-     kRefStep <span style="color:#666">=</span> <span style="">&#39;</span>RefS<span style="">&#39;</span>};
-</code></pre></div><p>The enums can then be referenced in Swift.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">    <span style="color:#080;font-style:italic">// buttonClicked</span>
-    <span style="color:#a2f;font-weight:bold">@objc</span> <span style="color:#a2f;font-weight:bold">func</span> <span style="color:#00a000">buttonClicked</span>(sender: NSButton)
-    {
-        print(<span style="color:#b44">&#34;Sender&#34;</span>, sender, sender.state)
-        <span style="color:#a2f;font-weight:bold">switch</span> sender.tag
-        {
-        <span style="color:#a2f;font-weight:bold">case</span> kZoom :
-            spectrumData.zoom = (sender.state == .on) ? <span style="color:#a2f;font-weight:bold">true</span> : <span style="color:#a2f;font-weight:bold">false</span>
-
-        <span style="color:#a2f;font-weight:bold">case</span> kFilt :
-            audioData.filt = (sender.state == .on) ? <span style="color:#a2f;font-weight:bold">true</span> : <span style="color:#a2f;font-weight:bold">false</span>
-
-        <span style="color:#a2f;font-weight:bold">case</span> kMult :
-            displayData.mult = (sender.state == .on) ? <span style="color:#a2f;font-weight:bold">true</span> : <span style="color:#a2f;font-weight:bold">false</span>
-            displayView.needsDisplay = <span style="color:#a2f;font-weight:bold">true</span>
-
-        <span style="color:#a2f;font-weight:bold">case</span> kFund :
-            audioData.fund = (sender.state == .on) ? <span style="color:#a2f;font-weight:bold">true</span> : <span style="color:#a2f;font-weight:bold">false</span>
-
-        <span style="color:#a2f;font-weight:bold">case</span> kStrobe :
-            strobeData.enable = (sender.state == .on) ? <span style="color:#a2f;font-weight:bold">true</span> : <span style="color:#a2f;font-weight:bold">false</span>
-
-        <span style="color:#a2f;font-weight:bold">case</span> kDown :
-            audioData.down = (sender.state == .on) ? <span style="color:#a2f;font-weight:bold">true</span> : <span style="color:#a2f;font-weight:bold">false</span>
-
-        <span style="color:#a2f;font-weight:bold">case</span> kLock :
-            displayData.lock = (sender.state == .on) ? <span style="color:#a2f;font-weight:bold">true</span> : <span style="color:#a2f;font-weight:bold">false</span>
-            displayView.needsDisplay = <span style="color:#a2f;font-weight:bold">true</span>
-
-        <span style="color:#a2f;font-weight:bold">case</span> kNote :
-            audioData.note = (sender.state == .on) ? <span style="color:#a2f;font-weight:bold">true</span> : <span style="color:#a2f;font-weight:bold">false</span>
-
-        <span style="color:#a2f;font-weight:bold">default</span>:
-            <span style="color:#a2f;font-weight:bold">break</span>
-        }
-    }
-</code></pre></div><h3 id="boolean-arrays">Boolean arrays</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// Checkbox tags
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">enum</span>
+</span></span><span style="display:flex;"><span>    {kZoom   <span style="color:#666">=</span> <span style="">&#39;</span>Zoom<span style="">&#39;</span>,
+</span></span><span style="display:flex;"><span>     kFilt   <span style="color:#666">=</span> <span style="">&#39;</span>Filt<span style="">&#39;</span>,
+</span></span><span style="display:flex;"><span>     kMult   <span style="color:#666">=</span> <span style="">&#39;</span>Mult<span style="">&#39;</span>,
+</span></span><span style="display:flex;"><span>     kFund   <span style="color:#666">=</span> <span style="">&#39;</span>Fund<span style="">&#39;</span>,
+</span></span><span style="display:flex;"><span>     kStrobe <span style="color:#666">=</span> <span style="">&#39;</span>Strb<span style="">&#39;</span>,
+</span></span><span style="display:flex;"><span>     kDown   <span style="color:#666">=</span> <span style="">&#39;</span>Down<span style="">&#39;</span>,
+</span></span><span style="display:flex;"><span>     kLock   <span style="color:#666">=</span> <span style="">&#39;</span>Lock<span style="">&#39;</span>,
+</span></span><span style="display:flex;"><span>     kNote   <span style="color:#666">=</span> <span style="">&#39;</span>Note<span style="">&#39;</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// Reference tags
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">enum</span>
+</span></span><span style="display:flex;"><span>    {kRefText <span style="color:#666">=</span> <span style="">&#39;</span>RefT<span style="">&#39;</span>,
+</span></span><span style="display:flex;"><span>     kRefStep <span style="color:#666">=</span> <span style="">&#39;</span>RefS<span style="">&#39;</span>};
+</span></span></code></pre></div><p>The enums can then be referenced in Swift.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// buttonClicked</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">@objc</span> <span style="color:#a2f;font-weight:bold">func</span> <span style="color:#00a000">buttonClicked</span>(sender: NSButton)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#b44">&#34;Sender&#34;</span>, sender, sender.state)
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">switch</span> sender.tag
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">case</span> kZoom :
+</span></span><span style="display:flex;"><span>            spectrumData.zoom = (sender.state == .on) ? <span style="color:#a2f;font-weight:bold">true</span> : <span style="color:#a2f;font-weight:bold">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">case</span> kFilt :
+</span></span><span style="display:flex;"><span>            audioData.filt = (sender.state == .on) ? <span style="color:#a2f;font-weight:bold">true</span> : <span style="color:#a2f;font-weight:bold">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">case</span> kMult :
+</span></span><span style="display:flex;"><span>            displayData.mult = (sender.state == .on) ? <span style="color:#a2f;font-weight:bold">true</span> : <span style="color:#a2f;font-weight:bold">false</span>
+</span></span><span style="display:flex;"><span>            displayView.needsDisplay = <span style="color:#a2f;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">case</span> kFund :
+</span></span><span style="display:flex;"><span>            audioData.fund = (sender.state == .on) ? <span style="color:#a2f;font-weight:bold">true</span> : <span style="color:#a2f;font-weight:bold">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">case</span> kStrobe :
+</span></span><span style="display:flex;"><span>            strobeData.enable = (sender.state == .on) ? <span style="color:#a2f;font-weight:bold">true</span> : <span style="color:#a2f;font-weight:bold">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">case</span> kDown :
+</span></span><span style="display:flex;"><span>            audioData.down = (sender.state == .on) ? <span style="color:#a2f;font-weight:bold">true</span> : <span style="color:#a2f;font-weight:bold">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">case</span> kLock :
+</span></span><span style="display:flex;"><span>            displayData.lock = (sender.state == .on) ? <span style="color:#a2f;font-weight:bold">true</span> : <span style="color:#a2f;font-weight:bold">false</span>
+</span></span><span style="display:flex;"><span>            displayView.needsDisplay = <span style="color:#a2f;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">case</span> kNote :
+</span></span><span style="display:flex;"><span>            audioData.note = (sender.state == .on) ? <span style="color:#a2f;font-weight:bold">true</span> : <span style="color:#a2f;font-weight:bold">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">default</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">break</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h3 id="boolean-arrays">Boolean arrays</h3>
 <p>The data defined in the include file includes two boolean arrays.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080;font-style:italic">// Audio filter
-</span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">typedef</span> <span style="color:#a2f;font-weight:bold">struct</span>
-{
-    <span style="color:#0b0;font-weight:bold">bool</span> note[<span style="color:#666">12</span>];
-    <span style="color:#0b0;font-weight:bold">bool</span> octave[<span style="color:#666">9</span>];
-} FilterData;
-FilterData filterData;
-</code></pre></div><p>These arrays appear as <a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html">tuples</a> in Swift, which is not very
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// Audio filter
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">typedef</span> <span style="color:#a2f;font-weight:bold">struct</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">bool</span> note[<span style="color:#666">12</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">bool</span> octave[<span style="color:#666">9</span>];
+</span></span><span style="display:flex;"><span>} FilterData;
+</span></span><span style="display:flex;"><span>FilterData filterData;
+</span></span></code></pre></div><p>These arrays appear as <a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html">tuples</a> in Swift, which is not very
 useful. I found a workaround using reflection on <a href="https://stackoverflow.com/questions/34776546/access-element-of-fixed-length-c-array-in-swift">Stack Overflow</a>,
 but it produces the wrong result.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">    <span style="color:#080;font-style:italic">// This function compiles and appears to work but produces the</span>
-    <span style="color:#080;font-style:italic">// wrong result for a boolean array. Replaced by ObjC access</span>
-    <span style="color:#080;font-style:italic">// functions.</span>
-    <span style="color:#080;font-style:italic">// arrayFromTuple</span>
-    <span style="color:#a2f;font-weight:bold">func</span> <span style="color:#00a000">arrayFromTuple</span>&lt;T, R&gt;(tuple: T) -&gt; [R]
-    {
-        <span style="color:#a2f;font-weight:bold">let</span> <span style="color:#b8860b">reflection</span> = Mirror(reflecting: tuple)
-        <span style="color:#a2f;font-weight:bold">var</span> <span style="color:#b8860b">array</span>: [R] = []
-        <span style="color:#a2f;font-weight:bold">for</span> i <span style="color:#a2f;font-weight:bold">in</span> reflection.children
-        {
-            array.append(i.value <span style="color:#a2f;font-weight:bold">as</span>! R)
-        }
-
-        <span style="color:#a2f;font-weight:bold">return</span> array
-    }
-</code></pre></div><p>So I wrote some access functions in C as a workaround.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080;font-style:italic">// Boolean array access functions to work around Swift limitations
-</span><span style="color:#080;font-style:italic">// getNote
-</span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">bool</span> <span style="color:#00a000">getNote</span>(<span style="color:#0b0;font-weight:bold">int</span> index)
-{
-    <span style="color:#a2f;font-weight:bold">return</span> filterData.note[index];
-}
-
-<span style="color:#080;font-style:italic">// setNote
-</span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">setNote</span>(<span style="color:#0b0;font-weight:bold">bool</span> value, <span style="color:#0b0;font-weight:bold">int</span> index)
-{
-    filterData.note[index] <span style="color:#666">=</span> value;
-}
-
-<span style="color:#080;font-style:italic">// getOctave
-</span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">bool</span> <span style="color:#00a000">getOctave</span>(<span style="color:#0b0;font-weight:bold">int</span> index)
-{
-    <span style="color:#a2f;font-weight:bold">return</span> filterData.octave[index];
-}
-
-<span style="color:#080;font-style:italic">// setOctave
-</span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">setOctave</span>(<span style="color:#0b0;font-weight:bold">bool</span> value, <span style="color:#0b0;font-weight:bold">int</span> index)
-{
-    filterData.octave[index] <span style="color:#666">=</span> value;
-}
-</code></pre></div><h3 id="sliders">Sliders</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// This function compiles and appears to work but produces the</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// wrong result for a boolean array. Replaced by ObjC access</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// functions.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// arrayFromTuple</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">func</span> <span style="color:#00a000">arrayFromTuple</span>&lt;T, R&gt;(tuple: T) -&gt; [R]
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">let</span> <span style="color:#b8860b">reflection</span> = Mirror(reflecting: tuple)
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">var</span> <span style="color:#b8860b">array</span>: [R] = []
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">for</span> i <span style="color:#a2f;font-weight:bold">in</span> reflection.children
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            array.append(i.value <span style="color:#a2f;font-weight:bold">as</span>! R)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> array
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p>So I wrote some access functions in C as a workaround.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// Boolean array access functions to work around Swift limitations
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// getNote
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">bool</span> <span style="color:#00a000">getNote</span>(<span style="color:#0b0;font-weight:bold">int</span> index)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">return</span> filterData.note[index];
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// setNote
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">setNote</span>(<span style="color:#0b0;font-weight:bold">bool</span> value, <span style="color:#0b0;font-weight:bold">int</span> index)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    filterData.note[index] <span style="color:#666">=</span> value;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// getOctave
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">bool</span> <span style="color:#00a000">getOctave</span>(<span style="color:#0b0;font-weight:bold">int</span> index)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">return</span> filterData.octave[index];
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// setOctave
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">setOctave</span>(<span style="color:#0b0;font-weight:bold">bool</span> value, <span style="color:#0b0;font-weight:bold">int</span> index)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    filterData.octave[index] <span style="color:#666">=</span> value;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="sliders">Sliders</h3>
 <p>I need to use two <a href="https://developer.apple.com/documentation/appkit/nsslider">sliders</a> in another app I am porting. To define
 the <a href="https://developer.apple.com/documentation/appkit/nsslider/1527901-isvertical">orientation</a> of the slider, the docs say to use <code>isVertical</code>,
 macOS 10.0+. But the compiler says macOS 10.12+ and I want to support
 10.9. The docs for Objective C say <code>vertical</code>, but the compiler
 doesn&rsquo;t like that either. So I wrote another access function.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#080;font-style:italic">// setVertical
-</span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">setVertical</span>(NSSlider <span style="color:#666">*</span>slider, <span style="color:#0b0;font-weight:bold">bool</span> value)
-{
-    slider.vertical <span style="color:#666">=</span> value;
-}
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// setVertical
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">setVertical</span>(NSSlider <span style="color:#666">*</span>slider, <span style="color:#0b0;font-weight:bold">bool</span> value)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    slider.vertical <span style="color:#666">=</span> value;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
     </p>
     
     

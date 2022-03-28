@@ -31,7 +31,7 @@ intro:Please answer the following questions carefully and truthfully."/>
 
 
 
-<meta name="generator" content="Hugo 0.91.0" />
+<meta name="generator" content="Hugo 0.94.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -181,23 +181,23 @@ I thought to have a go at reimplementing it. The exporter I used made
 a good job of translating the Wordpress custom fields to Hugo front
 matter parameters. I had to put dashes in quotes, otherwise they get
 interpreted as <code>[&lt;nil&gt;]</code>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#008000;font-weight:bold">intro</span>:<span style="color:#bbb"> </span>Please answer the following questions carefully and truthfully.<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">question</span>:<span style="color:#bbb">
-</span><span style="color:#bbb">  </span>- You are lying in bed on Monday morning...<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">result</span>:<span style="color:#bbb">
-</span><span style="color:#bbb">  </span>- <span style="color:#b44">&#39;%d percent, Perhaps you should consider emigration.&#39;</span><span style="color:#bbb">
-</span><span style="color:#bbb">  </span>- <span style="color:#b44">&#39;%d%, Consider taking a long holiday somewhere far away.&#39;</span><span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">left</span>:<span style="color:#bbb">
-</span><span style="color:#bbb">  </span>- Go and jump in the shower quick<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">right</span>:<span style="color:#bbb">
-</span><span style="color:#bbb">  </span>- Jump on him<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">weights</span>:<span style="color:#bbb"> </span><span style="color:#666">2</span>,<span style="color:#666">1</span>,<span style="color:#666">1</span>,<span style="color:#666">1</span>,<span style="color:#666">1</span><span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">centre</span>:<span style="color:#bbb">
-</span><span style="color:#bbb">  </span>- <span style="color:#b44">&#39;-&#39;</span><span style="color:#bbb">
-</span><span style="color:#bbb">  </span>- <span style="color:#b44">&#39;-&#39;</span><span style="color:#bbb">
-</span><span style="color:#bbb">  </span>- So so<span style="color:#bbb">
-</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">more</span>:<span style="color:#bbb"> </span>https://billthefarmer.github.io/blog/morris-o-meter<span style="color:#bbb">
-</span></code></pre></div><p>The javascript part should just work as it is, the PHP plugin needed
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">intro</span>:<span style="color:#bbb"> </span>Please answer the following questions carefully and truthfully.<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">question</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- You are lying in bed on Monday morning...<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">result</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- <span style="color:#b44">&#39;%d percent, Perhaps you should consider emigration.&#39;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- <span style="color:#b44">&#39;%d%, Consider taking a long holiday somewhere far away.&#39;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">left</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- Go and jump in the shower quick<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">right</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- Jump on him<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">weights</span>:<span style="color:#bbb"> </span><span style="color:#666">2</span>,<span style="color:#666">1</span>,<span style="color:#666">1</span>,<span style="color:#666">1</span>,<span style="color:#666">1</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">centre</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- <span style="color:#b44">&#39;-&#39;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- <span style="color:#b44">&#39;-&#39;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- So so<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">more</span>:<span style="color:#bbb"> </span>https://billthefarmer.github.io/blog/morris-o-meter<span style="color:#bbb">
+</span></span></span></code></pre></div><p>The javascript part should just work as it is, the PHP plugin needed
 re-implementing as a hugo shortcode. The first part of the plugin just
 outputs svg code to draw the dial and pointer, that was fairly easy to
 implement, it just has some iteration in it. I had to change the ticks
@@ -208,68 +208,68 @@ them are optional, and some of the arrays can have bits missing. PHP
 just coped with that, anything not defined just becomes <code>null</code>. In
 Hugo I had to make a great deal of use of <code>default</code> and <code>slice</code> to
 create default values.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ with .Page.Params }}
-  &lt;<span style="color:#008000;font-weight:bold">div</span> <span style="color:#b44">id</span><span style="color:#666">=</span><span style="color:#b44">&#34;first&#34;</span> <span style="color:#b44">style</span><span style="color:#666">=</span><span style="color:#b44">&#34;text-align: center&#34;</span>&gt;
-    &lt;<span style="color:#008000;font-weight:bold">h4</span>&gt;{{ .intro }}&lt;/<span style="color:#008000;font-weight:bold">h4</span>&gt;
-    &lt;<span style="color:#008000;font-weight:bold">input</span> <span style="color:#b44">type</span><span style="color:#666">=</span><span style="color:#b44">&#34;button&#34;</span> <span style="color:#b44">value</span><span style="color:#666">=</span><span style="color:#b44">&#34;Start&#34;</span> <span style="color:#b44">class</span><span style="color:#666">=</span><span style="color:#b44">&#34;start&#34;</span> <span style="color:#b44">id</span><span style="color:#666">=</span><span style="color:#b44">&#34;start&#34;</span> /&gt;
-  &lt;/<span style="color:#008000;font-weight:bold">div</span>&gt;
-  {{ $questions := .question }}
-  {{ $left_texts := default (slice &#34;No&#34;) .left }}
-  {{ $centre_texts := default (slice &#34;-&#34;) (default .centre .center) }}
-  {{ $right_texts := default (slice &#34;Yes&#34;) .right }}
-  {{ $last_index := sub (len $questions) 1 }}
-  {{ range $index, $question := $questions }}
-  {{ $left := default &#34;No&#34; (index $left_texts $index) }}
-  {{ $centre := default &#34;-&#34; (index $centre_texts $index) }}
-  {{ $right := default &#34;Yes&#34; (index $right_texts $index) }}
-</code></pre></div><p>The other difficult part was extracting optional parameters to pass as
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ with .Page.Params }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#008000;font-weight:bold">div</span> <span style="color:#b44">id</span><span style="color:#666">=</span><span style="color:#b44">&#34;first&#34;</span> <span style="color:#b44">style</span><span style="color:#666">=</span><span style="color:#b44">&#34;text-align: center&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#008000;font-weight:bold">h4</span>&gt;{{ .intro }}&lt;/<span style="color:#008000;font-weight:bold">h4</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#008000;font-weight:bold">input</span> <span style="color:#b44">type</span><span style="color:#666">=</span><span style="color:#b44">&#34;button&#34;</span> <span style="color:#b44">value</span><span style="color:#666">=</span><span style="color:#b44">&#34;Start&#34;</span> <span style="color:#b44">class</span><span style="color:#666">=</span><span style="color:#b44">&#34;start&#34;</span> <span style="color:#b44">id</span><span style="color:#666">=</span><span style="color:#b44">&#34;start&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#008000;font-weight:bold">div</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ $questions := .question }}
+</span></span><span style="display:flex;"><span>  {{ $left_texts := default (slice &#34;No&#34;) .left }}
+</span></span><span style="display:flex;"><span>  {{ $centre_texts := default (slice &#34;-&#34;) (default .centre .center) }}
+</span></span><span style="display:flex;"><span>  {{ $right_texts := default (slice &#34;Yes&#34;) .right }}
+</span></span><span style="display:flex;"><span>  {{ $last_index := sub (len $questions) 1 }}
+</span></span><span style="display:flex;"><span>  {{ range $index, $question := $questions }}
+</span></span><span style="display:flex;"><span>  {{ $left := default &#34;No&#34; (index $left_texts $index) }}
+</span></span><span style="display:flex;"><span>  {{ $centre := default &#34;-&#34; (index $centre_texts $index) }}
+</span></span><span style="display:flex;"><span>  {{ $right := default &#34;Yes&#34; (index $right_texts $index) }}
+</span></span></code></pre></div><p>The other difficult part was extracting optional parameters to pass as
 json to the javascript. I had to use <code>Scratch</code> inside with blocks to
 save values. Luckily <code>Scratch.Get</code> returns <code>null</code> if the key doesn&rsquo;t
 exist.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ with .result }}
-{{ $.Scratch.Set &#34;results&#34; . }}
-{{ end }}
-{{ with (default .colors .colours) }}
-{{ $.Scratch.Set &#34;colours&#34; (split . &#34;,&#34;) }}
-{{ end }}
-{{ with .weights }}
-{{ $.Scratch.Set &#34;weights&#34; (split . &#34;,&#34;) }}
-{{ end }}
-{{ with .duration }}
-{{ $.Scratch.Set &#34;duration&#34; . }}
-{{ end }}
-{{ with .easing }}
-{{ $.Scratch.Set &#34;easing&#34; . }}
-{{ end }}
-{{ $json := dict &#34;results&#34; ($.Scratch.Get &#34;results&#34;) &#34;colours&#34; ($.Scratch.Get &#34;colours&#34;)
-                 &#34;weights&#34; ($.Scratch.Get &#34;weights&#34;) &#34;duration&#34; ($.Scratch.Get &#34;duration&#34;)
-                 &#34;easing&#34; ($.Scratch.Get &#34;easing&#34;) }}
-&lt;<span style="color:#008000;font-weight:bold">script</span> <span style="color:#b44">type</span><span style="color:#666">=</span><span style="color:#b44">&#34;text/javascript&#34;</span>&gt;
-  <span style="color:#a2f;font-weight:bold">var</span> whatever_data <span style="color:#666">=</span> {{ safeJS (jsonify $json) }};
-&lt;/<span style="color:#008000;font-weight:bold">script</span>&gt;
-{{ end }}
-</code></pre></div><p>So the generated json looks like this, with nulls for the missing keys.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#666">&lt;</span>script type<span style="color:#666">=</span><span style="color:#b44">&#34;text/javascript&#34;</span><span style="color:#666">&gt;</span>
-<span style="color:#a2f;font-weight:bold">var</span> whatever_data <span style="color:#666">=</span>
-  {<span style="color:#b44">&#34;colours&#34;</span><span style="color:#666">:</span><span style="color:#a2f;font-weight:bold">null</span>,<span style="color:#b44">&#34;duration&#34;</span><span style="color:#666">:</span><span style="color:#a2f;font-weight:bold">null</span>,<span style="color:#b44">&#34;easing&#34;</span><span style="color:#666">:</span><span style="color:#a2f;font-weight:bold">null</span>,<span style="color:#b44">&#34;results&#34;</span><span style="color:#666">:</span>[<span style="color:#b44">&#34;%d percent,
-</span><span style="color:#b44">    Perhaps you should consider emigration.&#34;</span>,...],<span style="color:#b44">&#34;weights&#34;</span><span style="color:#666">:</span>[<span style="color:#b44">&#34;2&#34;</span>,<span style="color:#b44">&#34;1&#34;</span>,<span style="color:#b44">&#34;1&#34;</span>,<span style="color:#b44">&#34;1&#34;</span>,<span style="color:#b44">&#34;1&#34;</span>]};
-<span style="color:#666">&lt;</span><span style="">/script&gt;</span>
-</code></pre></div><p>The javascript code needed a bit of work to force the weights, which
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ with .result }}
+</span></span><span style="display:flex;"><span>{{ $.Scratch.Set &#34;results&#34; . }}
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span><span style="display:flex;"><span>{{ with (default .colors .colours) }}
+</span></span><span style="display:flex;"><span>{{ $.Scratch.Set &#34;colours&#34; (split . &#34;,&#34;) }}
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span><span style="display:flex;"><span>{{ with .weights }}
+</span></span><span style="display:flex;"><span>{{ $.Scratch.Set &#34;weights&#34; (split . &#34;,&#34;) }}
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span><span style="display:flex;"><span>{{ with .duration }}
+</span></span><span style="display:flex;"><span>{{ $.Scratch.Set &#34;duration&#34; . }}
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span><span style="display:flex;"><span>{{ with .easing }}
+</span></span><span style="display:flex;"><span>{{ $.Scratch.Set &#34;easing&#34; . }}
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span><span style="display:flex;"><span>{{ $json := dict &#34;results&#34; ($.Scratch.Get &#34;results&#34;) &#34;colours&#34; ($.Scratch.Get &#34;colours&#34;)
+</span></span><span style="display:flex;"><span>                 &#34;weights&#34; ($.Scratch.Get &#34;weights&#34;) &#34;duration&#34; ($.Scratch.Get &#34;duration&#34;)
+</span></span><span style="display:flex;"><span>                 &#34;easing&#34; ($.Scratch.Get &#34;easing&#34;) }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#008000;font-weight:bold">script</span> <span style="color:#b44">type</span><span style="color:#666">=</span><span style="color:#b44">&#34;text/javascript&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#a2f;font-weight:bold">var</span> whatever_data <span style="color:#666">=</span> {{ safeJS (jsonify $json) }};
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#008000;font-weight:bold">script</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><p>So the generated json looks like this, with nulls for the missing keys.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#666">&lt;</span>script type<span style="color:#666">=</span><span style="color:#b44">&#34;text/javascript&#34;</span><span style="color:#666">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">var</span> whatever_data <span style="color:#666">=</span>
+</span></span><span style="display:flex;"><span>  {<span style="color:#b44">&#34;colours&#34;</span><span style="color:#666">:</span><span style="color:#a2f;font-weight:bold">null</span>,<span style="color:#b44">&#34;duration&#34;</span><span style="color:#666">:</span><span style="color:#a2f;font-weight:bold">null</span>,<span style="color:#b44">&#34;easing&#34;</span><span style="color:#666">:</span><span style="color:#a2f;font-weight:bold">null</span>,<span style="color:#b44">&#34;results&#34;</span><span style="color:#666">:</span>[<span style="color:#b44">&#34;%d percent,
+</span></span></span><span style="display:flex;"><span><span style="color:#b44">    Perhaps you should consider emigration.&#34;</span>,...],<span style="color:#b44">&#34;weights&#34;</span><span style="color:#666">:</span>[<span style="color:#b44">&#34;2&#34;</span>,<span style="color:#b44">&#34;1&#34;</span>,<span style="color:#b44">&#34;1&#34;</span>,<span style="color:#b44">&#34;1&#34;</span>,<span style="color:#b44">&#34;1&#34;</span>]};
+</span></span><span style="display:flex;"><span><span style="color:#666">&lt;</span><span style="">/script&gt;</span>
+</span></span></code></pre></div><p>The javascript code needed a bit of work to force the weights, which
 were passed by Hugo as an array of strings, to be interpreted as numbers.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">        <span style="color:#080;font-style:italic">// Check if weights are defined
-</span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">if</span> (weights <span style="color:#666">==</span> <span style="color:#a2f;font-weight:bold">null</span>)
-        {
-            value <span style="color:#666">+=</span> $(<span style="color:#b44">&#34;#value-&#34;</span> <span style="color:#666">+</span> panel).slider(<span style="color:#b44">&#34;value&#34;</span>);
-            total<span style="color:#666">++</span>;
-        }
-
-        <span style="color:#a2f;font-weight:bold">else</span>
-        {
-            value <span style="color:#666">+=</span> $(<span style="color:#b44">&#34;#value-&#34;</span> <span style="color:#666">+</span> panel).slider(<span style="color:#b44">&#34;value&#34;</span>) <span style="color:#666">*</span>
-	        weights[index];
-            total <span style="color:#666">+=</span> <span style="color:#666">+</span>weights[index];
-        }
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Check if weights are defined
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">if</span> (weights <span style="color:#666">==</span> <span style="color:#a2f;font-weight:bold">null</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            value <span style="color:#666">+=</span> $(<span style="color:#b44">&#34;#value-&#34;</span> <span style="color:#666">+</span> panel).slider(<span style="color:#b44">&#34;value&#34;</span>);
+</span></span><span style="display:flex;"><span>            total<span style="color:#666">++</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">else</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            value <span style="color:#666">+=</span> $(<span style="color:#b44">&#34;#value-&#34;</span> <span style="color:#666">+</span> panel).slider(<span style="color:#b44">&#34;value&#34;</span>) <span style="color:#666">*</span>
+</span></span><span style="display:flex;"><span>	        weights[index];
+</span></span><span style="display:flex;"><span>            total <span style="color:#666">+=</span> <span style="color:#666">+</span>weights[index];
+</span></span><span style="display:flex;"><span>        }
+</span></span></code></pre></div>
     </p>
     
     

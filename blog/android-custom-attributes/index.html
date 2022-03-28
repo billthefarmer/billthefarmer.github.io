@@ -31,7 +31,7 @@ Calendar custom styles The custom calendar has a list of styles that are customi
 
 
 
-<meta name="generator" content="Hugo 0.91.0" />
+<meta name="generator" content="Hugo 0.94.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -184,66 +184,66 @@ theme.</p>
 <h3 id="calendar-custom-styles">Calendar custom styles</h3>
 <p>The custom calendar has a list of styles that are customisable in a
 <code>attrs.xml</code> file.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
-<span style="color:#008000;font-weight:bold">&lt;resources&gt;</span>
-  <span style="color:#008000;font-weight:bold">&lt;declare-styleable</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;CustomCalendarView&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;calendarTitleTextColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;dayOfWeekTextColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;dayOfMonthTextColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;calendarBackgroundColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;disabledDayBackgroundColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;disabledDayTextColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;selectedDayBackground&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;reference&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;selectedDayTextColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;weekLayoutBackgroundColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;titleLayoutBackgroundColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;currentDayOfMonthColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-  <span style="color:#008000;font-weight:bold">&lt;/declare-styleable&gt;</span>
-<span style="color:#008000;font-weight:bold">&lt;/resources&gt;</span>
-</code></pre></div><p>The <code>CustomCalendarView</code> value is used in the sources to reference the
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">&lt;resources&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&lt;declare-styleable</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;CustomCalendarView&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;calendarTitleTextColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;dayOfWeekTextColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;dayOfMonthTextColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;calendarBackgroundColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;disabledDayBackgroundColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;disabledDayTextColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;selectedDayBackground&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;reference&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;selectedDayTextColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;weekLayoutBackgroundColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;titleLayoutBackgroundColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;currentDayOfMonthColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&lt;/declare-styleable&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">&lt;/resources&gt;</span>
+</span></span></code></pre></div><p>The <code>CustomCalendarView</code> value is used in the sources to reference the
 attributes.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#080;font-style:italic">// getAttributes
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">getAttributes</span><span style="color:#666">(</span>AttributeSet attrs<span style="color:#666">)</span>
-    <span style="color:#666">{</span>
-        Resources resources <span style="color:#666">=</span> getResources<span style="color:#666">();</span>
-
-        <span style="color:#a2f;font-weight:bold">final</span> TypedArray typedArray <span style="color:#666">=</span>
-            context<span style="color:#666">.</span><span style="color:#b44">obtainStyledAttributes</span><span style="color:#666">(</span>attrs<span style="color:#666">,</span> R<span style="color:#666">.</span><span style="color:#b44">styleable</span>
-                                           <span style="color:#666">.</span><span style="color:#b44">CustomCalendarView</span><span style="color:#666">,</span> 0<span style="color:#666">,</span> 0<span style="color:#666">);</span>
-        calendarBackgroundColor <span style="color:#666">=</span>
-            typedArray<span style="color:#666">.</span><span style="color:#b44">getColor</span><span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">styleable</span>
-                                <span style="color:#666">.</span><span style="color:#b44">CustomCalendarView_calendarBackgroundColor</span><span style="color:#666">,</span>
-                                resources<span style="color:#666">.</span><span style="color:#b44">getColor</span><span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">color</span><span style="color:#666">.</span><span style="color:#b44">white</span><span style="color:#666">));</span>
-        <span style="color:#080;font-style:italic">// ...
-</span><span style="color:#080;font-style:italic"></span>    <span style="color:#666">}</span>
-</code></pre></div><p>These styles revert to a default value defined in the code if they are
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// getAttributes
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">getAttributes</span><span style="color:#666">(</span>AttributeSet attrs<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>        Resources resources <span style="color:#666">=</span> getResources<span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">final</span> TypedArray typedArray <span style="color:#666">=</span>
+</span></span><span style="display:flex;"><span>            context<span style="color:#666">.</span><span style="color:#b44">obtainStyledAttributes</span><span style="color:#666">(</span>attrs<span style="color:#666">,</span> R<span style="color:#666">.</span><span style="color:#b44">styleable</span>
+</span></span><span style="display:flex;"><span>                                           <span style="color:#666">.</span><span style="color:#b44">CustomCalendarView</span><span style="color:#666">,</span> 0<span style="color:#666">,</span> 0<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>        calendarBackgroundColor <span style="color:#666">=</span>
+</span></span><span style="display:flex;"><span>            typedArray<span style="color:#666">.</span><span style="color:#b44">getColor</span><span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">styleable</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#666">.</span><span style="color:#b44">CustomCalendarView_calendarBackgroundColor</span><span style="color:#666">,</span>
+</span></span><span style="display:flex;"><span>                                resources<span style="color:#666">.</span><span style="color:#b44">getColor</span><span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">color</span><span style="color:#666">.</span><span style="color:#b44">white</span><span style="color:#666">));</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#666">}</span>
+</span></span></code></pre></div><p>These styles revert to a default value defined in the code if they are
 not referenced externally. To revert to the current style defined
 values, some of them need to be redefined to attribute values from the
 style system.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
-<span style="color:#008000;font-weight:bold">&lt;LinearLayout</span>
-    <span style="color:#b44">xmlns:android=</span><span style="color:#b44">&#34;http://schemas.android.com/apk/res/android&#34;</span>
-    <span style="color:#b44">xmlns:library=</span><span style="color:#b44">&#34;http://schemas.android.com/apk/res-auto&#34;</span>
-    <span style="color:#b44">android:layout_width=</span><span style="color:#b44">&#34;wrap_content&#34;</span>
-    <span style="color:#b44">android:layout_height=</span><span style="color:#b44">&#34;wrap_content&#34;</span>
-    <span style="color:#b44">android:layout_gravity=</span><span style="color:#b44">&#34;center&#34;</span>
-    <span style="color:#b44">android:gravity=</span><span style="color:#b44">&#34;center&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
-  <span style="color:#008000;font-weight:bold">&lt;org.billthefarmer.view.CustomCalendarView</span>
-      <span style="color:#b44">android:id=</span><span style="color:#b44">&#34;@+id/calendar&#34;</span>
-      <span style="color:#b44">android:layout_width=</span><span style="color:#b44">&#34;wrap_content&#34;</span>
-      <span style="color:#b44">android:layout_height=</span><span style="color:#b44">&#34;wrap_content&#34;</span>
-      <span style="color:#b44">android:layout_margin=</span><span style="color:#b44">&#34;8dp&#34;</span>
-      <span style="color:#b44">android:layout_gravity=</span><span style="color:#b44">&#34;center&#34;</span>
-      <span style="color:#b44">library:calendarBackgroundColor=</span><span style="color:#b44">&#34;?android:attr/colorBackground&#34;</span>
-      <span style="color:#b44">library:calendarTitleTextColor=</span><span style="color:#b44">&#34;?android:attr/textColorPrimary&#34;</span>
-      <span style="color:#b44">library:dayOfMonthTextColor=</span><span style="color:#b44">&#34;?android:attr/textColorPrimary&#34;</span>
-      <span style="color:#b44">library:dayOfWeekTextColor=</span><span style="color:#b44">&#34;?android:attr/textColorPrimary&#34;</span>
-      <span style="color:#b44">library:disabledDayBackgroundColor=</span><span style="color:#b44">&#34;?android:attr/colorBackground&#34;</span>
-      <span style="color:#b44">library:disabledDayTextColor=</span><span style="color:#b44">&#34;?android:attr/textColorTertiary&#34;</span>
-      <span style="color:#b44">library:titleLayoutBackgroundColor=</span><span style="color:#b44">&#34;?android:attr/colorBackground&#34;</span>
-      <span style="color:#b44">library:weekLayoutBackgroundColor=</span><span style="color:#b44">&#34;?android:attr/colorBackground&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-<span style="color:#008000;font-weight:bold">&lt;/LinearLayout&gt;</span>
-</code></pre></div><p>I was not able to find a suitable value for the
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">&lt;LinearLayout</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b44">xmlns:android=</span><span style="color:#b44">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b44">xmlns:library=</span><span style="color:#b44">&#34;http://schemas.android.com/apk/res-auto&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b44">android:layout_width=</span><span style="color:#b44">&#34;wrap_content&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b44">android:layout_height=</span><span style="color:#b44">&#34;wrap_content&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b44">android:layout_gravity=</span><span style="color:#b44">&#34;center&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b44">android:gravity=</span><span style="color:#b44">&#34;center&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&lt;org.billthefarmer.view.CustomCalendarView</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#b44">android:id=</span><span style="color:#b44">&#34;@+id/calendar&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#b44">android:layout_width=</span><span style="color:#b44">&#34;wrap_content&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#b44">android:layout_height=</span><span style="color:#b44">&#34;wrap_content&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#b44">android:layout_margin=</span><span style="color:#b44">&#34;8dp&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#b44">android:layout_gravity=</span><span style="color:#b44">&#34;center&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#b44">library:calendarBackgroundColor=</span><span style="color:#b44">&#34;?android:attr/colorBackground&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#b44">library:calendarTitleTextColor=</span><span style="color:#b44">&#34;?android:attr/textColorPrimary&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#b44">library:dayOfMonthTextColor=</span><span style="color:#b44">&#34;?android:attr/textColorPrimary&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#b44">library:dayOfWeekTextColor=</span><span style="color:#b44">&#34;?android:attr/textColorPrimary&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#b44">library:disabledDayBackgroundColor=</span><span style="color:#b44">&#34;?android:attr/colorBackground&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#b44">library:disabledDayTextColor=</span><span style="color:#b44">&#34;?android:attr/textColorTertiary&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#b44">library:titleLayoutBackgroundColor=</span><span style="color:#b44">&#34;?android:attr/colorBackground&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#b44">library:weekLayoutBackgroundColor=</span><span style="color:#b44">&#34;?android:attr/colorBackground&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">&lt;/LinearLayout&gt;</span>
+</span></span></code></pre></div><p>I was not able to find a suitable value for the
 <code>disabledDayBackgroundColor</code> style, so left it as normal
 background. After these changes the calendar styles match the rest of
 the app.</p>
@@ -252,96 +252,96 @@ the app.</p>
 on the preference screen, dark icons on a light background, light
 icons on a dark background. To allow the icons to be styleable requires
 another <code>attrs.xml</code> file. Again the <code>name</code> value appears to be ignored.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
-resources&gt;
-  <span style="color:#008000;font-weight:bold">&lt;declare-styleable</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;Diary&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_calendar&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;reference&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_markdown&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;reference&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_folder&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;reference&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_copy_media&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;reference&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_dark_theme&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;reference&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_about&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;reference&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-  <span style="color:#008000;font-weight:bold">&lt;/declare-styleable&gt;</span>
-<span style="color:#008000;font-weight:bold">&lt;/resources&gt;</span>
-</code></pre></div><p>To define values for these attributes for each theme requires a list of items for each style.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#080;font-style:italic">&lt;!-- Application theme. --&gt;</span>
-  <span style="color:#008000;font-weight:bold">&lt;style</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;AppTheme&#34;</span> <span style="color:#b44">parent=</span><span style="color:#b44">&#34;AppBaseTheme&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
-    <span style="color:#080;font-style:italic">&lt;!--
-</span><span style="color:#080;font-style:italic">        All customizations that are NOT specific to a particular
-</span><span style="color:#080;font-style:italic">        API-level can go here.
-</span><span style="color:#080;font-style:italic">    --&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_calendar&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_calendar<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_markdown&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_markdown<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_folder&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_folder<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_copy_media&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_copy_media<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_dark_theme&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_dark_theme<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_about&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_about<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
-  <span style="color:#008000;font-weight:bold">&lt;/style&gt;</span>
-
-  <span style="color:#080;font-style:italic">&lt;!-- Application theme. --&gt;</span>
-  <span style="color:#008000;font-weight:bold">&lt;style</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;AppDarkTheme&#34;</span> <span style="color:#b44">parent=</span><span style="color:#b44">&#34;AppDarkBaseTheme&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
-    <span style="color:#080;font-style:italic">&lt;!--
-</span><span style="color:#080;font-style:italic">        All customizations that are NOT specific to a particular
-</span><span style="color:#080;font-style:italic">        API-level can go here.
-</span><span style="color:#080;font-style:italic">    --&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_calendar&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_calendar_dark<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_markdown&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_markdown_dark<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_folder&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_folder_dark<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_copy_media&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_copy_media_dark<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_dark_theme&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_dark_theme_dark<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
-    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_about&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_about_dark<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
-  <span style="color:#008000;font-weight:bold">&lt;/style&gt;</span>
-</code></pre></div><p>To complete this requires the icon references in the <code>preferences.xml</code>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span>resources&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&lt;declare-styleable</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;Diary&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_calendar&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;reference&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_markdown&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;reference&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_folder&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;reference&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_copy_media&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;reference&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_dark_theme&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;reference&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_about&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;reference&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&lt;/declare-styleable&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">&lt;/resources&gt;</span>
+</span></span></code></pre></div><p>To define values for these attributes for each theme requires a list of items for each style.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>  <span style="color:#080;font-style:italic">&lt;!-- Application theme. --&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&lt;style</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;AppTheme&#34;</span> <span style="color:#b44">parent=</span><span style="color:#b44">&#34;AppBaseTheme&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">&lt;!--
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">        All customizations that are NOT specific to a particular
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">        API-level can go here.
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">    --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_calendar&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_calendar<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_markdown&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_markdown<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_folder&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_folder<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_copy_media&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_copy_media<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_dark_theme&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_dark_theme<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_about&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_about<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&lt;/style&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#080;font-style:italic">&lt;!-- Application theme. --&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&lt;style</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;AppDarkTheme&#34;</span> <span style="color:#b44">parent=</span><span style="color:#b44">&#34;AppDarkBaseTheme&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">&lt;!--
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">        All customizations that are NOT specific to a particular
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">        API-level can go here.
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">    --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_calendar&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_calendar_dark<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_markdown&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_markdown_dark<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_folder&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_folder_dark<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_copy_media&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_copy_media_dark<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_dark_theme&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_dark_theme_dark<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;item</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_about&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>@drawable/ic_pref_about_dark<span style="color:#008000;font-weight:bold">&lt;/item&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&lt;/style&gt;</span>
+</span></span></code></pre></div><p>To complete this requires the icon references in the <code>preferences.xml</code>
 file to be changed from a <code>@drawable</code> reference to an <code>?attr</code> reference.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">
-<span style="color:#008000;font-weight:bold">&lt;CheckBoxPreference</span>
-	<span style="color:#b44">android:key=</span><span style="color:#b44">&#34;pref_custom&#34;</span>
-	<span style="color:#b44">android:icon=</span><span style="color:#b44">&#34;?attr/pref_calendar&#34;</span>
-	<span style="color:#b44">android:title=</span><span style="color:#b44">&#34;@string/pref_calendar&#34;</span>
-	<span style="color:#b44">android:summary=</span><span style="color:#b44">&#34;@string/pref_calendar_summ&#34;</span>
-	<span style="color:#b44">android:persistent=</span><span style="color:#b44">&#34;true&#34;</span>
-	<span style="color:#b44">android:defaultValue=</span><span style="color:#b44">&#34;true&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-
-<span style="color:#008000;font-weight:bold">&lt;CheckBoxPreference</span>
-	<span style="color:#b44">android:key=</span><span style="color:#b44">&#34;pref_markdown&#34;</span>
-	<span style="color:#b44">android:icon=</span><span style="color:#b44">&#34;?attr/pref_markdown&#34;</span>
-	<span style="color:#b44">android:title=</span><span style="color:#b44">&#34;@string/pref_markdown&#34;</span>
-	<span style="color:#b44">android:summary=</span><span style="color:#b44">&#34;@string/pref_markdown_summ&#34;</span>
-	<span style="color:#b44">android:persistent=</span><span style="color:#b44">&#34;true&#34;</span>
-	<span style="color:#b44">android:defaultValue=</span><span style="color:#b44">&#34;true&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-
-<span style="color:#008000;font-weight:bold">&lt;EditTextPreference</span>
-    <span style="color:#b44">android:key=</span><span style="color:#b44">&#34;pref_folder&#34;</span>
-	<span style="color:#b44">android:icon=</span><span style="color:#b44">&#34;?attr/pref_folder&#34;</span>
-	<span style="color:#b44">android:title=</span><span style="color:#b44">&#34;@string/folder&#34;</span>
-	<span style="color:#b44">android:persistent=</span><span style="color:#b44">&#34;true&#34;</span>
-	<span style="color:#b44">android:defaultValue=</span><span style="color:#b44">&#34;Diary&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-
-<span style="color:#008000;font-weight:bold">&lt;CheckBoxPreference</span>
-	<span style="color:#b44">android:key=</span><span style="color:#b44">&#34;pref_copy_media&#34;</span>
-	<span style="color:#b44">android:icon=</span><span style="color:#b44">&#34;?attr/pref_copy_media&#34;</span>
-	<span style="color:#b44">android:title=</span><span style="color:#b44">&#34;@string/pref_copy_media&#34;</span>
-	<span style="color:#b44">android:summary=</span><span style="color:#b44">&#34;@string/pref_copy_media_summ&#34;</span>
-	<span style="color:#b44">android:persistent=</span><span style="color:#b44">&#34;true&#34;</span>
-	<span style="color:#b44">android:defaultValue=</span><span style="color:#b44">&#34;false&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-
-<span style="color:#008000;font-weight:bold">&lt;CheckBoxPreference</span>
-	<span style="color:#b44">android:key=</span><span style="color:#b44">&#34;pref_dark_theme&#34;</span>
-	<span style="color:#b44">android:icon=</span><span style="color:#b44">&#34;?attr/pref_dark_theme&#34;</span>
-	<span style="color:#b44">android:title=</span><span style="color:#b44">&#34;@string/pref_dark_theme&#34;</span>
-	<span style="color:#b44">android:summary=</span><span style="color:#b44">&#34;@string/pref_dark_theme_summ&#34;</span>
-	<span style="color:#b44">android:persistent=</span><span style="color:#b44">&#34;true&#34;</span>
-	<span style="color:#b44">android:defaultValue=</span><span style="color:#b44">&#34;false&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-
-<span style="color:#008000;font-weight:bold">&lt;org.billthefarmer.diary.AboutPreference</span>
-	<span style="color:#b44">android:key=</span><span style="color:#b44">&#34;pref_about&#34;</span>
-	<span style="color:#b44">android:icon=</span><span style="color:#b44">&#34;?attr/pref_about&#34;</span>
-	<span style="color:#b44">android:dialogIcon=</span><span style="color:#b44">&#34;?attr/pref_about&#34;</span>
-	<span style="color:#b44">android:negativeButtonText=</span><span style="color:#b44">&#34;&#34;</span>
-	<span style="color:#b44">android:title=</span><span style="color:#b44">&#34;@string/about&#34;</span>
-	<span style="color:#b44">android:summary=</span><span style="color:#b44">&#34;@string/pref_about_summ&#34;</span>
-	<span style="color:#b44">android:dialogLayout=</span><span style="color:#b44">&#34;@layout/about&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
-</code></pre></div><p>This is all that is required, after these changes the icons switch as
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">&lt;CheckBoxPreference</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:key=</span><span style="color:#b44">&#34;pref_custom&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:icon=</span><span style="color:#b44">&#34;?attr/pref_calendar&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:title=</span><span style="color:#b44">&#34;@string/pref_calendar&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:summary=</span><span style="color:#b44">&#34;@string/pref_calendar_summ&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:persistent=</span><span style="color:#b44">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:defaultValue=</span><span style="color:#b44">&#34;true&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">&lt;CheckBoxPreference</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:key=</span><span style="color:#b44">&#34;pref_markdown&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:icon=</span><span style="color:#b44">&#34;?attr/pref_markdown&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:title=</span><span style="color:#b44">&#34;@string/pref_markdown&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:summary=</span><span style="color:#b44">&#34;@string/pref_markdown_summ&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:persistent=</span><span style="color:#b44">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:defaultValue=</span><span style="color:#b44">&#34;true&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">&lt;EditTextPreference</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b44">android:key=</span><span style="color:#b44">&#34;pref_folder&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:icon=</span><span style="color:#b44">&#34;?attr/pref_folder&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:title=</span><span style="color:#b44">&#34;@string/folder&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:persistent=</span><span style="color:#b44">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:defaultValue=</span><span style="color:#b44">&#34;Diary&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">&lt;CheckBoxPreference</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:key=</span><span style="color:#b44">&#34;pref_copy_media&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:icon=</span><span style="color:#b44">&#34;?attr/pref_copy_media&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:title=</span><span style="color:#b44">&#34;@string/pref_copy_media&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:summary=</span><span style="color:#b44">&#34;@string/pref_copy_media_summ&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:persistent=</span><span style="color:#b44">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:defaultValue=</span><span style="color:#b44">&#34;false&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">&lt;CheckBoxPreference</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:key=</span><span style="color:#b44">&#34;pref_dark_theme&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:icon=</span><span style="color:#b44">&#34;?attr/pref_dark_theme&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:title=</span><span style="color:#b44">&#34;@string/pref_dark_theme&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:summary=</span><span style="color:#b44">&#34;@string/pref_dark_theme_summ&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:persistent=</span><span style="color:#b44">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:defaultValue=</span><span style="color:#b44">&#34;false&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">&lt;org.billthefarmer.diary.AboutPreference</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:key=</span><span style="color:#b44">&#34;pref_about&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:icon=</span><span style="color:#b44">&#34;?attr/pref_about&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:dialogIcon=</span><span style="color:#b44">&#34;?attr/pref_about&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:negativeButtonText=</span><span style="color:#b44">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:title=</span><span style="color:#b44">&#34;@string/about&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:summary=</span><span style="color:#b44">&#34;@string/pref_about_summ&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#b44">android:dialogLayout=</span><span style="color:#b44">&#34;@layout/about&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
+</span></span></code></pre></div><p>This is all that is required, after these changes the icons switch as
 the theme is changed.</p>
 
     </p>
