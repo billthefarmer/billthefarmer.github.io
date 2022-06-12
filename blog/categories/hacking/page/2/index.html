@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.94.0" />
+<meta name="generator" content="Hugo 0.100.1" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -153,6 +153,38 @@ code {
 
 <div class="blog-post">
   <h3>
+    <a href="https://billthefarmer.github.io/blog/download-playlist-video/">Download playlist video</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2020-08-18T20:49:05&#43;01:00">
+        Tue Aug 18, 2020
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    This has been superceded by youtube-dl, which seems to work on most video sites.
+Since I wrote Download streamed video video web sites have upped their game to stop downloading. One of the techniques used is to use a M3U playlist and a complicated set of parameters. Other techniques are to use JavaScript to create a blob and play that, and to use a JavaScript browser app which goes into debug mode if you use the developer tools.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/download-playlist-video/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
     <a href="https://billthefarmer.github.io/blog/resurrecting-dos-app/">Resurrecting an Old Dos App</a>
   </h3>
   <div class="callout small">
@@ -207,7 +239,7 @@ It used to run under 32 bit windows but wouldn&rsquo;t run under 64 bit windows 
   </div>
   <p>
     Lambda expressions or anonymous functions can be quite useful. For example using jQuery in JavaScript all the work gets done in anonymous functions unless you particularly want to extract them and give them names&hellip;
-jQuery(document).ready(function($) {  // ...  // Process the start button  $(&#34;#start&#34;).click(function() {  question = 0;  $(&#34;#data&#34;).css(&#34;display&#34;, &#34;none&#34;);  $(&#34;.intro&#34;).fadeOut(function() {  // Do stuff  });  // ...  }); }); In C++ the syntax is curious in that there are a pair of square brackets enclosing &lsquo;captured&rsquo; variables&hellip;
+jQuery(document).ready(function($) { // ... // Process the start button $(&#34;#start&#34;).click(function() { question = 0; $(&#34;#data&#34;).css(&#34;display&#34;, &#34;none&#34;); $(&#34;.intro&#34;).fadeOut(function() { // Do stuff }); // ... }); }); In C++ the syntax is curious in that there are a pair of square brackets enclosing &lsquo;captured&rsquo; variables&hellip;
   </p>
   <a href='https://billthefarmer.github.io/blog/lambda-expressions/'>Read more →</a>
   <hr>
@@ -272,41 +304,9 @@ I have seen apps which hide this button on scrolling, and this was one of the su
   <p>
     I had a request to switch to the edit view from the markdown view at the double tap position in my Diary app. The app already has a gesture detector so I just had to add an onDoubleTap function.
 To get the tap position in the markdown view it is necessary to compensate for the position of the view on the screen, scrolling, and the display density.
- // onDoubleTap  @Override  public boolean onDoubleTap(MotionEvent e)  {  if (shown)  {  int[] l = new int[2];  markdownView.
+// onDoubleTap @Override public boolean onDoubleTap(MotionEvent e) { if (shown) { int[] l = new int[2]; markdownView.
   </p>
   <a href='https://billthefarmer.github.io/blog/derive-edit-position/'>Read more →</a>
-  <hr>
-</div>
-
-
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/pi-hole-cloudflare-setup/">Pi-hole Cloudflare, DNSCrypt, Unbound Setup</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2019-06-17T18:30:39&#43;01:00">
-        Mon Jun 17, 2019
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    Pi-hole I came across a reference to Pi-hole recently, so as my old pi has been gathering dust, I thought I would try it out. The pi already had Raspbian Stretch Lite installed, so I uninstalled some of the packages I had previously installed, and loaded Pi-Hole using the One-Step Automated Install.
-The installation script asks a series of questions using text dialogs and produces a log as it goes.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/pi-hole-cloudflare-setup/'>Read more →</a>
   <hr>
 </div>
 
@@ -335,6 +335,10 @@ The installation script asks a series of questions using text dialogs and produc
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/create-word-grid/">
+        Create a Word Grid
+      </a></li>
     
       <li><a href="/blog/read-paywalled-articles/">
         Read Paywalled Newspaper Articles
@@ -370,10 +374,6 @@ The installation script asks a series of questions using text dialogs and produc
     
       <li><a href="/blog/draught-hash-brown/">
         Draught Hash Brown
-      </a></li>
-    
-      <li><a href="/blog/australian-meatball-wiggleoni/">
-        Australian Meatball Wiggleoni
       </a></li>
     
   </ul>

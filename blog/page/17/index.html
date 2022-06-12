@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.94.0" />
+<meta name="generator" content="Hugo 0.100.1" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -155,6 +155,38 @@ code {
 
 <div class="blog-post">
   <h3>
+    <a href="https://billthefarmer.github.io/blog/download-streamed-video/">Download streamed video</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2014-06-06T16:03:16Z">
+        Fri Jun 6, 2014
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    Online video providers tend to stream the video to a javascript player, so making it extremely difficult to capture the video. This blog explains a method using Chrome to spoof the user agent string, pretending to be an iPad. Unfortunately, this doesn’t seem to work any more in the latest version of Chrome.
+So I tried installing a user agent spoofing plugin in Firefox. It seemed to work, but the video didn’t play, so I couldn’t find the url.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/download-streamed-video/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
     <a href="https://billthefarmer.github.io/blog/concurrency-threads-semaphores-and-mutexes/">Concurrency, Threads, Semaphores and Mutexes</a>
   </h3>
   <div class="callout small">
@@ -209,7 +241,7 @@ This issue is reminiscent of back in the day when you actually had or could get 
   <p>
     This site has the firewall set up so that the web server has no external access. This means that I can’t use the usual WordPress update mechanism to keep it up to date. I use FileZilla for maintaining the server, and I recently discovered you can use drag and drop to move stuff around remotely.
 So my easy WordPress upgrade method is:
- Download the latest zip file and unzip it.
+Download the latest zip file and unzip it. Rename the wordpress folder to something else, like wordpress-old.
   </p>
   <a href='https://billthefarmer.github.io/blog/upgrading-wordpress/'>Read more →</a>
   <hr>
@@ -241,7 +273,7 @@ So my easy WordPress upgrade method is:
   </div>
   <p>
     When I was a teenager the chippy at Preston, Weymouth, Dorset used to serve faggots and peas with gravy in those aluminium foil containers that take-away Chinese used to come in. Enough for 2.
-Ingredients  3-5 faggots Frozen or fresh peas Truly Evil Onion Gravy  Method  Start the gravy first as it takes a while to render the onions down. Once the onions are well done, put the faggots in a tin and place in a medium hot oven – 180° C, until they are starting to brown.
+Ingredients 3-5 faggots Frozen or fresh peas Truly Evil Onion Gravy Method Start the gravy first as it takes a while to render the onions down. Once the onions are well done, put the faggots in a tin and place in a medium hot oven – 180° C, until they are starting to brown.
   </p>
   <a href='https://billthefarmer.github.io/blog/faggots-and-peas-with-onion-gravy/'>Read more →</a>
   <hr>
@@ -273,41 +305,9 @@ Ingredients  3-5 faggots Frozen or fresh peas Truly Evil Onion Gravy  Method  St
   </div>
   <p>
     Black onion gravy to go with faggots, sausages or whatever takes your fancy.
-Ingredients  3 medium onions, sliced 1 tablespoon plain flour or cornmeal (polenta) 1/2 vegetable stock cube, crumbled Boiling water or cooking water from vegetables Vegetable oil  Method  Cover the bottom of a small pan with oil and place on medium heat. Put the onions in the pan and cook, stirring with a fork until reduced to brown/black sludge.
+Ingredients 3 medium onions, sliced 1 tablespoon plain flour or cornmeal (polenta) 1/2 vegetable stock cube, crumbled Boiling water or cooking water from vegetables Vegetable oil Method Cover the bottom of a small pan with oil and place on medium heat. Put the onions in the pan and cook, stirring with a fork until reduced to brown/black sludge.
   </p>
   <a href='https://billthefarmer.github.io/blog/truly-evil-onion-gravy/'>Read more →</a>
-  <hr>
-</div>
-
-
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/fabada-asturiana/">Fabada Asturiana</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2014-05-23T16:50:32Z">
-        Fri May 23, 2014
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/recipes">
-        Recipes
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    A highly flavoured Asturian version of pork and beans. Enough for four or more.
-Ingredients  375g or thereabouts packet of dried butter beans 4-500g belly pork with or without skin, cut into chunks Smoked gammon hock, or 4-500g cooking bacon. If lucky, it’s possible to find a packet of cooking bacon that is just one big chunk of unsliced bacon by rooting through the supermarket shelf. 100-125g picante chorizo, cut into chunks Crushed black peppercorns Heaped teaspoon paprika Heaped teaspoon turmeric 2 bay leaves 4-5 garlic cloves, chopped 3-4 onions, chopped Olive oil Water  Method  Soak the beans overnight in plenty of water.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/fabada-asturiana/'>Read more →</a>
   <hr>
 </div>
 
@@ -336,6 +336,10 @@ Ingredients  375g or thereabouts packet of dried butter beans 4-500g belly pork 
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/create-word-grid/">
+        Create a Word Grid
+      </a></li>
     
       <li><a href="/blog/read-paywalled-articles/">
         Read Paywalled Newspaper Articles
@@ -371,10 +375,6 @@ Ingredients  375g or thereabouts packet of dried butter beans 4-500g belly pork 
     
       <li><a href="/blog/draught-hash-brown/">
         Draught Hash Brown
-      </a></li>
-    
-      <li><a href="/blog/australian-meatball-wiggleoni/">
-        Australian Meatball Wiggleoni
       </a></li>
     
   </ul>

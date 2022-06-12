@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.94.0" />
+<meta name="generator" content="Hugo 0.100.1" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -155,6 +155,38 @@ code {
 
 <div class="blog-post">
   <h3>
+    <a href="https://billthefarmer.github.io/blog/android-recent-files/">Android Recent Files</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2017-12-15T11:53:57Z">
+        Fri Dec 15, 2017
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    There are several parts to this - creating the list of files, saving the list in the preferences, restoring the list on startup and creating the list in the menu.
+// onCreate @Override protected void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this); // Create a map of scroll positions by file name Set&lt;String&gt; pathSet = preferences.getStringSet(PREF_PATHS, null); pathMap = new HashMap&lt;String, Integer&gt;(); if (pathSet != null) for (String path : pathSet) pathMap.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/android-recent-files/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
     <a href="https://billthefarmer.github.io/blog/baked-tomatoes/">Baked Tomatoes</a>
   </h3>
   <div class="callout small">
@@ -176,7 +208,7 @@ code {
   </div>
   <p>
     On a holiday staying at the Atlantic Hotel, St Mary&rsquo;s there seemed to be a different breakfast chef nearly every day. One of them had a novel way of preparing tomatoes for an English breakfast.
-Ingredients  Tomatoes Oregano Olive oil  Method  Take the stems off the tomatoes and place them upside down in a baking tin. They should be stable upside down. Cut a cross in the bottom of each one, put a few drops of oil on each one and sprinkle over some oregano.
+Ingredients Tomatoes Oregano Olive oil Method Take the stems off the tomatoes and place them upside down in a baking tin. They should be stable upside down. Cut a cross in the bottom of each one, put a few drops of oil on each one and sprinkle over some oregano.
   </p>
   <a href='https://billthefarmer.github.io/blog/baked-tomatoes/'>Read more →</a>
   <hr>
@@ -208,7 +240,7 @@ Ingredients  Tomatoes Oregano Olive oil  Method  Take the stems off the tomatoes
   </div>
   <p>
     Just a more interesting way of preparing mushrooms than chopping them up.
-Ingredients  Mushrooms Olive oil  Method  Keep the mushrooms whole, even if they have long stems. Put some oil in a skillet over a medium heat and place the mushrooms cap down in the pan with the stems sticking up. Add a couple of drops of oil to the inside of the cap of each mushroom. When the caps are browned tip them on their sides or turn them over depending on the length of the stems.
+Ingredients Mushrooms Olive oil Method Keep the mushrooms whole, even if they have long stems. Put some oil in a skillet over a medium heat and place the mushrooms cap down in the pan with the stems sticking up. Add a couple of drops of oil to the inside of the cap of each mushroom. When the caps are browned tip them on their sides or turn them over depending on the length of the stems.
   </p>
   <a href='https://billthefarmer.github.io/blog/fried-whole-mushrooms/'>Read more →</a>
   <hr>
@@ -240,7 +272,7 @@ Ingredients  Mushrooms Olive oil  Method  Keep the mushrooms whole, even if they
   </div>
   <p>
     The Android guide for Search Overview is oriented towards searching external content rather than text. There is a mention of Using the Search Dialog. However all the bits you need are there. To get a search dialog in the toolbar that pops up when needed, you need a seach item in the menu. It should be the first item, unless there is a good reason otherwise.
-&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt; &lt;menu  xmlns:android=&#34;http://schemas.
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt; &lt;menu xmlns:android=&#34;http://schemas.
   </p>
   <a href='https://billthefarmer.github.io/blog/android-text-search/'>Read more →</a>
   <hr>
@@ -272,41 +304,9 @@ Ingredients  Mushrooms Olive oil  Method  Keep the mushrooms whole, even if they
   </div>
   <p>
     This is an instant meal ideal for taking as part of a grub kit on holiday for when you arrive. I know you are not supposed to put red beans in chili, but you never get offered it without. I know you are supposed to make chili with chopped steak, not mince, let alone corned beef. A meal for four.
-Ingredients  Tin of corned beef Tin of red beans Tin of chopped tomatoes Packet of chili mix Olive oil  Method  Warm up a large skillet over a gentle heat with some olive oil and add the corned beef, breaking it up into chunks When the corned beef has warmed through, add the chili mix and the tin of tomatoes Stir gently, drain the tin of red beans and add to the pan Allow to simmer, stirring to prevent sticking, until well heated through Meanwhile, cook a pot of boiled rice Serve with the rice and possibly some mango chutney  
+Ingredients Tin of corned beef Tin of red beans Tin of chopped tomatoes Packet of chili mix Olive oil Method Warm up a large skillet over a gentle heat with some olive oil and add the corned beef, breaking it up into chunks When the corned beef has warmed through, add the chili mix and the tin of tomatoes Stir gently, drain the tin of red beans and add to the pan Allow to simmer, stirring to prevent sticking, until well heated through Meanwhile, cook a pot of boiled rice Serve with the rice and possibly some mango chutney 
   </p>
   <a href='https://billthefarmer.github.io/blog/corned-beef-chili/'>Read more →</a>
-  <hr>
-</div>
-
-
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/butter-beans-in-tomato-sauce/">Butter Beans in Tomato Sauce</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2017-10-26T09:49:29&#43;01:00">
-        Thu Oct 26, 2017
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/recipes">
-        Recipes
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    We have been offered this in many Greek tavernas, especially the ones with what&rsquo;s on offer displayed in a glass counter. On a trip to Alonnisos we saw big tins of these, called Gigantes, at the back of a taverna/supermarket/cash &amp; carry that seemed to stock everything.
-Ingredients  Tin of butter beans Tin of chopped tomatoes 2 cloves of garlic, chopped 2 onions, chopped Oregano Olive oil  Method  Fry the onions, garlic and oregano in olive oil in a medium sized skillet until soft Add the tin of chopped tomatoes, stir, and allow to simmer gently.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/butter-beans-in-tomato-sauce/'>Read more →</a>
   <hr>
 </div>
 
@@ -335,6 +335,10 @@ Ingredients  Tin of butter beans Tin of chopped tomatoes 2 cloves of garlic, cho
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/create-word-grid/">
+        Create a Word Grid
+      </a></li>
     
       <li><a href="/blog/read-paywalled-articles/">
         Read Paywalled Newspaper Articles
@@ -370,10 +374,6 @@ Ingredients  Tin of butter beans Tin of chopped tomatoes 2 cloves of garlic, cho
     
       <li><a href="/blog/draught-hash-brown/">
         Draught Hash Brown
-      </a></li>
-    
-      <li><a href="/blog/australian-meatball-wiggleoni/">
-        Australian Meatball Wiggleoni
       </a></li>
     
   </ul>

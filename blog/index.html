@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.94.0" />
+<meta name="generator" content="Hugo 0.100.1" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -155,6 +155,38 @@ code {
 
 <div class="blog-post">
   <h3>
+    <a href="https://billthefarmer.github.io/blog/create-word-grid/">Create a Word Grid</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2022-06-11T10:55:18&#43;01:00">
+        Sat Jun 11, 2022
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/blog/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    A popular online puzzle game involves solving a five character word grid in the least number of moves. There are probably several ways of algorithmically generating word grids, Donald Knuth&rsquo;s Dancing Links paper mentions generating a word grid. I decided to use brute force and a randomised word list.
+This uses a large number of lists and iterators and can generate a large number of word grids. This algorithm is used in my Gridle android app.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/create-word-grid/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
     <a href="https://billthefarmer.github.io/blog/read-paywalled-articles/">Read Paywalled Newspaper Articles</a>
   </h3>
   <div class="callout small">
@@ -209,7 +241,7 @@ However this does not work for all newspapers, the extension appears to have dro
   <p>
     This is not authentic Risotto Milanese, that requires beef marrow and saffron. I refuse to pay the exotic prices demanded for saffron in the UK, and I don&rsquo;t have any beef marrow.
 Lunch for two.
-Ingredients  Olive oil Butter, small knob 3/4 cup arborio rice Medium onion, chopped finely Mushrooms, chopped, if liked Chicken stock pot 1/2 teaspoon turmeric Boiling water, about 1 1/4 cups Cheddar cheese, grated  Method  Add the knob of butter to a medium heavy bottomed pan, add a good glug of olive oil and place on a low heat.
+Ingredients Olive oil Butter, small knob 3/4 cup arborio rice Medium onion, chopped finely Mushrooms, chopped, if liked Chicken stock pot 1/2 teaspoon turmeric Boiling water, about 1 1/4 cups Cheddar cheese, grated Method Add the knob of butter to a medium heavy bottomed pan, add a good glug of olive oil and place on a low heat.
   </p>
   <a href='https://billthefarmer.github.io/blog/risotto-milanese/'>Read more →</a>
   <hr>
@@ -241,7 +273,7 @@ Ingredients  Olive oil Butter, small knob 3/4 cup arborio rice Medium onion, cho
   </div>
   <p>
     Google have made a big thing of their flutter development platform, so I thought I ought to give it a try. It&rsquo;s easy to install, just download the sdk, unzip it in a suitable place and add the bin folder to your path. I had to tell it where I had installed Android Studio.
-$ flutter config --android-studio-dir &#39;D:\adt\Android Studio&#39; Setting &#34;android-studio-dir&#34; value to &#34;D:\adt\Android Studio&#34;.  You may need to restart any open editors for them to read new settings.
+$ flutter config --android-studio-dir &#39;D:\adt\Android Studio&#39; Setting &#34;android-studio-dir&#34; value to &#34;D:\adt\Android Studio&#34;. You may need to restart any open editors for them to read new settings.
   </p>
   <a href='https://billthefarmer.github.io/blog/android-flutter/'>Read more →</a>
   <hr>
@@ -280,38 +312,6 @@ I have a very simple app, Oglaf, NS(Generally)FW, which is just a wrapper around
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/word-count/">Android Word Count</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2021-04-05T10:28:06&#43;01:00">
-        Mon Apr 5, 2021
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    I was asked to add a word and character count to my Editor app. So I looked it up and found a Gist that uses BreakIterator. This relies on an embedded function that determines what is considered a word.
-So I tested it and found that it gave different results to the linux utility wc. However, the app already makes great use of regular expressions, which include an expression for a word character \w.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/word-count/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -336,6 +336,10 @@ So I tested it and found that it gave different results to the linux utility wc.
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/create-word-grid/">
+        Create a Word Grid
+      </a></li>
     
       <li><a href="/blog/read-paywalled-articles/">
         Read Paywalled Newspaper Articles
@@ -371,10 +375,6 @@ So I tested it and found that it gave different results to the linux utility wc.
     
       <li><a href="/blog/draught-hash-brown/">
         Draught Hash Brown
-      </a></li>
-    
-      <li><a href="/blog/australian-meatball-wiggleoni/">
-        Australian Meatball Wiggleoni
       </a></li>
     
   </ul>
