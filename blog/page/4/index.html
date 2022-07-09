@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.100.1" />
+<meta name="generator" content="Hugo 0.101.0" />
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -62,6 +62,9 @@ code {
     font-weight: normal;
     color: #0a0a0a;
 }
+table {
+    width: auto !important;
+}
 </style>
 
 
@@ -84,12 +87,12 @@ code {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
-                    Hacking
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
                     Recipes
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                    Hacking
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
@@ -155,6 +158,38 @@ code {
 
 <div class="blog-post">
   <h3>
+    <a href="https://billthefarmer.github.io/blog/lambda-expressions/">Lambda Expressions</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2020-03-26T13:02:53Z">
+        Thu Mar 26, 2020
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    Lambda expressions or anonymous functions can be quite useful. For example using jQuery in JavaScript all the work gets done in anonymous functions unless you particularly want to extract them and give them names&hellip;
+jQuery(document).ready(function($) { // ... // Process the start button $(&#34;#start&#34;).click(function() { question = 0; $(&#34;#data&#34;).css(&#34;display&#34;, &#34;none&#34;); $(&#34;.intro&#34;).fadeOut(function() { // Do stuff }); // ... }); }); In C++ the syntax is curious in that there are a pair of square brackets enclosing &lsquo;captured&rsquo; variables&hellip;
+  </p>
+  <a href='https://billthefarmer.github.io/blog/lambda-expressions/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
     <a href="https://billthefarmer.github.io/blog/banana-cake/">Marion&rsquo;s Banana and Walnut Cake</a>
   </h3>
   <div class="callout small">
@@ -165,7 +200,7 @@ code {
       Categories: 
   
     
-      <a href="/blog/categories/recipes">
+      <a href="/categories/recipes">
         Recipes
       </a>
   
@@ -197,7 +232,7 @@ Ingredients 225g (8oz) self raising flour 1 level teaspoon baking powder 55g (2o
       Categories: 
   
     
-      <a href="/blog/categories/hacking">
+      <a href="/categories/hacking">
         Hacking
       </a>
   
@@ -229,7 +264,7 @@ I have seen apps which hide this button on scrolling, and this was one of the su
       Categories: 
   
     
-      <a href="/blog/categories/hacking">
+      <a href="/categories/hacking">
         Hacking
       </a>
   
@@ -262,7 +297,7 @@ To get the tap position in the markdown view it is necessary to compensate for t
       Categories: 
   
     
-      <a href="/blog/categories/diy">
+      <a href="/categories/diy">
         DIY
       </a>
   
@@ -277,38 +312,6 @@ Clicker The clicker can stay stuck down, refuse to stay down or come apart.
 If it sticks down it can possibly be pulled back up with a drain plunger, otherwise you will need to take off the U bend and poke it back up with a long screwdriver.
   </p>
   <a href='https://billthefarmer.github.io/blog/fixing-basin-waste-pop-up/'>Read more →</a>
-  <hr>
-</div>
-
-
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/pi-hole-cloudflare-setup/">Pi-hole Cloudflare, DNSCrypt, Unbound Setup</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2019-06-17T18:30:39&#43;01:00">
-        Mon Jun 17, 2019
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/blog/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    Pi-hole I came across a reference to Pi-hole recently, so as my old pi has been gathering dust, I thought I would try it out. The pi already had Raspbian Stretch Lite installed, so I uninstalled some of the packages I had previously installed, and loaded Pi-Hole using the One-Step Automated Install.
-The installation script asks a series of questions using text dialogs and produces a log as it goes.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/pi-hole-cloudflare-setup/'>Read more →</a>
   <hr>
 </div>
 
@@ -337,6 +340,10 @@ The installation script asks a series of questions using text dialogs and produc
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/turkey-cabbage-wraps/">
+        Turkey Cabbage Wraps
+      </a></li>
     
       <li><a href="/blog/create-word-grid/">
         Create a Word Grid
@@ -372,10 +379,6 @@ The installation script asks a series of questions using text dialogs and produc
     
       <li><a href="/blog/turkey-gammon-broccoli-bake/">
         Turkey Gammon Broccoli Bake
-      </a></li>
-    
-      <li><a href="/blog/draught-hash-brown/">
-        Draught Hash Brown
       </a></li>
     
   </ul>
