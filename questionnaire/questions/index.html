@@ -127,6 +127,14 @@
 </section>
 </div>
       <footer>
+  <script type="text/javascript">
+    window.onload = function() {
+        let c = document.getElementsByTagName("footer");
+        let p = c[0].getElementsByTagName("p");
+        let d = new Date().getFullYear();
+        p[0].innerHTML = p[0].innerHTML.replace(/[0-9]{4}/, d);
+    }
+  </script>
   <p>Copyright 2021 Bill Farmer</p>
 </footer>
 
