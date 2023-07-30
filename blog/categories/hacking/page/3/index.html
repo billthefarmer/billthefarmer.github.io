@@ -11,7 +11,6 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/categories/hacking/" />
 
-
 <meta itemprop="name" content="Hacking">
 <meta itemprop="description" content="Random thoughts on random subjects">
 <meta name="twitter:card" content="summary"/>
@@ -23,7 +22,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.104.0" />
+<meta name="generator" content="Hugo 0.115.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -87,12 +86,12 @@ table {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
-                    Recipes
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                    Recipes
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
@@ -150,6 +149,39 @@ table {
 
 
 
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/derive-edit-position/">Derive Edit Position from Markdown</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2020-02-08T18:24:23Z">
+        Sat Feb 8, 2020
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    I had a request to switch to the edit view from the markdown view at the double tap position in my Diary app. The app already has a gesture detector so I just had to add an onDoubleTap function.
+To get the tap position in the markdown view it is necessary to compensate for the position of the view on the screen, scrolling, and the display density.
+// onDoubleTap @Override public boolean onDoubleTap(MotionEvent e) { if (shown) { int[] l = new int[2]; markdownView.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/derive-edit-position/'>Read more →</a>
+  <hr>
+</div>
 
 
   
@@ -281,39 +313,6 @@ The data used was originally intended for use in postscript, so the vertical axi
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/post/expand-android-selection/">Expand Android Selection</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2018-12-09T12:21:39Z">
-        Sun Dec 9, 2018
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    When editing data or source files it would be useful to have selections triggered by a double tap or long press expand to enclosing delimiters or brackets.
-There is a section in the Android docs which explains how to set up your own context menu or contextual action mode, but not how to change the selection.
-This method is fine if you have only one text editor view in your app, but would be difficult with more than one as there is no way to identify the originating view.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/post/expand-android-selection/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -338,6 +337,10 @@ This method is fine if you have only one text editor view in your app, but would
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/update-widget/">
+        Update App Widget
+      </a></li>
     
       <li><a href="/blog/turkey-cabbage-wraps/">
         Turkey Cabbage Wraps
@@ -375,10 +378,6 @@ This method is fine if you have only one text editor view in your app, but would
         Caldo Verde
       </a></li>
     
-      <li><a href="/blog/turkey-gammon-broccoli-bake/">
-        Turkey Gammon Broccoli Bake
-      </a></li>
-    
   </ul>
 
   
@@ -410,7 +409,7 @@ This method is fine if you have only one text editor view in your app, but would
       <div class="row column">
         <p>
           
-          Copyright © 2022 Bill Farmer
+          Copyright © 2023 Bill Farmer
           
         </p>
         <p>

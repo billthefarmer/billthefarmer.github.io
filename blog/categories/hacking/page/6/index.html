@@ -11,7 +11,6 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://billthefarmer.github.io/blog/categories/hacking/" />
 
-
 <meta itemprop="name" content="Hacking">
 <meta itemprop="description" content="Random thoughts on random subjects">
 <meta name="twitter:card" content="summary"/>
@@ -23,7 +22,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.104.0" />
+<meta name="generator" content="Hugo 0.115.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -87,12 +86,12 @@ table {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
-                    Recipes
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                    Recipes
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
@@ -150,6 +149,38 @@ table {
 
 
 
+
+
+  
+
+<div class="blog-post">
+  <h3>
+    <a href="https://billthefarmer.github.io/blog/getting-related-content-working/">Getting Related Content working</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2017-09-13T11:30:00Z">
+        Wed Sep 13, 2017
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    The latest release of Hugo includes Related Content, which I thought would be nice to add to my blog. However the docs, although they show you how to set it up, don&rsquo;t explain how it works. To find that out, I had to look at the various threads on the Hugo forums.
+There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:
+  </p>
+  <a href='https://billthefarmer.github.io/blog/getting-related-content-working/'>Read more →</a>
+  <hr>
+</div>
 
 
   
@@ -282,38 +313,6 @@ Exitwp, which reads a Wordpress export xml file and converts to Jeckyll WordPres
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/handling-run-time-changes-in-android/">Handling run time changes in Android</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2017-01-08T18:49:31Z">
-        Sun Jan 8, 2017
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    Two articles, Handling Configuration Changes and Handling Configuration Changes with Fragments recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:
-An android fragment is quite a complex heavyweight object to use just for retaining data and possibly a background task, and the fragment management is not simple. Fragments are not retained if the associated activity is discarded by calling finish().
-  </p>
-  <a href='https://billthefarmer.github.io/blog/handling-run-time-changes-in-android/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -338,6 +337,10 @@ An android fragment is quite a complex heavyweight object to use just for retain
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/update-widget/">
+        Update App Widget
+      </a></li>
     
       <li><a href="/blog/turkey-cabbage-wraps/">
         Turkey Cabbage Wraps
@@ -375,10 +378,6 @@ An android fragment is quite a complex heavyweight object to use just for retain
         Caldo Verde
       </a></li>
     
-      <li><a href="/blog/turkey-gammon-broccoli-bake/">
-        Turkey Gammon Broccoli Bake
-      </a></li>
-    
   </ul>
 
   
@@ -410,7 +409,7 @@ An android fragment is quite a complex heavyweight object to use just for retain
       <div class="row column">
         <p>
           
-          Copyright © 2022 Bill Farmer
+          Copyright © 2023 Bill Farmer
           
         </p>
         <p>

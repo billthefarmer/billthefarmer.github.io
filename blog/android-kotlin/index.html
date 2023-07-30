@@ -14,7 +14,6 @@ I have a very simple app, Oglaf, NS(Generally)FW, which is just a wrapper around
 <meta property="article:published_time" content="2021-05-14T09:49:11+01:00" />
 <meta property="article:modified_time" content="2021-05-14T09:49:11+01:00" />
 
-
 <meta itemprop="name" content="Android Kotlin">
 <meta itemprop="description" content="All my android apps have up until now been written in Java, avoiding the use of the support libraries or androidx. The Google developers docs and guides advocate the use of Kotlin rather than Java and the use of androidx almost to the exclusion of the standard android API.
 I have a very simple app, Oglaf, NS(Generally)FW, which is just a wrapper around the web site, with some navigation. So I decided to convert it to Kotlin, just to see how difficult it was and to see what effect, if any, it had on the app."><meta itemprop="datePublished" content="2021-05-14T09:49:11+01:00" />
@@ -31,7 +30,7 @@ I have a very simple app, Oglaf, NS(Generally)FW, which is just a wrapper around
 
 
 
-<meta name="generator" content="Hugo 0.104.0" />
+<meta name="generator" content="Hugo 0.115.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -93,12 +92,12 @@ table {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
-                    Recipes
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                    Recipes
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
@@ -268,8 +267,8 @@ classes, and not needing semicolons on the end of statements.</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">override</span> <span style="color:#a2f;font-weight:bold">fun</span> <span style="color:#00a000">onCreate</span>(savedInstanceState: Bundle?)
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">super</span>.onCreate(savedInstanceState)
-</span></span><span style="display:flex;"><span>        setContentView(R.layout.main)
-</span></span><span style="display:flex;"><span>        webView = findViewById(R.id.webview)
+</span></span><span style="display:flex;"><span>        setContentView(<span style="color:#00f">R</span>.layout.main)
+</span></span><span style="display:flex;"><span>        webView = findViewById(<span style="color:#00f">R</span>.id.webview)
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Enable javascript, Oglaf doesn&#39;t work unless JavaScript
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// is enabled
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">val</span> settings  = webView.getSettings()
@@ -359,7 +358,7 @@ when statement.</p>
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">when</span> (id)
 </span></span><span style="display:flex;"><span>        {
 </span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Home
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            android.R.id.home <span style="color:#666">-&gt;</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            android.<span style="color:#00f">R</span>.id.home <span style="color:#666">-&gt;</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Back navigation
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> (webView.canGoBack())
 </span></span><span style="display:flex;"><span>                webView.goBack()
@@ -367,15 +366,15 @@ when statement.</p>
 </span></span><span style="display:flex;"><span>                finish()
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Refresh
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            R.id.action_refresh <span style="color:#666">-&gt;</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#00f">R</span>.id.action_refresh <span style="color:#666">-&gt;</span>
 </span></span><span style="display:flex;"><span>            refresh()
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Share
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            R.id.action_share <span style="color:#666">-&gt;</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#00f">R</span>.id.action_share <span style="color:#666">-&gt;</span>
 </span></span><span style="display:flex;"><span>            share()
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// About
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            R.id.action_about <span style="color:#666">-&gt;</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#00f">R</span>.id.action_about <span style="color:#666">-&gt;</span>
 </span></span><span style="display:flex;"><span>            about()
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">else</span> <span style="color:#666">-&gt;</span>
@@ -423,6 +422,10 @@ simple app.</p>
   <h4>Recent Posts</h4>
   <ul>
     
+      <li><a href="/blog/update-widget/">
+        Update App Widget
+      </a></li>
+    
       <li><a href="/blog/turkey-cabbage-wraps/">
         Turkey Cabbage Wraps
       </a></li>
@@ -459,10 +462,6 @@ simple app.</p>
         Caldo Verde
       </a></li>
     
-      <li><a href="/blog/turkey-gammon-broccoli-bake/">
-        Turkey Gammon Broccoli Bake
-      </a></li>
-    
   </ul>
 
   
@@ -494,7 +493,7 @@ simple app.</p>
       <div class="row column">
         <p>
           
-          Copyright © 2022 Bill Farmer
+          Copyright © 2023 Bill Farmer
           
         </p>
         <p>

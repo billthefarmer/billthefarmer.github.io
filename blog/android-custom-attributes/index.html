@@ -14,7 +14,6 @@ Calendar custom styles The custom calendar has a list of styles that are customi
 <meta property="article:published_time" content="2018-01-08T11:02:04+00:00" />
 <meta property="article:modified_time" content="2018-01-08T11:02:04+00:00" />
 
-
 <meta itemprop="name" content="Android Custom Attributes">
 <meta itemprop="description" content="I had resisted adding a dark theme to my Diary app until now because it uses a custom calendar with built in customisable styles and preferences with icons. So I had to work out how to make the custom styles of the calendar revert to styles from the current theme, and how to switch icons for the preferences according to the theme.
 Calendar custom styles The custom calendar has a list of styles that are customisable in a attrs."><meta itemprop="datePublished" content="2018-01-08T11:02:04+00:00" />
@@ -31,7 +30,7 @@ Calendar custom styles The custom calendar has a list of styles that are customi
 
 
 
-<meta name="generator" content="Hugo 0.104.0" />
+<meta name="generator" content="Hugo 0.115.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -93,12 +92,12 @@ table {
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
-                    Recipes
-                  </a></li>
-                
                   <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
                     Hacking
+                  </a></li>
+                
+                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                    Recipes
                   </a></li>
                 
                   <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
@@ -212,7 +211,7 @@ attributes.</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">final</span> TypedArray typedArray <span style="color:#666">=</span>
 </span></span><span style="display:flex;"><span>            context<span style="color:#666">.</span><span style="color:#b44">obtainStyledAttributes</span><span style="color:#666">(</span>attrs<span style="color:#666">,</span> R<span style="color:#666">.</span><span style="color:#b44">styleable</span>
-</span></span><span style="display:flex;"><span>                                           <span style="color:#666">.</span><span style="color:#b44">CustomCalendarView</span><span style="color:#666">,</span> 0<span style="color:#666">,</span> 0<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                                           <span style="color:#666">.</span><span style="color:#b44">CustomCalendarView</span><span style="color:#666">,</span> <span style="color:#666">0</span><span style="color:#666">,</span> <span style="color:#666">0</span><span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>        calendarBackgroundColor <span style="color:#666">=</span>
 </span></span><span style="display:flex;"><span>            typedArray<span style="color:#666">.</span><span style="color:#b44">getColor</span><span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">styleable</span>
 </span></span><span style="display:flex;"><span>                                <span style="color:#666">.</span><span style="color:#b44">CustomCalendarView_calendarBackgroundColor</span><span style="color:#666">,</span>
@@ -355,6 +354,8 @@ the theme is changed.</p>
 <h3>See Also</h3>
 <ul>
   
+  <li><a href="/blog/update-widget/">Update App Widget</a></li>
+  
   <li><a href="/blog/create-word-grid/">Create a Word Grid</a></li>
   
   <li><a href="/blog/android-flutter/">Android Flutter</a></li>
@@ -362,8 +363,6 @@ the theme is changed.</p>
   <li><a href="/blog/android-kotlin/">Android Kotlin</a></li>
   
   <li><a href="/blog/word-count/">Android Word Count</a></li>
-  
-  <li><a href="/blog/hiding-button/">Hiding Edit Button</a></li>
   
 </ul>
 
@@ -384,6 +383,10 @@ the theme is changed.</p>
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/update-widget/">
+        Update App Widget
+      </a></li>
     
       <li><a href="/blog/turkey-cabbage-wraps/">
         Turkey Cabbage Wraps
@@ -421,10 +424,6 @@ the theme is changed.</p>
         Caldo Verde
       </a></li>
     
-      <li><a href="/blog/turkey-gammon-broccoli-bake/">
-        Turkey Gammon Broccoli Bake
-      </a></li>
-    
   </ul>
 
   
@@ -456,7 +455,7 @@ the theme is changed.</p>
       <div class="row column">
         <p>
           
-          Copyright © 2022 Bill Farmer
+          Copyright © 2023 Bill Farmer
           
         </p>
         <p>

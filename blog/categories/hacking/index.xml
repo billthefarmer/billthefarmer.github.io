@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2006 Bill Farmer</copyright>
-    <lastBuildDate>Sat, 11 Jun 2022 10:55:18 +0100</lastBuildDate><atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Jul 2023 19:33:44 +0100</lastBuildDate><atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Update App Widget</title>
+      <link>https://billthefarmer.github.io/blog/update-widget/</link>
+      <pubDate>Sat, 29 Jul 2023 19:33:44 +0100</pubDate>
+      
+      <guid>https://billthefarmer.github.io/blog/update-widget/</guid>
+      <description>Android app widgets normally can be set up to update periodically, but not repeatedly for a short period. For a bus times app I need the widget to update every 30 seconds for about 5 minutes.
+I already had a Service set up to update the widget from a suitable web site and using a Handler to reset the progress bar if the background update process failed.
+public static final int RESET_DELAY = 5 * 1000; public static final int REPEAT_DELAY = 30 * 1000; public static final int STOP_DELAY = 5 * 60 * 1000; private Handler handler; private boolean stopUpdate; // onCreate @Override public void onCreate() { // Get handler handler = new Handler(Looper.</description>
+    </item>
+    
     <item>
       <title>Create a Word Grid</title>
       <link>https://billthefarmer.github.io/blog/create-word-grid/</link>
