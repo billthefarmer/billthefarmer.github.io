@@ -13,7 +13,7 @@
       <pubDate>Wed, 22 Aug 2018 09:44:13 +0100</pubDate>
       
       <guid>https://billthefarmer.github.io/questionnaire/report/</guid>
-      <description>let baseURL = &#34;https:\/\/billthefarmer.github.io\/questionnaire\/&#34;;</description>
+      <description></description>
     </item>
     
     <item>
@@ -22,14 +22,7 @@
       <pubDate>Wed, 18 Jul 2018 15:04:26 +0100</pubDate>
       
       <guid>https://billthefarmer.github.io/questionnaire/questions/</guid>
-      <description>
-
-
-
-
-
-
-Please enter your name so we can personalize your reportFirst name: Last name: let baseURL = &#34;https:\/\/billthefarmer.github.io\/questionnaire\/&#34;;</description>
+      <description>Please enter your name so we can personalize your reportFirst name: Last name: </description>
     </item>
     
   </channel>
