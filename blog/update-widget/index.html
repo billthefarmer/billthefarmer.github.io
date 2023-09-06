@@ -20,7 +20,7 @@ public static final int RESET_DELAY = 5 * 1000; public static final int REPEAT_D
 I already had a Service set up to update the widget from a suitable web site and using a Handler to reset the progress bar if the background update process failed.
 public static final int RESET_DELAY = 5 * 1000; public static final int REPEAT_DELAY = 30 * 1000; public static final int STOP_DELAY = 5 * 60 * 1000; private Handler handler; private boolean stopUpdate; // onCreate @Override public void onCreate() { // Get handler handler = new Handler(Looper."><meta itemprop="datePublished" content="2023-07-29T19:33:44+01:00" />
 <meta itemprop="dateModified" content="2023-07-29T19:33:44+01:00" />
-<meta itemprop="wordCount" content="323">
+<meta itemprop="wordCount" content="393">
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Update App Widget"/>
@@ -33,7 +33,7 @@ public static final int RESET_DELAY = 5 * 1000; public static final int REPEAT_D
 
 
 
-<meta name="generator" content="Hugo 0.115.0">
+<meta name="generator" content="Hugo 0.118.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -186,9 +186,9 @@ widget to update every 30 seconds for about 5 minutes.</p>
 <p>I already had a <a href="https://developer.android.com/reference/android/app/Service">Service</a> set up to update the widget from a
 suitable web site and using a <a href="https://developer.android.com/reference/android/os/Handler">Handler</a> to reset the progress bar
 if the background update process failed.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> RESET_DELAY <span style="color:#666">=</span> <span style="color:#666">5</span> <span style="color:#666">*</span> <span style="color:#666">1000</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> REPEAT_DELAY <span style="color:#666">=</span> <span style="color:#666">30</span> <span style="color:#666">*</span> <span style="color:#666">1000</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> STOP_DELAY <span style="color:#666">=</span> <span style="color:#666">5</span> <span style="color:#666">*</span> <span style="color:#666">60</span> <span style="color:#666">*</span> <span style="color:#666">1000</span><span style="color:#666">;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> RESET_DELAY <span style="color:#666">=</span> 5 <span style="color:#666">*</span> 1000<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> REPEAT_DELAY <span style="color:#666">=</span> 30 <span style="color:#666">*</span> 1000<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> STOP_DELAY <span style="color:#666">=</span> 5 <span style="color:#666">*</span> 60 <span style="color:#666">*</span> 1000<span style="color:#666">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">private</span> Handler handler<span style="color:#666">;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">boolean</span> stopUpdate<span style="color:#666">;</span>
@@ -268,7 +268,29 @@ up a delayed reset in case the update failed.</p>
 </span></span><span style="display:flex;"><span>                    startBusesUpdate<span style="color:#666">(),</span> REPEAT_DELAY<span style="color:#666">);</span>
 </span></span></code></pre></div><p>After a successful update send a broadcast to update the widget and a
 delayed method call to do it again unless the flag is set.</p>
-
+<p>From android 10 there are restrictions on what background processes
+can do to start other processes. To work around this create an
+activity with the <strong>Theme.NoDisplay</strong> theme just to start the service.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// On create
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f">@SuppressWarnings</span><span style="color:#666">(</span><span style="color:#b44">&#34;deprecation&#34;</span><span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onCreate</span><span style="color:#666">(</span>Bundle savedInstanceState<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">super</span><span style="color:#666">.</span><span style="color:#b44">onCreate</span><span style="color:#666">(</span>savedInstanceState<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>BuildConfig<span style="color:#666">.</span><span style="color:#b44">DEBUG</span><span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>            Log<span style="color:#666">.</span><span style="color:#b44">d</span><span style="color:#666">(</span>TAG<span style="color:#666">,</span> <span style="color:#b44">&#34;onCreate &#34;</span> <span style="color:#666">+</span> getIntent<span style="color:#666">());</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Start update service
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        Intent update <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> Intent<span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">,</span> BusesWidgetUpdate<span style="color:#666">.</span><span style="color:#b44">class</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>        startService<span style="color:#666">(</span>update<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>BuildConfig<span style="color:#666">.</span><span style="color:#b44">DEBUG</span><span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>            Log<span style="color:#666">.</span><span style="color:#b44">d</span><span style="color:#666">(</span>TAG<span style="color:#666">,</span> <span style="color:#b44">&#34;Update &#34;</span> <span style="color:#666">+</span> update<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        finish<span style="color:#666">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">}</span>
+</span></span></code></pre></div>
     </p>
     
     
@@ -277,6 +299,8 @@ delayed method call to do it again unless the flag is set.</p>
 <h3>See Also</h3>
 <ul>
   
+  <li><a href="/blog/android-navigation-menu/">Android Navigation Menu</a></li>
+  
   <li><a href="/blog/create-word-grid/">Create a Word Grid</a></li>
   
   <li><a href="/blog/android-flutter/">Android Flutter</a></li>
@@ -284,8 +308,6 @@ delayed method call to do it again unless the flag is set.</p>
   <li><a href="/blog/android-kotlin/">Android Kotlin</a></li>
   
   <li><a href="/blog/word-count/">Android Word Count</a></li>
-  
-  <li><a href="/blog/hiding-button/">Hiding Edit Button</a></li>
   
 </ul>
 
@@ -306,6 +328,10 @@ delayed method call to do it again unless the flag is set.</p>
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/android-navigation-menu/">
+        Android Navigation Menu
+      </a></li>
     
       <li><a href="/blog/update-widget/">
         Update App Widget
@@ -341,10 +367,6 @@ delayed method call to do it again unless the flag is set.</p>
     
       <li><a href="/blog/pea-and-ham-soup/">
         Pea and Ham (or Bacon) Soup
-      </a></li>
-    
-      <li><a href="/blog/caldo-verde/">
-        Caldo Verde
       </a></li>
     
   </ul>

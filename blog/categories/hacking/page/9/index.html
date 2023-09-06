@@ -22,7 +22,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.115.0">
+<meta name="generator" content="Hugo 0.118.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -155,6 +155,38 @@ table {
 
 <div class="blog-post">
   <h3>
+    <a href="https://billthefarmer.github.io/blog/handlers-in-android/">Handlers in Android</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2015-05-10T15:51:40Z">
+        Sun May 10, 2015
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    Using a handler to return results from a worker thread This has taken me quite a while to put together. There are throw-away remarks in the Android docs about this, but no useful examples. You want to get the results back from a worker thread to your main activity so you can do stuff with them. There are several parts to this.
+The main activity implements Handler.Callback, and has a handleMessage function.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/handlers-in-android/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
     <a href="https://billthefarmer.github.io/blog/search-engine-optimisation-seo/">Search Engine Optimisation (SEO)</a>
   </h3>
   <div class="callout small">
@@ -278,37 +310,6 @@ So I synced the contacts with my Hackintosh using iTunes, exported the contacts 
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/java-collections/">Java Collections</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2014-11-01T12:18:28Z">
-        Sat Nov 1, 2014
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    I find Java Collections frustrating and insane. I have been through this loop on several occasions. I decide I want a list to do whatever. So I look up List in the docs and find it’s an interface, ie: roll yer own. So I look down the hierarchy and find AbstractList, which is abstract, again: roll yer own. So finally I get to ArrayList which might do the job, but the docs aren’t too clear, so I try it and it works.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/java-collections/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -333,6 +334,10 @@ So I synced the contacts with my Hackintosh using iTunes, exported the contacts 
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/android-navigation-menu/">
+        Android Navigation Menu
+      </a></li>
     
       <li><a href="/blog/update-widget/">
         Update App Widget
@@ -368,10 +373,6 @@ So I synced the contacts with my Hackintosh using iTunes, exported the contacts 
     
       <li><a href="/blog/pea-and-ham-soup/">
         Pea and Ham (or Bacon) Soup
-      </a></li>
-    
-      <li><a href="/blog/caldo-verde/">
-        Caldo Verde
       </a></li>
     
   </ul>

@@ -33,7 +33,7 @@ To add an entry to an android calendar you first have to find out the calendar i
 
 
 
-<meta name="generator" content="Hugo 0.115.0">
+<meta name="generator" content="Hugo 0.118.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -199,11 +199,11 @@ calendar id using an asynchronous query on the calendars table.</p>
 </span></span><span style="display:flex;"><span>        <span style="color:#666">};</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// The indices for the projection array above.
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> CALENDAR_ID_INDEX <span style="color:#666">=</span> <span style="color:#666">0</span><span style="color:#666">;</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> CALENDAR_ID_INDEX <span style="color:#666">=</span> 0<span style="color:#666">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> CALENDAR <span style="color:#666">=</span> <span style="color:#666">0</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> EVENT    <span style="color:#666">=</span> <span style="color:#666">1</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> REMINDER <span style="color:#666">=</span> <span style="color:#666">2</span><span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> CALENDAR <span style="color:#666">=</span> 0<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> EVENT    <span style="color:#666">=</span> 1<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> REMINDER <span style="color:#666">=</span> 2<span style="color:#666">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">static</span> QueryHandler queryHandler<span style="color:#666">;</span>
 </span></span><span style="display:flex;"><span>
@@ -282,7 +282,7 @@ method.</p>
 </span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">case</span> EVENT<span style="color:#666">:</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#0b0;font-weight:bold">long</span> eventID <span style="color:#666">=</span> Long<span style="color:#666">.</span><span style="color:#b44">parseLong</span><span style="color:#666">(</span>uri<span style="color:#666">.</span><span style="color:#b44">getLastPathSegment</span><span style="color:#666">());</span>
 </span></span><span style="display:flex;"><span>                ContentValues values <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ContentValues<span style="color:#666">();</span>
-</span></span><span style="display:flex;"><span>                values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Reminders<span style="color:#666">.</span><span style="color:#b44">MINUTES</span><span style="color:#666">,</span> <span style="color:#666">10</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Reminders<span style="color:#666">.</span><span style="color:#b44">MINUTES</span><span style="color:#666">,</span> 10<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>                values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Reminders<span style="color:#666">.</span><span style="color:#b44">EVENT_ID</span><span style="color:#666">,</span> eventID<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>                values<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>Reminders<span style="color:#666">.</span><span style="color:#b44">METHOD</span><span style="color:#666">,</span> Reminders<span style="color:#666">.</span><span style="color:#b44">METHOD_ALERT</span><span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>                startInsert<span style="color:#666">(</span>REMINDER<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">,</span> Reminders<span style="color:#666">.</span><span style="color:#b44">CONTENT_URI</span><span style="color:#666">,</span> values<span style="color:#666">);</span>
@@ -308,6 +308,8 @@ methods. This is useful for passing on parameters to be used later.</p>
 <h3>See Also</h3>
 <ul>
   
+  <li><a href="/blog/android-navigation-menu/">Android Navigation Menu</a></li>
+  
   <li><a href="/blog/update-widget/">Update App Widget</a></li>
   
   <li><a href="/blog/create-word-grid/">Create a Word Grid</a></li>
@@ -315,8 +317,6 @@ methods. This is useful for passing on parameters to be used later.</p>
   <li><a href="/blog/android-flutter/">Android Flutter</a></li>
   
   <li><a href="/blog/android-kotlin/">Android Kotlin</a></li>
-  
-  <li><a href="/blog/word-count/">Android Word Count</a></li>
   
 </ul>
 
@@ -337,6 +337,10 @@ methods. This is useful for passing on parameters to be used later.</p>
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/android-navigation-menu/">
+        Android Navigation Menu
+      </a></li>
     
       <li><a href="/blog/update-widget/">
         Update App Widget
@@ -372,10 +376,6 @@ methods. This is useful for passing on parameters to be used later.</p>
     
       <li><a href="/blog/pea-and-ham-soup/">
         Pea and Ham (or Bacon) Soup
-      </a></li>
-    
-      <li><a href="/blog/caldo-verde/">
-        Caldo Verde
       </a></li>
     
   </ul>

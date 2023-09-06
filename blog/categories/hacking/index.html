@@ -22,7 +22,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.115.0">
+<meta name="generator" content="Hugo 0.118.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -155,6 +155,40 @@ table {
 
 <div class="blog-post">
   <h3>
+    <a href="https://billthefarmer.github.io/blog/android-navigation-menu/">Android Navigation Menu</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2023-09-06T13:46:00&#43;01:00">
+        Wed Sep 6, 2023
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    Android versions from android 5 use a Toolbar as the ActionBar, but there appears to be no obvious API access.
+However, by traversing the view hierarchy, it can be found and used to set up app navigation.
+Create a recursive function to traverse the views and find the toolbar.
+// findToolbar private Toolbar findToolbar(ViewGroup group) { View result = null; final int count = group.getChildCount(); for (int i = 0; i &lt; count; i++) { View view = group.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/android-navigation-menu/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
     <a href="https://billthefarmer.github.io/blog/update-widget/">Update App Widget</a>
   </h3>
   <div class="callout small">
@@ -280,38 +314,6 @@ $ flutter config --android-studio-dir &#39;D:\adt\Android Studio&#39; Setting &#
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/android-kotlin/">Android Kotlin</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2021-05-14T09:49:11&#43;01:00">
-        Fri May 14, 2021
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    All my android apps have up until now been written in Java, avoiding the use of the support libraries or androidx. The Google developers docs and guides advocate the use of Kotlin rather than Java and the use of androidx almost to the exclusion of the standard android API.
-I have a very simple app, Oglaf, NS(Generally)FW, which is just a wrapper around the web site, with some navigation. So I decided to convert it to Kotlin, just to see how difficult it was and to see what effect, if any, it had on the app.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/android-kotlin/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -336,6 +338,10 @@ I have a very simple app, Oglaf, NS(Generally)FW, which is just a wrapper around
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/android-navigation-menu/">
+        Android Navigation Menu
+      </a></li>
     
       <li><a href="/blog/update-widget/">
         Update App Widget
@@ -371,10 +377,6 @@ I have a very simple app, Oglaf, NS(Generally)FW, which is just a wrapper around
     
       <li><a href="/blog/pea-and-ham-soup/">
         Pea and Ham (or Bacon) Soup
-      </a></li>
-    
-      <li><a href="/blog/caldo-verde/">
-        Caldo Verde
       </a></li>
     
   </ul>

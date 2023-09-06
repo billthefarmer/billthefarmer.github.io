@@ -33,7 +33,7 @@ You can try it out in your browser: http://tryhaskell.org
 
 
 
-<meta name="generator" content="Hugo 0.115.0">
+<meta name="generator" content="Hugo 0.118.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -201,28 +201,28 @@ table {
 </span></span><span style="display:flex;"><span>    main <span style="color:#a2f;font-weight:bold">::</span> <span style="color:#0b0;font-weight:bold">IO</span> <span style="color:#a2f">()</span>
 </span></span><span style="display:flex;"><span>    main <span style="color:#a2f;font-weight:bold">=</span> <span style="color:#a2f;font-weight:bold">do</span>
 </span></span><span style="display:flex;"><span>        initGUI
-</span></span><span style="display:flex;"><span>        window<span style=""> </span><span style="color:#a2f;font-weight:bold">&lt;-</span> windowNew
-</span></span><span style="display:flex;"><span>    <span style="">   </span> vbox <span style="color:#a2f;font-weight:bold">&lt;-</span> vBoxNew <span style="color:#0b0;font-weight:bold">False</span> <span style="color:#666">10</span>
-</span></span><span style="display:flex;"><span>    <span style="">   </span> hbox <span style="color:#a2f;font-weight:bold">&lt;-</span> hBoxNew <span style="color:#0b0;font-weight:bold">False</span> <span style="color:#666">0</span>
-</span></span><span style="display:flex;"><span>    <span style="">   </span> button <span style="color:#a2f;font-weight:bold">&lt;-</span> buttonNew
-</span></span><span style="display:flex;"><span>    <span style="">   </span> pixbuf <span style="color:#a2f;font-weight:bold">&lt;-</span> pixbufNewFromFileAtSize <span style="color:#b44">&#34;941118.jpg&#34;</span> <span style="color:#666">480</span> <span style="color:#666">360</span>
-</span></span><span style="display:flex;"><span>    <span style="">   </span> image <span style="color:#a2f;font-weight:bold">&lt;-</span> imageNewFromPixbuf pixbuf
-</span></span><span style="display:flex;"><span>    <span style="">   </span> quit <span style="color:#a2f;font-weight:bold">&lt;-</span> buttonNew
-</span></span><span style="display:flex;"><span>    <span style="">   </span> set window [ containerBorderWidth <span style="color:#0b0;font-weight:bold">:=</span> <span style="color:#666">10</span>,
-</span></span><span style="display:flex;"><span>    <span style="">                </span> containerChild <span style="color:#0b0;font-weight:bold">:=</span> vbox ]
-</span></span><span style="display:flex;"><span>    <span style="">   </span> boxPackStart hbox button <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
-</span></span><span style="display:flex;"><span>    <span style="">   </span> boxPackStart vbox hbox <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
-</span></span><span style="display:flex;"><span>    <span style="">   </span> boxPackStart vbox image <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
-</span></span><span style="display:flex;"><span>    <span style="">   </span> hbox <span style="color:#a2f;font-weight:bold">&lt;-</span> hBoxNew <span style="color:#0b0;font-weight:bold">False</span> <span style="color:#666">0</span>
-</span></span><span style="display:flex;"><span>    <span style="">   </span> boxPackEnd hbox quit <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
-</span></span><span style="display:flex;"><span>    <span style="">   </span> boxPackEnd vbox hbox <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
-</span></span><span style="display:flex;"><span>    <span style="">   </span> set button [ buttonLabel <span style="color:#0b0;font-weight:bold">:=</span> <span style="color:#b44">&#34; Hello World &#34;</span> ]
-</span></span><span style="display:flex;"><span>    <span style="">   </span> set quit [ buttonLabel <span style="color:#0b0;font-weight:bold">:=</span> <span style="color:#b44">&#34;  Quit  &#34;</span> ]
-</span></span><span style="display:flex;"><span>    <span style="">   </span> onClicked button (putStrLn <span style="color:#b44">&#34;Hello World&#34;</span>)
-</span></span><span style="display:flex;"><span>    <span style="">   </span> onClicked quit mainQuit
-</span></span><span style="display:flex;"><span>    <span style="">   </span> onDestroy window mainQuit
-</span></span><span style="display:flex;"><span>    <span style="">   </span> widgetShowAll window
-</span></span><span style="display:flex;"><span>    <span style="">   </span> mainGUI
+</span></span><span style="display:flex;"><span>        window <span style="color:#a2f;font-weight:bold">&lt;-</span> windowNew
+</span></span><span style="display:flex;"><span>        vbox <span style="color:#a2f;font-weight:bold">&lt;-</span> vBoxNew <span style="color:#0b0;font-weight:bold">False</span> <span style="color:#666">10</span>
+</span></span><span style="display:flex;"><span>        hbox <span style="color:#a2f;font-weight:bold">&lt;-</span> hBoxNew <span style="color:#0b0;font-weight:bold">False</span> <span style="color:#666">0</span>
+</span></span><span style="display:flex;"><span>        button <span style="color:#a2f;font-weight:bold">&lt;-</span> buttonNew
+</span></span><span style="display:flex;"><span>        pixbuf <span style="color:#a2f;font-weight:bold">&lt;-</span> pixbufNewFromFileAtSize <span style="color:#b44">&#34;941118.jpg&#34;</span> <span style="color:#666">480</span> <span style="color:#666">360</span>
+</span></span><span style="display:flex;"><span>        image <span style="color:#a2f;font-weight:bold">&lt;-</span> imageNewFromPixbuf pixbuf
+</span></span><span style="display:flex;"><span>        quit <span style="color:#a2f;font-weight:bold">&lt;-</span> buttonNew
+</span></span><span style="display:flex;"><span>        set window [ containerBorderWidth <span style="color:#0b0;font-weight:bold">:=</span> <span style="color:#666">10</span>,
+</span></span><span style="display:flex;"><span>                     containerChild <span style="color:#0b0;font-weight:bold">:=</span> vbox ]
+</span></span><span style="display:flex;"><span>        boxPackStart hbox button <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
+</span></span><span style="display:flex;"><span>        boxPackStart vbox hbox <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
+</span></span><span style="display:flex;"><span>        boxPackStart vbox image <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
+</span></span><span style="display:flex;"><span>        hbox <span style="color:#a2f;font-weight:bold">&lt;-</span> hBoxNew <span style="color:#0b0;font-weight:bold">False</span> <span style="color:#666">0</span>
+</span></span><span style="display:flex;"><span>        boxPackEnd hbox quit <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
+</span></span><span style="display:flex;"><span>        boxPackEnd vbox hbox <span style="color:#0b0;font-weight:bold">PackNatural</span> <span style="color:#666">0</span>
+</span></span><span style="display:flex;"><span>        set button [ buttonLabel <span style="color:#0b0;font-weight:bold">:=</span> <span style="color:#b44">&#34; Hello World &#34;</span> ]
+</span></span><span style="display:flex;"><span>        set quit [ buttonLabel <span style="color:#0b0;font-weight:bold">:=</span> <span style="color:#b44">&#34;  Quit  &#34;</span> ]
+</span></span><span style="display:flex;"><span>        onClicked button (putStrLn <span style="color:#b44">&#34;Hello World&#34;</span>)
+</span></span><span style="display:flex;"><span>        onClicked quit mainQuit
+</span></span><span style="display:flex;"><span>        onDestroy window mainQuit
+</span></span><span style="display:flex;"><span>        widgetShowAll window
+</span></span><span style="display:flex;"><span>        mainGUI
 </span></span></code></pre></div><p><img src="images/2014/03/gtk.png" alt="Gtk"></p>
 <p>However I can’t see any real difference between this and doing it the usual step by step procedural way. I even tried reusing a variable to see if it objected. The other problem is that the documentation is written in mathematical jargon which is difficult to understand. for example, the docs for the constructor function pixbufNewFromFileAtSize is:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span>    pixbufNewFromFileAtSize <span style="color:#a2f;font-weight:bold">::</span> <span style="color:#0b0;font-weight:bold">String</span> <span style="color:#a2f;font-weight:bold">-&gt;</span> <span style="color:#0b0;font-weight:bold">Int</span> <span style="color:#a2f;font-weight:bold">-&gt;</span> <span style="color:#0b0;font-weight:bold">Int</span> <span style="color:#a2f;font-weight:bold">-&gt;</span> <span style="color:#0b0;font-weight:bold">IO</span> <span style="color:#0b0;font-weight:bold">Pixbuf</span>
@@ -251,6 +251,10 @@ table {
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/android-navigation-menu/">
+        Android Navigation Menu
+      </a></li>
     
       <li><a href="/blog/update-widget/">
         Update App Widget
@@ -286,10 +290,6 @@ table {
     
       <li><a href="/blog/pea-and-ham-soup/">
         Pea and Ham (or Bacon) Soup
-      </a></li>
-    
-      <li><a href="/blog/caldo-verde/">
-        Caldo Verde
       </a></li>
     
   </ul>

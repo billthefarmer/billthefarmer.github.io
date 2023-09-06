@@ -33,7 +33,7 @@ To get the tap position in the markdown view it is necessary to compensate for t
 
 
 
-<meta name="generator" content="Hugo 0.115.0">
+<meta name="generator" content="Hugo 0.118.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -192,11 +192,11 @@ the display density.</p>
 </span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>shown<span style="color:#666">)</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">[]</span> l <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> <span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">[</span><span style="color:#666">2</span><span style="color:#666">];</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">[]</span> l <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> <span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">[</span>2<span style="color:#666">];</span>
 </span></span><span style="display:flex;"><span>                markdownView<span style="color:#666">.</span><span style="color:#b44">getLocationOnScreen</span><span style="color:#666">(</span>l<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Get tap position
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                <span style="color:#0b0;font-weight:bold">float</span> y <span style="color:#666">=</span> e<span style="color:#666">.</span><span style="color:#b44">getY</span><span style="color:#666">()</span> <span style="color:#666">-</span> l<span style="color:#666">[</span><span style="color:#666">1</span><span style="color:#666">];</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                <span style="color:#0b0;font-weight:bold">float</span> y <span style="color:#666">=</span> e<span style="color:#666">.</span><span style="color:#b44">getY</span><span style="color:#666">()</span> <span style="color:#666">-</span> l<span style="color:#666">[</span>1<span style="color:#666">];</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                <span style="color:#0b0;font-weight:bold">int</span> scrollY <span style="color:#666">=</span> markdownView<span style="color:#666">.</span><span style="color:#b44">getScrollY</span><span style="color:#666">();</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#0b0;font-weight:bold">int</span> contentHeight <span style="color:#666">=</span> markdownView<span style="color:#666">.</span><span style="color:#b44">getContentHeight</span><span style="color:#666">();</span>
@@ -231,7 +231,7 @@ to set the selection, and the position of the line to scroll to it.</p>
 </span></span><span style="display:flex;"><span>                    <span style="color:#080;font-style:italic">// Get line
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    <span style="color:#0b0;font-weight:bold">int</span> line <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">().</span><span style="color:#b44">getLineForVertical</span><span style="color:#666">(</span>v<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>                    <span style="color:#0b0;font-weight:bold">int</span> offset <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">()</span>
-</span></span><span style="display:flex;"><span>                        <span style="color:#666">.</span><span style="color:#b44">getOffsetForHorizontal</span><span style="color:#666">(</span>line<span style="color:#666">,</span> <span style="color:#666">0</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#666">.</span><span style="color:#b44">getOffsetForHorizontal</span><span style="color:#666">(</span>line<span style="color:#666">,</span> 0<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>                    textView<span style="color:#666">.</span><span style="color:#b44">setSelection</span><span style="color:#666">(</span>offset<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                    <span style="color:#080;font-style:italic">// get text position
@@ -239,7 +239,7 @@ to set the selection, and the position of the line to scroll to it.</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                    <span style="color:#080;font-style:italic">// Scroll to it
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    <span style="color:#0b0;font-weight:bold">int</span> height <span style="color:#666">=</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getHeight</span><span style="color:#666">();</span>
-</span></span><span style="display:flex;"><span>                    scrollView<span style="color:#666">.</span><span style="color:#b44">smoothScrollTo</span><span style="color:#666">(</span><span style="color:#666">0</span><span style="color:#666">,</span> position <span style="color:#666">-</span> height <span style="color:#666">/</span> <span style="color:#666">2</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>                    scrollView<span style="color:#666">.</span><span style="color:#b44">smoothScrollTo</span><span style="color:#666">(</span>0<span style="color:#666">,</span> position <span style="color:#666">-</span> height <span style="color:#666">/</span> 2<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#666">},</span> POSITION_DELAY<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                shown <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
@@ -261,13 +261,13 @@ position in about the right place.</p>
   
   <li><a href="/blog/markdown-openstreetmap-maps/">Markdown OpenStreetMap Maps</a></li>
   
+  <li><a href="/blog/android-navigation-menu/">Android Navigation Menu</a></li>
+  
   <li><a href="/blog/update-widget/">Update App Widget</a></li>
   
   <li><a href="/blog/create-word-grid/">Create a Word Grid</a></li>
   
   <li><a href="/blog/android-flutter/">Android Flutter</a></li>
-  
-  <li><a href="/blog/android-kotlin/">Android Kotlin</a></li>
   
 </ul>
 
@@ -288,6 +288,10 @@ position in about the right place.</p>
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/android-navigation-menu/">
+        Android Navigation Menu
+      </a></li>
     
       <li><a href="/blog/update-widget/">
         Update App Widget
@@ -323,10 +327,6 @@ position in about the right place.</p>
     
       <li><a href="/blog/pea-and-ham-soup/">
         Pea and Ham (or Bacon) Soup
-      </a></li>
-    
-      <li><a href="/blog/caldo-verde/">
-        Caldo Verde
       </a></li>
     
   </ul>
