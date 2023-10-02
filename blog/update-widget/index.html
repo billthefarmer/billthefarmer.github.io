@@ -33,7 +33,7 @@ public static final int RESET_DELAY = 5 * 1000; public static final int REPEAT_D
 
 
 
-<meta name="generator" content="Hugo 0.118.0">
+<meta name="generator" content="Hugo 0.119.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -186,9 +186,9 @@ widget to update every 30 seconds for about 5 minutes.</p>
 <p>I already had a <a href="https://developer.android.com/reference/android/app/Service">Service</a> set up to update the widget from a
 suitable web site and using a <a href="https://developer.android.com/reference/android/os/Handler">Handler</a> to reset the progress bar
 if the background update process failed.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> RESET_DELAY <span style="color:#666">=</span> 5 <span style="color:#666">*</span> 1000<span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> REPEAT_DELAY <span style="color:#666">=</span> 30 <span style="color:#666">*</span> 1000<span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> STOP_DELAY <span style="color:#666">=</span> 5 <span style="color:#666">*</span> 60 <span style="color:#666">*</span> 1000<span style="color:#666">;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> RESET_DELAY <span style="color:#666">=</span> <span style="color:#666">5</span> <span style="color:#666">*</span> <span style="color:#666">1000</span><span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> REPEAT_DELAY <span style="color:#666">=</span> <span style="color:#666">30</span> <span style="color:#666">*</span> <span style="color:#666">1000</span><span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> STOP_DELAY <span style="color:#666">=</span> <span style="color:#666">5</span> <span style="color:#666">*</span> <span style="color:#666">60</span> <span style="color:#666">*</span> <span style="color:#666">1000</span><span style="color:#666">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">private</span> Handler handler<span style="color:#666">;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">boolean</span> stopUpdate<span style="color:#666">;</span>

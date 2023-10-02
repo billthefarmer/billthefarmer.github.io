@@ -33,7 +33,7 @@ This method is fine if you have only one text editor view in your app, but would
 
 
 
-<meta name="generator" content="Hugo 0.118.0">
+<meta name="generator" content="Hugo 0.119.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -240,7 +240,7 @@ for a newline.</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    <span style="color:#0b0;font-weight:bold">char</span> c <span style="color:#666">=</span> text<span style="color:#666">.</span><span style="color:#b44">charAt</span><span style="color:#666">(</span>end<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                    <span style="color:#080;font-style:italic">// Check for opening brackets
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>INVALID_CHARS<span style="color:#666">.</span><span style="color:#b44">indexOf</span><span style="color:#666">(</span>c<span style="color:#666">)</span> <span style="color:#666">==</span> <span style="color:#666">-</span>1<span style="color:#666">)</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>INVALID_CHARS<span style="color:#666">.</span><span style="color:#b44">indexOf</span><span style="color:#666">(</span>c<span style="color:#666">)</span> <span style="color:#666">==</span> <span style="color:#666">-</span><span style="color:#666">1</span><span style="color:#666">)</span>
 </span></span><span style="display:flex;"><span>                    <span style="color:#666">{</span>
 </span></span><span style="display:flex;"><span>                        <span style="color:#a2f;font-weight:bold">switch</span> <span style="color:#666">(</span>c<span style="color:#666">)</span>
 </span></span><span style="display:flex;"><span>                        <span style="color:#666">{</span>
@@ -264,7 +264,7 @@ for a newline.</p>
 </span></span><span style="display:flex;"><span>                        <span style="color:#666">}</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                        <span style="color:#080;font-style:italic">// Do reverse search
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                        start <span style="color:#666">=</span> text<span style="color:#666">.</span><span style="color:#b44">lastIndexOf</span><span style="color:#666">(</span>c<span style="color:#666">,</span> start<span style="color:#666">)</span> <span style="color:#666">+</span> 1<span style="color:#666">;</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                        start <span style="color:#666">=</span> text<span style="color:#666">.</span><span style="color:#b44">lastIndexOf</span><span style="color:#666">(</span>c<span style="color:#666">,</span> start<span style="color:#666">)</span> <span style="color:#666">+</span> <span style="color:#666">1</span><span style="color:#666">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                        <span style="color:#080;font-style:italic">// Check for included newline
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>start <span style="color:#666">&gt;</span> text<span style="color:#666">.</span><span style="color:#b44">lastIndexOf</span><span style="color:#666">(</span><span style="color:#b44">&#39;\n&#39;</span><span style="color:#666">,</span> end<span style="color:#666">))</span>

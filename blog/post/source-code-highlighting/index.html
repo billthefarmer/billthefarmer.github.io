@@ -30,7 +30,7 @@ HTML output is not very useful for a text editor. It could be used with Html.fro
 
 
 
-<meta name="generator" content="Hugo 0.118.0">
+<meta name="generator" content="Hugo 0.119.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -302,7 +302,7 @@ scrolling the text, so move the selection if not editing.</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>textView<span style="color:#666">.</span><span style="color:#b44">getSelectionStart</span><span style="color:#666">()</span> <span style="color:#666">&gt;</span> end<span style="color:#666">)</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#0b0;font-weight:bold">int</span> last <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">().</span><span style="color:#b44">getLineStart</span><span style="color:#666">(</span>line <span style="color:#666">-</span> 1<span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#0b0;font-weight:bold">int</span> last <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getLayout</span><span style="color:#666">().</span><span style="color:#b44">getLineStart</span><span style="color:#666">(</span>line <span style="color:#666">-</span> <span style="color:#666">1</span><span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>            textView<span style="color:#666">.</span><span style="color:#b44">setSelection</span><span style="color:#666">(</span>last<span style="color:#666">,</span> last<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#666">}</span>
 </span></span><span style="display:flex;"><span>
@@ -311,7 +311,7 @@ scrolling the text, so move the selection if not editing.</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Get current spans
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        ForegroundColorSpan spans<span style="color:#666">[]</span> <span style="color:#666">=</span>
-</span></span><span style="display:flex;"><span>            editable<span style="color:#666">.</span><span style="color:#b44">getSpans</span><span style="color:#666">(</span>0<span style="color:#666">,</span> editable<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">(),</span> ForegroundColorSpan<span style="color:#666">.</span><span style="color:#b44">class</span><span style="color:#666">);</span>
+</span></span><span style="display:flex;"><span>            editable<span style="color:#666">.</span><span style="color:#b44">getSpans</span><span style="color:#666">(</span><span style="color:#666">0</span><span style="color:#666">,</span> editable<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">(),</span> ForegroundColorSpan<span style="color:#666">.</span><span style="color:#b44">class</span><span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Remove spans
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">for</span> <span style="color:#666">(</span>ForegroundColorSpan span<span style="color:#666">:</span> spans<span style="color:#666">)</span>
 </span></span><span style="display:flex;"><span>            editable<span style="color:#666">.</span><span style="color:#b44">removeSpan</span><span style="color:#666">(</span>span<span style="color:#666">);</span>

@@ -33,7 +33,7 @@ I had a request from Marco the other day to put OpenStreetMap maps in my Diary a
 
 
 
-<meta name="generator" content="Hugo 0.118.0">
+<meta name="generator" content="Hugo 0.119.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -256,13 +256,13 @@ slightly, which seems to work OK. The android Java code to do this is</p>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Find matches
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">while</span> <span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">find</span><span style="color:#666">())</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#0b0;font-weight:bold">double</span> lat <span style="color:#666">=</span> 1<span style="color:#666">.</span><span style="color:#b44">0</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#0b0;font-weight:bold">double</span> lng <span style="color:#666">=</span> 1<span style="color:#666">.</span><span style="color:#b44">0</span><span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#0b0;font-weight:bold">double</span> lat <span style="color:#666">=</span> <span style="color:#666">1</span><span style="color:#666">.</span><span style="color:#b44">0</span><span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#0b0;font-weight:bold">double</span> lng <span style="color:#666">=</span> <span style="color:#666">1</span><span style="color:#666">.</span><span style="color:#b44">0</span><span style="color:#666">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">try</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>                lat <span style="color:#666">=</span> Double<span style="color:#666">.</span><span style="color:#b44">parseDouble</span><span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">group</span><span style="color:#666">(</span>1<span style="color:#666">));</span>
-</span></span><span style="display:flex;"><span>                lng <span style="color:#666">=</span> Double<span style="color:#666">.</span><span style="color:#b44">parseDouble</span><span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">group</span><span style="color:#666">(</span>2<span style="color:#666">));</span>
+</span></span><span style="display:flex;"><span>                lat <span style="color:#666">=</span> Double<span style="color:#666">.</span><span style="color:#b44">parseDouble</span><span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">group</span><span style="color:#666">(</span><span style="color:#666">1</span><span style="color:#666">));</span>
+</span></span><span style="display:flex;"><span>                lng <span style="color:#666">=</span> Double<span style="color:#666">.</span><span style="color:#b44">parseDouble</span><span style="color:#666">(</span>matcher<span style="color:#666">.</span><span style="color:#b44">group</span><span style="color:#666">(</span><span style="color:#666">2</span><span style="color:#666">));</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#666">}</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Ignore parse error
@@ -274,8 +274,8 @@ slightly, which seems to work OK. The android Java code to do this is</p>
 </span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Create replacement iframe
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            String replace <span style="color:#666">=</span>
 </span></span><span style="display:flex;"><span>                String<span style="color:#666">.</span><span style="color:#b44">format</span><span style="color:#666">(</span>Locale<span style="color:#666">.</span><span style="color:#b44">ENGLISH</span><span style="color:#666">,</span> MAP_TEMPLATE<span style="color:#666">,</span>
-</span></span><span style="display:flex;"><span>                              lng <span style="color:#666">-</span> 0<span style="color:#666">.</span><span style="color:#b44">005</span><span style="color:#666">,</span> lat <span style="color:#666">-</span> 0<span style="color:#666">.</span><span style="color:#b44">005</span><span style="color:#666">,</span>
-</span></span><span style="display:flex;"><span>                              lng <span style="color:#666">+</span> 0<span style="color:#666">.</span><span style="color:#b44">005</span><span style="color:#666">,</span> lat <span style="color:#666">+</span> 0<span style="color:#666">.</span><span style="color:#b44">005</span><span style="color:#666">,</span>
+</span></span><span style="display:flex;"><span>                              lng <span style="color:#666">-</span> <span style="color:#666">0</span><span style="color:#666">.</span><span style="color:#b44">005</span><span style="color:#666">,</span> lat <span style="color:#666">-</span> <span style="color:#666">0</span><span style="color:#666">.</span><span style="color:#b44">005</span><span style="color:#666">,</span>
+</span></span><span style="display:flex;"><span>                              lng <span style="color:#666">+</span> <span style="color:#666">0</span><span style="color:#666">.</span><span style="color:#b44">005</span><span style="color:#666">,</span> lat <span style="color:#666">+</span> <span style="color:#666">0</span><span style="color:#666">.</span><span style="color:#b44">005</span><span style="color:#666">,</span>
 </span></span><span style="display:flex;"><span>                              lat<span style="color:#666">,</span> lng<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Substitute replacement

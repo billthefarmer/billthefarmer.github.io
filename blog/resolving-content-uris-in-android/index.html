@@ -30,7 +30,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.118.0">
+<meta name="generator" content="Hugo 0.119.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -221,7 +221,7 @@ table {
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">     * @see #getFile(Context, Uri)
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">     * @author paulburke
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">     */</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f">@TargetApi</span><span style="color:#666">(</span>19<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f">@TargetApi</span><span style="color:#666">(</span><span style="color:#666">19</span><span style="color:#666">)</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">static</span> String <span style="color:#00a000">getPath</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">final</span> Context context<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">final</span> Uri uri<span style="color:#666">)</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#666">{</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// ...
@@ -236,13 +236,13 @@ table {
 </span></span><span style="display:flex;"><span>            <span style="color:#666">{</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">final</span> String docId <span style="color:#666">=</span> DocumentsContract<span style="color:#666">.</span><span style="color:#b44">getDocumentId</span><span style="color:#666">(</span>uri<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">final</span> String<span style="color:#666">[]</span> split <span style="color:#666">=</span> docId<span style="color:#666">.</span><span style="color:#b44">split</span><span style="color:#666">(</span><span style="color:#b44">&#34;:&#34;</span><span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">final</span> String type <span style="color:#666">=</span> split<span style="color:#666">[</span>0<span style="color:#666">];</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">final</span> String type <span style="color:#666">=</span> split<span style="color:#666">[</span><span style="color:#666">0</span><span style="color:#666">];</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// /
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span><span style="color:#b44">&#34;primary&#34;</span><span style="color:#666">.</span><span style="color:#b44">equalsIgnoreCase</span><span style="color:#666">(</span>type<span style="color:#666">))</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#666">{</span>
 </span></span><span style="display:flex;"><span>                    <span style="color:#a2f;font-weight:bold">return</span> Environment
-</span></span><span style="display:flex;"><span>                        <span style="color:#666">.</span><span style="color:#b44">getExternalStorageDirectory</span><span style="color:#666">()</span> <span style="color:#666">+</span> <span style="color:#b44">&#34;/&#34;</span> <span style="color:#666">+</span> split<span style="color:#666">[</span>1<span style="color:#666">];</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#666">.</span><span style="color:#b44">getExternalStorageDirectory</span><span style="color:#666">()</span> <span style="color:#666">+</span> <span style="color:#b44">&#34;/&#34;</span> <span style="color:#666">+</span> split<span style="color:#666">[</span><span style="color:#666">1</span><span style="color:#666">];</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#666">}</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// /Documents
@@ -250,7 +250,7 @@ table {
 </span></span><span style="display:flex;"><span>                <span style="color:#666">{</span>
 </span></span><span style="display:flex;"><span>                    <span style="color:#a2f;font-weight:bold">return</span> Environment
 </span></span><span style="display:flex;"><span>                        <span style="color:#666">.</span><span style="color:#b44">getExternalStorageDirectory</span><span style="color:#666">()</span> <span style="color:#666">+</span> <span style="color:#b44">&#34;/Documents/&#34;</span> <span style="color:#666">+</span>
-</span></span><span style="display:flex;"><span>                        split<span style="color:#666">[</span>1<span style="color:#666">];</span>
+</span></span><span style="display:flex;"><span>                        split<span style="color:#666">[</span><span style="color:#666">1</span><span style="color:#666">];</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#666">}</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// TODO handle non-primary volumes
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#666">}</span>

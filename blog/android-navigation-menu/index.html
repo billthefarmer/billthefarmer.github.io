@@ -22,7 +22,7 @@ However, by traversing the view hierarchy, it can be found and used to set up ap
 Create a recursive function to traverse the views and find the toolbar.
 // findToolbar private Toolbar findToolbar(ViewGroup group) { View result = null; final int count = group.getChildCount(); for (int i = 0; i &lt; count; i&#43;&#43;) { View view = group."><meta itemprop="datePublished" content="2023-09-06T13:46:00+01:00" />
 <meta itemprop="dateModified" content="2023-09-06T13:46:00+01:00" />
-<meta itemprop="wordCount" content="210">
+<meta itemprop="wordCount" content="233">
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Android Navigation Menu"/>
@@ -36,7 +36,7 @@ Create a recursive function to traverse the views and find the toolbar.
 
 
 
-<meta name="generator" content="Hugo 0.118.0">
+<meta name="generator" content="Hugo 0.119.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -194,7 +194,7 @@ set up app navigation.</p>
 </span></span><span style="display:flex;"><span>    <span style="color:#666">{</span>
 </span></span><span style="display:flex;"><span>        View result <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> count <span style="color:#666">=</span> group<span style="color:#666">.</span><span style="color:#b44">getChildCount</span><span style="color:#666">();</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">for</span> <span style="color:#666">(</span><span style="color:#0b0;font-weight:bold">int</span> i <span style="color:#666">=</span> 0<span style="color:#666">;</span> i <span style="color:#666">&lt;</span> count<span style="color:#666">;</span> i<span style="color:#666">++)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">for</span> <span style="color:#666">(</span><span style="color:#0b0;font-weight:bold">int</span> i <span style="color:#666">=</span> <span style="color:#666">0</span><span style="color:#666">;</span> i <span style="color:#666">&lt;</span> count<span style="color:#666">;</span> i<span style="color:#666">++)</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
 </span></span><span style="display:flex;"><span>            View view <span style="color:#666">=</span> group<span style="color:#666">.</span><span style="color:#b44">getChildAt</span><span style="color:#666">(</span>i<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>view <span style="color:#a2f;font-weight:bold">instanceof</span> Toolbar<span style="color:#666">)</span>
@@ -209,6 +209,11 @@ set up app navigation.</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#666">(</span>Toolbar<span style="color:#666">)</span> result<span style="color:#666">;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#666">}</span>
+</span></span></code></pre></div><p>Having written this hack, I then discovered a more efficient way using
+built in functionality.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Find toolbar
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        toolbar <span style="color:#666">=</span> findViewById<span style="color:#666">(</span>getResources<span style="color:#666">().</span><span style="color:#b44">getIdentifier</span><span style="color:#666">(</span><span style="color:#b44">&#34;action_bar&#34;</span><span style="color:#666">,</span>
+</span></span><span style="display:flex;"><span>                                                            <span style="color:#b44">&#34;id&#34;</span><span style="color:#666">,</span> <span style="color:#b44">&#34;android&#34;</span><span style="color:#666">));</span>
 </span></span></code></pre></div><p>Set up navigation on the toolbar.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Find toolbar
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        ViewGroup root <span style="color:#666">=</span> <span style="color:#666">(</span>ViewGroup<span style="color:#666">)</span> getWindow<span style="color:#666">().</span><span style="color:#b44">getDecorView</span><span style="color:#666">();</span>

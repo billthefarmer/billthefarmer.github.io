@@ -30,7 +30,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.118.0">
+<meta name="generator" content="Hugo 0.119.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -249,9 +249,9 @@ to a right arrow, and set the listener</p>
 </span></span><span style="display:flex;"><span>                text <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getText</span><span style="color:#666">().</span><span style="color:#b44">toString</span><span style="color:#666">();</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Reset the index and clear highlighting
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>newText<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">()</span> <span style="color:#666">==</span> 0<span style="color:#666">)</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>newText<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">()</span> <span style="color:#666">==</span> <span style="color:#666">0</span><span style="color:#666">)</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>                    index <span style="color:#666">=</span> 0<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>                    index <span style="color:#666">=</span> <span style="color:#666">0</span><span style="color:#666">;</span>
 </span></span><span style="display:flex;"><span>                    editable<span style="color:#666">.</span><span style="color:#b44">removeSpan</span><span style="color:#666">(</span>span<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#666">}</span>
 </span></span><span style="display:flex;"><span>
@@ -274,7 +274,7 @@ to a right arrow, and set the listener</p>
 </span></span><span style="display:flex;"><span>                        <span style="color:#666">.</span><span style="color:#b44">getLineBaseline</span><span style="color:#666">(</span>line<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                    <span style="color:#080;font-style:italic">// Scroll to it
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    scrollView<span style="color:#666">.</span><span style="color:#b44">scrollTo</span><span style="color:#666">(</span>0<span style="color:#666">,</span> pos <span style="color:#666">-</span> height <span style="color:#666">/</span> 2<span style="color:#666">);</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    scrollView<span style="color:#666">.</span><span style="color:#b44">scrollTo</span><span style="color:#666">(</span><span style="color:#666">0</span><span style="color:#666">,</span> pos <span style="color:#666">-</span> height <span style="color:#666">/</span> <span style="color:#666">2</span><span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                    <span style="color:#080;font-style:italic">// Highlight it
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    editable
@@ -311,7 +311,7 @@ to a right arrow, and set the listener</p>
 </span></span><span style="display:flex;"><span>                        <span style="color:#666">.</span><span style="color:#b44">getLineBaseline</span><span style="color:#666">(</span>line<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                    <span style="color:#080;font-style:italic">// Scroll to it
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    scrollView<span style="color:#666">.</span><span style="color:#b44">scrollTo</span><span style="color:#666">(</span>0<span style="color:#666">,</span> pos <span style="color:#666">-</span> height <span style="color:#666">/</span> 2<span style="color:#666">);</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    scrollView<span style="color:#666">.</span><span style="color:#b44">scrollTo</span><span style="color:#666">(</span><span style="color:#666">0</span><span style="color:#666">,</span> pos <span style="color:#666">-</span> height <span style="color:#666">/</span> <span style="color:#666">2</span><span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                    <span style="color:#080;font-style:italic">// Highlight it
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    editable
@@ -368,13 +368,13 @@ view functionality.</p>
 </span></span><span style="display:flex;"><span>            text <span style="color:#666">=</span> textView<span style="color:#666">.</span><span style="color:#b44">getText</span><span style="color:#666">().</span><span style="color:#b44">toString</span><span style="color:#666">();</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Check text
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>text<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">()</span> <span style="color:#666">==</span> 0<span style="color:#666">)</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>text<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">()</span> <span style="color:#666">==</span> <span style="color:#666">0</span><span style="color:#666">)</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Reset the index and clear highlighting
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>newText<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">()</span> <span style="color:#666">==</span> 0<span style="color:#666">)</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>newText<span style="color:#666">.</span><span style="color:#b44">length</span><span style="color:#666">()</span> <span style="color:#666">==</span> <span style="color:#666">0</span><span style="color:#666">)</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>                index <span style="color:#666">=</span> 0<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>                index <span style="color:#666">=</span> <span style="color:#666">0</span><span style="color:#666">;</span>
 </span></span><span style="display:flex;"><span>                editable<span style="color:#666">.</span><span style="color:#b44">removeSpan</span><span style="color:#666">(</span>span<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#666">}</span>
@@ -408,7 +408,7 @@ view functionality.</p>
 </span></span><span style="display:flex;"><span>                    <span style="color:#666">.</span><span style="color:#b44">getLineBaseline</span><span style="color:#666">(</span>line<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Scroll to it
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                scrollView<span style="color:#666">.</span><span style="color:#b44">scrollTo</span><span style="color:#666">(</span>0<span style="color:#666">,</span> pos <span style="color:#666">-</span> height <span style="color:#666">/</span> 2<span style="color:#666">);</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                scrollView<span style="color:#666">.</span><span style="color:#b44">scrollTo</span><span style="color:#666">(</span><span style="color:#666">0</span><span style="color:#666">,</span> pos <span style="color:#666">-</span> height <span style="color:#666">/</span> <span style="color:#666">2</span><span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Highlight it
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                editable
@@ -417,7 +417,7 @@ view functionality.</p>
 </span></span><span style="display:flex;"><span>            <span style="color:#666">}</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">else</span>
-</span></span><span style="display:flex;"><span>                index <span style="color:#666">=</span> 0<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>                index <span style="color:#666">=</span> <span style="color:#666">0</span><span style="color:#666">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#666">}</span>
@@ -439,7 +439,7 @@ view functionality.</p>
 </span></span><span style="display:flex;"><span>                    <span style="color:#666">.</span><span style="color:#b44">getLineBaseline</span><span style="color:#666">(</span>line<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Scroll to it
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                scrollView<span style="color:#666">.</span><span style="color:#b44">scrollTo</span><span style="color:#666">(</span>0<span style="color:#666">,</span> pos <span style="color:#666">-</span> height <span style="color:#666">/</span> 2<span style="color:#666">);</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                scrollView<span style="color:#666">.</span><span style="color:#b44">scrollTo</span><span style="color:#666">(</span><span style="color:#666">0</span><span style="color:#666">,</span> pos <span style="color:#666">-</span> height <span style="color:#666">/</span> <span style="color:#666">2</span><span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Highlight it
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                editable
@@ -450,7 +450,7 @@ view functionality.</p>
 </span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">else</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#666">{</span>
 </span></span><span style="display:flex;"><span>                matcher<span style="color:#666">.</span><span style="color:#b44">reset</span><span style="color:#666">();</span>
-</span></span><span style="display:flex;"><span>                index <span style="color:#666">=</span> 0<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>                index <span style="color:#666">=</span> <span style="color:#666">0</span><span style="color:#666">;</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#666">}</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
@@ -523,7 +523,7 @@ text, so the callback removes the highlight.</p>
 </span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
 </span></span><span style="display:flex;"><span>            AlertDialog<span style="color:#666">.</span><span style="color:#b44">Builder</span> builder <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> AlertDialog<span style="color:#666">.</span><span style="color:#b44">Builder</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>            builder<span style="color:#666">.</span><span style="color:#b44">setTitle</span><span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">string</span><span style="color:#666">.</span><span style="color:#b44">findAll</span><span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">final</span> String<span style="color:#666">[]</span> choices <span style="color:#666">=</span> matches<span style="color:#666">.</span><span style="color:#b44">toArray</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">new</span> String<span style="color:#666">[</span>0<span style="color:#666">]);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">final</span> String<span style="color:#666">[]</span> choices <span style="color:#666">=</span> matches<span style="color:#666">.</span><span style="color:#b44">toArray</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">new</span> String<span style="color:#666">[</span><span style="color:#666">0</span><span style="color:#666">]);</span>
 </span></span><span style="display:flex;"><span>            builder<span style="color:#666">.</span><span style="color:#b44">setItems</span><span style="color:#666">(</span>choices<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">new</span> DialogInterface<span style="color:#666">.</span><span style="color:#b44">OnClickListener</span><span style="color:#666">()</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#666">{</span>
 </span></span><span style="display:flex;"><span>                    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onClick</span> <span style="color:#666">(</span>DialogInterface dialog<span style="color:#666">,</span> 

@@ -30,7 +30,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.118.0">
+<meta name="generator" content="Hugo 0.119.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -196,7 +196,7 @@ creating the list in the menu.</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>pathSet <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">for</span> <span style="color:#666">(</span>String path <span style="color:#666">:</span> pathSet<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>                pathMap<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>path<span style="color:#666">,</span> preferences<span style="color:#666">.</span><span style="color:#b44">getInt</span><span style="color:#666">(</span>path<span style="color:#666">,</span> 0<span style="color:#666">));</span>
+</span></span><span style="display:flex;"><span>                pathMap<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>path<span style="color:#666">,</span> preferences<span style="color:#666">.</span><span style="color:#b44">getInt</span><span style="color:#666">(</span>path<span style="color:#666">,</span> <span style="color:#666">0</span><span style="color:#666">));</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        removeList <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ArrayList<span style="color:#666">&lt;</span>String<span style="color:#666">&gt;();</span>
 </span></span><span style="display:flex;"><span>
@@ -228,7 +228,7 @@ old entries.</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        Collections<span style="color:#666">.</span><span style="color:#b44">sort</span><span style="color:#666">(</span>list<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>        Collections<span style="color:#666">.</span><span style="color:#b44">reverse</span><span style="color:#666">(</span>list<span style="color:#666">);</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#0b0;font-weight:bold">int</span> count <span style="color:#666">=</span> 0<span style="color:#666">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#0b0;font-weight:bold">int</span> count <span style="color:#666">=</span> <span style="color:#666">0</span><span style="color:#666">;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">for</span> <span style="color:#666">(</span><span style="color:#0b0;font-weight:bold">long</span> date <span style="color:#666">:</span> list<span style="color:#666">)</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
 </span></span><span style="display:flex;"><span>            String name <span style="color:#666">=</span> map<span style="color:#666">.</span><span style="color:#b44">get</span><span style="color:#666">(</span>date<span style="color:#666">);</span>
