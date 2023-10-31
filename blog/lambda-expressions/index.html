@@ -14,6 +14,7 @@ jQuery(document).ready(function($) { // ... // Process the start button $(&#34;#
 <meta property="article:published_time" content="2020-03-26T13:02:53+00:00" />
 <meta property="article:modified_time" content="2020-03-26T13:02:53+00:00" />
 
+
 <meta itemprop="name" content="Lambda Expressions">
 <meta itemprop="description" content="Lambda expressions or anonymous functions can be quite useful. For example using jQuery in JavaScript all the work gets done in anonymous functions unless you particularly want to extract them and give them names&hellip;
 jQuery(document).ready(function($) { // ... // Process the start button $(&#34;#start&#34;).click(function() { question = 0; $(&#34;#data&#34;).css(&#34;display&#34;, &#34;none&#34;); $(&#34;.intro&#34;).fadeOut(function() { // Do stuff }); // ... }); }); In C&#43;&#43; the syntax is curious in that there are a pair of square brackets enclosing &lsquo;captured&rsquo; variables&hellip;"><meta itemprop="datePublished" content="2020-03-26T13:02:53+00:00" />
@@ -30,7 +31,7 @@ jQuery(document).ready(function($) { // ... // Process the start button $(&#34;#
 
 
 
-<meta name="generator" content="Hugo 0.119.0">
+<meta name="generator" content="Hugo 0.120.1">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -229,26 +230,26 @@ know&hellip;</p>
 </span></span></code></pre></div><p>In java they can be used for callbacks or listeners. The syntax is
 simpler, you don&rsquo;t even need the brackets if there&rsquo;s only one
 argument&hellip;</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>                showEdit <span style="color:#666">=</span> <span style="color:#666">()</span> <span style="color:#666">-&gt;</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>                    startAnimation<span style="color:#666">(</span>edit<span style="color:#666">,</span> R<span style="color:#666">.</span><span style="color:#b44">anim</span><span style="color:#666">.</span><span style="color:#b44">fade_in</span><span style="color:#666">,</span> View<span style="color:#666">.</span><span style="color:#b44">VISIBLE</span><span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>                    scrollUp <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>                    scrollDn <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#666">};</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// ...
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                        <span style="color:#080;font-style:italic">// Show button delayed
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                        markdownView<span style="color:#666">.</span><span style="color:#b44">removeCallbacks</span><span style="color:#666">(</span>showEdit<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>                        markdownView<span style="color:#666">.</span><span style="color:#b44">postDelayed</span><span style="color:#666">(</span>showEdit<span style="color:#666">,</span> VISIBLE_DELAY<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// On click
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            accept<span style="color:#666">.</span><span style="color:#b44">setOnClickListener</span><span style="color:#666">(</span>v <span style="color:#666">-&gt;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Get text
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>display<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>                    loadMarkdown<span style="color:#666">();</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// ...
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#666">});</span>
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">                </span>showEdit<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>()<span style="color:#bbb"> </span><span style="color:#666">-&gt;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                    </span>startAnimation(edit,<span style="color:#bbb"> </span>R.<span style="color:#b44">anim</span>.<span style="color:#b44">fade_in</span>,<span style="color:#bbb"> </span>View.<span style="color:#b44">VISIBLE</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                    </span>scrollUp<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">false</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                    </span>scrollDn<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">false</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>};<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span><span style="color:#080;font-style:italic">// ...</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                        </span><span style="color:#080;font-style:italic">// Show button delayed</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                        </span>markdownView.<span style="color:#b44">removeCallbacks</span>(showEdit);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                        </span>markdownView.<span style="color:#b44">postDelayed</span>(showEdit,<span style="color:#bbb"> </span>VISIBLE_DELAY);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#080;font-style:italic">// On click</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>accept.<span style="color:#b44">setOnClickListener</span>(v<span style="color:#bbb"> </span><span style="color:#666">-&gt;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span><span style="color:#080;font-style:italic">// Get text</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(display)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                    </span>loadMarkdown();<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span><span style="color:#080;font-style:italic">// ...</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>});<span style="color:#bbb">
+</span></span></span></code></pre></div>
     </p>
     
     

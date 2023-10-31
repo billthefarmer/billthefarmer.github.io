@@ -14,6 +14,7 @@ I have seen apps which hide this button on scrolling, and this was one of the su
 <meta property="article:published_time" content="2020-02-15T20:59:47+00:00" />
 <meta property="article:modified_time" content="2020-02-15T20:59:47+00:00" />
 
+
 <meta itemprop="name" content="Hiding Edit Button">
 <meta itemprop="description" content="My Diary and Notes apps have a floating button in the corner of the screen which is used to switch between editing markdown text and viewing the result. Although it is part of the android Material Design, this button has been the subject of several issues raised by users.
 I have seen apps which hide this button on scrolling, and this was one of the suggestions by users. Getting this to work correctly turned out to be more complex than initially considered, requiring two boolean flags and a lambda expression."><meta itemprop="datePublished" content="2020-02-15T20:59:47+00:00" />
@@ -30,7 +31,7 @@ I have seen apps which hide this button on scrolling, and this was one of the su
 
 
 
-<meta name="generator" content="Hugo 0.119.0">
+<meta name="generator" content="Hugo 0.120.1">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -187,102 +188,102 @@ of the suggestions by users. Getting this to work correctly turned out
 to be more complex than initially considered, requiring two boolean
 flags and a lambda expression.</p>
 <p>These flags are required to keep track of scrolling direction.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#a2f;font-weight:bold">static</span> <span style="color:#0b0;font-weight:bold">int</span> VISIBLE_DELAY <span style="color:#666">=</span> <span style="color:#666">2048</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">boolean</span> scrollUp <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">boolean</span> scrollDn <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
-</span></span></code></pre></div><p>The scroll change listener is only supported from android version 6
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>VISIBLE_DELAY<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>2048;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">boolean</span><span style="color:#bbb"> </span>scrollUp<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">false</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">boolean</span><span style="color:#bbb"> </span>scrollDn<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">false</span>;<span style="color:#bbb">
+</span></span></span></code></pre></div><p>The scroll change listener is only supported from android version 6
 Marshmallow. The lambda expression <code>showEdit()</code> is required to restore
 the button after a delay. The animation is started and the flags
 reset.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>Build<span style="color:#666">.</span><span style="color:#b44">VERSION</span><span style="color:#666">.</span><span style="color:#b44">SDK_INT</span> <span style="color:#666">&gt;=</span> Build<span style="color:#666">.</span><span style="color:#b44">VERSION_CODES</span><span style="color:#666">.</span><span style="color:#b44">M</span><span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">final</span> Runnable showEdit <span style="color:#666">=</span> <span style="color:#666">()</span> <span style="color:#666">-&gt;</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>                    startAnimation<span style="color:#666">(</span>edit<span style="color:#666">,</span> R<span style="color:#666">.</span><span style="color:#b44">anim</span><span style="color:#666">.</span><span style="color:#b44">fade_in</span><span style="color:#666">,</span> View<span style="color:#666">.</span><span style="color:#b44">VISIBLE</span><span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>                    scrollUp <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>                    scrollDn <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#666">};</span>
-</span></span></code></pre></div><p>On detecting a scroll down the button is hidden using an animation and
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(Build.<span style="color:#b44">VERSION</span>.<span style="color:#b44">SDK_INT</span><span style="color:#bbb"> </span><span style="color:#666">&gt;=</span><span style="color:#bbb"> </span>Build.<span style="color:#b44">VERSION_CODES</span>.<span style="color:#b44">M</span>)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span>Runnable<span style="color:#bbb"> </span>showEdit<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>()<span style="color:#bbb"> </span><span style="color:#666">-&gt;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                    </span>startAnimation(edit,<span style="color:#bbb"> </span>R.<span style="color:#b44">anim</span>.<span style="color:#b44">fade_in</span>,<span style="color:#bbb"> </span>View.<span style="color:#b44">VISIBLE</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                    </span>scrollUp<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">false</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                    </span>scrollDn<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">false</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>};<span style="color:#bbb">
+</span></span></span></code></pre></div><p>On detecting a scroll down the button is hidden using an animation and
 the flag is set to ensure it only happens once. The delayed call to
 <code>showEdit()</code> is removed and posted again until the view stops
 scrolling, so the delay is from when it stops.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// onScrollChange
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                markdownView<span style="color:#666">.</span><span style="color:#b44">setOnScrollChangeListener</span><span style="color:#666">((</span>v<span style="color:#666">,</span> x<span style="color:#666">,</span> y<span style="color:#666">,</span> oldX<span style="color:#666">,</span> oldY<span style="color:#666">)</span> <span style="color:#666">-&gt;</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#080;font-style:italic">// Scroll up
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                    <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>y <span style="color:#666">&gt;</span> oldY<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>                        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(!</span>scrollUp<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>                        <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>                            <span style="color:#080;font-style:italic">// Hide button
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                            startAnimation<span style="color:#666">(</span>edit<span style="color:#666">,</span> R<span style="color:#666">.</span><span style="color:#b44">anim</span><span style="color:#666">.</span><span style="color:#b44">fade_out</span><span style="color:#666">,</span> View<span style="color:#666">.</span><span style="color:#b44">INVISIBLE</span><span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                            <span style="color:#080;font-style:italic">// Set flags
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                            scrollUp <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>                            scrollDn <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>                        <span style="color:#666">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                        <span style="color:#080;font-style:italic">// Show button delayed
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                        markdownView<span style="color:#666">.</span><span style="color:#b44">removeCallbacks</span><span style="color:#666">(</span>showEdit<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>                        markdownView<span style="color:#666">.</span><span style="color:#b44">postDelayed</span><span style="color:#666">(</span>showEdit<span style="color:#666">,</span> VISIBLE_DELAY<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#666">}</span>
-</span></span></code></pre></div><p>On a scroll down the button is restored and the flags are set to
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">                </span><span style="color:#080;font-style:italic">// onScrollChange</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>markdownView.<span style="color:#b44">setOnScrollChangeListener</span>((v,<span style="color:#bbb"> </span>x,<span style="color:#bbb"> </span>y,<span style="color:#bbb"> </span>oldX,<span style="color:#bbb"> </span>oldY)<span style="color:#bbb"> </span><span style="color:#666">-&gt;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                    </span><span style="color:#080;font-style:italic">// Scroll up</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                    </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(y<span style="color:#bbb"> </span><span style="color:#666">&gt;</span><span style="color:#bbb"> </span>oldY)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                    </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                        </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(<span style="color:#666">!</span>scrollUp)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                        </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                            </span><span style="color:#080;font-style:italic">// Hide button</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                            </span>startAnimation(edit,<span style="color:#bbb"> </span>R.<span style="color:#b44">anim</span>.<span style="color:#b44">fade_out</span>,<span style="color:#bbb"> </span>View.<span style="color:#b44">INVISIBLE</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                            </span><span style="color:#080;font-style:italic">// Set flags</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                            </span>scrollUp<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">true</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                            </span>scrollDn<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">false</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                        </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                        </span><span style="color:#080;font-style:italic">// Show button delayed</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                        </span>markdownView.<span style="color:#b44">removeCallbacks</span>(showEdit);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                        </span>markdownView.<span style="color:#b44">postDelayed</span>(showEdit,<span style="color:#bbb"> </span>VISIBLE_DELAY);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                    </span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>On a scroll down the button is restored and the flags are set to
 ensure it only happens once. The delayed call is reset to take care of
 bounce so the button isn&rsquo;t restored again.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>                    <span style="color:#a2f;font-weight:bold">else</span> <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(!</span>scrollDn<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>                        <span style="color:#080;font-style:italic">// Set flags
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                        scrollUp <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>                        scrollDn <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                        <span style="color:#080;font-style:italic">// Show button
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>edit<span style="color:#666">.</span><span style="color:#b44">getVisibility</span><span style="color:#666">()</span> <span style="color:#666">!=</span> View<span style="color:#666">.</span><span style="color:#b44">VISIBLE</span><span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>                        <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>                            startAnimation<span style="color:#666">(</span>edit<span style="color:#666">,</span> R<span style="color:#666">.</span><span style="color:#b44">anim</span><span style="color:#666">.</span><span style="color:#b44">fade_in</span><span style="color:#666">,</span> View<span style="color:#666">.</span><span style="color:#b44">VISIBLE</span><span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>                            markdownView<span style="color:#666">.</span><span style="color:#b44">removeCallbacks</span><span style="color:#666">(</span>showEdit<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>                        <span style="color:#666">}</span>
-</span></span><span style="display:flex;"><span>                   <span style="color:#666">}</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#666">});</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#666">}</span>
-</span></span></code></pre></div><p>The app includes previously added functions to hide and restore the
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">                    </span><span style="color:#a2f;font-weight:bold">else</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(<span style="color:#666">!</span>scrollDn)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                    </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                        </span><span style="color:#080;font-style:italic">// Set flags</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                        </span>scrollUp<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">false</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                        </span>scrollDn<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">true</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                        </span><span style="color:#080;font-style:italic">// Show button</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                        </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(edit.<span style="color:#b44">getVisibility</span>()<span style="color:#bbb"> </span><span style="color:#666">!=</span><span style="color:#bbb"> </span>View.<span style="color:#b44">VISIBLE</span>)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                        </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                            </span>startAnimation(edit,<span style="color:#bbb"> </span>R.<span style="color:#b44">anim</span>.<span style="color:#b44">fade_in</span>,<span style="color:#bbb"> </span>View.<span style="color:#b44">VISIBLE</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                            </span>markdownView.<span style="color:#b44">removeCallbacks</span>(showEdit);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                        </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                   </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>});<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>The app includes previously added functions to hide and restore the
 button using long touches. The flags are reset to stop unwanted
 interaction.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// On long click
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            markdownView<span style="color:#666">.</span><span style="color:#b44">setOnLongClickListener</span><span style="color:#666">(</span>v <span style="color:#666">-&gt;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Show button
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>edit<span style="color:#666">.</span><span style="color:#b44">getVisibility</span><span style="color:#666">()</span> <span style="color:#666">!=</span> View<span style="color:#666">.</span><span style="color:#b44">VISIBLE</span><span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>                    startAnimation<span style="color:#666">(</span>edit<span style="color:#666">,</span> R<span style="color:#666">.</span><span style="color:#b44">anim</span><span style="color:#666">.</span><span style="color:#b44">fade_in</span><span style="color:#666">,</span> View<span style="color:#666">.</span><span style="color:#b44">VISIBLE</span><span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>                scrollUp <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>                scrollDn <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#666">});</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#666">}</span>
-</span></span></code></pre></div><p>There is no point having an animation on hiding the button because it
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#080;font-style:italic">// On long click</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>markdownView.<span style="color:#b44">setOnLongClickListener</span>(v<span style="color:#bbb"> </span><span style="color:#666">-&gt;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span><span style="color:#080;font-style:italic">// Show button</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(edit.<span style="color:#b44">getVisibility</span>()<span style="color:#bbb"> </span><span style="color:#666">!=</span><span style="color:#bbb"> </span>View.<span style="color:#b44">VISIBLE</span>)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                    </span>startAnimation(edit,<span style="color:#bbb"> </span>R.<span style="color:#b44">anim</span>.<span style="color:#b44">fade_in</span>,<span style="color:#bbb"> </span>View.<span style="color:#b44">VISIBLE</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>scrollUp<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">false</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>scrollDn<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">false</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span><span style="color:#a2f;font-weight:bold">return</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">false</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>});<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>There is no point having an animation on hiding the button because it
 is hidden by the user&rsquo;s finger. The flag is set so it isn&rsquo;t hidden
 again on scroll up.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>edit <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// On long click
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            edit<span style="color:#666">.</span><span style="color:#b44">setOnLongClickListener</span><span style="color:#666">(</span>v <span style="color:#666">-&gt;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Hide button
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                v<span style="color:#666">.</span><span style="color:#b44">setVisibility</span><span style="color:#666">(</span>View<span style="color:#666">.</span><span style="color:#b44">INVISIBLE</span><span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>                scrollUp <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>                scrollDn <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">true</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#666">});</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#666">}</span>
-</span></span></code></pre></div><p>The function to start the button animation.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// startAnimation
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">startAnimation</span><span style="color:#666">(</span>View view<span style="color:#666">,</span> <span style="color:#0b0;font-weight:bold">int</span> anim<span style="color:#666">,</span> <span style="color:#0b0;font-weight:bold">int</span> visibility<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>        Animation animation <span style="color:#666">=</span> AnimationUtils<span style="color:#666">.</span><span style="color:#b44">loadAnimation</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">,</span> anim<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>        view<span style="color:#666">.</span><span style="color:#b44">startAnimation</span><span style="color:#666">(</span>animation<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>        view<span style="color:#666">.</span><span style="color:#b44">setVisibility</span><span style="color:#666">(</span>visibility<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#666">}</span>
-</span></span></code></pre></div><p>These functions are used for both the edit view and the markdown view
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(edit<span style="color:#bbb"> </span><span style="color:#666">!=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">null</span>)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#080;font-style:italic">// On long click</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>edit.<span style="color:#b44">setOnLongClickListener</span>(v<span style="color:#bbb"> </span><span style="color:#666">-&gt;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span><span style="color:#080;font-style:italic">// Hide button</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>v.<span style="color:#b44">setVisibility</span>(View.<span style="color:#b44">INVISIBLE</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>scrollUp<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">true</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>scrollDn<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">false</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span><span style="color:#a2f;font-weight:bold">return</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">true</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>});<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>The function to start the button animation.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// startAnimation</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#00a000">startAnimation</span>(View<span style="color:#bbb"> </span>view,<span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>anim,<span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>visibility)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>Animation<span style="color:#bbb"> </span>animation<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>AnimationUtils.<span style="color:#b44">loadAnimation</span>(<span style="color:#a2f;font-weight:bold">this</span>,<span style="color:#bbb"> </span>anim);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>view.<span style="color:#b44">startAnimation</span>(animation);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>view.<span style="color:#b44">setVisibility</span>(visibility);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>These functions are used for both the edit view and the markdown view
 in the apps.</p>
 
     </p>

@@ -14,6 +14,7 @@ The main activity implements Handler.Callback, and has a handleMessage function.
 <meta property="article:published_time" content="2015-05-10T15:51:40+00:00" />
 <meta property="article:modified_time" content="2015-05-10T15:51:40+00:00" />
 
+
 <meta itemprop="name" content="Handlers in Android">
 <meta itemprop="description" content="Using a handler to return results from a worker thread This has taken me quite a while to put together. There are throw-away remarks in the Android docs about this, but no useful examples. You want to get the results back from a worker thread to your main activity so you can do stuff with them. There are several parts to this.
 The main activity implements Handler.Callback, and has a handleMessage function."><meta itemprop="datePublished" content="2015-05-10T15:51:40+00:00" />
@@ -30,7 +31,7 @@ The main activity implements Handler.Callback, and has a handleMessage function.
 
 
 
-<meta name="generator" content="Hugo 0.119.0">
+<meta name="generator" content="Hugo 0.120.1">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -185,35 +186,35 @@ table {
 <li>In the worker thread constructor, create a <a href="http://developer.android.com/reference/android/os/Handler.html">Handler</a>, including the reference to the main activity.</li>
 <li>When some results need passing back, send a <a href="http://developer.android.com/reference/android/os/Message.html">Message</a> back to the main activity using the handler.</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">MyActivity</span> <span style="color:#a2f;font-weight:bold">extends</span> Activity <span style="color:#a2f;font-weight:bold">implements</span> Handler<span style="color:#666">.</span><span style="color:#b44">Callback</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">//...
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// On create
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f">@Override</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onCreate</span><span style="color:#666">(</span>Bundle savedInstanceState<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">//...
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            WorkerThread worker <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> WorkerThread<span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">//...
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">handleMessage</span><span style="color:#666">(</span>Message msg<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">//...
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">WorkerThread</span> <span style="color:#a2f;font-weight:bold">extends</span> Thread
-</span></span><span style="display:flex;"><span>    <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>        Handler handler<span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">//...
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// Constructor
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#00a000">WorkerThread</span><span style="color:#666">(</span>Handler<span style="color:#666">.</span><span style="color:#b44">Callback</span> callback<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>            handler <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> Handler<span style="color:#666">(</span>callback<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">//...
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">someFunction</span><span style="color:#666">()</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>            handler<span style="color:#666">.</span><span style="color:#b44">sendEmptyMessage</span><span style="color:#666">(</span>WHATEVER<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// or
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            Message msg <span style="color:#666">=</span> handler<span style="color:#666">.</span><span style="color:#b44">obtainMessage</span><span style="color:#666">(</span>WHATEVER<span style="color:#666">,</span> thingy<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>            handler<span style="color:#666">.</span><span style="color:#b44">sendMessage</span><span style="color:#666">(</span>msg<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">//...
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">MyActivity</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">extends</span><span style="color:#bbb"> </span>Activity<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">implements</span><span style="color:#bbb"> </span>Handler.<span style="color:#b44">Callback</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">//...</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// On create</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f">@Override</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#00a000">onCreate</span>(Bundle<span style="color:#bbb"> </span>savedInstanceState)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#080;font-style:italic">//...</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>WorkerThread<span style="color:#bbb"> </span>worker<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">new</span><span style="color:#bbb"> </span>WorkerThread(<span style="color:#a2f;font-weight:bold">this</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">//...</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">boolean</span><span style="color:#bbb"> </span><span style="color:#00a000">handleMessage</span>(Message<span style="color:#bbb"> </span>msg)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">//...</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">WorkerThread</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">extends</span><span style="color:#bbb"> </span>Thread<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>Handler<span style="color:#bbb"> </span>handler;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">//...</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// Constructor</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#00a000">WorkerThread</span>(Handler.<span style="color:#b44">Callback</span><span style="color:#bbb"> </span>callback)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>handler<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">new</span><span style="color:#bbb"> </span>Handler(callback);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#080;font-style:italic">//...</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#00a000">someFunction</span>()<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>handler.<span style="color:#b44">sendEmptyMessage</span>(WHATEVER);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#080;font-style:italic">// or</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>Message<span style="color:#bbb"> </span>msg<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>handler.<span style="color:#b44">obtainMessage</span>(WHATEVER,<span style="color:#bbb"> </span>thingy);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>handler.<span style="color:#b44">sendMessage</span>(msg);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#080;font-style:italic">//...</span><span style="color:#bbb">
 </span></span></span></code></pre></div><p>The handler will send the message back to the activity in the UI thread, so you can do whatever with the contents.</p>
 
     </p>

@@ -16,6 +16,7 @@ Create a recursive function to traverse the views and find the toolbar.
 <meta property="article:published_time" content="2023-09-06T13:46:00+01:00" />
 <meta property="article:modified_time" content="2023-09-06T13:46:00+01:00" />
 
+
 <meta itemprop="name" content="Android Navigation Menu">
 <meta itemprop="description" content="Android versions from android 5 use a Toolbar as the ActionBar, but there appears to be no obvious API access.
 However, by traversing the view hierarchy, it can be found and used to set up app navigation.
@@ -36,7 +37,7 @@ Create a recursive function to traverse the views and find the toolbar.
 
 
 
-<meta name="generator" content="Hugo 0.119.0">
+<meta name="generator" content="Hugo 0.120.1">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -189,46 +190,46 @@ table {
 set up app navigation.</p>
 <p><img src="images/2023/09/Navigation.png" alt="Navigation"></p>
 <p>Create a recursive function to traverse the views and find the toolbar.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// findToolbar
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> Toolbar <span style="color:#00a000">findToolbar</span><span style="color:#666">(</span>ViewGroup group<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>        View result <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">int</span> count <span style="color:#666">=</span> group<span style="color:#666">.</span><span style="color:#b44">getChildCount</span><span style="color:#666">();</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">for</span> <span style="color:#666">(</span><span style="color:#0b0;font-weight:bold">int</span> i <span style="color:#666">=</span> <span style="color:#666">0</span><span style="color:#666">;</span> i <span style="color:#666">&lt;</span> count<span style="color:#666">;</span> i<span style="color:#666">++)</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>            View view <span style="color:#666">=</span> group<span style="color:#666">.</span><span style="color:#b44">getChildAt</span><span style="color:#666">(</span>i<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>view <span style="color:#a2f;font-weight:bold">instanceof</span> Toolbar<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#666">(</span>Toolbar<span style="color:#666">)</span> view<span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>view <span style="color:#a2f;font-weight:bold">instanceof</span> ViewGroup<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>                result <span style="color:#666">=</span> findToolbar<span style="color:#666">((</span>ViewGroup<span style="color:#666">)</span> view<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>result <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">break</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#666">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#666">(</span>Toolbar<span style="color:#666">)</span> result<span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#666">}</span>
-</span></span></code></pre></div><p>Having written this hack, I then discovered a more efficient way using
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// findToolbar</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span>Toolbar<span style="color:#bbb"> </span><span style="color:#00a000">findToolbar</span>(ViewGroup<span style="color:#bbb"> </span>group)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>View<span style="color:#bbb"> </span>result<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">null</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>count<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>group.<span style="color:#b44">getChildCount</span>();<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">for</span><span style="color:#bbb"> </span>(<span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>i<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>0;<span style="color:#bbb"> </span>i<span style="color:#bbb"> </span><span style="color:#666">&lt;</span><span style="color:#bbb"> </span>count;<span style="color:#bbb"> </span>i<span style="color:#666">++</span>)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>View<span style="color:#bbb"> </span>view<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>group.<span style="color:#b44">getChildAt</span>(i);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(view<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">instanceof</span><span style="color:#bbb"> </span>Toolbar)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span><span style="color:#a2f;font-weight:bold">return</span><span style="color:#bbb"> </span>(Toolbar)<span style="color:#bbb"> </span>view;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(view<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">instanceof</span><span style="color:#bbb"> </span>ViewGroup)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>result<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>findToolbar((ViewGroup)<span style="color:#bbb"> </span>view);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(result<span style="color:#bbb"> </span><span style="color:#666">!=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">null</span>)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span><span style="color:#a2f;font-weight:bold">break</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">return</span><span style="color:#bbb"> </span>(Toolbar)<span style="color:#bbb"> </span>result;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>Having written this hack, I then discovered a more efficient way using
 built in functionality.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Find toolbar
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        toolbar <span style="color:#666">=</span> findViewById<span style="color:#666">(</span>getResources<span style="color:#666">().</span><span style="color:#b44">getIdentifier</span><span style="color:#666">(</span><span style="color:#b44">&#34;action_bar&#34;</span><span style="color:#666">,</span>
-</span></span><span style="display:flex;"><span>                                                            <span style="color:#b44">&#34;id&#34;</span><span style="color:#666">,</span> <span style="color:#b44">&#34;android&#34;</span><span style="color:#666">));</span>
-</span></span></code></pre></div><p>Set up navigation on the toolbar.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Find toolbar
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        ViewGroup root <span style="color:#666">=</span> <span style="color:#666">(</span>ViewGroup<span style="color:#666">)</span> getWindow<span style="color:#666">().</span><span style="color:#b44">getDecorView</span><span style="color:#666">();</span>
-</span></span><span style="display:flex;"><span>        toolbar <span style="color:#666">=</span> findToolbar<span style="color:#666">(</span>root<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Set up navigation
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        toolbar<span style="color:#666">.</span><span style="color:#b44">setNavigationIcon</span><span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">drawable</span><span style="color:#666">.</span><span style="color:#b44">ic_menu_white_36dp</span><span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>        toolbar<span style="color:#666">.</span><span style="color:#b44">setNavigationOnClickListener</span><span style="color:#666">((</span>v<span style="color:#666">)</span> <span style="color:#666">-&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>            PopupMenu popup <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> PopupMenu<span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">,</span> v<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>            popup<span style="color:#666">.</span><span style="color:#b44">inflate</span><span style="color:#666">(</span>R<span style="color:#666">.</span><span style="color:#b44">menu</span><span style="color:#666">.</span><span style="color:#b44">navigation</span><span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>            popup<span style="color:#666">.</span><span style="color:#b44">setOnMenuItemClickListener</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>            popup<span style="color:#666">.</span><span style="color:#b44">show</span><span style="color:#666">();</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#666">});</span>
-</span></span></code></pre></div><p>Create a menu.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// Find toolbar</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>toolbar<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>findViewById(getResources().<span style="color:#b44">getIdentifier</span>(<span style="color:#b44">&#34;action_bar&#34;</span>,<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                                                            </span><span style="color:#b44">&#34;id&#34;</span>,<span style="color:#bbb"> </span><span style="color:#b44">&#34;android&#34;</span>));<span style="color:#bbb">
+</span></span></span></code></pre></div><p>Set up navigation on the toolbar.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// Find toolbar</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>ViewGroup<span style="color:#bbb"> </span>root<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>(ViewGroup)<span style="color:#bbb"> </span>getWindow().<span style="color:#b44">getDecorView</span>();<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>toolbar<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>findToolbar(root);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// Set up navigation</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>toolbar.<span style="color:#b44">setNavigationIcon</span>(R.<span style="color:#b44">drawable</span>.<span style="color:#b44">ic_menu_white_24dp</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>toolbar.<span style="color:#b44">setNavigationOnClickListener</span>((v)<span style="color:#bbb"> </span><span style="color:#666">-&gt;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>PopupMenu<span style="color:#bbb"> </span>popup<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">new</span><span style="color:#bbb"> </span>PopupMenu(<span style="color:#a2f;font-weight:bold">this</span>,<span style="color:#bbb"> </span>v);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>popup.<span style="color:#b44">inflate</span>(R.<span style="color:#b44">menu</span>.<span style="color:#b44">navigation</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>popup.<span style="color:#b44">setOnMenuItemClickListener</span>(<span style="color:#a2f;font-weight:bold">this</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>popup.<span style="color:#b44">show</span>();<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>});<span style="color:#bbb">
+</span></span></span></code></pre></div><p>Create a menu.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">&lt;menu</span> <span style="color:#b44">xmlns:android=</span><span style="color:#b44">&#34;http://schemas.android.com/apk/res/android&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&lt;item</span>
@@ -245,31 +246,31 @@ built in functionality.</p>
 </span></span><span style="display:flex;"><span>      <span style="color:#b44">android:title=</span><span style="color:#b44">&#34;@string/action_settings&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">&lt;/menu&gt;</span>
 </span></span></code></pre></div><p>And a menu click listener.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// onMenuItemClick
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f">@Override</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">boolean</span> <span style="color:#00a000">onMenuItemClick</span><span style="color:#666">(</span>MenuItem item<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Get id
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#0b0;font-weight:bold">int</span> id <span style="color:#666">=</span> item<span style="color:#666">.</span><span style="color:#b44">getItemId</span><span style="color:#666">();</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">switch</span> <span style="color:#666">(</span>id<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Spectrum
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">case</span> R<span style="color:#666">.</span><span style="color:#b44">id</span><span style="color:#666">.</span><span style="color:#b44">action_spectrum</span><span style="color:#666">:</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">return</span> onSpectrumClick<span style="color:#666">(</span>item<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Help
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">case</span> R<span style="color:#666">.</span><span style="color:#b44">id</span><span style="color:#666">.</span><span style="color:#b44">action_help</span><span style="color:#666">:</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">return</span> onHelpClick<span style="color:#666">(</span>item<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Settings
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">case</span> R<span style="color:#666">.</span><span style="color:#b44">id</span><span style="color:#666">.</span><span style="color:#b44">action_settings</span><span style="color:#666">:</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">return</span> onSettingsClick<span style="color:#666">(</span>item<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#a0a000">
-</span></span></span><span style="display:flex;"><span><span style="color:#a0a000">        default:</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f;font-weight:bold">false</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#666">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#666">}</span>
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// onMenuItemClick</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f">@Override</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">boolean</span><span style="color:#bbb"> </span><span style="color:#00a000">onMenuItemClick</span>(MenuItem<span style="color:#bbb"> </span>item)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// Get id</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>id<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>item.<span style="color:#b44">getItemId</span>();<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">switch</span><span style="color:#bbb"> </span>(id)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// Spectrum</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">case</span><span style="color:#bbb"> </span>R.<span style="color:#b44">id</span>.<span style="color:#b44">action_spectrum</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#a2f;font-weight:bold">return</span><span style="color:#bbb"> </span>onSpectrumClick(item);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// Help</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">case</span><span style="color:#bbb"> </span>R.<span style="color:#b44">id</span>.<span style="color:#b44">action_help</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#a2f;font-weight:bold">return</span><span style="color:#bbb"> </span>onHelpClick(item);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// Settings</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">case</span><span style="color:#bbb"> </span>R.<span style="color:#b44">id</span>.<span style="color:#b44">action_settings</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#a2f;font-weight:bold">return</span><span style="color:#bbb"> </span>onSettingsClick(item);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">default</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#a2f;font-weight:bold">return</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">false</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span></code></pre></div>
     </p>
     
     

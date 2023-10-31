@@ -7,25 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2006 Bill Farmer</copyright>
-    <lastBuildDate>Sat, 14 Jul 2018 21:22:37 +0100</lastBuildDate><atom:link href="https://billthefarmer.github.io/blog/categories/electronics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Jul 2018 21:22:37 +0100</lastBuildDate>
+    <atom:link href="https://billthefarmer.github.io/blog/categories/electronics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Smart Meters</title>
       <link>https://billthefarmer.github.io/blog/post/smart-meters/</link>
       <pubDate>Sat, 14 Jul 2018 21:22:37 +0100</pubDate>
-      
       <guid>https://billthefarmer.github.io/blog/post/smart-meters/</guid>
       <description>CALMU Smart meters are not a new idea. I was a member of a project in the early 1980s which designed and rolled out a prototype smart meter which was far ahead of it&amp;rsquo;s time. The unit was called a CALMU (Credit and Load Management Unit). It was capable of recording electricity consumption with several tariffs, gas consumption, with a connection to a suitable gas meter and water use, with a connection to a suitable water meter.</description>
     </item>
-    
     <item>
       <title>Mullard 5-20 Amplifier</title>
       <link>https://billthefarmer.github.io/blog/post/mullard-5-20-amplifier/</link>
       <pubDate>Sun, 01 Jul 2018 16:25:18 +0100</pubDate>
-      
       <guid>https://billthefarmer.github.io/blog/post/mullard-5-20-amplifier/</guid>
       <description>Many years ago one of my brothers&amp;rsquo; friends brought me a faulty military surplus valve amplifier which used 807 valves for the output. It appeared to have suffered a flashover which had destroyed much of the wiring and components inside the chassis, but the tagboards appeared to be reusable.
 I had a copy of a Mullard amplifier book, Mullard Circuits for Audio Amplifiers at the time, which I subsequently lent so someone who never returned it.</description>
     </item>
-    
   </channel>
 </rss>

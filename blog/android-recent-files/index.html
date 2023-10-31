@@ -14,6 +14,7 @@
 <meta property="article:published_time" content="2017-12-15T11:53:57+00:00" />
 <meta property="article:modified_time" content="2017-12-15T11:53:57+00:00" />
 
+
 <meta itemprop="name" content="Android Recent Files">
 <meta itemprop="description" content="There are several parts to this - creating the list of files, saving the list in the preferences, restoring the list on startup and creating the list in the menu.
 // onCreate @Override protected void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this); // Create a map of scroll positions by file name Set&lt;String&gt; pathSet = preferences.getStringSet(PREF_PATHS, null); pathMap = new HashMap&lt;String, Integer&gt;(); if (pathSet != null) for (String path : pathSet) pathMap."><meta itemprop="datePublished" content="2017-12-15T11:53:57+00:00" />
@@ -30,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.119.0">
+<meta name="generator" content="Hugo 0.120.1">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -180,100 +181,100 @@ table {
       <p>There are several parts to this - creating the list of files, saving
 the list in the preferences, restoring the list on startup and
 creating the list in the menu.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// onCreate
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f">@Override</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">protected</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onCreate</span><span style="color:#666">(</span>Bundle savedInstanceState<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">super</span><span style="color:#666">.</span><span style="color:#b44">onCreate</span><span style="color:#666">(</span>savedInstanceState<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        SharedPreferences preferences <span style="color:#666">=</span>
-</span></span><span style="display:flex;"><span>            PreferenceManager<span style="color:#666">.</span><span style="color:#b44">getDefaultSharedPreferences</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Create a map of scroll positions by file name
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        Set<span style="color:#666">&lt;</span>String<span style="color:#666">&gt;</span> pathSet <span style="color:#666">=</span> preferences<span style="color:#666">.</span><span style="color:#b44">getStringSet</span><span style="color:#666">(</span>PREF_PATHS<span style="color:#666">,</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>        pathMap <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> HashMap<span style="color:#666">&lt;</span>String<span style="color:#666">,</span> Integer<span style="color:#666">&gt;();</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>pathSet <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span><span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">for</span> <span style="color:#666">(</span>String path <span style="color:#666">:</span> pathSet<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>                pathMap<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>path<span style="color:#666">,</span> preferences<span style="color:#666">.</span><span style="color:#b44">getInt</span><span style="color:#666">(</span>path<span style="color:#666">,</span> <span style="color:#666">0</span><span style="color:#666">));</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        removeList <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ArrayList<span style="color:#666">&lt;</span>String<span style="color:#666">&gt;();</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// ...
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#666">}</span>
-</span></span></code></pre></div><p>The android preference system only allows a list of strings to be
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// onCreate</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f">@Override</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">protected</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#00a000">onCreate</span>(Bundle<span style="color:#bbb"> </span>savedInstanceState)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">super</span>.<span style="color:#b44">onCreate</span>(savedInstanceState);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>SharedPreferences<span style="color:#bbb"> </span>preferences<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>PreferenceManager.<span style="color:#b44">getDefaultSharedPreferences</span>(<span style="color:#a2f;font-weight:bold">this</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// Create a map of scroll positions by file name</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>Set<span style="color:#666">&lt;</span>String<span style="color:#666">&gt;</span><span style="color:#bbb"> </span>pathSet<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>preferences.<span style="color:#b44">getStringSet</span>(PREF_PATHS,<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">null</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>pathMap<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">new</span><span style="color:#bbb"> </span>HashMap<span style="color:#666">&lt;</span>String,<span style="color:#bbb"> </span>Integer<span style="color:#666">&gt;</span>();<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(pathSet<span style="color:#bbb"> </span><span style="color:#666">!=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">null</span>)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#a2f;font-weight:bold">for</span><span style="color:#bbb"> </span>(String<span style="color:#bbb"> </span>path<span style="color:#bbb"> </span>:<span style="color:#bbb"> </span>pathSet)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>pathMap.<span style="color:#b44">put</span>(path,<span style="color:#bbb"> </span>preferences.<span style="color:#b44">getInt</span>(path,<span style="color:#bbb"> </span>0));<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>removeList<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">new</span><span style="color:#bbb"> </span>ArrayList<span style="color:#666">&lt;</span>String<span style="color:#666">&gt;</span>();<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// ...</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>The android preference system only allows a list of strings to be
 stored as a set, so the last modified date of each file is used below
 to order the list. The code also saves the scroll position of each
 file using the file name as a key. The remove list is used to remove
 old entries.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// savePath
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">private</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">savePath</span><span style="color:#666">(</span>String path<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Save the current position
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        pathMap<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>path<span style="color:#666">,</span> scrollView<span style="color:#666">.</span><span style="color:#b44">getScrollY</span><span style="color:#666">());</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Get a list of files
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        List<span style="color:#666">&lt;</span>Long<span style="color:#666">&gt;</span> list <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> ArrayList<span style="color:#666">&lt;</span>Long<span style="color:#666">&gt;();</span>
-</span></span><span style="display:flex;"><span>        Map<span style="color:#666">&lt;</span>Long<span style="color:#666">,</span> String<span style="color:#666">&gt;</span> map <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> HashMap<span style="color:#666">&lt;</span>Long<span style="color:#666">,</span> String<span style="color:#666">&gt;();</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">for</span> <span style="color:#666">(</span>String name <span style="color:#666">:</span> pathMap<span style="color:#666">.</span><span style="color:#b44">keySet</span><span style="color:#666">())</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>            File file <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> File<span style="color:#666">(</span>name<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>            list<span style="color:#666">.</span><span style="color:#b44">add</span><span style="color:#666">(</span>file<span style="color:#666">.</span><span style="color:#b44">lastModified</span><span style="color:#666">());</span>
-</span></span><span style="display:flex;"><span>            map<span style="color:#666">.</span><span style="color:#b44">put</span><span style="color:#666">(</span>file<span style="color:#666">.</span><span style="color:#b44">lastModified</span><span style="color:#666">(),</span> name<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#666">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Sort in reverse order
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        Collections<span style="color:#666">.</span><span style="color:#b44">sort</span><span style="color:#666">(</span>list<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>        Collections<span style="color:#666">.</span><span style="color:#b44">reverse</span><span style="color:#666">(</span>list<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#0b0;font-weight:bold">int</span> count <span style="color:#666">=</span> <span style="color:#666">0</span><span style="color:#666">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">for</span> <span style="color:#666">(</span><span style="color:#0b0;font-weight:bold">long</span> date <span style="color:#666">:</span> list<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>            String name <span style="color:#666">=</span> map<span style="color:#666">.</span><span style="color:#b44">get</span><span style="color:#666">(</span>date<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Remove old files
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">(</span>count <span style="color:#666">&gt;=</span> MAX_PATHS<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>                pathMap<span style="color:#666">.</span><span style="color:#b44">remove</span><span style="color:#666">(</span>name<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>                removeList<span style="color:#666">.</span><span style="color:#b44">add</span><span style="color:#666">(</span>name<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#666">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            count<span style="color:#666">++;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#666">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#666">}</span>
-</span></span></code></pre></div><p>The list of file names is ordered by the last modified date and the
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// savePath</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#00a000">savePath</span>(String<span style="color:#bbb"> </span>path)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// Save the current position</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>pathMap.<span style="color:#b44">put</span>(path,<span style="color:#bbb"> </span>scrollView.<span style="color:#b44">getScrollY</span>());<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// Get a list of files</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>List<span style="color:#666">&lt;</span>Long<span style="color:#666">&gt;</span><span style="color:#bbb"> </span>list<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">new</span><span style="color:#bbb"> </span>ArrayList<span style="color:#666">&lt;</span>Long<span style="color:#666">&gt;</span>();<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>Map<span style="color:#666">&lt;</span>Long,<span style="color:#bbb"> </span>String<span style="color:#666">&gt;</span><span style="color:#bbb"> </span>map<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">new</span><span style="color:#bbb"> </span>HashMap<span style="color:#666">&lt;</span>Long,<span style="color:#bbb"> </span>String<span style="color:#666">&gt;</span>();<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">for</span><span style="color:#bbb"> </span>(String<span style="color:#bbb"> </span>name<span style="color:#bbb"> </span>:<span style="color:#bbb"> </span>pathMap.<span style="color:#b44">keySet</span>())<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>File<span style="color:#bbb"> </span>file<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">new</span><span style="color:#bbb"> </span>File(name);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>list.<span style="color:#b44">add</span>(file.<span style="color:#b44">lastModified</span>());<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>map.<span style="color:#b44">put</span>(file.<span style="color:#b44">lastModified</span>(),<span style="color:#bbb"> </span>name);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// Sort in reverse order</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>Collections.<span style="color:#b44">sort</span>(list);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>Collections.<span style="color:#b44">reverse</span>(list);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>count<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>0;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">for</span><span style="color:#bbb"> </span>(<span style="color:#0b0;font-weight:bold">long</span><span style="color:#bbb"> </span>date<span style="color:#bbb"> </span>:<span style="color:#bbb"> </span>list)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>String<span style="color:#bbb"> </span>name<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>map.<span style="color:#b44">get</span>(date);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#080;font-style:italic">// Remove old files</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(count<span style="color:#bbb"> </span><span style="color:#666">&gt;=</span><span style="color:#bbb"> </span>MAX_PATHS)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>pathMap.<span style="color:#b44">remove</span>(name);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>removeList.<span style="color:#b44">add</span>(name);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>count<span style="color:#666">++</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>The list of file names is ordered by the last modified date and the
 old ones are added to the remove list.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// onPause
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f">@Override</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span> <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">onPause</span> <span style="color:#666">()</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#666">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">super</span><span style="color:#666">.</span><span style="color:#b44">onPause</span><span style="color:#666">();</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        SharedPreferences preferences <span style="color:#666">=</span>
-</span></span><span style="display:flex;"><span>            PreferenceManager<span style="color:#666">.</span><span style="color:#b44">getDefaultSharedPreferences</span><span style="color:#666">(</span><span style="color:#a2f;font-weight:bold">this</span><span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>        SharedPreferences<span style="color:#666">.</span><span style="color:#b44">Editor</span> editor <span style="color:#666">=</span> preferences<span style="color:#666">.</span><span style="color:#b44">edit</span><span style="color:#666">();</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// ...
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>
-</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Add the set of recent files
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        editor<span style="color:#666">.</span><span style="color:#b44">putStringSet</span><span style="color:#666">(</span>PREF_PATHS<span style="color:#666">,</span> pathMap<span style="color:#666">.</span><span style="color:#b44">keySet</span><span style="color:#666">());</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Add a position for each file
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">for</span> <span style="color:#666">(</span>String path <span style="color:#666">:</span> pathMap<span style="color:#666">.</span><span style="color:#b44">keySet</span><span style="color:#666">())</span>
-</span></span><span style="display:flex;"><span>            editor<span style="color:#666">.</span><span style="color:#b44">putInt</span><span style="color:#666">(</span>path<span style="color:#666">,</span> pathMap<span style="color:#666">.</span><span style="color:#b44">get</span><span style="color:#666">(</span>path<span style="color:#666">));</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Remove the old ones
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">for</span> <span style="color:#666">(</span>String path <span style="color:#666">:</span> removeList<span style="color:#666">)</span>
-</span></span><span style="display:flex;"><span>            editor<span style="color:#666">.</span><span style="color:#b44">remove</span><span style="color:#666">(</span>path<span style="color:#666">);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        editor<span style="color:#666">.</span><span style="color:#b44">apply</span><span style="color:#666">();</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// ...
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>   <span style="color:#666">}</span>
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// onPause</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f">@Override</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#00a000">onPause</span><span style="color:#bbb"> </span>()<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">super</span>.<span style="color:#b44">onPause</span>();<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>SharedPreferences<span style="color:#bbb"> </span>preferences<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>PreferenceManager.<span style="color:#b44">getDefaultSharedPreferences</span>(<span style="color:#a2f;font-weight:bold">this</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>SharedPreferences.<span style="color:#b44">Editor</span><span style="color:#bbb"> </span>editor<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>preferences.<span style="color:#b44">edit</span>();<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// ...</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// Add the set of recent files</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>editor.<span style="color:#b44">putStringSet</span>(PREF_PATHS,<span style="color:#bbb"> </span>pathMap.<span style="color:#b44">keySet</span>());<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// Add a position for each file</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">for</span><span style="color:#bbb"> </span>(String<span style="color:#bbb"> </span>path<span style="color:#bbb"> </span>:<span style="color:#bbb"> </span>pathMap.<span style="color:#b44">keySet</span>())<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>editor.<span style="color:#b44">putInt</span>(path,<span style="color:#bbb"> </span>pathMap.<span style="color:#b44">get</span>(path));<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// Remove the old ones</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">for</span><span style="color:#bbb"> </span>(String<span style="color:#bbb"> </span>path<span style="color:#bbb"> </span>:<span style="color:#bbb"> </span>removeList)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>editor.<span style="color:#b44">remove</span>(path);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>editor.<span style="color:#b44">apply</span>();<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// ...</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">   </span>}<span style="color:#bbb">
+</span></span></span></code></pre></div>
     </p>
     
     
