@@ -22,7 +22,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.121.2">
+<meta name="generator" content="Hugo 0.122.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -157,6 +157,37 @@ table {
 
 <div class="blog-post">
   <h3>
+    <a href="https://billthefarmer.github.io/blog/post/handling-resizing-in-windows/">Handling Resizing in Windows</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2018-06-19T20:23:44&#43;01:00">
+        Tue Jun 19, 2018
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    I have a windows app where I want the app window to maintain it&rsquo;s aspect ratio when it is resized. Windows provides two mechanisms for this, the WM_SIZE message and the WM_SIZING message. The WM_SIZE message is sent when a window has been resized to allow child windows to be resized, the WM_SIZING message is sent while the user is resizing it to allow the size to be adjusted. The messages are handled in the WindowProc callback function.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/post/handling-resizing-in-windows/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
     <a href="https://billthefarmer.github.io/blog/swift/">Swift</a>
   </h3>
   <div class="callout small">
@@ -281,38 +312,6 @@ Calendar custom styles The custom calendar has a list of styles that are customi
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/baked-tomatoes/">Baked Tomatoes</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2017-11-05T12:47:25Z">
-        Sun Nov 5, 2017
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/categories/recipes">
-        Recipes
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    On a holiday staying at the Atlantic Hotel, St Mary&rsquo;s there seemed to be a different breakfast chef nearly every day. One of them had a novel way of preparing tomatoes for an English breakfast.
-Ingredients Tomatoes Oregano Olive oil Method Take the stems off the tomatoes and place them upside down in a baking tin. They should be stable upside down. Cut a cross in the bottom of each one, put a few drops of oil on each one and sprinkle over some oregano.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/baked-tomatoes/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -337,6 +336,10 @@ Ingredients Tomatoes Oregano Olive oil Method Take the stems off the tomatoes an
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/flutter-search-widget/">
+        Flutter app bar search widget
+      </a></li>
     
       <li><a href="/blog/android-navigation-menu/">
         Android Navigation Menu
@@ -372,10 +375,6 @@ Ingredients Tomatoes Oregano Olive oil Method Take the stems off the tomatoes an
     
       <li><a href="/blog/word-count/">
         Android Word Count
-      </a></li>
-    
-      <li><a href="/blog/pea-and-ham-soup/">
-        Pea and Ham (or Bacon) Soup
       </a></li>
     
   </ul>

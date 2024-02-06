@@ -22,7 +22,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.121.2">
+<meta name="generator" content="Hugo 0.122.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -157,6 +157,38 @@ table {
 
 <div class="blog-post">
   <h3>
+    <a href="https://billthefarmer.github.io/blog/hiding-button/">Hiding Edit Button</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2020-02-15T20:59:47Z">
+        Sat Feb 15, 2020
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    My Diary and Notes apps have a floating button in the corner of the screen which is used to switch between editing markdown text and viewing the result. Although it is part of the android Material Design, this button has been the subject of several issues raised by users.
+I have seen apps which hide this button on scrolling, and this was one of the suggestions by users. Getting this to work correctly turned out to be more complex than initially considered, requiring two boolean flags and a lambda expression.
+  </p>
+  <a href='https://billthefarmer.github.io/blog/hiding-button/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
     <a href="https://billthefarmer.github.io/blog/derive-edit-position/">Derive Edit Position from Markdown</a>
   </h3>
   <div class="callout small">
@@ -283,38 +315,6 @@ Ingredients Thinly sliced mushrooms Dark soy sauce Method Thinly slice the mushr
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/post/source-code-highlighting/">Source Code Syntax Highlighting</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2019-03-24T11:01:35Z">
-        Sun Mar 24, 2019
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    One of the enhancements suggested for my android editor is syntax highlighting. The libraries I have found, including the one used in this blog, parse the input and produce output in HTML, using styled spans. Emacs makes extensive use of regular expressions for highlighting.
-HTML output is not very useful for a text editor. It could be used with Html.fromHtml() to produce styled text. This would then be loaded back into the editor all while the user is attempting to edit the text.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/post/source-code-highlighting/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -339,6 +339,10 @@ HTML output is not very useful for a text editor. It could be used with Html.fro
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/flutter-search-widget/">
+        Flutter app bar search widget
+      </a></li>
     
       <li><a href="/blog/android-navigation-menu/">
         Android Navigation Menu
@@ -374,10 +378,6 @@ HTML output is not very useful for a text editor. It could be used with Html.fro
     
       <li><a href="/blog/word-count/">
         Android Word Count
-      </a></li>
-    
-      <li><a href="/blog/pea-and-ham-soup/">
-        Pea and Ham (or Bacon) Soup
       </a></li>
     
   </ul>

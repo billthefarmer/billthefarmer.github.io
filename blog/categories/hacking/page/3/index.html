@@ -22,7 +22,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.121.2">
+<meta name="generator" content="Hugo 0.122.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -155,6 +155,38 @@ table {
 
 <div class="blog-post">
   <h3>
+    <a href="https://billthefarmer.github.io/blog/lambda-expressions/">Lambda Expressions</a>
+  </h3>
+  <div class="callout small">
+    <small>
+      <time datetime="2020-03-26T13:02:53Z">
+        Thu Mar 26, 2020
+      </time> by Bill Farmer.
+      Categories: 
+  
+    
+      <a href="/categories/hacking">
+        Hacking
+      </a>
+  
+
+.
+      
+    </small>
+  </div>
+  <p>
+    Lambda expressions or anonymous functions can be quite useful. For example using jQuery in JavaScript all the work gets done in anonymous functions unless you particularly want to extract them and give them names&hellip;
+jQuery(document).ready(function($) { // ... // Process the start button $(&#34;#start&#34;).click(function() { question = 0; $(&#34;#data&#34;).css(&#34;display&#34;, &#34;none&#34;); $(&#34;.intro&#34;).fadeOut(function() { // Do stuff }); // ... }); }); In C++ the syntax is curious in that there are a pair of square brackets enclosing &lsquo;captured&rsquo; variables&hellip;
+  </p>
+  <a href='https://billthefarmer.github.io/blog/lambda-expressions/'>Read more →</a>
+  <hr>
+</div>
+
+
+  
+
+<div class="blog-post">
+  <h3>
     <a href="https://billthefarmer.github.io/blog/hiding-button/">Hiding Edit Button</a>
   </h3>
   <div class="callout small">
@@ -280,38 +312,6 @@ HTML output is not very useful for a text editor. It could be used with Html.fro
 </div>
 
 
-  
-
-<div class="blog-post">
-  <h3>
-    <a href="https://billthefarmer.github.io/blog/post/musical-temperaments/">Musical Temperaments</a>
-  </h3>
-  <div class="callout small">
-    <small>
-      <time datetime="2019-01-29T20:58:13Z">
-        Tue Jan 29, 2019
-      </time> by Bill Farmer.
-      Categories: 
-  
-    
-      <a href="/categories/hacking">
-        Hacking
-      </a>
-  
-
-.
-      
-    </small>
-  </div>
-  <p>
-    My Tuner app uses equal temperament because that is the current standard and it is relatively easy to calculate using double precision arithmetic and maths library functions. First, declare some constants.
-private static final int OCTAVE = 12; private static final int EQUAL = 8; private static final int A_OFFSET = 9; private static final int C5_OFFSET = 57; The calculation first produces the cents relative to the reference, usually 440Hz.
-  </p>
-  <a href='https://billthefarmer.github.io/blog/post/musical-temperaments/'>Read more →</a>
-  <hr>
-</div>
-
-
 
 
   <div>
@@ -336,6 +336,10 @@ private static final int OCTAVE = 12; private static final int EQUAL = 8; privat
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/flutter-search-widget/">
+        Flutter app bar search widget
+      </a></li>
     
       <li><a href="/blog/android-navigation-menu/">
         Android Navigation Menu
@@ -371,10 +375,6 @@ private static final int OCTAVE = 12; private static final int EQUAL = 8; privat
     
       <li><a href="/blog/word-count/">
         Android Word Count
-      </a></li>
-    
-      <li><a href="/blog/pea-and-ham-soup/">
-        Pea and Ham (or Bacon) Soup
       </a></li>
     
   </ul>

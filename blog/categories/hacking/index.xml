@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2006 Bill Farmer</copyright>
-    <lastBuildDate>Wed, 06 Sep 2023 13:46:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 06 Feb 2024 08:37:04 +0000</lastBuildDate>
     <atom:link href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flutter app bar search widget</title>
+      <link>https://billthefarmer.github.io/blog/flutter-search-widget/</link>
+      <pubDate>Tue, 06 Feb 2024 08:37:04 +0000</pubDate>
+      <guid>https://billthefarmer.github.io/blog/flutter-search-widget/</guid>
+      <description>As an exercise I decided to reimplement my Buses app in flutter. To do this I need an open street map library, a beautiful soup library, a location library, an OS ref library, and a search widget. All of these are available in pub.dev, except a suitable search widget. All implementations of SearchBar in the docs include an annoying dropdown suggestions feature, which appears to be mandatory.&#xA;However it is possible to take the SearchBar and include it in an AppBar, change the icons and end up with something which looks and acts very similarly to an android search widget.</description>
+    </item>
     <item>
       <title>Android Navigation Menu</title>
       <link>https://billthefarmer.github.io/blog/android-navigation-menu/</link>
