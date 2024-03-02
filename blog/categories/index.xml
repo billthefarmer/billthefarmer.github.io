@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2006 Bill Farmer</copyright>
-    <lastBuildDate>Tue, 06 Feb 2024 08:37:04 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 Mar 2024 13:52:23 +0000</lastBuildDate>
     <atom:link href="https://billthefarmer.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Travel</title>
+      <link>https://billthefarmer.github.io/blog/categories/travel/</link>
+      <pubDate>Sat, 02 Mar 2024 13:52:23 +0000</pubDate>
+      <guid>https://billthefarmer.github.io/blog/categories/travel/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Hacking</title>
       <link>https://billthefarmer.github.io/blog/categories/hacking/</link>
