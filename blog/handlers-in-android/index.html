@@ -6,31 +6,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:title" content="Handlers in Android" />
-<meta property="og:description" content="Using a handler to return results from a worker thread This has taken me quite a while to put together. There are throw-away remarks in the Android docs about this, but no useful examples. You want to get the results back from a worker thread to your main activity so you can do stuff with them. There are several parts to this.
-The main activity implements Handler.Callback, and has a handleMessage function." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://billthefarmer.github.io/blog/handlers-in-android/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2015-05-10T15:51:40+00:00" />
-<meta property="article:modified_time" content="2015-05-10T15:51:40+00:00" />
+<meta property="og:url" content="https://billthefarmer.github.io/blog/handlers-in-android/">
+  <meta property="og:site_name" content="Bill Farmer">
+  <meta property="og:title" content="Handlers in Android">
+  <meta property="og:description" content="Using a handler to return results from a worker thread This has taken me quite a while to put together. There are throw-away remarks in the Android docs about this, but no useful examples. You want to get the results back from a worker thread to your main activity so you can do stuff with them. There are several parts to this.
+The main activity implements Handler.Callback, and has a handleMessage function.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2015-05-10T15:51:40+00:00">
+    <meta property="article:modified_time" content="2015-05-10T15:51:40+00:00">
 
 
-<meta itemprop="name" content="Handlers in Android">
-<meta itemprop="description" content="Using a handler to return results from a worker thread This has taken me quite a while to put together. There are throw-away remarks in the Android docs about this, but no useful examples. You want to get the results back from a worker thread to your main activity so you can do stuff with them. There are several parts to this.
-The main activity implements Handler.Callback, and has a handleMessage function."><meta itemprop="datePublished" content="2015-05-10T15:51:40+00:00" />
-<meta itemprop="dateModified" content="2015-05-10T15:51:40+00:00" />
-<meta itemprop="wordCount" content="204">
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Handlers in Android"/>
-<meta name="twitter:description" content="Using a handler to return results from a worker thread This has taken me quite a while to put together. There are throw-away remarks in the Android docs about this, but no useful examples. You want to get the results back from a worker thread to your main activity so you can do stuff with them. There are several parts to this.
-The main activity implements Handler.Callback, and has a handleMessage function."/>
+  <meta itemprop="name" content="Handlers in Android">
+  <meta itemprop="description" content="Using a handler to return results from a worker thread This has taken me quite a while to put together. There are throw-away remarks in the Android docs about this, but no useful examples. You want to get the results back from a worker thread to your main activity so you can do stuff with them. There are several parts to this.
+The main activity implements Handler.Callback, and has a handleMessage function.">
+  <meta itemprop="datePublished" content="2015-05-10T15:51:40+00:00">
+  <meta itemprop="dateModified" content="2015-05-10T15:51:40+00:00">
+  <meta itemprop="wordCount" content="204">
+  <meta itemprop="keywords" content="android,handler,thread,message">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Handlers in Android">
+  <meta name="twitter:description" content="Using a handler to return results from a worker thread This has taken me quite a while to put together. There are throw-away remarks in the Android docs about this, but no useful examples. You want to get the results back from a worker thread to your main activity so you can do stuff with them. There are several parts to this.
+The main activity implements Handler.Callback, and has a handleMessage function.">
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.128.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -42,7 +48,6 @@ The main activity implements Handler.Callback, and has a handleMessage function.
     
     
 
-    
     
 
 <style>
