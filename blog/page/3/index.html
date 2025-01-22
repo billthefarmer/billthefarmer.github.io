@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/">
+<meta property="og:url" content="http://localhost:1313/blog/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Bill Farmer">
   <meta property="og:description" content="Random thoughts on random subjects">
@@ -16,7 +16,8 @@
 
   <meta itemprop="name" content="Bill Farmer">
   <meta itemprop="description" content="Random thoughts on random subjects">
-  <meta itemprop="dateModified" content="2024-03-02T13:52:23+00:00">
+  <meta itemprop="datePublished" content="2025-01-21T20:05:23+00:00">
+  <meta itemprop="dateModified" content="2025-01-21T20:05:23+00:00">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Bill Farmer">
@@ -27,25 +28,25 @@
 
 
 
-<meta name="generator" content="Hugo 0.128.0">
+<meta name="generator" content="Hugo 0.141.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/">
     <title>Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     <!-- RSS 2.0 feed -->
-      <link rel="alternate" type="application/rss+xml" href="https://billthefarmer.github.io/blog/index.xml" title="Bill Farmer" />
+      <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/blog/index.xml" title="Bill Farmer" />
     
 
     
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -81,48 +82,52 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class="active"><a href="https://billthefarmer.github.io/blog/">
+              <li class="active"><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/morris/">
+                    Morris
+                  </a></li>
+                
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
                     Travel
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -137,7 +142,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -165,7 +170,7 @@ table {
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/word-count/">Android Word Count</a>
+    <a href="http://localhost:1313/blog/word-count/">Android Word Count</a>
   </h3>
   <div class="callout small">
     <small>
@@ -185,10 +190,15 @@ table {
     </small>
   </div>
   <p>
-    I was asked to add a word and character count to my Editor app. So I looked it up and found a Gist that uses BreakIterator. This relies on an embedded function that determines what is considered a word.
-So I tested it and found that it gave different results to the linux utility wc. However, the app already makes great use of regular expressions, which include an expression for a word character \w.
+    <p>I was asked to add a word and character count to my <a href="https://billthefarmer.github.io/editor/">Editor</a>
+app. So I looked it up and found a <a href="https://gist.github.com/ElegyD/65ad990d505ee20239ef5a3c16eec951">Gist</a> that uses
+<a href="https://developer.android.com/reference/java/text/BreakIterator">BreakIterator</a>. This relies on an embedded function that
+determines what is considered a word.</p>
+<p>So I tested it and found that it gave different results to the linux
+utility <a href="https://linux.die.net/man/1/wc">wc</a>. However, the app already makes great use of regular
+expressions, which include an expression for a word character <code>\w</code>.</p>
   </p>
-  <a href='https://billthefarmer.github.io/blog/word-count/'>Read more →</a>
+  <a href='http://localhost:1313/blog/word-count/'>Read more →</a>
   <hr>
 </div>
 
@@ -197,7 +207,7 @@ So I tested it and found that it gave different results to the linux utility wc.
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/pea-and-ham-soup/">Pea and Ham (or Bacon) Soup</a>
+    <a href="http://localhost:1313/blog/pea-and-ham-soup/">Pea and Ham (or Bacon) Soup</a>
   </h3>
   <div class="callout small">
     <small>
@@ -217,10 +227,45 @@ So I tested it and found that it gave different results to the linux utility wc.
     </small>
   </div>
   <p>
-    This soup is somewhat complicated to make, but delicious. Marrowfat peas need to be soaked overnight.
-Ingredients Olive oil 1/3 cup dried marrowfat peas 1/2 teaspoon bicarbonate of soda 1/3 cup frozen or fresh peas 1/2 cup chopped ham or bacon pieces A medium sized onion, chopped finely Two or three cloves of garlic, chopped A stick of celery, chopped finely A medium sized carrot, grated 1/2 vegetable stock cube Milk Method Soak the marrowfat peas overnight in a bowl of water with the 1/2 teaspoon of bicarbonate of soda.
+    <p>This soup is somewhat complicated to make, but delicious. Marrowfat peas need to be soaked overnight.</p>
+<h3 id="ingredients">Ingredients</h3>
+<ul>
+<li>Olive oil</li>
+<li>1/3 cup dried marrowfat peas</li>
+<li>1/2 teaspoon bicarbonate of soda</li>
+<li>1/3 cup frozen or fresh peas</li>
+<li>1/2 cup chopped ham or bacon pieces</li>
+<li>A medium sized onion, chopped finely</li>
+<li>Two or three cloves of garlic, chopped</li>
+<li>A stick of celery, chopped finely</li>
+<li>A medium sized carrot, grated</li>
+<li>1/2 vegetable stock cube</li>
+<li>Milk</li>
+</ul>
+<h3 id="method">Method</h3>
+<ol>
+<li>Soak the marrowfat peas overnight in a bowl of water with the 1/2
+teaspoon of bicarbonate of soda.</li>
+<li>Discard the soaking water and rinse the marrowfat peas.</li>
+<li>Cover the bottom of a small saucepan with olive oil and place on a
+low heat. Add the onion and garlic and half the peas and marrowfat
+peas.</li>
+<li>Cover and allow to steam until the onion is soft.</li>
+<li>Scrape into a small bowl and zizz with a blender. This will make
+bright green sludge.</li>
+<li>Cover the bottom of the pan again with olive oil and add the
+bacon, if using. Place on a low heat.</li>
+<li>Allow the bacon to cook through before adding the celery, carrot,
+stock cube and the rest of the peas, or if using ham, add it last.</li>
+<li>Cover and allow to steam until the celery and carrot is soft.</li>
+<li>Add the green sludge from the bowl and cover with milk.</li>
+<li>Stir from time to time to prevent sticking and to prevent the
+milk from boiling until the marrowfat peas are soft. This may
+take up to 20 minutes.</li>
+<li>Serve with toast or crusty bread.</li>
+</ol>
   </p>
-  <a href='https://billthefarmer.github.io/blog/pea-and-ham-soup/'>Read more →</a>
+  <a href='http://localhost:1313/blog/pea-and-ham-soup/'>Read more →</a>
   <hr>
 </div>
 
@@ -229,7 +274,7 @@ Ingredients Olive oil 1/3 cup dried marrowfat peas 1/2 teaspoon bicarbonate of s
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/caldo-verde/">Caldo Verde</a>
+    <a href="http://localhost:1313/blog/caldo-verde/">Caldo Verde</a>
   </h3>
   <div class="callout small">
     <small>
@@ -249,11 +294,40 @@ Ingredients Olive oil 1/3 cup dried marrowfat peas 1/2 teaspoon bicarbonate of s
     </small>
   </div>
   <p>
-    This is not the traditional method of making caldo verde. The cabbage should something like spring greens, collard greens or cavalo nero. Spinach beet works also. Roll up the leaves and slice thinly.
-Delicious lunch for two.
-Ingredients Olive oil Two or three green cabbage or kale leaves, sliced thinly A medium onion, chopped Two or three cloves of garlic, chopped A medium sized potato, preferably floury type, chopped into cubes About half a dozen slices of chorizo, chopped into small pieces and another half dozen slices left whole Half of a vegetable stock cube Milk Method Cover the bottom of a small saucepan with olive oil and place on a low heat Add the chopped chorizo and allow to warm up until bubbling merrily Add the onion and garlic, the stock cube, the potato, and the cabbage/kale on top Cover and allow to steam until the potatoes mash easily with a fork Add milk to cover and mash most of the potato with the fork Allow to warm through until the milk starts to froth Meanwhile, warm up the chorizo slices in a small skillet over a gentle heat Season to taste and ladle into bowls, add the slices of chorizo and oil from the skillet on top Serve with toast or crusty bread 
+    <p>This is not the traditional method of making caldo verde. The cabbage
+should something like spring greens, collard greens or cavalo
+nero. Spinach beet works also. Roll up the leaves and slice thinly.</p>
+<p>Delicious lunch for two.</p>
+<h3 id="ingredients">Ingredients</h3>
+<ul>
+<li>Olive oil</li>
+<li>Two or three green cabbage or kale leaves, sliced thinly</li>
+<li>A medium onion, chopped</li>
+<li>Two or three cloves of garlic, chopped</li>
+<li>A medium sized potato, preferably floury type, chopped into cubes</li>
+<li>About half a dozen slices of chorizo, chopped into small pieces and
+another half dozen slices left whole</li>
+<li>Half of a vegetable stock cube</li>
+<li>Milk</li>
+</ul>
+<h3 id="method">Method</h3>
+<ol>
+<li>Cover the bottom of a small saucepan with olive oil and place on a
+low heat</li>
+<li>Add the chopped chorizo and allow to warm up until bubbling merrily</li>
+<li>Add the onion and garlic, the stock cube, the potato, and the
+cabbage/kale on top</li>
+<li>Cover and allow to steam until the potatoes mash easily with a fork</li>
+<li>Add milk to cover and mash most of the potato with the fork</li>
+<li>Allow to warm through until the milk starts to froth</li>
+<li>Meanwhile, warm up the chorizo slices in a small skillet over a
+gentle heat</li>
+<li>Season to taste and ladle into bowls, add the slices of chorizo
+and oil from the skillet on top</li>
+<li>Serve with toast or crusty bread</li>
+</ol>
   </p>
-  <a href='https://billthefarmer.github.io/blog/caldo-verde/'>Read more →</a>
+  <a href='http://localhost:1313/blog/caldo-verde/'>Read more →</a>
   <hr>
 </div>
 
@@ -262,7 +336,7 @@ Ingredients Olive oil Two or three green cabbage or kale leaves, sliced thinly A
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/turkey-gammon-broccoli-bake/">Turkey Gammon Broccoli Bake</a>
+    <a href="http://localhost:1313/blog/turkey-gammon-broccoli-bake/">Turkey Gammon Broccoli Bake</a>
   </h3>
   <div class="callout small">
     <small>
@@ -282,10 +356,66 @@ Ingredients Olive oil Two or three green cabbage or kale leaves, sliced thinly A
     </small>
   </div>
   <p>
-    This is a recipe for using up a Christmas turkey or chicken, gammon joint, veg etc. You will need a large saucepan for the veg and pasta, a small saucepan for the sauce and a casserole dish or similar to bake it in.
-Ingredients Cooked turkey/chicken, chopped Cooked gammon, chopped Broccoli, cut into florets Any other veg that needs using Penne pasta Cheddar or Red Leicester cheese Plain flour Onion, chopped Garlic, chopped Celery, chopped Black pepper Dried oregano Olive oil Milk Method Meat, Broccoli and Pasta First cook the broccoli and any other veg in a large saucepan in the minimum of water.
+    <p>This is a recipe for using up a Christmas turkey or chicken, gammon
+joint, veg etc. You will need a large saucepan for the veg and pasta,
+a small saucepan for the sauce and a casserole dish or similar to bake
+it in.</p>
+<h3 id="ingredients">Ingredients</h3>
+<ul>
+<li>Cooked turkey/chicken, chopped</li>
+<li>Cooked gammon, chopped</li>
+<li>Broccoli, cut into florets</li>
+<li>Any other veg that needs using</li>
+<li>Penne pasta</li>
+<li>Cheddar or Red Leicester cheese</li>
+<li>Plain flour</li>
+<li>Onion, chopped</li>
+<li>Garlic, chopped</li>
+<li>Celery, chopped</li>
+<li>Black pepper</li>
+<li>Dried oregano</li>
+<li>Olive oil</li>
+<li>Milk</li>
+</ul>
+<h3 id="method">Method</h3>
+<h4 id="meat-broccoli-and-pasta">Meat, Broccoli and Pasta</h4>
+<ol>
+<li>First cook the broccoli and any other veg in a large saucepan in
+the minimum of water. You will need enough veg to about half fill
+the dish you want to cook it in.</li>
+<li>While this is cooking, arrange the meat in the cooking dish, you
+will need enough to cover the bottom.</li>
+<li>When the veg is cooked reserve the cooking liquid and arrange the
+veg on top of the meat.</li>
+<li>Use the same saucepan to cook the pasta. You will need enough to
+fill up the other half of the cooking dish when cooked.</li>
+</ol>
+<h4 id="cheese-sauce">Cheese Sauce</h4>
+<ol start="5">
+<li>While the pasta is cooking cover the bottom of a small saucepan
+with olive oil and add chopped onion, garlic, celery, black pepper
+and oregano.</li>
+<li>Cook the onions, etc over a low heat until the veg turns soft and
+add about a heaped tablespoon of flour and stir it up. You will
+probably need to add more oil, or it will be too dry.</li>
+<li>Add the reserved veg cooking liquid and enough milk to half fill
+the pan. Keep stirring to stop it catching on the pan and add more
+milk as necessary.</li>
+<li>Add the cheese, chopped into small pieces and stir it in until it
+melts. The sauce needs to be runny enough to percolate down
+through the veg and pasta to the meat underneath.</li>
+</ol>
+<h4 id="finish-the-dish">Finish the Dish</h4>
+<ol start="9">
+<li>Drain the pasta and add to the dish and cover with the sauce.</li>
+<li>Grate cheese over the top of the dish, grind some black pepper
+over it and sprinkle with oregano.</li>
+<li>Place in a hot oven, 200°C for about 20 minutes until the top is
+browned and the sauce is bubbling.</li>
+<li>Enjoy.</li>
+</ol>
   </p>
-  <a href='https://billthefarmer.github.io/blog/turkey-gammon-broccoli-bake/'>Read more →</a>
+  <a href='http://localhost:1313/blog/turkey-gammon-broccoli-bake/'>Read more →</a>
   <hr>
 </div>
 
@@ -294,7 +424,7 @@ Ingredients Cooked turkey/chicken, chopped Cooked gammon, chopped Broccoli, cut 
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/draught-hash-brown/">Draught Hash Brown</a>
+    <a href="http://localhost:1313/blog/draught-hash-brown/">Draught Hash Brown</a>
   </h3>
   <div class="callout small">
     <small>
@@ -314,10 +444,28 @@ Ingredients Cooked turkey/chicken, chopped Cooked gammon, chopped Broccoli, cut 
     </small>
   </div>
   <p>
-    Many years ago, in a hotel in Hollywood, we thought the breakfast was a bit overpriced. Someone suggested the Dunkin&rsquo; Donut across the road, so over we went. In there the guy was offering bacon, egg over easy, and hash brown for 99¢. I was intrigued with the hash brown, he just took a handful of grated potato from a plastic bag and chucked it on the griddle plate.
-Ingredients Grated potato Vegetable cooking oil Method Put some cooking oil in a hot medium sized skillet Grate your potatoes and put them in the pan Cook until browned underneath and turn over Serve when browned on the reverse side Goes extremely well with bacon and eggs and the trimmings.
+    <p>Many years ago, in a hotel in Hollywood, we thought the breakfast was
+a bit overpriced. Someone suggested the Dunkin&rsquo; Donut across the road,
+so over we went. In there the guy was offering bacon, egg over easy,
+and hash brown for 99¢. I was intrigued with the hash brown, he just
+took a handful of grated potato from a plastic bag and chucked it on
+the griddle plate.</p>
+<h3 id="ingredients">Ingredients</h3>
+<ul>
+<li>Grated potato</li>
+<li>Vegetable cooking oil</li>
+</ul>
+<h3 id="method">Method</h3>
+<ol>
+<li>Put some cooking oil in a hot medium sized skillet</li>
+<li>Grate your potatoes and put them in the pan</li>
+<li>Cook until browned underneath and turn over</li>
+<li>Serve when browned on the reverse side</li>
+</ol>
+<p>Goes extremely well with bacon and eggs and the trimmings. If
+consolidated into a potato cake becomes a Swiss rosti.</p>
   </p>
-  <a href='https://billthefarmer.github.io/blog/draught-hash-brown/'>Read more →</a>
+  <a href='http://localhost:1313/blog/draught-hash-brown/'>Read more →</a>
   <hr>
 </div>
 
@@ -418,18 +566,18 @@ Ingredients Grated potato Vegetable cooking oil Method Put some cooking oil in a
       <div class="row column">
         <p>
           
-          Copyright © 2024 Bill Farmer
+          Copyright © 2025 Bill Farmer
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/#">Back to top</a>
+          <a href="http://localhost:1313/blog/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/derive-edit-position/">
+<meta property="og:url" content="http://localhost:1313/blog/derive-edit-position/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Derive Edit Position from Markdown">
   <meta property="og:description" content="I had a request to switch to the edit view from the markdown view at the double tap position in my Diary app. The app already has a gesture detector so I just had to add an onDoubleTap function.
 To get the tap position in the markdown view it is necessary to compensate for the position of the view on the screen, scrolling, and the display density.
-// onDoubleTap @Override public boolean onDoubleTap(MotionEvent e) { if (shown) { int[] l = new int[2]; markdownView.">
+// onDoubleTap @Override public boolean onDoubleTap(MotionEvent e) { if (shown) { int[] l = new int[2]; markdownView.getLocationOnScreen(l); // Get tap position float y = e.getY() - l[1]; int scrollY = markdownView.getScrollY(); int contentHeight = markdownView.getContentHeight(); float density = getResources().getDisplayMetrics().density; // Get markdown position final float p = (y &#43; scrollY) / (contentHeight * density); The function to get the view location on screen is a bit arcane in that you must provide a two element array for the X and Y co-ordinates. The position as a proportion of the total length of the displayed markdown is calculated from the corrected Y position, the scroll position and the density.">
   <meta property="og:locale" content="en_gb">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -22,7 +22,7 @@ To get the tap position in the markdown view it is necessary to compensate for t
   <meta itemprop="name" content="Derive Edit Position from Markdown">
   <meta itemprop="description" content="I had a request to switch to the edit view from the markdown view at the double tap position in my Diary app. The app already has a gesture detector so I just had to add an onDoubleTap function.
 To get the tap position in the markdown view it is necessary to compensate for the position of the view on the screen, scrolling, and the display density.
-// onDoubleTap @Override public boolean onDoubleTap(MotionEvent e) { if (shown) { int[] l = new int[2]; markdownView.">
+// onDoubleTap @Override public boolean onDoubleTap(MotionEvent e) { if (shown) { int[] l = new int[2]; markdownView.getLocationOnScreen(l); // Get tap position float y = e.getY() - l[1]; int scrollY = markdownView.getScrollY(); int contentHeight = markdownView.getContentHeight(); float density = getResources().getDisplayMetrics().density; // Get markdown position final float p = (y &#43; scrollY) / (contentHeight * density); The function to get the view location on screen is a bit arcane in that you must provide a two element array for the X and Y co-ordinates. The position as a proportion of the total length of the displayed markdown is calculated from the corrected Y position, the scroll position and the density.">
   <meta itemprop="datePublished" content="2020-02-08T18:24:23+00:00">
   <meta itemprop="dateModified" content="2020-02-08T18:24:23+00:00">
   <meta itemprop="wordCount" content="356">
@@ -32,22 +32,22 @@ To get the tap position in the markdown view it is necessary to compensate for t
   <meta name="twitter:title" content="Derive Edit Position from Markdown">
   <meta name="twitter:description" content="I had a request to switch to the edit view from the markdown view at the double tap position in my Diary app. The app already has a gesture detector so I just had to add an onDoubleTap function.
 To get the tap position in the markdown view it is necessary to compensate for the position of the view on the screen, scrolling, and the display density.
-// onDoubleTap @Override public boolean onDoubleTap(MotionEvent e) { if (shown) { int[] l = new int[2]; markdownView.">
+// onDoubleTap @Override public boolean onDoubleTap(MotionEvent e) { if (shown) { int[] l = new int[2]; markdownView.getLocationOnScreen(l); // Get tap position float y = e.getY() - l[1]; int scrollY = markdownView.getScrollY(); int contentHeight = markdownView.getContentHeight(); float density = getResources().getDisplayMetrics().density; // Get markdown position final float p = (y &#43; scrollY) / (contentHeight * density); The function to get the view location on screen is a bit arcane in that you must provide a two element array for the X and Y co-ordinates. The position as a proportion of the total length of the displayed markdown is calculated from the corrected Y position, the scroll position and the density.">
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.128.0">
+<meta name="generator" content="Hugo 0.141.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/derive-edit-position/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/derive-edit-position/">
     <title>Derive Edit Position from Markdown | Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     
 
@@ -55,7 +55,7 @@ To get the tap position in the markdown view it is necessary to compensate for t
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -91,48 +91,52 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/morris/">
+                    Morris
+                  </a></li>
+                
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
                     Travel
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -147,7 +151,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -167,7 +171,7 @@ table {
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/derive-edit-position/">Derive Edit Position from Markdown</a>
+      <a href="http://localhost:1313/blog/derive-edit-position/">Derive Edit Position from Markdown</a>
     </h3>
     <div class="callout small">
       <small>
@@ -369,18 +373,18 @@ position in about the right place.</p>
       <div class="row column">
         <p>
           
-          Copyright © 2024 Bill Farmer
+          Copyright © 2025 Bill Farmer
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/derive-edit-position/#">Back to top</a>
+          <a href="http://localhost:1313/blog/derive-edit-position/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>

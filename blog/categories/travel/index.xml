@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Travel on Bill Farmer</title>
-    <link>https://billthefarmer.github.io/blog/categories/travel/</link>
+    <link>http://localhost:1313/blog/categories/travel/</link>
     <description>Recent content in Travel on Bill Farmer</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2006 Bill Farmer</copyright>
     <lastBuildDate>Sat, 02 Mar 2024 13:52:23 +0000</lastBuildDate>
-    <atom:link href="https://billthefarmer.github.io/blog/categories/travel/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/categories/travel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Beach Villas</title>
-      <link>https://billthefarmer.github.io/blog/beach-villas/</link>
+      <link>http://localhost:1313/blog/beach-villas/</link>
       <pubDate>Sat, 02 Mar 2024 13:52:23 +0000</pubDate>
-      <guid>https://billthefarmer.github.io/blog/beach-villas/</guid>
-      <description>On a variety of holidays we have come across a wide range of interesting development opportunities.&#xA;Irish rural retreat near Cahir, Ireland. Some rethatching required.&#xA;Pretty Welsh country cottage near Caerphilly, UK. Natural slate roof.&#xA;On the beach at Zahora, Costa de Luz, Spain. This has since been turned into a beach bar. The lighthouse at Trafalgar can be seen in the distance.&#xA;Country cottage near Olveira, Galicia, Spain. Sturdy chimney.</description>
+      <guid>http://localhost:1313/blog/beach-villas/</guid>
+      <description>&lt;p&gt;On a variety of holidays we have come across a wide range of&#xA;interesting development opportunities.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;images/2024/03/Irish.jpg&#34; alt=&#34;Cahir&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Irish rural retreat near Cahir, Ireland. Some rethatching required.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;images/2024/03/Welsh.jpg&#34; alt=&#34;Caerphilly&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Pretty Welsh country cottage near Caerphilly, UK. Natural slate roof.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;images/2024/03/Zahora.jpg&#34; alt=&#34;Zahora&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;On the beach at Zahora, Costa de Luz, Spain. This has since been&#xA;turned into a beach bar. The lighthouse at Trafalgar can be seen in&#xA;the distance.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;images/2024/03/Olveira.jpg&#34; alt=&#34;Olveira&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Country cottage near Olveira, Galicia, Spain. Sturdy chimney.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

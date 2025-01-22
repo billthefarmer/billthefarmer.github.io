@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DIY on Bill Farmer</title>
-    <link>https://billthefarmer.github.io/blog/categories/diy/</link>
+    <link>http://localhost:1313/blog/categories/diy/</link>
     <description>Recent content in DIY on Bill Farmer</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2006 Bill Farmer</copyright>
     <lastBuildDate>Fri, 12 Jul 2019 10:49:21 +0100</lastBuildDate>
-    <atom:link href="https://billthefarmer.github.io/blog/categories/diy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/categories/diy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fixing Basin Waste Pop Up</title>
-      <link>https://billthefarmer.github.io/blog/fixing-basin-waste-pop-up/</link>
+      <link>http://localhost:1313/blog/fixing-basin-waste-pop-up/</link>
       <pubDate>Fri, 12 Jul 2019 10:49:21 +0100</pubDate>
-      <guid>https://billthefarmer.github.io/blog/fixing-basin-waste-pop-up/</guid>
-      <description>There are two things that seem to go wrong with pop up basin waste plugs, either the clicker stops working or the O ring washer fails.&#xA;Clicker The clicker can stay stuck down, refuse to stay down or come apart.&#xA;If it sticks down it can possibly be pulled back up with a drain plunger, otherwise you will need to take off the U bend and poke it back up with a long screwdriver.</description>
+      <guid>http://localhost:1313/blog/fixing-basin-waste-pop-up/</guid>
+      <description>&lt;p&gt;There are two things that seem to go wrong with pop up basin waste&#xA;plugs, either the clicker stops working or the O ring washer fails.&lt;/p&gt;&#xA;&lt;h3 id=&#34;clicker&#34;&gt;Clicker&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;images/2019/07/P1030007.JPG&#34; alt=&#34;Clicker&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The clicker can stay stuck down, refuse to stay down or come apart.&lt;/p&gt;&#xA;&lt;p&gt;If it sticks down it can possibly be pulled back up with a drain&#xA;plunger, otherwise you will need to take off the U bend and poke it&#xA;back up with a long screwdriver. To take it out, unscrew the plug from&#xA;the top and use a small adjustable spanner to remove the clicker. It&#xA;will be choked up with sludge and hair, clean it out and put some&#xA;petroleum jelly or WD40 on it for lubrication. It should then work again.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Replacing microbore radiators</title>
-      <link>https://billthefarmer.github.io/blog/replacing-micro-bore-radiators/</link>
+      <link>http://localhost:1313/blog/replacing-micro-bore-radiators/</link>
       <pubDate>Sun, 31 Jul 2016 15:46:48 +0000</pubDate>
-      <guid>https://billthefarmer.github.io/blog/replacing-micro-bore-radiators/</guid>
-      <description>My heating system uses 1/4″ copper pipe, which I think was called microbore at the time. Both pipes went to a valve at one end of the radiator. There were a variety of valves fitted, but most of them were like this one.&#xA;I investigated the best method for replacing the radiators and valves and found that using standard 15mm fittings with 15/8mm reducers was probably the best option. This involves removing the old radiator and valve, carefully removing the olives from the existing pipes with a junior hacksaw to cut a slot, and a screwdriver to pry it off.</description>
+      <guid>http://localhost:1313/blog/replacing-micro-bore-radiators/</guid>
+      <description>&lt;p&gt;My heating system uses 1/4″ copper pipe, which I think was&#xA;called microbore at the time. Both pipes went to a valve at one end of&#xA;the radiator. There were a variety of valves fitted, but most of them&#xA;were like this one.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;images/2016/07/P1020401.jpg&#34; alt=&#34;P1020401&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I investigated the best method for replacing the radiators and valves&#xA;and found that using standard 15mm fittings with 15/8mm reducers was&#xA;probably the best option. This involves removing the old radiator and&#xA;valve, carefully removing the olives from the existing pipes with a&#xA;junior hacksaw to cut a slot, and a screwdriver to pry it off.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

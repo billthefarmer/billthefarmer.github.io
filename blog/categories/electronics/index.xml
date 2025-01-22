@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Electronics on Bill Farmer</title>
-    <link>https://billthefarmer.github.io/blog/categories/electronics/</link>
+    <link>http://localhost:1313/blog/categories/electronics/</link>
     <description>Recent content in Electronics on Bill Farmer</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2006 Bill Farmer</copyright>
     <lastBuildDate>Sat, 14 Jul 2018 21:22:37 +0100</lastBuildDate>
-    <atom:link href="https://billthefarmer.github.io/blog/categories/electronics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/categories/electronics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Smart Meters</title>
-      <link>https://billthefarmer.github.io/blog/post/smart-meters/</link>
+      <link>http://localhost:1313/blog/post/smart-meters/</link>
       <pubDate>Sat, 14 Jul 2018 21:22:37 +0100</pubDate>
-      <guid>https://billthefarmer.github.io/blog/post/smart-meters/</guid>
-      <description>CALMU Smart meters are not a new idea. I was a member of a project in the early 1980s which designed and rolled out a prototype smart meter which was far ahead of it&amp;rsquo;s time. The unit was called a CALMU (Credit and Load Management Unit). It was capable of recording electricity consumption with several tariffs, gas consumption, with a connection to a suitable gas meter and water use, with a connection to a suitable water meter.</description>
+      <guid>http://localhost:1313/blog/post/smart-meters/</guid>
+      <description>&lt;h4 id=&#34;calmu&#34;&gt;CALMU&lt;/h4&gt;&#xA;&lt;p&gt;Smart meters are not a new idea. I was a member of a project in the&#xA;early 1980s which designed and rolled out a prototype smart meter&#xA;which was far ahead of it&amp;rsquo;s time. The unit was called a &lt;a href=&#34;https://www.umsmeters.co.uk/contact-us/manuals-and-downloads/old-pri-meters-kit&#34;&gt;CALMU&lt;/a&gt;&#xA;(Credit and Load Management Unit). It was capable of recording&#xA;electricity consumption with several tariffs, gas consumption, with a&#xA;connection to a suitable gas meter and water use, with a connection to&#xA;a suitable water meter. It had a remote display panel with a &lt;a href=&#34;https://en.wikipedia.org/wiki/Vacuum_fluorescent_display&#34;&gt;vacuum&#xA;fluorescent display&lt;/a&gt; which could be mounted in a suitable position.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mullard 5-20 Amplifier</title>
-      <link>https://billthefarmer.github.io/blog/post/mullard-5-20-amplifier/</link>
+      <link>http://localhost:1313/blog/post/mullard-5-20-amplifier/</link>
       <pubDate>Sun, 01 Jul 2018 16:25:18 +0100</pubDate>
-      <guid>https://billthefarmer.github.io/blog/post/mullard-5-20-amplifier/</guid>
-      <description>Many years ago one of my brothers&amp;rsquo; friends brought me a faulty military surplus valve amplifier which used 807 valves for the output. It appeared to have suffered a flashover which had destroyed much of the wiring and components inside the chassis, but the tagboards appeared to be reusable.&#xA;I had a copy of a Mullard amplifier book, Mullard Circuits for Audio Amplifiers at the time, which I subsequently lent so someone who never returned it.</description>
+      <guid>http://localhost:1313/blog/post/mullard-5-20-amplifier/</guid>
+      <description>&lt;p&gt;Many years ago one of my brothers&amp;rsquo; friends brought me a faulty&#xA;military surplus valve amplifier which used &lt;a href=&#34;https://en.wikipedia.org/wiki/807_(vacuum_tube)&#34;&gt;807&lt;/a&gt; valves for the&#xA;output. It appeared to have suffered a flashover which had destroyed&#xA;much of the wiring and components inside the chassis, but the&#xA;tagboards appeared to be reusable.&lt;/p&gt;&#xA;&lt;p&gt;I had a copy of a Mullard amplifier book, Mullard Circuits for Audio&#xA;Amplifiers at the time, which I subsequently lent so someone who never&#xA;returned it. Just recently I found a copy &lt;a href=&#34;http://www.sowter.co.uk/pdf/Mullard-Circuits-for-Audio-Amplifiers.pdf&#34;&gt;online&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/categories/hacking/">
+<meta property="og:url" content="http://localhost:1313/blog/categories/hacking/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Hacking">
   <meta property="og:description" content="Random thoughts on random subjects">
@@ -16,6 +16,7 @@
 
   <meta itemprop="name" content="Hacking">
   <meta itemprop="description" content="Random thoughts on random subjects">
+  <meta itemprop="datePublished" content="2024-02-06T08:37:04+00:00">
   <meta itemprop="dateModified" content="2024-02-06T08:37:04+00:00">
 
   <meta name="twitter:card" content="summary">
@@ -27,25 +28,25 @@
 
 
 
-<meta name="generator" content="Hugo 0.128.0">
+<meta name="generator" content="Hugo 0.141.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/categories/hacking/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/categories/hacking/">
     <title>Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     <!-- RSS 2.0 feed -->
-      <link rel="alternate" type="application/rss+xml" href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" title="Bill Farmer" />
+      <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/blog/categories/hacking/index.xml" title="Bill Farmer" />
     
 
     
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -81,48 +82,52 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/morris/">
+                    Morris
+                  </a></li>
+                
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
                     Travel
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -137,7 +142,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -163,7 +168,7 @@ table {
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/post/musical-temperaments/">Musical Temperaments</a>
+    <a href="http://localhost:1313/blog/post/musical-temperaments/">Musical Temperaments</a>
   </h3>
   <div class="callout small">
     <small>
@@ -183,10 +188,19 @@ table {
     </small>
   </div>
   <p>
-    My Tuner app uses equal temperament because that is the current standard and it is relatively easy to calculate using double precision arithmetic and maths library functions. First, declare some constants.
-private static final int OCTAVE = 12; private static final int EQUAL = 8; private static final int A_OFFSET = 9; private static final int C5_OFFSET = 57; The calculation first produces the cents relative to the reference, usually 440Hz.
+    <p>My <a href="https://github.com/billthefarmer/tuner">Tuner app</a> uses equal temperament because that is the current
+standard and it is relatively easy to calculate using double precision
+arithmetic and maths library functions. First, declare some constants.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>OCTAVE<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>12;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>EQUAL<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>8;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>A_OFFSET<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>9;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>C5_OFFSET<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>57;<span style="color:#bbb">
+</span></span></span></code></pre></div><p>The calculation first produces the cents relative to the reference,
+usually 440Hz. Then the note number with an added constant because
+octaves start at <strong>C</strong>, not <strong>A</strong>. Then the reference frequency for
+that note, then the cents difference.</p>
   </p>
-  <a href='https://billthefarmer.github.io/blog/post/musical-temperaments/'>Read more →</a>
+  <a href='http://localhost:1313/blog/post/musical-temperaments/'>Read more →</a>
   <hr>
 </div>
 
@@ -195,7 +209,7 @@ private static final int OCTAVE = 12; private static final int EQUAL = 8; privat
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/post/draw-musical-staff/">Draw Musical Staff</a>
+    <a href="http://localhost:1313/blog/post/draw-musical-staff/">Draw Musical Staff</a>
   </h3>
   <div class="callout small">
     <small>
@@ -215,11 +229,53 @@ private static final int OCTAVE = 12; private static final int EQUAL = 8; privat
     </small>
   </div>
   <p>
-    A musical staff is not a trivial thing to draw because of the complex curves needed for the treble and bass clef. What is needed is a source of vector drawing coordinates.
-The data used was originally intended for use in postscript, so the vertical axis is reversed.
-// Treble clef private static final float tc[][]= { {-6, 16}, {-8, 13}, {-14, 19}, {-10, 35}, {2, 35}, {8, 37}, {21, 30}, {21, 17}, {21, 5}, {10, -1}, {0, -1}, {-12, -1}, {-23, 5}, {-23, 22}, {-23, 29}, {-22, 37}, {-7, 49}, {10, 61}, {10, 68}, {10, 73}, {10, 78}, {9, 82}, {7, 82}, {2, 78}, {-2, 68}, {-2, 62}, {-2, 25}, {10, 18}, {11, -8}, {11, -18}, {5, -23}, {-4, -23}, {-10, -23}, {-15, -18}, {-15, -13}, {-15, -8}, {-12, -4}, {-7, -4}, {3, -4}, {3, -20}, {-6, -17}, {-5, -23}, {9, -20}, {9, -9}, {7, 24}, {-5, 30}, {-5, 67}, {-5, 78}, {-2, 87}, {7, 91}, {13, 87}, {18, 80}, {17, 73}, {17, 62}, {10, 54}, {1, 45}, {-5, 38}, {-15, 33}, {-15, 19}, {-15, 7}, {-8, 1}, {0, 1}, {8, 1}, {15, 6}, {15, 14}, {15, 23}, {7, 26}, {2, 26}, {-5, 26}, {-9, 21}, {-6, 16} }; // Bass clef private static final float bc[][] = { {-2.
+    <p>A musical staff is not a trivial thing to draw because of the complex
+curves needed for the treble and bass clef. What is needed is a source
+of vector drawing coordinates.</p>
+<p>The data used was originally intended for use in postscript, so the
+vertical axis is reversed.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// Treble clef</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">float</span><span style="color:#bbb"> </span>tc<span style="color:#666">[][]=</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#666">-</span>6,<span style="color:#bbb"> </span>16},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>8,<span style="color:#bbb"> </span>13},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>14,<span style="color:#bbb"> </span>19},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>10,<span style="color:#bbb"> </span>35},<span style="color:#bbb">  </span>{2,<span style="color:#bbb"> </span>35},<span style="color:#bbb">  </span>{8,<span style="color:#bbb"> </span>37},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{21,<span style="color:#bbb"> </span>30},<span style="color:#bbb">  </span>{21,<span style="color:#bbb"> </span>17},<span style="color:#bbb">  </span>{21,<span style="color:#bbb"> </span>5},<span style="color:#bbb">  </span>{10,<span style="color:#bbb"> </span><span style="color:#666">-</span>1},<span style="color:#bbb">  </span>{0,<span style="color:#bbb"> </span><span style="color:#666">-</span>1},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>12,<span style="color:#bbb"> </span><span style="color:#666">-</span>1},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#666">-</span>23,<span style="color:#bbb"> </span>5},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>23,<span style="color:#bbb"> </span>22},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>23,<span style="color:#bbb"> </span>29},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>22,<span style="color:#bbb"> </span>37},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>7,<span style="color:#bbb"> </span>49},<span style="color:#bbb">  </span>{10,<span style="color:#bbb"> </span>61},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{10,<span style="color:#bbb"> </span>68},<span style="color:#bbb">  </span>{10,<span style="color:#bbb"> </span>73},<span style="color:#bbb">  </span>{10,<span style="color:#bbb"> </span>78},<span style="color:#bbb">  </span>{9,<span style="color:#bbb"> </span>82},<span style="color:#bbb">  </span>{7,<span style="color:#bbb"> </span>82},<span style="color:#bbb">  </span>{2,<span style="color:#bbb"> </span>78},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#666">-</span>2,<span style="color:#bbb"> </span>68},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>2,<span style="color:#bbb"> </span>62},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>2,<span style="color:#bbb"> </span>25},<span style="color:#bbb">  </span>{10,<span style="color:#bbb"> </span>18},<span style="color:#bbb">  </span>{11,<span style="color:#bbb"> </span><span style="color:#666">-</span>8},<span style="color:#bbb">  </span>{11,<span style="color:#bbb"> </span><span style="color:#666">-</span>18},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{5,<span style="color:#bbb"> </span><span style="color:#666">-</span>23},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>4,<span style="color:#bbb"> </span><span style="color:#666">-</span>23},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>10,<span style="color:#bbb"> </span><span style="color:#666">-</span>23},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>15,<span style="color:#bbb"> </span><span style="color:#666">-</span>18},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>15,<span style="color:#bbb"> </span><span style="color:#666">-</span>13},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#666">-</span>15,<span style="color:#bbb"> </span><span style="color:#666">-</span>8},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>12,<span style="color:#bbb"> </span><span style="color:#666">-</span>4},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>7,<span style="color:#bbb"> </span><span style="color:#666">-</span>4},<span style="color:#bbb">  </span>{3,<span style="color:#bbb"> </span><span style="color:#666">-</span>4},<span style="color:#bbb">  </span>{3,<span style="color:#bbb"> </span><span style="color:#666">-</span>20},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>6,<span style="color:#bbb"> </span><span style="color:#666">-</span>17},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#666">-</span>5,<span style="color:#bbb"> </span><span style="color:#666">-</span>23},<span style="color:#bbb">  </span>{9,<span style="color:#bbb"> </span><span style="color:#666">-</span>20},<span style="color:#bbb">  </span>{9,<span style="color:#bbb"> </span><span style="color:#666">-</span>9},<span style="color:#bbb">  </span>{7,<span style="color:#bbb"> </span>24},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>5,<span style="color:#bbb"> </span>30},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>5,<span style="color:#bbb"> </span>67},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#666">-</span>5,<span style="color:#bbb"> </span>78},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>2,<span style="color:#bbb"> </span>87},<span style="color:#bbb">  </span>{7,<span style="color:#bbb"> </span>91},<span style="color:#bbb">  </span>{13,<span style="color:#bbb"> </span>87},<span style="color:#bbb">  </span>{18,<span style="color:#bbb"> </span>80},<span style="color:#bbb">  </span>{17,<span style="color:#bbb"> </span>73},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{17,<span style="color:#bbb"> </span>62},<span style="color:#bbb">  </span>{10,<span style="color:#bbb"> </span>54},<span style="color:#bbb">  </span>{1,<span style="color:#bbb"> </span>45},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>5,<span style="color:#bbb"> </span>38},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>15,<span style="color:#bbb"> </span>33},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>15,<span style="color:#bbb"> </span>19},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#666">-</span>15,<span style="color:#bbb"> </span>7},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>8,<span style="color:#bbb"> </span>1},<span style="color:#bbb">  </span>{0,<span style="color:#bbb"> </span>1},<span style="color:#bbb">  </span>{8,<span style="color:#bbb"> </span>1},<span style="color:#bbb">  </span>{15,<span style="color:#bbb"> </span>6},<span style="color:#bbb">  </span>{15,<span style="color:#bbb"> </span>14},<span style="color:#bbb">  </span>{15,<span style="color:#bbb"> </span>23},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{7,<span style="color:#bbb"> </span>26},<span style="color:#bbb">  </span>{2,<span style="color:#bbb"> </span>26},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>5,<span style="color:#bbb"> </span>26},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>9,<span style="color:#bbb"> </span>21},<span style="color:#bbb">  </span>{<span style="color:#666">-</span>6,<span style="color:#bbb"> </span>16}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>};<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// Bass clef</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">float</span><span style="color:#bbb"> </span>bc<span style="color:#666">[][]</span><span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#666">-</span>2.<span style="color:#b44">3f</span>,3},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{6,7},<span style="color:#bbb"> </span>{10.<span style="color:#b44">5f</span>,12},<span style="color:#bbb"> </span>{10.<span style="color:#b44">5f</span>,16},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{10.<span style="color:#b44">5f</span>,20.<span style="color:#b44">5f</span>},<span style="color:#bbb"> </span>{8.<span style="color:#b44">5f</span>,23.<span style="color:#b44">5f</span>},<span style="color:#bbb"> </span>{6.<span style="color:#b44">2f</span>,23.<span style="color:#b44">3f</span>},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{5.<span style="color:#b44">2f</span>,23.<span style="color:#b44">5f</span>},<span style="color:#bbb"> </span>{2,23.<span style="color:#b44">5f</span>},<span style="color:#bbb"> </span>{0.<span style="color:#b44">5f</span>,19.<span style="color:#b44">5f</span>},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{2,20},<span style="color:#bbb"> </span>{4,19.<span style="color:#b44">5f</span>},<span style="color:#bbb"> </span>{4,18},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{4,17},<span style="color:#bbb"> </span>{3.<span style="color:#b44">5f</span>,16},<span style="color:#bbb"> </span>{2,16},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{1,16},<span style="color:#bbb"> </span>{0,16.<span style="color:#b44">9f</span>},<span style="color:#bbb"> </span>{0,18.<span style="color:#b44">5f</span>},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{0,21},<span style="color:#bbb"> </span>{2.<span style="color:#b44">1f</span>,24},<span style="color:#bbb"> </span>{6,24},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{10,24},<span style="color:#bbb"> </span>{13.<span style="color:#b44">5f</span>,21.<span style="color:#b44">5f</span>},<span style="color:#bbb"> </span>{13.<span style="color:#b44">5f</span>,16.<span style="color:#b44">5f</span>},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{13.<span style="color:#b44">5f</span>,11},<span style="color:#bbb"> </span>{7,5.<span style="color:#b44">5f</span>},<span style="color:#bbb"> </span>{<span style="color:#666">-</span>2.<span style="color:#b44">0f</span>,2.<span style="color:#b44">8f</span>},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{14.<span style="color:#b44">9f</span>,21},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{14.<span style="color:#b44">9f</span>,22.<span style="color:#b44">5f</span>},<span style="color:#bbb"> </span>{16.<span style="color:#b44">9f</span>,22.<span style="color:#b44">5f</span>},<span style="color:#bbb"> </span>{16.<span style="color:#b44">9f</span>,21},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{16.<span style="color:#b44">9f</span>,19.<span style="color:#b44">5f</span>},<span style="color:#bbb"> </span>{14.<span style="color:#b44">9f</span>,19.<span style="color:#b44">5f</span>},<span style="color:#bbb"> </span>{14.<span style="color:#b44">9f</span>,21},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{14.<span style="color:#b44">9f</span>,15},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{14.<span style="color:#b44">9f</span>,16.<span style="color:#b44">5f</span>},<span style="color:#bbb"> </span>{16.<span style="color:#b44">9f</span>,16.<span style="color:#b44">5f</span>},<span style="color:#bbb"> </span>{16.<span style="color:#b44">9f</span>,15},<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{16.<span style="color:#b44">9f</span>,13.<span style="color:#b44">5f</span>},<span style="color:#bbb"> </span>{14.<span style="color:#b44">9f</span>,13.<span style="color:#b44">5f</span>},<span style="color:#bbb"> </span>{14.<span style="color:#b44">9f</span>,15}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>};<span style="color:#bbb">
+</span></span></span></code></pre></div><p>Both these sets of points are made up of an initial move, followed by
+a series of cubic bezier curves. The bass clef has three sections, the
+symbol, followed by the two dots.</p>
   </p>
-  <a href='https://billthefarmer.github.io/blog/post/draw-musical-staff/'>Read more →</a>
+  <a href='http://localhost:1313/blog/post/draw-musical-staff/'>Read more →</a>
   <hr>
 </div>
 
@@ -228,7 +284,7 @@ The data used was originally intended for use in postscript, so the vertical axi
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/post/expand-android-selection/">Expand Android Selection</a>
+    <a href="http://localhost:1313/blog/post/expand-android-selection/">Expand Android Selection</a>
   </h3>
   <div class="callout small">
     <small>
@@ -248,11 +304,26 @@ The data used was originally intended for use in postscript, so the vertical axi
     </small>
   </div>
   <p>
-    When editing data or source files it would be useful to have selections triggered by a double tap or long press expand to enclosing delimiters or brackets.
-There is a section in the Android docs which explains how to set up your own context menu or contextual action mode, but not how to change the selection.
-This method is fine if you have only one text editor view in your app, but would be difficult with more than one as there is no way to identify the originating view.
+    <p>When editing data or source files it would be useful to have
+selections triggered by a double tap or long press expand to enclosing
+delimiters or brackets.</p>
+<p>There is a section in the <a href="https://developer.android.com/guide/topics/ui/menus#context-menu">Android docs</a> which explains how to set
+up your own context menu or contextual action mode, but not how to
+change the selection.</p>
+<p>This method is fine if you have only one text editor view in your app,
+but would be difficult with more than one as there is no way to
+identify the originating view. In Java a regular expression (regex)
+can only search forwards, but not backwards, so we search forwards
+using a regex, work out what to look for backwards, and use a standard
+string reverse search to find the start of the extended selection. The
+regex contains bracket characters and quote characters. If the forward
+search finds an opening bracket, we don&rsquo;t change the selection. If the
+extended selection contains a newline we don&rsquo;t change the selection
+because we have probably got a closing quote on one line and an
+opening quote on another. If the delimiter is a semicolon we look back
+for a newline.</p>
   </p>
-  <a href='https://billthefarmer.github.io/blog/post/expand-android-selection/'>Read more →</a>
+  <a href='http://localhost:1313/blog/post/expand-android-selection/'>Read more →</a>
   <hr>
 </div>
 
@@ -261,7 +332,7 @@ This method is fine if you have only one text editor view in your app, but would
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/post/create-pdf-report/">Create PDF Report</a>
+    <a href="http://localhost:1313/blog/post/create-pdf-report/">Create PDF Report</a>
   </h3>
   <div class="callout small">
     <small>
@@ -281,10 +352,19 @@ This method is fine if you have only one text editor view in your app, but would
     </small>
   </div>
   <p>
-    Introduction As part of the Questionnaire Maker plugin it is necessary to create a pdf report. The best tool to do this appears to be TCPDF, which appears to be part of at least some Linux distributions as php-tcpdf. It is not included in WordPress.
-Implementation As both the plugin and TCPDF are hosted on GitHub, the best way to implement the plugin, and TCPDF if it is not available on the web server, is to clone the repositories and use symbolic links to provide the plugin and the library in the right places.
+    <h3 id="introduction">Introduction</h3>
+<p>As part of the <a href="https://billthefarmer.github.io/blog/post/questionnaire">Questionnaire Maker</a> plugin it is necessary to
+create a pdf report. The best tool to do this appears to be
+<a href="https://tcpdf.org">TCPDF</a>, which appears to be part of at least some Linux
+distributions as <code>php-tcpdf</code>. It is not included in WordPress.</p>
+<h3 id="implementation">Implementation</h3>
+<p>As both the plugin and TCPDF are hosted on GitHub, the best way to
+implement the plugin, and TCPDF if it is not available on the web
+server, is to clone the repositories and use symbolic links to provide
+the plugin and the library in the right places. The same method could
+be used to implement WordPress.</p>
   </p>
-  <a href='https://billthefarmer.github.io/blog/post/create-pdf-report/'>Read more →</a>
+  <a href='http://localhost:1313/blog/post/create-pdf-report/'>Read more →</a>
   <hr>
 </div>
 
@@ -293,7 +373,7 @@ Implementation As both the plugin and TCPDF are hosted on GitHub, the best way t
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/post/questionnaire/">Questionnaire Maker</a>
+    <a href="http://localhost:1313/blog/post/questionnaire/">Questionnaire Maker</a>
   </h3>
   <div class="callout small">
     <small>
@@ -313,10 +393,17 @@ Implementation As both the plugin and TCPDF are hosted on GitHub, the best way t
     </small>
   </div>
   <p>
-    Introduction Questionnaire Maker is a WordPress and Hugo plugin that asks a series of questions and produces a PDF report. The project is on Github.
-Documentation The plugin uses the shortcodes [questionnaire-questions] and [questionnaire-report], or {{&lt; questionnaire-questions &gt;}} and {{&lt; questionnaire-report &gt;}}. The shortcode will be replaced on the page with a series of panels containing the questions and options for the answers, or a panel with a preview of the report.
+    <h3 id="introduction">Introduction</h3>
+<p>Questionnaire Maker is a WordPress and Hugo plugin that asks a series
+of questions and produces a PDF report. The project is on <a href="https://github.com/billthefarmer/questionnaire">Github</a>.</p>
+<h3 id="documentation">Documentation</h3>
+<p>The plugin uses the shortcodes <code>[questionnaire-questions]</code> and
+<code>[questionnaire-report]</code>, or <code>{{&lt; questionnaire-questions &gt;}}</code> and
+<code>{{&lt; questionnaire-report &gt;}}</code>. The shortcode will be replaced on the
+page with a series of panels containing the questions and options for
+the answers, or a panel with a preview of the report.</p>
   </p>
-  <a href='https://billthefarmer.github.io/blog/post/questionnaire/'>Read more →</a>
+  <a href='http://localhost:1313/blog/post/questionnaire/'>Read more →</a>
   <hr>
 </div>
 
@@ -417,18 +504,18 @@ Documentation The plugin uses the shortcodes [questionnaire-questions] and [ques
       <div class="row column">
         <p>
           
-          Copyright © 2024 Bill Farmer
+          Copyright © 2025 Bill Farmer
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/categories/hacking/#">Back to top</a>
+          <a href="http://localhost:1313/blog/categories/hacking/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>

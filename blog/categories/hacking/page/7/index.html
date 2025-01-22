@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/categories/hacking/">
+<meta property="og:url" content="http://localhost:1313/blog/categories/hacking/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Hacking">
   <meta property="og:description" content="Random thoughts on random subjects">
@@ -16,6 +16,7 @@
 
   <meta itemprop="name" content="Hacking">
   <meta itemprop="description" content="Random thoughts on random subjects">
+  <meta itemprop="datePublished" content="2024-02-06T08:37:04+00:00">
   <meta itemprop="dateModified" content="2024-02-06T08:37:04+00:00">
 
   <meta name="twitter:card" content="summary">
@@ -27,25 +28,25 @@
 
 
 
-<meta name="generator" content="Hugo 0.128.0">
+<meta name="generator" content="Hugo 0.141.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/categories/hacking/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/categories/hacking/">
     <title>Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     <!-- RSS 2.0 feed -->
-      <link rel="alternate" type="application/rss+xml" href="https://billthefarmer.github.io/blog/categories/hacking/index.xml" title="Bill Farmer" />
+      <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/blog/categories/hacking/index.xml" title="Bill Farmer" />
     
 
     
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -81,48 +82,52 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/morris/">
+                    Morris
+                  </a></li>
+                
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
                     Travel
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -137,7 +142,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -163,7 +168,7 @@ table {
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/migrating-blog-from-wordpress/">Migrating this blog from Wordpress</a>
+    <a href="http://localhost:1313/blog/migrating-blog-from-wordpress/">Migrating this blog from Wordpress</a>
   </h3>
   <div class="callout small">
     <small>
@@ -183,11 +188,25 @@ table {
     </small>
   </div>
   <p>
-    I have got fed up with Wordpress. It required constant updates, which doesn&rsquo;t work automatically on Sourceforge developer web, and it&rsquo;s slow, especially in admin mode. I came across a reference to Hugo while following up on something unrelated, so I decided to investigate.
-I looked for migration tools, and found two:
-Exitwp, which reads a Wordpress export xml file and converts to Jeckyll WordPress to Hugo Exporter, which is a Wordpress plugin and exports to Hugo I found a blog post from Justin Dunham documenting migrating his blog.
+    <p>I have got fed up with <a href="https://wordpress.org">Wordpress</a>. It required constant updates,
+which doesn&rsquo;t work automatically on <a href="https://sourceforge.net/p/forge/documentation/Developer%20Web%20Services">Sourceforge developer web</a>,
+and it&rsquo;s slow, especially in admin mode. I came across a reference to
+<a href="http://gohugo.io">Hugo</a> while following up on something unrelated, so I decided to
+investigate.</p>
+<p>I looked for migration tools, and found two:</p>
+<ul>
+<li><a href="https://github.com/thomasf/exitwp">Exitwp</a>, which reads a Wordpress export xml file and converts
+to <a href="https://github.com/jekyll/jekyll">Jeckyll</a></li>
+<li><a href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter">WordPress to Hugo Exporter</a>, which is a Wordpress plugin and
+exports to <a href="http://gohugo.io">Hugo</a></li>
+</ul>
+<p>I found a <a href="http://justindunham.net/migrating-from-wordpress-to-hugo">blog post</a> from <a href="http://justindunham.net">Justin Dunham</a> documenting migrating
+his blog. He tried the <a href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter">WordPress to Hugo Exporter</a> first, but
+couldn&rsquo;t get it to work, so he used <a href="https://github.com/thomasf/exitwp">Exitwp</a>. I tried this, which
+just worked, but I didn&rsquo;t like the look of tidying up all the blog
+entries to work with <a href="http://gohugo.io">Hugo</a>.</p>
   </p>
-  <a href='https://billthefarmer.github.io/blog/migrating-blog-from-wordpress/'>Read more →</a>
+  <a href='http://localhost:1313/blog/migrating-blog-from-wordpress/'>Read more →</a>
   <hr>
 </div>
 
@@ -196,7 +215,7 @@ Exitwp, which reads a Wordpress export xml file and converts to Jeckyll WordPres
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/resolving-content-uris-in-android/">Resolving content uris in android</a>
+    <a href="http://localhost:1313/blog/resolving-content-uris-in-android/">Resolving content uris in android</a>
   </h3>
   <div class="callout small">
     <small>
@@ -216,10 +235,20 @@ Exitwp, which reads a Wordpress export xml file and converts to Jeckyll WordPres
     </small>
   </div>
   <p>
-    If you write an android app that handles images or any other sort of file your app may be required to deal with ‘content’ uris (content://). There is a very useful utility which resolves these into ‘file’ uris (file:///) FileUtils.java. This contains one external reference to LocalStorageProvider, which can be resolved by removing the function isLocalStorageDocument() and references to it.
-// import com.ianhanniballake.localstorage.LocalStorageProvider; // ... /** * @param uri The Uri to check.
+    <p>If you write an android app that handles images or any other sort of file your app may be required to deal with ‘content’ uris (<code>content://</code>). There is a very useful utility which resolves these into ‘file’ uris (<code>file:///</code>) <a href="https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ipaulpro/afilechooser/utils/FileUtils.java">FileUtils.java</a>. This contains one external reference to <a href="https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ianhanniballake/localstorage/LocalStorageProvider.java">LocalStorageProvider</a>, which can be resolved by removing the function <code>isLocalStorageDocument()</code> and references to it.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// import com.ianhanniballake.localstorage.LocalStorageProvider;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// ...</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">         * @param uri The Uri to check.
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">         * @return Whether the Uri authority is {@link LocalStorageProvider}.
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">         * @author paulburke
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">         */</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">boolean</span><span style="color:#bbb"> </span><span style="color:#00a000">isLocalStorageDocument</span>(Uri<span style="color:#bbb"> </span>uri)<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#a2f;font-weight:bold">return</span><span style="color:#bbb"> </span>LocalStorageProvider.<span style="color:#b44">AUTHORITY</span>.<span style="color:#b44">equals</span>(uri.<span style="color:#b44">getAuthority</span>());<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>Having done that, you can then resolve ‘content’ uris</p>
   </p>
-  <a href='https://billthefarmer.github.io/blog/resolving-content-uris-in-android/'>Read more →</a>
+  <a href='http://localhost:1313/blog/resolving-content-uris-in-android/'>Read more →</a>
   <hr>
 </div>
 
@@ -228,7 +257,7 @@ Exitwp, which reads a Wordpress export xml file and converts to Jeckyll WordPres
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/handling-run-time-changes-in-android/">Handling run time changes in Android</a>
+    <a href="http://localhost:1313/blog/handling-run-time-changes-in-android/">Handling run time changes in Android</a>
   </h3>
   <div class="callout small">
     <small>
@@ -248,10 +277,14 @@ Exitwp, which reads a Wordpress export xml file and converts to Jeckyll WordPres
     </small>
   </div>
   <p>
-    Two articles, Handling Configuration Changes and Handling Configuration Changes with Fragments recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:
-An android fragment is quite a complex heavyweight object to use just for retaining data and possibly a background task, and the fragment management is not simple. Fragments are not retained if the associated activity is discarded by calling finish().
+    <p>Two articles, <a href="https://developer.android.com/guide/topics/resources/runtime-changes.html">Handling Configuration Changes</a> and <a href="http://www.androiddesignpatterns.com/2013/04/retaining-objects-across-config-changes.html">Handling Configuration Changes with Fragments</a> recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:</p>
+<ul>
+<li>An android fragment is quite a complex heavyweight object to use just for retaining data and possibly a background task, and the fragment management is not simple.</li>
+<li>Fragments are not retained if the associated activity is discarded by calling <code>finish()</code>.</li>
+</ul>
+<p>A simpler and less complex solution is to use a static singleton, mentioned here in a different context: <a href="https://developer.android.com/training/volley/requestqueue.html">Setting Up a RequestQueue</a>. This is quite simple to implement, like this:</p>
   </p>
-  <a href='https://billthefarmer.github.io/blog/handling-run-time-changes-in-android/'>Read more →</a>
+  <a href='http://localhost:1313/blog/handling-run-time-changes-in-android/'>Read more →</a>
   <hr>
 </div>
 
@@ -260,7 +293,7 @@ An android fragment is quite a complex heavyweight object to use just for retain
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/using-emacs-as-an-ide/">Using Emacs as an IDE</a>
+    <a href="http://localhost:1313/blog/using-emacs-as-an-ide/">Using Emacs as an IDE</a>
   </h3>
   <div class="callout small">
     <small>
@@ -280,9 +313,9 @@ An android fragment is quite a complex heavyweight object to use just for retain
     </small>
   </div>
   <p>
-    I had to learn Emacs on Unix many years ago as it was at that time the only development environment for Smallworld Magik. Having learnt it, I have stuck with it as it provides a consistent platform for editing source code and building applications in as many computer languages and platforms as I have used and many more I haven’t. It is the only source code editor I have used that always gets the indentation and syntax highlighting right.
+    <p>I had to learn Emacs on Unix many years ago as it was at that time the only development environment for Smallworld Magik. Having learnt it, I have stuck with it as it provides a consistent platform for editing source code and building applications in as many computer languages and platforms as I have used and many more I haven’t. It is the only source code editor I have used that always gets the indentation and syntax highlighting right.</p>
   </p>
-  <a href='https://billthefarmer.github.io/blog/using-emacs-as-an-ide/'>Read more →</a>
+  <a href='http://localhost:1313/blog/using-emacs-as-an-ide/'>Read more →</a>
   <hr>
 </div>
 
@@ -291,7 +324,7 @@ An android fragment is quite a complex heavyweight object to use just for retain
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/upgrading-a-moto-g/">Upgrading a Moto G</a>
+    <a href="http://localhost:1313/blog/upgrading-a-moto-g/">Upgrading a Moto G</a>
   </h3>
   <div class="callout small">
     <small>
@@ -311,10 +344,11 @@ An android fragment is quite a complex heavyweight object to use just for retain
     </small>
   </div>
   <p>
-    I got myself a refurbished Moto G phone a while ago. It came with Android Kitkat 4.4.4, complete with Moto bloat. I had already put Cyanogenmod on my tablet, so I installed Cyanogenmod 11, android 4.4.4 on it, in accordance with the instructions on the wiki, no problem. That got rid of the bloat and allows fine control of app snooping via Privacy Guard in the settings.
-When I first installed Cyanogenmod, I had to use an unofficial build, as an official build for Kitkat 4.
+    <p><img src="images/2016/09/Moto_g.jpg" alt="Moto G"></p>
+<p>I got myself a refurbished Moto G phone a while ago. It came with Android Kitkat 4.4.4, complete with Moto bloat. I had already put <a href="http://www.cyanogenmod.org">Cyanogenmod</a> on my tablet, so I installed Cyanogenmod 11, android 4.4.4 on it, in accordance with the instructions on the <a href="https://wiki.cyanogenmod.org/w/Install_CM_for_falcon">wiki</a>, no problem. That got rid of the bloat and allows fine control of app snooping via Privacy Guard in the settings.</p>
+<p>When I first installed Cyanogenmod, I had to use an unofficial build, as an official build for Kitkat 4.4.4 wasn’t available. Now there are six official builds <a href="http://download.cyanogenmod.org/?type=snapshot&amp;device=falcon">available</a>, including two for Marshmallow. I tried to upgrade to Lollipop using the built in upgrade system, but failed I think it complained about the bootloader.</p>
   </p>
-  <a href='https://billthefarmer.github.io/blog/upgrading-a-moto-g/'>Read more →</a>
+  <a href='http://localhost:1313/blog/upgrading-a-moto-g/'>Read more →</a>
   <hr>
 </div>
 
@@ -415,18 +449,18 @@ When I first installed Cyanogenmod, I had to use an unofficial build, as an offi
       <div class="row column">
         <p>
           
-          Copyright © 2024 Bill Farmer
+          Copyright © 2025 Bill Farmer
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/categories/hacking/#">Back to top</a>
+          <a href="http://localhost:1313/blog/categories/hacking/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>

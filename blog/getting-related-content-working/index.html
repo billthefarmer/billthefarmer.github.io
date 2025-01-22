@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/getting-related-content-working/">
+<meta property="og:url" content="http://localhost:1313/blog/getting-related-content-working/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Getting Related Content working">
   <meta property="og:description" content="The latest release of Hugo includes Related Content, which I thought would be nice to add to my blog. However the docs, although they show you how to set it up, don’t explain how it works. To find that out, I had to look at the various threads on the Hugo forums.
-There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:">
+There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:
+{{ $related := .Site.RegularPages.Related . | first 5 }} {{ with $related }} &lt;hr&gt; &lt;h3&gt;See Also&lt;/h3&gt; &lt;ul&gt; {{ range . }} &lt;li&gt;&lt;a href=&#34;{{ .RelPermalink }}&#34;&gt;{{ safeHTML .Title }}&lt;/a&gt;&lt;/li&gt; {{ end }} &lt;/ul&gt; {{ end }} You need to add a reference to your new partial template in your single page template in layouts/_default/single.html possibly near the end:">
   <meta property="og:locale" content="en_gb">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -20,7 +21,8 @@ There are four parts - you need to create a new partial template in layouts/part
 
   <meta itemprop="name" content="Getting Related Content working">
   <meta itemprop="description" content="The latest release of Hugo includes Related Content, which I thought would be nice to add to my blog. However the docs, although they show you how to set it up, don’t explain how it works. To find that out, I had to look at the various threads on the Hugo forums.
-There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:">
+There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:
+{{ $related := .Site.RegularPages.Related . | first 5 }} {{ with $related }} &lt;hr&gt; &lt;h3&gt;See Also&lt;/h3&gt; &lt;ul&gt; {{ range . }} &lt;li&gt;&lt;a href=&#34;{{ .RelPermalink }}&#34;&gt;{{ safeHTML .Title }}&lt;/a&gt;&lt;/li&gt; {{ end }} &lt;/ul&gt; {{ end }} You need to add a reference to your new partial template in your single page template in layouts/_default/single.html possibly near the end:">
   <meta itemprop="datePublished" content="2017-09-13T11:30:00+00:00">
   <meta itemprop="dateModified" content="2017-09-13T11:30:00+00:00">
   <meta itemprop="wordCount" content="228">
@@ -29,22 +31,23 @@ There are four parts - you need to create a new partial template in layouts/part
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Getting Related Content working">
   <meta name="twitter:description" content="The latest release of Hugo includes Related Content, which I thought would be nice to add to my blog. However the docs, although they show you how to set it up, don’t explain how it works. To find that out, I had to look at the various threads on the Hugo forums.
-There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:">
+There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:
+{{ $related := .Site.RegularPages.Related . | first 5 }} {{ with $related }} &lt;hr&gt; &lt;h3&gt;See Also&lt;/h3&gt; &lt;ul&gt; {{ range . }} &lt;li&gt;&lt;a href=&#34;{{ .RelPermalink }}&#34;&gt;{{ safeHTML .Title }}&lt;/a&gt;&lt;/li&gt; {{ end }} &lt;/ul&gt; {{ end }} You need to add a reference to your new partial template in your single page template in layouts/_default/single.html possibly near the end:">
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.128.0">
+<meta name="generator" content="Hugo 0.141.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/getting-related-content-working/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/getting-related-content-working/">
     <title>Getting Related Content working | Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     
 
@@ -52,7 +55,7 @@ There are four parts - you need to create a new partial template in layouts/part
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -88,48 +91,52 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/morris/">
+                    Morris
+                  </a></li>
+                
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
                     Travel
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -144,7 +151,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -164,7 +171,7 @@ table {
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/getting-related-content-working/">Getting Related Content working</a>
+      <a href="http://localhost:1313/blog/getting-related-content-working/">Getting Related Content working</a>
     </h3>
     <div class="callout small">
       <small>
@@ -341,18 +348,18 @@ front matter.</p>
       <div class="row column">
         <p>
           
-          Copyright © 2024 Bill Farmer
+          Copyright © 2025 Bill Farmer
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/getting-related-content-working/#">Back to top</a>
+          <a href="http://localhost:1313/blog/getting-related-content-working/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>

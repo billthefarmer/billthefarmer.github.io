@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/">
+<meta property="og:url" content="http://localhost:1313/blog/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Bill Farmer">
   <meta property="og:description" content="Random thoughts on random subjects">
@@ -16,7 +16,8 @@
 
   <meta itemprop="name" content="Bill Farmer">
   <meta itemprop="description" content="Random thoughts on random subjects">
-  <meta itemprop="dateModified" content="2024-03-02T13:52:23+00:00">
+  <meta itemprop="datePublished" content="2025-01-21T20:05:23+00:00">
+  <meta itemprop="dateModified" content="2025-01-21T20:05:23+00:00">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Bill Farmer">
@@ -27,25 +28,25 @@
 
 
 
-<meta name="generator" content="Hugo 0.128.0">
+<meta name="generator" content="Hugo 0.141.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/">
     <title>Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     <!-- RSS 2.0 feed -->
-      <link rel="alternate" type="application/rss+xml" href="https://billthefarmer.github.io/blog/index.xml" title="Bill Farmer" />
+      <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/blog/index.xml" title="Bill Farmer" />
     
 
     
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -81,48 +82,52 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class="active"><a href="https://billthefarmer.github.io/blog/">
+              <li class="active"><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/morris/">
+                    Morris
+                  </a></li>
+                
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
                     Travel
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -137,7 +142,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -165,7 +170,7 @@ table {
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/getting-related-content-working/">Getting Related Content working</a>
+    <a href="http://localhost:1313/blog/getting-related-content-working/">Getting Related Content working</a>
   </h3>
   <div class="callout small">
     <small>
@@ -185,10 +190,26 @@ table {
     </small>
   </div>
   <p>
-    The latest release of Hugo includes Related Content, which I thought would be nice to add to my blog. However the docs, although they show you how to set it up, don&rsquo;t explain how it works. To find that out, I had to look at the various threads on the Hugo forums.
-There are four parts - you need to create a new partial template in layouts/partials/related.html containing something like this:
+    <p>The latest release of <a href="https://github.com/gohugoio/hugo/releases">Hugo</a> includes <a href="http://gohugo.io/content-management/related">Related Content</a>, which I
+thought would be nice to add to my blog. However the docs, although
+they show you how to set it up, don&rsquo;t explain how it works. To find
+that out, I had to look at the various threads on the
+<a href="https://discourse.gohugo.io">Hugo forums</a>.</p>
+<p>There are four parts - you need to create a new partial template in
+<code>layouts/partials/related.html</code> containing something like this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ $related := .Site.RegularPages.Related . | first 5 }}
+</span></span><span style="display:flex;"><span>{{ with $related }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#008000;font-weight:bold">hr</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#008000;font-weight:bold">h3</span>&gt;See Also&lt;/<span style="color:#008000;font-weight:bold">h3</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#008000;font-weight:bold">ul</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ range . }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#008000;font-weight:bold">li</span>&gt;&lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#b44">href</span><span style="color:#666">=</span><span style="color:#b44">&#34;{{ .RelPermalink }}&#34;</span>&gt;{{ safeHTML .Title }}&lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;&lt;/<span style="color:#008000;font-weight:bold">li</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ end }}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#008000;font-weight:bold">ul</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><p>You need to add a reference to your new partial template in your single page template in <code>layouts/_default/single.html</code> possibly near the end:</p>
   </p>
-  <a href='https://billthefarmer.github.io/blog/getting-related-content-working/'>Read more →</a>
+  <a href='http://localhost:1313/blog/getting-related-content-working/'>Read more →</a>
   <hr>
 </div>
 
@@ -197,7 +218,7 @@ There are four parts - you need to create a new partial template in layouts/part
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/adding-a-calendar-event/">Adding a calendar event in android</a>
+    <a href="http://localhost:1313/blog/adding-a-calendar-event/">Adding a calendar event in android</a>
   </h3>
   <div class="callout small">
     <small>
@@ -217,11 +238,62 @@ There are four parts - you need to create a new partial template in layouts/part
     </small>
   </div>
   <p>
-    The android docs for the Calendar Provider are quite useful, but recommend the use of an AsyncQueryHandler for querying or adding events to calendars in an asynchronous thread. However the AsyncQueryHandler docs don&rsquo;t include much guidance as to how to use it.
-To add an entry to an android calendar you first have to find out the calendar id using an asynchronous query on the calendars table.
-// QueryHandler public class QueryHandler extends AsyncQueryHandler { private static final String TAG = &#34;QueryHandler&#34;; // Projection arrays private static final String[] CALENDAR_PROJECTION = new String[] { Calendars.
+    <p>The android docs for the <a href="https://developer.android.com/guide/topics/providers/calendar-provider.html">Calendar Provider</a> are quite useful, but
+recommend the use of an <a href="https://developer.android.com/reference/android/content/AsyncQueryHandler.html">AsyncQueryHandler</a> for querying or adding
+events to calendars in an asynchronous thread. However the
+<code>AsyncQueryHandler</code> docs don&rsquo;t include much guidance as to how to use
+it.</p>
+<p>To add an entry to an android calendar you first have to find out the
+calendar id using an asynchronous query on the calendars table.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// QueryHandler</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">QueryHandler</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">extends</span><span style="color:#bbb"> </span>AsyncQueryHandler<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>TAG<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#b44">&#34;QueryHandler&#34;</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// Projection arrays</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span>String<span style="color:#666">[]</span><span style="color:#bbb"> </span>CALENDAR_PROJECTION<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">new</span><span style="color:#bbb"> </span>String<span style="color:#666">[]</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>Calendars.<span style="color:#b44">_ID</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>};<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// The indices for the projection array above.</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>CALENDAR_ID_INDEX<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>0;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>CALENDAR<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>0;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>EVENT<span style="color:#bbb">    </span><span style="color:#666">=</span><span style="color:#bbb"> </span>1;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>REMINDER<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>2;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span>QueryHandler<span style="color:#bbb"> </span>queryHandler;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// QueryHandler</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#00a000">QueryHandler</span>(ContentResolver<span style="color:#bbb"> </span>resolver)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">super</span>(resolver);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// insertEvent</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#00a000">insertEvent</span>(Context<span style="color:#bbb"> </span>context,<span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">long</span><span style="color:#bbb"> </span>startTime,<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                                   </span><span style="color:#0b0;font-weight:bold">long</span><span style="color:#bbb"> </span>endTime,<span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>title)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>ContentResolver<span style="color:#bbb"> </span>resolver<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>context.<span style="color:#b44">getContentResolver</span>();<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(queryHandler<span style="color:#bbb"> </span><span style="color:#666">==</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">null</span>)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>queryHandler<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">new</span><span style="color:#bbb"> </span>QueryHandler(resolver);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>ContentValues<span style="color:#bbb"> </span>values<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">new</span><span style="color:#bbb"> </span>ContentValues();<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>values.<span style="color:#b44">put</span>(Events.<span style="color:#b44">DTSTART</span>,<span style="color:#bbb"> </span>startTime);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>values.<span style="color:#b44">put</span>(Events.<span style="color:#b44">DTEND</span>,<span style="color:#bbb"> </span>endTime);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>values.<span style="color:#b44">put</span>(Events.<span style="color:#b44">TITLE</span>,<span style="color:#bbb"> </span>title);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(BuildConfig.<span style="color:#b44">DEBUG</span>)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>Log.<span style="color:#b44">d</span>(TAG,<span style="color:#bbb"> </span><span style="color:#b44">&#34;Calendar query start&#34;</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>queryHandler.<span style="color:#b44">startQuery</span>(CALENDAR,<span style="color:#bbb"> </span>values,<span style="color:#bbb"> </span>Calendars.<span style="color:#b44">CONTENT_URI</span>,<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">                                </span>CALENDAR_PROJECTION,<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">null</span>,<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">null</span>,<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">null</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>This method is called from an app activity.</p>
   </p>
-  <a href='https://billthefarmer.github.io/blog/adding-a-calendar-event/'>Read more →</a>
+  <a href='http://localhost:1313/blog/adding-a-calendar-event/'>Read more →</a>
   <hr>
 </div>
 
@@ -230,7 +302,7 @@ To add an entry to an android calendar you first have to find out the calendar i
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/whatever-o-meter-revisited/">Whatever-o-meter revisited</a>
+    <a href="http://localhost:1313/blog/whatever-o-meter-revisited/">Whatever-o-meter revisited</a>
   </h3>
   <div class="callout small">
     <small>
@@ -250,10 +322,36 @@ To add an entry to an android calendar you first have to find out the calendar i
     </small>
   </div>
   <p>
-    I wrote the whatever-o-meter about five years ago in PHP and Javascript as a Wordpress plugin. As I have migrated my blog to Hugo, I thought to have a go at reimplementing it. The exporter I used made a good job of translating the Wordpress custom fields to Hugo front matter parameters. I had to put dashes in quotes, otherwise they get interpreted as [&lt;nil&gt;].
-intro: Please answer the following questions carefully and truthfully.
+    <p>I wrote the whatever-o-meter about five years ago in PHP and
+Javascript as a Wordpress plugin. As I have migrated my blog to Hugo,
+I thought to have a go at reimplementing it. The exporter I used made
+a good job of translating the Wordpress custom fields to Hugo front
+matter parameters. I had to put dashes in quotes, otherwise they get
+interpreted as <code>[&lt;nil&gt;]</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">intro</span>:<span style="color:#bbb"> </span>Please answer the following questions carefully and truthfully.<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">question</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- You are lying in bed on Monday morning...<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">result</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- <span style="color:#b44">&#39;%d percent, Perhaps you should consider emigration.&#39;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- <span style="color:#b44">&#39;%d%, Consider taking a long holiday somewhere far away.&#39;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">left</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- Go and jump in the shower quick<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">right</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- Jump on him<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">weights</span>:<span style="color:#bbb"> </span><span style="color:#666">2</span>,<span style="color:#666">1</span>,<span style="color:#666">1</span>,<span style="color:#666">1</span>,<span style="color:#666">1</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">centre</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- <span style="color:#b44">&#39;-&#39;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- <span style="color:#b44">&#39;-&#39;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- So so<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">more</span>:<span style="color:#bbb"> </span>https://billthefarmer.github.io/blog/morris-o-meter<span style="color:#bbb">
+</span></span></span></code></pre></div><p>The javascript part should just work as it is, the PHP plugin needed
+re-implementing as a hugo shortcode. The first part of the plugin just
+outputs svg code to draw the dial and pointer, that was fairly easy to
+implement, it just has some iteration in it. I had to change the ticks
+slightly as Hugo doesn&rsquo;t appear to support floating point arithmetic
+in templates.</p>
   </p>
-  <a href='https://billthefarmer.github.io/blog/whatever-o-meter-revisited/'>Read more →</a>
+  <a href='http://localhost:1313/blog/whatever-o-meter-revisited/'>Read more →</a>
   <hr>
 </div>
 
@@ -262,7 +360,7 @@ intro: Please answer the following questions carefully and truthfully.
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/migrating-blog-from-wordpress/">Migrating this blog from Wordpress</a>
+    <a href="http://localhost:1313/blog/migrating-blog-from-wordpress/">Migrating this blog from Wordpress</a>
   </h3>
   <div class="callout small">
     <small>
@@ -282,11 +380,25 @@ intro: Please answer the following questions carefully and truthfully.
     </small>
   </div>
   <p>
-    I have got fed up with Wordpress. It required constant updates, which doesn&rsquo;t work automatically on Sourceforge developer web, and it&rsquo;s slow, especially in admin mode. I came across a reference to Hugo while following up on something unrelated, so I decided to investigate.
-I looked for migration tools, and found two:
-Exitwp, which reads a Wordpress export xml file and converts to Jeckyll WordPress to Hugo Exporter, which is a Wordpress plugin and exports to Hugo I found a blog post from Justin Dunham documenting migrating his blog.
+    <p>I have got fed up with <a href="https://wordpress.org">Wordpress</a>. It required constant updates,
+which doesn&rsquo;t work automatically on <a href="https://sourceforge.net/p/forge/documentation/Developer%20Web%20Services">Sourceforge developer web</a>,
+and it&rsquo;s slow, especially in admin mode. I came across a reference to
+<a href="http://gohugo.io">Hugo</a> while following up on something unrelated, so I decided to
+investigate.</p>
+<p>I looked for migration tools, and found two:</p>
+<ul>
+<li><a href="https://github.com/thomasf/exitwp">Exitwp</a>, which reads a Wordpress export xml file and converts
+to <a href="https://github.com/jekyll/jekyll">Jeckyll</a></li>
+<li><a href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter">WordPress to Hugo Exporter</a>, which is a Wordpress plugin and
+exports to <a href="http://gohugo.io">Hugo</a></li>
+</ul>
+<p>I found a <a href="http://justindunham.net/migrating-from-wordpress-to-hugo">blog post</a> from <a href="http://justindunham.net">Justin Dunham</a> documenting migrating
+his blog. He tried the <a href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter">WordPress to Hugo Exporter</a> first, but
+couldn&rsquo;t get it to work, so he used <a href="https://github.com/thomasf/exitwp">Exitwp</a>. I tried this, which
+just worked, but I didn&rsquo;t like the look of tidying up all the blog
+entries to work with <a href="http://gohugo.io">Hugo</a>.</p>
   </p>
-  <a href='https://billthefarmer.github.io/blog/migrating-blog-from-wordpress/'>Read more →</a>
+  <a href='http://localhost:1313/blog/migrating-blog-from-wordpress/'>Read more →</a>
   <hr>
 </div>
 
@@ -295,7 +407,7 @@ Exitwp, which reads a Wordpress export xml file and converts to Jeckyll WordPres
 
 <div class="blog-post">
   <h3>
-    <a href="https://billthefarmer.github.io/blog/resolving-content-uris-in-android/">Resolving content uris in android</a>
+    <a href="http://localhost:1313/blog/resolving-content-uris-in-android/">Resolving content uris in android</a>
   </h3>
   <div class="callout small">
     <small>
@@ -315,10 +427,20 @@ Exitwp, which reads a Wordpress export xml file and converts to Jeckyll WordPres
     </small>
   </div>
   <p>
-    If you write an android app that handles images or any other sort of file your app may be required to deal with ‘content’ uris (content://). There is a very useful utility which resolves these into ‘file’ uris (file:///) FileUtils.java. This contains one external reference to LocalStorageProvider, which can be resolved by removing the function isLocalStorageDocument() and references to it.
-// import com.ianhanniballake.localstorage.LocalStorageProvider; // ... /** * @param uri The Uri to check.
+    <p>If you write an android app that handles images or any other sort of file your app may be required to deal with ‘content’ uris (<code>content://</code>). There is a very useful utility which resolves these into ‘file’ uris (<code>file:///</code>) <a href="https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ipaulpro/afilechooser/utils/FileUtils.java">FileUtils.java</a>. This contains one external reference to <a href="https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ianhanniballake/localstorage/LocalStorageProvider.java">LocalStorageProvider</a>, which can be resolved by removing the function <code>isLocalStorageDocument()</code> and references to it.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// import com.ianhanniballake.localstorage.LocalStorageProvider;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// ...</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">         * @param uri The Uri to check.
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">         * @return Whether the Uri authority is {@link LocalStorageProvider}.
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">         * @author paulburke
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">         */</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">boolean</span><span style="color:#bbb"> </span><span style="color:#00a000">isLocalStorageDocument</span>(Uri<span style="color:#bbb"> </span>uri)<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#a2f;font-weight:bold">return</span><span style="color:#bbb"> </span>LocalStorageProvider.<span style="color:#b44">AUTHORITY</span>.<span style="color:#b44">equals</span>(uri.<span style="color:#b44">getAuthority</span>());<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>Having done that, you can then resolve ‘content’ uris</p>
   </p>
-  <a href='https://billthefarmer.github.io/blog/resolving-content-uris-in-android/'>Read more →</a>
+  <a href='http://localhost:1313/blog/resolving-content-uris-in-android/'>Read more →</a>
   <hr>
 </div>
 
@@ -419,18 +541,18 @@ Exitwp, which reads a Wordpress export xml file and converts to Jeckyll WordPres
       <div class="row column">
         <p>
           
-          Copyright © 2024 Bill Farmer
+          Copyright © 2025 Bill Farmer
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/#">Back to top</a>
+          <a href="http://localhost:1313/blog/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/flutter-search-widget/">
+<meta property="og:url" content="http://localhost:1313/blog/flutter-search-widget/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Flutter app bar search widget">
   <meta property="og:description" content="As an exercise I decided to reimplement my Buses app in flutter. To do this I need an open street map library, a beautiful soup library, a location library, an OS ref library, and a search widget. All of these are available in pub.dev, except a suitable search widget. All implementations of SearchBar in the docs include an annoying dropdown suggestions feature, which appears to be mandatory.
-However it is possible to take the SearchBar and include it in an AppBar, change the icons and end up with something which looks and acts very similarly to an android search widget.">
+However it is possible to take the SearchBar and include it in an AppBar, change the icons and end up with something which looks and acts very similarly to an android search widget. To do this, add code to the actions of the app bar which either shows an icon button or the search bar, controlled by a boolean which is set by pressing the search button. The search bar is wrapped by an Expanded widget to stop it overflowing the display. The search bar has a leading button which dismisses it, a conditional trailing button to clear the search field and a button to do the search.">
   <meta property="og:locale" content="en_gb">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -20,7 +20,7 @@ However it is possible to take the SearchBar and include it in an AppBar, change
 
   <meta itemprop="name" content="Flutter app bar search widget">
   <meta itemprop="description" content="As an exercise I decided to reimplement my Buses app in flutter. To do this I need an open street map library, a beautiful soup library, a location library, an OS ref library, and a search widget. All of these are available in pub.dev, except a suitable search widget. All implementations of SearchBar in the docs include an annoying dropdown suggestions feature, which appears to be mandatory.
-However it is possible to take the SearchBar and include it in an AppBar, change the icons and end up with something which looks and acts very similarly to an android search widget.">
+However it is possible to take the SearchBar and include it in an AppBar, change the icons and end up with something which looks and acts very similarly to an android search widget. To do this, add code to the actions of the app bar which either shows an icon button or the search bar, controlled by a boolean which is set by pressing the search button. The search bar is wrapped by an Expanded widget to stop it overflowing the display. The search bar has a leading button which dismisses it, a conditional trailing button to clear the search field and a button to do the search.">
   <meta itemprop="datePublished" content="2024-02-06T08:37:04+00:00">
   <meta itemprop="dateModified" content="2024-02-06T08:37:04+00:00">
   <meta itemprop="wordCount" content="348">
@@ -29,22 +29,22 @@ However it is possible to take the SearchBar and include it in an AppBar, change
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Flutter app bar search widget">
   <meta name="twitter:description" content="As an exercise I decided to reimplement my Buses app in flutter. To do this I need an open street map library, a beautiful soup library, a location library, an OS ref library, and a search widget. All of these are available in pub.dev, except a suitable search widget. All implementations of SearchBar in the docs include an annoying dropdown suggestions feature, which appears to be mandatory.
-However it is possible to take the SearchBar and include it in an AppBar, change the icons and end up with something which looks and acts very similarly to an android search widget.">
+However it is possible to take the SearchBar and include it in an AppBar, change the icons and end up with something which looks and acts very similarly to an android search widget. To do this, add code to the actions of the app bar which either shows an icon button or the search bar, controlled by a boolean which is set by pressing the search button. The search bar is wrapped by an Expanded widget to stop it overflowing the display. The search bar has a leading button which dismisses it, a conditional trailing button to clear the search field and a button to do the search.">
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.128.0">
+<meta name="generator" content="Hugo 0.141.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/flutter-search-widget/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/flutter-search-widget/">
     <title>Flutter app bar search widget | Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     
 
@@ -52,7 +52,7 @@ However it is possible to take the SearchBar and include it in an AppBar, change
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -88,48 +88,52 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/morris/">
+                    Morris
+                  </a></li>
+                
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
                     Travel
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -144,7 +148,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -164,7 +168,7 @@ table {
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/flutter-search-widget/">Flutter app bar search widget</a>
+      <a href="http://localhost:1313/blog/flutter-search-widget/">Flutter app bar search widget</a>
     </h3>
     <div class="callout small">
       <small>
@@ -394,18 +398,18 @@ starting on an old phone.</p>
       <div class="row column">
         <p>
           
-          Copyright © 2024 Bill Farmer
+          Copyright © 2025 Bill Farmer
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/flutter-search-widget/#">Back to top</a>
+          <a href="http://localhost:1313/blog/flutter-search-widget/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>
