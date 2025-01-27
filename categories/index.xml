@@ -4,7 +4,8 @@
     <title>Categories on Bill Farmer</title>
     <link>https://billthefarmer.github.io/categories/</link>
     <description>Recent content in Categories on Bill Farmer</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language><atom:link href="https://billthefarmer.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <atom:link href="https://billthefarmer.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
