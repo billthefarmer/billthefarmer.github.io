@@ -2,46 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Bill Farmer</title>
-    <link>http://localhost:1313/blog/categories/</link>
+    <link>https://billthefarmer.github.io/blog/categories/</link>
     <description>Recent content in Categories on Bill Farmer</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <copyright>Copyright &amp;copy; 2006 Bill Farmer</copyright>
     <lastBuildDate>Sat, 02 Mar 2024 13:52:23 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://billthefarmer.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Travel</title>
-      <link>http://localhost:1313/blog/categories/travel/</link>
+      <link>https://billthefarmer.github.io/blog/categories/travel/</link>
       <pubDate>Sat, 02 Mar 2024 13:52:23 +0000</pubDate>
-      <guid>http://localhost:1313/blog/categories/travel/</guid>
+      <guid>https://billthefarmer.github.io/blog/categories/travel/</guid>
       <description></description>
     </item>
     <item>
       <title>Hacking</title>
-      <link>http://localhost:1313/blog/categories/hacking/</link>
+      <link>https://billthefarmer.github.io/blog/categories/hacking/</link>
       <pubDate>Tue, 06 Feb 2024 08:37:04 +0000</pubDate>
-      <guid>http://localhost:1313/blog/categories/hacking/</guid>
+      <guid>https://billthefarmer.github.io/blog/categories/hacking/</guid>
       <description></description>
     </item>
     <item>
       <title>Recipes</title>
-      <link>http://localhost:1313/blog/categories/recipes/</link>
+      <link>https://billthefarmer.github.io/blog/categories/recipes/</link>
       <pubDate>Sat, 09 Jul 2022 18:26:43 +0100</pubDate>
-      <guid>http://localhost:1313/blog/categories/recipes/</guid>
+      <guid>https://billthefarmer.github.io/blog/categories/recipes/</guid>
       <description></description>
     </item>
     <item>
       <title>DIY</title>
-      <link>http://localhost:1313/blog/categories/diy/</link>
+      <link>https://billthefarmer.github.io/blog/categories/diy/</link>
       <pubDate>Fri, 12 Jul 2019 10:49:21 +0100</pubDate>
-      <guid>http://localhost:1313/blog/categories/diy/</guid>
+      <guid>https://billthefarmer.github.io/blog/categories/diy/</guid>
       <description></description>
     </item>
     <item>
       <title>Electronics</title>
-      <link>http://localhost:1313/blog/categories/electronics/</link>
+      <link>https://billthefarmer.github.io/blog/categories/electronics/</link>
       <pubDate>Sat, 14 Jul 2018 21:22:37 +0100</pubDate>
-      <guid>http://localhost:1313/blog/categories/electronics/</guid>
+      <guid>https://billthefarmer.github.io/blog/categories/electronics/</guid>
       <description></description>
     </item>
   </channel>
