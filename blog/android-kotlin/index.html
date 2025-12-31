@@ -36,7 +36,7 @@ I have a very simple app, Oglaf, NS(Generally)FW, which is just a wrapper around
 
 
 
-<meta name="generator" content="Hugo 0.153.0">
+<meta name="generator" content="Hugo 0.151.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -198,29 +198,29 @@ effect, if any, it had on the app.</p>
 <p>The obvious differences with java are declaration of variables and
 classes, and not needing semicolons on the end of statements.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// Java</span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">package</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">org.billthefarmer.oglaf</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">package</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">org.billthefarmer.oglaf</span>;<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.app.Activity</span>;<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.app.AlertDialog</span>;<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.app.Dialog</span>;<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.content.Intent</span>;<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.os.Bundle</span>;<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.text.method.LinkMovementMethod</span>;<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.text.SpannableStringBuilder</span>;<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.view.Menu</span>;<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.view.MenuItem</span>;<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.webkit.WebSettings</span>;<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.webkit.WebView</span>;<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.webkit.WebViewClient</span>;<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.widget.TextView</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.app.Activity</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.app.AlertDialog</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.app.Dialog</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.content.Intent</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.os.Bundle</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.text.method.LinkMovementMethod</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.text.SpannableStringBuilder</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.view.Menu</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.view.MenuItem</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.webkit.WebSettings</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.webkit.WebView</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.webkit.WebViewClient</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">android.widget.TextView</span>;<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">java.text.DateFormat</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">java.text.DateFormat</span>;<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">java.util.regex.Matcher</span>;<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">java.util.regex.Pattern</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">java.util.regex.Matcher</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">import</span><span style="color:#bbb"> </span><span style="color:#00f;font-weight:bold">java.util.regex.Pattern</span>;<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">Oglaf</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">extends</span><span style="color:#bbb"> </span>Activity<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">Oglaf</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">extends</span><span style="color:#bbb"> </span>Activity<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>{<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>URL<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#b44">&#34;https://oglaf.com&#34;</span>;<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>TEXT_PLAIN<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#b44">&#34;text/plain&#34;</span>;<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">
@@ -244,7 +244,7 @@ classes, and not needing semicolons on the end of statements.</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>settings.<span style="color:#b44">setBuiltInZoomControls</span>(<span style="color:#a2f;font-weight:bold">true</span>);<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>settings.<span style="color:#b44">setDisplayZoomControls</span>(<span style="color:#a2f;font-weight:bold">false</span>);<span style="color:#bbb">
 </span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// Kotlin
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">package</span> <span style="color:#00f;font-weight:bold">org.billthefarmer.oglaf</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">package</span> <span style="color:#00f;font-weight:bold">org.billthefarmer.oglaf</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">android.app.Activity</span>
 </span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">android.app.AlertDialog</span>
@@ -273,18 +273,18 @@ classes, and not needing semicolons on the end of statements.</p>
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">lateinit</span> <span style="color:#a2f;font-weight:bold">var</span> webView: WebView
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Called when the activity is first created.
-</span></span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">override</span> <span style="color:#a2f;font-weight:bold">fun</span> <span style="color:#00a000">onCreate</span>(savedInstanceState: Bundle?)
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">override</span> <span style="color:#a2f;font-weight:bold">fun</span> <span style="color:#00a000">onCreate</span>(savedInstanceState: Bundle?)
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">super</span>.onCreate(savedInstanceState)
 </span></span><span style="display:flex;"><span>        setContentView(<span style="color:#00f">R</span>.layout.main)
 </span></span><span style="display:flex;"><span>        webView = findViewById(<span style="color:#00f">R</span>.id.webview)
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Enable javascript, Oglaf doesn&#39;t work unless JavaScript
-</span></span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// is enabled
-</span></span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">val</span> settings  = webView.getSettings()
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// is enabled
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">val</span> settings  = webView.getSettings()
 </span></span><span style="display:flex;"><span>        settings.setJavaScriptEnabled(<span style="color:#a2f;font-weight:bold">true</span>)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Enable zoom
-</span></span></span><span style="display:flex;"><span>        settings.setBuiltInZoomControls(<span style="color:#a2f;font-weight:bold">true</span>)
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        settings.setBuiltInZoomControls(<span style="color:#a2f;font-weight:bold">true</span>)
 </span></span><span style="display:flex;"><span>        settings.setDisplayZoomControls(<span style="color:#a2f;font-weight:bold">false</span>)
 </span></span></code></pre></div><p>There are nuances like declaring the web view <code>lateinit</code> because it is
 initialised in <code>onCreate()</code>.</p>
@@ -310,14 +310,14 @@ correct syntax for what Kotlin calls an <a href="https://kotlinlang.org/docs/obj
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>}<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>});<span style="color:#bbb">
 </span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// Kotlin
-</span></span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Follow links and set title
-</span></span></span><span style="display:flex;"><span>        webView.setWebViewClient(<span style="color:#a2f;font-weight:bold">object</span>: WebViewClient()
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// Follow links and set title
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        webView.setWebViewClient(<span style="color:#a2f;font-weight:bold">object</span>: WebViewClient()
 </span></span><span style="display:flex;"><span>        {
 </span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// onPageFinished
-</span></span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">override</span> <span style="color:#a2f;font-weight:bold">fun</span> <span style="color:#00a000">onPageFinished</span>(view: WebView, url: String)
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">override</span> <span style="color:#a2f;font-weight:bold">fun</span> <span style="color:#00a000">onPageFinished</span>(view: WebView, url: String)
 </span></span><span style="display:flex;"><span>            {
 </span></span><span style="display:flex;"><span>                <span style="color:#080;font-style:italic">// Get page title
-</span></span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">if</span> (view.getTitle() <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span>)
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span> (view.getTitle() <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">null</span>)
 </span></span><span style="display:flex;"><span>                setTitle(view.getTitle())
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">if</span> (view.canGoBack())
@@ -362,28 +362,28 @@ when statement.</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#a2f;font-weight:bold">return</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">false</span>;<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>}<span style="color:#bbb">
 </span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// Kotlin
-</span></span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Get id
-</span></span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">val</span> id = item.getItemId()
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// Get id
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">val</span> id = item.getItemId()
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">when</span> (id)
 </span></span><span style="display:flex;"><span>        {
 </span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Home
-</span></span></span><span style="display:flex;"><span>            android.<span style="color:#00f">R</span>.id.home <span style="color:#666">-&gt;</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            android.<span style="color:#00f">R</span>.id.home <span style="color:#666">-&gt;</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Back navigation
-</span></span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">if</span> (webView.canGoBack())
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span> (webView.canGoBack())
 </span></span><span style="display:flex;"><span>                webView.goBack()
 </span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">else</span>
 </span></span><span style="display:flex;"><span>                finish()
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Refresh
-</span></span></span><span style="display:flex;"><span>            <span style="color:#00f">R</span>.id.action_refresh <span style="color:#666">-&gt;</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#00f">R</span>.id.action_refresh <span style="color:#666">-&gt;</span>
 </span></span><span style="display:flex;"><span>            refresh()
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// Share
-</span></span></span><span style="display:flex;"><span>            <span style="color:#00f">R</span>.id.action_share <span style="color:#666">-&gt;</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#00f">R</span>.id.action_share <span style="color:#666">-&gt;</span>
 </span></span><span style="display:flex;"><span>            share()
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// About
-</span></span></span><span style="display:flex;"><span>            <span style="color:#00f">R</span>.id.action_about <span style="color:#666">-&gt;</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#00f">R</span>.id.action_about <span style="color:#666">-&gt;</span>
 </span></span><span style="display:flex;"><span>            about()
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">else</span> <span style="color:#666">-&gt;</span>

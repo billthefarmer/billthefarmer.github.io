@@ -39,7 +39,7 @@ To add an entry to an android calendar you first have to find out the calendar i
 
 
 
-<meta name="generator" content="Hugo 0.153.0">
+<meta name="generator" content="Hugo 0.151.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -197,8 +197,8 @@ it.</p>
 <p>To add an entry to an android calendar you first have to find out the
 calendar id using an asynchronous query on the calendars table.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// QueryHandler</span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">QueryHandler</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">extends</span><span style="color:#bbb"> </span>AsyncQueryHandler<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">QueryHandler</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">extends</span><span style="color:#bbb"> </span>AsyncQueryHandler<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>{<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>TAG<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#b44">&#34;QueryHandler&#34;</span>;<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// Projection arrays</span><span style="color:#bbb">

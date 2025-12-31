@@ -39,7 +39,7 @@ Exitwp, which reads a Wordpress export xml file and converts to Jeckyll WordPres
 
 
 
-<meta name="generator" content="Hugo 0.153.0">
+<meta name="generator" content="Hugo 0.151.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -242,32 +242,32 @@ to run <a href="https://www.python.org">Python</a> utilities in, so installing t
 <a href="https://github.com/dbohdan/remarshal">remarshal</a> and getting it working was not a problem.</p>
 <p>So now I&rsquo;ve got a config file which does what I want it to do:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">baseURL</span>:<span style="color:#bbb"> </span>http://billthefarmer.github.io/blog/<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">languageCode</span>:<span style="color:#bbb"> </span>en-gb<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">title</span>:<span style="color:#bbb"> </span><span style="color:#b44">&#34;Bill Farmer&#39;s Blog&#34;</span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">copyright</span>:<span style="color:#bbb"> </span><span style="color:#b44">&#34;Copyright &amp;amp;copy; 2017 Bill Farmer&#34;</span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">theme</span>:<span style="color:#bbb"> </span>theme-hugo-foundation6<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">publishDir</span>:<span style="color:#bbb"> </span>d:/billthefarmer.github.io/blog/<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">pygmentscodefences</span>:<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">languageCode</span>:<span style="color:#bbb"> </span>en-gb<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">title</span>:<span style="color:#bbb"> </span><span style="color:#b44">&#34;Bill Farmer&#39;s Blog&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">copyright</span>:<span style="color:#bbb"> </span><span style="color:#b44">&#34;Copyright &amp;amp;copy; 2017 Bill Farmer&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">theme</span>:<span style="color:#bbb"> </span>theme-hugo-foundation6<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">publishDir</span>:<span style="color:#bbb"> </span>d:/billthefarmer.github.io/blog/<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">pygmentscodefences</span>:<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"># number of posts to show on home/category/tag pages (Default: 10)</span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">paginate</span>:<span style="color:#bbb"> </span><span style="color:#666">5</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#080;font-style:italic"># number of posts to show on home/category/tag pages (Default: 10)</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">paginate</span>:<span style="color:#bbb"> </span><span style="color:#666">5</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">taxonomies</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">taxonomies</span>:<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">category</span>:<span style="color:#bbb"> </span>categories<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#080;font-style:italic"># tag: tags</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">permalinks</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">permalinks</span>:<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">page</span>:<span style="color:#bbb"> </span>/:slug/<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">post</span>:<span style="color:#bbb"> </span>/:year/:month/:title/<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">menu</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">menu</span>:<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">sidebar</span>:<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>- <span style="color:#008000;font-weight:bold">name</span>:<span style="color:#bbb"> </span>Bill Farmer<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">      </span><span style="color:#008000;font-weight:bold">url</span>:<span style="color:#bbb"> </span>http://billthefarmer.github.io<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>- <span style="color:#008000;font-weight:bold">name</span>:<span style="color:#bbb"> </span>Github<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">      </span><span style="color:#008000;font-weight:bold">url</span>:<span style="color:#bbb"> </span>https://github.com/billthefarmer<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">params</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">params</span>:<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">description</span>:<span style="color:#bbb"> </span>Random thoughts on random subjects<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">header_background</span>:<span style="color:#bbb"> </span>images/2013/12/cropped-P1010089.jpg<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">sidebar</span>:<span style="color:#bbb">
@@ -276,7 +276,7 @@ to run <a href="https://www.python.org">Python</a> utilities in, so installing t
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#008000;font-weight:bold">num_recent_posts</span>:<span style="color:#bbb"> </span><span style="color:#666">5</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">sharingicons</span>:<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#008000;font-weight:bold">hide</span>:<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#00f;font-weight:bold">...</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#00f;font-weight:bold">...</span><span style="color:#bbb">
 </span></span></span></code></pre></div><p>The useful bits are <code>copyright: Copyright &amp;copy; 2017 Bill Farmer</code>,
 which overrides the page footer, <code>publishDir: d:/billthefarmer.github.io/blog/</code>, which puts the output where I want
 it and <code># tag: tags</code>, which stops generating a tags page. It was
