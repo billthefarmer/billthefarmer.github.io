@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/getting-related-content-working/">
+<meta property="og:url" content="http://localhost:1313/blog/getting-related-content-working/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Getting Related Content working">
   <meta property="og:description" content="The latest release of Hugo includes Related Content, which I thought would be nice to add to my blog. However the docs, although they show you how to set it up, don’t explain how it works. To find that out, I had to look at the various threads on the Hugo forums.
@@ -39,15 +39,15 @@ There are four parts - you need to create a new partial template in layouts/part
 
 
 
-<meta name="generator" content="Hugo 0.152.0">
+<meta name="generator" content="Hugo 0.153.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/getting-related-content-working/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/getting-related-content-working/">
     <title>Getting Related Content working | Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     
 
@@ -55,7 +55,7 @@ There are four parts - you need to create a new partial template in layouts/part
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -91,48 +91,48 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
                     Travel
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -147,7 +147,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -167,7 +167,7 @@ table {
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/getting-related-content-working/">Getting Related Content working</a>
+      <a href="http://localhost:1313/blog/getting-related-content-working/">Getting Related Content working</a>
     </h3>
     <div class="callout small">
       <small>
@@ -219,19 +219,19 @@ that out, I had to look at the various threads on the
 tried tags initially, but couldn&rsquo;t get it to work, so I tried
 keywords:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#00f;font-weight:bold">---</span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">title</span>:<span style="color:#bbb"> </span>Handling run time changes in Android<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">author</span>:<span style="color:#bbb"> </span>Bill Farmer<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">type</span>:<span style="color:#bbb"> </span>post<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">date</span>:<span style="color:#bbb"> </span>2017-01-08T18:49:31<span style="color:#666">+00</span>:<span style="color:#666">00</span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">url</span>:<span style="color:#bbb"> </span>/handling-run-time-changes-in-android/<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">categories</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">title</span>:<span style="color:#bbb"> </span>Handling run time changes in Android<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">author</span>:<span style="color:#bbb"> </span>Bill Farmer<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">type</span>:<span style="color:#bbb"> </span>post<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">date</span>:<span style="color:#bbb"> </span>2017-01-08T18:49:31<span style="color:#666">+00</span>:<span style="color:#666">00</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">url</span>:<span style="color:#bbb"> </span>/handling-run-time-changes-in-android/<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">categories</span>:<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- Hacking<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">keywords</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">keywords</span>:<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- android<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- configuration<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- fragment<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>- singleton<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#00f;font-weight:bold">---</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#00f;font-weight:bold">---</span><span style="color:#bbb">
 </span></span></span></code></pre></div><p>You then have to go through all your posts and add keywords to the
 front matter.</p>
 
@@ -348,14 +348,14 @@ front matter.</p>
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/getting-related-content-working/#">Back to top</a>
+          <a href="http://localhost:1313/blog/getting-related-content-working/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>

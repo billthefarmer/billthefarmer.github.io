@@ -2,349 +2,349 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://billthefarmer.github.io/blog/beach-villas/</loc>
+    <loc>http://localhost:1313/blog/beach-villas/</loc>
     <lastmod>2024-03-02T13:52:23+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/</loc>
+    <loc>http://localhost:1313/blog/</loc>
     <lastmod>2024-03-02T13:52:23+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/categories/</loc>
+    <loc>http://localhost:1313/blog/categories/</loc>
     <lastmod>2024-03-02T13:52:23+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/categories/travel/</loc>
+    <loc>http://localhost:1313/blog/categories/travel/</loc>
     <lastmod>2024-03-02T13:52:23+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/flutter-search-widget/</loc>
+    <loc>http://localhost:1313/blog/flutter-search-widget/</loc>
     <lastmod>2024-02-06T08:37:04+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/categories/hacking/</loc>
+    <loc>http://localhost:1313/blog/categories/hacking/</loc>
     <lastmod>2024-02-06T08:37:04+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/android-navigation-menu/</loc>
+    <loc>http://localhost:1313/blog/android-navigation-menu/</loc>
     <lastmod>2023-09-06T13:46:00+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/update-widget/</loc>
+    <loc>http://localhost:1313/blog/update-widget/</loc>
     <lastmod>2023-07-29T19:33:44+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/categories/recipes/</loc>
+    <loc>http://localhost:1313/blog/categories/recipes/</loc>
     <lastmod>2022-07-09T18:26:43+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/turkey-cabbage-wraps/</loc>
+    <loc>http://localhost:1313/blog/turkey-cabbage-wraps/</loc>
     <lastmod>2022-07-09T18:26:43+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/create-word-grid/</loc>
+    <loc>http://localhost:1313/blog/create-word-grid/</loc>
     <lastmod>2022-06-11T10:55:18+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/read-paywalled-articles/</loc>
+    <loc>http://localhost:1313/blog/read-paywalled-articles/</loc>
     <lastmod>2021-12-18T13:55:26+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/risotto-milanese/</loc>
+    <loc>http://localhost:1313/blog/risotto-milanese/</loc>
     <lastmod>2021-11-06T12:24:36+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/android-flutter/</loc>
+    <loc>http://localhost:1313/blog/android-flutter/</loc>
     <lastmod>2021-07-15T13:37:07+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/android-kotlin/</loc>
+    <loc>http://localhost:1313/blog/android-kotlin/</loc>
     <lastmod>2021-05-14T09:49:11+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/word-count/</loc>
+    <loc>http://localhost:1313/blog/word-count/</loc>
     <lastmod>2021-04-05T10:28:06+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/pea-and-ham-soup/</loc>
+    <loc>http://localhost:1313/blog/pea-and-ham-soup/</loc>
     <lastmod>2021-04-05T09:43:03+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/caldo-verde/</loc>
+    <loc>http://localhost:1313/blog/caldo-verde/</loc>
     <lastmod>2021-03-21T19:47:05+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/turkey-gammon-broccoli-bake/</loc>
+    <loc>http://localhost:1313/blog/turkey-gammon-broccoli-bake/</loc>
     <lastmod>2020-12-30T10:49:50+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/draught-hash-brown/</loc>
+    <loc>http://localhost:1313/blog/draught-hash-brown/</loc>
     <lastmod>2020-11-01T11:55:12+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/australian-meatball-wiggleoni/</loc>
+    <loc>http://localhost:1313/blog/australian-meatball-wiggleoni/</loc>
     <lastmod>2020-10-31T17:41:08+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/not-swedish-meatballs/</loc>
+    <loc>http://localhost:1313/blog/not-swedish-meatballs/</loc>
     <lastmod>2020-10-29T19:38:45+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/download-playlist-video/</loc>
+    <loc>http://localhost:1313/blog/download-playlist-video/</loc>
     <lastmod>2020-08-18T20:49:05+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/resurrecting-dos-app/</loc>
+    <loc>http://localhost:1313/blog/resurrecting-dos-app/</loc>
     <lastmod>2020-08-09T21:24:46+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/lambda-expressions/</loc>
+    <loc>http://localhost:1313/blog/lambda-expressions/</loc>
     <lastmod>2020-03-26T13:02:53+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/banana-cake/</loc>
+    <loc>http://localhost:1313/blog/banana-cake/</loc>
     <lastmod>2020-02-27T16:21:35+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/hiding-button/</loc>
+    <loc>http://localhost:1313/blog/hiding-button/</loc>
     <lastmod>2020-02-15T20:59:47+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/derive-edit-position/</loc>
+    <loc>http://localhost:1313/blog/derive-edit-position/</loc>
     <lastmod>2020-02-08T18:24:23+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/categories/diy/</loc>
+    <loc>http://localhost:1313/blog/categories/diy/</loc>
     <lastmod>2019-07-12T10:49:21+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/fixing-basin-waste-pop-up/</loc>
+    <loc>http://localhost:1313/blog/fixing-basin-waste-pop-up/</loc>
     <lastmod>2019-07-12T10:49:21+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/pi-hole-cloudflare-setup/</loc>
+    <loc>http://localhost:1313/blog/pi-hole-cloudflare-setup/</loc>
     <lastmod>2019-06-17T18:30:39+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/post/mushrooms-and-soy-sauce/</loc>
+    <loc>http://localhost:1313/blog/post/mushrooms-and-soy-sauce/</loc>
     <lastmod>2019-04-14T16:43:13+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/post/source-code-highlighting/</loc>
+    <loc>http://localhost:1313/blog/post/source-code-highlighting/</loc>
     <lastmod>2019-03-24T11:01:35+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/post/musical-temperaments/</loc>
+    <loc>http://localhost:1313/blog/post/musical-temperaments/</loc>
     <lastmod>2019-01-29T20:58:13+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/post/draw-musical-staff/</loc>
+    <loc>http://localhost:1313/blog/post/draw-musical-staff/</loc>
     <lastmod>2019-01-13T18:35:26+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/post/expand-android-selection/</loc>
+    <loc>http://localhost:1313/blog/post/expand-android-selection/</loc>
     <lastmod>2018-12-09T12:21:39+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/interesting-mash/</loc>
+    <loc>http://localhost:1313/blog/interesting-mash/</loc>
     <lastmod>2018-12-09T10:34:18+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/green-tomatoes/</loc>
+    <loc>http://localhost:1313/blog/green-tomatoes/</loc>
     <lastmod>2018-11-11T13:23:50+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/post/create-pdf-report/</loc>
+    <loc>http://localhost:1313/blog/post/create-pdf-report/</loc>
     <lastmod>2018-09-18T19:27:46+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/post/questionnaire/</loc>
+    <loc>http://localhost:1313/blog/post/questionnaire/</loc>
     <lastmod>2018-08-20T17:14:32+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/categories/electronics/</loc>
+    <loc>http://localhost:1313/blog/categories/electronics/</loc>
     <lastmod>2018-07-14T21:22:37+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/post/smart-meters/</loc>
+    <loc>http://localhost:1313/blog/post/smart-meters/</loc>
     <lastmod>2018-07-14T21:22:37+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/post/mullard-5-20-amplifier/</loc>
+    <loc>http://localhost:1313/blog/post/mullard-5-20-amplifier/</loc>
     <lastmod>2018-07-01T16:25:18+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/post/handling-resizing-in-windows/</loc>
+    <loc>http://localhost:1313/blog/post/handling-resizing-in-windows/</loc>
     <lastmod>2018-06-19T20:23:44+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/swift/</loc>
+    <loc>http://localhost:1313/blog/swift/</loc>
     <lastmod>2018-03-28T15:56:14+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/boiled-beef-and-carrots/</loc>
+    <loc>http://localhost:1313/blog/boiled-beef-and-carrots/</loc>
     <lastmod>2018-02-04T11:50:57+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/android-custom-attributes/</loc>
+    <loc>http://localhost:1313/blog/android-custom-attributes/</loc>
     <lastmod>2018-01-08T11:02:04+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/android-recent-files/</loc>
+    <loc>http://localhost:1313/blog/android-recent-files/</loc>
     <lastmod>2017-12-15T11:53:57+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/baked-tomatoes/</loc>
+    <loc>http://localhost:1313/blog/baked-tomatoes/</loc>
     <lastmod>2017-11-05T12:47:25+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/fried-whole-mushrooms/</loc>
+    <loc>http://localhost:1313/blog/fried-whole-mushrooms/</loc>
     <lastmod>2017-11-05T12:32:57+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/android-text-search/</loc>
+    <loc>http://localhost:1313/blog/android-text-search/</loc>
     <lastmod>2017-10-26T11:57:27+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/corned-beef-chili/</loc>
+    <loc>http://localhost:1313/blog/corned-beef-chili/</loc>
     <lastmod>2017-10-26T10:47:35+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/butter-beans-in-tomato-sauce/</loc>
+    <loc>http://localhost:1313/blog/butter-beans-in-tomato-sauce/</loc>
     <lastmod>2017-10-26T09:49:29+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/thai-red-curry-with-noodles/</loc>
+    <loc>http://localhost:1313/blog/thai-red-curry-with-noodles/</loc>
     <lastmod>2017-10-20T14:51:28+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/carrot-and-coriander-soup/</loc>
+    <loc>http://localhost:1313/blog/carrot-and-coriander-soup/</loc>
     <lastmod>2017-10-18T17:51:28+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/using-emacs-in-android-development/</loc>
+    <loc>http://localhost:1313/blog/using-emacs-in-android-development/</loc>
     <lastmod>2017-10-18T15:51:28+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/markdown-openstreetmap-maps/</loc>
+    <loc>http://localhost:1313/blog/markdown-openstreetmap-maps/</loc>
     <lastmod>2017-10-14T12:59:06+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/getting-related-content-working/</loc>
+    <loc>http://localhost:1313/blog/getting-related-content-working/</loc>
     <lastmod>2017-09-13T11:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/adding-a-calendar-event/</loc>
+    <loc>http://localhost:1313/blog/adding-a-calendar-event/</loc>
     <lastmod>2017-09-05T14:54:25+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/whatever-o-meter-revisited/</loc>
+    <loc>http://localhost:1313/blog/whatever-o-meter-revisited/</loc>
     <lastmod>2017-08-24T11:47:00+01:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/migrating-blog-from-wordpress/</loc>
+    <loc>http://localhost:1313/blog/migrating-blog-from-wordpress/</loc>
     <lastmod>2017-08-19T14:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/resolving-content-uris-in-android/</loc>
+    <loc>http://localhost:1313/blog/resolving-content-uris-in-android/</loc>
     <lastmod>2017-07-23T10:48:17+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/vegetables-cooked-in-olive-oil/</loc>
+    <loc>http://localhost:1313/blog/vegetables-cooked-in-olive-oil/</loc>
     <lastmod>2017-04-26T10:41:59+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/slow-cooked-ox-cheek/</loc>
+    <loc>http://localhost:1313/blog/slow-cooked-ox-cheek/</loc>
     <lastmod>2017-04-26T10:09:36+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/handling-run-time-changes-in-android/</loc>
+    <loc>http://localhost:1313/blog/handling-run-time-changes-in-android/</loc>
     <lastmod>2017-01-08T18:49:31+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/using-emacs-as-an-ide/</loc>
+    <loc>http://localhost:1313/blog/using-emacs-as-an-ide/</loc>
     <lastmod>2016-12-10T13:59:22+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/upgrading-a-moto-g/</loc>
+    <loc>http://localhost:1313/blog/upgrading-a-moto-g/</loc>
     <lastmod>2016-09-18T20:27:57+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/replacing-micro-bore-radiators/</loc>
+    <loc>http://localhost:1313/blog/replacing-micro-bore-radiators/</loc>
     <lastmod>2016-07-31T15:46:48+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/upgrading-to-windows-10/</loc>
+    <loc>http://localhost:1313/blog/upgrading-to-windows-10/</loc>
     <lastmod>2016-07-25T19:46:29+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/whole-broad-beans-in-olive-oil/</loc>
+    <loc>http://localhost:1313/blog/whole-broad-beans-in-olive-oil/</loc>
     <lastmod>2016-06-08T18:53:38+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/venison-and-chorizo-casserole/</loc>
+    <loc>http://localhost:1313/blog/venison-and-chorizo-casserole/</loc>
     <lastmod>2016-04-21T15:09:15+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/shoreham-fish-chowder/</loc>
+    <loc>http://localhost:1313/blog/shoreham-fish-chowder/</loc>
     <lastmod>2016-03-27T15:17:14+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/resurrecting-a-netbook-as-a-web-server/</loc>
+    <loc>http://localhost:1313/blog/resurrecting-a-netbook-as-a-web-server/</loc>
     <lastmod>2016-02-27T19:58:47+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/build-mac-osx-apps-using-command-line-tools/</loc>
+    <loc>http://localhost:1313/blog/build-mac-osx-apps-using-command-line-tools/</loc>
     <lastmod>2016-02-02T17:59:09+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/read-ibook-books-on-an-android-tablet/</loc>
+    <loc>http://localhost:1313/blog/read-ibook-books-on-an-android-tablet/</loc>
     <lastmod>2016-02-02T16:59:51+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/install-osx-el-capitan-on-a-pc-mbr/</loc>
+    <loc>http://localhost:1313/blog/install-osx-el-capitan-on-a-pc-mbr/</loc>
     <lastmod>2016-01-26T11:36:38+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/catalan-slow-cooked-chicken/</loc>
+    <loc>http://localhost:1313/blog/catalan-slow-cooked-chicken/</loc>
     <lastmod>2015-09-19T10:07:59+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/move-linux-mint-root-partition/</loc>
+    <loc>http://localhost:1313/blog/move-linux-mint-root-partition/</loc>
     <lastmod>2015-08-31T13:33:24+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/index/</loc>
+    <loc>http://localhost:1313/blog/index/</loc>
     <lastmod>2015-08-07T09:32:42+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/fried-rice/</loc>
+    <loc>http://localhost:1313/blog/fried-rice/</loc>
     <lastmod>2015-08-06T14:52:37+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/pan-fried-lambs-liver-bacon-and-chorizo/</loc>
+    <loc>http://localhost:1313/blog/pan-fried-lambs-liver-bacon-and-chorizo/</loc>
     <lastmod>2015-06-01T17:21:02+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/handlers-in-android/</loc>
+    <loc>http://localhost:1313/blog/handlers-in-android/</loc>
     <lastmod>2015-05-10T15:51:40+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/chorizo-egg-and-tomato-toasted-sandwich/</loc>
+    <loc>http://localhost:1313/blog/chorizo-egg-and-tomato-toasted-sandwich/</loc>
     <lastmod>2015-04-28T11:54:45+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/slow-cooked-lamb/</loc>
+    <loc>http://localhost:1313/blog/slow-cooked-lamb/</loc>
     <lastmod>2015-04-17T11:10:42+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/search-engine-optimisation-seo/</loc>
+    <loc>http://localhost:1313/blog/search-engine-optimisation-seo/</loc>
     <lastmod>2015-04-01T18:17:07+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/fast-fourier-transform/</loc>
+    <loc>http://localhost:1313/blog/fast-fourier-transform/</loc>
     <lastmod>2015-03-03T12:44:13+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/sausages-with-green-lentils/</loc>
+    <loc>http://localhost:1313/blog/sausages-with-green-lentils/</loc>
     <lastmod>2015-02-25T18:00:34+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/transfer-contacts-from-iphone-to-android/</loc>
+    <loc>http://localhost:1313/blog/transfer-contacts-from-iphone-to-android/</loc>
     <lastmod>2015-02-18T17:45:54+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/c/</loc>
+    <loc>http://localhost:1313/blog/c/</loc>
     <lastmod>2014-11-01T13:10:54+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/java-collections/</loc>
+    <loc>http://localhost:1313/blog/java-collections/</loc>
     <lastmod>2014-11-01T12:18:28+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/stuffed-peppers/</loc>
+    <loc>http://localhost:1313/blog/stuffed-peppers/</loc>
     <lastmod>2014-09-04T12:16:58+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/unobtainium/</loc>
+    <loc>http://localhost:1313/blog/unobtainium/</loc>
     <lastmod>2014-08-06T11:02:30+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/coarse-ratatouille/</loc>
+    <loc>http://localhost:1313/blog/coarse-ratatouille/</loc>
     <lastmod>2014-06-26T18:01:44+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/download-streamed-video/</loc>
+    <loc>http://localhost:1313/blog/download-streamed-video/</loc>
     <lastmod>2014-06-06T16:03:16+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/concurrency-threads-semaphores-and-mutexes/</loc>
+    <loc>http://localhost:1313/blog/concurrency-threads-semaphores-and-mutexes/</loc>
     <lastmod>2014-06-04T15:45:20+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/upgrading-wordpress/</loc>
+    <loc>http://localhost:1313/blog/upgrading-wordpress/</loc>
     <lastmod>2014-05-28T11:05:54+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/faggots-and-peas-with-onion-gravy/</loc>
+    <loc>http://localhost:1313/blog/faggots-and-peas-with-onion-gravy/</loc>
     <lastmod>2014-05-27T18:53:22+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/truly-evil-onion-gravy/</loc>
+    <loc>http://localhost:1313/blog/truly-evil-onion-gravy/</loc>
     <lastmod>2014-05-27T18:38:50+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/fabada-asturiana/</loc>
+    <loc>http://localhost:1313/blog/fabada-asturiana/</loc>
     <lastmod>2014-05-23T16:50:32+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/vegetable-soup-plus/</loc>
+    <loc>http://localhost:1313/blog/vegetable-soup-plus/</loc>
     <lastmod>2014-04-26T17:33:36+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/haskell/</loc>
+    <loc>http://localhost:1313/blog/haskell/</loc>
     <lastmod>2014-03-29T15:26:14+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/mexican-breakfast/</loc>
+    <loc>http://localhost:1313/blog/mexican-breakfast/</loc>
     <lastmod>2014-03-29T09:59:46+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/slimstat/</loc>
+    <loc>http://localhost:1313/blog/slimstat/</loc>
     <lastmod>2013-12-26T16:03:46+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/raspberry-pi-wifi/</loc>
+    <loc>http://localhost:1313/blog/raspberry-pi-wifi/</loc>
     <lastmod>2013-12-21T20:16:37+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/python/</loc>
+    <loc>http://localhost:1313/blog/python/</loc>
     <lastmod>2013-12-21T18:54:52+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/clementine-cake/</loc>
+    <loc>http://localhost:1313/blog/clementine-cake/</loc>
     <lastmod>2013-12-15T13:46:57+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/dougs-seafood-risotto/</loc>
+    <loc>http://localhost:1313/blog/dougs-seafood-risotto/</loc>
     <lastmod>2013-12-11T18:12:24+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/spanish-frittata/</loc>
+    <loc>http://localhost:1313/blog/spanish-frittata/</loc>
     <lastmod>2013-12-11T16:13:17+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/pasta-picante/</loc>
+    <loc>http://localhost:1313/blog/pasta-picante/</loc>
     <lastmod>2013-12-11T14:43:34+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/morris-o-meter/</loc>
+    <loc>http://localhost:1313/blog/morris-o-meter/</loc>
     <lastmod>2013-12-03T18:10:32+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/spanish-omelette/</loc>
+    <loc>http://localhost:1313/blog/spanish-omelette/</loc>
     <lastmod>2013-11-30T12:51:47+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/leek-and-potato-soup/</loc>
+    <loc>http://localhost:1313/blog/leek-and-potato-soup/</loc>
     <lastmod>2013-11-28T17:33:42+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/about/</loc>
+    <loc>http://localhost:1313/blog/about/</loc>
     <lastmod>2013-11-28T17:28:33+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/test-o-meter/</loc>
+    <loc>http://localhost:1313/blog/test-o-meter/</loc>
     <lastmod>2013-11-20T19:52:58+00:00</lastmod>
   </url><url>
-    <loc>https://billthefarmer.github.io/blog/whatever-o-meter/</loc>
+    <loc>http://localhost:1313/blog/whatever-o-meter/</loc>
     <lastmod>2013-11-20T18:55:54+00:00</lastmod>
   </url>
 </urlset>

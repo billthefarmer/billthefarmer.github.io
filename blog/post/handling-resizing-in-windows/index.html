@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/post/handling-resizing-in-windows/">
+<meta property="og:url" content="http://localhost:1313/blog/post/handling-resizing-in-windows/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Handling Resizing in Windows">
   <meta property="og:description" content="I have a windows app where I want the app window to maintain it’s aspect ratio when it is resized. Windows provides two mechanisms for this, the WM_SIZE message and the WM_SIZING message. The WM_SIZE message is sent when a window has been resized to allow child windows to be resized, the WM_SIZING message is sent while the user is resizing it to allow the size to be adjusted. The messages are handled in the WindowProc callback function.">
@@ -33,15 +33,15 @@
 
 
 
-<meta name="generator" content="Hugo 0.152.0">
+<meta name="generator" content="Hugo 0.153.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/post/handling-resizing-in-windows/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/post/handling-resizing-in-windows/">
     <title>Handling Resizing in Windows | Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     
 
@@ -49,7 +49,7 @@
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -85,48 +85,48 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
                     Travel
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -141,7 +141,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -161,7 +161,7 @@ table {
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/post/handling-resizing-in-windows/">Handling Resizing in Windows</a>
+      <a href="http://localhost:1313/blog/post/handling-resizing-in-windows/">Handling Resizing in Windows</a>
     </h3>
     <div class="callout small">
       <small>
@@ -192,7 +192,7 @@ user is resizing it to allow the size to be adjusted. The messages are
 handled in the <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms633573(v=vs.85).aspx"><code>WindowProc</code></a> callback function.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// Main window procedure
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>LRESULT CALLBACK <span style="color:#00a000">MainWndProc</span>(HWND hWnd,
+</span></span></span><span style="display:flex;"><span>LRESULT CALLBACK <span style="color:#00a000">MainWndProc</span>(HWND hWnd,
 </span></span><span style="display:flex;"><span>                             UINT uMsg,
 </span></span><span style="display:flex;"><span>                             WPARAM wParam,
 </span></span><span style="display:flex;"><span>                             LPARAM lParam)
@@ -200,17 +200,17 @@ handled in the <a href="https://msdn.microsoft.com/en-us/library/windows/desktop
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">switch</span> (uMsg)
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// ...
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>	<span style="color:#080;font-style:italic">// Size
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">WM_SIZE</span>:
+</span></span></span><span style="display:flex;"><span>	<span style="color:#080;font-style:italic">// Size
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">WM_SIZE</span>:
 </span></span><span style="display:flex;"><span>        WindowResize(hWnd, wParam, lParam);
 </span></span><span style="display:flex;"><span>	<span style="color:#a2f;font-weight:bold">break</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>	<span style="color:#080;font-style:italic">// Sizing
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">WM_SIZING</span>:
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">WM_SIZING</span>:
 </span></span><span style="display:flex;"><span>	    <span style="color:#a2f;font-weight:bold">return</span> WindowResizing(hWnd, wParam, lParam);
 </span></span><span style="display:flex;"><span>	<span style="color:#a2f;font-weight:bold">break</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// ...
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    }
+</span></span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Because a window can be zoomed vertically by double clicking on the
 window title bar, the <code>WindowResize</code> function checks the aspect ratio
@@ -219,19 +219,19 @@ constants define the desired aspect ratio. If the aspect ratio is OK
 the child windows are resized.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// WindowResize
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>BOOL <span style="color:#00a000">WindowResize</span>(HWND hWnd, WPARAM wParam, LPARAM lParam)
+</span></span></span><span style="display:flex;"><span>BOOL <span style="color:#00a000">WindowResize</span>(HWND hWnd, WPARAM wParam, LPARAM lParam)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">int</span> width <span style="color:#666">=</span> LOWORD(lParam);
 </span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">int</span> height <span style="color:#666">=</span> HIWORD(lParam) <span style="color:#666">-</span> toolbar.rect.bottom;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Get the window and client dimensions
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    GetWindowRect(hWnd, <span style="color:#666">&amp;</span>window.wind);
+</span></span></span><span style="display:flex;"><span>    GetWindowRect(hWnd, <span style="color:#666">&amp;</span>window.wind);
 </span></span><span style="display:flex;"><span>    GetClientRect(hWnd, <span style="color:#666">&amp;</span>window.rect);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">if</span> (width <span style="color:#666">&lt;</span> (height <span style="color:#666">*</span> WIDTH) <span style="color:#666">/</span> HEIGHT)
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Calculate desired window width and height
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#0b0;font-weight:bold">int</span> border <span style="color:#666">=</span> (window.wind.right <span style="color:#666">-</span> window.wind.left) <span style="color:#666">-</span>
+</span></span></span><span style="display:flex;"><span>        <span style="color:#0b0;font-weight:bold">int</span> border <span style="color:#666">=</span> (window.wind.right <span style="color:#666">-</span> window.wind.left) <span style="color:#666">-</span>
 </span></span><span style="display:flex;"><span>            window.rect.right;
 </span></span><span style="display:flex;"><span>        <span style="color:#0b0;font-weight:bold">int</span> header <span style="color:#666">=</span> (window.wind.bottom <span style="color:#666">-</span> window.wind.top) <span style="color:#666">-</span>
 </span></span><span style="display:flex;"><span>            window.rect.bottom;
@@ -239,7 +239,7 @@ the child windows are resized.</p>
 </span></span><span style="display:flex;"><span>        height <span style="color:#666">=</span> height <span style="color:#666">+</span> toolbar.rect.bottom <span style="color:#666">+</span> header;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Set new dimensions
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        SetWindowPos(hWnd, <span style="color:#a2f">NULL</span>, <span style="color:#666">0</span>, <span style="color:#666">0</span>,
+</span></span></span><span style="display:flex;"><span>        SetWindowPos(hWnd, <span style="color:#a2f">NULL</span>, <span style="color:#666">0</span>, <span style="color:#666">0</span>,
 </span></span><span style="display:flex;"><span>                     width, height,
 </span></span><span style="display:flex;"><span>                     SWP_NOMOVE <span style="color:#666">|</span> SWP_NOZORDER);
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#a2f">true</span>;
@@ -253,37 +253,37 @@ adjusts it as necessary depending on which window edge is being
 dragged.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// Window resizing
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>BOOL <span style="color:#00a000">WindowResizing</span>(HWND hWnd, WPARAM wParam, LPARAM lParam)
+</span></span></span><span style="display:flex;"><span>BOOL <span style="color:#00a000">WindowResizing</span>(HWND hWnd, WPARAM wParam, LPARAM lParam)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    PRECT rectp <span style="color:#666">=</span> (PRECT)lParam;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Get the window and client dimensions
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    GetWindowRect(hWnd, <span style="color:#666">&amp;</span>window.wind);
+</span></span></span><span style="display:flex;"><span>    GetWindowRect(hWnd, <span style="color:#666">&amp;</span>window.wind);
 </span></span><span style="display:flex;"><span>    GetClientRect(hWnd, <span style="color:#666">&amp;</span>window.rect);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Edges
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#0b0;font-weight:bold">int</span> border <span style="color:#666">=</span> (window.wind.right <span style="color:#666">-</span> window.wind.left) <span style="color:#666">-</span>
+</span></span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">int</span> border <span style="color:#666">=</span> (window.wind.right <span style="color:#666">-</span> window.wind.left) <span style="color:#666">-</span>
 </span></span><span style="display:flex;"><span>        window.rect.right;
 </span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">int</span> header <span style="color:#666">=</span> (window.wind.bottom <span style="color:#666">-</span> window.wind.top) <span style="color:#666">-</span>
 </span></span><span style="display:flex;"><span>        window.rect.bottom;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Window minimum width and height
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#0b0;font-weight:bold">int</span> width  <span style="color:#666">=</span> WIDTH <span style="color:#666">+</span> border;
+</span></span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">int</span> width  <span style="color:#666">=</span> WIDTH <span style="color:#666">+</span> border;
 </span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">int</span> height <span style="color:#666">=</span> HEIGHT <span style="color:#666">+</span> toolbar.rect.bottom <span style="color:#666">+</span> header;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Minimum size
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">if</span> (rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">-</span> rectp<span style="color:#666">-&gt;</span>left <span style="color:#666">&lt;</span> width)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">if</span> (rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">-</span> rectp<span style="color:#666">-&gt;</span>left <span style="color:#666">&lt;</span> width)
 </span></span><span style="display:flex;"><span>	rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>left <span style="color:#666">+</span> width;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">if</span> (rectp<span style="color:#666">-&gt;</span>bottom <span style="color:#666">-</span> rectp<span style="color:#666">-&gt;</span>top <span style="color:#666">&lt;</span> height)
 </span></span><span style="display:flex;"><span>	rectp<span style="color:#666">-&gt;</span>bottom <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>top <span style="color:#666">+</span> height;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Maximum width
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">if</span> (rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">-</span> rectp<span style="color:#666">-&gt;</span>left <span style="color:#666">&gt;</span> STEP <span style="color:#666">+</span> border)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">if</span> (rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">-</span> rectp<span style="color:#666">-&gt;</span>left <span style="color:#666">&gt;</span> STEP <span style="color:#666">+</span> border)
 </span></span><span style="display:flex;"><span>        rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>left <span style="color:#666">+</span> STEP <span style="color:#666">+</span> border;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Offered width and height
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    width <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">-</span> rectp<span style="color:#666">-&gt;</span>left;
+</span></span></span><span style="display:flex;"><span>    width <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>right <span style="color:#666">-</span> rectp<span style="color:#666">-&gt;</span>left;
 </span></span><span style="display:flex;"><span>    height <span style="color:#666">=</span> rectp<span style="color:#666">-&gt;</span>bottom <span style="color:#666">-</span> rectp<span style="color:#666">-&gt;</span>top;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">switch</span> (wParam)
@@ -432,14 +432,14 @@ handles most cases OK, but isn&rsquo;t completely idiot proof. By contrast
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/post/handling-resizing-in-windows/#">Back to top</a>
+          <a href="http://localhost:1313/blog/post/handling-resizing-in-windows/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>

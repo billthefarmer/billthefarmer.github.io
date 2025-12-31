@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/resurrecting-dos-app/">
+<meta property="og:url" content="http://localhost:1313/blog/resurrecting-dos-app/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Resurrecting an Old Dos App">
   <meta property="og:description" content="Back in the late 90’s I wrote an simulation app for an old telecontrol system that was being superceded. It was written in Turbo C to run on a DOS or Win95 PC.
@@ -39,15 +39,15 @@ It used to run under 32 bit windows but wouldn’t run under 64 bit windows as t
 
 
 
-<meta name="generator" content="Hugo 0.152.0">
+<meta name="generator" content="Hugo 0.153.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/resurrecting-dos-app/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/resurrecting-dos-app/">
     <title>Resurrecting an Old Dos App | Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     
 
@@ -55,7 +55,7 @@ It used to run under 32 bit windows but wouldn’t run under 64 bit windows as t
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -91,48 +91,48 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
                     Travel
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -147,7 +147,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -167,7 +167,7 @@ table {
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/resurrecting-dos-app/">Resurrecting an Old Dos App</a>
+      <a href="http://localhost:1313/blog/resurrecting-dos-app/">Resurrecting an Old Dos App</a>
     </h3>
     <div class="callout small">
       <small>
@@ -217,30 +217,30 @@ functions which offer similar functionality.</p>
 keydown and keyup events are presented. The following two functions
 deal with this.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// kbhit
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">kbhit</span>()
+</span></span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">kbhit</span>()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    INPUT_RECORD record;
 </span></span><span style="display:flex;"><span>    DWORD n;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Wait for something to happen
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#00a000">WaitForSingleObject</span>(hConsoleInput, TIMER);
+</span></span></span><span style="display:flex;"><span>    <span style="color:#00a000">WaitForSingleObject</span>(hConsoleInput, TIMER);
 </span></span><span style="display:flex;"><span>    <span style="color:#00a000">GetNumberOfConsoleInputEvents</span>(hConsoleInput, <span style="color:#666">&amp;</span>n);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">if</span> (n <span style="color:#666">&gt;</span> <span style="color:#666">0</span>)
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Ignore unwanted events
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#00a000">PeekConsoleInput</span>(hConsoleInput, <span style="color:#666">&amp;</span>record, <span style="color:#666">1</span>, <span style="color:#666">&amp;</span>n);
+</span></span></span><span style="display:flex;"><span>        <span style="color:#00a000">PeekConsoleInput</span>(hConsoleInput, <span style="color:#666">&amp;</span>record, <span style="color:#666">1</span>, <span style="color:#666">&amp;</span>n);
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">if</span> ((record.EventType <span style="color:#666">!=</span>  KEY_EVENT) <span style="color:#666">||</span>
 </span></span><span style="display:flex;"><span>            (record.Event.KeyEvent.wVirtualKeyCode <span style="color:#666">==</span> VK_SHIFT) <span style="color:#666">||</span>
 </span></span><span style="display:flex;"><span>            (record.Event.KeyEvent.wVirtualKeyCode <span style="color:#666">==</span> VK_CONTROL) <span style="color:#666">||</span>
 </span></span><span style="display:flex;"><span>            (record.Event.KeyEvent.wVirtualKeyCode <span style="color:#666">==</span> VK_MENU) <span style="color:#666">||</span>
 </span></span><span style="display:flex;"><span>            (record.Event.KeyEvent.wVirtualKeyCode <span style="color:#666">==</span> VK_CAPITAL) <span style="color:#666">||</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// And key up events
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            (<span style="color:#666">!</span>record.Event.KeyEvent.bKeyDown))
+</span></span></span><span style="display:flex;"><span>            (<span style="color:#666">!</span>record.Event.KeyEvent.bKeyDown))
 </span></span><span style="display:flex;"><span>            <span style="color:#00a000">ReadConsoleInput</span>(hConsoleInput, <span style="color:#666">&amp;</span>record, <span style="color:#666">1</span>, <span style="color:#666">&amp;</span>n);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Update the event count
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#00a000">GetNumberOfConsoleInputEvents</span>(hConsoleInput, <span style="color:#666">&amp;</span>n);
+</span></span></span><span style="display:flex;"><span>        <span style="color:#00a000">GetNumberOfConsoleInputEvents</span>(hConsoleInput, <span style="color:#666">&amp;</span>n);
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">return</span> n;
@@ -257,7 +257,7 @@ lock key events are discarded.</p>
 </span></span><span style="display:flex;"><span>    DWORD n;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// If the char is zero, return zero, but don&#39;t read event
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#00a000">PeekConsoleInput</span>(hConsoleInput, <span style="color:#666">&amp;</span>record, <span style="color:#666">1</span>, <span style="color:#666">&amp;</span>n);
+</span></span></span><span style="display:flex;"><span>    <span style="color:#00a000">PeekConsoleInput</span>(hConsoleInput, <span style="color:#666">&amp;</span>record, <span style="color:#666">1</span>, <span style="color:#666">&amp;</span>n);
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#666">!</span>special <span style="color:#666">&amp;&amp;</span> record.Event.KeyEvent.uChar.AsciiChar <span style="color:#666">==</span> <span style="color:#666">0</span>)
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        special <span style="color:#666">=</span> TRUE;
@@ -265,9 +265,9 @@ lock key events are discarded.</p>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Read the event
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#00a000">ReadConsoleInput</span>(hConsoleInput, <span style="color:#666">&amp;</span>record, <span style="color:#666">1</span>, <span style="color:#666">&amp;</span>n);
+</span></span></span><span style="display:flex;"><span>    <span style="color:#00a000">ReadConsoleInput</span>(hConsoleInput, <span style="color:#666">&amp;</span>record, <span style="color:#666">1</span>, <span style="color:#666">&amp;</span>n);
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Not special, return the char
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#666">!</span>special)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#666">!</span>special)
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> record.Event.KeyEvent.uChar.AsciiChar;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    special <span style="color:#666">=</span> FALSE;
@@ -275,19 +275,19 @@ lock key events are discarded.</p>
 </span></span><span style="display:flex;"><span>            (SHIFT_PRESSED <span style="color:#666">|</span> LEFT_ALT_PRESSED))
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Special, return key code
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#666">0</span><span style="color:#666">:</span>
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#666">0</span><span style="color:#666">:</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> record.Event.KeyEvent.wVirtualKeyCode;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Special, shift pressed, return key code plus shift
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">SHIFT_PRESSED</span>:
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">SHIFT_PRESSED</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> record.Event.KeyEvent.wVirtualKeyCode <span style="color:#666">+</span> VK_SHIFT;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Special, alt pressed, return key code plus shift
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">LEFT_ALT_PRESSED</span>:
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">LEFT_ALT_PRESSED</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> record.Event.KeyEvent.wVirtualKeyCode <span style="color:#666">+</span> VK_SHIFT <span style="color:#666">*</span> <span style="color:#666">2</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Special, shift and alt pressed, return key code plus shift
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">case</span> SHIFT_PRESSED <span style="color:#666">|</span> <span style="color:#a0a000">LEFT_ALT_PRESSED</span>:
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">case</span> SHIFT_PRESSED <span style="color:#666">|</span> <span style="color:#a0a000">LEFT_ALT_PRESSED</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> record.Event.KeyEvent.wVirtualKeyCode <span style="color:#666">+</span> VK_SHIFT <span style="color:#666">*</span> <span style="color:#666">3</span>;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
@@ -308,30 +308,30 @@ bars. Resizing the window or making it full screen destroys the
 existing display, but subsequent output is positioned correctly.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// textmode
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">textmode</span>()
+</span></span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">textmode</span>()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    CONSOLE_SCREEN_BUFFER_INFO info;
 </span></span><span style="display:flex;"><span>    COORD size;
 </span></span><span style="display:flex;"><span>    DWORD mode;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Do it once
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">if</span> (hConsoleOutput <span style="color:#666">==</span> <span style="color:#a2f">NULL</span>)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">if</span> (hConsoleOutput <span style="color:#666">==</span> <span style="color:#a2f">NULL</span>)
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Disable Ctrl-C
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#00a000">SetConsoleCtrlHandler</span>(<span style="color:#a2f">NULL</span>, TRUE);
+</span></span></span><span style="display:flex;"><span>        <span style="color:#00a000">SetConsoleCtrlHandler</span>(<span style="color:#a2f">NULL</span>, TRUE);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Get handles
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        hConsoleOutput <span style="color:#666">=</span> <span style="color:#00a000">GetStdHandle</span>(STD_OUTPUT_HANDLE);
+</span></span></span><span style="display:flex;"><span>        hConsoleOutput <span style="color:#666">=</span> <span style="color:#00a000">GetStdHandle</span>(STD_OUTPUT_HANDLE);
 </span></span><span style="display:flex;"><span>        hConsoleInput <span style="color:#666">=</span> <span style="color:#00a000">GetStdHandle</span>(STD_INPUT_HANDLE);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Update console mode
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#00a000">GetConsoleMode</span>(hConsoleOutput, <span style="color:#666">&amp;</span>mode);
+</span></span></span><span style="display:flex;"><span>        <span style="color:#00a000">GetConsoleMode</span>(hConsoleOutput, <span style="color:#666">&amp;</span>mode);
 </span></span><span style="display:flex;"><span>        <span style="color:#00a000">SetConsoleMode</span>(hConsoleOutput, mode <span style="color:#666">|</span> ENABLE_PROCESSED_OUTPUT);
 </span></span><span style="display:flex;"><span>        <span style="color:#00a000">GetConsoleMode</span>(hConsoleInput, <span style="color:#666">&amp;</span>mode);
 </span></span><span style="display:flex;"><span>        <span style="color:#00a000">SetConsoleMode</span>(hConsoleInput, mode <span style="color:#666">&amp;</span> <span style="color:#666">!</span>ENABLE_ECHO_INPUT);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Resize window
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#00a000">GetConsoleScreenBufferInfo</span>(hConsoleOutput, <span style="color:#666">&amp;</span>info);
+</span></span></span><span style="display:flex;"><span>        <span style="color:#00a000">GetConsoleScreenBufferInfo</span>(hConsoleOutput, <span style="color:#666">&amp;</span>info);
 </span></span><span style="display:flex;"><span>        info.srWindow.Right <span style="color:#666">=</span> info.srWindow.Left <span style="color:#666">+</span> SCREEN_WIDTH;
 </span></span><span style="display:flex;"><span>        info.srWindow.Bottom <span style="color:#666">=</span> info.srWindow.Top <span style="color:#666">+</span> SCREEN_HEIGHT;
 </span></span><span style="display:flex;"><span>        <span style="color:#00a000">SetConsoleWindowInfo</span>(hConsoleOutput, TRUE, <span style="color:#666">&amp;</span>info.srWindow);
@@ -340,7 +340,7 @@ existing display, but subsequent output is positioned correctly.</p>
 </span></span><span style="display:flex;"><span>        <span style="color:#00a000">SetConsoleScreenBufferSize</span>(hConsoleOutput, size);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Set code page
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#00a000">SetConsoleOutputCP</span>(<span style="color:#666">437</span>);
+</span></span></span><span style="display:flex;"><span>        <span style="color:#00a000">SetConsoleOutputCP</span>(<span style="color:#666">437</span>);
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Set the code page so the character graphics work.</p>
@@ -452,14 +452,14 @@ existing display, but subsequent output is positioned correctly.</p>
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/resurrecting-dos-app/#">Back to top</a>
+          <a href="http://localhost:1313/blog/resurrecting-dos-app/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>

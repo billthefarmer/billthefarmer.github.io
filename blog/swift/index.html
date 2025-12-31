@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/swift/">
+<meta property="og:url" content="http://localhost:1313/blog/swift/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Swift">
   <meta property="og:description" content="Some years ago I wrote an OSX app in C using Carbon because my Hackintosh would only run OSX 10.4 (Tiger). The most difficult part was dealing with the Core Audio API.
@@ -39,15 +39,15 @@ Core Audio Having translated the Core Audio part of the app to Swift, I discover
 
 
 
-<meta name="generator" content="Hugo 0.152.0">
+<meta name="generator" content="Hugo 0.153.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/swift/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/swift/">
     <title>Swift | Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     
 
@@ -55,7 +55,7 @@ Core Audio Having translated the Core Audio part of the app to Swift, I discover
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -91,48 +91,48 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
                     Travel
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -147,7 +147,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -167,7 +167,7 @@ table {
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/swift/">Swift</a>
+      <a href="http://localhost:1313/blog/swift/">Swift</a>
     </h3>
     <div class="callout small">
       <small>
@@ -246,33 +246,33 @@ written in C works fine.</p>
 </span></span><span style="display:flex;"><span>    size <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">sizeof</span>(id);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Get the default input device
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    AudioObjectPropertyAddress inputDeviceAOPA <span style="color:#666">=</span>
+</span></span></span><span style="display:flex;"><span>    AudioObjectPropertyAddress inputDeviceAOPA <span style="color:#666">=</span>
 </span></span><span style="display:flex;"><span>        {kAudioHardwarePropertyDefaultInputDevice,
 </span></span><span style="display:flex;"><span>         kAudioObjectPropertyScopeGlobal,
 </span></span><span style="display:flex;"><span>         kAudioObjectPropertyElementMaster};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Get device
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    status <span style="color:#666">=</span> <span style="color:#00a000">AudioObjectGetPropertyData</span>(kAudioObjectSystemObject,
+</span></span></span><span style="display:flex;"><span>    status <span style="color:#666">=</span> <span style="color:#00a000">AudioObjectGetPropertyData</span>(kAudioObjectSystemObject,
 </span></span><span style="display:flex;"><span>                                        <span style="color:#666">&amp;</span>inputDeviceAOPA,
 </span></span><span style="display:flex;"><span>                                        <span style="color:#666">0</span>, nil, <span style="color:#666">&amp;</span>size, <span style="color:#666">&amp;</span>id);
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">if</span> (status <span style="color:#666">!=</span> noErr)
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// AudioObjectGetPropertyData
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#00a000">NSLog</span>(<span style="">@</span><span style="color:#b44">&#34;Error in AudioObjectGetPropertyData: &#34;</span> 
+</span></span></span><span style="display:flex;"><span>        <span style="color:#00a000">NSLog</span>(<span style="">@</span><span style="color:#b44">&#34;Error in AudioObjectGetPropertyData: &#34;</span> 
 </span></span><span style="display:flex;"><span>                    <span style="color:#b44">&#34;kAudioHardwarePropertyDefaultInputDevice %s (%d)&#34;</span>,
 </span></span><span style="display:flex;"><span>              <span style="color:#00a000">AudioUnitErrString</span>(status), status);
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> status;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Set the audio unit device
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    status <span style="color:#666">=</span> <span style="color:#00a000">AudioUnitSetProperty</span>(audioData.output,
+</span></span></span><span style="display:flex;"><span>    status <span style="color:#666">=</span> <span style="color:#00a000">AudioUnitSetProperty</span>(audioData.output,
 </span></span><span style="display:flex;"><span>                                  kAudioOutputUnitProperty_CurrentDevice, 
 </span></span><span style="display:flex;"><span>                                  kAudioUnitScope_Global,
 </span></span><span style="display:flex;"><span>                                  <span style="color:#666">0</span>, <span style="color:#666">&amp;</span>id, size);
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">if</span> (status <span style="color:#666">!=</span> noErr)
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// AudioUnitSetProperty
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#00a000">NSLog</span>(<span style="">@</span><span style="color:#b44">&#34;Error in AudioUnitSetProperty: &#34;</span> 
+</span></span></span><span style="display:flex;"><span>        <span style="color:#00a000">NSLog</span>(<span style="">@</span><span style="color:#b44">&#34;Error in AudioUnitSetProperty: &#34;</span> 
 </span></span><span style="display:flex;"><span>                    <span style="color:#b44">&#34;kAudioOutputUnitProperty_CurrentDevice %s (%d)&#34;</span>,
 </span></span><span style="display:flex;"><span>              <span style="color:#00a000">AudioUnitErrString</span>(status), status);
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> status;
@@ -292,12 +292,12 @@ file. Use the switch <code>-import-objc-header</code> to import this header.</p>
 </span></span><span style="display:flex;"><span><span style="color:#b8860b">SWIFTH</span> <span style="color:#666">=</span> Tuner-Swift.h
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#b8860b">SOURCES</span> <span style="color:#666">=</span> AppDelegate.swift ScopeView.swift SpectrumView.swift <span style="color:#b62;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>		StrobeView.swift DisplayView.swift MeterView.swift <span style="color:#b62;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>		TunerView.swift Audio.o
+</span></span></span><span style="display:flex;"><span>		StrobeView.swift DisplayView.swift MeterView.swift <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span>		TunerView.swift Audio.o
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#b8860b">SFLAGS</span> <span style="color:#666">=</span> -g -target x86_64-apple-macosx10.9 <span style="color:#b62;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>	-import-objc-header <span style="color:#a2f;font-weight:bold">$(</span>HEADER<span style="color:#a2f;font-weight:bold">)</span> -emit-objc-header-path <span style="color:#a2f;font-weight:bold">$(</span>SWIFTH<span style="color:#a2f;font-weight:bold">)</span> <span style="color:#b62;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>	-Xlinker -rpath -Xlinker @loader_path/../Frameworks -Xlinker -w
+</span></span></span><span style="display:flex;"><span>	-import-objc-header <span style="color:#a2f;font-weight:bold">$(</span>HEADER<span style="color:#a2f;font-weight:bold">)</span> -emit-objc-header-path <span style="color:#a2f;font-weight:bold">$(</span>SWIFTH<span style="color:#a2f;font-weight:bold">)</span> <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span>	-Xlinker -rpath -Xlinker @loader_path/../Frameworks -Xlinker -w
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#b8860b">CFLAGS</span> <span style="color:#666">=</span> -g -target x86_64-apple-macosx10.9
 </span></span></code></pre></div><p>Extract from <code>Makefile</code>.</p>
@@ -308,7 +308,7 @@ enums in Swift, but the syntax is more complex, and using them in a
 switch statement in Swift is a pain. I found it was easier to define
 the enums in the C include file, and then use them in Swift.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// Checkbox tags
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">enum</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">enum</span>
 </span></span><span style="display:flex;"><span>    {kZoom   <span style="color:#666">=</span> <span style="">&#39;</span>Zoom<span style="">&#39;</span>,
 </span></span><span style="display:flex;"><span>     kFilt   <span style="color:#666">=</span> <span style="">&#39;</span>Filt<span style="">&#39;</span>,
 </span></span><span style="display:flex;"><span>     kMult   <span style="color:#666">=</span> <span style="">&#39;</span>Mult<span style="">&#39;</span>,
@@ -319,7 +319,7 @@ the enums in the C include file, and then use them in Swift.</p>
 </span></span><span style="display:flex;"><span>     kNote   <span style="color:#666">=</span> <span style="">&#39;</span>Note<span style="">&#39;</span>};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// Reference tags
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">enum</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">enum</span>
 </span></span><span style="display:flex;"><span>    {kRefText <span style="color:#666">=</span> <span style="">&#39;</span>RefT<span style="">&#39;</span>,
 </span></span><span style="display:flex;"><span>     kRefStep <span style="color:#666">=</span> <span style="">&#39;</span>RefS<span style="">&#39;</span>};
 </span></span></code></pre></div><p>The enums can then be referenced in Swift.</p>
@@ -362,7 +362,7 @@ the enums in the C include file, and then use them in Swift.</p>
 </span></span></code></pre></div><h3 id="boolean-arrays">Boolean arrays</h3>
 <p>The data defined in the include file includes two boolean arrays.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// Audio filter
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">typedef</span> <span style="color:#a2f;font-weight:bold">struct</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">typedef</span> <span style="color:#a2f;font-weight:bold">struct</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">bool</span> note[<span style="color:#666">12</span>];
 </span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">bool</span> octave[<span style="color:#666">9</span>];
@@ -389,25 +389,25 @@ but it produces the wrong result.</p>
 </span></span></code></pre></div><p>So I wrote some access functions in C as a workaround.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// Boolean array access functions to work around Swift limitations
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// getNote
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">bool</span> <span style="color:#00a000">getNote</span>(<span style="color:#0b0;font-weight:bold">int</span> index)
+</span></span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">bool</span> <span style="color:#00a000">getNote</span>(<span style="color:#0b0;font-weight:bold">int</span> index)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">return</span> filterData.note[index];
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// setNote
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">setNote</span>(<span style="color:#0b0;font-weight:bold">bool</span> value, <span style="color:#0b0;font-weight:bold">int</span> index)
+</span></span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">setNote</span>(<span style="color:#0b0;font-weight:bold">bool</span> value, <span style="color:#0b0;font-weight:bold">int</span> index)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    filterData.note[index] <span style="color:#666">=</span> value;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// getOctave
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">bool</span> <span style="color:#00a000">getOctave</span>(<span style="color:#0b0;font-weight:bold">int</span> index)
+</span></span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">bool</span> <span style="color:#00a000">getOctave</span>(<span style="color:#0b0;font-weight:bold">int</span> index)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">return</span> filterData.octave[index];
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// setOctave
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">setOctave</span>(<span style="color:#0b0;font-weight:bold">bool</span> value, <span style="color:#0b0;font-weight:bold">int</span> index)
+</span></span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">setOctave</span>(<span style="color:#0b0;font-weight:bold">bool</span> value, <span style="color:#0b0;font-weight:bold">int</span> index)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    filterData.octave[index] <span style="color:#666">=</span> value;
 </span></span><span style="display:flex;"><span>}
@@ -418,7 +418,7 @@ macOS 10.0+. But the compiler says macOS 10.12+ and I want to support
 10.9. The docs for Objective C say <code>vertical</code>, but the compiler
 doesn&rsquo;t like that either. So I wrote another access function.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// setVertical
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">setVertical</span>(NSSlider <span style="color:#666">*</span>slider, <span style="color:#0b0;font-weight:bold">bool</span> value)
+</span></span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">setVertical</span>(NSSlider <span style="color:#666">*</span>slider, <span style="color:#0b0;font-weight:bold">bool</span> value)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    slider.vertical <span style="color:#666">=</span> value;
 </span></span><span style="display:flex;"><span>}
@@ -532,14 +532,14 @@ doesn&rsquo;t like that either. So I wrote another access function.</p>
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/swift/#">Back to top</a>
+          <a href="http://localhost:1313/blog/swift/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>

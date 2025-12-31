@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/build-mac-osx-apps-using-command-line-tools/">
+<meta property="og:url" content="http://localhost:1313/blog/build-mac-osx-apps-using-command-line-tools/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Build Mac OSX apps using command line tools">
   <meta property="og:description" content="You will need to install the Xcode command line tools, you don’t need the Xcode app. The easiest way to do this is to attempt to build an app like emacs by typing ./configure on the command line. A dialog box will pop up asking if you want to download and install the tools.
@@ -36,15 +36,15 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
 
 
 
-<meta name="generator" content="Hugo 0.152.0">
+<meta name="generator" content="Hugo 0.153.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/build-mac-osx-apps-using-command-line-tools/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/build-mac-osx-apps-using-command-line-tools/">
     <title>Build Mac OSX apps using command line tools | Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     
 
@@ -52,7 +52,7 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -88,48 +88,48 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
                     Travel
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -144,7 +144,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -164,7 +164,7 @@ table {
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/build-mac-osx-apps-using-command-line-tools/">Build Mac OSX apps using command line tools</a>
+      <a href="http://localhost:1313/blog/build-mac-osx-apps-using-command-line-tools/">Build Mac OSX apps using command line tools</a>
     </h3>
     <div class="callout small">
       <small>
@@ -204,8 +204,8 @@ table {
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#b8860b">GCC</span><span style="color:#666">=</span>gcc
 </span></span><span style="display:flex;"><span><span style="color:#b8860b">CFLAGS</span><span style="color:#666">=</span>-framework Carbon -framework Audiounit -framework CoreAudio <span style="color:#b62;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>		-framework Accelerate -m32 -Wno-deprecated-declarations <span style="color:#b62;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>		-mmacosx-version-min<span style="color:#666">=</span>10.6
+</span></span></span><span style="display:flex;"><span>		-framework Accelerate -m32 -Wno-deprecated-declarations <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span>		-mmacosx-version-min<span style="color:#666">=</span>10.6
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#b8860b">APPNAME</span><span style="color:#666">=</span>LMS
 </span></span><span style="display:flex;"><span>
@@ -403,14 +403,14 @@ lines are</p>
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/build-mac-osx-apps-using-command-line-tools/#">Back to top</a>
+          <a href="http://localhost:1313/blog/build-mac-osx-apps-using-command-line-tools/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>
