@@ -39,7 +39,7 @@ It used to run under 32 bit windows but wouldn’t run under 64 bit windows as t
 
 
 
-<meta name="generator" content="Hugo 0.151.0">
+<meta name="generator" content="Hugo 0.154.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -79,6 +79,22 @@ table {
     width: auto !important;
 }
 </style>
+
+<script type="text/javascript"
+        src="https://billthefarmer.github.io/blog/js/jquery-3.7.0.min.js"></script>
+
+<script>
+  jQuery(document).ready(function($) {
+
+      
+      let now = new Date();
+      let year = now.getFullYear();
+
+      
+      let copy = $(".row.column").first().html().replace(/\d{4}/, year);
+      $(".row.column").first().html(copy);
+  });
+</script>
 
 
 
@@ -217,30 +233,30 @@ functions which offer similar functionality.</p>
 keydown and keyup events are presented. The following two functions
 deal with this.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// kbhit
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">kbhit</span>()
+</span></span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">kbhit</span>()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    INPUT_RECORD record;
 </span></span><span style="display:flex;"><span>    DWORD n;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Wait for something to happen
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#00a000">WaitForSingleObject</span>(hConsoleInput, TIMER);
+</span></span></span><span style="display:flex;"><span>    <span style="color:#00a000">WaitForSingleObject</span>(hConsoleInput, TIMER);
 </span></span><span style="display:flex;"><span>    <span style="color:#00a000">GetNumberOfConsoleInputEvents</span>(hConsoleInput, <span style="color:#666">&amp;</span>n);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">if</span> (n <span style="color:#666">&gt;</span> <span style="color:#666">0</span>)
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Ignore unwanted events
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#00a000">PeekConsoleInput</span>(hConsoleInput, <span style="color:#666">&amp;</span>record, <span style="color:#666">1</span>, <span style="color:#666">&amp;</span>n);
+</span></span></span><span style="display:flex;"><span>        <span style="color:#00a000">PeekConsoleInput</span>(hConsoleInput, <span style="color:#666">&amp;</span>record, <span style="color:#666">1</span>, <span style="color:#666">&amp;</span>n);
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">if</span> ((record.EventType <span style="color:#666">!=</span>  KEY_EVENT) <span style="color:#666">||</span>
 </span></span><span style="display:flex;"><span>            (record.Event.KeyEvent.wVirtualKeyCode <span style="color:#666">==</span> VK_SHIFT) <span style="color:#666">||</span>
 </span></span><span style="display:flex;"><span>            (record.Event.KeyEvent.wVirtualKeyCode <span style="color:#666">==</span> VK_CONTROL) <span style="color:#666">||</span>
 </span></span><span style="display:flex;"><span>            (record.Event.KeyEvent.wVirtualKeyCode <span style="color:#666">==</span> VK_MENU) <span style="color:#666">||</span>
 </span></span><span style="display:flex;"><span>            (record.Event.KeyEvent.wVirtualKeyCode <span style="color:#666">==</span> VK_CAPITAL) <span style="color:#666">||</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">// And key up events
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            (<span style="color:#666">!</span>record.Event.KeyEvent.bKeyDown))
+</span></span></span><span style="display:flex;"><span>            (<span style="color:#666">!</span>record.Event.KeyEvent.bKeyDown))
 </span></span><span style="display:flex;"><span>            <span style="color:#00a000">ReadConsoleInput</span>(hConsoleInput, <span style="color:#666">&amp;</span>record, <span style="color:#666">1</span>, <span style="color:#666">&amp;</span>n);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Update the event count
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#00a000">GetNumberOfConsoleInputEvents</span>(hConsoleInput, <span style="color:#666">&amp;</span>n);
+</span></span></span><span style="display:flex;"><span>        <span style="color:#00a000">GetNumberOfConsoleInputEvents</span>(hConsoleInput, <span style="color:#666">&amp;</span>n);
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">return</span> n;
@@ -257,7 +273,7 @@ lock key events are discarded.</p>
 </span></span><span style="display:flex;"><span>    DWORD n;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// If the char is zero, return zero, but don&#39;t read event
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#00a000">PeekConsoleInput</span>(hConsoleInput, <span style="color:#666">&amp;</span>record, <span style="color:#666">1</span>, <span style="color:#666">&amp;</span>n);
+</span></span></span><span style="display:flex;"><span>    <span style="color:#00a000">PeekConsoleInput</span>(hConsoleInput, <span style="color:#666">&amp;</span>record, <span style="color:#666">1</span>, <span style="color:#666">&amp;</span>n);
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#666">!</span>special <span style="color:#666">&amp;&amp;</span> record.Event.KeyEvent.uChar.AsciiChar <span style="color:#666">==</span> <span style="color:#666">0</span>)
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        special <span style="color:#666">=</span> TRUE;
@@ -265,9 +281,9 @@ lock key events are discarded.</p>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Read the event
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#00a000">ReadConsoleInput</span>(hConsoleInput, <span style="color:#666">&amp;</span>record, <span style="color:#666">1</span>, <span style="color:#666">&amp;</span>n);
+</span></span></span><span style="display:flex;"><span>    <span style="color:#00a000">ReadConsoleInput</span>(hConsoleInput, <span style="color:#666">&amp;</span>record, <span style="color:#666">1</span>, <span style="color:#666">&amp;</span>n);
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Not special, return the char
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#666">!</span>special)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">if</span> (<span style="color:#666">!</span>special)
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> record.Event.KeyEvent.uChar.AsciiChar;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    special <span style="color:#666">=</span> FALSE;
@@ -275,19 +291,19 @@ lock key events are discarded.</p>
 </span></span><span style="display:flex;"><span>            (SHIFT_PRESSED <span style="color:#666">|</span> LEFT_ALT_PRESSED))
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Special, return key code
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#666">0</span><span style="color:#666">:</span>
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#666">0</span><span style="color:#666">:</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> record.Event.KeyEvent.wVirtualKeyCode;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Special, shift pressed, return key code plus shift
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">SHIFT_PRESSED</span>:
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">SHIFT_PRESSED</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> record.Event.KeyEvent.wVirtualKeyCode <span style="color:#666">+</span> VK_SHIFT;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Special, alt pressed, return key code plus shift
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">LEFT_ALT_PRESSED</span>:
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">case</span> <span style="color:#a0a000">LEFT_ALT_PRESSED</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> record.Event.KeyEvent.wVirtualKeyCode <span style="color:#666">+</span> VK_SHIFT <span style="color:#666">*</span> <span style="color:#666">2</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Special, shift and alt pressed, return key code plus shift
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">case</span> SHIFT_PRESSED <span style="color:#666">|</span> <span style="color:#a0a000">LEFT_ALT_PRESSED</span>:
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">case</span> SHIFT_PRESSED <span style="color:#666">|</span> <span style="color:#a0a000">LEFT_ALT_PRESSED</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> record.Event.KeyEvent.wVirtualKeyCode <span style="color:#666">+</span> VK_SHIFT <span style="color:#666">*</span> <span style="color:#666">3</span>;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
@@ -308,30 +324,30 @@ bars. Resizing the window or making it full screen destroys the
 existing display, but subsequent output is positioned correctly.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// textmode
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">textmode</span>()
+</span></span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">textmode</span>()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    CONSOLE_SCREEN_BUFFER_INFO info;
 </span></span><span style="display:flex;"><span>    COORD size;
 </span></span><span style="display:flex;"><span>    DWORD mode;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// Do it once
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">if</span> (hConsoleOutput <span style="color:#666">==</span> <span style="color:#a2f">NULL</span>)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">if</span> (hConsoleOutput <span style="color:#666">==</span> <span style="color:#a2f">NULL</span>)
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Disable Ctrl-C
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#00a000">SetConsoleCtrlHandler</span>(<span style="color:#a2f">NULL</span>, TRUE);
+</span></span></span><span style="display:flex;"><span>        <span style="color:#00a000">SetConsoleCtrlHandler</span>(<span style="color:#a2f">NULL</span>, TRUE);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Get handles
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        hConsoleOutput <span style="color:#666">=</span> <span style="color:#00a000">GetStdHandle</span>(STD_OUTPUT_HANDLE);
+</span></span></span><span style="display:flex;"><span>        hConsoleOutput <span style="color:#666">=</span> <span style="color:#00a000">GetStdHandle</span>(STD_OUTPUT_HANDLE);
 </span></span><span style="display:flex;"><span>        hConsoleInput <span style="color:#666">=</span> <span style="color:#00a000">GetStdHandle</span>(STD_INPUT_HANDLE);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Update console mode
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#00a000">GetConsoleMode</span>(hConsoleOutput, <span style="color:#666">&amp;</span>mode);
+</span></span></span><span style="display:flex;"><span>        <span style="color:#00a000">GetConsoleMode</span>(hConsoleOutput, <span style="color:#666">&amp;</span>mode);
 </span></span><span style="display:flex;"><span>        <span style="color:#00a000">SetConsoleMode</span>(hConsoleOutput, mode <span style="color:#666">|</span> ENABLE_PROCESSED_OUTPUT);
 </span></span><span style="display:flex;"><span>        <span style="color:#00a000">GetConsoleMode</span>(hConsoleInput, <span style="color:#666">&amp;</span>mode);
 </span></span><span style="display:flex;"><span>        <span style="color:#00a000">SetConsoleMode</span>(hConsoleInput, mode <span style="color:#666">&amp;</span> <span style="color:#666">!</span>ENABLE_ECHO_INPUT);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Resize window
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#00a000">GetConsoleScreenBufferInfo</span>(hConsoleOutput, <span style="color:#666">&amp;</span>info);
+</span></span></span><span style="display:flex;"><span>        <span style="color:#00a000">GetConsoleScreenBufferInfo</span>(hConsoleOutput, <span style="color:#666">&amp;</span>info);
 </span></span><span style="display:flex;"><span>        info.srWindow.Right <span style="color:#666">=</span> info.srWindow.Left <span style="color:#666">+</span> SCREEN_WIDTH;
 </span></span><span style="display:flex;"><span>        info.srWindow.Bottom <span style="color:#666">=</span> info.srWindow.Top <span style="color:#666">+</span> SCREEN_HEIGHT;
 </span></span><span style="display:flex;"><span>        <span style="color:#00a000">SetConsoleWindowInfo</span>(hConsoleOutput, TRUE, <span style="color:#666">&amp;</span>info.srWindow);
@@ -340,7 +356,7 @@ existing display, but subsequent output is positioned correctly.</p>
 </span></span><span style="display:flex;"><span>        <span style="color:#00a000">SetConsoleScreenBufferSize</span>(hConsoleOutput, size);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Set code page
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#00a000">SetConsoleOutputCP</span>(<span style="color:#666">437</span>);
+</span></span></span><span style="display:flex;"><span>        <span style="color:#00a000">SetConsoleOutputCP</span>(<span style="color:#666">437</span>);
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Set the code page so the character graphics work.</p>
@@ -448,7 +464,7 @@ existing display, but subsequent output is positioned correctly.</p>
       <div class="row column">
         <p>
           
-          Copyright © 2025 Bill Farmer
+          Copyright © 2026 Bill Farmer
           
         </p>
         <p>

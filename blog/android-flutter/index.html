@@ -36,7 +36,7 @@ Update I decided to have another look as it appears to be liked by developers on
 
 
 
-<meta name="generator" content="Hugo 0.151.0">
+<meta name="generator" content="Hugo 0.154.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -76,6 +76,22 @@ table {
     width: auto !important;
 }
 </style>
+
+<script type="text/javascript"
+        src="https://billthefarmer.github.io/blog/js/jquery-3.7.0.min.js"></script>
+
+<script>
+  jQuery(document).ready(function($) {
+
+      
+      let now = new Date();
+      let year = now.getFullYear();
+
+      
+      let copy = $(".row.column").first().html().replace(/\d{4}/, year);
+      $(".row.column").first().html(copy);
+  });
+</script>
 
 
 
@@ -212,7 +228,7 @@ also added a <code>Padding</code> widget so the image is inset slightly.</p>
 </span></span><span style="display:flex;"><span>  <span style="color:#a2f;font-weight:bold">const</span> AnneApp({<span style="color:#a2f;font-weight:bold">super</span>.key});
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#080;font-style:italic">// This widget is the root of your application.
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>  <span style="">@</span>override
+</span></span></span><span style="display:flex;"><span>  <span style="">@</span>override
 </span></span><span style="display:flex;"><span>  Widget build(BuildContext context) {
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">return</span> MaterialApp(
 </span></span><span style="display:flex;"><span>      <span style="color:#a0a000">debugShowCheckedModeBanner:</span> <span style="color:#a2f;font-weight:bold">false</span>,
@@ -405,21 +421,21 @@ installed Android Studio.</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">MyApp</span> <span style="color:#a2f;font-weight:bold">extends</span> StatelessWidget {
 </span></span><span style="display:flex;"><span>  <span style="color:#080;font-style:italic">// This widget is the root of your application.
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>  <span style="">@</span>override
+</span></span></span><span style="display:flex;"><span>  <span style="">@</span>override
 </span></span><span style="display:flex;"><span>  Widget build(BuildContext context) {
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">return</span> MaterialApp(
 </span></span><span style="display:flex;"><span>      <span style="color:#a0a000">title:</span> <span style="color:#b44">&#39;Flutter Demo&#39;</span>,
 </span></span><span style="display:flex;"><span>      <span style="color:#a0a000">theme:</span> ThemeData(
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// This is the theme of your application.
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">//
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// Try running your application with &#34;flutter run&#34;. You&#39;ll see the
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// application has a blue toolbar. Then, without quitting the app, try
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// changing the primarySwatch below to Colors.green and then invoke
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// &#34;hot reload&#34; (press &#34;r&#34; in the console where you ran &#34;flutter run&#34;,
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// or simply save your changes to &#34;hot reload&#34; in a Flutter IDE).
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// Notice that the counter didn&#39;t reset back to zero; the application
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// is not restarted.
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a0a000">primarySwatch:</span> Colors.blue,
+</span></span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">//
+</span></span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Try running your application with &#34;flutter run&#34;. You&#39;ll see the
+</span></span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// application has a blue toolbar. Then, without quitting the app, try
+</span></span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// changing the primarySwatch below to Colors.green and then invoke
+</span></span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// &#34;hot reload&#34; (press &#34;r&#34; in the console where you ran &#34;flutter run&#34;,
+</span></span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// or simply save your changes to &#34;hot reload&#34; in a Flutter IDE).
+</span></span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Notice that the counter didn&#39;t reset back to zero; the application
+</span></span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// is not restarted.
+</span></span></span><span style="display:flex;"><span>        <span style="color:#a0a000">primarySwatch:</span> Colors.blue,
 </span></span><span style="display:flex;"><span>      ),
 </span></span><span style="display:flex;"><span>      <span style="color:#a0a000">home:</span> MyHomePage(<span style="color:#a0a000">title:</span> <span style="color:#b44">&#39;Flutter Demo Home Page&#39;</span>),
 </span></span><span style="display:flex;"><span>    );
@@ -430,14 +446,14 @@ installed Android Studio.</p>
 </span></span><span style="display:flex;"><span>  MyHomePage({Key<span style="color:#666">?</span> key, <span style="color:#a2f;font-weight:bold">required</span> <span style="color:#a2f;font-weight:bold">this</span>.title}) <span style="color:#666">:</span> <span style="color:#a2f;font-weight:bold">super</span>(<span style="color:#a0a000">key:</span> key);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#080;font-style:italic">// This widget is the home page of your application. It is stateful, meaning
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>  <span style="color:#080;font-style:italic">// that it has a State object (defined below) that contains fields that affect
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>  <span style="color:#080;font-style:italic">// how it looks.
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>
+</span></span></span><span style="display:flex;"><span>  <span style="color:#080;font-style:italic">// that it has a State object (defined below) that contains fields that affect
+</span></span></span><span style="display:flex;"><span>  <span style="color:#080;font-style:italic">// how it looks.
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#080;font-style:italic">// This class is the configuration for the state. It holds the values (in this
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>  <span style="color:#080;font-style:italic">// case the title) provided by the parent (in this case the App widget) and
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>  <span style="color:#080;font-style:italic">// used by the build method of the State. Fields in a Widget subclass are
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>  <span style="color:#080;font-style:italic">// always marked &#34;final&#34;.
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>
+</span></span></span><span style="display:flex;"><span>  <span style="color:#080;font-style:italic">// case the title) provided by the parent (in this case the App widget) and
+</span></span></span><span style="display:flex;"><span>  <span style="color:#080;font-style:italic">// used by the build method of the State. Fields in a Widget subclass are
+</span></span></span><span style="display:flex;"><span>  <span style="color:#080;font-style:italic">// always marked &#34;final&#34;.
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a2f;font-weight:bold">final</span> <span style="color:#0b0;font-weight:bold">String</span> title;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="">@</span>override
@@ -450,47 +466,47 @@ installed Android Studio.</p>
 </span></span><span style="display:flex;"><span>  <span style="color:#0b0;font-weight:bold">void</span> _incrementCounter() {
 </span></span><span style="display:flex;"><span>    setState(() {
 </span></span><span style="display:flex;"><span>      <span style="color:#080;font-style:italic">// This call to setState tells the Flutter framework that something has
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>      <span style="color:#080;font-style:italic">// changed in this State, which causes it to rerun the build method below
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>      <span style="color:#080;font-style:italic">// so that the display can reflect the updated values. If we changed
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>      <span style="color:#080;font-style:italic">// _counter without calling setState(), then the build method would not be
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>      <span style="color:#080;font-style:italic">// called again, and so nothing would appear to happen.
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>      _counter<span style="color:#666">++</span>;
+</span></span></span><span style="display:flex;"><span>      <span style="color:#080;font-style:italic">// changed in this State, which causes it to rerun the build method below
+</span></span></span><span style="display:flex;"><span>      <span style="color:#080;font-style:italic">// so that the display can reflect the updated values. If we changed
+</span></span></span><span style="display:flex;"><span>      <span style="color:#080;font-style:italic">// _counter without calling setState(), then the build method would not be
+</span></span></span><span style="display:flex;"><span>      <span style="color:#080;font-style:italic">// called again, and so nothing would appear to happen.
+</span></span></span><span style="display:flex;"><span>      _counter<span style="color:#666">++</span>;
 </span></span><span style="display:flex;"><span>    });
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="">@</span>override
 </span></span><span style="display:flex;"><span>  Widget build(BuildContext context) {
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// This method is rerun every time setState is called, for instance as done
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#080;font-style:italic">// by the _incrementCounter method above.
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#080;font-style:italic">//
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#080;font-style:italic">// The Flutter framework has been optimized to make rerunning build methods
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#080;font-style:italic">// fast, so that you can just rebuild anything that needs updating rather
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#080;font-style:italic">// than having to individually change instances of widgets.
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">return</span> Scaffold(
+</span></span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// by the _incrementCounter method above.
+</span></span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">//
+</span></span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// The Flutter framework has been optimized to make rerunning build methods
+</span></span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// fast, so that you can just rebuild anything that needs updating rather
+</span></span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// than having to individually change instances of widgets.
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">return</span> Scaffold(
 </span></span><span style="display:flex;"><span>      <span style="color:#a0a000">appBar:</span> AppBar(
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Here we take the value from the MyHomePage object that was created by
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// the App.build method, and use it to set our appbar title.
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a0a000">title:</span> Text(widget.title),
+</span></span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// the App.build method, and use it to set our appbar title.
+</span></span></span><span style="display:flex;"><span>        <span style="color:#a0a000">title:</span> Text(widget.title),
 </span></span><span style="display:flex;"><span>      ),
 </span></span><span style="display:flex;"><span>      <span style="color:#a0a000">body:</span> Center(
 </span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// Center is a layout widget. It takes a single child and positions it
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// in the middle of the parent.
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a0a000">child:</span> Column(
+</span></span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// in the middle of the parent.
+</span></span></span><span style="display:flex;"><span>        <span style="color:#a0a000">child:</span> Column(
 </span></span><span style="display:flex;"><span>          <span style="color:#080;font-style:italic">// Column is also a layout widget. It takes a list of children and
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// arranges them vertically. By default, it sizes itself to fit its
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// children horizontally, and tries to be as tall as its parent.
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">//
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// Invoke &#34;debug painting&#34; (press &#34;p&#34; in the console, choose the
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// &#34;Toggle Debug Paint&#34; action from the Flutter Inspector in Android
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// Studio, or the &#34;Toggle Debug Paint&#34; command in Visual Studio Code)
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// to see the wireframe for each widget.
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">//
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// Column has various properties to control how it sizes itself and
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// how it positions its children. Here we use mainAxisAlignment to
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// center the children vertically; the main axis here is the vertical
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// axis because Columns are vertical (the cross axis would be
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>          <span style="color:#080;font-style:italic">// horizontal).
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>          <span style="color:#a0a000">mainAxisAlignment:</span> MainAxisAlignment.center,
+</span></span></span><span style="display:flex;"><span>          <span style="color:#080;font-style:italic">// arranges them vertically. By default, it sizes itself to fit its
+</span></span></span><span style="display:flex;"><span>          <span style="color:#080;font-style:italic">// children horizontally, and tries to be as tall as its parent.
+</span></span></span><span style="display:flex;"><span>          <span style="color:#080;font-style:italic">//
+</span></span></span><span style="display:flex;"><span>          <span style="color:#080;font-style:italic">// Invoke &#34;debug painting&#34; (press &#34;p&#34; in the console, choose the
+</span></span></span><span style="display:flex;"><span>          <span style="color:#080;font-style:italic">// &#34;Toggle Debug Paint&#34; action from the Flutter Inspector in Android
+</span></span></span><span style="display:flex;"><span>          <span style="color:#080;font-style:italic">// Studio, or the &#34;Toggle Debug Paint&#34; command in Visual Studio Code)
+</span></span></span><span style="display:flex;"><span>          <span style="color:#080;font-style:italic">// to see the wireframe for each widget.
+</span></span></span><span style="display:flex;"><span>          <span style="color:#080;font-style:italic">//
+</span></span></span><span style="display:flex;"><span>          <span style="color:#080;font-style:italic">// Column has various properties to control how it sizes itself and
+</span></span></span><span style="display:flex;"><span>          <span style="color:#080;font-style:italic">// how it positions its children. Here we use mainAxisAlignment to
+</span></span></span><span style="display:flex;"><span>          <span style="color:#080;font-style:italic">// center the children vertically; the main axis here is the vertical
+</span></span></span><span style="display:flex;"><span>          <span style="color:#080;font-style:italic">// axis because Columns are vertical (the cross axis would be
+</span></span></span><span style="display:flex;"><span>          <span style="color:#080;font-style:italic">// horizontal).
+</span></span></span><span style="display:flex;"><span>          <span style="color:#a0a000">mainAxisAlignment:</span> MainAxisAlignment.center,
 </span></span><span style="display:flex;"><span>          <span style="color:#a0a000">children:</span> <span style="color:#666">&lt;</span>Widget<span style="color:#666">&gt;</span>[
 </span></span><span style="display:flex;"><span>            Text(
 </span></span><span style="display:flex;"><span>              <span style="color:#b44">&#39;You have pushed the button this many times:&#39;</span>,
@@ -507,7 +523,7 @@ installed Android Studio.</p>
 </span></span><span style="display:flex;"><span>        <span style="color:#a0a000">tooltip:</span> <span style="color:#b44">&#39;Increment&#39;</span>,
 </span></span><span style="display:flex;"><span>        <span style="color:#a0a000">child:</span> Icon(Icons.add),
 </span></span><span style="display:flex;"><span>      ), <span style="color:#080;font-style:italic">// This trailing comma makes auto-formatting nicer for build methods.
-</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    );
+</span></span></span><span style="display:flex;"><span>    );
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>The generated application file is approximately 50Mb in size, nearly
@@ -624,7 +640,7 @@ etc. Rather a lot of bloat, considering that most of my apps are about
       <div class="row column">
         <p>
           
-          Copyright © 2025 Bill Farmer
+          Copyright © 2026 Bill Farmer
           
         </p>
         <p>

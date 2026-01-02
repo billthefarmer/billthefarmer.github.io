@@ -36,7 +36,7 @@ private static final int OCTAVE = 12; private static final int EQUAL = 8; privat
 
 
 
-<meta name="generator" content="Hugo 0.151.0">
+<meta name="generator" content="Hugo 0.154.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -76,6 +76,22 @@ table {
     width: auto !important;
 }
 </style>
+
+<script type="text/javascript"
+        src="https://billthefarmer.github.io/blog/js/jquery-3.7.0.min.js"></script>
+
+<script>
+  jQuery(document).ready(function($) {
+
+      
+      let now = new Date();
+      let year = now.getFullYear();
+
+      
+      let copy = $(".row.column").first().html().replace(/\d{4}/, year);
+      $(".row.column").first().html(copy);
+  });
+</script>
 
 
 
@@ -359,7 +375,7 @@ temperaments is then just a matter of adding entries to the table.</p>
       <div class="row column">
         <p>
           
-          Copyright © 2025 Bill Farmer
+          Copyright © 2026 Bill Farmer
           
         </p>
         <p>

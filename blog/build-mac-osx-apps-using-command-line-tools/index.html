@@ -36,7 +36,7 @@ Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to 
 
 
 
-<meta name="generator" content="Hugo 0.151.0">
+<meta name="generator" content="Hugo 0.154.0">
 
 
     <base href="https://billthefarmer.github.io/blog/">
@@ -76,6 +76,22 @@ table {
     width: auto !important;
 }
 </style>
+
+<script type="text/javascript"
+        src="https://billthefarmer.github.io/blog/js/jquery-3.7.0.min.js"></script>
+
+<script>
+  jQuery(document).ready(function($) {
+
+      
+      let now = new Date();
+      let year = now.getFullYear();
+
+      
+      let copy = $(".row.column").first().html().replace(/\d{4}/, year);
+      $(".row.column").first().html(copy);
+  });
+</script>
 
 
 
@@ -204,8 +220,8 @@ table {
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#b8860b">GCC</span><span style="color:#666">=</span>gcc
 </span></span><span style="display:flex;"><span><span style="color:#b8860b">CFLAGS</span><span style="color:#666">=</span>-framework Carbon -framework Audiounit -framework CoreAudio <span style="color:#b62;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>		-framework Accelerate -m32 -Wno-deprecated-declarations <span style="color:#b62;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>		-mmacosx-version-min<span style="color:#666">=</span>10.6
+</span></span></span><span style="display:flex;"><span>		-framework Accelerate -m32 -Wno-deprecated-declarations <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span>		-mmacosx-version-min<span style="color:#666">=</span>10.6
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#b8860b">APPNAME</span><span style="color:#666">=</span>LMS
 </span></span><span style="display:flex;"><span>
@@ -399,7 +415,7 @@ lines are</p>
       <div class="row column">
         <p>
           
-          Copyright © 2025 Bill Farmer
+          Copyright © 2026 Bill Farmer
           
         </p>
         <p>
