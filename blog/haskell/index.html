@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/haskell/">
+<meta property="og:url" content="http://localhost:1313/blog/haskell/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Haskell">
   <meta property="og:description" content="I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I’s give it a go and see how I got on.
@@ -42,15 +42,15 @@ import Network.CGI cgiMain :: CGI CGIResult cgiMain = do setHeader &#34;Content-
 
 
 
-<meta name="generator" content="Hugo 0.154.0">
+<meta name="generator" content="Hugo 0.158.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/haskell/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/haskell/">
     <title>Haskell | Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     
 
@@ -58,7 +58,7 @@ import Network.CGI cgiMain :: CGI CGIResult cgiMain = do setHeader &#34;Content-
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -84,7 +84,7 @@ table {
 </style>
 
 <script type="text/javascript"
-        src="https://billthefarmer.github.io/blog/js/jquery-3.7.0.min.js"></script>
+        src="http://localhost:1313/blog/js/jquery-3.7.0.min.js"></script>
 
 <script>
   jQuery(document).ready(function($) {
@@ -110,48 +110,48 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
-                    Travel
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
+                    Travel
+                  </a></li>
+                
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -166,7 +166,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -186,7 +186,7 @@ table {
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/haskell/">Haskell</a>
+      <a href="http://localhost:1313/blog/haskell/">Haskell</a>
     </h3>
     <div class="callout small">
       <small>
@@ -210,14 +210,14 @@ table {
     <p>
       <p>I read an article recently about how amazingly efficient functional programming, and Haskell in particular is. So I thought I’s give it a go and see how I got on.</p>
 <p>You can try it out in your browser: <a href="http://tryhaskell.org">http://tryhaskell.org</a></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span>    λ <span style="color:#a2f;font-weight:bold">let</span> factorial n <span style="color:#a2f;font-weight:bold">=</span> product [<span style="color:#666">1</span><span style="color:#666">..</span>n] <span style="color:#a2f;font-weight:bold">in</span> factorial <span style="color:#666">99</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span>    λ <span style="color:#a2f;font-weight:bold">let</span> factorial n <span style="color:#a2f;font-weight:bold">=</span> product [<span style="color:#666">1</span><span style="color:#666">..</span>n] <span style="color:#a2f;font-weight:bold">in</span> factorial <span style="color:#666">99</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#666">9332621544394415268169923885626670049071596826438162146859</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#666">2963895217599993229915608941463976156518286253697920827223</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#666">7582511852109168640000000000000000000000</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">::</span> (<span style="color:#0b0;font-weight:bold">Enum</span> a, <span style="color:#0b0;font-weight:bold">Num</span> a) <span style="color:#a2f;font-weight:bold">=&gt;</span> a
 </span></span><span style="display:flex;"><span>    λ  
 </span></span></code></pre></div><p>Pretty impressive! So I thought I’d try a simple web application.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">Network.CGI</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">Network.CGI</span>
 </span></span><span style="display:flex;"><span>    cgiMain <span style="color:#a2f;font-weight:bold">::</span> <span style="color:#0b0;font-weight:bold">CGI</span> <span style="color:#0b0;font-weight:bold">CGIResult</span>
 </span></span><span style="display:flex;"><span>    cgiMain <span style="color:#a2f;font-weight:bold">=</span> <span style="color:#a2f;font-weight:bold">do</span>
 </span></span><span style="display:flex;"><span>        setHeader <span style="color:#b44">&#34;Content-Type&#34;</span> <span style="color:#b44">&#34;text/html; charset=UTF-8&#34;</span>
@@ -225,7 +225,7 @@ table {
 </span></span><span style="display:flex;"><span>    main <span style="color:#a2f;font-weight:bold">::</span> <span style="color:#0b0;font-weight:bold">IO</span> <span style="color:#a2f">()</span>
 </span></span><span style="display:flex;"><span>    main <span style="color:#a2f;font-weight:bold">=</span> runCGI (handleErrors cgiMain)
 </span></span></code></pre></div><p>This seemed to work, so I tried a graphical GTK app.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">Graphics.UI.Gtk</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">Graphics.UI.Gtk</span>
 </span></span><span style="display:flex;"><span>    main <span style="color:#a2f;font-weight:bold">::</span> <span style="color:#0b0;font-weight:bold">IO</span> <span style="color:#a2f">()</span>
 </span></span><span style="display:flex;"><span>    main <span style="color:#a2f;font-weight:bold">=</span> <span style="color:#a2f;font-weight:bold">do</span>
 </span></span><span style="display:flex;"><span>        initGUI
@@ -253,7 +253,7 @@ table {
 </span></span><span style="display:flex;"><span>        mainGUI
 </span></span></code></pre></div><p><img src="images/2014/03/gtk.png" alt="Gtk"></p>
 <p>However I can’t see any real difference between this and doing it the usual step by step procedural way. I even tried reusing a variable to see if it objected. The other problem is that the documentation is written in mathematical jargon which is difficult to understand. for example, the docs for the constructor function pixbufNewFromFileAtSize is:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span>    pixbufNewFromFileAtSize <span style="color:#a2f;font-weight:bold">::</span> <span style="color:#0b0;font-weight:bold">String</span> <span style="color:#a2f;font-weight:bold">-&gt;</span> <span style="color:#0b0;font-weight:bold">Int</span> <span style="color:#a2f;font-weight:bold">-&gt;</span> <span style="color:#0b0;font-weight:bold">Int</span> <span style="color:#a2f;font-weight:bold">-&gt;</span> <span style="color:#0b0;font-weight:bold">IO</span> <span style="color:#0b0;font-weight:bold">Pixbuf</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span>    pixbufNewFromFileAtSize <span style="color:#a2f;font-weight:bold">::</span> <span style="color:#0b0;font-weight:bold">String</span> <span style="color:#a2f;font-weight:bold">-&gt;</span> <span style="color:#0b0;font-weight:bold">Int</span> <span style="color:#a2f;font-weight:bold">-&gt;</span> <span style="color:#0b0;font-weight:bold">Int</span> <span style="color:#a2f;font-weight:bold">-&gt;</span> <span style="color:#0b0;font-weight:bold">IO</span> <span style="color:#0b0;font-weight:bold">Pixbuf</span>
 </span></span></code></pre></div><p>I interpret that to mean: Take the function pixbufNewFromFileAtSize and give it a string and two integers and after a bit of IO you should get a pixbuf, which is reverse Polish to me.</p>
 <h2 id="update">Update</h2>
 <p>I tested this on Arch Linux. I found I couldn’t update the system with Haskell installed because of dependency errors, so I had to remove it.</p>
@@ -279,6 +279,10 @@ table {
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/parsing_markdown/">
+        Parsing markdown to create a mindmap
+      </a></li>
     
       <li><a href="/blog/beach-villas/">
         Beach Villas
@@ -316,10 +320,6 @@ table {
         Android Flutter
       </a></li>
     
-      <li><a href="/blog/android-kotlin/">
-        Android Kotlin
-      </a></li>
-    
   </ul>
 
   
@@ -355,14 +355,14 @@ table {
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/haskell/#">Back to top</a>
+          <a href="http://localhost:1313/blog/haskell/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>

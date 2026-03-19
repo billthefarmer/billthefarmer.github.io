@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/resurrecting-dos-app/">
+<meta property="og:url" content="http://localhost:1313/blog/resurrecting-dos-app/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Resurrecting an Old Dos App">
   <meta property="og:description" content="Back in the late 90’s I wrote an simulation app for an old telecontrol system that was being superceded. It was written in Turbo C to run on a DOS or Win95 PC.
@@ -39,15 +39,15 @@ It used to run under 32 bit windows but wouldn’t run under 64 bit windows as t
 
 
 
-<meta name="generator" content="Hugo 0.154.0">
+<meta name="generator" content="Hugo 0.158.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/resurrecting-dos-app/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/resurrecting-dos-app/">
     <title>Resurrecting an Old Dos App | Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     
 
@@ -55,7 +55,7 @@ It used to run under 32 bit windows but wouldn’t run under 64 bit windows as t
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -81,7 +81,7 @@ table {
 </style>
 
 <script type="text/javascript"
-        src="https://billthefarmer.github.io/blog/js/jquery-3.7.0.min.js"></script>
+        src="http://localhost:1313/blog/js/jquery-3.7.0.min.js"></script>
 
 <script>
   jQuery(document).ready(function($) {
@@ -107,48 +107,48 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
-                    Travel
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
+                    Travel
+                  </a></li>
+                
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -163,7 +163,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -183,7 +183,7 @@ table {
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/resurrecting-dos-app/">Resurrecting an Old Dos App</a>
+      <a href="http://localhost:1313/blog/resurrecting-dos-app/">Resurrecting an Old Dos App</a>
     </h3>
     <div class="callout small">
       <small>
@@ -232,7 +232,7 @@ functions which offer similar functionality.</p>
 <p>However, not all the events offered are keyboard events, and both
 keydown and keyup events are presented. The following two functions
 deal with this.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// kbhit
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// kbhit
 </span></span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">kbhit</span>()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    INPUT_RECORD record;
@@ -266,7 +266,7 @@ and timed actions at the same time, using a lot of CPU. So
 <a href="https://docs.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject">WaitForSingleObject()</a> with a timeout is used to drop the CPU
 usage and still allow the timed actions. Shift, control, alt and caps
 lock key events are discarded.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">getch</span>()
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">getch</span>()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    INPUT_RECORD record;
 </span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">static</span> BOOL special;
@@ -322,7 +322,7 @@ existing console window. The <a href="https://docs.microsoft.com/en-us/windows/c
 ensure the screen buffer is the right size and get rid of any scroll
 bars. Resizing the window or making it full screen destroys the
 existing display, but subsequent output is positioned correctly.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">// textmode
 </span></span></span><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">textmode</span>()
 </span></span><span style="display:flex;"><span>{
@@ -393,6 +393,10 @@ existing display, but subsequent output is positioned correctly.</p>
   <h4>Recent Posts</h4>
   <ul>
     
+      <li><a href="/blog/parsing_markdown/">
+        Parsing markdown to create a mindmap
+      </a></li>
+    
       <li><a href="/blog/beach-villas/">
         Beach Villas
       </a></li>
@@ -427,10 +431,6 @@ existing display, but subsequent output is positioned correctly.</p>
     
       <li><a href="/blog/android-flutter/">
         Android Flutter
-      </a></li>
-    
-      <li><a href="/blog/android-kotlin/">
-        Android Kotlin
       </a></li>
     
   </ul>
@@ -468,14 +468,14 @@ existing display, but subsequent output is positioned correctly.</p>
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/resurrecting-dos-app/#">Back to top</a>
+          <a href="http://localhost:1313/blog/resurrecting-dos-app/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/handlers-in-android/">
+<meta property="og:url" content="http://localhost:1313/blog/handlers-in-android/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Handlers in Android">
   <meta property="og:description" content="Using a handler to return results from a worker thread This has taken me quite a while to put together. There are throw-away remarks in the Android docs about this, but no useful examples. You want to get the results back from a worker thread to your main activity so you can do stuff with them. There are several parts to this.
@@ -36,15 +36,15 @@ The main activity implements Handler.Callback, and has a handleMessage function.
 
 
 
-<meta name="generator" content="Hugo 0.154.0">
+<meta name="generator" content="Hugo 0.158.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/handlers-in-android/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/handlers-in-android/">
     <title>Handlers in Android | Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     
 
@@ -52,7 +52,7 @@ The main activity implements Handler.Callback, and has a handleMessage function.
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -78,7 +78,7 @@ table {
 </style>
 
 <script type="text/javascript"
-        src="https://billthefarmer.github.io/blog/js/jquery-3.7.0.min.js"></script>
+        src="http://localhost:1313/blog/js/jquery-3.7.0.min.js"></script>
 
 <script>
   jQuery(document).ready(function($) {
@@ -104,48 +104,48 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
-                    Travel
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
+                    Travel
+                  </a></li>
+                
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -160,7 +160,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -180,7 +180,7 @@ table {
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/handlers-in-android/">Handlers in Android</a>
+      <a href="http://localhost:1313/blog/handlers-in-android/">Handlers in Android</a>
     </h3>
     <div class="callout small">
       <small>
@@ -210,7 +210,7 @@ table {
 <li>In the worker thread constructor, create a <a href="http://developer.android.com/reference/android/os/Handler.html">Handler</a>, including the reference to the main activity.</li>
 <li>When some results need passing back, send a <a href="http://developer.android.com/reference/android/os/Message.html">Message</a> back to the main activity using the handler.</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">MyActivity</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">extends</span><span style="color:#bbb"> </span>Activity<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">implements</span><span style="color:#bbb"> </span>Handler.<span style="color:#b44">Callback</span><span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">MyActivity</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">extends</span><span style="color:#bbb"> </span>Activity<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">implements</span><span style="color:#bbb"> </span>Handler.<span style="color:#b44">Callback</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>{<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">//...</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// On create</span><span style="color:#bbb">
@@ -249,6 +249,8 @@ table {
 <h3>See Also</h3>
 <ul>
   
+  <li><a href="/blog/parsing_markdown/">Parsing markdown to create a mindmap</a></li>
+  
   <li><a href="/blog/flutter-search-widget/">Flutter app bar search widget</a></li>
   
   <li><a href="/blog/android-navigation-menu/">Android Navigation Menu</a></li>
@@ -256,8 +258,6 @@ table {
   <li><a href="/blog/update-widget/">Update App Widget</a></li>
   
   <li><a href="/blog/create-word-grid/">Create a Word Grid</a></li>
-  
-  <li><a href="/blog/android-flutter/">Android Flutter</a></li>
   
 </ul>
 
@@ -278,6 +278,10 @@ table {
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/parsing_markdown/">
+        Parsing markdown to create a mindmap
+      </a></li>
     
       <li><a href="/blog/beach-villas/">
         Beach Villas
@@ -315,10 +319,6 @@ table {
         Android Flutter
       </a></li>
     
-      <li><a href="/blog/android-kotlin/">
-        Android Kotlin
-      </a></li>
-    
   </ul>
 
   
@@ -354,14 +354,14 @@ table {
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/handlers-in-android/#">Back to top</a>
+          <a href="http://localhost:1313/blog/handlers-in-android/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>

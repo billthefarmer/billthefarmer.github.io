@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/post/source-code-highlighting/">
+<meta property="og:url" content="http://localhost:1313/blog/post/source-code-highlighting/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Source Code Syntax Highlighting">
   <meta property="og:description" content="One of the enhancements suggested for my android editor is syntax highlighting. The libraries I have found, including the one used in this blog, parse the input and produce output in HTML, using styled spans. Emacs makes extensive use of regular expressions for highlighting.
@@ -36,15 +36,15 @@ HTML output is not very useful for a text editor. It could be used with Html.fro
 
 
 
-<meta name="generator" content="Hugo 0.154.0">
+<meta name="generator" content="Hugo 0.158.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/post/source-code-highlighting/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/post/source-code-highlighting/">
     <title>Source Code Syntax Highlighting | Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     
 
@@ -52,7 +52,7 @@ HTML output is not very useful for a text editor. It could be used with Html.fro
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -78,7 +78,7 @@ table {
 </style>
 
 <script type="text/javascript"
-        src="https://billthefarmer.github.io/blog/js/jquery-3.7.0.min.js"></script>
+        src="http://localhost:1313/blog/js/jquery-3.7.0.min.js"></script>
 
 <script>
   jQuery(document).ready(function($) {
@@ -104,48 +104,48 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
-                    Travel
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
+                    Travel
+                  </a></li>
+                
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -160,7 +160,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -180,7 +180,7 @@ table {
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/post/source-code-highlighting/">Source Code Syntax Highlighting</a>
+      <a href="http://localhost:1313/blog/post/source-code-highlighting/">Source Code Syntax Highlighting</a>
     </h3>
     <div class="callout small">
       <small>
@@ -223,7 +223,7 @@ time. For example MacOS C and Objective C uses a convention of
 and types in the above languages, sort them and delete duplicates and
 make regular expressions. The <code>\\b</code> means a word boundary to stop
 embedded words being highlighted.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>KEYWORDS<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>KEYWORDS<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#b44">&#34;\\b(abstract|and|arguments|as(m|sert|sociativity)?|auto|break|&#34;</span><span style="color:#bbb"> </span><span style="color:#666">+</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#b44">&#34;case|catch|chan|char|class|con(st|tinue|venience)|&#34;</span><span style="color:#bbb"> </span><span style="color:#666">+</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#b44">&#34;de(bugger|f|fault|fer|init|l|lete)|didset|do|dynamic|&#34;</span><span style="color:#bbb"> </span><span style="color:#666">+</span><span style="color:#bbb">
@@ -249,13 +249,13 @@ embedded words being highlighted.</p>
 relies on the file extension, the <a href="https://github.com/alecthomas/chroma" title="https://github.com/alecthomas/chroma">Chroma</a> library used here relies
 on being told the language. The text editor has the file extension, so
 another regular expression to check file extensions.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>CC_EXT<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>CC_EXT<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#b44">&#34;\\.(c(c|pp|xx|\\+\\+)?|go|h|java|js|m|py|swift)&#34;</span>;<span style="color:#bbb">
 </span></span></span></code></pre></div><p>Check highlighting. The app also does HTML and CSS and has a syntax
 highlight option. The highlighting code is called with a small delay
 after each action that might change or scroll the text, and after
 removing the previous call.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// checkHighlight</span><span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// checkHighlight</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#00a000">checkHighlight</span>()<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>{<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// No syntax</span><span style="color:#bbb">
@@ -308,7 +308,7 @@ a long source file is too slow. Adding highlighted spans causes the
 view hierarchy to re-layout the views which causes the text to scroll
 to bring the current selection into view. This is annoying when
 scrolling the text, so move the selection if not editing.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// highlightText</span><span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// highlightText</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#00a000">highlightText</span>()<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>{<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// Get visible extent</span><span style="color:#bbb">
@@ -420,7 +420,7 @@ scrolling the text, changing the text and dismissing the
 keyboard. There is no built in check on the keyboard, it can only be
 detected by checking view sizes. Only trigger the highlight on
 dismissing the keyboard.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">            </span>textView.<span style="color:#b44">getViewTreeObserver</span>().<span style="color:#b44">addOnGlobalLayoutListener</span>(<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">            </span>textView.<span style="color:#b44">getViewTreeObserver</span>().<span style="color:#b44">addOnGlobalLayoutListener</span>(<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span><span style="color:#a2f;font-weight:bold">new</span><span style="color:#bbb"> </span>ViewTreeObserver.<span style="color:#b44">OnGlobalLayoutListener</span>()<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>{<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">boolean</span><span style="color:#bbb"> </span>keyboard;<span style="color:#bbb">
@@ -458,7 +458,7 @@ styles produces a rather long list, and the <code>\\b</code> word boundary
 doesn&rsquo;t work properly because of the dashes in the styles. So remove
 the dashes and create a list of unique styles which is a much shorter
 list.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>HTML_TAGS<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>HTML_TAGS<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#b44">&#34;\\b(html|base|head|link|meta|style|title|body|address|article|&#34;</span><span style="color:#bbb"> </span><span style="color:#666">+</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#b44">&#34;aside|footer|header|h\\d|hgroup|main|nav|section|blockquote|dd|&#34;</span><span style="color:#bbb"> </span><span style="color:#666">+</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#b44">&#34;dir|div|dl|dt|figcaption|figure|hr|li|main|ol|p|pre|ul|a|abbr|&#34;</span><span style="color:#bbb"> </span><span style="color:#666">+</span><span style="color:#bbb">
@@ -480,6 +480,8 @@ list.</p>
 <h3>See Also</h3>
 <ul>
   
+  <li><a href="/blog/parsing_markdown/">Parsing markdown to create a mindmap</a></li>
+  
   <li><a href="/blog/flutter-search-widget/">Flutter app bar search widget</a></li>
   
   <li><a href="/blog/android-navigation-menu/">Android Navigation Menu</a></li>
@@ -487,8 +489,6 @@ list.</p>
   <li><a href="/blog/update-widget/">Update App Widget</a></li>
   
   <li><a href="/blog/create-word-grid/">Create a Word Grid</a></li>
-  
-  <li><a href="/blog/android-flutter/">Android Flutter</a></li>
   
 </ul>
 
@@ -509,6 +509,10 @@ list.</p>
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/parsing_markdown/">
+        Parsing markdown to create a mindmap
+      </a></li>
     
       <li><a href="/blog/beach-villas/">
         Beach Villas
@@ -546,10 +550,6 @@ list.</p>
         Android Flutter
       </a></li>
     
-      <li><a href="/blog/android-kotlin/">
-        Android Kotlin
-      </a></li>
-    
   </ul>
 
   
@@ -585,14 +585,14 @@ list.</p>
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/post/source-code-highlighting/#">Back to top</a>
+          <a href="http://localhost:1313/blog/post/source-code-highlighting/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/update-widget/">
+<meta property="og:url" content="http://localhost:1313/blog/update-widget/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Update App Widget">
   <meta property="og:description" content="Android app widgets normally can be set up to update periodically, but not repeatedly for a short period. For a bus times app I need the widget to update every 30 seconds for about 5 minutes.
@@ -39,15 +39,15 @@ public static final int RESET_DELAY = 5 * 1000; public static final int REPEAT_D
 
 
 
-<meta name="generator" content="Hugo 0.154.0">
+<meta name="generator" content="Hugo 0.158.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/update-widget/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/update-widget/">
     <title>Update App Widget | Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     
 
@@ -55,7 +55,7 @@ public static final int RESET_DELAY = 5 * 1000; public static final int REPEAT_D
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -81,7 +81,7 @@ table {
 </style>
 
 <script type="text/javascript"
-        src="https://billthefarmer.github.io/blog/js/jquery-3.7.0.min.js"></script>
+        src="http://localhost:1313/blog/js/jquery-3.7.0.min.js"></script>
 
 <script>
   jQuery(document).ready(function($) {
@@ -107,48 +107,48 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
-                    Travel
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
+                    Travel
+                  </a></li>
+                
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -163,7 +163,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -183,7 +183,7 @@ table {
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/update-widget/">Update App Widget</a>
+      <a href="http://localhost:1313/blog/update-widget/">Update App Widget</a>
     </h3>
     <div class="callout small">
       <small>
@@ -211,7 +211,7 @@ widget to update every 30 seconds for about 5 minutes.</p>
 <p>I already had a <a href="https://developer.android.com/reference/android/app/Service">Service</a> set up to update the widget from a
 suitable web site and using a <a href="https://developer.android.com/reference/android/os/Handler">Handler</a> to reset the progress bar
 if the background update process failed.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>RESET_DELAY<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>5<span style="color:#bbb"> </span><span style="color:#666">*</span><span style="color:#bbb"> </span>1000;<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>RESET_DELAY<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>5<span style="color:#bbb"> </span><span style="color:#666">*</span><span style="color:#bbb"> </span>1000;<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>REPEAT_DELAY<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>30<span style="color:#bbb"> </span><span style="color:#666">*</span><span style="color:#bbb"> </span>1000;<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>STOP_DELAY<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>5<span style="color:#bbb"> </span><span style="color:#666">*</span><span style="color:#bbb"> </span>60<span style="color:#bbb"> </span><span style="color:#666">*</span><span style="color:#bbb"> </span>1000;<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">
@@ -229,7 +229,7 @@ if the background update process failed.</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>Log.<span style="color:#b44">d</span>(TAG,<span style="color:#bbb"> </span><span style="color:#b44">&#34;onCreate &#34;</span><span style="color:#bbb"> </span><span style="color:#666">+</span><span style="color:#bbb"> </span>handler);<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
 </span></span></span></code></pre></div><p>Define the various delays and get a handler in the <code>onCreate()</code> method.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// onStartCommand</span><span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// onStartCommand</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f">@Override</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f">@SuppressWarnings</span>(<span style="color:#b44">&#34;deprecation&#34;</span>)<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span><span style="color:#00a000">onStartCommand</span>(Intent<span style="color:#bbb"> </span>intent,<span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>flags,<span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>startId)<span style="color:#bbb">
@@ -249,7 +249,7 @@ if the background update process failed.</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
 </span></span></span></code></pre></div><p>I discovered that calling <code>stopSelf()</code> on the service didn&rsquo;t stop the
 periodic updates, so I used a flag to stop them.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// Get the layout for the widget</span><span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#080;font-style:italic">// Get the layout for the widget</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>RemoteViews<span style="color:#bbb"> </span>views<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">new</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>RemoteViews(getPackageName(),<span style="color:#bbb"> </span>R.<span style="color:#b44">layout</span>.<span style="color:#b44">widget</span>);<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>views.<span style="color:#b44">setViewVisibility</span>(R.<span style="color:#b44">id</span>.<span style="color:#b44">refresh</span>,<span style="color:#bbb"> </span>View.<span style="color:#b44">INVISIBLE</span>);<span style="color:#bbb">
@@ -271,7 +271,7 @@ periodic updates, so I used a flag to stop them.</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>},<span style="color:#bbb"> </span>RESET_DELAY);<span style="color:#bbb">
 </span></span></span></code></pre></div><p>After starting the update process set the progress bar visible and set
 up a delayed reset in case the update failed.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#080;font-style:italic">// Get manager</span><span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#080;font-style:italic">// Get manager</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>AppWidgetManager<span style="color:#bbb"> </span>appWidgetManager<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>AppWidgetManager.<span style="color:#b44">getInstance</span>(<span style="color:#a2f;font-weight:bold">this</span>);<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>ComponentName<span style="color:#bbb"> </span>provider<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">new</span><span style="color:#bbb">
@@ -296,7 +296,7 @@ delayed method call to do it again unless the flag is set.</p>
 <p>From android 10 there are restrictions on what background processes
 can do to start other processes. To work around this create an
 activity with the <strong>Theme.NoDisplay</strong> theme just to start the service.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// On create</span><span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// On create</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f">@Override</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f">@SuppressWarnings</span>(<span style="color:#b44">&#34;deprecation&#34;</span>)<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#00a000">onCreate</span>(Bundle<span style="color:#bbb"> </span>savedInstanceState)<span style="color:#bbb">
@@ -324,6 +324,8 @@ activity with the <strong>Theme.NoDisplay</strong> theme just to start the servi
 <h3>See Also</h3>
 <ul>
   
+  <li><a href="/blog/parsing_markdown/">Parsing markdown to create a mindmap</a></li>
+  
   <li><a href="/blog/flutter-search-widget/">Flutter app bar search widget</a></li>
   
   <li><a href="/blog/android-navigation-menu/">Android Navigation Menu</a></li>
@@ -331,8 +333,6 @@ activity with the <strong>Theme.NoDisplay</strong> theme just to start the servi
   <li><a href="/blog/create-word-grid/">Create a Word Grid</a></li>
   
   <li><a href="/blog/android-flutter/">Android Flutter</a></li>
-  
-  <li><a href="/blog/android-kotlin/">Android Kotlin</a></li>
   
 </ul>
 
@@ -353,6 +353,10 @@ activity with the <strong>Theme.NoDisplay</strong> theme just to start the servi
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/parsing_markdown/">
+        Parsing markdown to create a mindmap
+      </a></li>
     
       <li><a href="/blog/beach-villas/">
         Beach Villas
@@ -390,10 +394,6 @@ activity with the <strong>Theme.NoDisplay</strong> theme just to start the servi
         Android Flutter
       </a></li>
     
-      <li><a href="/blog/android-kotlin/">
-        Android Kotlin
-      </a></li>
-    
   </ul>
 
   
@@ -429,14 +429,14 @@ activity with the <strong>Theme.NoDisplay</strong> theme just to start the servi
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/update-widget/#">Back to top</a>
+          <a href="http://localhost:1313/blog/update-widget/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>

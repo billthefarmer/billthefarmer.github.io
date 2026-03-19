@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/hiding-button/">
+<meta property="og:url" content="http://localhost:1313/blog/hiding-button/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Hiding Edit Button">
   <meta property="og:description" content="My Diary and Notes apps have a floating button in the corner of the screen which is used to switch between editing markdown text and viewing the result. Although it is part of the android Material Design, this button has been the subject of several issues raised by users.
@@ -36,15 +36,15 @@ I have seen apps which hide this button on scrolling, and this was one of the su
 
 
 
-<meta name="generator" content="Hugo 0.154.0">
+<meta name="generator" content="Hugo 0.158.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/hiding-button/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/hiding-button/">
     <title>Hiding Edit Button | Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     
 
@@ -52,7 +52,7 @@ I have seen apps which hide this button on scrolling, and this was one of the su
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -78,7 +78,7 @@ table {
 </style>
 
 <script type="text/javascript"
-        src="https://billthefarmer.github.io/blog/js/jquery-3.7.0.min.js"></script>
+        src="http://localhost:1313/blog/js/jquery-3.7.0.min.js"></script>
 
 <script>
   jQuery(document).ready(function($) {
@@ -104,48 +104,48 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
-                    Travel
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
+                    Travel
+                  </a></li>
+                
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -160,7 +160,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -180,7 +180,7 @@ table {
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/hiding-button/">Hiding Edit Button</a>
+      <a href="http://localhost:1313/blog/hiding-button/">Hiding Edit Button</a>
     </h3>
     <div class="callout small">
       <small>
@@ -212,7 +212,7 @@ of the suggestions by users. Getting this to work correctly turned out
 to be more complex than initially considered, requiring two boolean
 flags and a lambda expression.</p>
 <p>These flags are required to keep track of scrolling direction.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>VISIBLE_DELAY<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>2048;<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>VISIBLE_DELAY<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>2048;<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">boolean</span><span style="color:#bbb"> </span>scrollUp<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">false</span>;<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">boolean</span><span style="color:#bbb"> </span>scrollDn<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">false</span>;<span style="color:#bbb">
@@ -220,7 +220,7 @@ flags and a lambda expression.</p>
 Marshmallow. The lambda expression <code>showEdit()</code> is required to restore
 the button after a delay. The animation is started and the flags
 reset.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(Build.<span style="color:#b44">VERSION</span>.<span style="color:#b44">SDK_INT</span><span style="color:#bbb"> </span><span style="color:#666">&gt;=</span><span style="color:#bbb"> </span>Build.<span style="color:#b44">VERSION_CODES</span>.<span style="color:#b44">M</span>)<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(Build.<span style="color:#b44">VERSION</span>.<span style="color:#b44">SDK_INT</span><span style="color:#bbb"> </span><span style="color:#666">&gt;=</span><span style="color:#bbb"> </span>Build.<span style="color:#b44">VERSION_CODES</span>.<span style="color:#b44">M</span>)<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>{<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span>Runnable<span style="color:#bbb"> </span>showEdit<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>()<span style="color:#bbb"> </span><span style="color:#666">-&gt;</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>{<span style="color:#bbb">
@@ -232,7 +232,7 @@ reset.</p>
 the flag is set to ensure it only happens once. The delayed call to
 <code>showEdit()</code> is removed and posted again until the view stops
 scrolling, so the delay is from when it stops.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">                </span><span style="color:#080;font-style:italic">// onScrollChange</span><span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">                </span><span style="color:#080;font-style:italic">// onScrollChange</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>markdownView.<span style="color:#b44">setOnScrollChangeListener</span>((v,<span style="color:#bbb"> </span>x,<span style="color:#bbb"> </span>y,<span style="color:#bbb"> </span>oldX,<span style="color:#bbb"> </span>oldY)<span style="color:#bbb"> </span><span style="color:#666">-&gt;</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span>{<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">                    </span><span style="color:#080;font-style:italic">// Scroll up</span><span style="color:#bbb">
@@ -255,7 +255,7 @@ scrolling, so the delay is from when it stops.</p>
 </span></span></span></code></pre></div><p>On a scroll down the button is restored and the flags are set to
 ensure it only happens once. The delayed call is reset to take care of
 bounce so the button isn&rsquo;t restored again.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">                    </span><span style="color:#a2f;font-weight:bold">else</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(<span style="color:#666">!</span>scrollDn)<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">                    </span><span style="color:#a2f;font-weight:bold">else</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(<span style="color:#666">!</span>scrollDn)<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">                    </span>{<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">                        </span><span style="color:#080;font-style:italic">// Set flags</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">                        </span>scrollUp<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">false</span>;<span style="color:#bbb">
@@ -273,7 +273,7 @@ bounce so the button isn&rsquo;t restored again.</p>
 </span></span></span></code></pre></div><p>The app includes previously added functions to hide and restore the
 button using long touches. The flags are reset to stop unwanted
 interaction.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#080;font-style:italic">// On long click</span><span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#080;font-style:italic">// On long click</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>markdownView.<span style="color:#b44">setOnLongClickListener</span>(v<span style="color:#bbb"> </span><span style="color:#666">-&gt;</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>{<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">                </span><span style="color:#080;font-style:italic">// Show button</span><span style="color:#bbb">
@@ -287,7 +287,7 @@ interaction.</p>
 </span></span></span></code></pre></div><p>There is no point having an animation on hiding the button because it
 is hidden by the user&rsquo;s finger. The flag is set so it isn&rsquo;t hidden
 again on scroll up.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(edit<span style="color:#bbb"> </span><span style="color:#666">!=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">null</span>)<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>(edit<span style="color:#bbb"> </span><span style="color:#666">!=</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">null</span>)<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>{<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#080;font-style:italic">// On long click</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>edit.<span style="color:#b44">setOnLongClickListener</span>(v<span style="color:#bbb"> </span><span style="color:#666">-&gt;</span><span style="color:#bbb">
@@ -300,7 +300,7 @@ again on scroll up.</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span>});<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>}<span style="color:#bbb">
 </span></span></span></code></pre></div><p>The function to start the button animation.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// startAnimation</span><span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// startAnimation</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#00a000">startAnimation</span>(View<span style="color:#bbb"> </span>view,<span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>anim,<span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#bbb"> </span>visibility)<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>{<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>Animation<span style="color:#bbb"> </span>animation<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>AnimationUtils.<span style="color:#b44">loadAnimation</span>(<span style="color:#a2f;font-weight:bold">this</span>,<span style="color:#bbb"> </span>anim);<span style="color:#bbb">
@@ -318,6 +318,8 @@ in the apps.</p>
 <h3>See Also</h3>
 <ul>
   
+  <li><a href="/blog/parsing_markdown/">Parsing markdown to create a mindmap</a></li>
+  
   <li><a href="/blog/flutter-search-widget/">Flutter app bar search widget</a></li>
   
   <li><a href="/blog/android-navigation-menu/">Android Navigation Menu</a></li>
@@ -325,8 +327,6 @@ in the apps.</p>
   <li><a href="/blog/update-widget/">Update App Widget</a></li>
   
   <li><a href="/blog/create-word-grid/">Create a Word Grid</a></li>
-  
-  <li><a href="/blog/android-flutter/">Android Flutter</a></li>
   
 </ul>
 
@@ -347,6 +347,10 @@ in the apps.</p>
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/parsing_markdown/">
+        Parsing markdown to create a mindmap
+      </a></li>
     
       <li><a href="/blog/beach-villas/">
         Beach Villas
@@ -384,10 +388,6 @@ in the apps.</p>
         Android Flutter
       </a></li>
     
-      <li><a href="/blog/android-kotlin/">
-        Android Kotlin
-      </a></li>
-    
   </ul>
 
   
@@ -423,14 +423,14 @@ in the apps.</p>
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/hiding-button/#">Back to top</a>
+          <a href="http://localhost:1313/blog/hiding-button/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>

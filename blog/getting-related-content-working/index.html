@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/getting-related-content-working/">
+<meta property="og:url" content="http://localhost:1313/blog/getting-related-content-working/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Getting Related Content working">
   <meta property="og:description" content="The latest release of Hugo includes Related Content, which I thought would be nice to add to my blog. However the docs, although they show you how to set it up, don’t explain how it works. To find that out, I had to look at the various threads on the Hugo forums.
@@ -39,15 +39,15 @@ There are four parts - you need to create a new partial template in layouts/part
 
 
 
-<meta name="generator" content="Hugo 0.154.0">
+<meta name="generator" content="Hugo 0.158.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/getting-related-content-working/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/getting-related-content-working/">
     <title>Getting Related Content working | Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     
 
@@ -55,7 +55,7 @@ There are four parts - you need to create a new partial template in layouts/part
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -81,7 +81,7 @@ table {
 </style>
 
 <script type="text/javascript"
-        src="https://billthefarmer.github.io/blog/js/jquery-3.7.0.min.js"></script>
+        src="http://localhost:1313/blog/js/jquery-3.7.0.min.js"></script>
 
 <script>
   jQuery(document).ready(function($) {
@@ -107,48 +107,48 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
-                    Travel
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
+                    Travel
+                  </a></li>
+                
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -163,7 +163,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -183,7 +183,7 @@ table {
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/getting-related-content-working/">Getting Related Content working</a>
+      <a href="http://localhost:1313/blog/getting-related-content-working/">Getting Related Content working</a>
     </h3>
     <div class="callout small">
       <small>
@@ -212,7 +212,7 @@ that out, I had to look at the various threads on the
 <a href="https://discourse.gohugo.io">Hugo forums</a>.</p>
 <p>There are four parts - you need to create a new partial template in
 <code>layouts/partials/related.html</code> containing something like this:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ $related := .Site.RegularPages.Related . | first 5 }}
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ $related := .Site.RegularPages.Related . | first 5 }}
 </span></span><span style="display:flex;"><span>{{ with $related }}
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#008000;font-weight:bold">hr</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#008000;font-weight:bold">h3</span>&gt;See Also&lt;/<span style="color:#008000;font-weight:bold">h3</span>&gt;
@@ -223,9 +223,9 @@ that out, I had to look at the various threads on the
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#008000;font-weight:bold">ul</span>&gt;
 </span></span><span style="display:flex;"><span>{{ end }}
 </span></span></code></pre></div><p>You need to add a reference to your new partial template in your single page template in <code>layouts/_default/single.html</code> possibly near the end:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>    {{ partial &#34;related&#34; . }}
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>    {{ partial &#34;related&#34; . }}
 </span></span></code></pre></div><p>You need to add some configuration options to your config file:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">related</span>:<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">related</span>:<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">threshold</span>:<span style="color:#bbb"> </span><span style="color:#666">10</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">toLower</span>:<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">true</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">indices</span>:<span style="color:#bbb">
@@ -234,7 +234,7 @@ that out, I had to look at the various threads on the
 </span></span></span></code></pre></div><p>You need to add some keywords to the front matter of your posts. I
 tried tags initially, but couldn&rsquo;t get it to work, so I tried
 keywords:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#00f;font-weight:bold">---</span><span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#00f;font-weight:bold">---</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">title</span>:<span style="color:#bbb"> </span>Handling run time changes in Android<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">author</span>:<span style="color:#bbb"> </span>Bill Farmer<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">type</span>:<span style="color:#bbb"> </span>post<span style="color:#bbb">
@@ -289,6 +289,10 @@ front matter.</p>
   <h4>Recent Posts</h4>
   <ul>
     
+      <li><a href="/blog/parsing_markdown/">
+        Parsing markdown to create a mindmap
+      </a></li>
+    
       <li><a href="/blog/beach-villas/">
         Beach Villas
       </a></li>
@@ -323,10 +327,6 @@ front matter.</p>
     
       <li><a href="/blog/android-flutter/">
         Android Flutter
-      </a></li>
-    
-      <li><a href="/blog/android-kotlin/">
-        Android Kotlin
       </a></li>
     
   </ul>
@@ -364,14 +364,14 @@ front matter.</p>
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/getting-related-content-working/#">Back to top</a>
+          <a href="http://localhost:1313/blog/getting-related-content-working/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>

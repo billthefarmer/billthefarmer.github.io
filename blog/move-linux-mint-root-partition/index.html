@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/move-linux-mint-root-partition/">
+<meta property="og:url" content="http://localhost:1313/blog/move-linux-mint-root-partition/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Move Linux Mint Root Partition">
   <meta property="og:description" content="I recently added a new disk drive to my workstation and, as part of reorganising, wanted to move the Linux Mint root partition from one disk to another. Naturally I googled duckied it and found a certain amount of useful info.
@@ -36,15 +36,15 @@ I used gnuparted to copy the partition from one disk to another. The standard me
 
 
 
-<meta name="generator" content="Hugo 0.154.0">
+<meta name="generator" content="Hugo 0.158.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/move-linux-mint-root-partition/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/move-linux-mint-root-partition/">
     <title>Move Linux Mint Root Partition | Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     
 
@@ -52,7 +52,7 @@ I used gnuparted to copy the partition from one disk to another. The standard me
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -78,7 +78,7 @@ table {
 </style>
 
 <script type="text/javascript"
-        src="https://billthefarmer.github.io/blog/js/jquery-3.7.0.min.js"></script>
+        src="http://localhost:1313/blog/js/jquery-3.7.0.min.js"></script>
 
 <script>
   jQuery(document).ready(function($) {
@@ -104,48 +104,48 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
-                    Travel
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
+                    Travel
+                  </a></li>
+                
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -160,7 +160,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -180,7 +180,7 @@ table {
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/move-linux-mint-root-partition/">Move Linux Mint Root Partition</a>
+      <a href="http://localhost:1313/blog/move-linux-mint-root-partition/">Move Linux Mint Root Partition</a>
     </h3>
     <div class="callout small">
       <small>
@@ -204,10 +204,10 @@ table {
     <p>
       <p>I recently added a new disk drive to my workstation and, as part of reorganising, wanted to move the Linux Mint root partition from one disk to another. Naturally I <del>googled</del> duckied it and found a certain amount of useful info.</p>
 <p>I used gnuparted to copy the partition from one disk to another. The standard method to reinstall grub on a partition so it will boot appears to be to mount it and use grub-install with the –boot-directory option like this.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#080;font-style:italic">#mount /dev/dsc4 /mnt</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#080;font-style:italic">#mount /dev/dsc4 /mnt</span>
 </span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">#grub-install --boot-directory=/mnt/boot /dev/sdc</span>
 </span></span></code></pre></div><p>However, because grub2 uses partition uuids to identify partitions, and because the new partition kept it’s uuid, it just booted the old location. So I created a new uuid and tried again:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#080;font-style:italic">#uuidgen</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#080;font-style:italic">#uuidgen</span>
 </span></span><span style="display:flex;"><span>2b12199a-84ed-4e3f-8339-48dadffac45b
 </span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">#tune2fs /dev/sdc4 -U 2b12199a-84ed-4e3f-8339-48dadffac45b</span>
 </span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">#mount /dev/dsc4 /mnt</span>
@@ -245,6 +245,10 @@ table {
   <h4>Recent Posts</h4>
   <ul>
     
+      <li><a href="/blog/parsing_markdown/">
+        Parsing markdown to create a mindmap
+      </a></li>
+    
       <li><a href="/blog/beach-villas/">
         Beach Villas
       </a></li>
@@ -279,10 +283,6 @@ table {
     
       <li><a href="/blog/android-flutter/">
         Android Flutter
-      </a></li>
-    
-      <li><a href="/blog/android-kotlin/">
-        Android Kotlin
       </a></li>
     
   </ul>
@@ -320,14 +320,14 @@ table {
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/move-linux-mint-root-partition/#">Back to top</a>
+          <a href="http://localhost:1313/blog/move-linux-mint-root-partition/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/android-custom-attributes/">
+<meta property="og:url" content="http://localhost:1313/blog/android-custom-attributes/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Android Custom Attributes">
   <meta property="og:description" content="I had resisted adding a dark theme to my Diary app until now because it uses a custom calendar with built in customisable styles and preferences with icons. So I had to work out how to make the custom styles of the calendar revert to styles from the current theme, and how to switch icons for the preferences according to the theme.
@@ -36,15 +36,15 @@ Calendar custom styles The custom calendar has a list of styles that are customi
 
 
 
-<meta name="generator" content="Hugo 0.154.0">
+<meta name="generator" content="Hugo 0.158.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/android-custom-attributes/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/android-custom-attributes/">
     <title>Android Custom Attributes | Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     
 
@@ -52,7 +52,7 @@ Calendar custom styles The custom calendar has a list of styles that are customi
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -78,7 +78,7 @@ table {
 </style>
 
 <script type="text/javascript"
-        src="https://billthefarmer.github.io/blog/js/jquery-3.7.0.min.js"></script>
+        src="http://localhost:1313/blog/js/jquery-3.7.0.min.js"></script>
 
 <script>
   jQuery(document).ready(function($) {
@@ -104,48 +104,48 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
-                    Travel
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
+                    Travel
+                  </a></li>
+                
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -160,7 +160,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -180,7 +180,7 @@ table {
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/android-custom-attributes/">Android Custom Attributes</a>
+      <a href="http://localhost:1313/blog/android-custom-attributes/">Android Custom Attributes</a>
     </h3>
     <div class="callout small">
       <small>
@@ -211,7 +211,7 @@ theme.</p>
 <h3 id="calendar-custom-styles">Calendar custom styles</h3>
 <p>The custom calendar has a list of styles that are customisable in a
 <code>attrs.xml</code> file.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">&lt;resources&gt;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&lt;declare-styleable</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;CustomCalendarView&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;calendarTitleTextColor&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;color&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
@@ -229,7 +229,7 @@ theme.</p>
 </span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">&lt;/resources&gt;</span>
 </span></span></code></pre></div><p>The <code>CustomCalendarView</code> value is used in the sources to reference the
 attributes.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// getAttributes</span><span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// getAttributes</span><span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#00a000">getAttributes</span>(AttributeSet<span style="color:#bbb"> </span>attrs)<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>{<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>Resources<span style="color:#bbb"> </span>resources<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>getResources();<span style="color:#bbb">
@@ -247,7 +247,7 @@ attributes.</p>
 not referenced externally. To revert to the current style defined
 values, some of them need to be redefined to attribute values from the
 style system.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">&lt;LinearLayout</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#b44">xmlns:android=</span><span style="color:#b44">&#34;http://schemas.android.com/apk/res/android&#34;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#b44">xmlns:library=</span><span style="color:#b44">&#34;http://schemas.android.com/apk/res-auto&#34;</span>
@@ -279,7 +279,7 @@ the app.</p>
 on the preference screen, dark icons on a light background, light
 icons on a dark background. To allow the icons to be styleable requires
 another <code>attrs.xml</code> file. Again the <code>name</code> value appears to be ignored.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#080">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 </span></span><span style="display:flex;"><span>resources&gt;
 </span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&lt;declare-styleable</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;Diary&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#008000;font-weight:bold">&lt;attr</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;pref_calendar&#34;</span> <span style="color:#b44">format=</span><span style="color:#b44">&#34;reference&#34;</span> <span style="color:#008000;font-weight:bold">/&gt;</span>
@@ -291,7 +291,7 @@ another <code>attrs.xml</code> file. Again the <code>name</code> value appears t
 </span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&lt;/declare-styleable&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">&lt;/resources&gt;</span>
 </span></span></code></pre></div><p>To define values for these attributes for each theme requires a list of items for each style.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>  <span style="color:#080;font-style:italic">&lt;!-- Application theme. --&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>  <span style="color:#080;font-style:italic">&lt;!-- Application theme. --&gt;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&lt;style</span> <span style="color:#b44">name=</span><span style="color:#b44">&#34;AppTheme&#34;</span> <span style="color:#b44">parent=</span><span style="color:#b44">&#34;AppBaseTheme&#34;</span><span style="color:#008000;font-weight:bold">&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">&lt;!--
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">        All customizations that are NOT specific to a particular
@@ -320,7 +320,7 @@ another <code>attrs.xml</code> file. Again the <code>name</code> value appears t
 </span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&lt;/style&gt;</span>
 </span></span></code></pre></div><p>To complete this requires the icon references in the <code>preferences.xml</code>
 file to be changed from a <code>@drawable</code> reference to an <code>?attr</code> reference.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">&lt;CheckBoxPreference</span>
 </span></span><span style="display:flex;"><span>	<span style="color:#b44">android:key=</span><span style="color:#b44">&#34;pref_custom&#34;</span>
 </span></span><span style="display:flex;"><span>	<span style="color:#b44">android:icon=</span><span style="color:#b44">&#34;?attr/pref_calendar&#34;</span>
@@ -379,6 +379,8 @@ the theme is changed.</p>
 <h3>See Also</h3>
 <ul>
   
+  <li><a href="/blog/parsing_markdown/">Parsing markdown to create a mindmap</a></li>
+  
   <li><a href="/blog/flutter-search-widget/">Flutter app bar search widget</a></li>
   
   <li><a href="/blog/android-navigation-menu/">Android Navigation Menu</a></li>
@@ -386,8 +388,6 @@ the theme is changed.</p>
   <li><a href="/blog/update-widget/">Update App Widget</a></li>
   
   <li><a href="/blog/create-word-grid/">Create a Word Grid</a></li>
-  
-  <li><a href="/blog/android-flutter/">Android Flutter</a></li>
   
 </ul>
 
@@ -408,6 +408,10 @@ the theme is changed.</p>
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/parsing_markdown/">
+        Parsing markdown to create a mindmap
+      </a></li>
     
       <li><a href="/blog/beach-villas/">
         Beach Villas
@@ -445,10 +449,6 @@ the theme is changed.</p>
         Android Flutter
       </a></li>
     
-      <li><a href="/blog/android-kotlin/">
-        Android Kotlin
-      </a></li>
-    
   </ul>
 
   
@@ -484,14 +484,14 @@ the theme is changed.</p>
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/android-custom-attributes/#">Back to top</a>
+          <a href="http://localhost:1313/blog/android-custom-attributes/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>

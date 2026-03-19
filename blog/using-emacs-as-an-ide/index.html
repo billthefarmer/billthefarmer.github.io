@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<meta property="og:url" content="https://billthefarmer.github.io/blog/using-emacs-as-an-ide/">
+<meta property="og:url" content="http://localhost:1313/blog/using-emacs-as-an-ide/">
   <meta property="og:site_name" content="Bill Farmer">
   <meta property="og:title" content="Using Emacs as an IDE">
   <meta property="og:description" content="I had to learn Emacs on Unix many years ago as it was at that time the only development environment for Smallworld Magik. Having learnt it, I have stuck with it as it provides a consistent platform for editing source code and building applications in as many computer languages and platforms as I have used and many more I haven’t. It is the only source code editor I have used that always gets the indentation and syntax highlighting right.">
@@ -33,15 +33,15 @@
 
 
 
-<meta name="generator" content="Hugo 0.154.0">
+<meta name="generator" content="Hugo 0.158.0">
 
 
-    <base href="https://billthefarmer.github.io/blog/">
-    <link rel="canonical" href="https://billthefarmer.github.io/blog/using-emacs-as-an-ide/">
+    <base href="http://localhost:1313/blog/">
+    <link rel="canonical" href="http://localhost:1313/blog/using-emacs-as-an-ide/">
     <title>Using Emacs as an IDE | Bill Farmer</title>
 
     <!-- CSS -->
-    <link href="https://billthefarmer.github.io/blog/css/app.css" rel="stylesheet">
+    <link href="http://localhost:1313/blog/css/app.css" rel="stylesheet">
     
     
 
@@ -49,7 +49,7 @@
 
 <style>
 .callout.large {
-    background-image: url(https://billthefarmer.github.io/blog/images/2013/12/cropped-P1010089.jpg);
+    background-image: url(http://localhost:1313/blog/images/2013/12/cropped-P1010089.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -75,7 +75,7 @@ table {
 </style>
 
 <script type="text/javascript"
-        src="https://billthefarmer.github.io/blog/js/jquery-3.7.0.min.js"></script>
+        src="http://localhost:1313/blog/js/jquery-3.7.0.min.js"></script>
 
 <script>
   jQuery(document).ready(function($) {
@@ -101,48 +101,48 @@ table {
         <div class="row column">
           <div class="top-bar-left">
             <ul class="menu">
-              <li class=""><a href="https://billthefarmer.github.io/blog/">
+              <li class=""><a href="http://localhost:1313/blog/">
                 Home
               </a></li>
               
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/">
+                  <li><a href="http://localhost:1313/blog/categories/">
                     Categories
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/travel/">
-                    Travel
-                  </a></li>
-                
-                  <li><a href="https://billthefarmer.github.io/blog/categories/hacking/">
+                  <li><a href="http://localhost:1313/blog/categories/hacking/">
                     Hacking
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/recipes/">
+                  <li><a href="http://localhost:1313/blog/categories/travel/">
+                    Travel
+                  </a></li>
+                
+                  <li><a href="http://localhost:1313/blog/categories/recipes/">
                     Recipes
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/diy/">
+                  <li><a href="http://localhost:1313/blog/categories/diy/">
                     DIY
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/categories/electronics/">
+                  <li><a href="http://localhost:1313/blog/categories/electronics/">
                     Electronics
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/index/">
+                  <li><a href="http://localhost:1313/blog/index/">
                     Index
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/morris-o-meter/">
+                  <li><a href="http://localhost:1313/blog/morris-o-meter/">
                     Morris-o-meter
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/about/">
+                  <li><a href="http://localhost:1313/blog/about/">
                     About
                   </a></li>
                 
-                  <li><a href="https://billthefarmer.github.io/blog/test-o-meter/">
+                  <li><a href="http://localhost:1313/blog/test-o-meter/">
                     Test-o-meter
                   </a></li>
                 
@@ -157,7 +157,7 @@ table {
       <div class="callout large">
         <div class="row column text-center">
           <h1>
-            <a href="https://billthefarmer.github.io/blog/" rel="home">Bill Farmer</a>
+            <a href="http://localhost:1313/blog/" rel="home">Bill Farmer</a>
           </h1>
           
             <p>
@@ -177,7 +177,7 @@ table {
 
   <div class="blog-post">
     <h3>
-      <a href="https://billthefarmer.github.io/blog/using-emacs-as-an-ide/">Using Emacs as an IDE</a>
+      <a href="http://localhost:1313/blog/using-emacs-as-an-ide/">Using Emacs as an IDE</a>
     </h3>
     <div class="callout small">
       <small>
@@ -218,10 +218,10 @@ table {
 <p>Some of these things are on the menu, but the keyboard shortcuts are easier to use. You need to customise Emacs to do some of the things I use it for.</p>
 <p><img src="images/2016/12/Custom.png" alt="Custom"></p>
 <p>There are several ways of customising Emacs, but it all ends up in your ~/.emacs config file. First off, you need to install the Emacs packages you need, like groovy-mode for editing Android Gradle build files, JS3-mode for Javascript files, Markdown-mode for Github README files, yaml-mode for Travis Cl build files, etc. This is on the Options-&gt;Manage Emacs Packages menu. You can change some settings on the Options menu, like Options-&gt;Use CUA keys (Cut/Paste with C-x/C-c/C-v), but remember to Options-&gt;Save Options before you quit. Some of them are buried deeply in Options-&gt;Customise Emacs and can be a pain to find. It’s easier to just put them in your ~/.emacs file. Examples are:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>    <span style="color:#666">&#39;</span>(<span style="color:#b8860b">c-basic-offset</span> <span style="color:#666">4</span>)
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>    <span style="color:#666">&#39;</span>(<span style="color:#b8860b">c-basic-offset</span> <span style="color:#666">4</span>)
 </span></span><span style="display:flex;"><span>    <span style="color:#666">&#39;</span>(<span style="color:#b8860b">c-offsets-alist</span> (<span style="color:#a2f;font-weight:bold">quote</span> ((<span style="color:#b8860b">substatement-open</span> <span style="color:#666">.</span> <span style="color:#666">0</span>))))
 </span></span></code></pre></div><p>That gives you an indent of four spaces for all code editing, and makes it put the opening bracket of if or for statements in the right place.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>    (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;auto-mode-alist</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;\\.c\\&#39;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">c++-mode</span>))
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>    (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;auto-mode-alist</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;\\.c\\&#39;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">c++-mode</span>))
 </span></span><span style="display:flex;"><span>    (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;auto-mode-alist</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;\\.h\\&#39;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">c++-mode</span>))
 </span></span><span style="display:flex;"><span>    (<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;nxml-mode-hook</span>
 </span></span><span style="display:flex;"><span>    	  (<span style="color:#a2f">lambda</span> ()
@@ -257,6 +257,8 @@ Find errors</p>
 <h3>See Also</h3>
 <ul>
   
+  <li><a href="/blog/parsing_markdown/">Parsing markdown to create a mindmap</a></li>
+  
   <li><a href="/blog/create-word-grid/">Create a Word Grid</a></li>
   
   <li><a href="/blog/android-kotlin/">Android Kotlin</a></li>
@@ -264,8 +266,6 @@ Find errors</p>
   <li><a href="/blog/word-count/">Android Word Count</a></li>
   
   <li><a href="/blog/using-emacs-in-android-development/">Using Emacs in Android Development</a></li>
-  
-  <li><a href="/blog/fast-fourier-transform/">Fast Fourier Transform</a></li>
   
 </ul>
 
@@ -286,6 +286,10 @@ Find errors</p>
 
   <h4>Recent Posts</h4>
   <ul>
+    
+      <li><a href="/blog/parsing_markdown/">
+        Parsing markdown to create a mindmap
+      </a></li>
     
       <li><a href="/blog/beach-villas/">
         Beach Villas
@@ -323,10 +327,6 @@ Find errors</p>
         Android Flutter
       </a></li>
     
-      <li><a href="/blog/android-kotlin/">
-        Android Kotlin
-      </a></li>
-    
   </ul>
 
   
@@ -362,14 +362,14 @@ Find errors</p>
           
         </p>
         <p>
-          <a href="https://billthefarmer.github.io/blog/using-emacs-as-an-ide/#">Back to top</a>
+          <a href="http://localhost:1313/blog/using-emacs-as-an-ide/#">Back to top</a>
         </p>
       </div>
     </footer>
 
   <foot>
 
-    <script src="https://billthefarmer.github.io/blog/js/app.js"></script>
+    <script src="http://localhost:1313/blog/js/app.js"></script>
 
   </foot>
   </body>
